@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="49.2">
+  <metadata>
+    <title>London</title>
+    <name_it>Londra</name_it>
+    <flag>🇬🇧</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>152.62</hotel_price>
+    <safety index_score="46.2"/>
+    <environment green_score="68"/>
+    <cost_index value="82.5"/>
+    <economic_accessibility score="17.5"/>
+  </indicators>
+  <transport>Heathrow Express - Non-stop trains to London Paddington. Departures every 15 minutes from Heathrow Terminal 2 and 3, and Heathrow Terminal 5. Journey time is 15-20 minutes.</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="51.5194" lon="-0.127">
+      <name>British Museum</name>
+      <description>Museum dedicated to human history, art and culture.</description>
+    </attraction>
+    <attraction lat="51.5081" lon="-0.0759">
+      <name>Tower of London</name>
+      <description>Historic castle and home of the Crown Jewels.</description>
+    </attraction>
+    <attraction lat="51.5033" lon="-0.1195">
+      <name>London Eye</name>
+      <description>Giant Ferris wheel with views over the Thames.</description>
+    </attraction>
+    <attraction lat="51.5014" lon="-0.1419">
+      <name>Buckingham Palace</name>
+      <description>The official residence of the UK monarch.</description>
+    </attraction>
+    <attraction lat="51.4994" lon="-0.1273">
+      <name>Westminster Abbey</name>
+      <description>Gothic abbey church and site of royal coronations.</description>
+    </attraction>
+    <attraction lat="51.5055" lon="-0.0754">
+      <name>Tower Bridge</name>
+      <description>Iconic combined bascule and suspension bridge.</description>
+    </attraction>
+    <attraction lat="51.5076" lon="-0.0994">
+      <name>Tate Modern</name>
+      <description>National gallery of international modern art.</description>
+    </attraction>
+    <attraction lat="51.5138" lon="-0.0984">
+      <name>St Paul's Cathedral</name>
+      <description>Anglican cathedral and seat of the Bishop of London.</description>
+    </attraction>
+    <attraction lat="51.5045" lon="-0.0865">
+      <name>The Shard</name>
+      <description>Tallest building in the UK with an observation deck.</description>
+    </attraction>
+    <attraction lat="51.4967" lon="-0.1764">
+      <name>Natural History Museum</name>
+      <description>Museum housing vast specimens from natural history.</description>
+    </attraction>
+  </highlights>
+  <description>Metropoli globale dal potere economico inesauribile, Londra gestisce flussi turistici immensi con sistemi di sicurezza d'avanguardia. Nonostante i costi elevati, resta il baricentro dell'innovazione e della diversità culturale europea.</description>
+  <wiki_intro>File:Brompton Oratory Nave 2, London, UK - Diliff.jpg|thumb|260x260px|London is home some of the best architecture in the world
+Vibrant and truly multicultural, '''London''' is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South East (England)|South-East England. '''Greater London''' has a population of a little...</wiki_intro>
+</city_report>

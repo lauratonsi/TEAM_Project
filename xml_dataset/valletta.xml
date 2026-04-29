@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="44.8">
+  <metadata>
+    <title>Valletta</title>
+    <name_it>La Valletta</name_it>
+    <flag>🇲🇹</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>12</hotel_count>
+    <hotel_price>126.54</hotel_price>
+    <safety index_score="61.2"/>
+    <environment green_score="35"/>
+    <cost_index value="68.4"/>
+    <economic_accessibility score="31.6"/>
+  </indicators>
+  <transport>By bus In front of the main gate of Valletta is the main bus station for the entire island, and bus lines covering the island in a grid, most of them spread out from here and return to here.</transport>
+  <accommodation>
+    <hotel>
+      <name>Asti Guesthouse</name>
+      <price>€20</price>
+    </hotel>
+    <hotel>
+      <name>Grand Harbour Hotel</name>
+      <price>standard double rooms from €100 (from €80 in low season), including breakfast</price>
+    </hotel>
+    <hotel>
+      <name>British Hotel</name>
+      <price>rates from about €120</price>
+    </hotel>
+    <hotel>
+      <name>Valletta G-House</name>
+      <price>€150/night</price>
+    </hotel>
+    <hotel>
+      <name>Valletta Suites</name>
+      <price>€140 per suite per night</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="35.8949" lon="14.5123">
+      <name>Upper Barrakka</name>
+      <description>Public gardens with panoramic views of the harbor.</description>
+    </attraction>
+    <attraction lat="35.8977" lon="14.5126">
+      <name>St. John's Cathedral</name>
+      <description>Highly decorated Baroque church with Caravaggio art.</description>
+    </attraction>
+    <attraction lat="35.8944" lon="14.5186">
+      <name>Grand Harbour</name>
+      <description>The historic natural harbor of Malta.</description>
+    </attraction>
+    <attraction lat="35.9019" lon="14.5186">
+      <name>Fort St. Elmo</name>
+      <description>Star-shaped fort and National War Museum.</description>
+    </attraction>
+    <attraction lat="35.8986" lon="14.5136">
+      <name>Grandmaster's Palace</name>
+      <description>The historic center of government in Malta.</description>
+    </attraction>
+    <attraction lat="35.8983" lon="14.5128">
+      <name>Republic Street</name>
+      <description>The main shopping and commercial street.</description>
+    </attraction>
+    <attraction lat="35.8979" lon="14.5113">
+      <name>National Archaeology</name>
+      <description>Museum housing prehistoric artifacts from the islands.</description>
+    </attraction>
+    <attraction lat="35.8997" lon="14.5139">
+      <name>Casa Rocca Piccola</name>
+      <description>16th-century palace belonging to a noble family.</description>
+    </attraction>
+    <attraction lat="35.8997" lon="14.5125">
+      <name>Teatru Manoel</name>
+      <description>One of the oldest working theaters in Europe.</description>
+    </attraction>
+    <attraction lat="35.8989" lon="14.5086">
+      <name>Hastings Gardens</name>
+      <description>Quiet gardens on top of the St. John's Bastion.</description>
+    </attraction>
+  </highlights>
+  <description>Fortezza barocca nel cuore del Mediterraneo, La Valletta è un museo a cielo aperto dalla sicurezza impeccabile. Le sue dimensioni ridotte nascondono un'energia culturale vibrante e un clima mite tutto l'anno.</description>
+  <wiki_intro>'''Valletta''' or '''Il-Belt''' is the capital of Malta. Historically built as harbour city to first capital, Valletta preserves much of its 16th-century architectural heritage built under the Hospitallers. Valletta was one of the earliest sites inscribed on the UNESCO World Heritage List.
+
+==Understand==
+Referred to colloquially as Il-Belt ("The City") in Maltese phrasebook|Maltese, it takes its...</wiki_intro>
+</city_report>

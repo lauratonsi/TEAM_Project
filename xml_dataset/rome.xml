@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="48.4">
+  <metadata>
+    <title>Rome</title>
+    <name_it>Roma</name_it>
+    <flag>🇮🇹</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>3</hotel_count>
+    <hotel_price>132.28</hotel_price>
+    <safety index_score="46.8"/>
+    <environment green_score="60"/>
+    <cost_index value="71.5"/>
+    <economic_accessibility score="28.5"/>
+  </indicators>
+  <transport>Testaccio is a short walk from the metro station and Circus Maximus also has its own metro station on the rome line (Circo Massimo). Near Piramide Metro station is Ostiense railway station, with regular connections to and from Fiumicino Airport. From Piramide you can also get trains to Ostia.</transport>
+  <accommodation>
+    <hotel>
+      <name>Gazometro B&amp;amp;B Rome</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Hotels Aventine, San Anselmo and San Pio</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Testaccio Hotel, Sonder</name>
+      <price>Single €99, double €121</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="41.8902" lon="12.4922">
+      <name>Colosseum</name>
+      <description>The largest ancient amphitheatre ever built.</description>
+    </attraction>
+    <attraction lat="41.8986" lon="12.4769">
+      <name>Pantheon</name>
+      <description>Ancient Roman temple with a massive dome.</description>
+    </attraction>
+    <attraction lat="41.9009" lon="12.4833">
+      <name>Trevi Fountain</name>
+      <description>Iconic Baronque fountain where tourists throw coins.</description>
+    </attraction>
+    <attraction lat="41.8925" lon="12.4853">
+      <name>Roman Forum</name>
+      <description>Ruins of the heart of ancient Roman public life.</description>
+    </attraction>
+    <attraction lat="41.9065" lon="12.4548">
+      <name>Vatican Museums</name>
+      <description>Art museums including the Sistine Chapel.</description>
+    </attraction>
+    <attraction lat="41.9022" lon="12.4539">
+      <name>St. Peter's Basilica</name>
+      <description>Major Renaissance church in Vatican City.</description>
+    </attraction>
+    <attraction lat="41.8992" lon="12.4731">
+      <name>Piazza Navona</name>
+      <description>Square built on an ancient stadium with Bernini fountains.</description>
+    </attraction>
+    <attraction lat="41.9059" lon="12.4828">
+      <name>Spanish Steps</name>
+      <description>Famous monumental stairway of 135 steps.</description>
+    </attraction>
+    <attraction lat="41.9031" lon="12.4663">
+      <name>Castel Sant'Angelo</name>
+      <description>Hadrian's mausoleum converted into a papal fortress.</description>
+    </attraction>
+    <attraction lat="41.9142" lon="12.4921">
+      <name>Borghese Gallery</name>
+      <description>Museum in a villa housing Bernini and Caravaggio.</description>
+    </attraction>
+  </highlights>
+  <description>Città eterna dalla bellezza stratificata, Roma sta affrontando la sfida della modernizzazione nel rispetto dei suoi vincoli archeologici. Il suo fascino monumentale resta un asset insostituibile nel panorama mondiale.</description>
+  <wiki_intro>Image:Età imperiale, chiusino a forma di mascherone di divinità fluviale, detta bocca della verità, collocata qui nel 1632.jpg|thumb|Roman lie detector: the Bocca della Verità in Santa Maria in Cosmedin
+'''Aventino''' and '''Testaccio''' are neighbourhoods of Rome.
+
+Aventino is named for the hill which rises up near the Tiber river and is one of the legendary seven hills of Rome. Diagonally oppos...</wiki_intro>
+</city_report>

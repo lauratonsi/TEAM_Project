@@ -1,0 +1,1097 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikivoyage</sitename>
+    <dbname>enwikivoyage</dbname>
+    <base>https://en.wikivoyage.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.46.0-wmf.24</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikivoyage</namespace>
+      <namespace key="5" case="first-letter">Wikivoyage talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1728" case="first-letter">Event</namespace>
+      <namespace key="1729" case="first-letter">Event talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Madrid</title>
+    <ns>0</ns>
+    <id>20755</id>
+    <revision>
+      <id>5251086</id>
+      <parentid>5248193</parentid>
+      <timestamp>2026-04-01T18:13:35Z</timestamp>
+      <contributor>
+        <username>WOSlinker</username>
+        <id>113846</id>
+      </contributor>
+      <minor/>
+      <comment>fix listings param errors</comment>
+      <origin>5251086</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="94744" sha1="o0hk7pjigdevimg99235cmpl0hanki5" xml:space="preserve">{{Pagebanner|Madrid Palacio Real Wikivoyage Banner.jpg|origin=0.1,0}}
+{{Otheruses}}
+{{PrintDistricts}}
+'''Madrid''' is [[Spain]]'s capital and largest city. A city that has been marked by Spain's varied and tumultuous history, Madrid has some of Europe's most impressive cultural and architectural heritage, which includes grand avenues, plazas, buildings and monuments, world-class art galleries and museums, highly popular football teams, and cultural events of international fame for everyone. Madrid is also renowned for gastronomic delights and a nightlife lasting up until dawn.
+
+Madrid is more often than not disregarded by tourists who gravitate to other parts of the country. But though it may appear to lack some of the breathtaking architecture of [[Barcelona]], the frenetic energy of London and Berlin, or the flair of Paris and Rome, Madrid is a massive treasure chest that has something for those who are willing to get off the beaten tourist tracks. It might not be the most sought-after city, but those who seek out what Madrid has to offer will discover a city of unexpected beauty. 
+
+== Districts ==
+{{Mapframe|width=500|height=500|zoom=11|latitude=40.4165|longitude=-3.7035|show=mask,go}}
+{{Mapshape|type=page|wikicommons=Madrid_Inner_Districts.map}}
+{{Mapshape|type=geoshape|wikidata=Q2002296|fill=#ffd0d0|title=[[Madrid/Retiro-Paseo del Arte|Retiro and Paseo del Arte]]}}
+{{Mapshape|type=geoshape|wikidata=Q1773521|fill=#e8ba37|title=[[Madrid/Salamanca|Salamanca]]}}
+{{Mapshape|type=geoshape|wikidata=Q1763370|fill=#aa6baa|title=[[Madrid/Chamberí-Castellana|Chamberí and Castellana]]}}
+{{Mapshape|type=geoshape|wikidata=Q2017682|fill=#5a6da5|title=[[Madrid/Moncloa|Moncloa]]}}
+{{Mapshape|type=geoshape|wikidata=Q2000929|fill=#d56d76|title=[[Madrid/Arganzuela|Arganzuela]]}}
+{{Mapshape|type=geoshape|wikidata=Q794954, Q1001991, Q953368, Q2003054, Q2076109, Q919536, Q1947988, Q589403|fill=#acc2a6|title=[[Madrid/Southern Suburbs|Southern Suburbs]]}}
+{{Mapshape|type=geoshape|wikidata=Q1766348, Q1773540, Q1763694, Q1928529, Q2001937, Q807230, Q656196|fill=#c8aa92|title=[[Madrid/Northern Suburbs|Northern Suburbs]]}}
+
+{{Mapshapes|Q191987}} &lt;!-- Metro --&gt;
+{{Mapshapes|Q939283}} &lt;!-- Light Metro --&gt;
+
+=== The main tourist areas ===
+{{Regionlist
+|region1name=[[Madrid/Sol-Letras-Lavapiés|Sol, Letras and Lavapiés]]
+|region1color=#c9815e
+|region1items=''Sol, Letras, Lavapiés''
+|region1description=Containing the symbolic centre of the city, an important shopping and social meeting area; the writers' quarter with a high concentration of bars, pubs, restaurants and hotels; and the multicultural quarter with a large population with African, Asian or Latin American roots, world music bars, alternative theatres and art galleries.
+
+|region2name=[[Madrid/La Latina-Austrias|La Latina and Austrias]]
+|region2color=#67b7b7
+|region2items=''La Latina, Austrias''
+|region2description=Madrid's "old town": a typically Mediterranean quarter, characterised by narrow lanes and colourful buildings from the 18th century, its history going back to the Moorish era. This is the place to go for tapas, stylish bars full of bohemian young people and Madrid's biggest flea market. The palace quarter is dominated by the royal residence and representative buildings from the Golden Age of the Spanish Empire.
+
+|region3name=[[Madrid/Retiro-Paseo del Arte|Retiro and Paseo del Arte]]
+|region3color=#ffd0d0
+|region3items=''Retiro''
+|region3description=East of the city centre. ''Parque del Buen Retiro'' is a huge urban park, one of the green lungs of Madrid, dating back to the imperial age. The ''Paseo del Arte''—or "museum triangle"– is where Madrid's most famous museums and art collections are found, a must-go for all those who want to see the works of El Greco, Velázquez, Goya, Picasso and Dalí.
+}}
+
+=== The rest of the city ===
+{{Regionlist
+|region4name=[[Madrid/Salamanca|Salamanca]]
+|region4color=#e8ba37
+|region4items=''Salamanca''
+|region4description=Madrid's fanciest (and most expensive) neighbourhood. Plenty of high-end boutiques of all international luxury brands, unique shops with impossible prices and department stores.
+
+|region5name=[[Madrid/Malasaña-Chueca|Malasaña and Chueca]]
+|region5color=#75bb75
+|region5items=''Malasaña, Chueca, Conde Duque, Salesas''
+|region5description=The city's hip and alternative area. You can enjoy a café, a dinner, a book or just some drink, and shop for vintage fashion, artisan craftwork and young designers' stuff in ''Malasaña'', the northern part of the city centre. At night, a few rock and pop music clubs open their doors. The nearby ''Conde Duque'' neighbourhood shares a similar audience and is full of cafés and restaurants. The Conde Duque Cultural Centre usually hosts shows, concerts and exhibitions. ''Chueca''  is known as the gay district with a very strong personality: new design, trendy shops, cool cafes, pop and electronic music.
+
+|region6name=[[Madrid/Arganzuela|Arganzuela]]
+|region6color=#ce928f
+|region6items=''Arganzuela''
+|region6description=Once a working-class district south of the city centre, Arganzuela is undergoing a massive transformation, thanks to the ''Madrid Río'' urban landscaping project that replaced a city motorway by a unique 6-km long public garden strip on both banks of Río Manzanares, and the ''Matadero'' arts and cultural centre.
+
+|region7name=[[Madrid/Moncloa|Moncloa]]
+|region7color=#5a6da5
+|region7items=''Moncloa''
+|region7description=Located to the west of the city centre. Due to its proximity to ''Universidad Complutense'', the city's main university, Moncloa is associated with students and a student lifestyle, with many cheap bars and discos. ''Ciudad Universitaria'' is the area where most of the students reside as there are several dorms in this area. Moreover, the district includes the extensive green area of ''Casa de Campo'' (five times the size of New York's Central Park) that includes Madrid's zoo and an amusement park. Moncloa is also host to a complex of buildings housing the offices of the Prime Minister.
+
+|region8name=[[Madrid/Chamberí-Castellana|Chamberí and Castellana]]
+|region8color=#aa6baa
+|region8items=''Chamberí, Castellana''
+|region8description=''Chamberí'' is a middle-class residential neighbourhood north of the city centre with few tourist points of interest, but may be a reasonable choice for affordable lodging and dining close to the locals' everyday life. ''Paseo de la Castellana'' is Madrid's most prominent northbound arterial road, lined by company domiciles and office buildings. Admirers of modern architecture will find the tallest and most characteristic high-rise buildings along this avenue.
+
+|region9name=[[Madrid/Southern Suburbs|Southern Suburbs]] (Suburbios del sur)
+|region9color=#acc2a6
+|region9items=''Latina, Carabanchel, Usera, Puente de Vallecas, Moratalaz, Villaverde, Villa de Vallecas, Vicálvaro''
+|region9description=A group of mostly working-class areas that might look rough around the edges, but are also a mosaic of cultures and traditions; you will hardly find a better place to experience a mix of Spanish culture, Latin American vibes, Chinese food, and everything in between.
+
+|region10name=[[Madrid/Northern Suburbs|Northern Suburbs]] (Suburbios del norte)
+|region10color=#c8aa92
+|region10items=''Chamartín, Tetuán, Fuencarral, Ciudad Lineal, Hortaleza, San Blas, Barajas''
+|region10description=This vast region hosts everything from working-class ethnic enclaves and sprawling green spaces to towering skyscrapers and some of Madrid's wealthiest and most exclusive residential neighbourhoods. Location of the ultimate football temple in Europe - the Santiago Bernabeu, home of Real Madrid.
+}}
+
+== Understand ==
+[[File:Palacio de Comunicaciones - 47.jpg|thumb|right|Palacio de Cibeles, Madrid's city hall, Cibeles Square]]
+Madrid has over 3.4 million residents within the city limits and 7 million people live in the autonomous [[Community of Madrid]] region (as of 2025).
+
+=== Location ===
+[[File:Puerta de Alcalá iluminada en Madrid.jpg|thumb|right|Puerta de Alcalá]]
+Madrid is just northeast of the geographical centre of the [[Iberia|Iberian Peninsula]], in the middle of the Spanish central Castillian plateau (Meseta central), at an average altitude of {{m|650}}. Nearly all of the most famous tourist areas are in the centre of the city including Puerta del Sol, Plaza Mayor, Palacio Real, and Plaza de Colón. The major streets in Madrid include the Gran Via, Alcalá Street, and Paseo de la Castellana.
+
+=== Climate ===
+The climate of Madrid is continental, mainly dry and quite extreme at times. Madrid experiences a characteristically hot and dry summer, along with a fairly cold winter with frequent frosts during the night and occasional snowfalls. Spring and autumn are generally mild with the most rainfall concentrated in these seasons. Spring and autumn are definitely the best times to visit, especially the months of April, May, June, September and October. There is very little rainfall during summer and also less rainfall during winter. During winter, snow occurs sporadically; however, snow usually lasts only for a few days, but there is abundant snowfall in the adjacent mountain ranges nearby.
+
+[[File:Plaza Mayor de Madrid 06.jpg|thumb|right|Plaza Mayor]]
+{{climate chart
+|Madrid
+|3.0 |10.0 |32.0
+|3.7 |12.2 |34.0
+|6.3 |16.2 |35.0
+|8.2 |18.9 |46.0
+|11.9 |23.2 |48.0
+|16.5 |28.9 |20.0
+|19.5 |32.8 |9.0
+|19.3 |32.0 |10.0
+|15.5 |26.5 |24.0
+|11.1 |19.7 |64.0
+|6.4 |13.5 |52.0
+|3.7 |10.3 |42.0
+
+|float=right
+|clear=right
+|description=
+|source=[http://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=3195&amp;k=mad Agencia Estatal de Meteorología] [http://www.aemet.es/en/serviciosclimaticos/datosclimatologicos/efemerides_extremos*?w=0&amp;k=mad&amp;l=3195&amp;datos=det&amp;x=3195&amp;m=1&amp;m=2&amp;m=3&amp;m=4&amp;v=todos AEMet Extreme Values (Jan–Apr), Madrid] [http://www.aemet.es/en/serviciosclimaticos/datosclimatologicos/efemerides_extremos*?w=0&amp;k=mad&amp;l=3195&amp;datos=det&amp;x=3195&amp;m=5&amp;m=6&amp;m=7&amp;m=8&amp;v=todos AEMet Extreme Values (May–Aug), Madrid] [http://www.aemet.es/en/serviciosclimaticos/datosclimatologicos/efemerides_extremos*?w=0&amp;k=mad&amp;l=3195&amp;datos=det&amp;x=3195&amp;m=9&amp;m=10&amp;m=11&amp;m=12&amp;v=todos AEMet Extreme Values (Sep–Dec), Madrid]
+}}
+
+=== History ===
+[[File:Templo de Debod - 07.jpg|thumbnail|right|Temple of Debod with Torre de Madrid and Edificio Espana in the background]]
+Madrid is a city that goes back to the Spanish Muslims, but virtually nothing of Madrid before the Reconquista is left. A few historic city walls have been archeologically preserved but Madrid was by far overshadowed by [[Toledo]] (Roman ''Toletum'') until the early modern era. To give just one example, construction on Madrid Cathedral did not start until the late 19th century, and only finished in the 1990s, as the archbishop of Toledo did not want to relinquish episcopal power, and the monarchs had moved the capital in part precisely to escape the power of Toledo's archbishop.
+
+The culture of Madrid was dominated by its royal history, centre of the Spanish Empire. The Royal Palace, big plazas and buildings used by the Spanish Monarchy, enormous cathedrals and churches are plentiful in Madrid. Madrid is now just as much a cosmopolitan city as [[Berlin]] or [[London]]: full of modern architecture, lifestyle and culture.
+
+Madrid became capital of [[Spain]] under Philip II who had a gargantuan palace built in nearby [[El Escorial]]. For a long while, Madrid would be the royal residence first, only becoming a city much later. Madrid architecture often reflects the era in which it was built. The Spanish Habsburgs ("Los Austrias") who reigned until the death of unfortunate Charles II in 1700 predominantly used red brick for facades and black schist for the roofs. The later Bourbon dynasty (ruling today after the two Republican interludes) preferred granite to brick, giving their buildings a greyer tone. The king that had the largest influence on Madrid after Philip II was perhaps Charles III. He was nicknamed "el Rey Alcalde" (the mayor-king) or "Madrid's best mayor" due to his extensive building and modernisation programmes in the city. Other royal projects that left their mark are Isabel II's freshwater canal, and the metro which was started in 1919 with King Alfonso XIII's own money. However, both those monarchs were so unpopular that they were later overthrown by their own people, giving rise to the First and Second Spanish Republics.
+
+Being the capital of Spain, Madrid came to be associated - justly or not, for better and for worse - with the governing trends in Spain by Spaniards in other parts of the country. As the governing trends swung widely from anti-clerical Republic to hyper-catholic fascist Franco dictatorship, this has influenced the perception of Madrid in the rest of Spain. During the 2nd Republic (1931-1936), it was a bustling city of new ideas with many political issues of the day literally fought out on the streets of Madrid. During the Civil War, Madrid endured a three year siege (1936-1939) by the anti-Republican troops and was one of the last places to hold out for the Republic. During the dictatorship of Francisco Franco (1939-1975), the city represented the heart of the repressive hyper-conservative dictatorship to many Spaniards, particularly Basques and Catalans. However, the city is also the epicentre of the famous Movida of the 1980s, a Spanish movement that bred personalities such as the director Pedro Almodóvar. The heritage of this era is indeed still visible in the city centre, where a party can be found at all times and one of the most liberal and colourful environments of Spain can be seen. The city is also known for its acceptance of LGBT people.
+
+=== Modern politics ===
+Since Franco's death, Madrid's city politics have swung widely from right to left and back, at first having a (socialist) PSOE-led government through the 1980s which was replaced by the centre-right PP which dominated the city through an awkward mix of paternalistic public works, free-for-all housing plans, and other anarchic construction projects in the 1990s. The 2000s saw a more nuanced approach by Alberto Ruiz-Gallardón, also of the PP, who focused on upgrading Madrid's ring road (the M30), expanding the metro system, and liberalising the economy. The 2008 financial crisis hit Madrid hard, which gave rise to ex-communist Manuela Carmena in the 2010s. Despite showing early promises, Carmena's popularity dwindled, and the PP's José Luis Martínez-Almeida ousted her as mayor by winning the 2019 elections forming a governing coalition with two new political parties: the centrist Ciudadanos and the far-right Vox. This rightwards shift reinforced itself with the popularity of Isabel Diaz Ayuso, the PP president of the Community of Madrid.
+
+=== Madrileño everyday life ===
+[[File:MADRID 100206 UDCI 023.jpg|thumb|right|Nightlife in ''Puerta del Sol'']]
+The citizens of Madrid refer to themselves as '''Madrileños''' or the more traditional and now seldom-used term "gatos" (cats). They live by a daily routine that is heavily influenced by the climate. Due to the typically midday heat during summer, a "siesta" can be still observed during which some citizens take a break to cool off, though '''Madrileños''' can usually only afford this 'luxury' during holidays and weekends.
+
+Most stores are open throughout the day; just small stores are often closed during siesta. Workers and those more afflicted by Western lifestyles choose not to observe this long break and work usually between 09:00 and 18:00-19:00. However, during summer, many offices have a summer schedule requiring workers to start at 08:00 and finish at 15:00 (most commonly without the standard 1-2 hour break for lunch).
+
+Offices usually close over the weekend but businesses are often open Saturday morning, or until the afternoon in the city centre. Most grocers are closed on Sundays, but some major chain and department stores linked to "culture" (books, music, etc.) will be open every day. Shops and department stores in Puerta del Sol area are open every day.
+
+Madrid has a very modern and elaborate transportation network of buses and Metro with a few "Light Metro" tram lines in the outskirts. The city contrasts with some large European cities in that it is extremely clean, and city employees in bright yellow vests can almost always be seen cleaning the streets and sidewalks. Like most large cities, however, there is a substantial population of vagrants and beggars lining the streets.
+
+Madrid is one of the biggest and most cosmopolitan cities in Europe. Communities of West Africans, North Africans, other Europeans (especially Romanians), Chinese, Filipinos, Pakistanis, and above all Latin Americans are prominent.
+
+=== Nightlife ===
+Madrid possibly has the most bars per capita of any European city and a very active nightlife; Madrileños are known to stay up until as late as 05:00-07:00. It is quite common to see a crowded Gran Vía on weekend nights. Due to this lifestyle, lodging near the fun areas may end up a nightmare for light sleepers if your window faces the street.
+
+===Tourist information ===
+* [http://www.esmadrid.com Tourism website] of the city of Madrid.
+
+== Get in ==
+=== By plane ===
+[[File:Terminal 4 del aeropuerto de Madrid-Barajas, España, 2013-01-09, DD 05.jpg|thumb|right|Madrid-Barajas airport Terminal 4]]
+: ''Main article: [[Madrid–Barajas Airport]]''
+
+{{Listing | type = go
+ | name     = Madrid Barajas International Airport | alt = {{IATA|MAD}} | url = http://www.aena-aeropuertos.es/madrid-barajas/en | email =
+ | address  = | lat = 40.472222 | long = -3.560833 | directions =
+ | phone    = | tollfree = | fax =
+ | hours    = | price =
+ | wikipedia= Adolfo Suárez Madrid–Barajas Airport | wikidata = Q166276 | image = Barajas overview1.jpg
+ | lastedit = 2018-05-04
+ | content  = All commercial flights into Madrid use this airport, which is 13 km north-east of the city. There are direct flights from most major cities in Spain and across Europe, several from the Americas as well as a few African and Asian connections. &lt;br /&gt; There are two terminal complexes, widely separated: Terminals 1, 2 &amp; 3, and Terminals T4 &amp; T4S. To transfer between them land-side use the free shuttle bus. It runs 24 hours, every 5 min daytime, and takes 10 min between T1 and T4. You can also take it just between T1, T2 and T3, but it's as quick to walk. Between T4 and T4S, use the automated train. The metro also connects the two complexes but you'd have to buy a ticket for €3. There are other transfers air-side for connecting passengers, enquire at the airline transfer desk, but they will probably involve collecting your checked bags in the hall and lumping them onto an internal navette to the other complex. All the terminals have the usual full range of passenger facilities land- and air-side.
+}}
+
+Madrid has two smaller airfields, ''Torrejón'' and ''Cuatro Vientos'', but they have no commercial flights.
+
+==== To and from the airport ====
+*During the day, '''Metro''' a popular best way to reach city centre. Line 8 (pink) runs from Nuevos Ministerios to Terminals 1,2&amp;3, Barajas town (no airport here, don't get off!) and T4. It runs from 06:00 to 01:30, taking 15 min from city to T123 and another 5 min to T4. The single fare is €5. See "Get around" for other ticket options.
+*The {{rint|es|cercanias}} '''[https://www.renfe.com/es/es/cercanias/cercanias-madrid Cercanías (renfe)]''' regional train service {{rint|madrid|c1}} &amp;{{rint|madrid|c10}} lines run between T4 and Atocha, without needing to change trains or paying the metro airport supplement. Tickets are issued on a "+ renfe &amp; tú" reusable card. You can transfer between T4 and other terminals on the free inter-terminal bus. 
+*If '''taxis''' are your thing, there is always an armada of them readily available. There is a fixed fare of €33 for trips between the airport and central Madrid (defined as any point in Madrid inside the M-30 expressway).
+
+'''Buses''' between city centre and airport are:
+*Exprés Aeropuerto bus 203 runs from Atocha (&amp; Cibeles) to T1,2 &amp; T4, 06:00-23:30 every 15-20 min, taking 30 min.
+*Bus 200 runs from Avenida de America transport hub to T1,2 &amp; T4 (but T3 only city-bound, not outbound), 05:00-23:30 every 10-20 min.
+*'''At night''' bus N27 runs every 35 min from Cibeles to T1,2 &amp; T4 and is the only public transport option.
+*Direct buses elsewhere include:
+**Bus 101 from Canillejas transport hub ({{station|Canillejas|5}},) east edge of the city, to T1,2 (T3 only city-bound, not outbound).
+**Bus 822 from Coslada and San Fernando de Henares, just south of the airport, to T1.
+**Bus 824 from Alcalá de Henares and Torrejón to the east, to T1,2.
+**Bus 827 &amp; 828 from the Autonomous University and Alcobendas, to T4.
+**Avanza buses run to T1 from Avila and Salamanca.
+**Alsa buses run to T4 from Zaragoza, Barcelona, Valladolid, León, Murcia, Alicante, Gijón, Oviedo, Lugo, Coruña, Santiago de Compostela, Burgos, Vitoria, San Sebastián, Santander, Bilbao, Logroño and Pamplona.
+**Socibus run to T1 from Andalusia, e.g. Córdoba, Cádiz, Jerez and Sevilla.
+
+=== By train ===
+The state-owned rail company '''[https://www.renfe.com/es/en renfe]''' ({{phone|+34 902-240-202}}) and low cost operators [https://www.ouigo.com/es/en '''ouigo'''], '''[https://iryo.eu/en/home iryo]{{Dead link|date=July 2024 |bot=InternetArchiveBot }}''' &amp; '''avlo''' (now bookable from the main renfe website) operate trains to Madrid. Frequent long-distance trains connect Madrid and [[Alicante]] (2 hr 30 min), [[Barcelona]] (2 hr 40 min), [[Bilbao]] (6 hr), [[Córdoba (city, Spain)|Córdoba]] (2 hr), [[Malaga]] (2 hr 30 min), [[Salamanca]] (2 hr 30 min), [[Santiago de Compostela]] (6 hr), [[Seville]] (2 hr 20 min), [[Valencia]] (2 hr) and [[Zaragoza]] (1 hr 15 min).
+
+The overnight train from [[Lisbon]] was suspended in 2020, perhaps indefinitely. Travel from Portugal now involves changing at Merida and Badajoz.
+
+There is a direct daytime train from [[Marseille]], taking 8 hours. Madrid can be reached from [[Paris]] and other cities in France and beyond also by changing in Barcelona. However for the French Atlantic coast (e.g. [[Bayonne (France)|Bayonne]] and [[Bordeaux]]) it is quicker to travel via [[Hendaye]].
+
+[[File:Atocha main hall01.jpg|thumb|Tropical garden in Atocha]]
+
+Madrid has two mainline railway stations, Atocha and Chamartín, both with extensive Metro and local Cercanías train connections. To transfer between them, take Metro line {{rint|madrid|1}} (€1.50 or 1 journey, 30–40 min) or Cercanías lines {{rint|madrid|c3}} and{{rint|madrid|c4}} (€1.35, 15 min). 
+
+All rail stations are operated by the national rail infrastructure company [https://www.adif.es/inicio ADIF], you can check train running times &amp; platforms there and on their app. Remember local Cercanías trains are listed separately to longer distance ones.
+
+Most mainline trains run from:
+* {{Listing | type = go
+ | name     = Puerta de Atocha | alt = Estación de Atocha | url =  | email =
+ | address  = | lat = 40.405807 | long = -3.689688 | directions =
+ | phone    = | tollfree = | fax =
+ | hours    = | price =
+ | wikipedia= | wikidata = Q5846989 | image = Madrid - Estación de Atocha (7357593354).jpg
+ | lastedit = 2024-06-25
+ | content  = 1 km south of city centre, it's divided into two main sections, "Madrid Puerta de Atocha Almudena Grandes" for mainline and Madrid Atocha Cercanías local and regional trains. The mainline part is set inside the towering old station building, where the former track area has been converted into a retail &amp; food mall, along with a tropical garden with a pond full of small turtles. The Cercanías part, adjacent, has a memorial to the victims of the terrorist attack of 11 March 2004. Although both parts require tickets from passengers to access the platforms, the mainline part also has airport-style security screening checkpoints for departing passengers so make sure you arrive at the station well ahead of your train’s departure time to reduce the risk of missing it due to long security queues. Knives longer than 6 cm are not allowed onboard, will be confiscated and maybe destroyed. This especially applies for train to Barcelona.
+}}
+* {{Listing
+   | type = go
+   | name = Madrid Chamartín Clara Campoamor
+   | alt = 
+   | url = https://www.adif.es/-/17000-madrid-chamart%C3%ADn?tipoBusqueda=proximasSalidas&amp;trafficType=cercanias&amp;pageFromPlid=335
+   | email = 
+   | address = 
+   | lat = 40.472222
+   | long = -3.682222
+   | directions = 
+   | phone = 
+   | tollfree = 
+   | fax = 
+   | hours = 
+   | price = 
+   | wikipedia = Madrid Chamartín railway station
+   | wikidata = Q23081
+   | image = Madrid Chamarín 1.jpg
+   | lastedit = 2024-06-25
+   | content = This station is 4 km north of city centre on Metro lines {{rint|madrid|1}} and {{rint|madrid|10}}. Chamartín has more direct services than Atocha for north-west cities such as Bilbao, Leon, Santiago and Salamanca. This is a very large station, allow extra time.   Facilities at this station include a tourist information centre, post office, hotel, car hire, shops and luggage storage.
+}}
+
+=== By bus ===
+[[File:Estación de Méndez Álvaro, Madrid.JPG|thumb|''Estación Sur de Autobuses'']]
+Madrid has several bus stations, but long-distance routes all use either Estación Sur southside, or Avenida de América northside. These buses may also call at the airport.
+
+International buses, and those headed south of Madrid, run from {{marker|type=go|name=Estación Sur de Autobuses |lat=40.39528 |long=-3.67840 |url=https://estacionsurmadrid.avanzagrupo.com/ |image=Estación de Méndez Álvaro, Madrid.JPG}} (''C/ de Méndez Álvaro, 3'', {{Phone|+34 914 684 200}}) which is 1 km southeast of Atocha. Routes include Lisbon (3 per day, 8 hr, by Avanza), Milan (twice a day, 26 hr, by Alsa) and Paris (daily, 16 hr, by Flixbus). The metro stop is Méndez Álvaro on line {{rint|madrid|6}}. It also has a Cercanias train halt. The building is quite old, but adequate, with several bus company ticket offices, a retail corridor with a couple of cafes, and toilets.
+
+Buses to the north, e.g. [[Barcelona]] and [[Bilbao]], run from {{marker|type=go|name=Estación de Avenida de América |lat=40.43818 |long=-3.67640 |image=Madrid - Intercambiador de Avenida de América 2.JPG}} (''Avda de América, 9''), 2 km northeast of the centre. It's a big transport hub on metro lines {{rint|madrid|4}}, {{rint|madrid|6}}, {{rint|madrid|7}}, and {{rint|madrid|9}}. It's not on a Cercanias line.
+
+== Get around ==
+{{Mapframe|40.418|-3.699|zoom=13}}
+=== By public transit ===
+[[File:Madrid Metro Map.svg|thumb|277px|Map of the Madrid Metro]]
+Madrid proudly sports one of the best public transportation networks in the world and the second largest metro network in Europe after London's. Buses and subways work with the same tickets, and operate within the integrated transit network of {{marker|type=go|name=CRTM|lat=40.44085|long=-3.69998|url=http://www.crtm.es/}} (Plaza del Descubridor Diego de Ordás 3, M-F 08:00-20:00). With that said, be aware that Madrid's transportation infrastructure can appear complicated and daunting at first, so take extra time to know where to go and how to get there because it will not be as simple as in other European cities or what your map app is telling you.
+
+A '''single ticket''' for Zone A costs €1.50 (max. 5 stations), but the cost goes up to €2 if you go more than 10 stations, and can be purchased from metro ticket vending machines or directly from the bus driver on entry. A '''ten-trip ticket''' Metrobús ''(10 viajes)'' costs €12.20 (€6.10 until July 2025) for Zone A (no transfers from one mode of transportation to another allowed); these tickets can be shared with other travellers. Children under the age of 4 may travel without a ticket, and children under 11 receive a 50% discount. Tickets can be purchased at metro stations, newsstands, and tobacconists. There are no longer any paper tickets in use in Madrid so, if you do not already have one, you will need to purchase a '''Multi Card''' which is a reloadable, contactless card for €2.50 (Jan 2025). It is an anonymous card so can be used for multiple people by passing back the card to the next person in your group. These card support most ticket types except season &amp; concessionary. The Multi Card does not support local rail travel except the tourist tickets.
+
+If you plan to use public transport a lot you can purchase a '''[https://www.metromadrid.es/en/travel-in-the-metro/fares-and-tickets/tickets#panel4 Tourist Ticket]'''{{Dead link|date=April 2024 |bot=InternetArchiveBot }}, which allows unlimited travel as well as discounted admission for some tourist attractions. The card can be purchased at any metro station, as well as at the CRTM headquarters. For travel within Zone A the following rates apply: 1 day (€10), 2 days (€17.00), 3 days (€22.50), 5 days (€32.50), or 7 days (€41.00). These tickets are personalised so cannot be shared. They can be used on local rail (Cercanías) in the area of validity.
+
+If you're planning on staying for a long time, you might consider investing into the personalised '''Tarjeta Transporte Público'''. You can load season tickets onto them according to your age – ''regular'' (adult), ''joven'' (youth) or ''mayor'' (senior). Application must be made in advance at any metro station with a completed application and a copy of your passport. The season tickets can be loaded from any metro vending machine. 
+
+The public transport system supports contactless payment. Simply tap your bank card or phone to enter and exit.
+
+==== Metro ====
+[[File:Metro de Madrid - Gran Vía 01.jpg|thumb|right|''Gran Vía'' station entrance featuring the traditional Metro logo]]
+The '''[https://www.metromadrid.es/en/index.html Metro de Madrid]{{Dead link|date=March 2026 |bot=InternetArchiveBot }}''' (Madrid's subway/underground) is one of the best and least expensive metros in Europe. The underground tunnels can provide relief from the sun on hot days.
+
+Ticket machines are multi-lingual with instructions Spanish; you can change the language to English by pressing the circular button with several flags in it. Swiping the smartcard once allows you to use the metro network as long and far as you like – but make sure you stay inside the Metro zone A, as once you leave it you'll have to swipe your smartcard again. If you are travelling in the city centre, then multiple people can tap in using the same Multi card; they don’t have to buy their own individual card. However, some outlying stations as well as airport stations have another check at the exit where you have to "tap out" because the fare from central Madrid is higher. Should you go there more than once, buy the "ten trip all network" ticket (which is slightly more expensive than the "ten trip central area" ticket) or a day ticket. When you travel to/from airport stations, there is additional supplement of €3, which can be paid at the entrance or exit. The tourist tickets do not require this supplement as it is included in the price.
+
+Generally the Metro operates daily from 06:00-01:30, although you can catch some trains as late as 02:00. Frequencies range from 2-4 minutes during rush hour to up to 15 minutes from midnight onwards.
+
+[https://www.metromadrid.es/en/travel-in-the-metro/passenger-regulations/bicycle-access-in-the-metro-network Bicycles]{{Dead link|date=March 2026 |bot=InternetArchiveBot }} are permitted on the Metro during most periods except during rush hour, generally M-F 07:30-09:30, 14:00-16:00, and 18:00-20:00. [https://www.metromadrid.es/en/travel-in-the-metro/passenger-regulations/access-of-domestic-animals-to-the-underground-network Pets in carriers]{{Dead link|date=March 2026 |bot=InternetArchiveBot }} and dogs are also permitted.
+
+Pickpockets are rife on the metro, and travellers should take appropriate precautions. Announcements in Metro trains and stations are made mostly in Spanish only, though some signs are bilingual in Spanish and English.
+
+==== Bus ====
+[[File:Madrid - Autobús EMT 8824 - 121212 145920.jpg|thumb|right|EMT Madrid bus]]
+Whatever the Metro doesn't cover, [http://www.emtmadrid.es/Index.aspx?lang=en-GB '''EMT'''] buses do. Generally buses run 06:00-24:00. '''Búho''' (''owl'') night buses have their main hub at {{Marker|type=go|name=Plaza de Cibeles|lat=40.41898|long=-3.69327}}, covering most of the city at roughly 20-minute intervals.
+
+All buses are equipped with free Wi-Fi facility (EMTmadrid), easy to use with any type of laptop or mobile device. For travellers with smartphones, there is a helpful official EMT app for iPhone and Android with a route planner and schedules.
+
+==== Train ====
+Madrid has a system of local trains called '''[https://www.renfe.com/es/en/suburban/suburban-madrid Cercanías]''' that connects outlying suburbs and villages with the city centre. Although most useful for visiting historic or outdoor destinations outside the city core, it is also useful for quickly getting from one end of the city to another, as well as to {{marker|type=go|name=Terminal T4|lat=40.4913|long=-3.5920}} of Barajas airport. If you are flying from another terminal; there is a free inter terminal bus but you will have to allow extra time to use it. You also avoid the airport the metro €3 surcharge and can be much faster than the metro. Tickets are purchased on an individual basis priced according to the number of Cercanías zones you are travelling through but on the ticket machine you select the station you are travelling to. Tickets are issued on a reuseable '''+Renfe &amp; Tú''' card for which there is a €0.50 charge with your first purchase. There is a separate line [https://www.renfe.com/es/en/suburban/suburban-madrid/maps map] but it does indicate the metro interchange stations.
+
+{{marker|type=go|name=Chamartín Cercanías|lat=40.47203|long=-3.68170|image=UT465 Renfe Cercanías Civia II.jpg}} and {{marker|type=go|name=Estación de Nuevos Ministerios|lat=40.44660|long=-3.69216|url=http://www.adif.es/en_US/infraestructuras/estaciones/18002/informacion_000305.shtml|image=Estación Nuevos Ministerios.jpg}} are in the north, and {{marker|type=go|name=Estación de Sol|lat=40.41693|long=-3.70347|image=Estacion de Sol - 01 - IngolfBLN.jpg}} in the centre and {{marker|type=go|name=Atoche Cercanías|lat=40.4053|long=-3.6880|url=https://www.adif.es/w/18000-madrid-atocha-c.?pageFromPlid=335|image=Cercanías. Estación de Atocha.jpg}} is in the south of the city.
+
+=== By taxi ===
+[[File:Madrid - 48733523718.jpg|thumb|right|Taxis in Madrid]]
+Alongside its metro system, Madrid boasts one of Europe's largest taxi fleets. Taxis are usually plentiful and easy to find, but they become harder to find during late hours on weekends, especially if there is some rain. Unlike in other European cities, there are few taxi stands; just stand by the side of a major road or bus stop and wave your hand to signal an available taxi passing by. Available taxis have a green ''libre'' sign in the windshield and a green light on top.
+
+Official taxis are white, and have a red stripe and the flag of Madrid on the front door. The tariff is displayed on top of the car – a '''1''' during daytime and a '''2''' at night, which become '''2''' and '''3''' on public holidays such as Christmas Eve.
+
+Some taxi drivers will do what is called ''la vuelta al ruedo'' — they will drive you around or through the crowded avenues to increase the fare.
+
+Most taxi drivers do not speak fluent English, so you should have the names and addresses of your destinations written in Spanish to show your taxi driver. Likewise, get your hotel's business card in case you get lost. When giving an address to a taxi driver, it is useful to say the name of the neighbourhood in addition to the street name and number, for example: Calle de Don Ramón de la Cruz, 74, Lista. Another option is to use an app like '''[https://www.free-now.com/es-en/ Free Now]{{Dead link|date=November 2025 |bot=InternetArchiveBot }}''' or '''[https://pidetaxi.es/en/ PideTaxi]''', where you can enter your destination and the app will hail a taxi for you.
+
+For those looking for alternatives to a taxi, rideshare services '''[https://bolt.eu/en/cities/madrid/ Bolt]''', '''[https://cabify.com/en Cabify]''' and '''[https://www.uber.com/global/en/r/cities/madrid-es-md-es/ Uber]''' also operate throughout the city.
+
+=== By car ===
+Cars have been one of the most hot button issues in Madrid municipal politics in the twenty first century. Leftist mayor Manuela Carmena introduced a scheme to drastically reduce the number of cars in central Madrid, however she lost reelection in 2019 and the new right-wing Mayor José Luis Martínez-Almeida reversed course before being forced by European Union legislation they had violated to partially reinstate the ban. In short: driving a car in Madrid can be a nightmare, but not as bad as cities like Paris or Brussels. Parts of the Spanish capital's downtown suffers from the typical problems of most big cities: far too many cars and not enough space to accommodate them. However, you can often see construction works on roads aimed at finding a better balance between cars and buses, and evidence is pointing towards easier coexistence between all modes of transportation. With that said, traffic jams in major arteries like the ''Paseo de la Castellana'' can occur deep into the night. The problem is compounded by the narrow streets in the old town, where a lorry delivering beer barrels to a local bar can cause a huge tailback. Finding a parking space can be very time consuming, and difficult if one is not skilled in the art of close proximity parallel parking. Many Spaniards are also lacking in this art, prompting them to simply park in the street, blocking other cars in. If you find yourself blocked in by such a practice, honk your horn until the driver returns. Most Madrileños park by sound alone: they will feel no remorse for repeatedly hitting the car in front and behind them while trying to get into or out of a tight spot. If you value your car's paint job, or you have rented a car, it may be best to park underground. Though this is no guarantee for nobody hitting your car, the chances are somewhat diminished.
+
+For free parking but within walking distance of 20 minutes to Sol, try the street at ''Principe Pio'' metro stop. The place to park is the street near to the shopping mall called 'Calle de Mozart'. It is packed with cars on weekday mornings because of people getting to the Metro station. During the evenings and weekends it's easy to get a parking spot.
+
+Renting a car is not recommended for getting around central Madrid, and if you're only staying within this area a car is likely to be more of a liability than an asset. Visitors should make use of Madrid's excellent public transportation instead. Renting a car however makes sense if you are planning to leave central Madrid to venture into the outer districts or to nearby towns. Car rental facilities are available at the airport, train stations, and other main travel sites, and cars from car-sharing services like '''[https://www.free2move.com/es/en/car-sharing/madrid/ Free2move]''', '''[https://www.guppy.es/en/ guppy]''', '''[https://www.voltio.com Voltio]''', '''[https://www.wible.es/en/ WiBLE]''' and '''[https://zity.eco/en/madrid/ Zity]''' are widely available on the street to rent on a per-minute basis. Always be sure to have a street map handy! The roads within Madrid are difficult to navigate as there are no places to stop and consult a map or check your route.
+
+There are several consecutive junctions underground near the centre and your GPS may not get a signal underground. Plan your turns before you enter the tunnels.
+
+=== By bicycle ===
+[[File:Park space, Madrid Rio.jpg|thumb|Madrid Río]]
+Madrid does not appear as a [[cycling|bike-friendly]] city at a first sight. Things were changing slowly to make bike experience more comfortable, but in 2019 the new right-wing mayor planned to make the city the only capital in the world where bicycle lanes are being removed. Several streets in the city centre have been transformed into mixed-traffic spaces where pedestrians and bikes have priority over cars. There are new easy-bike paths all along the river and connecting important parks.
+
+It is also possible to use a lot of narrow easy streets where traffic is slow and calm to travel along the city without depending on exclusive bike paths. There are some official and unofficial publications with these streets along the web.
+
+To avoid some of Madrid inconveniencies, such as hot weather or slopy streets it is also possible to get bikes on Metro and Railways trains with some schedule restrictions, and on every public transport without restrictions when using folding-bikes.
+
+Madrid's public bike rental service, called [http://www.bicimad.com/ '''BiciMAD''']. It boasts 1560 electric bikes spread over 123 stations. Unfortunately, the site is not yet available in English. However, the information at the bike stations is available in multiple languages. A casual user pays no initial fee, but €2 for every first hour or fraction, and €4 for the second (Oct 2019). A contactless card is issued instantaneously upon signing up at any bike station. The process is relatively quick and requires some basic information such as name, ID, email and credit card number. Swipe the card through the somewhat larger opening on the left of any bike to retrieve it. Use the buttons to the left of the handlebar to toggle electric assistance. Here you'll also find a button to switch on the lights. So watch out, you'll need to do this yourself when it gets dark! Be equally careful when using electric assistance for the first time, as it might require some getting used to.
+
+There are also some rent shops in the historical centre area such as the company [https://www.bajabikes.eu/en/bike-rental-madrid/ Baja Bikes Madrid]. This company offers several rental points in Madrid at Retiro, Atocha, Madrid-Río, etc. They offer guided and self-guided bicycle tours, using electric or conventional bicycles.
+
+* {{listing
+| name=Trixi bike tours | alt= | url=http://www.trixi.com | email=
+| address=c/Jardines 12 | lat=40.41887 | long=-3.70076 | directions=
+| phone=+34 915 231 547 | tollfree= | fax=
+| hours= | price=
+| content=Bicycle tours and rental from €4/hr. Daily 11:00 start city bike tours in English for 3 hr, €22.
+}}
+
+== See ==
+{{seeDistricts}}
+Madrid is one of the top addresses in the world for art, both contemporary and not-so-contemporary, with Goya's most famous works in the Prado, Picasso's ''Guernica'' in the Reina Sofía and countless other works in those two museums and the Thyssen-Bornemisza Museum. The Prado goes back to the royal art collection which - for a nation that was the world's leading superpower for two centuries - is of course quite impressive. The Reina Sofía was opened to house what the Prado "had no room for" with a dividing line based on era ultimately being drawn. Besides art, Madrid also boasts some impressive architecture courtesy of kings who had access to the wealth of two continents and no qualms in spending it for extravagant royal residences.
+
+The following is a non-exclusive taste of what Madrid has to offer. Dive into the districts to find more!
+
+[[File:El jardín de las Delicias, de El Bosco.jpg|thumb|''The Garden of Earthly Delights'' by Hieronymus Bosch at Prado Museum]]
+* {{marker|type=see|name=[[Madrid/Retiro-Paseo_del_Arte|Museum Triangle]]|wikidata=Q160112|lat=40.41381|long=-3.69224}}. This is Madrid's museum district, named for the three major art museums clustered along Paseo del Prado east of the old city: the '''Museo del Prado''', one of the finest art museums in the world, the '''Thyssen-Bornemisza''', a baron's collection of classical art, and the '''Reina Sofia''', Madrid's modern art museum. However, a couple of smaller museums also occupy the neighbourhood which are well worth seeing as well.
+
+[[File:Palacioreal madrid.jpg|thumb|right|Royal Palace]]
+* {{marker|type=see|name=[[Madrid/La_Latina-Austrias#Palacio Real|Royal Palace]]|wikidata=Q171517|lat=40.4180|long=-3.7142}}. An enormous palace, one of the biggest in Europe, with scorching plains of concrete around it. Though it is the official residence of the King of Spain, the royal family does not actually reside here and it is generally used only for state ceremonies. The Royal Palace is considered to be one of the most emblematic and beautiful buildings in Madrid.
+* {{marker|type=see|name=[[Madrid/La_Latina-Austrias#Plaza Mayor|Plaza Mayor]]|wikidata=Q1123493|lat=40.41537|long=-3.70726}}. Perhaps the best known plaza in Madrid, this impressive square is now one of the main stops on any tourist visit.
+* {{marker|type=see|name=[[Madrid/Sol-Letras-Lavapiés#Puerta del Sol|Puerta del Sol]]|wikidata=Q427163|lat=40.41689|long=-3.70347}}. This plaza is the heart of Madrid and one of the busiest places in the city – a hub for the local transit system, a favourite meeting spot for locals, a visible area for festivals or political demonstrations, and an opportune location for tour guides, street performers, pickpockets and anyone else looking to take advantage of all the tourists on-hand. Several of Madrid's landmarks are found here: the statue of the Bear and the Strawberry Tree, the main Post Office with its iconic clock tower and Kilometre Zero of the Spanish road network.
+* {{marker|type=see|name=[[Madrid/Sol-Letras-Lavapiés#Gran Vía|Gran Vía]]|lat=40.41998 | long=-3.70162 | wikidata=Q1324163}}. One of the busiest avenues in Madrid, the location of the cinema district and a number of shopping malls and is lined with large billboards and lights.
+* {{marker|type=see|name=[[Madrid/Retiro-Paseo_del_Arte#Plaza de Cibeles|Plaza de Cibeles]]|lat=40.41932 | long=-3.69307 | wikidata=Q1324163}}. Large roundabout in the city centre with the neoclassical Cybele Fountain and the imposing eclectic Cybele Palace. Spain's former Palace of Communications is now the seat of the municipal government).
+* {{marker|type=see|name=[[Madrid/La_Latina-Austrias#Mercado de San Miguel|Mercado de San Miguel]]|lat=40.41537 | long=-3.70904 | wikidata=Q6770825}}. Sets the ambience of a traditional market, with the advantages of the new times. It has an iron and glass structure from the 20th century.
+
+[[File:Catedral de la Almudena (Madrid) 02.jpg|thumb|right|''Catedral de la Almudena'']]
+* {{marker|type=see|name=[[Madrid/La_Latina-Austrias#Catedral de la Almudena|Catedral de la Almudena]]|lat=40.41578 | long=-3.71444 |wikidata=Q849711}}. The main church of Spanish Catholicism, in neo-Gothic style. Built from the 19th century to the 1990s.
+* {{marker|type=see|name=[[Madrid/Moncloa#Plaza de España|Plaza de España]]|lat=40.42327 | long=-3.71260 | wikidata=Q1326261}}. A prominent square adjacent to two of the tallest buildings in Madrid: the ''Torre de Madrid'' and the ''Edificio España''.
+
+[[File:Monumento a Alfonso XII de España en los Jardines del Retiro - 04.jpg|thumb|right|''El Retiro'' park]]
+*{{marker|type=see|name=[[Madrid/Retiro-Paseo_del_Arte#Parque_del_Retiro|Parque del Retiro]] | lat=40.41428 | long=-3.68239 | wikidata=Q1131807}}. The main park of Madrid, the perfect place to take a rest during a sunny day, or take part in the drum circles around the statue of Alphonso XII on summer evenings.
+*{{marker|type=see|name=[[Madrid/Moncloa#Templo de Debod|Templo de Debod]] | lat=40.424053 | long=-3.717778 |wikidata=Q1140249}}. Ancient Egyptian temple that was moved to Madrid's Parque del Oeste after the construction of the Aswan High Dam.
+
+== Do ==
+{{seeDistricts}}
+[[File:Edificio Social Círculo Bellas Artes 4 Madrid.jpg|thumb|Rooftop view from the Círculo de Bellas Artes]]
+
+=== Sports ===
+* '''Football:''' the men's national soccer team don't have a fixed stadium, but often play at Bernabéu and Metropolitano stadiums in Madrid. The best known clubs are Real Madrid and Atlético de Madrid, both based in the [[Madrid/Northern_Suburbs#Sports | Northern Suburbs]]. They play in La Liga the top tier, and routinely qualify for European tournaments. Other teams include Rayo Vallecano in Vallecas and Getafe in the nearby suburbs, reached by Madrid Metro.
+
+* '''Basketball:''' Estudiantes and Real Madrid play at Palacio de los Deportes. Fuenlabrada, based in the Madrid suburb of the same name, play at Polideportivo Fernando Martín.
+
+* '''Rugby Union:''' the Spanish national XV play at Estadio Nacional Complutense on the university campus. Cisneros play there in División de Honor, the Spanish top tier. Alcobendas play near the airport, also in the top tier. 
+
+* '''[[Handball in Europe|Handball]]''' is also played in Madrid but no longer in the top tier, making BM Alcobendas the highest ranked team.
+
+=== Cultural venues ===
+[[File:Palco TeatroReal.jpg|thumb|Teatro real, or the Royal Theatre]]
+Flamenco shows can be seen in numerous venues in [[Madrid/Sol-Letras-Lavapiés#Do|Sol-Letras-Lavapiés]], [[Madrid/Moncloa|Moncloa]] and [[Madrid/La_Latina-Austrias#Flamenco Shows|La Latina - Austrias]].
+
+Opera houses are spread through the city centre. In addition, several orchestras don't have a stable/home venue to play in:
+* {{do
+| name=Orquesta Nacional de España | alt=Spanish National Orchestra | url=http://ocne.mcu.es/ | email=
+| address= | lat= | long= | directions=
+| phone=+34 902 224 949 (tickets) | tollfree= | fax=+34 915 632 907
+| hours= | price=
+| wikipedia=Spanish National Orchestra | wikidata=Q1147146
+| lastedit=2017-02-04
+| content=Tickets are sold at ticket offices in the Auditorio Nacional de Música, Teatro María Guerrero, Teatro de la Zarzuela, Teatro de la Comedia, and Teatro Valle-Inclán.
+}}
+* {{do
+| name=Orquesta Sinfónica de Madrid | alt=Madrid Symphony Orchestra | url=http://www.osm.es/ | email=osm@osm.es
+| address=C/ Barquillo, 8 | lat= | long= | directions=
+| phone=+34 915 321 503 | tollfree= | fax=+34 915 325 364
+| hours= | price=
+| wikipedia=Orquesta Sinfónica de Madrid | wikidata=Q2443296
+| lastedit=2017-02-04
+| content=
+}}
+* {{do
+| name=Orquesta de la Comunidad de Madrid | alt=Community of Madrid Orchestra | url=http://www.orcam.org/ | email=info@orcam.org
+| address=C/ Mar Caspio, 4 | lat= | long= | directions=
+| phone=+34 913 820 680 | tollfree= | fax=+34 917 643 236
+| hours= | price=
+| wikipedia=the Community of Madrid Orchestra | wikidata=Q5155000
+| lastedit=2017-02-04
+| content=
+}}
+[[File:Banda Sinfonica Municipal Madrid.jpg|thumb|Performance of the Banda Sinfónica Municipal in El Retiro Park]]
+*{{do
+| name=Banda Sinfónica Municipal de Madrid | alt= | url= | email=bsinfonica@madrid.es
+| address= | lat= | long= | directions=
+| phone=+34 915 267 147, +34 915 267 158 (M-F 08:00-15:00) | tollfree= | fax=
+| hours= | price=€5 (adults), €3 (seniors/youth/children)
+| wikidata=Q597547
+| content=Performs in [[Madrid/Retiro-Paseo_del_Arte#Parque del Retiro|El Retiro Park]] in the summer. Tickets can be purchased at the Teatro Monumental (listed above), at the tourist information centre in Plaza Mayor, and [https://madrid-destino.shop.secutix.com/list/events online].
+}}
+
+[[File:Cine Ideal, Madrid.JPG|thumb|right|''Cine Ideal'' offers subtitled movies in English]]
+Cinemas offer films in English, along with films in other languages. These original films are denoted in the listings by a designation of "V.O." (''versión original'') or, if subtitled in Spanish, "VOSE" (''versión original subtitulada en español''). Cinemas in Madrid will sometimes have ''días del espectador'' (viewer days) with cheaper ticket prices, usually on Mondays or Wednesdays. It also has the world's largest multiplex cinema,  with 25 different screens.
+
+=== Festivals ===
+[[File:Non-standard LGBT flag, Madrid Gay Pride 2008.jpg|thumb|Madrid Gay Pride 2008]]
+*{{do
+| name=La Trashumancia | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+|lastedit=2022-12-05| content=Annual event during which the centre of Madrid is free of cars and is instead filled with shepherds exercising their ancient right to drive sheep and livestock through the city.
+}}
+*{{do
+| name=Madrid Gay Pride | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Annual event held between the last week of June and the first of July, with more than 1.5 million people in the street from all around the world. It began as a weekend party, but lately turned into a full-week extravaganza.
+}}
+
+== Learn ==
+If you want to go to Madrid to learn Spanish, there are several private language schools that offer Spanish courses for foreigners. These are listed in the district articles. For example:
+
+* [https://www.donquijote.org/learn-spanish-spain/madrid/ '''Don Quijote School''']. You can take 4–6 hours of Spanish courses a day. All courses, including beginner courses, are taught entirely in Spanish. A week costs €230 for 20 hours.
+* [https://www.enforex.com/learn-spanish/school-madrid/ '''Enforex''']. Spanish courses for all ages, intensive or private. Start any Monday of the year a Spanish course with Enforex. A week costs €130 for 10 hours.
+
+Another option is to take a Spanish course at university, the '''Complutense University of Madrid''' offers Spanish courses for foreigners that take place in the faculty of Philology and Letters.
+
+== Buy ==
+[[File:Mercado de San Miguel (Madrid) 04.jpg|thumb|right|''Mercado de San Miguel'' is close to Plaza Mayor]]
+Major credit cards and foreign bank cards are accepted in most stores, but it is common practice to be asked for photo-ID (DNI). If asked for your DNI present your passport, residency permit or foreign ID card — anything with your photo and name on it will be accepted by most shopkeepers. The signatures on credit cards are usually not checked.
+
+[[File:Preciados Madrid - exile on consuming street.jpg|thumbnail|right|Calle de Preciados remains busy also after dusk]]
+
+=== Shopping districts ===
+In addition to the shopping areas below, there are also a lot of H&amp;M, Zara, Mango, and Blanco stores all over Madrid, with high fashion clothes and accessories at a low price.
+* {{buy
+| name=Sol area | alt= | url= | email=
+| address= | lat=40.4188 | long=-3.7048 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| lastedit=2017-04-08
+| content=The most convenient area for tourists is around Calle de Preciados and Calle del Carmen, between metro stations ''Sol'' and ''Gran Vía'', home to the El Corte Inglés department store, high-street names like Zara, Gran Vía 32, H&amp;M, Sephora, Pimkie.
+}}
+* {{buy
+| name=Salamanca | alt= | url= | email=
+| address= | lat=40.4293 | long=-3.6863 | directions=Metro ''Serrano'', ''Núñez de Balboa'' or ''Retiro''
+| phone= | tollfree= | fax=
+| hours= | price=
+| lastedit=2017-04-08
+| content=The most upscale shopping district is northeast of the centre, around Calle Serrano and its side-streets. Top designer names like Chanel, Versace, Hermès, Hugo Boss, Louis Vuitton, Emporio Armani and Dolce &amp; Gabbana, including the fluid fabrics and elegant cuts of Spanish designer Adolfo Domínguez, are on Calle Ortega y Gasset. Head for Calle Serrano for Purificación García, Roberto Verino, Ermenegildo Zegna, Loewe, Carolina Herrera, Manolo Blahnik, Cartier, and Yves Saint Laurent. Prada is on Goya street, and on Jorge Juan St you can find even more luxury shops.
+}}
+[[File:Orgullo Madrid 2007 - Calle de Chueca.jpg|thumb|right|Chueca during the gay pride]]
+* {{buy
+| name=Chueca and Calle Fuencarral area | alt= | url= | email=
+| address= | lat=40.423 | long=-3.7006 | directions=between metro stations ''Gran Vía'' and ''Tribunal''
+| phone= | tollfree= | fax=
+| hours= | price=
+| lastedit=2017-04-08
+| content=This part of the city used to be an abandoned and marginal area. However, it has quickly turned into the most avant-garde and modern part of Madrid. Thanks to the gay community, old shops were taken over and turned into the coolest places of Madrid. Today it is an example of modernity, a paradise for entertainment where everything is possible. The streets are filled with restaurants, alternative cafés and shops, a good example is the Mercado de Fuencarral a novel shopping centre concept. Apart from the purely commercial, this area proposes a wide range of gastronomy and party clubs by night in the weekends.
+}}
+
+=== El Corte Inglés ===
+[[File:El Corte Inglés Castellana (Madrid) 02.jpg|thumbnail|right|There is no denying that with El Corte Inglés, the delight for your eyes is on the inside (Nuevos Ministerios store pictured)]]
+'''[http://www.elcorteingles.es El Corte Inglés]''' is a Spanish institution, the only remaining department store chain in the country. El Corte Inglés stores are ubiquitous and dominate the retail market, setting the tone and reflecting the preferences of the Spanish customers. While hardly as exciting as visiting the over-the-top luxury department stores in New York or London, they provide a nice shopping environment, and many feature nice (and reasonably priced) food options. So, if the weather is bad, one of their stores may be your last resort.
+
+Some of the more prominent El Corte Inglés locations in Madrid:
+* {{buy
+| name=El Corte Inglés Preciados | alt= | url=https://www.elcorteingles.es/centroscomerciales/en/eci/centros/centro-comercial-preciados-callao | email=
+| address=C/ Preciados 1-9 | lat=40.41755 | long=-3.70477 | directions=
+| phone=+34 913 798 000 | tollfree= | fax=
+| hours= | price=
+| lastedit=2017-02-07
+| content=Occupying the full first few blocks of the pedestrian boulevard Calle Preciados, El Corte Inglés serves as a gateway to the shopping paradise from Puerta de Sol.
+}}
+* {{buy
+| name=El Corte Inglés Plaza de Callao | alt= | url=https://www.elcorteingles.es/centroscomerciales/en/eci/centros/centro-comercial-preciados-callao | email=
+| address=Plaza de Callao, 2 | lat=40.41952 | long=-3.70506 | directions=
+| phone=+34 913 798 000 | tollfree= | fax=
+| hours=M-Sa 10:00-22:00, Su 11:00-21:00 | price=
+| lastedit=2017-02-07
+| content=A much smaller store is to be found at the other end of Calle Preciados. Not quite a looker from the outside, it holds a top-floor restaurant with brilliant views over the Gran Vía.
+}}
+
+You will also find stores in {{marker|type=buy|name=Centro Comercial Serrano|lat=40.43005|long=-3.68752|url=https://www.elcorteingles.es/centroscomerciales/en/eci/centros/centro-comercial-serrano|image=Calle de Serrano nº 52 (Madrid) 01.jpg}}, {{marker|type=buy|name=Centro Comercial Goya|lat=40.42442|long=-3.67474|url=https://www.elcorteingles.es/centroscomerciales/en/eci/centros/centro-comercial-goya|image=El Corte Inglés Goya (Madrid) 01.jpg}} and {{marker|type=buy|name=Centro Comercial Princesa|lat=40.43015|long=-3.71531|url=https://www.elcorteingles.es/centroscomerciales/en/eci/centros/centro-comercial-princesa|image=Corte-Ingles-Princesa-170116.JPG}}, as well as in most shopping centres on the outskirts of Madrid.
+
+=== Fashion ===
+'''[http://www.loewe.com Loewe]''' is one of the world's oldest luxury brands, founded back in the middle of the 19th century in Madrid. You will find their flagship stores {{marker|type=buy|name=Loewe Flores|lat=40.42779|long=-3.68704|url=https://www.loewe.com/eu_en/store-locator/index/view/id/2033/}} and {{marker|type=buy|name=Casa Loewe Madrid|lat=40.42768|long=-3.68720|url=https://www.loewe.com/eu_en/store-locator/index/view/id/2214/}} around the intersection of Calle Serrano and Calle de Goya, {{marker|type=buy|name=Loewe Gran Vía|lat=40.41959|long=-3.69828|url=https://www.loewe.com/eu_en/store-locator/index/view/id/1762/}} on Gran Vía, and, if you forgot something, two at the [[Adolfo Suárez Madrid–Barajas Airport|Madrid-Barajas Airport]], in T1 and T4. If you are interested in flamenco, you can buy [https://www.zapateriaantoniogarcia.com/ flamenco shoes] at the store that makes the [https://es.wikipedia.org/wiki/Sara_Baras Sara Baras] shoes
+
+=== Markets ===
+[[File:Rastro de Madrid (España) 7.jpg|thumb|right|El Rastro is the most important flea market in Madrid]]
+Interesting markets can be found in the [[Madrid/La_Latina-Austrias#Buy|La Latina - Austrias]] and [[Madrid/Retiro-Paseo_del_Arte#Buy|Retiro - Paseo del Arte]] districts
+
+== Eat ==
+{{SeeDistricts}}
+
+=== Cuisine ===
+{{Seealso|Spanish cuisine}}
+[[File:CocidoMadrileño.jpg|thumb|''Cocido madrileño'']]
+Dishes popular throughout [[Spain#Spanish dishes|Spain]] are also widely served in Madrid.
+
+In addition, Madrid has a number of typical regional dishes:
+* '''Gallinejas''' and '''entresijos''' – Lamb chitterlings fried in its fat. Very traditional and typical from Madrid city.
+[[File:Callos cociendose.jpg|thumb|right|''Callos a la madrileña'']]
+* '''Callos a la madrileña''' – A hot pot of spicy beef tripe similar to those found in [[Turkey]] and the Balkans.
+* '''Cocido madrileño''' – Chickpea stew with meat and vegetables. The particularity of this stew is the way it is served. The soup, chickpeas and meat are served and eaten separately.
+* '''Oreja de cerdo''' – Pigs ears, fried in garlic. This popular dish is widely eaten throughout central Spain.
+* '''Sopa de ajo''' – Garlic soup is a rich and oily soup which generally includes paprika, grated Spanish ham, fried bread and a poached egg. A variation of this soup is known as '''sopa castellana'''.
+
+It is ironic that Madrid, in the centre of Spain, has higher quality seafood than many coastal regions. This quality comes at a price, and most Spaniards only occasionally shell out for a ''mariscada'' or seafood feast. Experiencing Madrid's seafood may be, for the visitor, an experience which will be worth the cost.
+
+Fresh meat and meat products (jamón ibérico, morcilla, chorizo etc.) are of generally a very high quality in Madrid.
+
+=== Restaurants ===
+Many of the restaurants and ''cervecerías'' in the Sol and Plaza Mayor area have generic poster board advertisements on the sidewalks with pictures advertising various paella dishes. These paellas are usually of bad quality and should be avoided. If you are looking for good, authentic Spanish paella, it is usually best to find a more expensive, 'sit-down' type of restaurant that offers a variety of paella dishes.
+
+A much better option is the La Latina neighbourhood just south of Plaza Mayor, especially along Calle Cava Baja. There are also a number of deli-like shops along Calle Arenal that offer food to go (''para llevar'').
+
+At bars, one generally orders various sized plates, a ''ración'' meaning a full dish, a ''media ración'' or a half-dish, or a smaller version which would be a ''tapa'', a ''pinxto'' or a ''pincho''.
+
+The Spaniards don't eat lunch until 14:00 or 15:00, and dinner doesn't start until 21:00 or 22:00. As a rule of thumb, restaurants serve lunch from 13:00 until 15:30, then close and re-open for dinner at 20:00, serving until 23:00. This schedule is usually for restaurants, since bars and ''mesones'' are usually opened all day long offering a wide variety of tapas and sandwiches for a cheap price. If you're really desperate, the standard bunch of fast food chains do stay open throughout the day.
+
+[[File:Madrid Museo del Jamón.jpg|thumb|Museo del Jamón]]
+[[File:Churros at Chocolatería San Ginés in Madrid, Spain.JPG|thumb|Churros at Chocolatería San Ginés]]
+
+== Drink ==
+{{SeeDistricts}}
+
+=== Tapas bars ===
+In the tapas bars, you should get free food with your drinks. The highest concentration of tapas bars is in [[Madrid/La Latina-Austrias#Drink|La Latina]] and around Plaza Santa Ana in the [[Madrid/Sol-Letras-Lavapiés#Drink|barrio de las Letras]], but you will find them all over the city, including [[Madrid/Malasaña-Chueca#Drink|Malasaña and Chueca]] as well as the [[Madrid/Moncloa#Drink|western districts]], where there are probably less overrun by tourists.
+* {{drink
+| name=[[Madrid/La_Latina-Austrias#Calle Cava Baja|Calle Cava Baja]] | alt= | url= | email=
+| address= | lat=40.4124 | long=-3.70922 | directions=Metro: La Latina
+| phone= | tollfree= | fax=
+| hours= | price=
+| lastedit=2017-07-30
+| content=This narrow street in La Latina is by far the most famous and popular place for tapas.
+}}
+
+=== Cafés ===
+Cafés and confectioneries can be found all over the city, but the highest concentration can be found around [[Madrid/Sol-Letras-Lavapiés#Drink|Puerta del Sol, barrio de las Austrias and Lavapiés]], in the [[Madrid/La Latina-Austrias#Drink|Old town]] and in [[Madrid/Malasaña-Chueca|Malasaña and Chueca]]. A very popular and typical local sweet that is sold both in cafés and by street vendors is ''Churros''. These fried-dough pastries are distantly related to doughnuts, but have a more elongated shape and are a lot crispier. They are usually drizzled with sugar or chocolate.
+
+=== Bars ===
+[[File:Puerta del Sol (Madrid) 13.jpg|thumbnail|Madrid gets lively around midnight]]
+Nightlife starts later in Madrid, with most people heading to the bars at 22:00-23:00. One of the best options to enjoy the nightlife is in the popular quarter '''[[Madrid/Sol-Letras-Lavapiés#Drink|Barrio de las Letras]]''', especially on its main street, '''Calle Huertas''', and other nearby streets. A great choice of bars is also available in the more traditional [[Madrid/La Latina-Austrias#Drink|La Latina]] area as well as in the younger and alternative-flavoured [[Madrid/Malasaña-Chueca#Drink|Malasaña and Chueca]] districts.
+
+Draught beer ''(cerveza)'' is usually ordered in ''cañas'' (200 ml), but may also come in ''dobles'' (400 ml) or ''jarras'' (mugs).
+
+=== Clubs ===
+Clubs generally open at about midnight. If you go in any earlier you may find it quite empty. Many clubs do not close until 06:00, and even then everyone is still full of life.
+
+=== Nightlife areas ===
+* '''[[Madrid/Malasaña-Chueca#Drink|Alonso Martínez]]''' - Many pubs and small discos. Until about 03:00, a very young crowd, and if you′re around here before midnight, and over the age of 20, prepare to feel positively old. Most places close around 03:00, then people move to clubs in Gran Vía or Tribunal to continue partying.
+* '''[[Madrid/Malasaña-Chueca#Drink|Chueca]]''' - Near Malasaña and Gran Vía, it is known as the gay district, but doesn't exclude straight people. Pop and electronic music. By far, the most cosmopolitan place in town. Has become quite chic and expensive.
+* '''[[Madrid/Malasaña-Chueca#Drink|Tribunal/Malasaña]]''' - Alternative area. Mainly rock and pop music clubs, some of them still open from "La movida madrileña" (beginning of the 1980s). Calle Manuela Malasaña is a great place to eat, Calle del Pez a great place to have some drinks and Plaza Dos de Mayo is the heart of the district.
+* '''[[Madrid/Sol-Letras-Lavapiés#Drink|Gran Vía]]''' - "The place that never sleeps". Major street that includes many popular nightclubs, usually open from 01:00 to 06:00-07:00.
+* '''[[Madrid/La Latina-Austrias#Drink|La Latina]]''' - Near Lavapiés, it is the place to go for tapas and full of bohemian young people looking for stylish bars. In the old section are many small bars and pubs catering to people in their late 20s and 30s). Multiple bars serving fantastic tapas in the Cava Baja and Cuchilleros.
+* '''[[Madrid/Sol-Letras-Lavapiés#Drink|Lavapiés]]''' - Multicultural quarter of the city, with more than 50% foreign residents, mostly from Africa, Asia and Latin America. Plenty of world music bars. Lavapiés is maybe the most cosmopolitan and hippy area at the same time in Madrid.
+* '''[[Madrid/Moncloa#Drink|Moncloa/Ciudad Universitaria]]''' - Due to its proximity to ''Universidad Complutense'', Moncloa is associated with students and a student lifestyle, with many cheap bars and discos. Some of the places are best avoided. There are a few cheap bars with great nightlife starting from Thursdays directly in the Ciudad Universitaria near the major student dorms.
+* '''[[Madrid/Chamberí-Castellana#Drink|Torre Europa]]''' - There used to be several posh pubs and clubs under the tower across from the stadium. There are four or five bars and discos in the avenida de Brazil area catering to a young and student crowd.
+
+== Sleep ==
+While of course it is most convenient to have an accommodation close to the sights in the city centre, you should also consider hotels or apartments in the other districts. For example, [[Madrid/Malasaña-Chueca|Malasaña and Chueca]] are just 1 km north of the city centre, [[Madrid/Chamberí-Castellana|Chamberí]] 2 km, but the rates may already be noticeably lower. When travelling as a family or small group, you may also think about renting an apartment via ''AirBnB'' or similar sharing platforms. They are usually located in residential neighbourhoods and include a kitchen, so you can do your shopping on markets, supermarkets or ''alimentación'' stores and prepare some meals yourself. That way you may experience more of the Madrilenians' everyday life and reduce the total cost of your stay significantly. You will also find restaurants in these districts catering to locals rather than tourists.
+
+=== Hostels ===
+Cheap hostels starting from €8 for a dorm bed can be found near [[Madrid/Moncloa#Sleep|Plaza de España]], in [[Madrid/Sol-Letras-Lavapiés#Sleep|Lavapiés or the Sol area]]. There are also a bit more comfortable hostels offering single rooms for €30–40, doubles for €40–50, e.g. in [[Madrid/Malasaña-Chueca#Sleep|Malasaña]] or the [[Madrid/La Latina-Austrias|barrio de las Austrias]].
+
+=== Budget ===
+Budget hotels and B&amp;Bs charge around €30–60 for single, €55–100 for double rooms. Many of them can be found in the [[Madrid/Sol-Letras-Lavapiés#Sleep|Barrio de las Letras]] or [[Madrid/Malasaña-Chueca#Sleep|Chueca]] district.
+
+=== Mid-range ===
+A room in a mid-range hotel will cost you around €60–150 per night. Most of them are concentrated in the [[Madrid/Sol-Letras-Lavapiés#Sleep|Barrio de las Letras and Sol area]] as well as the [[Madrid/Retiro-Paseo del Arte#Sleep|Paseo del Arte]].
+
+=== Splurge ===
+A stay in a plush hotel will set you back at least €90 per night and there is no upper limit. Most of them are found in the posh [[Madrid/Salamanca#Sleep|Salamanca]] district, along the [[Madrid/Sol-Letras-Lavapiés#Sleep|Gran Vía]], in the [[Madrid/La Latina-Austrias|historic centre]] and in the [[Madrid/Retiro-Paseo del Arte#Sleep|Retiro and Paseo del Arte]] area. Among the most famous names in the business are the ''Hotel Villa Magna'', the ''Gran Meliá Palacio de Los Duques'' and the Madrid ''Ritz''.
+
+== Connect ==
+As of Sept 2021, Madrid has 5G from all Spanish carriers.
+
+''Locutorios'' (call shops) are widely spread in Madrid near touristy locations and are very cheap to use. Some shops and kiosks have tourist SIM cards from carriers like Orange and Vodafone with plans that run €10&amp;ndash;20 for a month of 50&amp;ndash;100 gigabytes of data or more. Employees are willing to install the card and configure the plan.
+
+== Cope ==
+=== Embassies ===
+{|
+|-
+| style="width:50%;" |
+* {{flag|Algeria}} {{listing
+| name=Algeria | alt= | url=http://www.emb-argelia.es/ | email=
+| address=Calle del Gral Oraá, 12 | lat= | long= | directions=
+| phone=+34 91 562 97 05 | tollfree= | fax=
+| hours=M-F 09:00-14:00 | price=
+| lastedit=2017-11-05
+| content=
+}}
+*{{flag|Andorra}} {{listing
+| name=Andorra | alt= | url=http://visitandorra.com/es/inicio/ | email=
+| address=Calle de Alcalá, 73 | lat= | long= | directions=
+| phone=+34 91 431 74 53 | tollfree= | fax=
+| hours=M-Th 09:00-17:00, F 08:00-14:00 | price=
+| lastedit=2017-11-05
+| content=
+}}
+* {{flag|Argentina}} {{listing
+| name=Argentina | alt= | url=http://cmadr.mrecic.gov.ar/ | email=
+| address=Calle Fernando el Santo, 15 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours=M-F 08:30-13:00 to submit documents and till 16:00 to return documents and telephone inquiries| price=
+| lastedit=2017-11-05
+| content=
+}}
+*{{flag|Australia}} {{listing
+| name=Australia | url=http://www.spain.embassy.gov.au/ | email=
+| address=Torre Espacio, Paseo de la Castellana, 259D, Planta 24 | lat= | long= | directions=
+| phone=+34 91 353 6600 | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+*{{flag|Austria}} {{listing
+| name=Austria | alt= | url=http://www.bmeia.gv.at/botschaft/madrid.html | email=
+| address=Paseo de la Castellana, 91 - 9º planta | lat= | long= | directions=
+| phone=+34 91 556 5315 | tollfree= | fax=+34 91 597 3579
+| hours= | price=
+| content=
+}}
+*{{flag|Belgium}} {{listing
+|name=Belgium (Bélgica) |url=http://diplomatie.belgium.be/spain/ |email=madrid@diplomatie.fed.be
+|address=Paseo de la Castellana, 18
+|phone=+34 91 577 6300 |fax=+34 91 431 8166
+|hours=M-F 09:00-14:00
+|content=
+}}
+*{{flag|Brazil}} {{listing
+| name=Brazil (Brasil) | alt= | url=http://madri.itamaraty.gov.br/es-es/ | email=
+| address=Calle Fernando el Santo, 6, | lat= | long= | directions=
+| phone=+34 91 700 4650 | tollfree= | fax=
+| hours=M-F 10:00-14:00 and 16:00-19:00 | price=
+| lastedit=2017-11-07
+| content=
+}}
+*{{flag|Canada}} {{listing
+|name=Canada |url=http://www.canadainternational.gc.ca/spain-espagne/ |email=madrid@international.gc.ca
+|address=Torre Espacio, Paseo de la Castellana, 259D
+|phone=+34 91 382 8400 |fax=+34 91 383 8490
+|hours=M-F 09:00-12:30
+|content=
+}}
+*{{flag|Chile}} {{listing
+| name=Chile | alt= | url=http://chile.gob.cl/espana | email=
+| address=Calle de Lagasca, 88 - 6º planta | lat= | long= | directions=
+| phone=+34 91 431 9160 | tollfree= | fax=+34 91 577 5560
+| hours=M-F 11:00-19:30 and Sa 11:00-15:00 | price=
+| lastedit=2017-11-07
+| content=The consulate is at Rafael Calvo, 18 – 5° D; {{Phone|+91 34 319 0763}} or {{Phone|+91 34 319 9559}}
+}}
+*{{flag|China}} {{listing
+| name=China | url=http://es.china-embassy.org/ | email=chinaemb_es@mfa.gov.cn
+| address=Calle Arturo Soria, 113 | lat= | long= | directions=
+| phone=+34 91 5194242 | tollfree= | fax=+34 91 5192035
+| hours= | price=
+| content=
+}}
+* {{flag|Colombia}} {{listing
+| name=Colombia | alt= | url=http://espana.embajada.gov.co/ | email=
+| address=Paseo del General Martínez Campos, 48
+ | lat= | long= | directions=
+| phone=+34 91 700-4770 | tollfree=0900 995721 (domestic)| fax=
+| hours= | price=
+| wikidata=Q5369631
+| lastedit=2017-11-05
+| content=
+}}
+* {{flag|Cuba}} {{listing
+| name=Cuba | alt= | url=http://misiones.minrex.gob.cu/es/espana | email=
+| address= Paseo de la Habana, 194 | lat= | long= | directions=
+| phone=+34 91 506 3111 | tollfree= | fax=
+| hours=M-Th 09:00-12:30 | price=
+| lastedit=2017-11-07
+| content=
+}}
+*{{flag|Denmark}} {{listing
+| name=Denmark (Dinamarca) | alt= | url=http://spanien.um.dk | email=madamb@um.dk
+| address=Calle Serrano, 26 - 7º planta | lat= | long= | directions=
+| phone=+34 91 431 8445 | tollfree= | fax=+34 91 431 9168
+| hours= | price=
+| content=
+}}
+* {{flag|Ecuador}} {{listing
+| name=Ecuador | alt= | url=http://espana.embajada.gob.ec/ | email=
+| address=Calle Velázquez No.114 – 2º. Derecha | lat= | long= | directions=
+| phone=+34 91 562 7215, +34 91 562 7216 | tollfree= | fax=+34 91 745 0244
+| hours=M-F 09:30-14:30 and 16:00-18:30| price=
+| lastedit=2017-11-05
+| content=
+}}
+*{{flag|El Salvador}} {{listing
+| name=El Salvador | alt= | url=http://embajadaespana.rree.gob.sv/ {{dead link|December 2020}} | email=
+| address=Paseo de la Castellana, 178 | lat= | long= | directions=
+| phone=+34 91 562 8002 | tollfree= | fax=
+| hours=M-F 09:00-14:00 | price=
+| lastedit=2017-11-07
+| content=
+}}
+*{{flag|Egypt}} {{listing
+| name=Egypt (Egipto) | url=http://www.mfa.gov.eg/english/embassies/Egyptian_Embassy_Spain/Pages/default.aspx | email=embmadrid@mfa.gov.eg
+| address=Calle Velazquez 69 | lat= | long= | directions=
+| phone=+34 91 5776 308 | tollfree= | fax=+34 91 5781732
+| hours=M-F 09:30-16:30 | price=
+| content=
+}}
+* {{flag|Finland}} {{listing
+| name=Finland (Finlandia) | url=http://www.finlandia.es | email=sanomat.mad@formin.fi
+| address=Paseo de la Castellana 15 E | lat= | long= | directions=
+| phone=+34-91 319 6172 | tollfree= | fax=+34-91 308 3901
+| hours=M-F 09:30-13:30 | price=
+| content=
+}}
+*{{flag|France}} {{listing
+| name=France (Francia) | alt= | url=https://es.ambafrance.org/ | email=
+| address=Calle de Salustiano Olózaga, 9 | lat=40.4208 | long=-3.6899 | directions=
+| phone=+34 91 423 8900 | tollfree=
+| hours=M-F 09:30-13:30 and 15:30-18:30 | price=
+| wikidata=Q1129830
+| content=
+}}
+*{{flag|Georgia}} {{listing
+|name=Georgia |url=http://spain.mfa.gov.ge | email=embassymadrid@mfa.gov.ge
+|address=Plaza de las Cortes N4, piso 5, Madrid, 28014 | lat=40.415876 | long=-3.695634 | directions=
+|phone=+34 91 429 01 55 | tollfree= | fax=+34 91 429 68 83
+|hours=M-F 10:00-18:00 | price=
+|content=
+}}
+*{{flag|Germany}} {{listing
+|name=Germany (Alemania) |url=http://www.madrid.diplo.de
+|address=Calle de Fortuny, 8
+|phone=+34 91 557 9000
+|hours=M-F 09:00-12:00
+|content=
+}}
+*{{flag|Greece}} {{listing
+| name=Greece (Grecia) | url=http://www.mfa.gr/madrid | email=gremb.mad@mfa.gr
+| address=Avda Dr. Arce 24 | lat= | long= | directions=
+| phone=+34 91 5644 653, +34 6854 02800 (emergencies) | tollfree= | fax=+34 91 564 4668
+| hours= | price=
+| content=
+}}
+*{{flag|Guatemala}} {{listing
+| name=Guatemala | alt= | url=http://embajadaguatemala.es/ | email=
+| address=Calle Fernando el Santo, 27 | lat= | long= | directions=
+| phone=+34 91 344 0347 | tollfree= | fax=
+| hours=M-F 10:00-14:00 | price=
+| lastedit=2017-11-07
+| content=
+}}
+*{{flag|Honduras}} {{listing
+| name=Honduras | alt= | url=https://www.embajadahondurases.com/ | email=
+| address=Paseo de la Castellana, 164 | lat= | long= | directions=
+| phone=+34 91 353 1806 | tollfree= | fax=
+| hours=M-F 09:00-14:00 | price=
+| lastedit=2017-11-07
+| content=The consulate is at Avenida Alberto Alcocer 7, entresuelo izq., {{Phone|+34 91 063 69 26}}
+}}
+*{{flag|India}} {{listing
+|name=India |url=http://www.embassyindia.es
+|address=Avenida Pio XIII, 30-32
+|phone=+34 91 209 8870
+|hours=M-F 09:00-13:30 and 14:00-17:30
+|content=
+}}
+*{{flag|Indonesia}} {{listing
+| name=Indonesia | alt= | url=https://kemlu.go.id/madrid/ | email=kbri@embajadadeindonesia.es
+| address=Calle de Agastia No. 65, 28043 | lat=40.448392 | long=-3.653817 | directions=
+| phone=+34 413 0294, +34 413 0394, +34 413 0594, +34 413 0747 | tollfree= | fax=+34 413 8994
+| hours= | price=
+| wikidata=Q105279781
+| content=
+}}
+*{{flag|Ireland}} {{listing
+|name=Ireland (Irlandia) |url=http://www.dfa.ie/irish-embassy/spain/
+|address=Paseo de la Castellana, 46-4
+|phone=+34 91 436 4093 |fax=+34 91 435 1677
+|content=
+}}
+*{{flag|Israel}} {{listing
+|name=Israel |url=http://embassies.gov.il/madrid/Pages/default.aspx
+|address=Calle de Velázquez, 150
+|phone=+34 91 782 9500
+|content=
+}}
+| style="vertical-align:top;width:50%;" |
+*{{flag|Italy}} {{listing
+| name=Italy (Italia) | alt= | url=https://ambmadrid.esteri.it | email=
+| address=Calle Lagasca, 98 | lat=40.432471 | long=-3.684057 | directions=
+| phone=+34 91 423 33 00 | tollfree= | fax=+34 91 575 77 76
+| hours= | price=
+| wikidata=Q59828249
+| lastedit=2017-11-07
+| content=The consulate is at Palazzo di Santa Coloma - Calle Agustín de Betancourt n.3.
+}}
+*{{flag|Japan}} {{listing
+| name=Japan (Japón) | url=http://www.es.emb-japan.go.jp/ | email=
+| address=Calle Serrano, 109 | lat= | long= | directions=
+| phone=+34 91 590 7600 | tollfree= | fax=+34 91 590 1321
+| hours= | price=
+| content=
+}}
+*{{flag|Kenya}} {{listing
+|name=Kenya (Kenia) |url=http://www.kenyaembassyspain.es |email=info@kenyaembassyspain.es
+|address=3rd Floor, Calle Jorge Juan, 9
+|phone=+34 91 781 2000 |fax=+34 91 576 0854
+|content=
+}}
+*{{flag|Libya}} {{listing
+| name=Libya (Libia) | alt= | url= | email=
+| address=Av. Comandante Franco, 32 | lat= | long= | directions=
+| phone=+34 91 345 55 37 | tollfree= | fax=
+| hours= | price=
+| lastedit=2017-11-07
+| content=
+}}
+*{{flag|Luxembourg}} {{listing
+|name=Luxembourg (Luxemburgo) |url=http://madrid.mae.lu |email=madrid.amb@mae.etat.lu
+|address=Calle Claudio Coello, 78
+|phone=+34 91 435 9164 |fax=+34 91 577 4826
+|content=
+}}
+* {{flag|Mexico}} {{listing
+| name=Mexico | alt= | url=https://icm.sre.gob.mx/espana/ | email=
+| address=Carrera de S. Jerónimo, 46 | lat= | long= | directions=
+| phone=+34 91 060 9857 | tollfree= | fax=+34 91 69-45-23
+| hours=M-F 09:00-13:00 | price=
+| wikidata=Q65066997
+| lastedit=2017-11-05
+| content=
+}}
+* {{flag|Morocco}} {{listing
+| name=Morocco (Marruecos) | alt= | url=http://www.embajada-marruecos.es/ | email=
+| address=Calle de Serrano, 179 | lat= | long= | directions=
+| phone=+34 91 563 10 90 | tollfree= | fax=+34 91 561 78 87
+| hours=M-F 09:00-16:00 | price=
+| lastedit=2017-11-05
+| content=
+}}
+*{{flag|Netherlands}} {{listing
+| name=Netherlands (Países Bajos)| alt= | url=https://www.paisesbajosytu.nl/su-pais-y-los-paises-bajos/espana | email=mad@minbuza.nl
+| address=Paseo de la Castellana, 259 | lat= | long= | directions=
+| phone=+34 91 353 7500 | tollfree= | fax=
+| hours=M-Th 09:00-17:00, F 09:00-16:30 | price=
+| lastedit=2018-11-20
+| content=
+}}
+*{{flag|New Zealand}} {{listing
+|name=New Zealand (Nueva Zelandia)|url=http://www.nzembassy.com/spain |email=madrid@embajadanuevazelanda.com
+|address=Calle del Pinar 7, Planta 3a
+|phone=+34 91 523 0226 |fax=+34 91 523 0171
+|content=
+}}
+*{{flag|Nigeria}} {{listing
+| name=Nigeria | alt= | url=https://www.ng-embassyspain.org/ | email=
+| address=Calle del Segre, 23 | lat= | long= | directions=
+| phone=+34 91 561 3797 | tollfree=
+| hours= | price=
+| content=
+}}
+*{{flag|Norway}} {{listing
+| name=Norway (Noruega) | alt= | url=https://www.norway.no/es/spain | email=emb.madrid@mfa.no
+| address=5th Floor, Calle Serrano, 26 | lat= | long= | directions=
+| phone=+34 91 436 3840 | tollfree=
+| hours=M-F 09:00-15:00 | price=
+| content=
+}}
+*{{flag|Pakistan}} {{listing
+|name=Pakistan |url=http://www.embajada-pakistan.org |email=cancilleria@embajada-pakistan.org
+|address=Calle Pedro de Valdiva, 16
+|phone=+34 91 345 8995 |fax=+34 91 345 8158
+|content=
+}}
+* {{flag|Portugal}} {{listing
+| name=Portugal | alt= | url=https://www.madrid.embaixadaportugal.mne.pt/pt/ | email=
+| address=Calle de Lagasca, 88 - 4º planta | lat= | long= | directions=
+| phone=+34 91 782 4960 (embassy), +34 91 577 3585 (consular section) | tollfree= | fax=
+| hours=M-F 09:00-15:00 | price=
+| lastedit=2017-11-05
+| content=
+}}
+*{{flag|Philippines}} {{listing
+|name=Philippines (Filipinas) |url=http://www.philippineembassymadrid.es |email=info@philembassymadrid.com
+|address=Calle Eresma, 2
+|phone=+34 91 782 3850 |fax=+34 91 411 6606
+|hours=M-Th 09:00-13:30 and 15:00-17:00
+|wikidata=Q60749581
+|content=
+}}
+*{{flag|Poland}} {{listing
+|name=Poland (Polonia) |url=http://www.madryt.msz.gov.pl/ |email=madryt.amb.sekretariat@msz.gov.pl
+|address=Guisando 23 bis, 28035
+|phone=+34 913 736 605 |fax=+34 913 736 624
+|hours=M-F 09:00-17:00
+|content=
+}}
+* {{flag|Romania}} {{listing
+| name=Romania | alt= | url=http://madrid.mae.ro/ | email=madrid@mae.ro
+| address=Avenida de Alfonso XIII 157 | lat= | long= | directions=
+| phone=+34 913454553 | tollfree= | fax=+34 913452917
+| hours= | price=
+| lastedit=2021-12-03
+| content=
+}}
+*{{flag|Singapore}} {{listing
+|name=Singapore (Singapur) |url=http://www.mfa.gov.sg/content/mfa/overseasmission/madrid.html |email=hcgmadrid@fmetropoli.org
+|address=Avenida de Bruselas 28
+|phone=+34 91 662 9373
+|hours=M-Th 09:00-14:00 and 15:00-18:30, F 09:00-15:00
+|content=
+}}
+*{{flag|South Africa}} {{listing
+|name=South Africa (Sudáfrica) |url=http://www.dirco.gov.za/madrid/en/ |email=madrid.embassy@dirco.gov.za
+|address=6th Floor, Calle Claudio Coello. 91
+|phone=+34 91 436 3780 |fax=+34 91 577 7414
+|content=
+}}
+*{{flag|Sweden}} {{listing
+|name=Sweden (Suezia) |url=http://www.swedenabroad.com/madrid |email=ambassaden/madrid@gov.se
+|address=Calle Caracas, 25
+|phone=+34 91 702 2000 |fax=+34 91 702 2040
+|content=
+}}
+*{{flag|Switzerland}} {{listing
+|name=Switzerland (Suiza) |url=https://www.eda.admin.ch/madrid |email=mad.vertretung@eda.admin.ch
+|address=Calle de Nuñez de Balboa, 35A
+|phone=+34 91 436 3960 |fax=+34 91 436 3980
+|hours=M-F 09:00-13:00
+|content=
+}}
+*{{flag|Taiwan}} {{listing
+| name=Taiwan | alt=Oficina Económica y Cultural de Taipei | url=http://www.roc-taiwan.org/es/ | email=
+| address=Calle Rosario Pino 14-16 | lat= | long= | directions=
+| phone=+34 91 571 8426 | tollfree= | fax=+34 91 570 9285
+| hours= | price=
+| wikidata=Q25059260
+| content=
+}}
+* {{flag|Tunisia}} {{listing
+| name=Tunisia (Túnez) | alt= | url= | email=
+| address=Av. de Alfonso XIII, 64 | lat= | long= | directions=
+| phone= +34 91 447 3508 | tollfree= | fax=
+| hours= | price=
+| lastedit=2017-11-07
+| content=
+}}
+*{{flag|United Kingdom}} {{listing
+| name=United Kingdom (Reino Unido) | alt= | url=https://www.gov.uk/world/organisations/british-embassy-madrid | email=spain.consulate@fco.gov.uk
+| address=Torre Espacio, Paseo de la Castellana, 295D | lat= | long= | directions=
+| phone=+34 91 714 6300 | tollfree= | fax=+34 91 714 6403
+| hours=M-F 08:30-13:30 | price=
+| wikidata=Q20921797
+| content=
+}}
+*{{flag|the United States}} {{listing
+| name=United States (Estados Unidos) | alt= | url=http://es.usembassy.gov/ | email=
+| address=Calle Serrano, 75 | lat= | long= | directions=
+| phone=+34 91 587 2200 | tollfree= | fax=+34 91 587 2303
+| hours= | price=
+| wikidata=Q26839075
+| content=
+}}
+* {{flag|Venezuela}} {{listing
+| name=Venezuela | alt= | url=http://embajadadevenezuela.es/ | email=
+| address=Calle del Poeta Joan Maragall 1, Planta 13 | lat= | long= | directions=
+| phone=+34 91 598 12 00 | tollfree= | fax=+34 91 597 15 83
+| hours= | price=
+| lastedit=2017-11-05
+| content=
+}}
+|}
+
+=== Newspapers ===
+There are a number of free, English language periodicals that you will find in bars and restaurants that are a great source of event information.
+
+== Stay safe ==
+Madrid is a very safe city, with some of the lowest crime rates among Europe's largest cities. The police is highly visible, and the city is equipped with cameras.  There are always people in the streets, even at night time, so you can walk across the city generally without fear. Travellers who remain aware of their surroundings, and keep an eye on their belongings, should have little to worry about. For police, medical, or fire emergencies, simply call 112. Operators usually speak English.
+
+=== Neighbourhoods and suburbs ===
+As with any place on earth, there are parts of Madrid and its metropolitan area that are less appealing and, consequently, less safe than others. 
+
+* The Malasaña area, located north of Gran Via, is a lively bohemian neighbourhood, but it is also known to attract seedy crowds late at night.
+* Some districts in the south (Carabanchel, Puente De Vallecas, Villaverde) and east (Ciudad Lineal) are marginally less well-off than the rest of Madrid, and they can give off an uneasy vibe to those unfamiliar with these places. They are safer than many "bad neighbourhoods" in other western European countries, but be on your guard at night. Most places within reach of metro stations are safe.
+* Though - or rather because - it is the wealthiest district in Madrid, Salamanca has its share of pickpockets, namely in and around the Avenida de América station.
+* Several of Madrid's suburbs to the south (Móstoles, Alcorcón, Parla) and east (Alcalá de Henares) have fairly undeserved reputations to seediness. In reality, they are mostly safe, though it is always wise to stick to well-lit and crowded streets.
+* The areas surrounding the Chamartin train station in the north have started seeing homeless and refugee encampments. Squatters inhabiting these encampments rarely interact with strangers and passer-by, but watch yourself at night.  
+
+=== Football ===
+Despite the notoriously intense and politically-charged rivalry between Real Madrid and FC Barcelona, most people will not care if you wear an FC Barcelona football shirt, and in fact you will often see people (usually tourists) wear that shirt around the city. As Madrid is the capital city of Spain, it attracts people from all over the country, including Catalonia. One notable exception: on match days, do be careful, as violence has been known to occur between supporters of both clubs.
+
+Furthermore, there is a love/hate relationship between the two major football clubs in the city: Real Madrid and Atletico Madrid. Both are storied clubs with diverging identities; Real Madrid was always seen as the club of the elite, whereas Atletico Madrid is seen as the "people's club". Many fans and analysts believe that the "Derbi Madrileño" is more entertaining than "El Clasico", partially because of those differences in identity, but also because fans of the clubs have been known to engage in fiery arguments. If you ever see Real and Atletico fans argue, be careful if things start to escalate.
+
+One of the lesser-known clubs in Spain, Rayo Vallecano is known for its very left-wing culture, traditions, and fan base. While games are usually fun and harmless, there have been reports of robberies in and around the Vallecas Stadium, which is located in the working-class neighbourhood of Puente De Vallecas. It is also highly discouraged to talk about politics.
+
+=== Pickpocketing ===
+Much like other big European cities, Madrid has its fair share of nonviolent [[pickpockets|pickpocket]] crime, though it is nowhere near the stratospheric levels of cities like Rome or Barcelona. Always watch out for any belongings (mostly bags and wallets) you have with you, especially on the Metro and in busier public spaces. Some areas with acute pickpocketing problems include Gran Via (especially near Plaza de Callao and Calle de Fuencarral), Puerta del Sol, the Atocha train station, and the AZCA business district (though the latter has seen improvements in that regard). Some major night clubs like Kapital and Mondo Disko also attract pickpockets.
+
+Pickpockets often create a distraction while an accomplice steals from you. Distractions include presenting a map and asking you for directions, or asking you to sign a petition - which is followed by a request for a donation. It is best to ignore any stranger that approaches you in the street asking for help. Be careful when carrying luggage as this can make you a target for pickpockets.
+
+One prevalent and long-lasting issue in Madrid are street vendors, especially around Puerta del Sol. They are usually harmless and will take "no" as a sign that they should not bother you, but do not provoke them. Also, these street vendors react swiftly to police cars, so watch yourself whenever they run from the police. 
+
+At bars and restaurants never leave wallets or telephones on the table as possessions on show make for easy targets. Passing thieves create a distraction and steal the items. The area around Calle de las Infantes near Gran Via is particularly renowned for this.
+
+When using ATM machines, be aware of your surroundings, just as you would anywhere. Bring a friend if you need to withdraw cash after dark. If someone approaches you while using an ATM, hit CANCELAR, retrieve your card and move on.
+
+When going out, getting drunk can make you a target for thieves. Also keep an eye on your drink. Don't carry valuables on a night out.
+
+=== Scams ===
+Plaza Mayor and Puerta del Sol might be beauties to look at, but they are Meccas for scams.
+
+Avoid people offering massages (''masajes''); this is often a scam to extort money. Be firm and say ''"No me toque"'' ("Don't touch me") or ''"No tengo dinero"'' ("I don't have any money")
+
+== Go next ==
+While Regional and Cercanías tickets don't have to be pre-bought and don't sell out, tickets for AVE, Avant and other long distance trains sell out once all seats are gone. if you want to take a day trip to Sevilla or want to take one of the faster trains to Segovia, buy your tickets in advance.
+
+'''Easy day-trips''' from Madrid include :
+* [[Alcalá de Henares]] is a charming old university town, birthplace of Miguel Cervantes the author of ''Don Quixote''. Reach it by local train within 50 min.
+* [[Aranjuez]] has the ''Palacio Real'', the Bourbon monarchs' summer home, and the lavish ''Casa del Labrador'' near the river. Local trains take 45 min from Atocha, 55 min from Chamartin.
+* [[Ávila]] has the most intact walled old town in Spain, spectacular when floodlit at night. Fast trains from Chamartin take 90 min.
+* [[Chinchon]] is a hilltop small town that retains its character from the 1700s. No train, drive or take the bus.
+* [[El Escorial]] is a huge monastery and palace, the Royal Monastery of San Lorenzo de El Escorial. Reach it within an hour by local train from Atocha or Chamartin. Near El Escorial is Spain's most controversial monument - Valle de los Caìdos. Built by Spanish republicans taken prisoner during and after the civil war, it is a gigantomanic underground church with a huge cross on top of the mountain an edifice very much in the fascist style. It is the burial place of many fallen of the civil war, and it housed the tomb of dictator Francisco Franco until October 2019. There's an infrequent public bus to the entrance, from where it's another 9 km hiking. The nearby mountains, ''Sierra de Guadarrama'', are the setting for Peñalara Nature Park.
+* El Pardo is a village 8 km from Madrid with the ''Palacio de El Pardo'', which in 1739 hosted a peace conference between Spain and England. War broke out. A bus runs from Madrid Moncloa.
+* [[Segovia]] is a medieval city perched on a hilltop, with a great Roman aqueduct leaping across the valley to bring in the water supply. It's 30 min by train from Chamartin.
+* [[Toledo (Spain)|Toledo]] is a medieval walled city and former capital of Spain, with excellent architecture and artwork. It's 30 min by train from Atocha.
+
+'''Further afield''', day-trips at a stretch but deserving at least an overnight stay, are [[Salamanca]], [[Leon (Spain)|Leon]], [[Valladolid (Spain)|Valladolid]], [[Zaragoza]] and [[Córdoba (city, Spain)|Córdoba]].
+
+{{routebox
+| image1=Autovía A-1.svg
+| imagesize1=50
+| directionl1=N
+| majorl1=[[Image:Tabliczka E5.svg|30px]] [[Burgos]]
+| minorl1=[[Aranda de Duero]]
+| directionr1=S
+| majorr1=merges with [[Image:Autopista M-30.svg|30px]]
+| minorr1=
+| caption1=Autovía del Norte
+
+| image2=Autovía A-4.svg
+| imagesize2=50
+| directionl2=N
+| majorl2=merges with [[Image:Autopista M-30.svg|30px]]
+| minorl2=
+| directionr2=S
+| minorr2=[[Getafe]]
+| majorr2=[[Córdoba (city, Spain)|Córdoba]] [[Image:Tabliczka E5.svg|30px]]
+| caption2=Autovía del Sur
+}}
+
+{{IsPartOf|Community of Madrid}}
+{{Guidecity}}
+{{Geo|40.42029|-3.70342|zoom=13}}</text>
+      <sha1>o0hk7pjigdevimg99235cmpl0hanki5</sha1>
+    </revision>
+  </page>
+</mediawiki>

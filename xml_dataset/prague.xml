@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="70.0">
+  <metadata>
+    <title>Prague</title>
+    <name_it>Praga</name_it>
+    <flag>🇨🇿</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>106.19</hotel_price>
+    <safety index_score="75.6"/>
+    <environment green_score="78"/>
+    <cost_index value="57.4"/>
+    <economic_accessibility score="42.6"/>
+  </indicators>
+  <transport>The public transport around Prague consists of three metro lines (prague, prague, prague), over twenty tram lines (numbered 1–31 &amp;amp; 91–99 for night trams), trolleybuses (numbered 58–59), buses (3-digit numbers), ferries, a few train lines (numbered S1, S2, S49,…), and one funicular, all using the same time tickets. Public transport schedules and fares are integrated by Pražská Integrovaná Doprava (abbreviated PID).</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="50.0865" lon="14.4114">
+      <name>Charles Bridge</name>
+      <description>Historic 14th-century bridge with 30 statues.</description>
+    </attraction>
+    <attraction lat="50.0911" lon="14.4016">
+      <name>Prague Castle</name>
+      <description>Largest ancient castle complex in the world.</description>
+    </attraction>
+    <attraction lat="50.0875" lon="14.4214">
+      <name>Old Town Square</name>
+      <description>Central square with the Astronomical Clock.</description>
+    </attraction>
+    <attraction lat="50.0908" lon="14.4005">
+      <name>St. Vitus Cathedral</name>
+      <description>Gothic masterpiece located within the castle walls.</description>
+    </attraction>
+    <attraction lat="50.087" lon="14.4207">
+      <name>Astronomical Clock</name>
+      <description>15th-century medieval clock on the Town Hall.</description>
+    </attraction>
+    <attraction lat="50.0894" lon="14.4181">
+      <name>Josefov</name>
+      <description>The Jewish Quarter with historic synagogues and cemetery.</description>
+    </attraction>
+    <attraction lat="50.0817" lon="14.4278">
+      <name>Wenceslas Square</name>
+      <description>Major city square and center of business and culture.</description>
+    </attraction>
+    <attraction lat="50.0755" lon="14.4142">
+      <name>Dancing House</name>
+      <description>Modern architectural landmark designed by Gehry.</description>
+    </attraction>
+    <attraction lat="50.0862" lon="14.4069">
+      <name>Lennon Wall</name>
+      <description>Wall filled with John Lennon-inspired graffiti and lyrics.</description>
+    </attraction>
+    <attraction lat="50.0835" lon="14.3951">
+      <name>Petrin Lookout</name>
+      <description>Steel tower on a hill resembling the Eiffel Tower.</description>
+    </attraction>
+  </highlights>
+  <description>Custode di un patrimonio UNESCO intatto, Praga è una delle città più sicure e accessibili del continente. Il suo sistema di trasporto pubblico è tra i più efficienti d'Europa, facilitando una vivibilità senza stress.</description>
+  <wiki_intro>'''Prague''' (Czech phrasebook|Czech: ''Praha'') is the capital and largest city of the Czech Republic. The city's historic buildings and narrow, winding streets are testament to its centuries-old role as capital of the historic region of Bohemia. Prague lies on the banks of the beautiful, meandering Vltava River that reflects the city's golden spires and 9th century castle that dominates the s...</wiki_intro>
+</city_report>

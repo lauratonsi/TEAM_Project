@@ -1,0 +1,661 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikivoyage</sitename>
+    <dbname>enwikivoyage</dbname>
+    <base>https://en.wikivoyage.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.46.0-wmf.24</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikivoyage</namespace>
+      <namespace key="5" case="first-letter">Wikivoyage talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1728" case="first-letter">Event</namespace>
+      <namespace key="1729" case="first-letter">Event talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Riga</title>
+    <ns>0</ns>
+    <id>29689</id>
+    <revision>
+      <id>5240176</id>
+      <parentid>5197750</parentid>
+      <timestamp>2026-03-26T09:47:38Z</timestamp>
+      <contributor>
+        <username>Andyrom bot</username>
+        <id>235382</id>
+      </contributor>
+      <minor/>
+      <comment>Bot: "listing | type=X" -&gt; X</comment>
+      <origin>5240176</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="51627" sha1="mac2rvc1ciso85xfdfd1vx2d3bqo2sk" xml:space="preserve">{{pagebanner|Riga banner.jpg|caption=Riga Central Market, five pavilions constructed by reusing old German Zeppelin hangars|dotm=yes}}
+{{printDistricts}}
+
+'''Riga''' is the financial, creative, and cultural centre of [[Latvia]]. It is the capital and the largest city in Latvia, it is also the second largest city in the [[Baltic states|Baltic States]] after the [[Lithuania|Lithuanian]] capital [[Vilnius]]. The city lies on the Gulf of Riga, at the mouth of Daugava, Riga has a population of approximately 640,000 inhabitants, or 1/3 of the population of Latvia. The city was part of many empires throughout history, each of which has left its mark on the city. It is famous for Art Nouveau and wooden architecture. Riga's historical centre is listed as a [[UNESCO World Heritage site]].
+
+==Districts==
+There are many administrative districts in Riga. However, almost all tourist attractions, historic buildings and hotels are contained within the borders of the relatively small and walkable ''Centra rajons'' district, which is made up of Vecrīga (the old town) and Centrs (the modern-day business district). However if you have already seen the more famous attractions in the city centre, the outer districts do have their own draws too.
+
+{{Regionlist
+| regionmap=Wikivoyage Riga district map PNG.png
+| regionmaptext=Riga's districts
+| regionmapsize=400px
+| region1name=[[Riga/Vecrīga|Vecrīga]]
+| region1color=#d56d76
+| region1items=
+| region1description=The old town, entirely listed as a [[world heritage site]], is the primary draw for visitors and many of the city's most prominent sights are here. The car-free streets and alleys are lined with restaurants, bars, shops and hotels. The impressive central market lies just south of the old town.
+| region2name=[[Riga/Centrs|Centrs]]
+| region2color=#4f93c0
+| region2items=
+| region2description=Centrs, encircling the old town and extending northeast, is the commercial centre of Riga, famous for its Art Nouveau architecture, parks and boulevards. It is also a place to go to for nightlife and hotels; the high-rise Hotel Latvija (which doubles as a landmark) with its Skyline bar on the top floor offers both.
+| region3name=[[Riga/Outer East Bank|Outer East Bank]]
+| region3color=#d09440
+| region3items=
+| region3description=Further out on the eastern bank, you have an opportunity to see some more rural attractions including Mežaparks district with the Latvian Song and Dance Festival open air stage, and the city’s zoo. It also includes the district of Maskavas forštate with Jewish heritage.
+| region4name=[[Riga/Pārdaugava|Pārdaugava]]
+| region4color=#578e86
+| region4items=
+| region4description=The West Bank of Daugava offers nice parks and beaches, 18th- and 19th-century wooden architecture in Agenskalns, the mountain-shaped building of the National Library of Latvia, and a railway museum. The TV tower on Zaķusala island is the tallest tower in the European Union. Riga International Airport lies just outside the city limits.
+}}
+
+On both sides of the mouth of Daugava river, the Gulf of Riga offers extensive sandy seaside beaches, which can be reached by city bus or train. A [[:commons:category:Vecāķi nude beach|nude beach]] can be found a 15-minute walk out of Vecāķi.
+
+==Understand==
+{{climate chart
+|Riga
+|-4.5 |-0.1 |46.5
+|-4.6 |0.3 |40.1
+|-1.7 |4.8 |34.1
+|2.9 |11.9 |35.0
+|8.2 |17.8 |47.5
+|12.4 |21.3 |65.0
+|14.9 |23.8 |79.5
+|14.1 |22.7 |77.9
+|9.8 |17.3 |67.1
+|4.9 |10.5 |75.6
+|1.1 |4.8 |56.3
+|-2.4 |1.4 |50.2
+|jansnow=250.0 |febsnow=236.0 |marsnow=157.0 |aprsnow=52.0 |maysnow=0.0 |junsnow=0.0 |julsnow=0.0 |augsnow=0.0 |sepsnow=0.0 |octsnow=12.0 |novsnow=70.0 |decsnow=220.0
+|float=right
+|clear=right
+|source=[[:w:Riga]]
+|description=
+}}
+[[File:La rue Alberta (Riga) (7581842090).jpg|thumbnail|right|Alberta street contains many examples of exquisite buildings from the late 19th and early 20th century]]
+Riga is famous for its [[world heritage]]-listed old town (Vecrīga) and city centre (Centrs), in which over 800 buildings — a third of all buildings — are of the Art Nouveau (aka Jugendstil) style of architecture and thus Riga is one of the best destinations to see this architectural style. Chiefly built in the first years of the 20th century, many of Riga's Art Nouveau buildings were created by ethnic Latvian architects unlike earlier buildings in the city &lt;!--WP:Art Nouveau architecture in Riga#Background --&gt;. The Art Nouveau style involves intricate building facades, with carvings of flowers and mythological creatures, and ornate doorways and windows.
+
+A considerable part of the old town was either destroyed by fire or destroyed by the Germans in World War II &lt;!--Russian and Latvian WP do say Vecriga was devastated during WWII with a third of all buildings destroyed --&gt; but many old buildings were also spared. The old town was a draw of the city during the Soviet times and it received protected status in 1967. The damaged parts, most notably the House of the Blackheads, were restored in the late 1990s, mainly to make Riga more attractive as a tourist destination. Another thing that attracts visitors, especially young adults, is the lively nightlife and discount airlines that offer cheap flights to/from much of Europe.
+
+Riga is bisected by the river Daugava. Old (medieval) town is in the centre of the city on the east side of the river. It is surrounded by a ring of 19th– to early 20th-century architecture including the Art Nouveau buildings described above, followed by a mix of private 2-floor house districts (many also pre-World War II) and Soviet-era 5-18 floor apartment districts. Especially near railway lines, they are interspersed with industrial plants from different eras, including some from the Imperial Russian era.
+
+===History===
+Riga was founded in 1201 by Albert of Bremen as a port city and a base to conquer and convert the native Livonians to Christianity, a goal that was achieved in 1206 after a battle in Turaida during the Northern Crusades. Riga developed as the major trade hub of the area during the peak of the Hanseatic League in the 13th to the 15th centuries and was ruled by the Archbishop of Riga. The Reformation reached Riga in 1522, which ended the Archbishops' power. In 1621, Riga became part of the Kingdom of Sweden, although it maintained a great deal of autonomy. In 1710, an invasion by Peter the Great of Russia ended Swedish rule and cemented Russian influence on the city.
+
+Latvia declared its independence on November 18, 1918. It was annexed by the Soviet Union in 1940. Riga served as the capital of the Latvian Soviet Socialist Republic.
+
+Germans have inhabited the city since its establishment by Albert, and throughout most of its history, Germans were the elite while Latvians remained a lower class. The Germans' position as the elite continued through the Imperial period of Riga, visible in some of the architecture of the city. The Germans were forcibly evicted after the Nazi occupation of 1941-44.
+
+===Talk===
+The official language of Latvia is [[Latvian]]; however, in Riga, the majority of the population speaks both Latvian and [[Russian]], and ethnic Russians form slightly more than a third of the city's population. English is widely spoken by younger people and by people in the tourism industry. [[German]] is also commonly spoken by tour guides.
+===Visitor information===
+* [https://www.riga.lv/en Official website]
+
+==Get in==
+[[File:RIAN archive 600991 Work of Riga International Airport.jpg|thumbnail|right|View from the waiting room at Riga International Airport]]
+===By plane===
+[[File:Visit-suomi-2009-05-by-RalfR-282.jpg|thumbnail|Riga International Airport is dominated by the national carrier, Air Baltic, which offers low-fare connections to major cities around the Baltic Sea region and throughout Europe]]
+
+*{{go
+| name=Riga International Airport | alt=Starptautiskā Lidosta Rīga {{IATA|RIX}} | url=http://www.riga-airport.com/ | email=
+| address= | lat=56.9227 | long=23.9786 | directions=10 km southwest of Riga
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=Riga International Airport | image=Riga Airport.JPG | wikidata=Q505421
+| content=The airport serves approximately 5 million passengers per year.
+}}
+
+Many flights to/from Riga are operated by [http://www.airbaltic.com/ Air Baltic], [http://www.ryanair.com/ Ryanair], and [http://www.wizzair.com/ Wizz Air].
+
+There are designated areas in the airport where smoking is allowed.
+
+'''Getting there and away''':
+
+* '''[https://saraksti.rigassatiksme.lv/index.html#bus/22/a-b/1542 Bus route 22]''' runs between the airport and the old town, with a stop near the central bus and railway stations as well as old town. These buses operate as any other public transport in Riga; see [[Riga#Get_around]] for more information on riding the buses. The journey to the old town takes 30-40 minutes. The buses operate from 05:00 in the morning until approximately midnight (last bus leaves the airport at 00:40, first bus leaves the city center at 04:45). The bus stop at the airport is easy to reach - it is located at the arrivals hall entrance. There is a ticket machine in the arrivals hall; tickets can also be bought at the Narvessen shops on the departure and arrivals levels in the airport or in the app. Price of a single ticket is €1.50 and it comes with free transfers within Riga public transport system for 1.5 hours since first activation. You can pay onboard using Visa or Mastercard, but there can be a surcharge for that. Bus can get crowded if there are many incoming flights.
+* The ride to the centre by taxi takes 15 minutes. Official vouchers are available for purchase, but for a very high price (€33). Some taxis will illegally try to charge even more.
+:*The best way to hire a '''taxi''' is to use the [http://bolt.eu Bolt Taxi] mobile app, which allows you to see the rates being charged, time to pickup, enter the destination, and pay with the credit card that is linked to your account.
+:*'''[http://www.baltictaxi.com/ Baltic Taxi]{{Dead link|date=July 2024 |bot=InternetArchiveBot }}''' runs taxi service from the airport to the centre for a fixed price of €15 if booked online or via metered rates if paid to the driver. Service to the old town takes 15 minutes.
+:* '''[http://redcab.lv/redcab-taxi/?lang=en Red Cab Taxi]''' offers metered taxi services from the airport. A journey to the city centre costs approximately €12 and the ride takes 15 minutes, depending on the traffic. Wheelchair accessible mini-vans are available but must be pre-ordered.
+* It is common to use '''carsharing''' apps, which are cheaper than a taxi. Some cars are usually available near airport for taking. Download and register in ''Bolt'' or ''Citybee'' apps before you arrive.
+
+===By bus===
+There are international bus connections to anywhere in Europe, including frequent service to [[Tallinn]] and [[Tartu]] in [[Estonia]], and [[Vilnius]] and [[Kaunas]] in [[Lithuania]]. {{Marker|type=go|lat=56.9450 | long=24.1147|name=Riga's main bus station}} is just outside the old town.  As of October 2023 there is substantial road and tramway construction underway around the bus station.  Expect traffic snarls throughout most of the day.  Pedestrian access is limited and may require stairs or negotiating un-even terrain.
+* '''[http://www.ecolines.net/ Ecolines]''' - operates service between Riga and most major cities in Europe.
+* '''[http://www.luxexpress.eu/en Eurolines Lux Express]''' - Comfortable &amp; free coffee. Buses to Tallinn or Vilnius take about 4 hours and cost €15-28, but with discounts to €7-9 if you book early. Buses to [[Saint Petersburg]] cost €35.
+* '''[http://www.flybus.lv/ Flybus]''' - Service between Riga and the airports of [[Kaunas]] and [[Vilnius]].
+* '''[https://www.traveller.ee/tour/tallinn-riga-bus-tour Traveller Tours]''' - Minibus sightseeing tours from [[Tallinn]] to Riga, stopping off at different sights along the way. €55
+
+=== By train ===
+[http://www.pv.lv/en/ '''AS Pasazieru vilciens'''] (meaning "Passenger Trains Company") operates service to many cities in Latvia, including the suburbs of Riga. You can book tickets online via the Latvian Railways site up to 45 days in advance, but tickets must be collected from a station in Latvia. 
+
+A daily train runs from Lithuania, reservations compulsory. It leaves [[Vilnius]] at 07:00, stops at [[Siauliai]], Joniškis and [[Jelgava]], and reaches Riga at 11:04. 
+
+You can reach Riga from Estonia by transferring to a southbound Lithuanian train at [[Valga]]. The Estonian train departs [[Tallinn]] at 10:25 and [[Tartu]] at 12:54, arriving at Valga at 13:54. The Lithuanian train departs Valga at 14:11 and reaches Riga at 16:37. The Lithuanian train then continues south from Riga to Vilnius. 
+
+* {{go
+| name=Riga central station | alt=Rīgas Pasažieru stacija | url= | email=
+| address= | lat= | long= | directions=South of Centrs, east of the old town and with good public transport connections to all parts of Riga
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q2660080
+| lastedit=2023-12-22
+| content=
+}}
+
+===By car===
+Riga has good road connections with Estonia, Lithuania, Russia, and Belarus. Riga is on the [[Via Baltica]] and ~300 km from Tallinn and Vilnius. In the city centre, you have to pay a [https://www.rigassatiksme.lv/en/services/parking-services/ fee for public parking]{{Dead link|date=November 2023 |bot=InternetArchiveBot }} which varies depending from distance to the centre.
+
+===By yacht===
+{{go
+| name=Andrejosta Marina | url=https://www.eastbaltic.eu/andrejosta-marina/
+| lat=56.95988861870789 | long=24.09759976309683
+| content=Andrejosta - small gulf in the right side of Daugava, where the Riga channel meets Daugava river. Located at walking distance from the old town of Riga where the most of touristic attractions are located. 150 berths.
+}}
+
+{{go
+| name=City Yacht Club (Pilsētas Jahtklubs) | url=https://www.eastbaltic.eu/city-yacht-club/
+| lat=56.953194493496085 | long=24.086573720534957
+| content=City Yacht Club is located in Ķīpsala – an island on the left bank of the Daugava river, connected to Riga city centre and Pārdaugava by the Shroud Bridge. Ķīpsala is only 3 km from the Riga Old City where all tourism services are available. Behind the Pier there is a shopping centre. 200 berths.
+}}
+
+==Get around==
+&lt;!--{{User:Soshial/maps/Riga}}--&gt;
+===On foot===
+Vecrīga mainly comprises rounded cobblestone streets that may be hard to walk on if you are not wearing proper shoes. Outside of Vecrīga, most streets are paved with asphalt, although some smaller streets may be unpaved. Sidewalks are predominantly concrete everywhere. Vecrīga is best explored on foot. Due to the neglected drainage system, the streets may be flooded during heavy downpours.
+
+===By public transport===
+[[File:Old tram Riga Latvia.JPG|thumbnail|right|The "retro" tram in Riga]]
+[[File:Riga tram map 2019.png|thumb|[[File:Tram-Logo.svg|20px]] (2019)]]
+[[File:15T-57169 Radio iela.jpg|thumbnail|Modern low-floor Skoda trams are the mainstay of the Rigas Satiksme tram fleet]]
+
+The city-owned [https://www.rigassatiksme.lv/en/ Rigas Satiksme company] operates the '''trams''' (street-cars), '''buses''', and '''trolleybuses'''. They all use the same e-ticket system called ''e-talons''. A single fare of €1.50 covers any amount of rides on any route independent of the distance and is valid for 90 minutes. For routes, timetables and live traffic see Rigas Satiksme's official route planner&lt;ref&gt;https://saraksti.lv/#/en&lt;/ref&gt;.
+
+Single fares are €1.50 for bus/tram/trolleybus/ trips if purchased in advance. The most convenient app that accepts foreign phone numbers is '''[https://mobilly.lv/en Mobilly]''', because it not only allows you to purchase local tickets, but also tickets for remote trains and buses in the same place. You can top-up your app wallet with credit or pay the "missing" amount directly (every transaction is minimum €3, but presumably you'll need a return ticket at some point). Do not forget to activate the ticket by scanning the vehicle QR code. Otherwise, an '''''e-talons'' card''' can be purchased from a ticket office, vending machine, press kiosk, '''Narvesen''' shop, app or other location listed on the Rigas Satiksme website. These electronic tickets are for one time charge only, without deposit. You pay the number of rides that you want on them (even if it is just one ride), and discard after using up all rides. Unlimited 24-hour ride card costs €5.00, 3-day card costs €8, and 5-day card costs €10. The cards all are activated by using the yellow device in the vehicles. You must activate all cards every time that you enter a vehicle. On some Latvian public holidays (January 1st, May 4th, June 23rd and 24th, November 18th, December 31st) Riga public transport is free.
+
+Tram lines are numbered 1–11; bus lines are numbered 1-55; trolley bus lines are numbered 1–27. Night buses are numbered N1, N4 and N6 and they only operate on Friday and Saturday nights. While the numbers are similar, the routes are completely different - i.e. bus #2 is totally different from trolleybus #2. Tram numbers on stops are identified by "Tr", buses (not trolleybuses) by "A". Stops are marked by a blue rectangular sign with a stylized white image of the vehicle and lists the numbers that stop there. Timetables and stops of the route are also usually posted at stops and are fairly accurate. Bus routes are marked "A", but tram and trolley bus routes are marked "T" on timetables, except tram timetables should have red background for the "T" letter and trolley bus—yellow. The vehicles include an LCD screen with next stop information.
+
+Trams are generally the fastest public transportation apart from trains. Although they are on the street level and the rails are not physically separated from the rest of the traffic, in all but the busiest rush hours they have the right of way.
+
+===By bicycle===
+'''[http://www.sixtbicycle.lv/en/ SIXT Latvia]{{Dead link|date=January 2023 |bot=InternetArchiveBot }}''' operates self-service bicycle rentals at bicycle stands across the city. The service is available to both residents and guests of Riga. You must have a mobile phone to register, but registration is free. The bikes have 3 speeds and lights, but no helmets. The advertised price on the website is €0.90 per 30 minutes, with a maximum of €9 per day. However, the effective amount charged seems to be €0.99 (Oct 2017) per half hour (the first minute of a subsequent half hour counts as a full 30 minutes).
+
+Alternatively, ask your hotel if they provide bicycle rental.
+
+Downtown Rīga has a lot of cobblestone streets, so be prepared for a bumpy ride. Bike lanes and paths exist but are not always marked clearly. On main roads, you may occasionally end up finding yourself on the wrong side of a guardrail.
+
+===By electric scooter===
+From April to September a good way to go short distances is by electric scooter, which are abundant on city streets. Download ''Bolt'', ''Citybee'' or ''Tuul'' apps to use them. As with bicycles, be careful when driving cobblestone streets. If you are 17 years of age or under, you need protective gear. It is illegal for two or more people to ride electric scooter. Price starts from €0.70 for an ultra short ride.
+
+===By taxi===
+The best way to hire a taxi is to use the [https://bolt.eu/ Bolt], [https://go.yandex/en_lv/ Yandex Go], [https://www.pandataxi.lv/taxi-in-riga.html Panda Taxi] or [https://redcab.lv/booking-a-taxi/?lang=en Red Cab] mobile app, which allow you to see the rates being charged, time to pickup, enter the destination, and pay with the credit card that is linked to your account. 
+
+If you hail a random taxi on the street, be aware that the taxi may not follow the most direct route and may use a meter rate that will significantly overcharge you.
+
+===By car===
+It is not advisable to get around Riga by car unless you need to move things around. The street infrastructure has the same capacity as when it was planned, and traffic congestions are the norm during working hours, which is most of the day. Traffic can be extremely slow, especially on the bridges.
+
+It can be difficult to find a parking spot in Riga during working hours. In the very centre and the old town of Riga and on the Ķīpsala island [https://www.rigassatiksme.lv/en/services/parking-services/parking-services/ parking services require a fee in certain streets]{{Dead link|date=November 2023 |bot=InternetArchiveBot }}. In the old town this can  be up to €8/hour.
+
+There are several car rental offices at the Riga airport and in other parts of the town. You can even rent a cheap Soviet-style car.
+
+====Drunk driving====
+Driving drunk is considered a serious law violation. Besides high fines and a seized driving license you can easily end up serving 10-15 days in an administrative arrest. Maximum alcohol contents in the blood must not exceed 0.05 g/dL. There are plenty of police patrols and it is very common to be stopped for an alcohol test.
+
+===By carsharing===
+It is common in Riga to use carsharing apps. There are almost always some cars available near the center. The price is based on distance and time, but as a rule of thumb, it is usually about 30-40% cheaper than a taxi. Hourly / daily and even monthly packages are available. Download and register on ''Bolt'', ''Citybee'', ''Fiqsy'' apps before you arrive (driving license must be uploaded and approved). There is even a Tesla carsharing app available - check ''OX Drive'' app.
+
+===By boat===
+[https://www.visitjurmala.lv/lv/dari/ka-noklut/ar-kugiti/ Boat service] is available from May to September from/to [[Jūrmala]]. The boats stop in Riga stop near the Stone Bridge (Akmens Tilts), which is right next to the House of Blackheads/Riga Tourist Information Centre, in the old town. The trip costs €15-20 and takes 2½ hours -- it is much slower and more expensive than train service.
+
+==See==
+{{seeDistricts}}
+[[File:Vistas desde la iglesia de San Pedro, Riga, Letonia, 2012-08-07, DD 12.JPG|thumb|The view northeast over the Vecrīga from St. Peter's Church|250x250px]]For tourists, the most interesting districts are Vecrīga (the UNESCO-listed Old Town) and the area around the nearby '''Freedom Monument''', which do double duty as the setting of Riga's foremost historic sites and the centre of its burgeoning nightlife. In Vecrīga, the two main clusters of historic sites lie just a few blocks from each other: '''Town Hall Square''', which contains the striking 13th-century '''House of Blackheads''', the Town Hall (built in 2003 as a down-to-the-last-detail copy of the 17th-century original), and '''Riga Cathedral''' and the square surrounding it. There you'll also find important museums such as the '''National History Museum of Latvia''' (in '''Riga Castle''') and the '''Museum of the Occupation of Latvia''', as well as remnants of the Medieval-era city fortifications popping up here and there.
+
+Further out from Vecrīga is Riga's modern-day downtown (Centrs). Aside from the aforementioned Freedom Monument, architecture buffs flock here to admire the beautifully preserved Art Nouveau row houses on '''Alberta iela''' and other nearby streets — one of the densest clusters of architecture of that style in the world — as well as still more museums, such as Latvia's '''National Museum of Art'''.
+
+However, there are places worth visiting outside the city centre. Some other old and well-preserved urban districts that are relatively unvisited by tourists include Agenskalns and Tornakalns, just over the Stone bridge. Further out, the residential areas on the periphery of town are largely made up of gray apartment blocks built in the typically Soviet style. These areas are nearly identical to those all over [[Eastern Europe]]. However, they do give an idea of how the vast majority of the people in Riga live and of the history of the area.
+
+The '''[http://rigapass.lv/ Riga Pass]''', which costs {{EUR|16-26}}, has discounts for museums and some tourist attractions.
+
+===Organised tours===
+The tourist office, inside the House of Blackheads, offers guided tours and free pamphlets, complete with detailed descriptions of many buildings, for independent walks. These walks cover the old town, the nearby city centre sights, and the Art Nouveau district. It's easy to do each of these in around an hour, or linger and read every detail in the booklet. In the absence of any signs or plaques around the city, the booklet gives you an insight to what you are seeing.
+
+Many private companies offer organized tours of Riga. Options include bike tours, Segway tours, pub crawls, hop-on-hop-off bus tours, walking tours, free tours, and tours focused on a certain aspect of Riga - away from the touristy old town.
+
+==Do==
+{{seeDistricts}}
+
+If you're interested in '''classical culture''', head to the National Opera in the Old Town to enjoy opera or ballet or to the Koncertzāle Ave Sol a little further north. The city has several pleasant parks, notably around the city canal and further north into Centrs. Another interesting park is Mežaparks in the north of the city with beautiful old villas and Riga's zoo.
+
+It's also possible to do a boat ride on the canal, making a tour around the old town on the Daugava river. Start point is near the Freedom Monument.
+
+Also, check out the nearby sights of the [[Riga region]], some of which allow for a good day trip from Riga due to the frequent and comprehensive travel options of the region.
+
+* '''Football:''' the men's national soccer team play at Daugava Stadium, 3 km east of city centre. City clubs playing soccer in Virslīga, the top tier, are [https://rigafc.lv/ Riga FC] and  [https://fkrfs.lv/ RFS]. [http://www.fsmetta.lv/ Metta] play in Future League the second tier. FK Auda play in Virslīga at Kekava 15 km south. The playing season is April-Nov. 
+
+===Adrenaline sports===
+Riga and its surroundings are popular destinations for adrenaline sports, which can be booked online, from most hostels and hotels, or from any local travel agent. The activities generally include transfers to/from your accommodation and all necessary supplies. Popular activities include bobsledding, AK-47 shooting (€40), bungee jumping from a cable car, scenic flights, canoeing, kayaking, go-karting, golfing, paintball, drift biking, husky dog sledding (€40), indoor skydiving (€60), laser tag in an old factory (€50) and driving a 4x4 off-road.
+* {{do
+| name=GUNS Funnel | alt= | url=https://guns.funnel.lv/peintbols/riga/andrejsala/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikipedia= | wikidata=
+| lastedit=2019-10-24
+| content=
+}}
+* {{do
+| name=Wolftrike Drift Hall | alt= | url=http://www.driftahalle.lv/?lang=en | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikipedia= | wikidata=
+| lastedit=2019-10-24
+| content=
+}}
+* {{do
+| name=Rīgas Lāzertags | alt= | url=https://www.rigaslazertags.lv/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikipedia= | wikidata=
+| lastedit=2019-10-24
+| content=
+}}
+
+===Festivals and events===
+* {{do
+| name=Easter | alt=Lieldienas | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Egg fights!
+}}
+* {{do
+| name=Count of May | alt=Maija Grāfs | url=http://www.maijagrafs.lv/ | email=
+| address=Spīķeru laukums | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Medieval festival. Takes place annually in mid-May.
+}}
+* {{do
+| name=Latviabeerfest | alt= | url=http://www.latviabeerfest.lv/en/ | email=info@latviabeerfest.lv
+| address=Vērmanes garden | lat= | long= | directions=
+| phone=+371 27 726 200 | tollfree= | fax=
+| hours= | price=
+| content=Takes place annually at the end of May. The largest international beer festival in the Baltics.
+}}
+* {{do
+| name=Jāņi | alt= | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=On June 24, Latvians celebrate the summer solstice with the midsummer festival called Jāņi. Before the celebration, flea markets are held in many places.
+}}
+* {{do
+ | name = Latvian Song and Dance Festival | alt = Latvian Vispārējie latviešu Dziesmu un Deju svētki | url =https://www.latviansongfest2022.org/?lang=en  | email = 
+ | address = Mežaparka Lielā estrāde or Vērmanes garden, [[Riga]] | lat = | long = | directions =
+ | phone =+371 28611731  | tollfree = | fax =
+ | hours = Takes place once every 5 years, at the beginning of July | price =
+ | content = One of the key cultural events in Latvia, which started in 1873 as a singing festival. This festival has become an important facet of Latvian culture and has been held 25 times since then. There are smaller Song and Dance Festivals between 5-year time spans. About 30,000 people from every corner of the country participate, with choirs and dance groups at the heart of the celebrations. Brass bands, folk ensembles, players of the zither-like kokle, amateur theatrical troupes, and foreign guests also perform at the festival. The traditional procession through the street of Riga is not to be missed, as the participants invoke plenty of enthusiastic audience participation.
+}}
+* {{do
+| name=Rīga City Day | alt=Rīgas svētki | url=https://rigasvasara.lv/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours=Takes place the whole of August | price=
+|lastedit=2025-08-02| content=Traditional weekend of celebrating a city. Many cultural events take place all around the city.
+}}
+* {{do
+ | name = White Night | alt = Baltā nakts | url = http://baltanakts.lv/ | email =
+ | address =| lat = | long = | directions =
+ | phone = | tollfree = | fax =
+ | hours = Annually, in the beginning of September | price =
+ | content =
+}}
+* {{do
+ | name = Riga Rhythms Festival | alt = Rīgas Ritmi festivāls | url = http://www.rigasritmi.lv/en/home | email =
+ | address = | lat = | long = | directions =
+ | phone = +371 67 105 216 | tollfree = | fax =
+ | hours = Takes place annually, at the end of June/start of July; 18:00–00:00 | price = Some events cost €10-45, some are free
+ | content =
+}}
+* {{do
+| name=International Baltic Ballet Festival | alt= | url=http://en.ballet-festival.lv/ | email=info@ballet-festival.lv
+| address= | lat= | long= | directions=
+| phone=+371 673 36 123 | tollfree= | fax=
+| hours=April | price=
+| content=
+}}
+
+===Sports===
+* {{do
+ | name = Lattelecom Marathon
+ | alt = Lattelecom Rīgas maratons
+ | url = http://lattelecomrigasmaratons.lv | email = marathon@necom.lv
+ | address = 11. novembru krastmala | lat = | long = | directions =
+ | phone   = +371 28611731 | tollfree = | fax =
+ | hours   = Held in the middle of May | price =
+ | content = The biggest sport marathon held since 2007 in Latvia.
+}}
+* {{do
+ | name = Playground
+ | alt =
+ | url = http://www.playgroundfestival.eu/ | email = info@playgroundfestival.eu
+ | address = Ropaži, 40 min drive from [[Riga]] | lat = | long = | directions =
+ | phone   = +371 29212586 | tollfree = | fax =
+ | hours   = Mid-July | price = €15/day, €35/3 days
+ | content = Youth sport festival that encourages and enables every visitor to try to explore inspiring sports and culture on water, land and air (e.g. longboarding, SUP, wakeboarding, hydro-cycles, mountain bikes, slack line).
+}}
+
+=== Jewish legacy ===
+Riga had a significant Jewish population during the [[Russian Empire]] period and therefore has a significant Jewish legacy.
+* Great Choral Synagogue ruins
+* Jews in Latvia museum
+* Riga Ghetto and Latvian Holocaust museum
+
+=== Soviet legacy ===
+Usually remembered as a period of pity and shame (depends on who you ask though), Latvia was part of USSR for almost 50 years and was twice occupied by Soviets (in 1940 and 1944). This period is characterized by mass building of cheap and brutalist residential "sleeper" districts (to accommodate large influx of immigrants from "brotherly" Soviet republics), as well as some remarkable Stalinist style architecture. Some places worth attention are:
+* '''Latvian Academy of Sciences''' - in the city centre, it is an example of Stalinist "Birthday cake" architecture (sometimes referred to as Socialist Classicism). The spire was built with a wreath and a five pointed star, which was removed after Latvia regained independence in 1991. The building is a cousin to similar Stalin-era skyscrapers and resembles many others built in the Soviet Union and Eastern Bloc at the time, most notably the main building of Moscow State University and Warsaw's Palace of Culture and Science. There is an observation dock on the top, price to visit is €6.
+* '''Spilve Airport''' - a half-abandoned terminal building, which was completed in 1954, remains as a notable example of Stalin's neoclassical architecture. There is a hammer and sickle on top of the building in all its glory - one of the few places where this symbol of USSR was not torn down and remains openly seen (it is illegal to display it in Latvia except in historical context). A large technical school existed here until the 1990s for major Soviet aircraft types, including Ilyushin Il-18, Ilyushin Il-62 and Tupolev Tu-134. On the other side (through the gate) is a cafe/bar with a nice view of the airfield and for watching young pilots training (open in summertime), and it is also possible to see the original airport inner façade, with signs both in Latvian and Russian language. There are also tours available inside the building from time to time, but you'll need to ask around or contact Spilve airport directly. The tour is definitely worth it - interior is lavish, well kept, with intricate details. Interestingly, the airport building was a scene of many rave parties in the 90s. Socialist realism wall paintings are the best - each one of them has a story!
+* '''Bolderaja district''' - a tour there is recommended for the adventurous types and ones who wish to really know what was living in Soviet Latvia possibly like. Most of the Soviet-built brutalist houses there, both from Stalin's and Khrushchev's era, still stand there with little or no renovation. Silikatu iela is a good place to start exploring. A former semi-military zone (due to its closeness to strategically important mouth of river Daugava), very different from modern Riga, eerily empty and atmospheric, it seems frozen in time. Some folks living there have not ventured outside it for decades. Check out the local bathhouses ("pirts" in Latvian) and authentic eatery / restaurant (Rozā pērle). There is also an interesting fortress nearby - Daugavgrivas cietoksnis - a closed military zone on weekdays, but available for visitors on weekend. The oldest, pre-Soviet part, still hosting a number of original fishermans' houses and local river "beach" frequented by locals, is located around Liela iela, Miglas iela and Kodola iela. You might also try to reach the nearby sea beach and have a swim while watching ships entering / departing Riga port. Bolderaja district area is not frequently visited by tourists, so try not to disturb locals and attract too much attention to yourself. Reachable by bus #3 from city center in about 30 minutes.
+* '''Cafe Veronika''' - if you haven't had enough of Soviet "aesthetics", you might try to visit this eatery and have a Soviet-style meal. It is close to the center, but a bit difficult to find, this is another place which seems frozen in time. It is very cheap (a day offer can be had for €4) and includes authentic service from the bygone times - a buffet-style choice, aluminum pots, self service for dishes, artificial marble columns and wall / ceiling paintings. As with Bolderaja district, keep in mind, this is not a tourist attraction but an actual eatery for working class, so keep your profile low and be polite with the staff and locals. Address: Ganibu dambis 18c, search Google Maps for location and photos.
+
+==Buy==
+{{infobox|Russian Language School of Baltic International Academy Scam|
+Russian Language School scams are extremely common in Riga. One such school that has cheated foreigners is Russian Language School of Baltic International Academy Lomonosova Street 1/4 - 308. They take money for intensive classes and then when they are unable to offer them will not refund one's money. They have several classes for free for locals meeting only a few hours a week. The only good reviews are from the locals or people living in Riga who got free classes.}}
+{{seeDistricts}}
+
+Buy items like amber and wool mittens and socks in the central market or throughout Vecrīga in little stands. You might haggle and get good prices for souvenirs.
+
+During the Christmas season there is a small [[Christmas market]] in the main square of old town which offers lots of festive fare and hot wine.
+
+Like in other cities around the world, you can find '''shopping malls''' in the suburbs along most major thoroughfares. While not attractions in themselves, they may come in handy especially if you get around by car; you can buy things you need on your trip, some Latvian specialties to bring home or have a quick meal there.
+
+==Eat==
+{{seeDistricts}}
+[[File:Restaurace Lido.jpg|thumbnail|right|The Lido Restaurant complete with a windmill]]
+
+Riga, as the most vibrant and cosmopolitan city of the Baltics, offers countless opportunities to sample both local cuisine and international favorites. [[Latvia#Eat|Latvian food]] can be hearty, using a lot of potato, cabbage, beef, pork and fish. A diversity of foreign cuisines is also available — sushi restaurants in particular are in vogue.
+
+The most central districts Vecriga and Centrs are the places to go for the widest selection of restaurants, though there are certainly also places to eat elsewhere in the city. There are a couple of local restaurant chains that have eateries in many different parts of Riga:
+
+* {{eat
+| name=Čili Pica | url=http://www.cili.lv/ | email=
+| address=Several locations | lat= | long= | directions=one near the Freedom Monument, another on the ground floor of the Stockmann mall near central station
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Cheap but good pizza.
+}}
+* {{eat
+| name=Lido | url=https://www.lido.lv/en/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A network of 8 restaurants offering decent hearty Latvian food, including desserts, at good prices. The restaurants are either cafeteria-style or feature English menus.
+}}
+
+The Vecriga district has seen a rise in tourist trap restaurants. It is advisable to scrutinise and memorize the price and size of the advertised offer against what is actually being served.
+
+==Drink==
+{{infobox|Bar scams in Latvia|Latvia is home to a number of fraud/extortion scams in bars, run by the local mobs. [[Clip joint|A common scam]], which targets men, begins by having someone randomly coax you into a bar. Upon buying a drink, you will be presented with a bill for as much as €100. If you can't pay with cash, the bar will take credit cards – or you might be forced to withdraw money from their handy ATM. If you ask, you will even be presented with a menu and the €100 price listed. If you refuse to pay, the exit door will most likely be blocked by a large bouncer. The trick to avoiding this scam is not to enter a bar recommended to you by someone on the street.
+
+A variation of this scam occurs when someone you meet on a dating app, such as Tinder, suggests meeting at one of these bars – or takes you there after first meeting at a more reputable place. The trick here is to check the online reviews of any establishment a stranger invites you to.
+
+Below is a list of bars/clubs in Riga known to conduct these scams (as of September 2025). Many are strip bars or locations of prostitution rings. These shady establishments change their names often to escape lists like these and continue extorting unwitting travelers, so use your judgment when entering a bar.
+
+* '''Atspulgs''' (formerly Livu Krodzins Bar, Lord’s Pub, Groks Pub, and Royal Pub) – Kalku 22; on the eastern corner of Livu Square; the most active (and obvious) scam bar in Riga.
+* '''Medusa Lounge''' (formerly Enigma, Puzzle, and Pink Panther) – Kalku 22; the entrance is next door to Atspulgs.
+* '''Karaoke Club''' (formerly Burlesque Club, Roxy Klub, and Babylon) – Kalku 24; next to Medusa Lounge, just east of Atspulgs, near the entrance to Vecrīga on Kalku street.
+* '''Bar Fly''' (aka '''Fly Bar''') – Gleznotāju 4; near Livu Square in a small street to the south of scam bars on Kalku; the sign announcing this is Bar Fly is very small; above the door in larger text is written ''Ūdenspīpji Klubs''.
+* '''Royal Club''' (formerly Golden Dolls Night Club, Zephry Bar, and Kapsula Bar) – Aspazijas bulvāris 32; its latest incarnation is less blatantly scammy, but still expect expensive drinks and a poor show.
+}}
+
+{{seeDistricts}}
+
+===Cafes===
+Black coffee in Latvia is traditionally served unfiltered and quite strong in small cups. If you are used to filtered coffee, you may want to have a "white coffee" (with either milk, whipped milk or cream), or you want to have a glass of water on the side. Coffee "to go" has become increasingly popular, and many of the coffee chains offer coffee served in paper cups with lids.
+
+===Bars===
+Riga is a major nightlife destination for tourists and bars here are often open later than those in other European cities. On average, bars in Vecrīga will charge €2-3 per beer and bars outside of Vecrīga will charge €1.50-2 per beer. A specialty liquor is '''Riga Balsam''', which is an acquired taste.
+
+===Clubs===
+Riga is known for a sparkling nightlife. There is a difference in style between 'Russian' clubs and 'Latvian' clubs.
+
+==Sleep==
+{{seeDistricts}}
+
+Hotels and hostels in general offer free WiFi and many have computer terminals. Almost all accept credit cards.
+
+Unsurprisingly the largest concentration of hotels are in and around Vecrīga. For budget accommodation, head to the eastern half of the old town and the surroundings of the railway station. Upscale hotels are to be found in the core of Vecrīga and around the Esplanade Park in Centrs.
+
+==Stay safe==
+Riga is generally safe if you know how to take the basic precautions. Riga's old town is extremely safe at all times, as are the city's major thoroughfares. On the other hand, certain areas in the city's western parts have had their share of crime since the fall of the USSR.
+
+Many Latvians will tell you that any Russian-speaking neighbourhood is rife with crime and violence. While this may be blown out of proportion due to historical tensions, poorer parts of Riga with significant Russian populations do need to be avoided after dark.
+
+Alcohol consumption in Riga is high and bar fights are relatively common. It is wise to be level-headed and not escalate a situation. See the info box in the [[Riga#Drink]] section regarding common bar scams in Riga.
+
+[[File:Russian embassy in Riga alinco fan.jpg|thumbnail|right|The Russian Embassy in Riga at night]]
+
+==Cope==
+===Embassies===
+Many details can also be found here: https://www.embassypages.com/latvia
+
+* {{flag|Canada}} {{listing
+| name=Canada | alt= | url=http://international.gc.ca/world-monde/latvia-lettonie/index.aspx?lang=eng | email=riga@international.gc.ca
+| address=20/22 Baznicas St 6F | lat= | long= | directions=
+| phone=+371 67813945 | tollfree= | fax=+371 67813960
+| hours= | price=
+| content=
+}}
+* {{flag|Denmark}} {{listing
+| name=Denmark | alt= | url=http://letland.um.dk/ | email=rixamb@um.dk
+| address=Pils iela 11 | lat= | long= | directions=
+| phone=+371 67 226 210 | tollfree= | fax=+371 67 820 234
+| hours= | price=
+| content=
+}}
+* {{flag|Finland}} {{listing
+| name=Finland | url=http://www.finland.lv| email=sanomat.rii@formin.fi
+| address= Kalpaka bulvaris 1, LV-1605 Riga| lat= | long= | directions=
+| phone=+371-6707 8800 | tollfree= | fax=+371-6707 8814
+| hours=M-F 08:30-12:00, 13:00-16:30 | price=
+| content=
+}}
+*{{flag|Georgia}} {{listing
+| name=Georgia | alt= | url=http://www.latvia.mfa.gov.ge/default.aspx?sec_id=430&amp;lang=1 | email=riga.emb@mfa.gov.ge
+| address=Raina bulvaris 3-19, LV -1050 Riga| lat=56.954013 | long=24.109513 | directions=
+| phone=+371 7225812 | tollfree= | fax=+371 7225812
+| hours=M-F 08:00-17:00 | price=
+| lastedit=
+| content=
+}}
+*{{flag|Germany}} {{listing
+| name=Germany | alt= | url=http://www.riga.diplo.de/Vertretung/riga/de/Startseite.html | email=info@riga.diplo.de
+| address=Raina Bulvaris 13 | lat= | long= | directions=
+| phone=+371 67085100 | tollfree= | fax=+ 371 67085149
+| hours= | price=
+| lastedit=
+| content=
+}}
+* {{flag|Greece}} {{listing
+| name=Greece | url=http://www.mfa.gr/missionsabroad/latvia.html | email=greekemb-riga@mfa.gr
+| address=Elizabetes str. 11, Appt. 5 | lat= | long= | directions=
+| phone=+371 6735-6345, +371 2009-3089 (Emergencies) | tollfree= | fax=+371 6735-6351
+| hours=09:00-17:00 | price=
+| content=
+}}
+* {{flag|Ireland}} {{listing
+   | name = Ireland
+   | url = https://www.ireland.ie/en/latvia/riga/
+   | email = 
+   | address = Alberta iela 13
+   | lat = 
+   | long = 
+   | directions = 
+   | phone = +371 6703-9370, +371 6703-9370 (Emergencies)
+   | tollfree = 
+   | fax = +371 6703 9371
+   | hours = 
+   | price = 
+   | lastedit = 2025-06-01
+   | content = 
+}}
+* {{flag|Italy}} {{listing
+| name=Italy | alt= | url=http://www.ambriga.esteri.it/ambasciata_riga/it/ | email=consolare.riga@esteri.it
+| address=Teatra iela 9 | lat= | long= | directions=
+| phone=+371 6721-6069 | tollfree= | fax=+371 6721 6084
+| hours= | price=
+| lastedit=
+| content=
+}}
+* {{flag|Japan}} {{listing
+| name=Japan | url=http://www.lv.emb-japan.go.jp/ | email=
+| address=Vesetas iela 7 | lat= | long= | directions=
+| phone=+371 6781-2001, +371 6781-2002 | tollfree= | fax=+371 6781-2004
+| hours= | price=
+| content=
+}}
+* {{flag|Norway}} {{listing
+| name=Norway | url= http://www.norvegija.lv/| email=emb.riga@mfa.no
+| address=Kaļķu ielā 15 | lat= | long= | directions=
+| phone=+371 67814100 | tollfree= | fax=+371 67814108
+| hours= | price=
+| content=
+}}
+* {{flag|Spain}} {{listing
+| name=Spain | alt= | url=http://www.exteriores.gob.es/embajadas/riga/es/Paginas/inicio.aspx | email=emb.riga@maec.es
+| address=Elizabetes iela 11 3 | lat= | long= | directions=
+| phone=+371 6732-0281 | tollfree= | fax=+371 6732 5005
+| hours= | price=
+| lastedit=
+| content=
+}}
+* {{flag|Sweden}} {{listing
+| name=Sweden | alt= | url=http://www.swedenabroad.com/sv-SE/Ambassader/Riga/ | email=ambassaden.riga@gov.se
+| address=Andreja Pumpura iela 8 | lat= | long= | directions=
+| phone=+371 6768 6600 | tollfree= | fax=
+| hours= | price=
+| lastedit=
+| content=
+}}
+* {{flag|Russia}} {{listing
+| name=Russia | alt=Посольство Российской Федерации | url=http://latvia.mid.ru/ | email= rusembas@ml.lv
+| address=Antonijas 2| lat= | long= | directions=
+| phone=+371 67332151 | tollfree= | fax=+371 67830209
+| hours= | price=
+| lastedit=
+| content=
+}}
+* {{flag|Ukraine}} {{listing
+| name=Ukraine | url=http://latvia.mfa.gov.ua | email=emb_lv@mfa.gov.ua | address= Kalpaka bulvaris 3| lat= | long= | directions=
+| phone=+371 6724 3082 | tollfree= | fax=+371 6732 5583| hours= | price=
+| content=
+}}
+* {{flag|United Kingdom}} {{listing
+| name=United Kingdom | url=https://www.gov.uk/government/world/latvia | email=britishembassy.riga@fco.gov.uk| address= J.Alunana iela 5| lat= | long= | directions=
+| phone=+371 6777 4700 | tollfree= | fax=+371 6777 4707| hours=M-Th 08:30-17:00, F 08:30-13:30 | price=
+| content=
+}}
+* {{flag|United States}} {{listing
+| name=United States |alt=| url=https://lv.usembassy.gov/ | email=askconsular-riga@state.gov
+| address=Samnera Velsa iela 1 | lat= | long= | directions=
+| phone=+371 6703 6200 | tollfree= | fax=+371 6782 0047
+| hours= | price=
+|wikipedia=|wikidata=|image=|lastedit=2018-03-04| content=
+}}
+
+==Go next==
+The Baltic states are compact and virtually all of the region is within 300 km of Riga, at least as the crow flies. All of Latvia and a large part of what Estonia and Lithuania has to offer is doable as a daytrip if you have a car. However, larger cities listed below do have several days' worth of attractions.
+
+====Latvia====
+[[File:Blue flag beach Jūrmala - panoramio.jpg|thumb|Jūrmala's beaches are just around 20 km from Riga]]
+* [[Sigulda]] &amp;ndash; A town in central Latvia with many interesting castles and historic points of interest. Probably, the most popular destination outside of Riga for foreign tourists, also due to its closeness.
+* [[Jūrmala]] &amp;ndash; A popular holiday and sea resort town with wooden houses just west of Riga, which claims to have the longest beach in Northern Europe.
+* [[Salaspils]] &amp;ndash; a former German concentration camp site 15 km southeast of Riga.
+* [[Ligatne]] &amp;ndash; A village fairly well known for its nature trails, with a great natural park with wildlife animals and "fairy tale" forests with characters from famous Latvian fairy tales. Nearby, also an old Soviet bunker complex can be visited, which was built in case of a nuclear war.
+* [[Cēsis]] &amp;ndash; One of the country's oldest towns. It has an impressive castle complex of Livonian Order origin, a charming city centre with some cobblestoned streets, and historic wooden buildings.
+* [[Liepāja]] &amp;ndash; Named "the city of wind", and the southwestern most city of Latvia. Famous for its sandy beach, numerous music events, and the largest organ in the world. It features modern architecture and a long history along with the formerly secret Soviet military neighbourhood of Karosta (literally: War Port).
+* [[Valka]] &amp;ndash; A unique town on the [[Estonia|Estonian]] border, which runs through the town centre, creating [[Valga]] on the other side. It is close to regaining the status of an important cultural centre.
+
+====[[Estonia]]====
+* [[Tartu]] &amp;ndash; Museum-rich and hanseatic city on the banks of the Emajõgi River. Also, Estonia's second-largest and oldest city, intellectual hub famous for its universities, and a lively student city. Accessible from Riga by direct bus.
+* [[Tallinn]] &amp;ndash; The capital, and financial and cosmopolitan centre of Estonia, with a medieval Old Town. Beautiful and expensive. A 5-hour bus trip from Riga.
+* [[Pärnu]] &amp;ndash; Estonia's 4th largest city and the summer capital of Estonia, popular for its balneo-therapy complexes and spa centres, surrounded by numerous beaches, little more than halfway to Tallinn.
+
+====[[Lithuania]]====
+* [[Vilnius]] &amp;ndash; The capital of Lithuania; a 5-hour bus trip from Riga.
+* [[Kaunas]] &amp;ndash; The second-largest city in Lithuania.
+* [[Klaipėda]] &amp;ndash; A beach town near [[Nida]] and the [[Curonian Spit]].
+* [[Šiauliai]] &amp;ndash; Famous for the Hill of Crosses.
+
+====[[Sweden]]====
+* [[Stockholm]] - accessible via direct ferry from Riga; 17-hour journey
+
+
+{{routebox-1
+| image1=Tabliczka E22.svg
+| imagesize1=22
+| directionl1=W
+| majorl1=[[Ventspils]]
+| minorl1=
+| directionr1=E
+| majorr1=[[Moscow]]
+| minorr1=[[Rēzekne]]
+| image2=Tabliczka E67.svg
+| imagesize2=22
+| directionl2=N
+| majorl2=[[Tallinn]]
+| minorl2=[[Saulkrasti]]
+| directionr2=S
+| majorr2=[[Kaunas]]
+| minorr2=[[Bauska]]
+| image3=Tabliczka E77.svg
+| imagesize3=22
+| directionl3=SW
+| majorl3=[[Kaliningrad]]
+| minorl3=[[Jelgava]]
+| directionr3=NE
+| majorr3=[[Pskov]]
+| minorr3=[[Sigulda]]
+}}
+
+
+{{guidecity}}
+{{geo|56.948889|24.106389|zoom=12}}
+{{isPartOf|Riga region}}</text>
+      <sha1>mac2rvc1ciso85xfdfd1vx2d3bqo2sk</sha1>
+    </revision>
+  </page>
+</mediawiki>

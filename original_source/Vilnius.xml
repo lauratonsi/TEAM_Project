@@ -1,0 +1,1534 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikivoyage</sitename>
+    <dbname>enwikivoyage</dbname>
+    <base>https://en.wikivoyage.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.46.0-wmf.24</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikivoyage</namespace>
+      <namespace key="5" case="first-letter">Wikivoyage talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1728" case="first-letter">Event</namespace>
+      <namespace key="1729" case="first-letter">Event talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Vilnius</title>
+    <ns>0</ns>
+    <id>38060</id>
+    <revision>
+      <id>5235538</id>
+      <parentid>5197749</parentid>
+      <timestamp>2026-03-25T12:32:12Z</timestamp>
+      <contributor>
+        <username>Andyrom bot</username>
+        <id>235382</id>
+      </contributor>
+      <minor/>
+      <comment>/* Emergency numbers */ Bot: "listing | type=listing" -&gt; listing</comment>
+      <origin>5235538</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="92555" sha1="t9cllea6fu462sowm6wyxn5mrc55mwu" xml:space="preserve">{{pagebanner|Vilnius banner.jpg|caption=Town hall square (Rotušės aikštė)|unesco=yes|dotm=yes}}
+'''Vilnius''' is the capital and largest city of [[Lithuania]]. It has a beautiful baroque Old Town, listed as a {{UNESCO}}, and excellent tourist facilities in all price ranges.  It stands on the River Neris in the southeast pocket of the country, the [[Dzūkija]] region, and in 2023 had a population of 629,000.
+
+== Understand ==
+[[File:Gediminas Tower in Vilnius (cropped).jpg | thumb | Gediminas Tower ]]
+Vilnius has been central to the country's life for as long as there has been Lithuania, but that has often been a tragic tale. Its Neolithic people traded in Baltic amber. In the early Middle Ages five petty kingdoms combined into two then one, when Mindaugas in 1253 became Lithuania's first king and noble Christian convert. The country splintered after his assassination but was re-united under Gediminas, who established Vilnius castle — in legend on the site where a wolf in a dream told him to build. But the real wolves were his neighbouring countries, and finding a powerful ally meant adopting their religion. Poland was the best bet and a dynastic marriage in 1486 united the crowns, later the nations, and Lithuania became Roman Catholic. Vilnius Old Town was largely built in the following 150 years. 
+
+This united [[Polish–Lithuanian Commonwealth]] grew almost to the Black Sea, but all the power and money shifted to Poland. Like Hungary in the Austro-Hungarian Empire or Ireland within Britain, Lithuania was the poor country cousin. And then Poland fell, with its territory carved up between Prussia, Austria and Russia, and others snatching what they could. Lithuania became a territory of the [[Russian Empire]]. Poland and Lithuania only regained independence after the First World War, and almost at once were at war with each other and with Russia. Vilnius was captured and from 1920 was a Polish exclave, and the Lithuanian capital moved to Kaunas. In the run-up to the Second World War Russia (as the [[Soviet Union]]) again seized the territory. This history meant that when Nazi Germany invaded in 1941, they found many local supporters, and the Jewish population of Vilnius was slaughtered. 
+
+Postwar the Soviet iron fist clutched Lithuania, until 1991 when civil unrest and the collapse of the USSR enabled the country to seize independence. It looked west for allies, adopting capitalism, joining NATO and the European Union, and — crucially for travellers — welcoming the budget airlines. All this has made Vilnius a friendly, tourist-oriented city, with a wealth of sights reflecting its layers of history. 
+
+'''Tourist information:''' [https://www.govilnius.lt/visit-vilnius Go Vilnius] have a kiosk at the airport and another in Cathedral Square, both open daily 10:00-19:00. They speak good English and are helpful with maps, brochures, tours and suggestions, but they don't book accommodation
+
+=== Climate ===
+{{Climate chart|units=Metric|description=Source: [http://worldweather.wmo.int/105/c00204.htm World Meteorological Organization]
+|Vilnius
+|-6.0 |-1.5 |48.0
+|-5.6 |-0.4 |42.0
+|-2.7 |4.5 |41.0
+|2.6 |12.7 |43.0
+|7.5 |18.5 |56.0
+|11.2 |21.8 |65.0
+|13.6 |23.8 |92.0
+|12.7 |23.1 |76.0
+|8.5 |17.4 |57.0
+|3.8 |10.3 |60.0
+|-0.1 |3.9 |47.0
+|-4.1 |-0.1 |51.0
+
+|float=right
+|clear=right
+|source=[[:w:Vilnius]]
+}}
+Far from moderating Atlantic, Vilnius winter is extremely cold and temperatures often stay below freezing day after day. Temperatures often reach -25ºC (-13 °F) in the months of January and February, freezing all the rivers and lakes around the city. Summers are warm to hot, with heat waves that send temperatures to rise above 30°C (86°F). Rainfall is relatively equal throughout the year; there is never a completely dry month, although summer is the wettest time in Vilnius. Early summer and autumn are good times to visit, but Vilnius is a year-round destination, and even overcast and gray days have their compensations, when everyone feels in league united against the weather.
+
+== Get in ==
+{{Mapframe | 54.683 | 25.286 | height=600 | width=550 | zoom=14}}
+=== By plane ===
+{{go
+| name=Vilnius Airport | alt={{IATA|VNO}} | url=https://www.vilnius-airport.lt/en/ | email=
+| address=Rodunios kelias 10a | lat=54.637 | long=25.288 | directions=6 km south of city centre
+| phone=+370 612 44442 | tollfree= | hours= | price=
+| wikipedia=Vilnius Airport | wikidata=Q847711 | lastedit=2023-02-15 
+| content=The principal airport in Lithuania, with flights from most major airports in north Europe and the Med; destinations further out include Keflavik, Istanbul, Tel Aviv and Red Sea resorts. There are no flights within Lithuania, it's too small, but you can fly here from Riga and Tallinn. Most flights are by budget airlines. The airport has the standard facilities including car hire.
+}}
+
+'''To and from the airport:'''
+
+'''Buses''' leave from outside Arrivals every 15-30 min and take 15 min to go downtown. Simplest is to buy a €1 single ticket by card, and you might pay extra for bulky luggage. "Get around" below describes other ticket deals, such as the smart card ''Vilniečio kortelė'' — buy it from the Narvesen kiosk next to Arrivals.
+* [http://stops.lt/vilnius/#bus/1/a-b/map/en Bus 1] runs from the airport (''Oro uostas'') to the central bus and railway stations (''Stotis'').
+* [http://stops.lt/vilnius/#bus/2/a-b/map Bus 2] runs via LFF football stadium to the stations. 
+: Coming back on these, wait at Stop H between the stations, which has a real-time display. 
+* [http://stops.lt/vilnius/#bus/88/a-b/2613/map/en Bus 88] runs via the football stadium, Gate of Dawn (200 m from stations) and MO Museum to Konstitucijos Prospekt and Europa Square in the business district north of the river.
+* [http://stops.lt/vilnius/#nightbus/88n/a-b/2613/map/en Night Bus 88N] runs every 30 min 23:30–05:30 by the same route. This is the only night service at the airport. 
+* [http://stops.lt/vilnius/#expressbus/3g/b-a/2613/map/en Bus 3G] runs via Lukiškės Square (west of Old Town) and Konstitucijos Prospekt in the business district to the northern suburb of Fabijoniškės. The G indicates express, ''Greitasis''.
+* '''Other cities:''' [https://www.ollex.lt/ Ollex] is a not-very-direct bus from the airport to Kaunas, where the pick-up and drop off is at the filling station on Savanoriu prospekt, northeast edge of the city. The bus continues to Klaipėda. Ecolines bus to Minsk and Toks bus to Kaunas, Klaipėda and Palanga also run via the airport. 
+
+'''By train''' — From the airport to the main railway station every two hours, taking 8 minutes. Buy on board from the conductor for €0.80, and you might have to pay a few cents extra if you have bulky luggage. 
+
+'''By taxi''' — In the rank outside Arrivals, they have capped rates. To the stations in 2023 is €13 daytime, €15 night; to Old Town is €18 daytime, €21 night. 
+
+'''On foot''' — With light luggage, decent weather and an hour to spare, it's 4 km to walk to the railway and bus stations and another 1 km into Old Town. From the terminal, follow the broad Felikso Vaitkaus gatve for 200 m. Turn right, heading north on Dariaus ir Gireno gatve — it's busy but has a sidewalk. This comes into downtown across a railway bridge, turn right (east) for stations and Old Town or continue straight ahead for places west of Old Town.
+
+'''[[Kaunas#Get in | Kaunas]] Airport''' ({{IATA|KUN}}) is 100 km west of Vilnius and 14 km northeast of downtown Kaunas. It has budget flights by Ryanair and Wizz, but fewer than Vilnius. [https://www.ollex.lt/ Ollex] is a direct bus from Kaunas airport to Vilnius (90 min, three per day, €15), where the pick-up / drop off is at Panorama Hotel opposite the railway and bus stations. Otherwise take Kaunas local bus 29 downtown for frequent buses and trains to Vilnius.
+
+=== By train ===
+[[File:Kaiser Wilhelm II in Vilna 1915.jpg | thumb | 300px | The Kaiser arrives by train in 1915 ]] 
+From Poland two trains run daily. The morning train leaves [[Kraków]] around 06:00, calling at [[Warsaw]] Centralna at 09:00 to reach Mockava on the border towards 14:45. Here you change to the Lithuanian train for Kaunas at 16:30 and Vilnius at 17:30 (it is a timed transfer – if the Polish train is late, then the Lithuanian train will wait). The afternoon train leaves [[Szczecin]] at 09:30, calling at [[Poznań]] around 11:30, Warsaw at 15:00, Kaunas at 22:15 and Vilnius at 23:30. The westbound trains leave at 06:30 for Szczecin and 12:30 for Kraków: these may be shown on timetables as for Mockava.
+
+One train a day is from Tallinn in Estonia via Riga in Latvia, reservations essential. It runs from [[Tallinn]] at 10:25 via [[Tartu]], [[Valga]], [[Riga]] around 16:40, then [[Jelgava]], Joniškiso, [[Šiauliai]] and Kaišiadorys to arrive in Vilnius at 21:00. The eastbound train leaves Vilnius about 07:00 reaching Riga by 11:00 and Tallinn around 17:30. 
+
+From [[Belarus]] and the Russian exclave of [[Kaliningrad Oblast]] all trains are suspended since 2019, but buses still run from Minsk. 
+
+From [[Kaunas]] trains run hourly, daily 05:00-22:30, taking 90 min. The trains are usually Czech double-deckers. 
+
+From [[Klaipėda]] five trains run daily, taking 4 hr 30 min. 
+
+{{go
+| name=Vilnius railway station | alt= Vilniaus geležinkelio stotis | url= | email=
+| address=16 Geležinkelio | lat=54.6703 | long=25.2844 | directions=
+| phone= | tollfree= | hours= | price=
+| wikidata=Q453936
+| lastedit=2023-02-15 
+| content=The station is just south of Old Town Gate of Dawn, next to the bus terminal and a small shopping mall with cafes. It has a helpful ticket office, waiting room, and coin-operated luggage lockers in the basement (not accessible 24 hours). The second floor has a railway museum, see below.
+}}
+
+=== By bus ===
+[[File:Vilnius Cathedral 2014.jpg | thumb | 300px | Vilnius Cathedral ]]
+Buses from Warsaw take 8-9 hours via [[Białystok]] and [[Kaunas]], for a fare in 2023 of €30. They continue to [[Riga]], another 4-5 hours. From Tallinn you may need to change in Riga, or the bus may take a rest stop there then continue. 
+
+Buses from [[Minsk]] are still running in 2023, taking 4 hr 30 min. Those from Kaliningrad have been suspended since 2022. 
+
+Buses from Kaunas run every 15 min, taking 90 min for a fare of €9; see above for the bus from Kaunas airport. From Klaipėda they run every hour or so, taking 4-5 hours, for €25. See individual town pages for other starting points across Lithuania. 
+
+Bus operators include [http://www.eurolines.lt/en/ Eurolines], [http://www.ecolines.net/en/ Ecolines], [http://luxexpress.eu/en Lux Express] and Flixbus. 
+
+'''Vilnius bus station''' is next to the railway station.
+
+=== By road ===
+From Poland follow E87 to [[Marijampolė]] then turn east on A7 / A16. From Riga follow E87 south to [[Panevėžys]] then A2. From [[Klaipėda]] and [[Kaunas]] follow A1 east.
+
+These are fast four-lane highways, usual speed limit 130 km/h summer, 110 km/h winter, and kept open in bad weather.
+
+== Get around ==
+
+=== On foot ===
+Walking is your only choice in Old Town. The old streets are pedestrianised, and even taxis avoid it.
+
+=== By bus ===
+[[File:Vilneicio kortele front.jpg | thumb | 300px | A Vilniečio kortelė smart card ]]
+[https://judu.lt/en/ JUDU] is the portal for city buses and trolleybuses, with timetables, route maps and travel planners in English. There are no trams or metro / suburban railways, but see above for the airport train.
+
+For an overview of the routes, see the [https://judu.lt/wp-content/uploads/2021/10/Vilnius-City-Public-Transport-Map.pdf Vilnius City Public Transport Map]. There are some 90 standard bus routes (marked in blue; numbers mostly between 1 and 100), six express buses (in green; from 1G to 6G) and 14 trolleybuses (in red; between 1 and 20). The numbers overlap, but e.g. bus 3, express bus 3G and trolleybus 3 run entirely different routes. They run 05:30-23:00. There are separate night buses including the route 88N cross-town from the airport via Railway station to Europa Square.
+
+A single ticket for bus or trolleybus costs €1.25 in 2025, [https://judu.lt/en/contactless-payment-on-public-transport/ purchased by contactless payment] only and no discounts. It is valid for 60 minutes.
+
+There are two mobile apps available for the purchase of public transportation tickets: m.Ticket (requires a local phone number) and Trafi. Single tickets cost €1 for 30 minutes or €1.25 for 60 minutes of validity. Trafi is available in English and you can register a foreign debit/credit card (as long as the SMS confirmation code comes through). Minimum purchase in Trafi is €5. You can load up on several single tickets in Trafi (e.g., 10 x 30-min single tickets for a total of €8.50) and you can also activate several tickets at the same time (for a group). You can also buy a 24-hour ticket for €7.50, a 72-hour ticket for €13.50, 30-day ticket for €38 etc.
+
+All tickets can also be loaded on a smart card called the [https://judu.lt/en/for-public-transport-passengers/vilniecio-kortele-vilnius-resident-card/ JUDU card] or ''Vilniečio kortelė'' (old name), for an upfront payment of €1.50 (plus any tickets you want to top up the card with). For instance, a full-fare 24-hour ticket costs €5 and a 72-hour one is €8. Validate the ticket by swiping the smart card over the yellow electronic reader on the bus, which starts the clock running. Seniors over 70 years get 50% discount, and European Union students get 80% discount. Show your ISIC or ID card or passport when buying the smart card and in case of ticket control during the trip.
+
+Buy or top-up the JUDU card at ''Lietuvos spauda'' and ''Narvesen'' kiosks (for instance at the airport), at Maxima and RIMI grocery stores, or at JUDU's own [https://judu.lt/en/customer-service-centres/ Customer Service Centers] (located at Railway Station, Vincas Kudirka Square and Vilnius City Municipality Building).
+
+[https://www.govilnius.lt/visit-vilnius/get-vilnius-pass Vilnius Pass] is a tourist card which may include public transport on its 72-hour pass, but not on the 24 or 48-hour passes. You will struggle to break even on any of these, however many museums you rush around. The 72-hour pass is €66 with transport and €56 without.
+
+=== By taxi ===
+[[Image:trys kryziai.jpg | thumb | 300px | Three Crosses ]]
+See above for taxi rates from the airport. There are half a dozen taxi and ride-sharing services, which include [https://www.1820.lt/ Taksi 1820], [https://www.uber.com/global/en/cities/vilnius/ Uber], [http://www.jazzexpress.lt/ Jazzexpress] and [https://a2b.lt/ A2B]. Cars are new and have debit / credit card readers.
+
+Smartphone and internet booking systems include Uber, eTAKSI, [https://bolt.eu/ Bolt] and [https://taxi.yandex.lt/en_lt/ Yandex]. Street taxis may charge twice as much as those hired by phone or app: try dialling the number on the vehicle you see, tell the dispatcher the address you're at, and you will likely get the same car for a lower price.
+
+All taxis must have a yellow licence plate starting with the letter '''T''' with an additional five numbers and a "Taksi" sign on the roof. A detailed price list alongside the driver's taxi-operator license must be placed on the panel right in front of the passenger seat next to the driver.
+
+A €0.50-1 tip for the driver is customary.
+
+=== By car ===
+
+Not in Old Town! The spine of it is traffic-restricted, and parking is scarce and time-limited - not long enough to enjoy any sights. Further out is snarled during rush hour (07:00-09:00 and 16:00-18:30). If you plan to tour the country, see the city by walking or public transport then pick up a rental car later. There's a dozen rental companies including Hertz, Enterprise, Europcar and Sixt.
+
+[https://judu.lt/en/for-drivers/parking-lots-in-vilnius/ JUDU]{{Dead link|date=July 2025 |bot=InternetArchiveBot }} details the parking places in the city, and there are Park &amp; Rides around its fringes.
+
+[https://www.citybee.lt/ City-Bee]{{Dead link|date=December 2024 |bot=InternetArchiveBot }} is a car-share where you can rent a car by the minute - use your phone to unlock it. There is no contract or monthly fee, you pay for the service only when you use the car (say €8 per hour), and there are no parking fees when you are not using it. There are 13 pick-up points across the city, mostly in the centre.
+
+=== By bicycle ===
+You might cycle to outlying sites, but this will be on-road, and local motorists don't pay much regard to bike lanes. The only continuous cycle path is north along the River Neris to Verkiai nature park. Other routes are fragmentary.
+
+[https://www.cyclocity.lt/en/home Cyclocity] is a self-service bike-rental scheme. However in Feb 2023 short-term subscriptions are suspended, and they only offer longer deals suitable for regular commuters.
+
+[https://velotakas.lt/en/home/ Velotakas] have bike rental and lead city tours. They're at Stulginskio 5 g., tel +370 618 45727, open daily 10:00-18:00.
+
+== See ==
+[[File:Pilies gatvė 04(js) Vilnius.jpg | thumb | 300px | Pilies gatve in Old Town]]
+&lt;!--Could use a paragraph or two about the types of attraction you can expect in different parts of the city--&gt;
+
+[https://www.govilnius.lt/visit-vilnius/get-vilnius-pass Vilnius Pass] is a tourist discount card which in 2023 costs €37 for 24 hours, €47 for 48 hours and €56 for 72 hours. This excludes public transport and is frankly poor value, you'll struggle to break even. 
+
+=== Old town north ===
+: This starts from the castle and cathedral, and stretches south along Pilies gatve. Halfway down the main street becomes Didžioji, and this area is described below as Old Town south. In 1994 the entire Old Town was added to the [[UNESCO World Heritage List]]. 
+
+* {{see
+| name=Gediminas Castle | alt= | url=https://lnm.lt/muziejai/gedimino-pilies-bokstas/ | email=
+| address=Arsenelo 5 | lat=54.6868 | long=25.2915 | directions=Lane from south or funicular from north side
+| phone=+370 5 261 7453 | tollfree=
+| hours=Daily 10:00-20:00 | price=Tower adult €8, conc or child €4
+| wikipedia=Gediminas' Tower | wikidata=Q1497616
+| lastedit=2023-02-07
+| content=This is the Upper Castle of a complex of three built from the 13th century, much bashed about, and abandoned from the 16th. (The Lower Castle became the site of the Arsenal, Palace and Cathedral, and the "Crooked Castle" was destroyed in 1394.) You can ascend the cobbled lane and enter the courtyard free for views of the city, and the Three Crosses on the hill east. The ducal palace east side of the courtyard is just a shell, converted into a performance space. West side is the three storey red brick tower, now a museum.
+}}
+* {{see
+| name=Old Arsenal | url=https://lnm.lt/en/museums/the-old-arsenal/ | email=
+| address=Arsenalo 3 |lat=54.6882 | long=25.2916 | directions=
+| phone= | tollfree= | fax= | hours=Tu-Su 10:00-18:00 | price=Adult €5, child €2.50 | lastedit=2023-02-07 
+| content=This arsenal in the Lower Castle was built in the 15th century and stored heavy artillery. It's now part of the National Museum, displaying the country's pre-history and early history until the arrival of Christianity in the 11th century. 
+}}
+[[File: Taikomosios dailes muziejus, 2006-08-08.jpg | thumb | 300px | Museum of Applied Arts &amp; Design ]]
+* {{see
+| name=Museum of Applied Arts &amp; Design | alt=Taikomosios dailės ir dizaino muziejus | url=https://www.lndm.lt/en/tdm/ | email=
+| address=Arsenalo g 3a | lat=54.6881 | long=25.2923 | directions=
+| phone=+370 5 262 8080 | tollfree=
+| hours=Tu We &amp; F 10:00-18:00, Th 10:00-20:00, Su 11:00-16:00 | price=
+| wikidata=Q12674518
+| lastedit=2025-04-16
+| content=This arsenal in the Lower Castle was built in the 15th century and stored heavy artillery. It's now part of the National Museum, displaying the country's pre-history and early history until the arrival of Christianity in the 11th century. 
+}}
+* {{see
+| name=New Arsenal | alt= | url=https://lnm.lt/muziejai/naujasis-arsenalas/ | email=
+| address=Arsenalo 1 | lat=54.6872 | long=25.2892 | directions=
+| phone=+370 5 262 9426 | tollfree= | hours=Tu-Su 10:00-18:00 | price=Adult €5, child €2.50
+| wikipedia=National Museum of Lithuania | wikidata=Q1790447 | lastedit=2025-10-19 
+| content=The New Arsenal was established in the 18th century and mostly served as a barracks. It's now part of the National Museum displaying Lithuania's history and cultural heritage. As of October 2025, it is closed for major restructuring work. 
+}}
+* {{see
+| name=Vilnius Cathedral | alt=Basilica of St Stanislaus and St Ladislaus of Vilnius | url=https://www.katedra.lt/ | email=
+| address=Cathedral Square | lat=54.6859 | long=25.2879 | directions=
+| phone=+370 526 11127 | tollfree= | hours=Daily 07:00-19:30 | price=Free 
+| wikipedia=Vilnius Cathedral | wikidata=Q1281237 | lastedit=2023-02-07 
+| content=The first cathedral was built here in 1251, reverting to pagan worship in 1263. Fire destroyed a second in 1419, a third in 1530 and a fourth in 1610. Many parts of the fifth survive, notably the baroque chapel of St Casimir, but much was lost when the south tower collapsed in 1769 — did those pagans have a friend on high? What you see now is mostly the neo-classical structure completed in 1801. The crypt has a display of Vilnius through the ages, and you can also tour the catacombs and free-standing 57-m high belfry. Nearby in the square, a tile inscribed ''Stebuklas'' ("miracle") marks the end of the Vilnius-Tallinn human chain in the 1989 protest against the Soviet Union.
+}}
+[[File:St. John's, Vilnius University, Lithuania.jpg | thumb | 300px | St Johns in the university courtyard ]]
+* {{see
+| name=Palace of the Grand Dukes of Lithuania | alt= | url=https://www.valdovurumai.lt/en/ | email=info@valdovurumai.lt
+| address=Cathedral Square | lat=54.6859 | long=25.2890 | directions=
+| phone=+370 5 262 0007 | tollfree= | hours=Tu–Sa 10:00–18:00, Su 10:00-16:00 | price=Adults €10.50, conc or child €5.25
+| wikipedia=Palace of the Grand Dukes of Lithuania | wikidata=Q1284847
+| lastedit=2023-02-07 
+| content=This is a modern replica: the original was built in the 15th century, ruined in the 17th and demolished in 1801. A merchant's house was then built, which became part of the Arsenal. In the 1990s after independence the palace was rebuilt to the original plan, somehow without deciding what it would be used for, and to outcry as it blocked the vista from Cathedral Square. It's become part of the National Museum, with displays of palace history and reconstructions of the ceremonial halls. 
+}}
+* {{see
+| name=Presidential Palace | alt= | url=https://www.president.lt/institucija/rumai/istorija | email=
+| address=Daukanto Square |lat=54.683 | long=25.286 | directions=
+| phone= | tollfree= | hours= | price=
+| wikipedia=Presidential Palace, Vilnius | wikidata=Q1577652
+| lastedit=2023-04-16
+| content=An 18th-century palace which is the seat of the President of Lithuania. Guided tours are available at weekends, and the palace is also open to the public on Open House days.
+}}
+* {{see
+| name=Toy Museum | alt=Žaislų muziejus | url=http://zaislumuziejus.lt/en/ | email=
+| address=Šiltadaržio 2 | lat=54.6849 | long=25.2918 | directions=foot of castle lane 
+| phone=+370 604 00449 | tollfree= | hours=Th F 14:00-18:00, Sa Su 11:00-16:00 | price=Adult €7, child €5
+| lastedit=2023-02-07 
+| content=Interactive museum of toys down the ages, chid-friendly of course. 
+}}
+[[File:Presidential Palace in Vilnius.jpg | thumb | 300px | President's Palace ]]
+* {{see
+| name=Vilnius University | alt= | url=https://www.muziejus.vu.lt/en/ | email=mb@mb.vu.lt
+| address=Universiteto 5 | lat=54.6825 | long=25.2886 | directions=
+| phone=+370 5 268 7103 | tollfree=
+| hours=Museum M-Sa 09:00-15:00 | price=Adult €2, child or conc €1
+| lastedit=2023-02-08
+| content=Vilnius University now has faculties across the city and beyond, but this is the baroque core of it, with the library, courtyards, observatory and Church of St Johns (plural: Šv Jono, the Baptist and the Evangelist). You can see the church, four courtyards and Franciszek Smuglewicz Hall free, and guided tours are available for groups of four or more by prior booking. The Adam Mickiewicz Museum displays the university's history.
+}}
+* {{see
+| name=House of the Signatories | url=https://lnm.lt/muziejai/signataru-namai/ | email=
+| address=Pilies 26 | lat=54.68233 | long=25.28929 | directions=east flank of University 
+| phone=+370 5 231 4437  | tollfree= | hours=Tu-F 10:00-18:00, Sa Su 12:00-17:00 | price=Adult €4, child or conc €2 | lastedit=2023-02-08 
+| content=Neo-renaissance mansion where Lithuania's Act of Independence was signed on 16 February 1918. It's now a branch of the National Museum depicting the story of Lithuania as a separate nation, in which independent spirit it makes few concessions to non-speakers of the language. 
+}}
+* {{marker | name=Literatu gatve | type=see | lat=54.6822 | long=25.2903 }} ("Literature Street") at its junction with Rusų gatve has small artworks and dedications mounted on the walls, to those whose literature is linked to Lithuania (however obliquely, so a dedication to Wikivoyage is overdue). The street west is a ratty alley and east is nothing special. 
+* {{see
+| name=Church Heritage Museum | alt= | url=https://bpmuziejus.lt/en/ | email=
+| address=Šv Mykolo 9 |lat=54.68283 | long=25.29225 | directions=east end of Literature St opposite St Anne's
+| phone= | tollfree= | hours= | price=
+| lastedit=2023-04-16
+| content=Displays religious art.
+}}
+* '''Pilies gatve''' is the attractive main thoroughfare leading south from Cathedral Square past the university, to become Didžioji continuing past Town Hall to the Gate of Dawn. Saint Parasceve is a shocking pink Orthodox church at the changeover point. Most buildings along here are worth admiring, though the concrete modern block opposite the church could do with a visit by the Teutonic Knights' wrecking crew. The [http://www.slapeliumuziejus.lt/ Šlapelių House Museum] has exhibitions and events.
+
+=== Old Town south ===
+[[File:Town Hall, Vilnius - 52576555494.jpg | thumb | 300px | Town Hall in mid-winter ]]
+: From Saint Parasceve past Town Hall square down to Gate of Dawn
+* {{see
+| name=National Museum of Art | alt= | url=https://www.lndm.lt/ | email=
+| address=Didžioji 4 | lat=54.6807 | long=25.2898 | directions=
+| phone=+370 5 262 8030 | tollfree= | hours=Tu-Sa 11:00-18:00, Su 12:00-17:00 | price=Adult €6, child or conc €3 
+| wikipedia=Lithuanian National Museum of Art 
+| lastedit=2023-02-08
+| content=Huge display of art from the 14th to 20th century. 
+}}
+* {{see
+| name=Museums Centre for Information, Digitisation and LIMIS | alt= | url=https://www.emuziejai.lt/en/ | email=
+| address=Bokšto g. 5 | lat=54.68068 | long=25.29019 | directions=next to the Museum of Art
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=About the digitisation and online curating of museum collections. So if you want to grasp the "principles of the use of ontologies" you've come to the right place, but if you seek physical exhibits you've not been listening. 
+}}
+
+* {{see
+| name=Culinary Museum | alt= | url=https://culinarymuseumvilnius.lt/en/ | email=
+| address=Bokšto 9 | lat=54.67990 | long=25.29040| directions=just south of Museum of Art 
+| phone=+370 5 219 4849 | tollfree= | hours=M-F 11:00-15:00 | price=Adult €4, child or conc €2 
+| lastedit=2023-02-08
+| content=This is about tableware rather than cuisine. 
+}}
+* {{see
+| name=St Nicholas Church | alt=Šv. Nikolajaus Stebukladario palaikų Pernešimo cerkvė | url= | email=
+| address=Didžioji 12 | lat=54.67989 | long=25.28869 | directions=as the street widens into Town Hall square
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=A Russian Orthodox church. Not to be confused with the RC St Nicholas on Šv Mikalojaus.
+}}
+* {{see
+| name=Kazys Varnelis House-Museum | alt= | url=https://lnm.lt/muziejai/kazio-varnelio-namai-muziejus/ | email=
+| address=Didžioji 26 | lat=54.67835 | long=25.28778| directions=Town Hall square 
+| phone=+370 5 279 1644 | tollfree= | hours=W-Su 10:00-18:00 | price=Adult €5, child or conc €2 
+| lastedit=2023-02-08
+| content=Varnelis (1917-2020) was an abstract artist who mostly lived in the USA, returning to Vilnius in 1998. His house is now part of National Museum, displaying his studio and works. 
+}}
+[[File:Aušros Vartų 02(js) Vilnius.jpg | thumb | 300px | Chapel and icon over the Gate of Dawn ]]
+* {{see
+| name=Town Hall | alt=Vilniaus rotušė | url=https://www.vilniausrotuse.lt/en | email=
+| address=Didžioji 31 | lat=54.6783 | long=25.2870 | directions=
+| phone= | tollfree= | hours= | price=
+| wikipedia=Town Hall, Vilnius 
+| lastedit=2023-02-08
+| content=The present town hall is neoclassical, built 1799. It's used for civic events, and the simplest way to see inside is to attend a concert or similar, which may be free. The square is a venue for fairs, concerts, demos and so on. 
+}}
+* {{see
+| name=Contemporary Art Centre | alt=Šiuolaikinio meno centras | url=http://www.cac.lt | email=
+| address=Vokieciu 2 | lat=54.67801 | long=25.28567 | directions=west side of Town Hall
+| phone=+370 5 212 1945 | tollfree= | fax= | hours=Closed for rebuilding | price=
+| wikipedia=Contemporary Art Centre (Vilnius) | image=| wikidata=Q20504412 | lastedit=2023-02-08 
+| content=This has a permanent display of Fluxus artwork plus other rotating exhibitions.
+}}
+* {{see
+| name=Vilnius Museum | alt= | url=https://vilniausmuziejus.lt/ | email=
+| address=Vokieciu 6 | lat=54.67843 | long=25.28490| directions=next to Contemporary Art Centre 
+| phone=+370 5 212 1945 | tollfree= | fax= | hours=Tu-F 15:00-19:00, Sa Su 11:00-19:00 | price=Adult €5, child or conc €2.50 
+| lastedit=2023-02-08 
+| content=Small independent museum of city history. 
+}}
+* {{see
+| name=Museum of Illusions | alt= | url=https://vilnil.lt/ | email=
+| address=Vokieciu 8 |lat=54.67853 | long=25.28464 | directions=next to Vilnius Museum 
+| phone=+370 5 672 25414 | tollfree= | fax= | hours=M-Sa 10:00-19:00, Su 10:00-18:00 | price=Adult €12, child or conc €9 
+| lastedit=2023-02-08 
+| content=Ames Room, Pepper's Ghost, holograms, all the staples are here. Children will love it. 
+}}
+
+* {{see
+| name=Church of St Casimir | alt= | url=https://sites.google.com/view/kazimieras | email=
+| address=Didžioji 34 | lat=54.67765 | long=25.28861| directions=east side of Town Hall 
+| phone=+370 5 212 1715 | tollfree= | fax= | hours=M-F 11:00-19:00, Su 08:00-19:00 | price=
+| wikipedia= Church of St. Casimir, Vilnius | lastedit=2023-02-08 
+| content=Baroque RC church completed in 1618. It's been held by various faiths (including a spell as Museum of Atheism) but was re-consecrated in 1991. It often hosts organ recitals. 
+}}
+* {{see
+| name=Bastion of Vilnius Defensive Wall | alt= | url=https://lnm.lt/muziejai/vilniaus-gynybines-sienos-basteja/ | email=
+| address=Bokšto 20 | lat=54.6771 | long=25.2928 | directions=
+| phone= +370 5 261 2149 | tollfree=
+| hours=Tu-Su 10:00-18:00 | price=Adult €6, child €3
+| lastedit=2023-02-08
+| content=The city walls were built 1503-22 with nine gates (of which only Gate of Dawn survives) and this artillery position. It's now a museum of the city's military history.
+}}
+* {{see
+| name=Orthodox Church of the Holy Spirit | alt= | url= | email=
+| address=Aušros Vartų 10 | lat=54.6756 | long=25.2908  | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Re-built in 1753 in Baroque / Rococo. It's affiliated to the Monastery of the Holy Spirit and the Convent of Saint Mary Magdalen, with services in Russian. 
+}}
+
+* {{see
+| name=St Nicholas Church | alt= | url= | email=
+| address=Šv Mikalojaus 4 | lat=54.6782 | long=25.2829 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=The Roman Catholic St Nick's, brick gothic, and the oldest church in Vilnius being documented in 1387.
+}}
+
+* {{see
+| name=Holy Trinity Church | alt= | url= | email=
+| address=Aušros Vartų 11 | lat=54.67524 | long=25.28835| directions=opposite Holy Spirit
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Part of a Ukrainian Greek Catholic monastery, and mostly built in the early 17th century. 
+}}
+
+* {{see
+| name=Church of St Theresa | alt= | url= | email=
+| address= | lat=54.6749 | long=25.2896| directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Just north of the Gate of Dawn (indeed serving as the entrance to get up to the gate's Virgin Mary icon) is a Roman Catholic church popular with worshippers also outside mass, completed in 1650.
+}}
+
+* {{see
+| name=Gate of Dawn | alt=Aušros vartai | url= | email=
+| address= | lat=54.6742 | long=25.2896 | directions=
+| phone= | tollfree=
+| hours=Chapel daily 07:00-19:00 | price=
+| wikidata=Q937212
+| lastedit=2023-02-08
+| content=The last survivor of the walled city's nine gates, various called Medininkai Gate as the street led south to that village, Sharp Gate, and now Gate of Dawn. It's straddled by a chapel with a large icon of the Virgin Mary, painted in the 1620s, which has become a pilgrimage destination. Mass is held daily in Lithuanian and Polish. Enter the chapel via the Church of St Theresa, just follow the head-scarves. When the chapel windows are opened, you see the icon from the street below, and she can see you and your sins. The alley through the gate is pedestrianised and open 24 hours: south you emerge blinking into a modern world of traffic.
+}}
+
+=== Užupis ===
+[[File:Uzupis Constitution - panoramio.jpg | thumb | 300px | Užupis Constitution ]]
+: "Užupis" means beyond the river - it's in a loop of the small River Vilnia, which flows north to join the bigger Neris. It developed from the 16th century as a Jewish ghetto, most of whose inhabitants were murdered in the Holocaust. Post-war it was a squalid neighbourhood, then from independence it gentrified as property values climbed. In 1997 the residents declared it to be an independent republic, with its own president, anthem, flag, and constitution. They picked April Fool's Day to celebrate independence, and the first article of their constitution sets the tone: "Everyone has the right to live by the River Vilnia, and the River Vilnia has the right to flow by everyone." Its envoys, which have yet to be accredited by any other nation, include an "ambassador for whistling in the streets".
+: Kalnų Park stretches north to the River Neris, and northeast is the district of Antakalnis. Attractions there and further east are also described in this section. 
+* {{see
+| name=St Anne's Church | alt=Šv Onos bažnyčia | url= | email=
+| address=Maironio 8 |lat=54.6831 | long=25.2933 | directions=
+| phone= | tollfree= | fax= | hours=Tu-Su 11:00-18:00 | price=
+| wikipedia=Church of St. Anne, Vilnius | image=Vilnius.Sv.Onos baznycia.Saint Ann's church2.jpg | wikidata=Q937290 | lastedit=2023-02-07 
+| content=Small flamboyant church in Gothic style, built by 1500 and little altered since. There is a legend that when Napoleon's campaigns brought him to Vilnius, he declared that he'd like to lift the church on his palm and carry it back to Paris. (Obviously untrue, since given the horrors of his retreat, he'd have been forced to eat it before he reached Warsaw.) St Anne's is not within Užupis but backs onto the river boundary by an entrance bridge. 
+}}
+* {{see
+| name=Church of St Francis and St Bernard | alt= | url=https://www.bernardinuparapija.lt/ | email=
+| address= |lat=54.68299 | long=25.29386| directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Also known as the Bernadine Church, it is next to St Anne's on the riverbank. It's a sturdy Gothic building from the 16th century, incorporated into the city walls, with loopholes toshoot at the Cossacks. 
+}}
+
+* {{see
+| name=Cathedral of the Theotokos | alt=Dievo Motinos Ėmimo į Dangų katedra  | url=http://www.soborvilnius.lt/ | email=
+| address=Maironio gatve 14 | lat=54.68108 | long=25.29236  | directions=
+| phone= | tollfree= | hours= | price= | wikipedia=Cathedral of the Theotokos, Vilnius | wikidata=Q1736161
+| lastedit=2023-02-07
+| content=Like St Anne's, this stands by an entrance bridge to Užupis. It was first built in the 1340s by Grand Duke Algirdas before the country became Christian. It's been destroyed, rebuilt and changed use several times - in the 1820s it was the university anatomy department. The present building is from the 1860s in sort-of neoclassical meets the Byzantine style of Georgia. It's Eastern Orthodox (which calls the Virgin Mary ''Theotokos'', god-bearer) and so is the senior church for Russians and Belarusians in Vilnius.
+}}
+* {{see
+| name=Angel of Uzupis | alt= | url= | email=
+| address= |lat=54.6806 | long=25.2952 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=In the main square is a statue unveiled on 1 April 2002 of Gabriel blowing a trumpet. He's probably blowing a raspberry.
+}}
+* {{see
+| name=Tartle | alt= | url=https://www.tartle.lt/en/ | email=
+| address=Užupio 40 | lat=54.6817 | long=25.2994 | directions=
+| phone=+370 5 247 7724 | tollfree= | fax= | hours= | price=
+| lastedit=2023-02-07 
+| content=Gallery of modern art, visit only by pre-booked guided tour. 
+}}
+* {{see
+| name=Bernadine Cemetery | alt= | url= | email=
+| address= |lat=54.680 | long=25.307 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Established in 1810 by the Bernardine monks of the Church of St Francis in Užupis. It became the main city cemetery, with some 14,000 burial plots, but fell into disrepair from 1945. It was restored from 2010.
+}}
+
+[[File:St. Peter and St. Paul's Church 2, Vilnius, Lithuania - Diliff.jpg | thumb | 300px | Interior of Saints Peter and Paul Church]]
+* {{see
+| name=Three Crosses Hill | alt= | url= | email=
+| address= | lat=54.6867 | long=25.2975 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=A monument to seven Franciscan friars supposedly beheaded here by pagans, while seven more were crucified then thrown in the river. The story is nonsense, but Lithuania was the last European country to convert to Christianity, and there was indeed conflict. King Mindaugas was baptised in 1250 but the country as whole didn't convert until 1485 when the Duchy united with Poland. Wooden crosses have been erected on the hill since the early 17th century. They needed periodic replacement, until the Tsarists stamped out the practice in 1869. Concrete crosses were built in 1916, got rid of by the Soviets in 1950, and re-built in 1989.
+}}
+
+* {{see
+| name=Old Jewish Cemetery | alt= | url= | email=
+| address= |lat=54.6881 | long=25.3076 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=In use from 1828 to the 1940s - though it was called "New Cemetery" as the first (north of River Neris) was established in the 15th century. The Soviets made sure to destroy both plus the synagogue, so what remains here is a memorial made of old tombstones. A new-new cemetery is now in the northwest district of Šeškinė.
+}}
+
+* {{see
+| name=Church of Saints Peter and Paul | alt= | url= | email=
+| address=Antakalnio 1 | lat=54.6943 | long=25.3062 | directions=trolleybus #2 or #20 from the bus &amp; railway station
+| phone= | tollfree= | fax=
+| hours=Daily 07:00-18:30 | price=
+| wikipedia=Church of St. Peter and St. Paul, Vilnius | image=Lithuania Vilnius St.Peter+St.Paul church.jpg | wikidata=Q1283798 | lastedit=2023-02-09 
+| content=The first church from around 1500 was wooden and burned down, and its successor was wrecked in the 1650s in the war with Russia. The present building was commissioned by Michał Kazimierz Pac (1624-82), begun in 1668 but only completed in 1704 after his death. The exterior is fairly plain, but inside is baroque run riot. 
+}}
+
+* {{see
+| name=Saulės Cemetery | alt= | url= | email=
+| address= | lat=54.695 | long=25.312 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=The 19th century graveyard 500 m east of St Peter &amp; St Paul, tightly packed with the funerary art of the city's notables. It's atmospheric going on unkempt, and the two chapels are in a poor state. Its name means "sunny" but it was only called this from 1945, from the adjacent Saulės gatve.  
+}}
+
+* {{see
+| name=Pushkin Museum | alt= | url= | email=
+| address=Subačiaus 124 | lat=54.6739 | long=25.3255 | directions=Bus 10 or 13 
+| phone=+370 5 260 0415 | tollfree= | fax=
+| hours=W-Su 10:00-18:30 | price=Adult €1.20, child €0.60 
+| lastedit=2023-02-10 
+| content=Alexander Pushkin (1799-1837) was often in exile around the edges of Russia: not here, but his son lived in this mansion. His works were translated into Lithuanian and much of the museum is about that literary task, but it has period decor. 
+}}
+
+* {{see
+| name=Markučiai Park | alt= | url= | email=
+| address= | lat=54.6789 | long=25.3290 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=This green area stretches east of the Pushkin Museum, linking with others such as '''[https://www.pavilniai-verkiai.lt/en/ Pavilnys Regional Park]''' to form a greenbelt between the city and its industrial and commuter suburbs. The parks have bosky walks and are dotted with ancient burial tumuli.
+}}
+
+=== Elsewhere ===
+[[File:Jewish cemetery of Vilnius5.jpg | thumb | 300px | Memorial at the old Jewish Cemetery ]]
+: The city's walls were destroyed around 1800 and it expanded in all directions, absorbing or replacing the hamlets around. This section describes a roughly-clockwise arc from Gate of Dawn through west then north of Old Town.
+
+====Naujamiestis====
+The "new town", right west of the old town
+* {{see
+| name=Railway Museum | alt= | url=https://www.facebook.com/Gelezinkeliu.muziejus/ | email=
+| address=Geležinkelio 16 | lat=54.6700 | long=25.2841 | directions=2nd floor of railway station
+| phone=+370 626 33345 | tollfree=
+| hours=Tu-F 09:00-18:00, Sa 10:00-18:00 | price=€6, card only
+| lastedit=2023-02-07
+| content=Presents the history of railways in Lithuania from Prussian times until today. Railway equipment small enough to fit into a room, tickets, staff uniforms and the like are on display in addition to scale models, pictures and videos. Child-friendly.
+}}
+* {{see
+| name=Franciscan Monastery | alt= | url= | email=
+| address=Trakų 9 | lat=54.67917 | long=25.28079| directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Founded in 1334 and it's their monks who are commemorated by the Three Crosses. It's in shabby condition, but you can access the church daily 07:00-22:30.
+}}
+
+* {{see
+| name=Church of Vytautas the Great | alt= | url= | email=
+| address=Trakų 9 | lat=54.67949 | long=25.28095 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=It's Roman Catholic, redbrick Gothic, dating to 1400 but 19th century in its present form. Also known as the Church of the Assumption.
+}}
+
+* {{see
+| name=Vilna Gaon Jewish State Museum | alt= | url=https://www.jmuseum.lt/en/ | email=
+| address=Naugarduka 10/2 | lat=54.6772 | long=25.2772 | directions=
+| phone=+370 5 231 2357 | tollfree= | hours=M 11:00-18:00, Tu-Th 10:00-18:00, F 10:00-16:00 | price=
+| wikipedia=Vilna Gaon Jewish State Museum 
+| lastedit=2023-02-09
+| content=Early modern Lithuania (like Poland, "White Russia" and Ukraine) had a large Jewish population, as Russia's Jews were encouraged (often violently) to live in the western "Pale of Settlement". Best known is the rabbinical scholar Elijah ben Solomon Zalman (1720-97), the "Vilna Gaon". The museum describes that community, its tribulations and eventual obliteration.
+}}
+* {{see
+| name=MO Museum | alt= | url=https://mo.lt/en/ | email=
+| address=Pylimo 17 | lat=54.6796 | long=25.2774 | directions=
+| phone=+370 609 83764 | tollfree=
+| hours=W-M 10:00-20:00 | price=Adult €11, conc or child €5.50
+| lastedit=2023-02-09
+| content=Museum with modern contemporary art and changing exhibitions.
+}}
+
+* {{see
+| name=Frank Zappa bust | alt= | url= | email=
+| address= | lat=54.6831 | long=25.2759 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Frank Zappa (1940-1993) is commemorated by a bust on Kalinausko gatve. He was never here, but local fans erected it in 1995, donating a replica to [[Baltimore]], Maryland, his childhood home. 
+}}
+
+* {{see
+| name=Church of St Constantine and St Michael | alt= | url=https://kimp.lt/ | email=
+| address=Jono Basanavičiaus 27 | lat=54.6822 | long=25.2685 | directions=
+| phone=+370 650 64599 | tollfree=
+| hours=Daily 07:00-20:00 | price= | wikipedia=Church of St. Constantine and St. Michael 
+| lastedit=2023-02-17 
+| content=This orthodox church was built in 1913 to mark the 300th anniversary of the Romanov dynasty, much good it did them. It's a dinky onion-domed building. 
+}}
+
+* {{see
+| name=Lithuanian Theatre, Music and Cinema Museum | alt= | url=https://ltmkm.lt/en/ | email=
+| address=Vilniaus 41 |lat=54.68130 | long=25.28097 | directions=
+| phone= | tollfree=
+| hours=It's open W-Sa 10:00-18:00, Su 10:00-16:00 | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Has little for non-speakers of Lithuanian, though some exhibits transcend language.
+}}
+
+* {{see
+| name=Money Museum | alt= | url=https://www.pinigumuziejus.lt/ | email=
+| address=Totoriu 2 / 8 | lat=54.6866 | long=25.2826 | directions=within bank 
+| phone=+370 5 659 22966 | tollfree= | fax=
+| hours=Apr-Oct Tu–F 10:00–19:00, Sa 11:00-18:00, Nov-Mar Tu–F 9:00–18:00, Sa 10:00-17:00 | price=Free
+| lastedit=2023-02-09 
+| content=History of money, and collection of coins and bills from around the world. 
+}}
+[[File:Commemoration of January 13 events in Vilnius 2010 (10).jpg | thumb | 300px | Remembering the Soviet brutality of 1991 ]]
+* {{see
+| name=Museum of Occupations and Freedom Fights | alt= | url=http://genocid.lt/muziejus/ | email=
+| address=Aukų 2A | lat=54.6879 | long=25.2706 | directions=
+| phone=+370 5 249 8156 | tollfree= | fax=
+| hours=W-Sa 10:00-18:00, Su 10:00-17:00 | price=Adult €6, child or conc €3 
+| wikipedia=Museum of Occupations and Freedom Fights | wikidata=Q323860
+| lastedit=2023-02-09 
+| content=This is in the former KGB headquarters, where over 1000 were put to death. In spite of the plurals, it is specifically the Lithuanian experience under Soviet rule that is described; the experience under Nazism would reveal a very dark corner of national history. And until 2018, it was called the Museum of Genocide Victims, yet almost entirely omitted the genocide against what had been a large Jewish population. Just one small KGB interrogation cell in the basement describes this, as if 190,000 deaths were a dissident version of history to be beaten into confessing that it didn't exist, never happened. 
+}}
+* {{see
+| name=Church of St Philip and St Jacob | alt=Šv Apaštalų Pilypo ir Jokūbo bažnyčia | url=https://www.dominikonai.lt/| email=
+| address=Vasario 16-osios 11 | lat=54.6907 | long=25.2721 | directions=north edge of Lukiškės Square
+| phone= | tollfree= | hours= | price=
+| wikidata=Q2026142 
+| lastedit=2023-02-09
+| content=Red and white Baroque church of the Dominican order, completed in 1722. It houses a large icon of the Virgin Mary "Hodegetria" - in iconography this means "shows the way" as she points to the infant as the salvation of mankind. &lt;!-- wikipedia in 2022 changed Jacob to James, but he's definitely Jacob --&gt; 
+}}
+* {{see
+| name=Seimas Palace | alt= | url=https://www.lrs.lt/sip/portal.show?p_r=35408&amp;p_k=2 | email=
+| address=Gedimino pr 53 | lat=54.6910 | long=25.2619 | directions=
+| phone= | tollfree= | hours= | price=
+| wikidata=Q3331436
+| lastedit=2023-02-10 
+| content=This complex houses the Lithuanian parliament. The first building, completed in 1980, was the seat of the Lithuanian Soviet Socialist Republic, and looks it. In 2007 the new Parliament Hall (or Building 2) was opened. Building 3 was added to house committees and technical services. Exhibitions in Building 2 are open to the public daily 08:00-17:00, and those in Building 1 on Fridays 11:00-15:00. You can also book a guided tour. 
+}}
+* {{see
+| name=Vingis Park | alt= | url= | email=
+| address= | lat=54.683 | long=25.241| directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Bounds city centre to the west, large and wooded so you could easily lose a small child. It's in a loop of River Neris ("vingis" means bend or curve) and together with other parks north and woodland downriver creates a greenbelt on this side. Enter from the east along Čiurlionio gatve, which spans the busy ring-road: there's a multinational military cemetery by the entrance. The palace has long been demolished - in 1812 it was where Tsar Alexander I learned of Napoleon's invasion, and scarpered with his entourage. The modern amphitheatre west stages rock concerts and other big events.
+}}
+* {{See|name=Church of St Catherine|alt=Šv. Kotrynos bažnyčia|address=Vilniaus g. 30|lat=54.681889|long=25.281064|lastedit=2025-01-17|content=Built in the 18th century in Baroque stlye and dedicated to Saint Catherine of Alexandria, as part of a Benedictine Nunnery.  The church is known for its elegant façade, intricate stucco decorations, but many of its artworks were either lost in WW2 or moved to  the Lithuanian National Museum of Art.|wikidata=Q1984956}}
+
+====Right bank of Neris====
+* {{see
+| name=Vilnius TV tower | alt=TV bokštas | url=http://tvbokstas.lt/en/ | email=
+| address=Sausio 13-osios 10 | lat=54.6871 | long=25.2147 | directions=bus to Laisvės prospekt
+| phone=+370 5 252 5333 | tollfree=
+| hours=Daily 11:00-21:00 | price=Adult €11
+| wikipedia=Vilnius TV Tower
+| lastedit=2023-02-10
+| content=The 326.5 m high telecommunications tower was completed in 1980 and is visible from far and wide. You can ride the lift to the restaurant and observation deck. In 2022 / 23 construction work is under way but the place remains open.
+}}
+* {{see
+| name=Church of Our Lady of the Sign | alt=Ženklas iš dangaus cerkvė | url= | email=
+| address=Vytauto 21 | lat=54.6908 | long=25.2573 | directions=
+| phone= | tollfree= | hours=Saily 09:00-16:30 | price= 
+| wikipedia=Church of Our Lady of the Sign, Vilnius | wikidata=Q2089787
+| lastedit=2023-02-09
+| content=Built in Neo-Byzantine style in 1903, this is the Eastern Orthodox church you see when looking west along Gedimino prospekt. It was financed by fundraising around the Russian Empire. 
+}} 
+* {{see
+| name=New City Centre | alt= | url= | email=
+| address= | lat=54.696 | long=25.280 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=The modern business district, in Šnipiškės north of the river. Its 21st century glass and steel skyscrapers are visible from afar, including the 148 m Europa Tower. 
+}}
+
+* {{see
+| name=Energy and Technology Museum | alt= | url=https://www.etm.lt/en/ | email=
+| address=Rinktinės 2 | lat=54.6900 | long=25.2879 | directions=Bus 33 or 89 
+| phone=+370 5 275 4312 | tollfree=
+| hours=Tu-Su 10.00-18.30 | price=Adult €7, child or conc €3.5
+| wikipedia=Energy and Technology Museum | image=Technikosmuziejus.JPG
+| lastedit=2023-02-09
+| content=This was the city's first power plant, opened in 1903. It exhibits electricity generation, industrial technologies, child-friendly interactions and transformation, the Tesla-inspired wizardry that enables long-distance transmission of electricity. They also have an Escape Room, €50 for 2-4 players. 
+}}
+* {{see
+| name=Suderve Cemetery | alt= | url= | email=
+| address= | lat=54.710 | long=25.232 | directions=in Šeškinė district 4 km north of city centre
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Most of it is Roman Catholic burials but the north end is Jewish, with re-interments from other destroyed cemeteries. These include the scholar Vilna Gaon.
+}}
+
+==== South of the railway====
+* {{see
+| name=Rasos Cemetery | alt= | url= | email=
+| address= | lat=54.669 | long=25.303 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=The main resting place of 20th century notables. It holds the heart of Józef Piłsudski (1867–1935), founder of independent Poland, with the rest of him in Wawel in [[Kraków]]. 
+
+}}
+
+[[File:Open Air Museum of the Centre of Europe - panoramio (2).jpg | thumb | 300px | Museum of the Centre of Europe ]]
+* {{marker | name="Beresnäki" / Paliepiukai point | type=see | lat=54.6344 | long=25.4292 }}: only if you're passing, or hell-bent on taking the shortest possible route between [[Hammerfest]] and [[Odesa]]. In the 19th century [[Struve Geodetic Arc | Struve]] organised an extensive series of cartographic observations along a geodesic - a "Great Circle" arc - to measure the precise size and shape of the earth. The triangulation points weren't in a straight line, but roughly followed longitude 26°43′ East over 2820 km. Some 34 of the original 265 points are now a {{UNESCO}}. This one is a simple marker in a field, with a road nearby.
+
+==== North of Vilnius ==== 
+* {{see
+| name=Museum of the Centre of Europe | alt= | url=https://www.europosparkas.lt/ | email=hq@europosparkas.lt
+| address=Europas Parkas | lat=54.826 | long=25.3533 | directions=
+| phone=+370 5 237 7077 | tollfree=
+| hours=Daily 10:00-18:00 | price=Adult €12, student €11, child €8
+| lastedit=2023-02-10
+| content=Open-air sculpture park. It's within Europas Park, the rest of which is free and open to dusk.
+}}
+* {{marker | name=Verkiai | type=see | lat=54.782 | long=25.330 }} is a village 11 km north of Vilnius and now incorporated into the city: take bus #35 or #36. The extensive Regional Park stretches north along the riverbank. The imposing neoclassical palace was a bishop's residence and is now part of the university, no tours. Verkiai is best known for its Calvary, a reconstruction of the Way of the Cross in Jerusalem. This was established in the 1660s, demolished by the Soviets, and rebuilt in 2002. The Way comprises 22 chapels, 7 wooden and brick gates, and two baroque churches. It's supposed to be a faithful replica, though Jerusalem in 33 AD had few baroque buildings, and you'll struggle to see much resemblance between the bosky River Neris and the brook Kidron.
+
+== Do ==
+[[File:Vilnius University 18.jpg | thumb | 300px | Extracurricular activities at the university]]
+* {{do
+| name=Lithuanian Opera and Ballet Theatre | alt= | url=https://www.opera.lt/ | email=
+| address=A. Vienuolio 1 | lat=54.6893 | long=25.2784 | directions=
+| phone=+370 5 262 0727 | tollfree=
+| hours= | price=
+| lastedit=2023-02-10
+| content=Grand ornate opera house with three or four weekly performances.
+}}
+* {{do
+| name=Oskaras Koršunovas Theatre (OKT) | alt= | url=https://www.okt.lt/en/ | email=
+| address=Ašmenos 8 | lat=54.6779 | long=25.2839 | directions=
+| phone=+370 5 212 2099 | tollfree=
+| hours= | price=
+| lastedit=2023-02-10
+| content=Avant garde theatre southwest edge of Old Town,.
+}}
+* {{do
+| name=Old Theatre of Vilnius | alt= | url=https://www.vsteatras.lt | email=
+| address=Jono Basanavičiaus 13 | lat=54.6808 | long=25.2734 | directions=
+| phone=+370 5 262 7133 | tollfree=
+| hours= | price=
+| lastedit=2023-02-10
+| content=Creaky but atmospheric old theatre with performances mostly in Russian.
+}}
+* '''Football:''' {{marker | name=LFF Stadium | type=do | lat=54.6686 | long=25.2944 }} (capacity 5000) is 500 m east of the railway and bus stations, and hosts the men's national soccer team. It also hosts [https://fkzalgiris.lt/ FK Žalgiris], who play in A Lyga, the country's top tier; the playing season is March-Nov. "Žalgiris" means green field and commemorates the Battle of Grunwald in 1410, when Poland-Lithuania smashed the Teutonic Knights. Also playing here in A Lyga is [http://fkriteriai.lt/ FK Riteriai], who relocated from Trakai in 2019. The stadium is too small for European fixtures and is being rebuilt to hold 8000.
+* {{marker | name=[https://asgarena.lt/lt Avia Solutions Group Arena] | type=do | lat=54.7160 | long=25.2789 }} was Siemens Arena until rebranded in 2020. It's multi-purpose, and capacity varies with event. For basketball (capacity 10,000) it hosts [https://www.rytasvilnius.lt/ Rytas Vilnius], the country's leading team. Other regular events are ice hockey games and rock concerts.
+* {{do
+| name=Lindyhop Klubas | alt= | url=https://www.lindyhop.lt/ | email=info@lindyhop.lt
+| address=Geležinkelio 6 | lat=54.66997 | long=25.28311 | directions=by railway station
+| phone=+370 647 71111 | tollfree=
+| hours=M-F 18:00-21:00, Su 20:00-23:00 | price=
+| lastedit=2023-02-12
+| content=Lindy Hop is a US swing / jazz dance style that evolved from the 1930s and is now enjoying a revival, with clubs and lessons, retro gear optional.
+}}
+* '''Go Karts:''' {{marker | name=Kartlandas Elektrokart | type=do | lat=54.6652 | long=25.2744|url=https://elektrokart.lt/ }} is on Dariaus ir Girėno 500 m west of the railway station. It's a battery-powered kiddy affair. {{marker | name=Plytinės | type=do | lat=54.7255 | long=25.3499
+|url=https://plytineskartodromas.lt/ }} is a full-scale outdoor track 5 km northeast of city centre.
+* '''Hot air balloons''' take to the sky above Vilnius and elsewhere in Lithuania. Operators include [https://oreiviai.lt/ Oreiviai] and [https://hotairballoon.lt/en/ Smile]. In 2023 you might pay €140 per person.
+
+== Learn ==
+* {{listing
+| name=Vilnius University| alt= | url= https://www.vu.lt/en/| email=
+| address=Universiteto g. 3 | lat=54.68278 | long=25.28776 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Has faculties across the city and beyond - there's even one in Kaunas. It has some 3100 academic staff, 13,500 undergrads and 7000 postgrads. It hosts occasional summer schools and short courses suitable for visitors.
+}}
+
+* {{listing
+| name=Vilnius Academy of Arts | alt= | url=https://www.vda.lt/ | email=
+| address=Maironio 6 | lat=54.68376 | long=25.29425 | directions=by St Anne's Church
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=
+}}
+
+* {{listing
+| name=Mykolas Romeris University | alt= | url=https://www.mruni.eu/ | email=
+| address=Ateities g. 20 | lat=54.7340 | long=25.2587 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=Formerly a free-standing law school, has its main campus on Ateities eight km north of city centre. It has 7500 students and 400 academic staff.
+}}
+
+* {{listing
+| name=ISM University of Management and Economics | alt= | url=https://www.ism.lt/ | email=
+| address=Gedimino pr. 7 | lat=54.68688 | long=25.28267 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=A business school.
+}}
+
+* {{listing
+| name=Lingua Lituanica | alt= | url=https://www.lingualit.lt/ | email=
+| address=Gedimino pr 26 |lat=54.68760 | long=25.27575 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2023-04-16
+| content=A language school with small group classes and private sessions.
+}}
+
+== Buy ==
+[[File:Inside Vilnius market hall.jpg | thumb | 300px | Halės turgus ]]
+* '''Money:''' ATMs are very common in Vilnius and most shops accept credit cards. 
+* '''Amber''' was created some 50 million years ago when Baltic conifer forests were flooded, and the tree resin became fossilised into a hard semi-precious stone. Every souvenir shop sells it.
+* '''Supermarket''' chains are [https://www.maxima.lt/ Maxima]{{Dead link|date=December 2023 |bot=InternetArchiveBot }}, [https://www.rimi.lt/ Rimi], [https://www.barbora.lt Barbora], [https://www.iki.lt/ Iki], [http://www.aibe.lt/ Aibė] and [https://www.norfa.lt/ Norfa].
+* {{buy
+| name=Halės turgus | alt= | url=http://www.halesturgaviete.lt/en/ | email=
+| address= | lat=54.6734 | long=25.2864 | directions=
+| phone= | tollfree= | hours=Tu-Sa 07:00-18:00, Su 07:00-16:00 | price= | wikidata=Q11264737
+| lastedit=2023-02-11 
+| content=The main market hall of Vilnius, built in 1906 and looking like a railway terminus. Inside, its east side has food stalls and a couple of eateries. Adjacent is the modern wing for clothing and household wares.
+}}
+* {{buy
+| name=Akropolis | url=https://akropolis.lt/ | email=
+| address=Ozo 25 | lat=54.7104 | long=25.2631 | directions=Šeškinė district 
+| phone=+370 659 23632 | tollfree= | fax=
+| hours=Daily 08:00-23:00 | price= | lastedit=2023-02-12
+| content=Large mall with multiplex cinema and ice rink.
+}}
+* {{buy
+| name=Centro pasažas | alt= | url=https://www.centropasazas.lt/ | email=
+| address=Gedimino pr 16 | lat=54.68675 | long=25.28008 | directions=By Novotel Vilnius Centre on Kudirka sq.
+| phone= | tollfree=
+| hours=M-Sa 10:00-22:00 | price=
+| lastedit=2023-02-12
+| content=Small mall west edge of Old Town.
+}}
+* {{buy
+| name=Europa | alt= | url=https://pceuropa.lt/ | email=info@pceuropa.lt
+| address=Konstitucijos pr 7A | lat=54.6963 | long=25.2768 | directions=Business district
+| phone= | tollfree=
+| hours=Daily 08:00-21:00 | price=
+| lastedit=2023-02-12
+| content=Opened in 2004, when Lithuania joined EU.
+}}
+* {{buy
+| name=GO9 | alt= | url=https://www.go9.lt/ | email=
+| address=Gedimino 9 | lat=54.68707 | long=25.28158 | directions=opposite Novotel and Money Museum
+| phone=+370 655 92550 | tollfree=
+| hours=M-Sa 10:00-20:00, Su 11:00-18:00 | price=
+| lastedit=2023-02-12
+| content=Central mall with a large branch of H&amp;M.
+}}
+* {{buy
+| name=Helios City | alt= | url= | email=
+| address=Savanorių pr 1 | lat=54.6793 | long=25.2579 | directions=
+| phone= | tollfree=
+| hours=Daily 08:00-23:00 | price=
+| lastedit=2023-02-12
+| content=With a branch of Iki.
+}}
+* {{buy
+| name=Ozas | alt= | url=http://ozas.lt/en | email=info@ozas.lt
+| address=Ozo 18 | lat=54.7144 | long=25.2735 | directions=Šeškinė district by sports arena
+| phone=+370 640 15055 | tollfree=
+| hours=Daily 10:00-21:00 | price=
+| lastedit=2023-02-12
+| content=One of the biggest shopping malls in Vilnius, many stores and services plus Multikino cinema.
+}}
+* {{buy
+| name=Panorama | alt= | url=https://www.panorama.lt/ | email=info@panorama.lt
+| address=Saltoniškių 9 | lat=54.7 | long=25.2576 | directions=Saltoniškės district
+| phone=+370 686 39060 | tollfree=
+| hours=Daily 10:00-21:00 | price=
+| lastedit=2023-02-12
+| content=Multi-level centre west of business district.
+}}
+* {{buy
+| name=Outlet Park | alt= | url=https://outletpark.lt/ | email=info@parkasoutlet.lt
+| address=Verkiai 31 | lat=54.7146 | long=25.2978 | directions=Žirmūnai district
+| phone=+370 800 29292 | tollfree=
+| hours=Daily 10:00-20:00 | price=
+| lastedit=2023-02-12
+| content=Shopping mall for discount stores.
+}}
+* {{buy
+| name=CUP | alt= | url=https://cup.lt/lt | email=
+| address=Konstitucijos pr 16 | lat=54.6939 | long=25.2763 | directions=Business district
+| phone=+370 650 38853 | tollfree=
+| hours=Daily 08:00-22:00 | price=
+| lastedit=2023-02-12
+| content=Trading since 1974.
+}}
+* '''Gariunai''' is a huge market 5 km west of the city by the intersection of A1 and A19. It's open Tu-F 06:30-14:00, Sa Su 05:30-16:00. It scores high on quantity, sucks for quality, and traffic is a major problem: you could easily be queuing an hour to enter the site and an hour to exit.
+
+== Eat ==
+[[File:Cepelinai and beer.jpg | thumb | 300px | Cepelinai are stuffed potato dumplings ]]
+
+=== Budget ===
+* {{eat
+| name=Vyno Rūselis | alt= | url= | email=
+| address=Labdarių 2 | lat=54.6850 | long=25.2803 | directions=
+| phone=+370 604 94536 | tollfree=
+| hours=M-F 10:00-17:00 | price=€5.80 mains | lastedit=2025-09-10 
+| content=Traditional from-home Lithuanian lunches. Menu is in Lithuanian only; use your phone to translate.
+}}
+* {{eat 
+| name=Vegafè | url= | email=
+| address=Augustijonų 2-3 | lat=54.6787 | long=25.2897 | directions=
+| phone= | tollfree= | fax=
+| hours= | price= | lastedit=2025-09-10
+| content=Vegan cafe.
+}}
+* {{eat 
+| name=Pilies kepyklėlė | alt= | url=https://www.facebook.com/people/Pilies-kepykl%C4%97l%C4%97/100063645530206/ | email=pilieskepyklele@gmail.com
+| address=Pilies St 19 | lat=54.68295 | long=25.28910| directions=
+| phone=+370 673 18248 | tollfree= | fax=
+| hours=Daily 09:00-21:00 | price= | lastedit=2023-02-10 
+| content=Café-bakery in the university building near Saints John. 
+}}
+* {{eat
+| name=Kamikadzė Japonų virtuvė | alt= | url=https://kamikadze7.com/ | email=
+| address=Klaipėdos 1 | lat=54.6818 | long=25.2783 | directions=
+| phone=+370 675 56242 | tollfree=
+| hours= | price=
+| lastedit=2022-05-01
+| content=Japanese restaurant with the usual offerings.
+}}
+* {{eat
+| name=Plus Plus Plus Gastrobaras | alt= | url=https://www.plusplusplus.lt/ | email=
+| address=Vilniaus 39 | lat=54.68243 | long=25.27970| directions=opposite St Catherine's Church
+| phone=+370 645 17764 | tollfree=
+| hours=Su-W 17:00-00:00, Th 17:00-02:00, F 17:00-04:00, Sa 16:00-04:00 | price=
+| lastedit=2023-02-10
+| content=This is the most central of a fast-food chain.
+}}
+* {{eat
+| name=Dėvėti | alt= | url=https://www.facebook.com/barasdeveti/menu/ | email=
+| address=Sodų 3 | lat=54.6739 | long=25.2844 | directions=
+| phone=+370 607 75964 | tollfree=
+| hours=Su-W 16:00-00:00, Th-Sa 16:00-01:00 | price=
+| lastedit=2023-02-12
+| content=Calls itself a gastropub, more like a bar with pizza and pita bread sandwiches.
+}}
+* {{eat
+| name=RadhaRane | url=http://radharane.lt/vilnius/ | email=
+| address=Gedimino pr 32 | lat=54.6879 | long=25.2742 | directions=
+| phone=+370 614 23332 | tollfree= | fax= | hours=M-Sa 11:00-20:00, Su 12:00-18:00 | price= | lastedit=2023-02-12
+| content=Vegetarian Indian restaurant with a good menu choice. 
+}}
+* {{eat
+| name=Wok to Walk | alt= | url=https://www.woktowalk.com/lt/ | email=
+| address=Vilniaus 19 | lat=54.68606 | long=25.27935 | directions=by Da Antonio, near Novotel
+| phone=+370 655 91919 | tollfree=
+| hours=M-Th 11:00-22:00, F Sa 12:00-15:00, Su 12:00-21:00 | price=
+| lastedit=2023-02-10
+| content=This is the main outlet of an Asian cuisine franchise.
+}}
+* {{eat
+| name=Fėjų kepyklėlė | alt=Little Bakery Of The Fairies | url=http://www.fejukepyklele.lt/ | email=info@fejukepyklele.lt
+| address=Basanavičius 37 | lat=54.6815 | long=25.2655 | directions=corner with Švitrigaila 
+| phone=+370 685 25157 | tollfree= | fax=
+| hours=M-Th 07:30-19:00, F 07:30-18:00 | price= | lastedit=2023-02-10 
+| content=Bakery-cafe with pastries, snacks, pizza and ice cream. It's infested with Lithuanian fairies, which you'll either adore or upchuck over. 
+}}
+* {{eat
+| name=Buga Sotu | url=https://kavinebuga.lt/ | email=valeika@pinsita.eu
+| address=Asanavičiūtė 17 |lat=54.6895 | long=25.2114 | directions=by TV tower
+| phone=+370 5 240 2400 | tollfree= | fax=
+| hours=M-Th 08:00-23:00, F 08:00-01:00, Sa 09:00-01:00, Su 12:00-22:00 | price= | lastedit=2023-02-10 
+| content=Trad food: chicken, dumplings, kibinai, pizzas and carp. Live music on Friday and sometimes on Saturday. You'd most likely eat here if you visited the TV Tower and baulked at their restaurant prices. 
+}}
+
+=== Mid-range ===
+[[File:Church of St. Philip and St. Jacob, Vilnius June 19 2022.jpg | thumb | 300px | Church of St Philip and St Jacob ]] 
+* {{eat
+| name=Amatininkų užeiga | alt= | url=https://www.amatininkai.lt/ | email=
+| address=Didžioji 19/2 | lat=54.67923 | long=25.28710 | directions=Town Hall square
+| phone=+370 687 22366 | tollfree=
+| hours=Daily 11:00–03:00 | price=
+| lastedit=2023-02-11
+| content=Lithuanian and international food.
+}}
+* {{eat
+| name=Cozy | alt= | url=https://www.cozy.lt/ | email=
+| address=Dominikonų 10 | lat=54.6813 | long=25.2851 | directions=
+| phone=+370 5 261 1137 | tollfree=
+| hours=Daily 10:00-01:00 | price=
+| lastedit=2023-02-10
+| content=Well-named place, with laid-back restaurant upstairs, DJ-bar downstairs, serves hearty modern food with a few vegetarian options.
+}}
+* {{eat
+| name=Mint Vinetu | alt= | url=https://www.mintvinetu.com/en | email=
+| address=Šv Ignoto 16/10 | lat=54.68141 | long=25.28495 | directions=behind Cozy 
+| phone=+370 618 20347 | tollfree= | fax=
+| hours=Daily 12:00-20:00 | price=
+| lastedit=2023-02-10 
+| content=Independent bookstore and coffee shop. 
+}}
+* {{eat
+| name=Fortas | alt= | url=http://www.fortas.eu/en/ | email=
+| address=Algirdo 17 | lat=54.6786 | long=25.2704 | directions=
+| phone=+370 65 201138 | tollfree=
+| hours=M-F 09:00-23:00, Sa Su 11:00-23:00 | price=
+| lastedit=2023-02-10
+| content=This is the original of what has become a chain. They do pub-style food with theme days on different nations' cuisines. Other outlets are at Vilniaus 18 in Old Town and Konstitucijos pr 7A north of the river.
+}}
+* {{eat
+| name=Mano Guru | alt= | url=https://www.facebook.com/salotubaras | email=
+| address=Vilniaus 22 | lat=54.68472 | long=25.27963 | directions=next to Vanille Lounge
+| phone=+370 5 212 0126 | tollfree=
+| hours=M-F 10:00-19:00, Sa 10:00-21:00, Su 10:00-17:00 | price=
+| lastedit=2023-02-10
+| content=Mostly vegetarian food, and no alcohol. All the staff are former drug misusers.
+}}
+* {{eat
+| name=Vapiano | alt= | url=https://vapiano.lt/ | email=vilnius1@vapiano.lt
+| address=Ozo 18 | lat=54.7142 | long=25.2727 | directions=within Ozas Shopping Center
+| phone=+370 691 01917 | tollfree=
+| hours=Su-Th 11:00-22:00, F Sa 11:00-23:00 | price=
+| lastedit=2023-02-12
+| content=Italian style, fast casual restaurant (part of the German global chain). Tasty salads, à la carte pastas and pizzas are made in front of the guest.
+}}
+* '''[https://etnodvaras.lt/en/ Etno Dvaras]''' are a chain serving trad food such as ''cepelinai'' and potato pancakes. The two most central are at Aušros Vartų 2 (Gate of Dawn) and Pilies 16 by the university. Rustic interiors, slightly touristy but a good introduction to the local cuisine, and both open from 11:00 to 22:00 or later. 
+* {{eat
+| name=Medininkai | alt= | url=https://medininkairestaurant.lt/ | email=
+| address=Aušros Vartų 8 | lat=54.67574 | long=25.28908 | directions=by Church of Holy Spirit 
+| phone=+370 643 00999 | tollfree=
+| hours=Su-W 11:00-22:00, Th-Sa 11:00-23:00 | price= | lastedit=2023-02-10
+| content=Lithuanian food near Gate of Dawn, it got good reviews to 2022 but now feels tourist-trappy. 
+}}
+* {{eat 
+| name=Sakwa | url=https://www.sakwa.lt/ | email=uzsakymai@sakwa.lt
+| address=M. K. Paco St 1/2, Antakalnis | lat=54.69299 | long=25.30540 | directions=in front of St Peter and St Paul's Church
+| phone=+370 5 215 4562 | tollfree= | fax=
+| hours=Daily 10:00-23:00 | price= | lastedit=2023-02-10 
+| content=Café in a two-storey building, retro-styled like a suburban house. Lithuanian, Polish and European cuisine.
+}}
+* {{eat 
+| name=Fabai | url=http://barasfabai.lt/ | email=info@barasfabai.lt 
+| address=Ateities 21A | lat=54.7344 | long=25.2544 | directions=
+| phone=+370 5 273 6464 | tollfree= | fax=
+| hours=M-Th 11:00-23:00, F 11:00-00:00, Sa 12:00-00:00, Su 12:00-23:00 | price= | lastedit=2023-02-10 
+| content=Vilnius doesn't have much by way of Caucasus cuisine, so it may be worth the trip out to this bar grill - and you'll have to queue at peak times. It's styled like a country tavern, with grillroom, ballroom, bar, and two billiard halls. 
+}}
+* {{eat
+| name=Belmontas Cafe | url=https://www.belmontas.lt/ | email=
+| address=Belmonto 17 | lat=54.6846 | long=25.3575 | directions=5 km east of town in Pavilniai Regional Park
+| phone=+370 686 14656 | tollfree= | fax=
+| hours=Summer | price= | lastedit=2023-02-11
+| content=Folk-themed outdoor restaurant by a 19th century mill and waterfall.
+}}
+
+=== Splurge ===
+
+* {{eat
+| name=Balzac | alt= | url=http://www.balzac.lt/ | email=
+| address=Saviciaus 7 | lat=54.67920 | long=25.28904 | directions=50 m west of Jimmy Jumps
+| phone=+370 614 89223 | tollfree=
+| hours=Su-Th 12:00-23:00, F Sa 12:00-00:00 | price=
+| lastedit=2023-02-11
+| content=Traditional French cuisine, well prepared, great atmosphere.
+}}
+* {{eat
+| name=Bistro 18 | alt= | url=https://www.facebook.com/bistro18/ | email=
+| address=Stiklių 18 | lat=54.68085 | long=25.28529 | directions=50 m north of Stikliai Hotel
+| phone=+370 677 72091 | tollfree=
+| hours=M-Th 11:30-21:00, F 11:30-22:00, Sa 13:00-21:00 | price=
+| lastedit=2023-02-10
+| content=Small restaurant and wine bar with good selection of European cuisine.
+}}
+* {{eat
+| name=Čagino | alt= | url=http://www.cagin.lt  | email=
+| address=Basanavičiaus 11 | lat=54.6804 | long=25.2748 | directions=
+| phone=+370 5 261 5555 | tollfree=
+| hours=Tu W 11:30-22:00, Th-Sa 12:00-00:00 | price=
+| lastedit=2023-02-11
+| content=Named for the architect Nikolai Chagin (1823-1909) who designed several churches in Vilnius and led a revival of the Byzantine style. It's Russian food and their occasional gimmick is dinner in the dark, check ahead for these dates.
+}}
+* {{eat
+| name=Da Antonio | alt= | url=http://www.antonio.lt/ | email=
+| address=Vilniaus 23 | lat=54.6856 | long=25.2793 | directions=
+| phone=+370 5 262 0109 | tollfree=
+| hours=Daily 12:00-23:00 | price=
+| lastedit=2023-02-10
+| content=Excellent upscale Italian food.
+}}
+* {{eat
+| name=La Provence | alt= | url=https://www.facebook.com/RestaurantLaProvenceOfficial | email=zemaiciusmukle@takas.lt
+| address=Vokiečių 22 | lat=54.6795 | long=25.2832 | directions=
+| phone=+370 686 04708 | tollfree=
+| hours=Tu-Sa 15:00-00:00 | price=
+| lastedit=2023-02-11
+| content=Grand French dining in a classic interior.
+}}
+* {{eat
+| name=Lokys | alt= | url=https://www.lokys.lt/ | email=info@lokys.lt
+| address=Stiklių 8 | lat=54.6799 | long=25.2864 | directions=
+| phone=+370 5 262 9046 | tollfree=
+| hours=Daily 12:00-00:00 | price=
+| lastedit=2023-02-10
+| content=Specializes in Lithuanian traditional cuisine and game.
+}}
+* {{eat
+| name=Markus ir Ko | alt= | url=https://www.markusirko.lt/ | email=markusirko@takas.lt
+| address=Antokolskio 11 | lat=54.67999 | long=25.28591 | directions=round corner from Lokys
+| phone=+370 5 262 3185 | tollfree=
+| hours=M-Sa 12:00-23:00, Su 12:00-22:00 | price=
+| lastedit=2023-02-10
+| content=Steakhouse with music.
+}}
+* {{eat
+| name=Vanille Lounge | alt= | url=https://vanillelounge.lt/ | email=info@vanillelounge.lt
+| address=Vilniaus 29 | lat=54.6846 | long=25.2793 | directions=
+| phone=+370 602 22454 | tollfree=
+| hours=Su-Tu 16:00-23:00, W Th 16:00-00:00, F Sa 16:00-02:00 | price=
+| lastedit=2023-02-10
+| content=Upmarket seasonal European fare.
+}}
+
+== Drink ==
+=== Coffee/Tea ===
+* {{drink 
+| name=Kiras | url=https://kiras.lt/en/ | email=labas@kiras.lt
+| address=Totorių 7 | lat=54.6853 | long=25.2821 | directions=
+| phone=+370 673 22563 | tollfree= | fax=
+| hours=M-F 10:00-21:00, Sa Su 11:00-20:00 | price= | lastedit=2024-08-04
+| content=Café in 1970s style, with happy memories of Soviet days: "chaika" a tea-house is a pun on "cheka" the secret police. They have another café at Pylimo 21b.
+}}
+=== Alcohol ===
+[[File:Svyturys Extra cans.jpg | thumb | 300px | Švyturyus Ekstra in cans]]
+* '''Beer:''' the most popular local brand is ''Švyturys'', meaning lighthouse; "Ekstra" is their lager. Other major brands include Kalnapilis, Tauras and Utenos.
+* '''Vodka''' in Lithuanian is ''degtinė''. Popular brands include ''Auksinė'' and ''Gera''. The town distillery doesn't offer tours. 
+* '''Liqueurs''' include ''Midus'' (honey) and ''Trejos Devynerios'' (Three Nines, written as 999).
+* {{drink
+| name=Alaus Namai | alt= | url=https://alausnamai.lt/ | email=
+| address=Goštauto 8 | lat=54.6937 | long=25.2688 | directions=
+| phone=+370 5 260 9637 | tollfree=
+| hours=M-Th 12:00-23:00, F 12:00-00:00, Su 15:00-00:00 | price=
+| lastedit=2023-02-11
+| content=Big saloon offering beer from less-known Lithuanian brands.
+}}
+* {{drink
+| name=Artistai | alt= | url=http://artistai.lt/ | email=info@artistai.lt
+| address=Šv Kazimiero 3 | lat=54.67702 | long=25.28893 | directions=behind Imperial Hotel
+| phone=+370 5 212 1268 | tollfree=
+| hours=M 11:00-00:00, Tu W 11:00-01:00, Th F 11:00-16:00, Sa 12:00-17:00, Su 12:00-00:00 | price=
+| lastedit=2023-02-10
+| content=The large courtyard is a great place to relax and watch the sunset. Friendly service, live music.
+}}
+* {{drink
+| name=Šnekutis | alt= | url=http://jususnekutis.lt/lt/jus-sveikina-snekutis/ | email=
+| address=Šv Mikalojaus 15 | lat=54.67790 | long=25.28254 | directions=behind Museum of Illusions
+| phone=+370 656 99459 | tollfree=
+| hours=Daily 11:00-23:00 | price=
+| lastedit=2023-02-11
+| content=Long-table like a beer hall, with trad beer and food.
+}}
+* {{drink
+| name=BIX | url=http://www.bix.lt/ | email=
+| address=Etmonų 6 | lat=54.6766 | long=25.2869 | directions=
+| phone=+370 5 212 1269 | tollfree= | fax=
+| hours=Su-Tu 11:30-23:00, W Th 11:30-02:00, F Sa 11:30-04:00 | price= | lastedit=2023-02-11 
+| content=Bar founded by BIX rock band. Live rock / metal bands on Friday nights, karaoke on Thursdays, and rock music any time on the dance floor. Surprisingly good food. 
+}}
+* {{drink
+| name=Soho Club | alt= | url=https://www.sohoclub.lt/ | email=
+| address=Švitrigailos 7 | lat=54.6788 | long=25.2667 | directions=
+| phone=+370 699 39567 | tollfree=
+| hours=F, Sa 22:00-07:00 | price=
+| lastedit=2023-02-12
+| content=LGBT club, gets very crowded.
+}}
+
+== Sleep ==
+[[Image:Vilnius01.jpg | thumb | 300px | Town Hall square ]]
+=== Budget ===
+
+==== Hostels ====
+
+* {{sleep
+| name=Filaretai Hostel | alt= | url=https://www.filaretaihostel.lt/ | email=info@filaretaihostel.lt
+| address=Filaretų 17, Užupis | lat=54.6843 | long=25.3059 | directions=Bus 34 to Filaretai
+| phone=+370 686 555 89 | tollfree=
+| checkin= | checkout= | price=Dorm €33 ppn
+| lastedit=2023-02-07
+| content=Chilled out place in "Republic of Užupis". Self-service kitchen, washing machine, WiFi sitting-room with free computers and TV.
+}}
+* {{sleep
+| name=Jimmy Jumps House | alt= | url=https://www.facebook.com/jimmyjumps.house | email=jimmyjumpshouse@gmail.com
+| address=Savičiaus 12 | lat=54.6794 | long=25.2898 | directions=
+| phone=+370 5 231 3847 | tollfree=
+| checkin= | checkout= | price=Dorm beds from ~€18, privates from ~€40
+| lastedit=2025-01-04
+| content=Friendly, well-run hostel with 4, 6 and 8-bedded dorms, as well as "twin rooms" with single bunk beds for two people.
+}}
+* {{sleep
+| name=Pogo Hostel | alt= | url=https://www.pogo.lt/ | email=hostel@pogo.lt
+| address=B. Radvilaitė 3 | lat=54.6847 | long=25.291 | directions=by cathedral
+| phone=+370 684 67060 | tollfree=
+| checkin= | checkout= | price=Dorm €20 ppn
+| lastedit=2023-02-07
+| content=Good value hostel in a great location, helpful staff. Four dorms of 6 beds and two private rooms.
+}}
+
+==== Hotels ====
+
+* {{sleep
+| name=City Hotel Algirdas | alt= | url=http://www.cityhotels.lt/algirdas/ | email=algirdas@cityhotels.lt
+| address=Algirdo 24 | lat=54.6764 | long=25.2717 | directions=
+| phone=+370 5 232 6650 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €50
+| lastedit=2023-02-07
+| content=Simple Scandinavian style hotel in the centre.
+}}
+* {{sleep
+| name=Domus Maria | alt= | url=https://domusmaria.com/ | email=info@domusmaria.com
+| address=Aušros vartų 12 | lat=54.6748 | long=25.2903 | directions=
+| phone=+370 5 264 4880 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €60
+| lastedit=2023-02-07
+| content=Secluded 48-room hotel within a former Carmelite convent, you sleep in the nuns' cells.
+}}
+* {{sleep
+| name=Ibis Vilnius Centre | alt= | url=https://all.accor.com/hotel/A1J1/index.en.shtml | email=
+| address=Rinktinės 18 | lat=54.6941 | long=25.2881 | directions=
+| phone=+370 5 265 8100 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €60 
+| lastedit=2023-02-07
+| content=Standard boxy Ibis 500 m north of Cathedral Square, clean and good value. 
+}}
+* {{sleep
+| name=Holiday Inn | alt= | url=https://www.ihg.com/holidayinn/hotels/gb/en/vilnius/vnosy/hoteldetail | email=
+| address=Šeimyniškių 1 | lat=54.6943 | long=25.2825 | directions=
+| phone=+370 5 210 3000 | tollfree=
+| checkin= | checkout= | price=Double (room only) €60 
+| lastedit=2023-02-10 
+| content=Clean modern chain hotel in Business District. 
+}}
+
+=== Mid-range ===
+* {{sleep
+| name=Congress | alt= | url=https://www.congress.lt/ | email=
+| address=Vilniaus 2 | lat=54.6906 | long=25.2803 | directions=
+| phone=+370 5 269 1919 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €90 
+| lastedit=2023-02-10 
+| content=Older hotel by riverside, friendly and comfy, some street noise. 
+}}
+* {{sleep
+| name=Courtyard by Marriott | alt= | url=https://www.marriott.com/en-us/hotels/vnocy-courtyard-vilnius-city-center/overview/ | email=
+| address=Rinktinės 3 | lat=54.69265 | long=25.28943 | directions=50 m south of Ibis 
+| phone=+370 5 207 0707 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €100 
+| lastedit=2023-02-08
+| content=Reliable mid-price chain hotel. 12-room hotel. 
+}}
+* {{sleep
+| name=Vilnius City Hotel | alt=formerly Europolis | url=https://www.vilniuscityhotel.com/ | email=
+| address=Švitrigailos 11D | lat=54.6753 | long=25.2679 | directions=
+| phone=+370 689 87777 | tollfree= | fax=+370 5 2150410
+| checkin= | checkout= | price=B&amp;B double €50
+| lastedit=2023-02-07
+| content=Simple 26-room hotel with free parking, some fittings in need of repair.
+}}
+* {{sleep
+| name=Ratonda Centrum Hotels | alt= | url=https://ratonda.centrumhotels.com/ | email=ratonda@centrumhotels.com
+| address=Gedimino pr 52/1 | lat=54.6894 | long=25.2655 | directions=
+| phone=+370 5 212 0670 | tollfree=
+| checkin= | checkout= | price=Double (room only) €65
+| lastedit=2023-02-07
+| content=43-room hotel with sauna, fitness centre and meeting rooms, close to parliament.
+}}
+* {{sleep
+| name=Hilton Garden Inn | alt= | url=https://www.hilton.com/en/hotels/vnogigi-hilton-garden-inn-vilnius-city-centre/ | email=
+| address=Gedimino pr 44 | lat=54.68861 | long=25.26708 | directions=east side of Ratondo Centrum 
+| phone=+370 5 229 9400 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €110 
+| lastedit=2023-02-10 
+| content=Modern glassy place, clean and comfy.
+}}
+* {{sleep
+| name=Best Western | alt= | url=https://www.bestwestern.co.uk/hotels/best-western-vilnius-91401 | email=
+| address=Konstitucijos pr 14 | lat=54.69438 | long=25.27811 | directions=east side of Radisson Blu Lietuva 
+| phone=+370 5 273 9595 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €85 
+| lastedit=2023-02-10 
+| content=Great value mid-price hotel near Parliament.
+}}
+
+=== Splurge ===
+[[File:Kempinski Vilnius by Augustas Didzgalvis.jpg | thumb | 300px | Grand Hotel Kempinski ]]
+* {{sleep
+| name=Grand Hotel Kempinski | alt= | url=https://www.kempinski.com/en/grand-hotel-kempinski | email=
+| address=Universiteto 14 | lat=54.6848 | long=25.2856 | directions=opposite cathedral 
+| phone=+370 5 220 1100 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €210 
+| lastedit=2023-02-07
+| content=Now you've arrived. Stylish, mostly modern interior with 96 rooms, spa, restaurant and conference facilities.
+}}
+* {{sleep
+| name=Mabre Residence Hotel | alt= | url=https://www.mabre.lt/ | email=mabre@mabre.lt
+| address=Maironio 13 | lat=54.6815 | long=25.2920 | directions=
+| phone=+370 655 02845 | tollfree=
+| checkin= | checkout= | price=
+| lastedit=2023-02-07
+| content=This 40-room hotel is in a neoclassical Orthodox Monastery, dating back 500 years but rebuilt in 1995. High walls give it an exclusive feel. Sauna, fitness center, and pool. Some guests found rooms poky and mediocre quality.
+}}
+* {{sleep
+| name=Novotel Vilnius Centre | alt= | url=https://all.accor.com/hotel/5209/index.en.shtml | email=H5209@accor.com
+| address=Gedimino pr 16 | lat=54.6869 | long=25.2799 | directions=
+| phone=+370 5 266 6200 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €100
+| lastedit=2023-02-07
+| content=Modern 159-room hotel, clean and spacious, close to Opera House and Cathedral square.
+}}
+* {{sleep
+| name=Radisson Blu Royal Astorija Hotel | alt= | url=https://www.radissonhotels.com/en-us/hotels/radisson-collection-vilnius-astorija | email=sales.vilnius@radissonblu.com
+| address=Didzioji 35/2 | lat=54.6775 | long=25.2872 | directions=opposite town square
+| phone=+370 5 212 0110 | tollfree=
+| checkin= | checkout= | price=Double (room only) €180
+| lastedit=2023-02-07
+| content=Splendid place in the heart of old town, US President George W Bush and Britain's Prince Charles (now king) have enjoyed the great service offered here.
+}}
+* {{sleep
+| name=Radisson Blu Hotel Lietuva | alt=formerly Reval Hotel Lietuva | url=https://www.radissonhotels.com/en-us/hotels/radisson-blu-vilnius-lietuva
+| email=info.lietuva.vilnius@radissonblu.com
+| address=Konstitucijos pr 20 | lat=54.6952 | long=25.2749 | directions=
+| phone=+ 370 5 272 6272 | tollfree=
+| checkin= | checkout= | price=Double (room only) €100
+| lastedit=2023-02-07
+| content=High-rise by the river with 291 rooms and conference facilities, great reviews. The even-numbered rooms have views over old town, also from the top-floor Skybar.
+}}
+* {{sleep
+| name=Narutis Hotel | alt= | url=https://narutis.com/ | email=
+| address=Pilies 24 | lat=54.68242 | long=25.28941 | directions=by House of Signatories
+| phone=+370 614 43849 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €140
+| lastedit=2023-02-10
+| content=Stylish upmarket place by the university. The restaurant gets good reviews.
+}}
+* {{sleep
+| name=Imperial Hotel | alt=formerly Ramada | url=https://www.imperialvilnius.lt/ | email=
+| address=Subačiaus 2 | lat=54.6767 | long=25.2887 | directions=
+| phone=+370 5 255 3355 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €150
+| lastedit=2023-02-07
+| content=This has left the Ramada chain and gone upmarket. Good scores for comfort and dining.
+}}
+* {{sleep
+| name=Stikliai Hotel | alt= | url=https://www.stikliai.com/ | email=
+| address=Gaono 7 | lat=54.6805 | long=25.2861 | directions=
+| phone=+370 5 264 9595 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €180
+| lastedit=2023-02-09
+| content="Stikliai" means glasses and it's in an old glassworks, charmingly converted, and now part of Relais &amp; Chateaux group. 
+}}
+* {{sleep
+| name=Neringa Hotel | alt= | url=https://neringavilnius.com/ | email=book@neringahotels.com
+| address=Gedimino pr 23 | lat=54.6879 | long=25.276 | directions=
+| phone=+370 5 268 1910 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €110
+| lastedit=2023-02-07
+| content=Slick 60-room hotel with sauna, fitness centre, wi-fi, pool, bar. Some street noise.
+}}
+* {{sleep
+| name=Shakespeare Hotel | alt=Šekspyras viesbutis | url=http://www.shakespeare.lt/ | email=info@shakespeare.lt
+| address=Bernardinu 8/8 | lat=54.6836 | long=25.2918 | directions=
+| phone=+370 5 266 5885 | tollfree=
+| checkin= | checkout= | price=B&amp;B double €165
+| lastedit=2023-02-07
+| content=Charming 31-room English country-style hotel. Rooms are named after famous writers - he's called Šekspyras in Lithuanian.
+}}
+* {{sleep
+| name=Park Inn by Radisson Vilnius Airport Hotel | alt= | url=https://www.radissonhotels.com/en-us/hotels/park-inn-vilnius-airport-business-center | email=info.vilnius@parkinn.com
+| address=Oreiviu 32 | lat=54.6469 | long=25.277 | directions=500 m north of airport
+| phone=+370 5 240 0055 | tollfree=
+| checkin= | checkout= | price=Double (room only) €80
+| lastedit=2023-02-07
+| content=Modern place with 120 rooms, Italian restaurant and fitness centre. It's just ten minutes walk to the airport terminal.
+}}
+
+== Connect ==
+[[File:Kalvarijos 4.jpg | thumb | 300px | Station on Verkiai Calvary ]]
+As of Aug 2023, Vilnius and its approach highways have 4G from Bite, and 5G from Tele2 and Telia. 
+
+Wi-fi is widely available in public places in the city.
+
+== Stay safe ==
+If you are a person of colour, you may get weird looks or otherwise be looked down upon from the locals.
+===Emergency numbers===
+* {{listing
+| name=Police |alt=Emergency only | phone=112
+| content=If you are unsure which emergency number to call, 112 is the central for all such rescue services and will put you in contact with the correct department.
+}}
+* {{listing
+| name=Police |alt=Emergency only | phone=03
+| content=Phone number analogous to 112.
+}}
+* {{listing
+| name=Fire | alt=Emergency only
+| phone=01
+}}
+* {{listing
+| name=''Emergency'' Medical Services | alt=Ambulance | phone=03
+}}
+
+===Crime===
+
+Vilnius is a relatively '''safe''' city, but use common precautions like safeguarding valuables and not flashing them in the public. It is advised to not stay in the central parts of the city, as well as the railway and bus station areas at night, as crime is more likely to occur around these areas.
+
+== Cope ==
+=== Medical ===
+Always check with your accommodation: they'll know which pharmacies are open late, and which number to call for medical care. This is likely to be the Centro Poliklinika (+370 5 244 2244 / 265 8564), which is open 24/7. 
+
+=== Embassies ===
+For a full list see [https://www.embassypages.com/lithuania Embassy Pages]. 
+
+* {{flag|China}} {{listing
+| name=China | alt= Office of the Chargé d'Affaires | url=http://lt.china-office.gov.cn/eng/ | email=chinaemb_lt@mfa.gov.cn
+| address=Algirdo G-36 | lat= | long= | directions=
+| phone=+370 5 216 2861 | tollfree= | fax= +370 5 216 2682
+| hours= | price= | lastedit=2024-02-03
+| content=
+}}
+* {{flag|Finland}} {{listing
+| name=Finland | url=http://www.finland.lt| email=sanomat.vil@formin.fi
+| address=K. Kalinausko 24, 2nd floor | lat= | long= | directions=
+| phone=+370 5 266 8010 | tollfree= | fax=
+| hours= | price= | lastedit=2023-02-11 
+| content=
+}}
+* {{flag|Georgia}} {{listing
+| name=Georgia | alt= | url= | email=
+| address=Algirdo 4 | lat= | long= | directions=
+| phone=+370 5 273 6959 | tollfree= | fax=
+| hours= | price= | lastedit=2023-02-11  
+| content=
+}}
+* {{flag|Germany}} {{listing
+| name=Germany | alt= | url=https://wilna.diplo.de/ | email=info@wilna.diplo.de
+| address=Z. Sierakausko 24 | lat= | long= | directions=
+| phone=+370 5 210 6400 | tollfree= | fax=
+| hours= | price= | lastedit=2023-02-11  
+| content=
+}}
+* {{flag|Greece}} {{listing
+| name=Greece | alt= | url=https://www.mfa.gr/missionsabroad/en/lithuania.html | email=gremb.vil@mfa.gr
+| address=Rudninku 2 | lat= | long= | directions=
+| phone=+370 5 261 0526 | tollfree= | fax=
+| hours= | price=  | lastedit=2023-02-11  
+| content=
+}}
+* {{flag|Japan}} {{listing
+| name=Japan | url=https://www.lt.emb-japan.go.jp/ | email=
+| address=M. K. Ciurlionio 82 | lat= | long= | directions=
+| phone=+370 5 231 0462 | tollfree= | fax=
+| hours= | price= | lastedit=2023-02-11  
+| content=
+}}
+* {{flag|Romania}} {{listing
+| name=Romania | alt= | url=https://vilnius.mae.ro/ | email=vilnius@mae.ro
+| address=Gaono 6 | lat= | long= | directions=
+| phone=+370 5 231 0557 | tollfree=
+| hours= | price= | lastedit=2023-02-11 
+| content=Also acts as the Romanian embassy for Latvia.
+}}
+* {{flag|Spain}} {{listing
+| name=Spain | url=https://www.exteriores.gob.es/Embajadas/vilnius/es/Paginas/index.aspx | email=
+| address=Gedimino 35 | lat= | long= | directions=
+| phone=+370 5 231 3961 | tollfree= | fax=
+| hours=M-F 09:30-15:30 | price= | lastedit=2023-02-11 
+| content=
+}}
+* {{flag|United Kingdom}} {{listing
+| name=United Kingdom | url=https://www.gov.uk/world/organisations/british-embassy-vilnius | email=
+| address=Antakalnio 2 | lat= | long= | directions=
+| phone=+370 5 246 2900 | tollfree= | fax=
+| hours= | price= | lastedit=2023-02-11 
+| content=
+}}
+* {{flag|United States}} {{listing
+| name=United States | url=https://lt.usembassy.gov/ | email=WebEmailVilnius@state.gov
+| address=Akmenų 6 | lat= | long= | directions=
+| phone=+370 5 266 5500 | tollfree= | fax=
+| hours= | price= | lastedit=2023-02-11 
+| content=
+}}
+
+== Go next ==
+
+: Transport routes radiate from Vilnius. Within an hour's travel: 
+* [[Trakai]] 30 km west has two castles amid scenic lakes.
+* Purnuškės 25 km north is one of the claimants to be the geographical centre of Europe. 
+* [[Kernavė]] 35 km northwest was medieval capital of Lithuania, and is a {{UNESCO}} for its ancient mounds. 
+* [[Kaunas]] 100 km west is the second largest city, and mostly modern but with a small Old Town. 
+
+
+{{geo|54.6833|25.2833}}
+{{guidecity}}
+{{IsPartOf|Dzūkija}}</text>
+      <sha1>t9cllea6fu462sowm6wyxn5mrc55mwu</sha1>
+    </revision>
+  </page>
+</mediawiki>

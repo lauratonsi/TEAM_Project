@@ -1,0 +1,1623 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikivoyage</sitename>
+    <dbname>enwikivoyage</dbname>
+    <base>https://en.wikivoyage.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.46.0-wmf.24</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikivoyage</namespace>
+      <namespace key="5" case="first-letter">Wikivoyage talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1728" case="first-letter">Event</namespace>
+      <namespace key="1729" case="first-letter">Event talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Budapest</title>
+    <ns>0</ns>
+    <id>4964</id>
+    <revision>
+      <id>5261647</id>
+      <parentid>5250325</parentid>
+      <timestamp>2026-04-16T06:30:02Z</timestamp>
+      <contributor>
+        <username>DaGizza</username>
+        <id>162256</id>
+      </contributor>
+      <comment>/* Day tours */ Updated listing for [[Visegrád]]</comment>
+      <origin>5261647</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="160442" sha1="hkdptrjf3l0mi5esommi0h3dyv01ygu" xml:space="preserve">{{pagebanner|Budapest banner.jpg|dotm=yes|unesco_whs=yes|origin=-0.6,0|unesco_cc=yes}}
+{{printDistricts}}
+
+'''Budapest''' is the capital city of [[Hungary]]. With a unique, youthful atmosphere, world-class classical music scene, a pulsating nightlife increasingly appreciated among European youth, and last but not least, an exceptional offer of natural thermal baths, Budapest is one of Europe's most delightful and enjoyable cities. Due to the exceedingly scenic setting, and its architecture it is nicknamed "Paris of the East".
+
+The modern-day Budapest results from the amalgamation of two historic cities lying right opposite each other over the Danube river. Buda is the western (right) bank side, with the high hill atop which the Buda castle sits. Pest is the relatively flat eastern (left) bank side, with the Parliament, numerous other stately buildings, and busy streets retaining all their 19th century architectural heritage.
+
+In 1987 Budapest was added to the {{UNESCO}} for the cultural and architectural significance of the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue.
+
+==Districts==
+Although Budapest is administratively divided into 23 numbered districts (always written in Roman numerals) it is colloquially often divided into parts, roughly corresponding to the two major cities of Buda and Pest, which it comprises.
+
+Listings of particular points of interests - museums, historic monuments, restaurants, bars, hotels, shopping opportunities and such - can be found in the following articles:
+
+{{Mapframe|47.482|19.130|zoom=11|width=600|height=600|show=mask,go}}
+{{mapshape|type=page|wikicommons=Budapest Districts.map}}
+{{mapshape|type=page|wikicommons=Budapest Metro.map}}
+
+===Inner city===
+{{Regionlist
+| region1name=[[Budapest/Budavár|Budavár]] (Buda Castle)
+| region1color={{StdColor|T1}}
+| region1items=Inner part of District I
+| region1description=The oldest part of the city containing the Castle and some of Budapest's best-known attractions such as Fishermen’s Bastion, the Labyrinth and Mathias Church. All areas are part of the {{UNESCO}}.
+
+| region2name=[[Budapest/Víziváros|Víziváros]] (Water Town)
+| region2color={{StdColor|T2}}
+| region2items=Outer part of District I
+| region2description=The Danube bank including the Castle Bazaar and Rudas Thermal Bath is part of the {{UNESCO}}.
+
+| region3name=[[Budapest/Belváros|Belváros]] (Inner City)
+| region3color={{StdColor|T3}}
+| region3items=District V
+| region3description=The highlight of this area is the Parlament, the Saint Stephen (István) Basilica and the Promenad (Corso) with beautiful views of the Danube and to the Castle Hill. All area is part of the {{UNESCO}}.
+
+| region4name=[[Budapest/Terézváros|Terézváros]] (Theresa Town)
+| region4color={{StdColor|T4}}
+| region4items=District VI
+| region4description=Historical districts full of monumental buildings, museums, luxury shops along Andrassy Avenue are part of the {{UNESCO}}. Most theatres and accommodation are here.
+
+| region5name=[[Budapest/Erzsébetváros|Erzsébetváros]] (Elizabeth Town)
+| region5color={{StdColor|T5}}
+| region5items=District VII
+| region5description=Here is the Jewish Quarter.
+
+| region6name=[[Budapest/Józsefváros|Józsefváros]] (Joseph Town)
+| region6color={{StdColor|T6}}
+| region6items=District VIII
+| region6description=Here is the Palace Quarter with many historical buildings including the Hungarian National Museum.
+
+| region7name=[[Budapest/Ferencváros|Ferencváros]] (Francis Town)
+| region7color={{StdColor|T7}}
+| region7items=District IX
+| region7description=Important buildings and museums like the Great Market Hall (Nagyvásárcsarnok) and the National Theatre.
+}}
+
+===Outer Buda===
+{{Regionlist
+| region1name=[[Budapest/South Buda|South Buda]]
+| region1color={{StdColor|T8}}
+| region1items=Districts XI and XXII
+| region1description=The south part has famous wine cellars. The Gellért Hill Nature Preserve Area with citadel and the beautiful Gellért Bath are part of the {{UNESCO}}.
+
+| region2name=[[Budapest/Hegyvidék|Hegyvidék]] (Highlands)
+| region2color={{StdColor|T9}}
+| region2items=District XII
+| region2description=The greenest part of Budapest. Many hiking, trekking, mountain biking possibility.
+
+| region3name=[[Budapest/North Buda|North Buda]]
+| region3color={{StdColor|T10}}
+| region3items=District II
+| region3description=
+
+| region4name=[[Budapest/Óbuda|Óbuda]] (Old Buda)
+| region4color={{StdColor|T11}}
+| region4items=Southern part of District III
+| region4description=The third, smaller town before the unification to the north with museums and a small historical center.
+
+| region5name=[[Budapest/Aquincum|Aquincum]]
+| region5color={{StdColor|T1}}
+| region5items=Northern part of District III
+| region5description=A great place for archaeology, water sport and recreation.
+
+| region6name=[[Budapest/Csepel|Csepel]]
+| region6color={{StdColor|T5}}
+| region6items=District XXI
+| region6description=
+}}
+
+===Outer Pest===
+{{Regionlist
+| region1name=[[Budapest/Angyalföld|Angyalföld]]
+| region1color={{StdColor|T8}}
+| region1items=District XIII
+| region1description=Famous for its contemporary art galleries, and '''Margaret Island''', the green oasis in the middle of the city.
+
+| region2name=[[Budapest/Városliget|Városliget]] (City Park)
+| region2color={{StdColor|T9}}
+| region2items=Western part of District XIV
+| region2description=Here is the Heroes Square with museums, and a 1:1 copy of a Transylvanian Castle-Palace called Vajdahunyad vára. All these are part of the {{UNESCO}}.
+
+| region3name=[[Budapest/Zugló|Zugló]]
+| region3color={{StdColor|T10}}
+| region3items=Eastern part of District XIV
+| region3description=
+
+| region4name=[[Budapest/Kőbánya|Kőbánya]]
+| region4color={{StdColor|T11}}
+| region4items=District X
+| region4description=
+
+| region5name=[[Budapest/North Pest|North Pest]]
+| region5color={{StdColor|T2}}
+| region5items=Districts IV and XV
+| region5description=A very few old building, some country town feeling, a good starting point for exploring northern Pest County and the Danube Bend by car, train or bus.
+
+| region6name=[[Budapest/East Pest|East Pest]]
+| region6color={{StdColor|T3}}
+| region6items=Districts XVI and XVII
+| region6description=
+
+| region7name=[[Budapest/South Pest|South Pest]]
+| region7color={{StdColor|T4}}
+| region7items=Districts XVIII, XIX, XX and XXIII
+| region7description=Includes Kispest, Pesterzsébet, Pestszentlőrinc, Pestszentimre, Soroksár.
+}}
+
+Of course, quarters often offer their own atmosphere due to their history and inhabitants. Roughly speaking, areas near to, especially inside of '''Nagykörút''' (Great Boulevard or Ringroad, served by Tram 4 and Tram 6) are considered central, even if some of these are in less than perfect condition and not typically frequented by tourists. In Pest, '''Kiskörút''' (Small Boulevard) is traditionally considered as the border of the centre proper, including some highly touristed areas.
+[[File:Parliament, Budapest, Hungary.jpg|thumb|The Hungarian national parliament]]
+
+Informally, quarters are known under their own historical name which are often referred to by the locals. The names are often linked to members of the House of Hapsburg or - in fringe areas - the names of villages or towns which later became part of Budapest. Particularly interesting quarters are '''Belváros''' (Inner City) and '''Lipótváros''' (Leopold Town), together form the '''[[Budapest/Belváros|Belváros]]''' district (a bit confusing but usually the biggest or oldest quarter gave its name to the entire district), the heart of Pest, including a number of major sights but also beautiful squares and cafés. With the Parliament, a number of ministries and banking houses, Lipótváros is also a major political and business centre of the country. The name refers to the Hapsburg Emperor Leopold I whose coronation to the King of Hungary in 1790 gave rise to the name of the then-new quarter.
+
+'''Újlipótváros''' (New Leopold Town) The inner part of the XIII. district (so called Angyalföld), just outside of the Great Boulevard north of Leopold Town with the marvellous Margaret Bridge at its corner, was built between the 1910s and 1930s. It is considered as one of the finest residential areas in Budapest with a relaxed, inviting atmosphere and a number of restaurants, cafés and small shops. It also comprises the Vígszínház (Comedy Theatre) and a few tiny off-mainstream cinemas. The quarter is traditionally home to a population with Jewish background as the activity of people such as Raoul Wallenberg, Giorgio Perlasca, and Carl Lutz was linked to this area (see history).
+
+'''Terézváros''' (Theresa Town) VI. district. Among others, it contains Nyugati pu. (Western Railway Station), an architectural sight, and areas neighbouring districts V. and XIII. The then-developing quarter was named after a visit of Habsburg Empress and Queen Maria Theresa in 1777.
+
+'''Erzsébetváros''' (Elisabeth Town) VII. District. While parts of it are not yet renovated, it contains the famous Synagogue in the Dohány street. The quarter was split off from Terézváros and asked for permission to be named after the wife of Franz-Josef I, popularly called ''Sisi'', in 1882.
+
+==Understand==
+
+===History===
+====Antiquity====
+The first settlement on the territory of Budapest is accounted to Celtic tribes. During the first century CE, the Roman fortification on the territory of present-day Óbuda (now part of Budapest) gradually developed into the town of '''Aquincum''' which became the capital city of the province of Lower Pannonia in 106CE. The [[Roman Empire|Romans]] founded a fortress known as '''Contra Aquincum''' on the other side of the river which is assumed to have developed into the later town of Pest. This was part of the Limes, marking the eastern border of the empire, and was gradually given up by Rome during the early fourth century, becoming part of the Hun empire for a few decades. The Huns were a confederation of various nomadic nations and tribes inhabiting the Eurasian steppe, and not Magyars, but Attila, the King of the Huns, is considered a national hero and Attila is a common given name in Hungary.
+
+====Early Middle Ages====
+Once the horse-riding Magyar (Hungarian) tribes arrived in the Carpathian Basin in 896CE, Óbuda served as the seat of the Magyar high-chieftain (or prince) Árpád. After a century marked by frequent raids on Christian western Europe, the erstwhile Hungarian prince Géza realised that converting to Christianity was the key to survival in Europe. The Christian '''Kingdom of Hungary''' was founded by the crowning of his son, '''Szt. István''' (Saint Stephen) on 1 January 1001 (or possibly Christmas Day of 1000). As visitors will quickly realise, Saint Stephen became an omnipresent national symbol, as did the artefact known as '''Saint Stephen's Crown''' (the Holy Crown of Hungary) which was regarded as a legal entity that was by law equivalent to the country itself during medieval times. It is still unclear whether the millennium-old crown used in this function for many centuries and shown in the Parliament today, was used by Saint Stephen.
+
+In the following centuries, Buda emerged as the most important royal seat. In 1241/42 the Mongol Empire conquered the territory along with large parts of Europe - this short but devastating conquest of the country is still remembered as '''Tatárjárás''' - the name reflecting the erroneous confusion of Mongols and Tatars at the time. Medieval Hungary reached its zenith under '''King Matthias''' (Matthias Corvinus), the vividly remembered Renaissance ruler whose patronage of arts and sciences made Hungary, a notable power at the time, the first European country to adopt the Renaissance from Italy. However, after residing in Buda for decades, he moved his seat to Vienna in 1485 for the last five years of his life after defeating the Hapsburg Holy Roman Emperor Frederick III.
+
+In 1541, Buda and Pest fell to the [[Ottoman Empire]] and were taken back 1686, when the '''Hapsburg Empire''' centred in Austria conquered the country on its way to becoming a major European power. Marks of these two cultures are still part of everyday life in Budapest.
+
+==== The 19th-century - formation of Austria-Hungary and Budapest ====
+After the anti-Hapsburg revolution in 1848–49 (defeated through the decisive help of the Russian Czar) the 1867 '''Compromise''' (Kiegyezés) with a weakened Vienna made Buda the capital of a near-autonomous Hungary, a large, multi-ethnic kingdom comprising half of the newly created Dual Monarchy of [[Austria-Hungary]]. In this peculiar double-state the monarch was Emperor of Austria and King of Hungary, two autonomous realms.
+
+The following half century marked by peaceful development counts among the most successful times in the history of the country and its capital. With the 1873 '''unification of Buda, Pest, and Óbuda''', the city of Budapest was created. It saw a leap in terms of industrialisation, urbanisation, population, and the development of a capitalistic society. It even aimed at rivalling with Vienna, the '''Millennium''' in 1896, marking a thousand years of Hungary, offered the perfect excuse for large-scale projects such as the Parliament, Vajdahunyad Castle, or the Grand Boulevard (Nagykörút) the '''first electric underground railway in the world''' (now Metro yellow line). Budapest was transformed to a world city during these decades, enriched by Austrian, Jewish, Slovakian, Serbian, Croatian, Roma and other cultural influence. This age is remembered as the 'Monarchia' (or as 'K. u. K.', abbreviation for Imperial-Royal in Austria and other parts of the Empire) and associated with the rule of '''Franz Joseph I.''' (I. Ferenc József) who died in 1916 after 68 years on the throne.
+
+In this period, the city was the home of two '''world-famous Hungarian inventors''' -- the father of the electric locomotive, Kálmán Kandó, and inventor of the match, János Irinyi -- and of two renowned composers, Béla Bartók and Zoltán Kodály. There is no other European city which had given so many [[Hollywood]] filmmakers in the early 20th century, such as Budapest.
+
+==== The world wars ====
+Neither the Habsburg empire nor Hungary survived World War I in their previous form - leaving Budapest as the capital of a now independent Hungary which lost two thirds of its territory, most of its non-Magyar population, and a few million Hungarian speakers, to neighbouring countries. The city's population reached one million around 1930. During the interwar years under the rule of regent Miklós Horthy, a former Admiral of the Austro-Hungarian fleet, Hungary became an ally of Germany. Near the end of World War II, Nazi Germany occupied Hungary after it attempted to negotiate separate peace with the Allies, and eventually installed a bloody dictatorship putting the hitherto fairly unimportant Nazi ''Nyilaskeresztes'' (Arrowcross) party in charge. While practically all of the 400,000 Jews in the countryside were murdered by German Nazis and their Hungarian ''nyilas'' sympathizers, roughly 60% of Budapest's Jewish community was saved during the '''Holocaust'''. People who are remembered for helping the local Jewish community include '''Raoul Wallenberg''', the famous Swedish diplomat, who organised the distribution of Swedish passports by his embassy to as many Jews as possible, and the Italian '''Giorgio Perlasca''', who – pretending to be a Spanish diplomat – rescued many thousands of Jews, but there were many other foreigners and Hungarians who participated in this effort. Air raids and a terrible three-month siege towards the end of World War II resulted in the death of over 38,000 civilians and the destruction of much of the once so lively city.
+
+==== From communism to contemporary times ====
+After the war, Budapest slowly recovered and became a showcase for the more pragmatic policies of Hungary's hard-line Communist government under the dictatorial rule of Mátyás Rákosi. The city was, however, also the main site of the '''1956 uprising''' which was successful in installing a reform-oriented (albeit communist) government of '''Imre Nagy'''. This was swept away before long, after the Soviet leader Khrushchev decided to send in the tanks feeling that Hungary was slipping away from under Moscow's control. The Soviets installed János Kádár as the leader of the communist state who, after over thirty years of controversial rule, was voted out of leadership 1988 by the central committee due to health issues, and died in 1989.
+
+Since the peaceful 1989 'system change' ('''Rendszerváltás''') which was achieved as a compromise between reformist party forces and the opposition (notably including a younger self of the current prime minister, Viktor Orbán), Budapest transformed in appearance and atmosphere, a process further accelerated by the country's long-awaited joining with the European Union in 2004.
+
+===Climate===
+{{climate chart
+|Budapest
+|-2.5 |3.0 |31.0
+|-1.3 |5.8 |33.0
+|2.3 |11.3 |32.0
+|7.1 |17.9 |36.0
+|11.6 |22.6 |67.0
+|15.2 |26.2 |66.0
+|16.7 |28.1 |75.0
+|16.6 |28.0 |61.0
+|12.2 |22.5 |52.0
+|7.2 |16.4 |45.0
+|3.1 |9.4 |48.0
+|-1.4 |3.5 |40.0
+
+|float=right
+|clear=right
+|source=[[:w:Budapest]]
+|description=
+}}
+
+Winter (November until early March) can be cold and there is little sunshine. Snowfall is fairly frequent in most years, and nighttime temperatures of −15°C (5°F) are not uncommon between mid-December and mid-February.
+
+The spring months (March and April) see variable conditions, with a rapid increase in the average temperature. The weather in late March and April is often very agreeable during the day and fresh at night.
+
+Budapest's long summer - lasting from May until mid-September - is warm or very warm. Budapest has as much summer sunshine as many Mediterranean resorts. Sudden heavy showers also occur, particularly in May and June.
+
+The autumn (mid-September until late October) is perhaps the best season for tourists as it has little rain and long sunny days with moderate temperatures. At the end of October the weather often turns abruptly colder.
+
+===Quality of life===
+For those with a reasonable budget, Budapest offers a rather high quality of life. In terms of culture, cuisine and general 'vibe', Budapest is comparable to other major European cities (see dedicated sections), while prices are lower.
+
+It's just as well that prices are lower because local pay is significantly lower than in western Europe (for example, a skilled worker earns a minimum of 161,250 [[Hungary#Money|Hungarian forint]] (Ft) per month in 2017 before tax, while unskilled labourers earn a minimum wage of Ft127,650 per month.
+
+There is a rise in the number of homeless people seen in metro stations doorways in Buda and in Pest. While this does trouble locals who often grew up without seeing explicit homelessness (before 1989), this issue usually does not present a safety risk to travellers.
+
+===Official tourist information===
+* {{listing
+| name=Tourism Office of Budapest | alt= | url=http://www.budapestinfo.hu | email=
+| address=1115 Budapest, Bartók Béla út 105-113 | lat=47.47222 | long=19.03162| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 4 jms.svg|15px]]: 'Móricz Zsigmond körtér' further Tram 19, 49 to 'Karolina út'| phone=+36 1 438-8080| fax=| hours= | price=| content= You can get some very good free items, including a map of Budapest, a map of Hungary with all the youth hostels and prices and a very complete brochure about the northern part of Hungary (available in many languages).
+}}
+* {{listing
+| name=Tourinform Call Center | alt= | url=http://tourinform.hu/english | email=info@hungarytourism.hu
+| address=Sütő utca 2 (Deák Ferenc tér) | lat=47.49650 | long=19.05369 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]] [[File:BKV m 2 jms.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: Deák Ferenc tér
+| phone=+36 1 438-8080 | tollfree=+800 36 000 000 | fax=
+| hours=M-F 08:00-20:00 | price=
+| content=Can help with local information, accommodation, and free brochures, maps, postcards, and souvenirs.
+}}
+*{{listing
+| name=Tourist Information Centre | alt= | url= | email=
+| address=Buda Castle (''Szentháromság tér''), I. district, Tárnok u. 15 | lat=47.50047 | long=19.03459| directions=From [[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]] [[File:BKV m 2 jms.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: Deák Ferenc tér or [[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Széll Kálmán tér take Bus 16 to Dísz tér | phone= | tollfree= | fax=
+| hours=Daily 09:00-18:00 | price=
+| content=This information point stocks a comprehensive range of free leaflets, maps and listings magazines and free guidebooks which offer lots of ideas about sights and sounds, gastronomy, shopping, by night and lifestyle. You can also book shows, concerts and sightseeing tickets.
+}}
+* {{listing
+| name=Tourist Information Centre – City Park | alt= | url= | email=
+| address=XIV. district, Olof Palme sétány 5 | lat=47.51470 | long=19.07978| directions=Ice Rink - [[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]: 'Hősök tere'| phone= | fax=| hours=M-Th 10:00–18:00, F Sa 10:00–20:00 (09:00–18:00/20:00 spring and summer time)| price=| content=The office is an attraction in itself, as it is in a very nice location, with a beautiful view from the window. In summer you can see a little lake with people boating, and in winter, the lake is frozen and used for ice skating. You can book shows, concerts and sightseeing tickets and get information about city parks, free maps and free guide books.
+}}
+
+==Get in==
+[[File:Liszt Ferenc Repuloter 2-es terminal varocsarnok 06.JPG|thumbnail|right|SkyCourt food &amp; retail area]]
+
+===By plane===
+Budapest has direct flights to most major European cities. Many of these are operated by the budget carrier [http://www.wizzair.com WizzAir], which is based here and is now in effect Hungary's national airline. Other budget operators include Easyjet, Ryanair, Jet2, Norwegian and Vueling. This competition holds down prices on the traditional airlines such as KLM and Lufthansa.
+
+Direct destinations around the fringes of Europe include Reykjavik, St Petersburg, Moscow, Kyiv, Kutaisi, Baku, Astana, Tel Aviv and Agadir. Gulf carriers connect via Doha and Dubai to the Far East, Australasia and Africa. There are no direct flights between Budapest and North America: connect via London, Amsterdam or Paris.
+
+{{go
+| name=Budapest Franz Liszt International Airport | alt={{IATA|BUD}} ''Budapest Liszt Ferenc Nemzetközi Repülőtér'' pronounced "list-ferents", often still called by its old name ''Ferihegy'' | url=https://www.bud.hu/ | email=
+| address= | lat=47.439444 | long=19.261944 | directions=It's located about {{km|16}} south-east of the city centre
+| phone=+36 1 296-7000 (call centre) | tollfree=
+| hours= | price=
+| wikipedia=Budapest Ferenc Liszt International Airport | image=Budapest Ferihegy 2A LHBP.JPG | wikidata=Q500945
+| content=Hungary's chief airport. All flights use Terminals 2A and 2B. Terminal 1 was closed in 2011. There's no practical distinction between Terminals 2A and 2B, and they're freely connected landside by corridors and airside by "SkyCourt" food &amp; retail area. (Originally 2A served Schengen Area destinations, and 2B the rest of the world, but this has been dropped.) Check-in and bag-drop desks 1-30 are in Hall 2A and desks 31-60 in Hall 2B, but do not correspond to the gates. This means that if 2A has a long line for security, you can get airside through 2B (and vice versa), as both lead into the SkyCourt.&lt;br /&gt;&lt;br /&gt;There are several small cafes in Skycourt and in 2A &amp; 2B near the gates. Duty-free stores are operated by [https://www.heinemann-shop.com/en/bud/ Heinemann]. They are seldom a bargain - by all means blow away your last local currency here. But if you're looking for something in particular (eg Tokay wine), check prices in advance on their website and compare with downtown supermarket prices. You can usually only buy duty-free if you're taking a direct flight: if you're transiting another European airport, security there will confiscate liquids.
+:Central information: {{phone|+36 1 296-9696}}
+:Luggage services: {{phone|+36 1 296-5965}}
+}}
+
+[[File:Wizz Air Airbus A320 Nagy Futam II.jpg|thumbnail|right|Wizz Air has a wide network of budget flights from Budapest]]
+
+''Getting between airport and city:'' the main options are bus, bus &amp; metro, bus &amp; train, and taxi / transfer.
+
+*'''[https://bkk.hu/en/timetables/#100E Bus line 100E]''' Airport Express
+:This runs from city centre to Airport Terminal 2 every 10 minutes during the day, every 20 minutes early morning and late night, taking 30-40 minutes. The city centre bus stop is by Deák tér at Károly krt in front of Városháza Park; look for a blue articulated bus with an airplane sign. The only stop on the way is called "Kálvin tér", but it's around the corner into the top of Üllői út. The airport bus stop is just outside Terminal 2 Arrivals. The bus runs every day, outbound 03:40-00:40, city-bound 05:00-01:20. The fare is Ft2200 (as of Jul 2025); you're encouraged to buy tickets from vending machines or at customer service kiosks, but the driver will issue tickets and give change. Be careful not to buy the 450Ft tickets, these are not valid and if you stamp them in the bus, they will be wasted.
+
+*'''Metro [[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]]+ [https://bkk.hu/en/timetables/#200E Bus line 200E]'''
+:Bus line 200E runs between Terminal 2 and Kőbánya-Kispest Metro station, taking 25 min, bus fare Ft500. You there buy a Metro ticket for another Ft500 and ride line 3 to the city centre, about 20 mins to the main interchange at Deák Ferenc tér. The bus runs all day every day, with 7-8 minutes frequency during the day, 30-60 minutes at late night. The metro runs every 3-5 mins, 04:30-00:00. If the connections are slick, this route takes 45 minutes.
+
+*'''Train + [https://bkk.hu/en/timetables/#200E Bus line 200E]'''
+:Kőbánya-Kispest also has a mainline train station, with trains every 10-15 min to Budapest Nyugati in the northern city centre taking about 25 min. More likely you'd change here to reach eastern towns such as Szeged, Kecskemét, Debrecen, Miskolc for, and Szolnok where you can change again for trains into Romania. Do not board a train for Budapest Keleti: it will make a grand 6-hour scenic tour of the countryside before looping back to the city. Reach Kőbánya-Kispest from the airport on Bus 200E as described above.&lt;br /&gt;On the way, the bus runs past Ferihegy station, which used to serve the former airport Terminal 1. Trains do stop here but the place is dismal and dilapidated, you won't feel safe, and the ticket machine has probably been vandalised. Stay on the bus for another 5 min unless you're frantic to catch a last train.
+
+* '''Taxi:''' the only licensed taxi operator at the airport is '''[http://www.fotaxi.hu Főtaxi]''' - don't accept offers from drivers or touts waiting around Arrivals. However, you can order via phone/app a taxi to the terminal from other company, too. A trip inbound to central Budapest will cost from Ft13000. Queue at the taxi stand first to receive a written quote for your fare, then pay it when you arrive at your destination. Pre-ordering by phone may get you a better price.
+
+Note that Főtaxi does not provide child seats of any kind, whereas MiniSud shared shuttle does.
+
+* '''Shared Transfer:''' the official shared shuttle for the airport is '''[http://www.minibud.hu/en MiniBud]'''. From a central hotel fares would be around Ft8990 single, Ft15990 return for one person, plus Ft2000 per extra person. Check prices and make reservations on the company's website.
+* '''Private Transfer:''' to and from the city of Budapest and all location in Hungary by '''[https://www.airporttransferbudapest.com/ Airport Transfer Budapest]''' . One to three people will cost Ft13500 oneway, Ft26400 return per estate car. Four to seven people will cost Ft21000 oneway, Ft41000 return per minibus. Total vehicle prices, without sharing the car with strangers. Pay the driver in cash or card. Online booking is possible up to 21 people, beyond that contact them for a quote.
+
+Alternatively you can check flights to '''[[Vienna#By_plane|Vienna]]''', '''[[Zagreb#By_plane|Zagreb]]''', '''[[Debrecen#By_plane|Debrecen]]''' or '''[[Bratislava#By_plane|Bratislava]]''' and arrange to take a train or bus to Budapest.
+
+===By train===
+[[File:Budapest East Station 1.jpg|thumb|Keleti pályaudvar (Eastern Railway Station)]]
+
+Direct trains connect Budapest with 11 countries. You can plan international and domestic trips and buy tickets on [https://jegy.mav.hu/ jegy.mav.hu]{{Dead link|date=December 2025 |bot=InternetArchiveBot }} (Note that the site doesn't include services by all private operators, ex. RegioJet.)
+
+* [[Berlin]]: one direct train (11 hr) from Budapest Nyugati via Brno, Prague and Dresden, continuing to Hamburg. Several indirect services from Nyugati or Keleti take 12-15 hours, usually changing in Prague.
+* [[Munich]]: five direct trains (7 hr) from Budapest Keleti via Vienna, Linz and Salzburg; indirect services changing in those cities.
+* [[Vienna]]: direct trains every 1-2 hours (2:37 hr) from Budapest Keleti. Also several from Budapest Déli changing at Györ. Change in Vienna for Venice. There is also a daily first-class ÖBB-UZ sleeper through-car (147/749) to Vienna coming from Kyiv via Budapest Kelenfold and Budapest Keleti, but may be quite expensive.
+* [[Graz]]: one direct train (6 hr) from Budapest Déli, otherwise change in Vienna.
+* [[Zürich]]: one direct train (11 hr) from Budapest Keleti, otherwise change in Vienna.
+* [[Prague]]: five direct daytime trains (6½ hr) from Budapest Nyugati via Bratislava, Břeclav and Brno, plus one overnight train (10 hr) from Keleti.
+* [[Bratislava]]: nine direct trains (2½ hr) from Budapest Nyugati, departing every 2 hr. As of September 2024, a Bratislava–Budapest ticket costs €17.80 
+* [[Košice]]: seven direct trains (3½ hr) from Budapest Keleti.
+* [[Warsaw]]: one direct daytime train (10 hr) from Budapest Nyugati and one overnight train (13 hr) from Keleti.
+* [[Bucharest]]: two overnight trains (16 hr) from Budapest Keleti via Arad, Deva, Sibiu and Brasov in Transylvania. Daytime connections are via Timisoara. Bucharest is nowadays the best route for Istanbul.
+* [[Ljubljana]]: one direct train (8 hr) from Budapest Déli, otherwise change in Zagreb or Salzburg.
+* [[Zagreb]]: two direct trains (6 hr) from Budapest Déli, otherwise change at Zidani Most. Change in Zagreb for Split.
+* [[Belgrade]]: '''this line is closed until 2025''' because of engineering work in Serbia. Normally there are two direct daytime trains and one overnight (8½ hr) from Budapest Keleti via Novi Sad. Change in Belgrade (spelt "Beograd" on DB) for Sarajevo, Podgorica and Bar. This is also the usual route for Sofia and Istanbul, but it's slow and with unreliable connections.
+* [[Lviv]]: one direct train (14 hr) from Budapest Nyugati via Debrecen and Chop. Other indirect services from Keleti or Nyugati. Change at Lviv for Kyiv and Odesa. This is probably also the simplest route to Moscow, but look for other means of transport. There is also a daily first-class ÖBB-UZ sleeper through-car (147/749) to Kyiv coming from Vienna via Budapest Kelenfold and Budapest Keleti via Chop, but may be quite expensive.
+
+====Railway stations====
+{{hatnote|Further information about the hazards at railway stations: [[Budapest#Stay safe]]}}
+Stations in Budapest, as elsewhere in Hungary, are frankly a bit rough. The fabric of the buildings is in poor repair, stations and trains are hard to access for people with disabilities, and passenger facilities are very limited. Do not expect luggage trolleys or clean toilets. English is rarely spoken by staff except at international cash desks. If you haven't pre-booked online, be prepared for long queues at the ticket office. Hazards include bad exchange rates, predatory taxi drivers, aggressive drunks, and pickpockets.
+
+There are three large terminus stations for long-distance trains: Nyugati (west), Keleti (east) &amp; Déli (south). These are surrounded by decent cafes, fast food places, and other facilities.
+
+[[File:Nyugati belülről.jpg|thumbnail|right|Nyugati station, opened in 1877]]
+* {{go
+| name=Nyugati pályaudvar | alt=Western Railway Station | url= | email=
+| address=Nyugati tér | lat=47.51049 | long=19.05741 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: Nyugati pályaudvar; bus 9, 26, 91, 191, 226, 291; tram 4, 6; trolley: 72, 73; night bus: 914, 914A, 923, 931, 934, 950, 950A
+| phone= | tollfree= | fax=
+| hours=Daily 02:30-00:50; international cash desk: Daily 07:30-19:00, between 30 June and 25 Aug 05:50-19:00 | price=
+| image=Budapest nyugati trams.jpg | wikidata=Q522868
+| lastedit=2018-04-18
+| content=International trains to Prague, Berlin, Hamburg, Warsaw and Lviv. Domestic trains to [[Esztergom]], [[Vác]], [[Cegléd]], [[Szolnok]], [[Debrecen]], [[Nyíregyháza]] and [[Szeged]]. Services: ticket vending machines, E-Ticket terminal, Budapest Season ticket sale, credit cards accepted. Luggage storage (daily 03:30-24:00). Parking near the station, bike parking at the station.
+}}
+[[File:Keleti fények ....jpg|thumb|Keleti station was built in the 1880s]]
+* {{go
+| name=Keleti pályaudvar | alt=Eastern Railway Station | url= | email=
+| address=Baross tér | lat=47.50062 | long=19.08402 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]] [[File:BKV m 4 jms.svg|15px]]: Keleti pályaudvar; bus: 5, 7, 7E, 8E, 20E, 30, 30A, 107, 108E, 110, 112, 133E, 230; tram: 23, 24; trolley: 73, 76, 78, 79, 80; night bus: 907, 907A, 908, 931, 931A, 956, 973, 973A, 990
+| phone= | tollfree= | fax=
+| hours=Daily 03:45-24:00, International cash desk in Business Waiting Room: Daily 6:00–21:15 | price=
+| image=Keleti pályaudvar felvételi épülete (18151. számú műemlék) 5.jpg | wikidata=Q841167
+| lastedit=2018-04-18
+| content=International trains to Munich, Vienna, Zurich, Kosice, Warsaw, Bucharest, Sibiu and Belgrade, announced in English. Domestic trains to Békéscsaba, [[Miskolc]], Szerencs, [[Sátoraljaújhely]], [[Eger]], [[Győr]], Komárom, [[Szolnok]], [[Szombathely]], Tata and Tatabánya. Services: Ticket vending machine, E-Ticket terminal, Budapest season ticket sales, credit cards accepted. Decent restaurant. Parking near the station. Luggage storage open daily 03:30-23:30. Customer Service Office located beside track #9, open daily 04:00-23:30, sells souvenirs, City Tour, Budapest card, START Club card for cash only. See [https://www.mavcsoport.hu/file/46453/download?token=Ujw5gOjS map of the station] here.
+}}
+* {{listing
+   | name = Déli pályaudvar
+   | alt = Southern Railway Station
+   | url = 
+   | email = 
+   | type = go
+   | address = Alkotás utca, Krisztina körút corner
+   | lat = 47.50004
+   | long = 19.02472
+   | directions = [[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Déli pályaudvar, bus: 21, 21A, 39, 102, 139, 140, 140A, 221; tram: 56, 56A, 59, 59A, 59B, 61; night bus: 960, 990
+   | phone = +36 40 494949
+   | tollfree = 
+   | fax = 
+   | hours = Daily 03:00-00:30, International cash desk: daily 05:30-18:30. International travel ticket, seat reservation, travel card can be paid in euros with change in forints
+   | price = 
+   | wikipedia = 
+   | wikidata = Q764685
+   | lastedit = 2018-04-18
+   | content = International trains to Prague, Graz, Ljubljana and Zagreb. Domestic trains to Lake [[Balaton]], [[Győr]], Komárom, [[Mosonmagyaróvár]], [[Székesfehérvár]], Tatabánya, Tata, [[Pécs]] and southwest Hungary. Suburban trains to Pusztaszabolcs via Százhalombatta. Services: Ticket vending machine, E-Ticket terminal, Budapest season ticket sales, credit cards accepted.
+   | image = Deli-pu-budapest.jpg
+}}
+
+On their way to the terminus, long-distance trains may also stop at two smaller stations: Kelenföld (west) and Kőbánya-Kispest (south near the airport).
+
+* {{listing | name=Kelenföld vasútállomás | alt=Kelenföld Railway Station | url= | email=|type=go
+| address=XI. Etele tér | lat=47.46482 | long=19.02089 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 4 jms.svg|15px]]: Kelenföld vasútállomás, a bus hub and the 'Etele tér Bus Station' is nearby. The following bus lines terminate here (City Bus) 8E, 40, 40B, 40E, 87, 87A 88, 88A, 101B, 101E, 141, 172, 173, 187, 188, 188E, 250, 250B, 251, 251A, 251E, 272; Volánbusz (Intercity) lines: 689, 691, 710, 712, 715, 720, 722, 724, 725, 727, 731, 732, 734, 735, 736, 760, 762, 763, 767, 770, 774, 775, 777, 778, 798, 799; Passing through city bus: 53, 58, 108E, 150, 150B, 153, 154; tram 1, 19, 49; night bus: 901, 907, 918
+| phone= | tollfree= | fax=
+| hours=Domestic cash desk daily 03:30-00:15| price=
+|wikipedia=| wikidata=Q800998
+|lastedit=2018-04-18
+| content=Trains stop here on the way from [[Vienna]], Lake [[Balaton]] and cities in western Hungary.
+| image=Kelenföld Avala EuroCity 2004-06-22.jpg
+}}
+* {{go
+| name=Kőbánya-Kispest vasútállomás | alt=Kőbánya-Kispest Railway Station | url= | email=
+| address=X. Sibrik Miklós út/Vaspálya út 10 | lat=47.46349 | long=19.14966 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: 'Kőbánya-Kispest' metro station is also here. Plus bus hub, including Bus 200E to the airport.
+| phone=+36 40 494949 | tollfree= | fax=
+| hours=Cash Desk daily 03:00-00:50 | price=
+| image=Kőbánya-Kispest 9-11 vágány.JPG | wikidata=Q3096714
+| lastedit=2018-04-18
+| content=Has trains from eastern Hungarian cities, eg Szolnok and Debrecen: change at Szolnok for trains to Romania. Services: ticket vending machine, E-Ticket terminal, Budapest season ticket sales, credit cards accepted. Some cash desks also sell 'Volánbusz' tickets.
+}}
+
+===By bus===
+Hungary’s national bus network is operated by the '''[https://www.mavcsoport.hu/en MÁV-Group]'''. To get to Budapest from another Hungarian city, a coach is often the best option. For services, discounts, schedules and on-line booking possibilities check [[Hungary#Get around]].
+
+International bus routes are operated by [https://www.eurolines.eu/ '''Eurolines'''] +36 1 318-2122. Most connections run two or three times a week; connections to/from [[Austria]] and [[Slovakia]] run daily. [http://www.incomartour.com.ua/private_face/Avtobus-Chop-Budapesht-/ '''Incomartour''']{{Dead link|date=April 2023 |bot=InternetArchiveBot }} operates a connection to/from Chop in [[Ukraine]] four times a week.
+
+'''[http://www.eurobusways.com Eurobusways] {{dead link|December 2020}}''' offers direct, door to door transfers from/to any place in Central and Eastern Europe
+
+'''[https://www.flixbus.de/ Flixbus]''' offers multiple connections per day mostly from German-speaking cities.
+
+====Bus stations====
+Budapest’s long distance bus stations are outside the city centre, but are very well connected to the rest of the city. The main stations are:
+*{{go
+| name=Népliget Bus station | alt=Népliget autóbusz-pályaudvar | url=http://www.volanbusz.hu/en | email=info@volanbusz.hu
+| address=Üllői út 131. | lat=47.47467 | long=19.09869 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: 'Népliget' station
+| phone=+36 1 219-8086, +36 1 382-0888 | tollfree=
+| hours=Travel Centre M-F 08:00-18:00, Sa-Su 08:00-16:00; Waiting Room daily 04:30-23:00; Public (disabled) toilet daily 04:30-22:45, ATM and public telephone daily 04:30-23:00; Baggage storage daily 06:00-21:00; Snack Bar and currency exchange 6:00 to 20:00; Newspaper sales M-F 06:00-20:00, Sa-Su 06:00-16:00 | price=
+| wikidata=Q3098268
+| lastedit=2016-11-08
+| content=Buses from abroad and most of Western Hungarian destinations arrive and depart here. It's a fairly modern station with reliable facilities. Don't forget to check-in if you travel abroad. Orangeways buses depart opposite side.
+}}
+*{{go
+| name=Stadion Bus Station | alt=Stadion autóbusz-pályaudvar, formerly known as Népstadion autóbusz-pályaudvar | url=http://www.volanbusz.hu/en/ | email=
+| address=Hungária körút 48–52. | lat=47.50095 | long=19.10696 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: 'Puskás Ferenc Stadion' station
+| phone=+36 1 251-0125 | tollfree=
+| hours=Information 05:30-21:00; Domestic pre-purchase ticket office M-F 06:00-18:00, Sa Su 06:00-16:00; Ticket office M-Sa 06:00-18:00 Su 06:00-16:00 | price=
+| wikidata=Q3098270
+| lastedit=2016-11-08
+| content=This is the big hub for Northeastern Hungarian destinations. It's a quite modern but somewhat dirty station built underground. '''Lines''' (selected): Suburban bus #396-397 to Veresegyház via Szada. Long distance bus #1020, 1021 [[Salgótarján]] (108-112 km, hourly, 1¾ hour) via [[Hatvan]], Mátraverebély, Pásztó. #1023 [[Hollókő]] 2 hr via Pásztó, #1031 Ózd via Borsodnádasd, #1034 Jósvafő (201 km, daily two, nearly 4 hr) via Ózd, [[Aggtelek]], #1035 Kazincbarcika (190 km, 3 hr, daily) via Ózd, #1040 [[Gyöngyös]] (~80 km, hourly, 1-2 hr) via [[Hatvan]], #1045 Fallóskút (110 km, daily three, 2½ hours, scenic trip) via Mátrafüred, Mátraháza, Kékestető (the highest point of Hungary, 1¾ hr, daily three-four, some terminated some even not stop here!), Galyatető.
+}}
+* {{go
+| name=Árpád Bridge Bus Station | alt=Árpád híd autóbusz-állomás | url=http://www.volanbusz.hu/ | email=
+| address=Árbóc utca 1–3. | lat=47.53217 | long=19.06570 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: 'Göncz Árpád városközpont' station
+| phone=+36 1 329-1450 | tollfree=
+| hours=Daily 06:00-18:00 | price=
+| wikidata=Q3098258
+| lastedit=2016-11-08
+| content=This is a smaller station for some Northern destinations and suburban traffic; use it to and from [[Pilisvörösvár]], [[Szentendre]], [[Esztergom]] or [[Visegrád]].
+}}
+* {{go
+| name=Kelenföld Bus Station | alt=Kelenföld autóbusz-állomás | url=http://www.volanbusz.hu/en | email=
+| address=Somogyi utca 35. | lat=47.46395 | long=19.02253 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 4 jms.svg|15px]]: 'Kelenföld vasútállomás' station
+| phone=+36 1 382-0888 | tollfree=
+| hours=Cash desk: M-F 06:00-21:00, Sa Su 06:00-16:00 | price=
+| lastedit=2016-11-08
+| content=This station ie next to Kelenföld Railway Station, at the terminus of metro line 4. Useful for getting to Statue Park and some suburban destinations. Lines go to Biatorbágy, [[Érd]], Százhalombatta and surrounding area.
+}}
+
+===By boat===
+* {{go
+| name=Mahart International Port | alt=Nemzetközi Hajóállomás | url=http://www.mahartpassnave.hu/en/ | email=hydrofoil@mahartpassnave.hu
+| address=Belgrád rakpart (near Iranyi street corner) | lat=47.49039 | long=19.05151 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: Ferenciek tere, 5 min by walk
+| phone=+36 1 484-4000 | tollfree=
+| hours=M-F 09:00-16:00 | price=
+| lastedit=2024-06-17
+| content=Operates a scheduled (F Sa Su) hydrofoil service on the Danube to and from [[Esztergom]] stopping at [[Vác]] and [[Visegrád]].
+}}
+
+==Get around==
+{{Mapframe|47.49627|19.04519|zoom=13|height=700|width=|layer=W|staticmap=|align=}}
+
+===Orientation===
+[[File:ChainBridge Pest.JPG|thumb|The Chain Bridge and a view of Pest]]
+Orientation is not a big problem in Budapest. The river Danube splits the city into two areas: [[Buda]] and [[Budapest/Pest|Pest]]. Aside from the very centre, the city's structure is quite logical. Landmarks in Buda as the Royal Castle or Citadella Castle also help you to find your way. Besides the Danube, the best reference points for orienting yourself are the bridges crossing the river. From north to south, they are:
+
+*{{listing
+| name=Megyeri Bridge | alt=Megyeri híd | url= | email=
+| address= | lat=47.60936 | long=19.08852| directions=At northern city border
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=The newest one. A cable-stayed bridge. Built in 2008. There are 4 lanes and 2 hard shoulders. Part of the M0 motorway.
+| wikidata=Q777301
+}}
+* {{listing
+| name=Árpád Bridge | alt=Árpád híd | url= | email=
+| address= | lat=47.53792 | long=19.05213 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A modern bridge linking to Northern Margaret Island. The longest bridge in Budapest at 973 m. Also the busiest bridge in Budapest.
+| wikidata=Q252452
+}}
+* {{listing
+| name=Margaret Bridge | alt=Margit híd | url= | email=
+| address= | lat=47.51407 | long=19.04609 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Easily identified thanks to its distinctive shape: it makes an approximately 35 degree turn half-way across, at the southern tip of Margaret Island. Trams 4 and 6 cross the Danube here. Close to its on the [[Budapest/Hegyvidék|Buda]] side is '''the northernmost destination of the Muslim pilgrims''': the Tomb of Gül baba.
+| wikidata=Q916120
+}}
+* {{listing
+| name=Chain Bridge | alt=Széchenyi lánchíd | url= | email=
+| address= | lat=47.49937 | long=19.04604 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q465534
+| content=Completed in 1849, this is '''the oldest permanent bridge over the Danube'''. It’s also the least busy bridge in Budapest, since it’s not connected to any main roads arguably most beautiful and certainly '''the most photographed''' of Budapest's bridges, floodlit at night. The bridge is closed to pedestrians for reconstruction until 2023.
+}}
+* {{listing
+| name=Elisabeth Bridge | alt=Erzsébet híd | url= | email=
+| address= | lat=47.49050 | long=19.04808 | directions=
+| phone= | tollfree= | fax=| hours= | price=
+| content=Completed in 1903. Its original chain structure was destroyed in World War II, and was substituted by a modern cable bridge which opened in 1964. The ''narrowest facade's building'' of Budapest is 6.2 wide. It is on the [[Budapest/Víziváros#Tabán|Buda]] side of the Elizabeth Bridge and can easily be spotted while crossing the Danube from Pest.
+| wikidata=Q699098
+}}
+* {{listing
+| name=Liberty Bridge | alt=Szabadság híd | url= | email=
+| address= | lat=47.48574 | long=19.05492 | directions=
+| phone= | tollfree= | fax=| hours= | price=
+| content=Elegant and complex, opened in 1896; it connects the Gellért Baths (Gellért fürdő) in Buda with the Central Market Hall (Nagy Vásárcsarnok) in Pest.
+| wikidata=Q915195
+}}
+* {{listing
+| name=Petőfi Bridge | alt=Petőfi híd | url= | email=| address= | lat=47.47896 | long=19.06392
+| directions= | phone= | tollfree= | fax= | hours= | price=
+| content=For a long time the southernmost bridge, it links the inner ring road (Nagykörút) of Pest with Buda.
+| wikidata=Q781659
+}}
+* {{listing
+| name=Rákóczi Bridge | alt=Rákóczi híd | url= | email=
+| address= | lat=47.46878 | long=19.06730 | directions=
+| phone= | tollfree= | fax=| hours= | price=
+| content=The second newest bridge in Budapest, with modern architecture and a spectacular lighting system where mirrors reflect the beam of the upward facing floodlights. Built very next to a railway bridge on its southern side. It was called ''Lágymányosi híd'' before 2011.
+| wikidata=Q787108
+}}
+
+===On foot===
+Many of Budapest's highlights are easy to approach walking, and in the centre you find more pedestrian zones from year to year. Car drivers tend to respect pedestrians and often give advantage on a cross-walk even if there is no traffic light. Due to the lack of bike lanes, cyclists have to weave around pedestrian traffic; be prepared. Don't wear high-heeled shoes in the centre as there are lots of stone pavements, especially in the Castle Hill.Exploring on foot is the best way to see the sights, but be prepared for uneven surfaces and cobblestones.
+
+===Public transport===
+{{cautionbox|A number of places (streets, squares, parks) were renamed mid-2011, which resulted in the renaming of a number of stops of public transport. If unsure - ask! Most people are well aware of the changes and will be happy to help you. Also many schedules were modified, some buses circulate less frequently, while other means of transport may have their operating time extended. Schedules are shown in every stop unless vandalised.}}
+
+You'll find several points of interest within walking distance, but Budapest is a sizeable city, so unless you drive your own car (or bicycle), you will inevitably use some form of public transport. The good news is that the urban area is well covered by four metro lines, blue urban buses, yellow trams and red trolley-buses, and the whole system is fairly easy to understand. On the other hand, schedules are not quite as reliable as in, say, Vienna, vehicles are not always the cleanest, and tickets have become increasingly expensive.
+
+'''All people aged 65 or older can travel free.''' ID card or passport is sufficient to justify your age. '''Children under 14 years of age can also travel free on Budapest public transport.'''
+
+Public transportation in Budapest is run by Centre for Budapest Transport [https://bkk.hu/en/ (BKK)]{{Dead link|date=June 2024 |bot=InternetArchiveBot }}, which has some useful English-language pages on their site including current [https://bkk.hu/en/timetables/ schedules] and [https://bkk.hu/en/tickets-and-passes/prices/ fares]. Vehicles run from around 05:00 to 23:30 (or, on Christmas Eve, to 16:00). After that an extensive night bus network is available.
+
+You can use the [https://bkk.hu/en/tickets-and-passes/budapestgo/ BudapestGO] ([https://apps.apple.com/app/id916193835 iOS], [https://play.google.com/store/apps/details?id=hu.webvalto.bkkfutar Android]) mobile app to plan journeys, buy tickets and passes and get updates on distruptions. You can also plan journeys from the [https://go.bkk.hu web version].
+
+Connections are shown on [https://www.google.com/maps Google Maps], [https://transitous.org/ Transitious] and [https://citymapper.com/budapest CityMapper] as well.
+
+If you only visit Budapest for a few days as a tourist, you may find the following lines particularly useful:
+
+* [[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]] [[File:BKV m 2 jms.svg|15px]] [[File:BKV m 3 jms.svg|15px]] [[File:BKV m 4 jms.svg|15px]]'''Metro 1, 2, 3, 4''' connect the suburbs with the biggest transport hubs, numerous tourist highlights and central hotels. The metro network is rather simple, there are no splits or merges of lines, no shortened routes in normal operation.
+* '''Tram 2, 2B, 23''' runs along the river Danube on Pest side.
+* '''Trams 4, 6''' follow ''Nagykörút'' (Grand Boulevard) offering service up to every 3 minutes at peak times.
+* '''Trams 19, 41''' along the Danube on the Buda side.
+* '''Bus 7, 8E, 107, 108E and 133E''' connect Keleti railway station with the city center and many points of interest in Buda and Pest.
+* '''Bus 16, 16A, 116 and 216''' go to Buda castle.
+* '''Bus 105, 210, 210B''' connect Hősök tere (Hero's Square), goes up and down Andrássy avenue to Deák square/Erzsébet square before it goes across the Chain Bridge to Buda.
+* '''Bus lines 100E and 200E''' serve the airport. Special fare applies on 100E.
+
+Public transport maps are displayed in all metro stations, city centre tram stops and underpasses. 
+
+====Tickets and passes====
+If you intend to travel a lot, and you probably will, travel cards are far less expensive than single tickets. As of June 2025 most useful [https://bkk.hu/en/tickets-and-passes/prices/ tickets and travel cards] for tourists include the following:
+* '''[https://bkk.hu/en/tickets-and-passes/prices/single-tickets-valid-for-one-ride/ Single tickets]''' (Vonaljegy típusú jegyek): Valid for one journey ''within the city limits'', transfer not allowed on buses and trams, but ''one transfer is allowed between metro lines'' ). Ft500, Ft700 if purchased from the driver (available on designated lines). The ticket must be validated before each ride.
+** '''[https://bkk.hu/en/tickets-and-passes/prices/single-tickets-valid-for-one-ride/block-of-10-tickets.6/ Block of 10 tickets]''' (10 db-os gyűjtőjegy): {{multibuy_discount|Ft|4500|10|500}}
+* '''[https://bkk.hu/en/tickets-and-passes/prices/monthly-passes/ Monthly passes]''' (Havi bérletek)
+** '''[https://bkk.hu/en/tickets-and-passes/prices/monthly-passes/monthly-budapest-pass.58/ Monthly Budapest-pass]''' (havi Budapest-bérlet): Valid for 30 or 31 consecutive days. ''Valid also on MÁV trains and suburban yellow Volán buses''. {{multibuy_discount|Ft|8950|30|1650|days|day|0}}
+** '''[https://bkk.hu/en/tickets-and-passes/prices/monthly-passes/monthly-budapest-pass-for-students.61/ Monthly Budapest pass for students]''': Valid for 30 consecutive days, with a student ID, 3,450 Ft. You need a valid student ID (Hungarian or from a country in the EU, EEA or from Switzerland)). 
+** '''[https://bkk.hu/en/tickets-and-passes/prices/monthly-passes/15-day-budapest-pass.55/ 15-day Budapest pass]''' (félhavi Budapest-bérlet): Valid for 15 consecutive days. ''Valid also on MÁV trains and suburban yellow Volán buses'' {{multibuy_discount|Ft|5950|15|1650|days|day|0}}
+* '''[https://bkk.hu/en/tickets-and-passes/prices/time-based-tickets/ Time-based tickets]''' (Időalapú jegyek): Available only with [https://bkk.hu/en/tickets-and-passes/mobile-ticket/ mobile ticket]. Unlimited number of transfers within the time limit, ''within the city limits''. 30 minutes: 600 Ft, 90 minutes: 850 Ft. The last travel can be finished after the time limit is over. Validate the ticket each time you board.
+* '''[https://bkk.hu/en/tickets-and-passes/prices/travelcards-valid-for-one-or-more-days/ Travelcards]''' (Napijegy típusú jegyek):
+** '''24-hour travel card''' (Budapest 24 órás jegy): ''Valid for 24 hours after purchase'' 2,750 Ft, or 5,000 Ft for 2-5 people travelling together.
+** '''72-hour travel card''' (Budapest 72 órás jegy): ''Valid for 72 hours after purchase'' {{multibuy_discount|Ft|5750|3|1650|days|day|0}}.
+** '''[https://www.budapestinfo.hu/en/budapest-card Budapest Card]''' (Budapest kártya): allows you unlimited free travel in the city, and also gives you discounts at museums and restaurants. There are available cards for 24h, 48h or 72h. All of them are valid from the first use and free for a child under 6 years (with a cardholder). Every card give free entrance to the Budapest Zoo and valid for 2 walking tours in Buda and Pest. One-day card 14,990 Ft, Two-day card 19,990 Ft (Hop on Hop off bus and boat included), three-day card 25.990 Ft. While it's advertised extensively and on sale at virtually every location that tourist go to, it may not be worthwhile to purchase this pass because many popular attractions only offer discount, not free entry, for pass holders. You will need to visit multiple museums and ride on public transit multiple times a day just to break even.
+* '''[https://bkk.hu/en/tickets-and-passes/prices/annual-passes/ Annual Passes]''' (Éves bérletek)
+* '''[https://bkk.hu/en/tickets-and-passes/prices/quarterly-passes/ Quarterly passes]''' (Negyedéves bérletek)
+* '''[https://bkk.hu/en/tickets-and-passes/prices/semester-passes/ Semester passes]''' (Szemeszterre szóló bérletek)
+* '''[https://bkk.hu/en/tickets-and-passes/prices/ferry-tickets/ Ferry tickets]''' (Révjegyek): valid for a single trip on ferry line D14. 200 Ft (130 Ft for pupils under 15 and pensioners with pensioner certificate)
+* '''Hungary Pass, Hungary24:''' also valid for local (BKK) services. At 18900HUF and 4999HUF, buying these mostly makes sense if you plan to visit more regions outside Budapest.
+* [https://bkk.hu/en/tickets-and-passes/pay-and-go/ '''Budapest Pay&amp;Go''']: on many lines, you can also buy up to 5 single-ride single and validate them just by touching your credit card at a mounted ''Pay&amp;GO device''. The website and underlying service [https://customer.switchio.com/?gateway=hu www.token.switchio.com] allows you to see your purchases and getting an invoice.
+
+To have a care-free trip throughout Budapest, always have a public transport ticket, pass or a Budapest Card, when using this service. The fine is 25,000 Ft, or 12,000 Ft if paid on the spot. You may run into '''ticket inspectors''', especially in trams and buses on Sunday, but mostly they are busy guarding the entrance and exit to some of the metro stations. They hardly speak English and some were reported to be extremely keen on checking tourists. Ticket control inspectors can ask for your ID, however they are indeed not considered police officers under Hungarian law.
+
+====Metro====
+[[File:Budapest, metró 2, Keleti pályaudvar.jpg|thumb|M2 Keleti Station (Railway station connection)]]
+Budapest's '''underground network''' is an excellent way to get around, it connects the suburbs with railway and autobus stations, several centrally located hotels, museums and sights. The system consists of four lines. Line 1, 2 and 3 cross at Deák tér station (Deák square, in Pest centre), while Line 2 and 4 cross at Keleti pályaudvar (Eastern Railway Station) and Line 3 and 4 cross at Kálvin tér (Kálvin square). Metro lines are well represented on maps scattered on platforms.
+
+Usually ticket inspectors guard the entrances of the downward-moving escalators and they only let those passengers move further who show them their validated tickets or passes. Passengers pass by the ticket validation machines before they reach the guards and the downward-moving escalators. It is best to purchase a discount booklet of 10 tickets. Do not separate the tickets and punch one ticket prior to each boarding of a subway train.
+
+[[File:Ticket validation machine in Budapest.jpg|thumb|Ticket validation machine at Corvin-negyed metro station]]
+
+* [[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]] '''Metro 1''' (yellow line) connects Mexikói út (Mexikói road, a transport hub in Central-Northeast Budapest) with Vörösmarty tér (Vörösmarty square in Pest's commercial and touristy centre), and also passes the Opera and Hősök tere (Heroes' square). It was built to commemorate the 1000th year of Hungarian nationhood in 1896 (thus often called Millennium Subway). It was the first underground built in Continental Europe and second in the world after London. Although the vehicles are not original, the beautifully rebuilt, tile covered stations are a gorgeous historical memory of Budapest's richest period (1880–1910).
+* [[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]] '''Metro 2''' (red line) connects Déli pályaudvar (Southern Railway Station, in Central Buda) with Örs vezér tere (Örs vezér square, the biggest transport hub of Eastern Pest), and also takes you to Széll Kálmán tér (former Moszkva tér, Buda's biggest transport hub), Kossuth tér (Kossuth square, around the Parliament in Pest centre) and Keleti pályaudvar (Keleti Railway Station, in Pest). Although the construction started in the 1950s, the line was opened between 1970 and 1972. Having been completely rebuilt since 2004, its stations seem brand new, and the old Soviet trains have been replaced by modern Alstom Metropolis ones.
+* [[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]] '''Metro 3''' (blue line) goes from Újpest-Központ (residential area in Pest's Northern suburbs) to Kőbánya-Kispest (transport hub in Central-Eastern Pest, terminus of bus 200E to the airport), passing Nyugati pályaudvar (Western Railway Station) and different stations in central Pest. Opened between 1976 and 1990.
+* [[File:BKV metro 2014.svg|15px]] [[File:BKV m 4 jms.svg|15px]] '''Metro 4''' (green line) connects Kelenföld vasútállomás (Kelenföld Railway Station, transport hub in Central-Southern Buda) with Keleti pályaudvar (Eastern Railway Station, transport hub in central Pest). It has stations at Újbuda-Központ (Újbuda-Center, where Allee Shopping Mall is located), Szent Gellért tér (Saint Gellért square, site of Gellért Hill, Gellért Spa and Danubius Gellért Hotel) and Fővám Tér (Fővám square, site of the Vásárcsarnok (Central Market Hall) and the southern end of Váci street). The line was built between 2006 and 2014, the result is state-of-the-art stations and trains, and uses automatic train operation.
+
+====Tram====
+[[File:Combino Supra 2036 in Budapest.JPG|thumb|In 2006 the world's longest trams started their service on lines 4 and 6]]
+Budapest's 35 '''tram''' lines are a tourist-friendly way of getting around. They are slower, but more scenic than the metro and particularly useful on the nearly metro-less Buda side of the river. Be careful with doors, they open on different side of the tram on different stops.
+
+Particularly useful lines for tourists are:
+
+* Tram '''4''' and '''6''' run along ''Nagykörút,'' Pest's inner ring road, providing access to all four metro lines at multiple stations, and crossing over to north Buda ([[Budapest/Hegyvidék|Hegyvidék]] and [[Budapest/Óbuda|Óbuda]]) on Margaret Bridge (Margit híd) and south Buda ([[Budapest/South Buda|South Buda]]) on Petőfi Bridge – another beautiful view. Lines 4 and 6 only diverge for their last two stops that the tourists are unlikely to visit.
+* Two lines running along the Danube river
+** '''19''' / '''41''' in Buda passing [[Budapest/Víziváros|Víziváros]] and [[Budapest/South Buda|South Buda]]
+** '''2''', '''2B''' and '''23''' in Pest passing [[Budapest/Belváros|Belváros]].
+All these are considered a part of the cityscape. Both offer beautiful view of the opposite side.
+
+====Bus====
+[[File:Mercedes-Benz Citaro G in Budapest (VT).jpg|thumb|Blue urban bus in Pest]]
+Budapest has a dense '''bus''' network, which also connects the agglomeration and suburban zones with several metro and train stations and the city center. The numbering system is easy to understand. Numbers below 299 indicate regular bus routes. Numbers with an added 'E' (for example 7E) indicate express services that don't stop at all stops (however, lines without the letter 'E' may not stop at all stops either). Numbers with an added 'A' have shorter routes than their regular counterparts (for example bus 30 has a longer itinerary than 30A). Numbers above 900 indicate night services.
+(Numbers between 300 and 899 are suburban services provided by Volánbusz. BKK tickets and most tourist passes are not valid on them, but daily, weekly and monthly travel cards are.)
+
+Particularly useful lines for tourists include:
+
+* '''Bus 7, 8E, 107, 108E, 133E''' – all connect Keleti railway station with Blaha Lujza square (Blaha Lujza tér, junction with tram 4, 6), Pest city center and many points of interest in Buda. Beware of the pickpockets!
+* '''Bus 16/16A/116''' go to Buda Castle from Széll Kálmán tér (former Moszkva tér). Bus 16 starts from Deák Ferenc tér, the main metro line hub.
+* '''Bus 200E''' runs to Ferihegy Airport from Kőbánya-Kispest Metro 3 station.
+
+====Trolley-bus====
+Budapest's 14 trolley-bus lines run in Northeast and Central Pest. Unless you are a trolley buff, you're unlikely to use them frequently. However, some of them pass through the City Park (Városliget) and cross Andrássy avenue (Andrássy út), giving you beautiful views while using this eco-friendly mode of transport. Line 70 from Kossuth square (Kossuth tér, next to the Parliament) to City Park (Városliget) also passes through the lively Nagymező utca, Budapest's "Broadway".
+
+====Suburban rail====
+Green suburban railway lines (called '''hév''') connect central Budapest with several suburbs, but most of them are of little use to visitors. Your tickets and travel passes are valid only within the city boundaries, otherwise you should purchase a supplementary ticket (kiegészítő jegy) at a ticket office.
+
+* {{listing
+| name=[[File:Budapest H5 HÉV.svg|30px]] H5 (Batthyány tér–Szentendre) | alt= | url=http://www.bkk.hu/en/timetables/#H5 | email=
+| address=Batthyány tér uderpass | lat= | long= | directions=It connects at Batthyány tér with metro 2, at Margit híd (Margaret bridge) with tram 4/6.
+| phone= | tollfree=
+| hours= | price=A single ticket/pass plus need an (extra) Metropolitan area single ticket, Price: Ft350 or buy a full ticket at cash desk Ft700
+| wikidata=Q1031914
+| content=Goes upriver to the picturesque village of [[Szentendre]]. The same train takes you to [http://www.sziget.hu/festival_english Sziget Fesztivál], Central Europe's biggest summer music festival. After the first underground stop this line surfaces and runs alongside the Danube river providing a nice view of Margaret Island.
+}}
+* {{listing
+| name=[[File:Budapest H6 HÉV.svg|30px]] H6 (Közvágóhíd–Ráckeve) line | alt= | url=http://www.bkk.hu/en/timetables/#H6 | email=
+| address=Soroksári út | lat= | long= | directions=Take tram 2 toward south to terminal, further walk 100m more to south. Opposite to the 'TESCO Soroksári út' hypermarket
+| phone= | tollfree=
+| hours=First train 04:35, last around 23:35, some trains going just to Dunaharaszti külső or Tököl | price=A single ticket/pass plus need an (extra) Metropolitan area single ticket, Price: Ft560 or buy a full ticket at cash desk Ft900
+| wikidata=Q1031918
+| content=takes you to [[Ráckeve]], which is famous for its Serbian church (about 1 hour and 10 min.) [http://www.bkk.hu/en/timetables/#H6 Timetables].
+}}
+* {{listing
+| name=[[File:Budapest H7 HÉV.svg|30px]] H7 (Boráros tér-Csepel) line | alt= | url= | email=
+| address=Boráros tér | lat= | long=
+| directions=Take tram 2, 2B, 4, 6 or 23 to stop 'Boráros tér'. Also there is the 'Boráros tér city bus hub' bus #15, 54, 55, 212, 212A, 212B, 223E, 224, 224E, 255E terminated here
+| phone= | tollfree= | fax=
+| hours=Three to five per hour, between 04:40 and 23:40 | price=A single ticket/pass valid for entire journey
+|wikipedia=| wikidata=Q1031921
+|lastedit=2016-11-08| content=takes you to the heart of ''Csepel'' (21st district). [http://www.bkk.hu/en/timetables/#H7 Timetables].
+}}
+* {{listing
+| name=[[File:Budapest H8 HÉV.svg|30px]] H8 (Örs vezér tere–Gödöllő) | alt= | url=http://www.bkk.hu/en/timetables/#H8 | email=
+| address=Örs vezér tere (Northeast corner) | lat= | long= | directions=Örs vezér tere metro 2 station take the underpass
+| phone= | tollfree=
+| hours= | price=A single ticket/pass plus need an (extra) Metropolitan area single ticket, Price: Ft560 or buy a full ticket at cash desk Ft900
+| wikidata=Q947539
+| content=takes you to the beautiful royal castle of [[Gödöllő]], almost one hour.
+}}
+*[[File:Budapest H9 HÉV.svg|30px]] '''H9''' (branch of H8)
+
+====Other====
+[[File:2011-04-12 Schwabenbergbahn Budapest 01.jpg|thumb|The cogwheel railway entering the terminus Széchenyi hegy]]
+Some other means of public transport can be useful if you get tired of regular buses and trams, or if you want to escape from the hustle and bustle to the lush green hills surrounding Budapest.
+
+* {{listing
+| name=Tram 60 (Cogwheel railway) | alt=Fogaskerekű vasút
+| url= | email=
+| address= | lat=47.50913 | long=19.01374 | directions=
+| phone= | tollfree= | fax= | hours= | price=
+| content=A tram-like railway with historic charm, running from Városmajor terminus (two stops from Széll Kálmán tér [[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]] station by tram 59 or 61) climbing Széchenyi hill (Széchenyi hegy), Buda's popular picnic, excursion and sledging place. BKK tickets and passes are valid.
+| wikidata=Q851167
+}}
+* {{listing
+| name=Boat | alt= | url=https://mahartpassnave.hu/en | email=
+| address=Vigadó Square | lat=47.4954336 | long=19.0482607 | directions= | phone=
+| tollfree= | fax= | hours=
+| price=
+|lastedit=2023-04-04| content=Mahart Passnave (and other companies) offer boat tours in and around Budapest. Most services run at reduced frequency (or not at all) in the winter off-season.
+}}
+* {{listing
+| name=Buda Castle funicular | alt=Budavári sikló
+| url=http://www.bkk.hu/ | email=
+| address=Clark Ádám tér | lat=47.49804 | long=19.03999 | directions=Take bus No.16, 105, 210, 210B or 216 from [[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]] Deák Ferenc tér
+| phone= | tollfree= | fax= | hours=Daily 07:30-22:00 | price=Ft1400/2000 (one-way/return ticket, June 2022)
+| content=This handsome, short funicular line takes you from Chain Bridge (Lánchíd) Buda end to Buda Castle. Built in 1870, completely destroyed in World War II, rebuilt only in 1986. BKK tickets and passes are not valid. As one might expect, it is relatively expensive and touristy.
+| wikidata=Q731939
+}}
+* {{listing
+| name=Széchenyi Hill Children's Railways | alt=Széchenyi-hegyi Gyermekvasút | url=https://gyermekvasut.hu/en/timetables/ | email=info@gyermekvasut.hu
+| address=Hűvösvölgyi út (Lower terminus) | lat=47.541440 | long=18.963819 | directions=You can reach the "Széchenyi hegy" terminus by the Cogwheel railway or the other "Hűvösvölgy" terminus by taking the tram number 61 from "Széll Kálmán tér".
+| phone=+36 1 397 5394 | tollfree=
+| hours= | price=Ft800/1400 (one-way/return ticket, June 2022). BKK tickets and passes are not valid
+| wikidata=Q1029453
+| content=it's a narrow gauge line, operated partly by children. This {{km|11.2}} long line runs on the Buda Hills, giving a beautiful look at the nature around Budapest.
+}}
+* {{listing
+| name=Zugliget Chair-lift | alt=Zugligeti libegő
+| url=http://www.bkk.hu/ | email=
+| address= Zugligeti út, 97 (Lower station)| lat=47.51658 | long=18.97447 | directions=
+| phone= | tollfree= | fax= | hours= | price=Ft2000 return ticket. BKK tickets and passes are not valid
+| content=A chair lift taking you from "Zugliget" to "János hegy". While on the upwards journey you're facing the hillside, you have a nice view while travelling downwards (from János hegy to Zugliget).
+| wikidata=Q960814
+}}
+
+====Night services====
+Budapest is covered by 43 night bus lines and tram 6 operating non-stop. Numbers are triple-digit, starting with '9'. Buses run every 15–60 minutes from around 23:00-04:00. The main linking points of the night bus network are Széll Kálmán tér (former Moszkva tér) in Buda and Astoria (junction of Kossuth Lajos utca–Károly körút) in Pest. Daytime tickets and passes are valid.
+
+Most useful night routes are:
+
+* '''Tram 6''' – Running along the Nagykörút, Pest's inner ring road, every 10–15 minutes at night, usually very packed.
+* '''Buses 907, 973, 973A''' – Substitute buses 7 at night
+* '''Bus 979, 979A''' – Runs on Andrássy út as metro line M1 does during the day
+* '''Bus 956''' – Covers most of the route of metro line M2
+* '''Buses 914, 914A, 950, 950A''' – Cover the route of metro line M3
+
+On-line maps and schedules are available on [http://www.bkk.hu BKK's home page]. Real time traffic updates are posted on [http://www.bkkinfo.hu BKK Info] {{dead link|August 2020|December 2020}} There are a few Android/IOS apps for timetables, search for the word "bkk". BpMenetrend is one of them: [https://play.google.com/store/apps/details?id=hu.bpmenetrend.activity&amp;hl=en Android] {{dead link|December 2020}}, [https://itunes.apple.com/us/app/bpmenetrend/id360445890?mt=8 iOS] {{dead link|December 2020}}.
+
+Most night buses require boarding through the front door. Security guards or the driver inspects the tickets or passes prior to boarding.
+
+===By car===
+Apart from the summer holiday, Budapest has heavy traffic with long-lasting traffic jams in the morning and in the afternoon. If you don't want to spend your visit to Budapest in a traffic jam, leave your car in the hotel's garage, and use the public transport.
+
+If you drive across city centre, plan your journey, otherwise you can get into tough situations. For example you cannot turn left in most of the crossings of the inner ring road (Nagykörút) or on the main avenues like Andrássy út, Váci út, Üllői út or Rákóczi út.
+
+===By taxi===
+Budapest's taxi drivers mostly are not fluent in English or any other foreign language, but it does not necessarily mean that they intend to overcharge their foreigner guests. Use one of the major taxi companies with English speaking switchboards to avoid problems. Most companies' websites now have pages in English.
+
+'''Do not accept offers from taxi drivers waiting in the airport terminals or railway stations. Use your common sense, sit only in taxis logoed by bigger companies.'''
+
+If possible, as stupid as it may sound, try to pick a taxi with the meter in a place where the driver can't fiddle with it while driving. While the fare per kilometre stays the same, apparently it's possible to "bump" the price by adding extra basic fees.
+
+Most taxis parked in the central areas do not belong to radio taxi companies and charge much more than the usual Ft1100 main price, Ft110 per minute and Ft440 per km price. Ask about their price in advance or call any of the taxi companies above.
+
+After dark it is often best to negotiate the fare at the beginning of the ride as drivers often charge exorbitant rates to unwary travellers. Be sure to make sure your change is in Hungarian forint or euros and not in another country's currency. Most taxi drivers only take cash payments but some of the larger taxi companies now equip their cars with POS terminals (allowing you to pay by plastic).
+
+Be very careful when taking taxis to or from nightclubs. There are multiple reports of drivers taking passengers to a different location (one that pays them a commission) and charging a fare up to 10 times the normal amount.
+
+If you would prefer a luxury taxi, like a Mercedes, they can usually be found at the upmarket hotels. Fares, of course, are higher in these cars but the drivers are more reputable and more likely to speak English or German.
+
+Calling your own taxi will be less expensive than having one booked for you in a hotel; it's also almost always cheaper to call a taxi than to enter a waiting one or to signal one that drives by you.
+
+Ride-hailing is available in Budapest:
+* {{go
+| name=Bolt | alt= | url=https://bolt.eu/en/cities/budapest/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikipedia= | wikidata=
+| lastedit=2020-07-09
+| content=
+}}
+
+===By bicycle===
+[[File:Budapest, Hungary (Unsplash 0gLH1kqRldc).jpg|thumb]]
+Budapest may be one of the most exciting places of Europe, but it's still not a cyclists' paradise. Generally, the city is not prepared for cyclists' presence, although the situation is slowly changing. Budapest has been home to Europe's biggest cycling demonstration, '''[http://criticalmass.hu/ Critical Mass]{{Dead link|date=January 2023 |bot=InternetArchiveBot }}''', where in 2008 more than 80,000 people participated. Bike delivery is becoming a common job (you'll see NetPincér and Wolt cyclists everywhere), and there are more than a few gem bike paths, along either side of the Danube river traversing all the way to Szentendre on the Buda side.
+
+Bike lanes of varying quality exist but are not universal and don't form a good network. In many places, the bike lane is a part of the pavement, with only a yellow line separating it from the pedestrian zone; in some places (e.g. on the upper quay on the Buda side of the Danube, between the Chain bridge and the Elisabeth bridge) the bike lane and the pedestrian pavement even swap sides with no warning.
+
+In the city centre (e.g. Andrássy út), expect cars parking on bike lanes, and drivers opening car doors recklessly; on pavements, expect pedestrians wandering into the bike lane.
+
+Many native cyclists regard cycling not as a means of transportation but a form of extreme sport. You can see them zigzagging between pedestrians in bike lanes, ignoring red lights (but, thankfully, not traffic), cycling along one-way streets in the wrong direction, alternating between using the road and the pavement where no cycle lane exists, at speeds of more than 30&amp;nbsp;km/h (20&amp;nbsp;mph). Quite a few cyclists don't have any lights; when cycling after dark, be prepared for surprise encounters.
+
+If, while walking, you hear a shout, be prepared to get out of the way quickly. Many cycles don't have bells, and pedestrians are not used to bells either; if you're cycling, expect many pedestrians to ignore your bell. Also, beware of pedestrians wandering onto marked bicycle paths, especially in areas with heavy pedestrian traffic.
+
+Large parks like the Városliget, the Margaret island and the Hajógyári (a.k.a. Óbudai) island are pleasant for cycling.
+
+Cycling is forbidden on the lower quays on both sides, but the upper quays mostly have bike lanes; however, in many parts pedestrian traffic is so high that cyclists can't make good speed.
+
+Cycling is typically forbidden on most hiking trails of the Buda hills, but mountain bikers tend to ignore this.
+
+If you think you are ready, renting a bike is easy but not cheap. Expect to pay Ft2000-3000 for a day.
+
+Budapest has a number of bike rental companies. Some of them are:
+
+* '''[http://www.budapestbike.hu/rent-a-bike Budapest Bike] {{dead link|December 2020}}''', +36 30 944-5533. Rent a bike starting at Ft2000 for 6 hours.
+* {{listing
+| name=Yellow Zebra Bike | alt= | url=https://www.yellowzebratours.com/ | email=
+| address=Régi posta utca 2, Budapest 1052 | lat= | long= | directions=
+| phone= +36 70 56 56 115 | tollfree= | fax=
+| hours= Daily 09:00-21:00 | price=
+| lastedit=2024-01-16
+| content=Bike range from 3-speed cruisers to trekking and road bikes (at higher prices).
+}}
+* '''[http://www.bikebase.hu/rentabike.php Bikebase]''', +36 1 269-5983. Bike rentals available for Ft2,000 for 24 hours.
+* '''[http://dynamobike.com Dynamo Bike]''' +36 30 868-1107. Cute bike rental shop and bakery cafe. Bike rentals starting at Ft3,000 per day.
+* For the centre, consider using the city's bike rental stations [https://www.budapestinfo.hu/en/mol-bubi-community-bike '''Mol/Bubi bikes'''] 
+virtually everywhere in the city.  You need to download their mobile app which shows all the parking lots and places for renting. It's priced at Ft50/minute. Extremely convenient and cheap compared to buses. This is a municipal initiative is based on Nextbike, which also allows riding up to 30 minutes for free if you have a pass (monthly is the smallest for Ft1500), and then you can just park and get a new bicycle for another half an hour. However, as of June 2025, foreigners cannot get such a pass and can only select paying model without a pass.
+
+===By scooter===
+Although not as fancy as in Rome or Paris, scooters are becoming more common in the streets of Budapest. Inside the city scooters can be driven on the tram and bus ways, often buzzing in between traffic. Although most car drivers are quite used to the scooters around them, some can still be slight irresponsible. Ignore their pushiness and drive conservative and you should not experience any problems. The best roads are the main ring roads as these have plenty of space and good asphalt. The smaller in between roads and roads in hilly Buda can be of lesser quality with some unexpected potholes or tough to see speed bumps.
+
+A limited number of companies offer scooter rental and scooter tours inside the city centre. Expect to pay around Ft6,000 for a day. Some companies that offer scooter rental are:
+
+* '''[http://www.retro-robogo.hu/ Retro Robogó]{{Dead link|date=July 2023 |bot=InternetArchiveBot }}''', +36 70 432-0444. Rent a scooter starting at Ft3,600 per day (week rental).
+
+In Hungary scooters with an engine up to 50cc can be driven without license plate and only a regular car drivers license. However these 50cc scooters cannot be driven with a passenger. Helmets are compulsory. For scooters and motorcycles with an engine size above 50cc a licence plate and motorcycle driver's licence is required. If you are experienced with driving a scooter, it is a great way to experience the city
+
+===By skateboard===
+Pest is ideal for skateboarding. Pavements are wide and smooth without too many pedestrians to avoid. Police won't pay you any attention as long as you are using your skateboard for transport and not trying to do tricks.
+
+==See==
+
+{{seeDistricts}}
+
+[[File:Budapest aussicht.jpg|thumb|right|The Danube River and the leafy hills of [[Budapest/Buda|Buda]]]]
+
+'''The Danube'''. This is what's unique about Budapest, the urban river landscape. This feature can be admired in several ways: from panoramic points, such as Fisherman's Bastion or Gellért Hill's ''Citadella'' in [[Budapest/South Buda|South Buda]], promenading along the river banks, or from the river's perspective, from a boat. For romantic views of the city, go at night. There is a number of '''bridges''' (see [[#Orientation|Orientation above]]) that arch over the river and define Budapest. Most famous is the '''Chain Bridge''' (''Széchenyi Lánchíd''), owing its name to the suspension structure: the bridge is made of chains whose links are huge dog-bone shaped metal bars linked by pins at their ends. And there is also the magnificent ''Elisabeth bridge'' (''Erzsébet híd'') and the ''Liberty bridge'' (''Szabadság híd''). To get away from all the hustle of the city visit '''Margaret Island''' (''Margitsziget''), reachable from the Margaret bridge. Its large parks (see [[Budapest/Buda|Buda]]) are a very pleasant place to relax and wander, perfect for a sunny afternoon.
+
+[[File:Saint Stephen's Basilica Budapest.jpg|thumb|right|St Stephen's Basilica is named after the first Hungarian king, and it is one of the tallest buildings in the city]]
+
+Most of Budapest's famous sights are concentrated on [[Budapest/Budavár|'''Castle Hill''']] on the '''Buda''' side, in downtown so called [[Budapest/Belváros|Belváros]] and along the riverside walkways.
+
+On '''[[Budapest/Budavár|Budavár]]''' the main highlight is the '''Royal Palace''' (''Királyi palota''), which is the most popular attraction on the hill. It is home to the [http://www.mng.hu National Gallery] and the [http://www.btm.hu Historical Museum of Budapest], with exhibits about medieval Budapest and history of the Royal Palace. To the north you can find the funicular on a big square southestern corner, while in the eastern part there are some medieval excavations and castle ruins from 14-17th century. Towards the north, by the Dísz tér corner, is the Golden Eagle Pharmacy Museum (Arany Sas Patikamúzeum), with a collection of pharmaceutical objects from the Renaissance and Baroque eras. Near there is the Café Ruszwurm, or 'the Heaven for coffein and sweets addicts'. A hundred meters east is a local pride, the Matthias Church (Mátyás Templom), which is a Neo-Gothic church crowning Budapest's cityscape,  and the 'Fisherman's bastion', (''Halászbástya''), a lookout terrace with impressive views across the Danube to Pest. In the next building is the Marzipan Museum, which is a children's favourite. On the castle northwest corner is the [http://www.militaria.hu Military Museum] if you interested for uniforms, weapons, maps and other Hungary-related military objects from 11th century until nowadays. If not, you must to go there because the view from there is worth a short detour. Almost all of west Buda hill is visible from here.
+
+'''Central''' (''[[Budapest/Belváros|Belváros]]'') of '''Pest''' is the administrative and business centre of Budapest and the whole of Hungary. Visiting first the '''Parliament Building''' (''Országház'') is good choice. A Neo-Gothic jewel, it is beautifully situated overlooking the Danube. It is very much worth going inside. Opposite the Parliament, the Museum of Ethnography is located, and just couple hundred metres is [http://basilica.hu St Stephen's Basilica]{{Dead link|date=June 2023 |bot=InternetArchiveBot }}, the main church of Budapest and an important example of Neo-Classical architecture. Take 2 stops by M3 to Astoria station and visit the Jewish quarter (part of Unesco World Heritage), the main Hungarian Jewish holy place the [http://www.dohany-zsinagoga.hu/ Dohány Street Synagogue and Jewish Museum] (Dohány utcai Zsinagóga), the largest and certainly among the most beautiful ones in Europe. Take the underpass toward [http://www.museum.hu National Museum], on the way admire the [http://www.btk.elte.hu/en Eötvös Loránd University]{{Dead link|date=November 2025 |bot=InternetArchiveBot }} on Múzeum körút. It is worth dropping by for a short visit. Visitors can rest in the lush '''Trefort Garden''' or have a refreshment in the popular '''Bölcsész Terasz''', an open-air cultural garden that has musical performances as well as food. If you take metro to Kálvin tér, you can visit another important museum  which is the [http://www.imm.hu Applied Arts museum].
+Outside the centre towards the south take tram 2 to visit the famous Zwack Unicum, a type of alcoholic spirit, company museum, and the new culture hub near to Lágymányosi bridge include the [http://www.ludwigmuseum.hu Ludwig Museum of Modern Art].
+[[File:The Millennium Monument in Heroes' Square, Budapest, Hungary.jpg|thumb|right|160px|Heroes' Square]]
+[[File:Òpera de Budapest.jpg|thumb|Budapest Opera]]
+'''Eastwards''' from the city centre (''Belváros'') the 'Andrássy út' boulevard in [[Budapest/Terézváros|Terézváros]] stretches to the City Park ('Városliget'). It is listed on {{UNESCO}} and has some important sights along it. First is the ''State Opera House'', one of the most beautiful opera houses in the world. The main staircase was an important element of the building in the 19th century for ladies to show off their new gowns. Second is Oktogon (eight angled) square [http://www.terrorhaza.hu/en House of Terror], the former secret police headquarters that now is a museum which objectively documents the terror of the Nazi and Communist eras. Next are some eastern culture museums in the [http://www.hoppmuseum.com Hopp Museum of East Asian Art]{{Dead link|date=July 2024 |bot=InternetArchiveBot }} a great collection from China, Japan, India, Nepal, Tibet and Mongolia.  Nearby is another similar collection, namely '''Ráth György Museum'''. Along the boulevard after Oktogon square, you will find many embassies in nice, over 100 year old villas. At the road's end is the Heroes' Square - with the Millennium Monument. Opposite is the [http://www.szepmuveszeti.hu Museum of Fine Arts] with an incredible range of European artwork from Greek and Roman times to the present. Especially valuable is its collection of Spanish Baroque painting. Behind it there is the zoo and the Gundel restaurant, one of the best of the capital. Woodpark area starts here, with the ''City Park'' ('Városliget') at the far end, probably the most pleasant of Pest's districts and featuring several interesting if low-key attractions which are often overlooked. A castle on a little island on a lake, - ''Vajdahunyad Vára'', - built for the 1898 World Fair. In the winter, the lake is turned into the city's biggest ice rink. Nowadays it houses an agricultural museum. Also in the park is the Transport Museum.
+
+On '''Buda''' side north from castle you will find the [http://www.museum.hu/museum/index_en.php?ID=27 Gül Baba Türbéje], a shrine where ''Gül Baba'' (literally Rose Father, from whom the ''Rózsadomb'' (Rose Hill) was named) lies. Take H5 to Szentlélek square, which is the heart of [[Budapest/Óbuda|Óbuda]] (Old Buda) district. Near to the square is '''Victor Vasarely Museum''' showing many works of the famous Hungarian-born post-modern painter ''Vásárhelyi Győző'' (1908-1997), and the '''Kassák Museum''' at the Zichy Castle showing works of the modern Hungarian artists as well as modern Hungarian art. Also near the square is the [http://www.kiscellimuzeum.hu/ Kiscelli Museum], the Budapest Picture Gallery. More one stop on H5 is the city biggest archeological site: the [http://www.aquincum.hu Aquincum], a city in the Roman times, where there are some ruins of thermal baths, built on stone and decorated with mosaics and paintings.
+
+'''Far to west''' ([[Budapest/South Buda|South Buda]]) is the [http://www.mementopark.hu Memento Park], an open air museum in Budapest, dedicated to monumental statues from Hungary's Communist period (1949–1989).
+
+Southward from the Castle is the [https://hagyomanyokhaza.hu/en '''Budai Vigadó''' (Hungarian Heritage House)]. Between 1898 and 1900 winners of an architectural competition faced a demanding project: build a theater and library to suit the needs of the residents of Buda on the site of a former arsenal. Aladár Árkay and Mór Kallina worked to change the pre-existing building into a cultural center. The Vigado’s outside is constructed in a relatively simple, eclectic style, but the interior boasts an impressive Art-Nouveau hall with a marble staircase and pillars and a spacious, ornate theater. Today, it is also known as the Hungarian Heritage House and is the home theater of the [http://www.ticket.info.hu/en/program/folklore-performances/hungarian-state-folk-ensemble Hungarian Folk Ensemble].
+
+Music related museums are also in the city: the '''Kodály Museum''', the '''Liszt Museum''', former home of Ferenc Liszt, the most famous Hungarian composer, where a collection of his personal objects and instruments can be visited (3500 HUF full price as of November 2025, plus 1000 HUF for the audioguide which is highly recommended to get the full benefit of the museum). '''Bartók's House''' and the '''Music Museum''', includes a collection of musical instruments and the Bartok archive.
+
+==Do==
+&lt;!-- Details of Do options go into the appropriate district, not here --&gt;
+* The simplest, and perhaps best of all: get a map, circle the things you want to see, divide up your time and '''stroll around in the city'''. Spend time in charming cafés or restaurants, preferably not right at the main tourist sites, look at the market stands, walk on a bridge in the evening. The lively atmosphere of this jewel of a city both by day and by night cannot be experienced via guided tours, locked into a tourist bus/boat. Locals are usually happy to help, also to tell you what they think is best to see, what is better to stay away from or for a little chat just to keep up their English or German. Don't hesitate to ask questions.
+**  {{do
+| name=Hungaria Koncert | alt= | url=http://www.hungariakoncert.hu | email=hunkonc@ticket.info.hu
+| address= | lat= | long= | directions=
+| phone=+36 1 317-1377 | tollfree= | fax=
+| hours= | price=
+| content=Operates cruises with lunch or dinner daily at 14:00, 19:00 and 20:00. This service is 90 minutes with hot buffet lunch or dinner. During the cruise, the Parliament, Chain Bridge, Royal Castle, Palace of Arts, etc. can be seen.
+}}
+* Rent a bike. Rents are around Ft1,800 for half a day. Szentendre is a 2 hours ride from the centre and you get to see nice places, much of the way is at the Danube. If you prefer more organised ways, a guided bike tour gets you some exercise and introduces you to the local geography. For example, staff at Buda Bike [underground garage at the plaza in front of St Stephan's Basilica] are very friendly. They also rent bikes. [http://www.mozgasvilag.hu/budapesti-kerekparut-terkep Bike map on the Net ]
+* Walk in the '''City park''' (Városliget) with your children. Walk around the lake and feed the ducks. See the statue of Anonymus at the Vajdahunyad Castle, a fairy-tale-like building. Széchenyi Spa, right next to the lake, is also enjoyable for children (see also the Baths section).
+* In the winter, the same lake is transformed into the large '''[http://www.mujegpalya.hu ice-skating rink]''' with an astonishing view during winter. It is a popular place for children and teenagers.
+* The nearby [http://www.fnc.hu/eng/our-show '''Circus'''] (Fövárosi Nagycirkusz - Great Circus of the Capital) offers performances with international artists.
+* Next to it, the '''Budapest Zoo''' - one of the oldest in the world - offers more than 800 animals to be seen in a historic atmosphere.
+* Experience an '''opera''' at Budapest's beautiful State Opera House or a performance of '''folklore''' or '''classical music''' at any of Budapest's many concert halls (details under Performing arts).
+*'''[https://budapestdanuberivercruise.com Budapest River Cruise]''' is an option to discover the city with Danube boat which takes 75 minutes and you can visit the most popular places with it.
+
+=== Events ===
+
+* {{do
+| name=Budapest Spring Festival | alt= | url=http://www.btf.hu/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=In March, a dazzling variety of cultural events mainly revolving around classical music and performing arts - including folklore.
+| wikidata=Q851208
+}}
+* Grand Prix or [[Formula One]] '''motor racing''' at Hungaroring in [[Pest#Q9233|Mogyorod village]].
+* {{do
+| name=Firework above Danube River | alt=Tűzijáték | url= | email=
+| address= | lat= | long= | directions=Between Petőfi Bridge and Árpád Bridge
+| phone= | tollfree=
+| hours=21:00 on 20 Aug | price=Free except if you wish to see from the air
+| content=National Holiday. Sound &amp; light show with fireworks. Around half hour open air show.
+}}
+* {{do
+| name=Jewish Summer Festival | alt= | url=http://www.zsidokulturalisfesztival.hu/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Another array of cultural and music events, with a Jewish touch.
+}}
+* [[Budapest/Aquincum#Q914820|'''Sziget''']] festival attracts rock fans, world music hippies and the usual festival crowd every August. It has become one of the best-known festivals in Europe.
+
+===Performing arts and classical music===
+Apart from a renowned music scene, Hungary has a surprisingly rich theatre and art scene and, not surprisingly, Budapest is the epicentre of it. The season begins in mid-September and ends in June. Productions range from classic dramas and traditional operas to post-modern dance performances. The following venues can be particularly interesting for non-Hungarians. Tickets are bookable about one month beforehand at [http://www.interticket.hu Interticket]{{Dead link|date=May 2025 |bot=InternetArchiveBot }}, the Hungarian theatres' official booking engine with a booking fee of 10% + Ft50.
+
+===Cinema===
+In spite of increasing funding difficulties, high quality cinema has remained alive in Budapest. For contemporary non-mainstream European and Hungarian titles turn to Budapest’s excellent art house film chain, '''[http://www.artmozi.hu/ Art mozi]''', most of their branches are provided with a café or pub and offer pleasant atmosphere to spend your evening. A few selected cinemas of this chain: [http://www.urania-nf.hu/ Uránia National Cinema] | Uránia Nemzeti Filmszínház where you can see the mainstream European artistic films with new Hungarian ones, the latter sporadically subtitled in English; Cinema Puskin (Puskin Mozi) an elegant, decorated multiplex offering quality, but generally easy-to-watch Hungarian and foreign films; Cinema Művész (Művész Mozi) is probably the most popular “Art Mozi” theatre in Budapest; Film Museum Örökmozgó (Örökmozgó Filmmúzeum) is your best choice if you’re in mood to see a film from the times when Leonardo DiCaprio was a child, mostly film in original language and are subtitled in Hungarian. Mainstream cinemas mainly show subtitled or dubbed Hollywood films and Hungarian romantic films. After the shopping centre revolution in the late 1990s, more than two thirds of the city’s cinema screens are operated by international chains and franchises. Two examples are: [http://www.corvin.hu/ Corvin]{{Dead link|date=September 2023 |bot=InternetArchiveBot }}, one of the oldest, although completely modernised cinema in the city. The most centrally located cinema is the [http://www.westend.hu/ Palace Westend] in Pest.
+
+===Thermal baths ===
+{{seeDistricts}}
+
+&lt;!-- PLEASE DO NOT ADD INDIVIDUAL LISTINGS HERE, ALL LISTINGS SHOULD BE IN THE APPROPRIATE DISTRICT ARTICLES such as 'Buda' or 'Pest', found at the beginning--&gt;
+[[File:GellertUszoda1.JPG|thumb|right|Gellért Baths]]
+Budapest has many '''thermal springs''' and its fame is still rising as a major European Spa location. The baths are among last vestige of Turkish culture in Budapest; some baths indeed date back to Turkish times. However, Hungarians have modified and moulded this tradition into something of their own during the last four centuries.
+
+Thermal baths contain several thermal pools. They are usually complemented with multiple '''steam baths,''' '''massage services''' and other therapies including '''drinking cures'''. Budapest baths mostly require you to wear a bathing suit and sandals.
+Among foreigners, Russians seem to be most frequent visitors to Budapest's baths, followed by Italians and Americans.
+
+A tradition of '''night bath parties''' has evolved, often revolving around various branches of electronic music, [https://spartybooking.com/cinetrip-2/ see e.g. Cinetrip]{{Dead link|date=November 2023 |bot=InternetArchiveBot }}.
+
+====Traditional public baths====
+Traditional public baths used to have a slightly outdated but nowadays improving service and admission system and allow an authentic bathing experience with locals around you. At the cash desk, you sometimes have to select treatments in advance, often they are offered in distinct places of the building. Bathing time is not restricted, and, depending on the system, if you're finished earlier, part of your fee is repaid. Flip flops or "slippers" are mandatory. It is good idea to bring your own flip flops, swim cap and towel, although these can be purchased or sometimes rented either at the entrance or inside. Changing clothes can be done either in a common area with lockers (gender segregated) or in cabins (kabinok) which may come in different size and is highly useful for families. While newer systems may be introduced, according to the proper ancient ritual you're handed a token with a number, which is also written on a blackboard inside the cabin door as a security code: you must remember the cabin number. To access your cabin again, show your cabin and a token to the attendant, and s/he'll open the door and check the number inside. In swimming pools, swimming caps are sometimes obligatory, and are often available for sale or rent.
+
+====Modern baths====
+Modern baths, such as Danubius Grand Thermal Hotel, are usually called spas, although their central component are thermal pool and multitude of steam baths/saunas, which is not always typical for [[spas]] in other parts of the world.
+
+=== Sports ===
+* '''Football:''' the Hungarian national soccer team play at Puskás Aréna in Zugló district, completed in 2019. Several professional clubs play in the city - those in the top tier (''Nemzeti Bajnokság'' or NB 1) are Ferencvárosi, Újpest and MTK Budapest. Honvéd since 2023 play in the second tier.
+* The city has many health clubs, yoga &amp; pilates clubs, riding schools, swimming pools and squash and tennis courts. On Margaret Island you will find joggers, and swimming in the Hajós Olympic Pool. Sports facilities are inexpensive in Budapest.
+
+===Caving===
+&lt;!-- PLEASE DO NOT ADD INDIVIDUAL LISTINGS HERE, ALL LISTINGS SHOULD BE IN THE APPROPRIATE DISTRICT ARTICLES such as 'Buda' found at the beginning--&gt;
+
+* Caving in Budapest ranges from well-lit and renovated Szemlőhegyi cave, where you can go to parts of the cave in a wheelchair, to some of the more extreme tours in the '''Pál-völgyi–Mátyás-hegyi''' cave system, where you have to squeeze through several metres long passages with no room to spare. The Pál-völgyi–Mátyás-hegyi cave system is recommended for the adventurous (and non-claustrophobic) who wants "proper caving" instead of the more "tourist friendly" alternatives. The tours lasts between 2½–3 hours and much of the time is spent crawling or climbing, so some degree of fitness is needed. The guided tour includes a helmet, headlamp and overall so '''bring good shoes'''. Guides are professional. English guided tours are usually on Mondays, Wednesdays and Fridays late in the afternoon, but can be pre-booked by groups at other days as well. Bookings need to be for at least 4 people.
+
+Please do not litter, write your name on the cave wall or damage the cave in any other way. Part of the experience is the feeling of being in unspoiled nature.
+
+==Work==
+
+* [[Teaching English]] is a popular profession for travellers and people moving to Budapest.
+
+Generally speaking, finding a full-time job is fairly difficult unless you speak Hungarian. You should also be prepared that Western standards at job interviews regarding personal life and diversity issues do not always apply. Do not be surprised if you are asked about your smoking habits. Also, companies are not always prepared to fully understand and accept people from diverse backgrounds. You should be prepared that most places won't hire you until you speak at least a little Hungarian. Restaurants with a specific country's cuisine, such as Italian restaurants and pizzerias, tend to hire people from that country to make the food more authentic.
+
+==Buy==
+
+When receiving change from a taxi journey, make sure that the money is actually Hungarian. Some taxi drivers have been known to give unsuspecting passengers obsolete Romanian banknotes (lei).
+
+[[File:Budapest GreatMarket Paprika.JPG|thumb|Paprika and more, Great Market Hall]]
+Many reliable exchange bureaux can be found in the city centre near Deák Ferenc tér metro station. For example, there are two shops next to the tourist information. These shops as well as other shops in the area offer a better rate than other banks at tourist spots such as international bus stations and the castle hill. The rate might be even better than getting cash from ATMs. There is also no extra charge. If you're looking for money exchange in the Keleti station, be sure to check exchange rates at all the three money exchange shops along the platforms; they offer differential prices. See [[Hungary#Money]] for information on currency and exchange rates.
+
+[[File:Chocolateshop.jpg|thumb|A chocolate shop in Budapest]]
+Most of the visitors from far away end up shopping in [[Budapest/Pest#Buy|Pest]] in the middle of the city: ''Váci utca'' and nearby. It is historically the most expensive part of the city. You'll find Hungarian linens and lace, pottery, and other items, in souvenir shops.
+
+You definitely want to visit the '''Great Market Hall''' (''Nagy Vásárcsarnok'') at ''Fővám tér'', the renovated market hall with essential atmosphere (it's at the south end of Vaci). Prices for the same items vary a lot between sellers and aren't set in stone so be sure to compare and bargain.
+
+===Non-speciality shopping===
+Also, chain stores can be found along the ''Váci utca'' (C&amp;A, H&amp;M, Clinique, Estee Lauder, New Yorker, etc.)
+
+The shopping malls locally known as "Plazas" are usually good for buying clothes, but prices may vary wildly even in shops next to each other. For electronics, the cheap supermarkets like ''Electro World'' and ''Media Markt'' are good targets, but the quality is on par with the prices. Due to the low cost of labour, a tradition in repairing mobile phones and other appliances exists, and buying second hand electronics is normal. This service is usually offered in smaller private shops.
+
+Absinthe is available for purchase at common liquor stores, a must-have purchase for the European traveller. Many brands available in the Market Hall and liquor stores are of poor quality (or not even "real" Absinthe).
+
+==Eat==
+{{seeDistricts}}
+&lt;!-- PLEASE DO NOT ADD INDIVIDUAL LISTINGS HERE, ALL LISTINGS SHOULD BE IN THE APPROPRIATE DISTRICT ARTICLES such as 'Buda' or 'Pest', found at the beginning--&gt;
+Hungarian food deserves to be (and often is) mentioned among the country's main sites. As in other cultures, the Hungarian approach to food combines pride in their own traditions with a readiness to accept outside influences. The result is a vibrant restaurant scene where an Asian-Hungarian fusion restaurant may well be of genuine interest. Luckily, prices are significantly below western Europe's with around €4 for a budget lunch, and around €8-14 for a nice evening meal in a mid-range restaurant, depending on place and appetite. Above €20 per person is definitely considered expensive, but there are enough lavish places above this price range for those looking for something special.
+
+Local specialities often revolve around meat (pork, beef, veal, or poultry), often involve liberal use of paprika, however not necessary of the hot kind. Due to a historical translation error, "goulash soup" is indeed a soup, not the "goulash" that visitors may be familiar with from home which is known as "pörkölt".
+[[File:Budapest Street Goulash.jpg|thumb|Budapest Street Goulash]]
+Major specialities include:
+* '''gulyás (leves)''' usually translated as 'goulash soup' - a filling meat soup (usually beef) with potatoes and paprika, among other ingredients. Served as main dish or as a (heavy) starter. The name refers to the Hungarian version of a cowboy taking care of a 'gulya' (cattleherd).
+* '''paprikás''' veal or chicken cooked in delicious creamy paprika sauce (not spicy)
+* '''pörkölt''' a beef stew with sautéed onions and paprika. Similar to what is served as 'goulash' abroad.
+* '''halászlé''' - fishermen's soup served differently depending on region
+* ''' töltött káposzta''' - stuffed cabbage, the cooked cabbage leaves are filled with meat and in a paprika sauce, served with sour cream (similar to crème fraîche or crème acidulée)
+* '''Balaton pike-perch''' (fogas)
+* '''gyümölcsleves''' - fruit soup - cold, creamy and sweet, consumed as a starter.
+
+From the desserts, you may not want to miss
+* '''Somlói galuska''', a poem on biscuit dough, cream and chocolate sauce, invented by Károly Gollerits at Gundel
+* '''Gundel palacsinta''' - Gundel pancake (crepe) - with a filling prepared with rum, raisin, walnuts, and lemon zest, served with a chocolate sauce, and the careful reader may guess its birthplace.
+* '''Kürtőskalács''', (chimney cake) a delicious sweet dough pastry which is cooked on a chimney shaped spit and coated in butter and sugar to form a crispy crust. After the cakes are cooked they can be rolled in a variety of toppings such as cinnamon sugar or chocolate.
+*  There is also a great variety of wonderful pastries/cakes ('''Torta'''), some of which you will recognize if you are familiar with Viennese pastries. You may want to try '''Dobos torta''' (Dobos cake, named after József Dobos), and '''Rigó Jancsi''' a light chocolate-cream cake.
+
+In addition to traditional Hungarian fare, which is recommended, there are numerous other cuisines available in Budapest.  The adventurous gourmand can enjoy a different cuisine each meal for a week.  Restaurant prices in Budapest are very reasonable by American and Western European standards with a general rule being that you would pay twice as much for a similar meal in New York, London or Paris.
+
+===Coffee houses===
+
+Coffee houses (''kávéház'') were a traditional Budapest institution, somewhat resembling Viennese lifestyle. A visit to one should be on every traveller's agenda. These places are great to spend some time at a cup of coffee and a delicious cake, but some of them (especially in the higher price range) offer meals as well. With dozens of places in the city, the best-known, landmark coffeehouses (and among priciest) are: [http://www.gerbeaud.hu/  Gerbeaud] (Vörösmarty tér 7-9), [http://www.muveszkavehaz.hu/ Művész Kávéház]{{Dead link|date=August 2024 |bot=InternetArchiveBot }} (Andrássy út 29), [http://www.newyorkcafe.hu/ New York Kávéház] (Erzsébet krt. 9-11). Other Kávéházs worth visiting include the café at the Hotel Astoria, Café Central, the Café Mozart, Wall Street and the oldest in Budapest, the Ruszwurm in Buda castle.
+
+=== Restaurants ===
+Hungarian cuisine and restaurant experiences are happily remembered by visitors, even if the Hungarian diet may seem rather meat-based to many western visitors. The city has large variety of great places to eat at prices quite reasonable for western-Europeans. Like in some other cities, a number of restaurants see tourists as scapegoats. It is a good idea to avoid restaurants in the heart of the most touristic areas like Váci utca, especially if all customers seem foreigners, as you'll likely be served mediocre food with a high bill padded with number of bizarre charges. In some restaurants anything you don't explicitly ask for, but appears on your table, is likely to be charged for. Don't take restaurant tips from suspicious individuals on the streets, ask at your hotel or local friends.
+
+A wide variety of decent food for not reasonable prices can be found at the lively Ráday utca, venue of a number of cultural events, near Kálvin tér. But simply strolling the more central areas, e.g. near the Great Ringroad (Nagykörút), or the Pozsonyi út, will be enough to bump into nice places to test local cooking skill (though not necessarily with a menu available in English).
+Top-notch quality food (1st category restaurants) charge a wide range of prices (from starters around Ft1,000, main courses Ft3,000-10,000, and menus from Ft5,000). Perhaps the most reputed among top restaurants is the '''[https://gundel.hu/en/ Gundel]''' near Városliget. Check the prices before you decide to go, but it offers a good value Sunday brunch for around Ft5,000.
+
+Walking along the Danube on the Pest side, you see a lot of '''restaurant and bar boats'''. Most of them serve traditional Hungarian and international dishes, some of them are function more as bars. Thanks to the beautiful panorama across the Danube and the castle, these places provide an unforgettable experience.
+
+Of special note: Hungarian law does not require restaurants to forward either the (included) service charge or the added tip to the wait staff. Dubious restaurants, especially those favored by tourists, will simply pocket the extra Forint into their private coffers. While it is customary to tip 10% of the bill, it is important to ask your waiter if the service charge is included in the bill '''and''' if the staff receives either the service charge or any additional tip. Obviously, it is better to frequent restaurants which treat their staff well, but you may not know in which kind of establishment you are dining until you receive the bill and inquire.
+
+==== Chains ====
+Only cross-district chains are listed here; see [[#Districts|district articles]] for individual restaurants.
+
+*  {{eat
+| name=Trófea Grill | alt= | url=http://www.trofeagrill.hu | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=The best among all-you-can-eat (buffet) and all the alcohol you can drink. Best to book a table in advance. Has 4 locations. 1 on Buda downtown by Margaret Bridge (Margit körút 2)
+}}
+* {{eat
+| name=Leroy Cafe | url= | email=
+| address=Pest (5 locations), Buda (3 locations) | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content= (See district article Pest for details) Mid- to high-priced restaurant chain that offers Hungarian classics with other Italian and European cuisine.  Very fashionable interiors and popular with the well-paid white collar crowd. Reservations are recommended during traditional peak times. When eating here, always make sure that you won't be slapped on an extra 100% service charge. Read the menu before entering the restaurant carefully and insist on talking to someone who speaks English.
+}}
+
+=== Vegetarian/vegan === 
+[https://www.facebook.com/pages/Govinda/191421937570602 Govinda ] (M–F 11:30–20:00, Sa 12:00–21:00) is a great vegan/vegetarian restaurant in Budapest. You can choose from different menus every day or just order separate dishes; moderately priced. The Govinda chain has three restaurants in Budapest. The main restaurant is at Vigyázó Ferenc utca 4, ''Govinda Vega Corner'' is at Papnövelde utca 1, and the ''Govinda-Buda'' is at Árpád fejedelem utca 33. 
+
+Edeni Vegan in [[Budapest/Víziváros#Mid-range|Víziváros]] is a cafeteria-style vegan restaurant, with large portions that are relatively cheap.
+
+=== Grocery shopping ===
+If you want to take home some Hungarian paprika, Pick szalámi, or Tokaji wine, grocery shops are naturally cheaper than specialised souvenir kiosks.
+
+In the central areas, you will find smaller grocery shops such as the Hungarian chains [https://www.groby.hu/uzletek/ GRoby shops], [http://www.cba.hu/ CBA shops], and the usual European suspects [http://www.spar.hu/content/aspiag_spar_hu/hu_HU/uzletek.html?_charset_=UTF-8&amp;keyword=budapest&amp;searchtype=1&amp;targetPage_1=%2Fcontent%2Faspiag_spar_hu%2Fhu_HU%2Fuzletek.html&amp;targetPage_2=%2Fcontent%2Faspiag_spar_hu%2Fhu_HU%2Ftermek-kereso.html&amp;targetPage_3=%2Fcontent%2Faspiag_spar_hu%2Fhu_HU%2Freceptek.html&amp;targetPage_4=%2Fcontent%2Faspiag_spar_hu%2Fhu_HU%2Fszolgaltatasok%2Fosszes-kereso.html Spar]{{Dead link|date=January 2023 |bot=InternetArchiveBot }} and [http://tesco.hu/aruhazak/expressz Tesco Express shops]{{Dead link|date=July 2024 |bot=InternetArchiveBot }}.
+
+Further from the centre, you can find foreign-owned hypermarkets like [http://www.auchan.hu/ Auchan] &amp; [http://tesco.hu/aruhazak Tesco] with the usual range of goods.
+
+====Cooking class====
+The best way to get to know a culture is through its food! Join a Hungarian host in cooking a Hungarian menu in an authentic Hungarian home.
+
+[http://www.easycookingbudapest.com Easy Cooking Budapest] offers a program of shopping at a local market, then cooking together in a small group at an apartment, while tasting some wine and Pálinka. 
+
+===Others===
+
+There are several Kosher restaurants  in [[Budapest/Erzsébetváros#Kosher|Erzsébetváros]] district, and Rothschild Supermarkets (found throughout the city centre) offer Kosher goods too.
+
+Halal food is not traditional for Budapest but a number of places are available.
+Check this [http://busralilmuhminin.blogspot.hu/2011/01/halal-husboltok-es-ettermek.html  Muslim site] for meat shops (húsboltok) and restaurants (Éttermek).
+
+A version of döner kebab (as known e.g. in Germany) is sold under the Greek name "gyros" (often by Turks!). Translated from Turkish döner, gyros means "rotate" or "spintop" in Greek, a reference to the meat being rotated on a stake.
+
+One good moderately priced Turkish halal place is Szeráj on Szt. István körút opposite to the theatre building of "Vígszínház", between Nyugati tér Margaret Bridge.
+
+==Drink==
+{{seeDistricts}}
+
+&lt;!-- PLEASE DO NOT ADD INDIVIDUAL LISTINGS HERE, ALL LISTINGS SHOULD BE IN THE APPROPRIATE DISTRICT ARTICLES, SINCE BUDAPEST HAS BEEN DIVIDED INTO DISTRICTS --&gt;Budapest offers plenty of places to drink, from cool and ultra-hip to rowdy and down-market. If you are in the mood for a particularly Hungarian experience, visit a so-called borozó (wine pub). These offer cheap yet tasty Hungarian wine on tap at outright hilariously low prices if you manage to find one outside the tourist circuit.
+
+Budapest is known for its so-called "ruin bars", found mainly in Budapest’s Jewish Quarter. They are former abandoned buildings transformed into popular nightlife spots. The trend began in the early 2000s. These bars offer a relaxed, bohemian vibe with quirky decor, serving as places for drinks, food, dancing, live music, and community events. Today, they’re a major draw for both locals and tourists.
+
+Hungary is famous for its wines produced at Balaton area and Eger. Among red wines the best are Kékfrankos, Egri Bikavér "Bulls Blood” and white wines the Szürkebarát and Chardonnay are popular. One of the most favorite is the Tokaji, a sweet white wine.
+
+You should try not to miss out on the Hungarian spirit, '''pálinka''', made from fruits such as plum, apricot, cherry or Williams pears.
+
+Unique Hungarian soft drinks to try are ''Traubi Szoda'' (a white grape soda) and ''Márka'' (a sour cherry soda).
+
+==Sleep==
+{{seeDistricts}}
+
+&lt;!-- PLEASE DO NOT ADD INDIVIDUAL LISTINGS HERE, ALL LISTINGS SHOULD BE IN THE APPROPRIATE DISTRICT ARTICLES, SINCE BUDAPEST HAS BEEN DIVIDED INTO DISTRICTS --&gt;
+Budapest offers a wide range of accommodation in all price classes from the hostels which start at €7 per night, to small cheap pension, to the luxurious 5-star hotels, although the costs of staying here are notably higher than elsewhere in Hungary.
+
+Arriving trains are often met by touts offering free rides to hostels, as well as little old grannies offering their apartments for rent. Try to figure out exactly where you're going before you choose - or, better yet, visit a travel agency to browse options in a more comfortable environment.
+
+The most expensive are on or near [[Budapest/Castle Hill|Castle Hill]], dozens of reliable backpacker hostels are mostly across the river in [[Budapest/Pest#Sleep|Pest]]. However, [[Budapest/Buda#Sleep|Buda]] has better air quality due to the closeness of the hills and the forests lying to the west from the city.
+
+Apartments may be a cheap alternative for those making extended stays.
+&lt;!-- PLEASE DO NOT ADD INDIVIDUAL LISTINGS HERE, ALL LISTINGS SHOULD BE IN THE APPROPRIATE DISTRICT ARTICLES, SINCE BUDAPEST HAS BEEN DIVIDED INTO DISTRICTS --&gt;
+
+==Learn==
+Budapest's universities are sufficiently well-regarded and draw exchange students from near and far. There are a number of universities and other tertiary institutions in Budapests. Many of them offer degrees or courses in English, German, or French. Particularly popular, even though not cheap, are the medical university courses offered in German and English.
+
+* {{listing
+| name=Central European University | alt= | url=http://www.ceu.hu/ | email=
+| address=Nador u. 9 | lat= | long= | directions=
+| phone=+36 1 327 3000 | tollfree= | fax=
+| hours= | price=
+| content=A small but excellent American private university mainly funded by the Soros foundation (associated with Soros György, George Soros, "The Man Who Broke the Bank of England"), offers an extensive graduate program in a wide variety of courses in political, economical and environmental fields.
+| wikidata=Q757391
+}}
+* {{listing
+| name=Eötvös Loránd University | alt= | url=http://www.elte.hu/en/index_noflash.html | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=The flagship university in Hungary, founded in 1635, offering bachelor, master and PhD level degrees in certain fields in English.
+| wikidata=Q390287
+}}
+* {{listing
+| name=Liszt Ferenc Academy of Music | alt=Zeneakadémia
+| url=http://lfze.hu/en/home | email=
+| address=Liszt Ferenc tér 8 | lat= | long= | directions=M1 Oktogon
+| phone=+36 1 462-4600 | tollfree= | fax=
+| hours= | price=
+| content=World-renowned music academy in the heart of the city. Regular concerts. 
+| wikidata=Q847099
+}}
+* {{listing
+| name=Corvinus University of Budapest | alt=
+| url=http://www.uni-corvinus.hu/ | email=
+| address=Fővám tér 8 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 4 jms.svg|15px]], Tram 2, 2B, 23, 47, 48, 49, bus 15
+| phone= +36 1 482 5023 | tollfree= | fax=
+| hours=Welcome Office M-F 09:00-12:00 | price=
+|wikipedia=| wikidata=Q851164
+|lastedit=2016-11-08| content=formerly the University of Economical Sciences, colloquially known as 'Közgáz': Offers Bachelor and Master courses in many languages
+}}
+* {{listing
+| name=Budapest University of Technology and Economics
+| alt=Műegyetem;  Budapesti Műszaki és Gazdaságtudományi Egyetem (BME)
+| url=http://www.bme.hu/
+| email=info@bme.hu
+| address=Műegyetem rkp. 3 | lat= | long=
+| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 4 jms.svg|15px]], tram 19, 47, 48, 49, 56, 56A, bus 7 (to North end) Szent Gellért tér stop; Tram 4, 6 or bus 212, 212A, 212B (to South end of the complex) to Petőfi híd, budai hídfő stop
+| phone= +36 1 463-1111 | tollfree= | fax= | hours= | price=
+|wikipedia=| wikidata=Q1186843
+|lastedit=2016-11-08| content= B.Sc. and M.Sc. level engineering courses available for foreigners in English, French and German language at the International Education Center of the university.
+}}
+* {{listing
+| name=Semmelweis University | alt= | url=http://www.semmelweis-univ.hu/
+| email=kovacse@rekhiv.sote.hu
+| address=Üllői út 26 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: Corvin-negyed
+| phone=+36 1 266-0452 | tollfree= | fax=
+| hours= | price=
+| content=The flagship institution in medical education and research, offering courses in English and German. International students make up 24% of the total student population.
+| wikidata=Q277681
+}}
+* {{listing
+| name=International Business School | alt=Nemzetközi Üzleti Főiskola, IBS-NÜF
+| url=http://www.ibs-b.hu/ | email=info@ibs-b.hu
+| address=Tárogató út 2-4 | lat=47.508056 | long=19.124722
+| directions=Tram 56, 56A, 59B, 61 to Kelemen László utca
+| phone=+36 1 391 2500 | tollfree= | fax= | hours= | price=
+|wikipedia=| wikidata=Q285153
+|lastedit=2016-11-08| content=An institute of higher education offering numerous undergrad and some postgraduate programs, mostly providing Oxford Brookes University and Hungarian degrees in English and/or Hungarian languages.
+}}
+* {{listing
+| name=Debrecen Language School | alt=Debreceni Nyári Egyetem Budapesti Nyelviskolája
+| url=http://www.nyariegyetem.hu/ | email=budapest@nyariegyetem.hu
+| address=Váci u. 63. II/1. | lat= | long=
+| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]] Ferenciek tere, tram 2, 2B, 23, 47, 48, 49 Fővám tér
+| phone=+36 1 320 5751 | tollfree= | fax= | hours= | price=
+|wikipedia=|wikidata=|lastedit=2016-11-08| content=Offers Hungarian language classes year round at all levels in Budapest, Debrecen and Sopron.
+}}
+
+==Stay safe==
+* Central Emergency: dial '''112'''
+* Ambulance: 104
+* Fire: 105
+* Police: 107
+
+{{infobox|Váci utca – dos and don'ts|This narrow street begins at Fővám square (''Fővám tér'') in front of Central Market (''Nagyvásárcsarnok'') and ends at Vörösmarty square (''Vörösmarty tér''). Supposedly being one of the main tourist attractions of the city, Váci Street is visited by all the tourists arriving to Budapest. Enjoy this lively place, shop in its fashion stores, buy Hungarian and foreign literature in its great bookshop, eat in the American fast food restaurants if you intend to, but avoid being victimized by its many tourist traps and scams:
+
+* '''Avoid its restaurants and bars''', mainly between Vörösmarty Sq and Elisabeth Bridge (''Erzsébet híd''). Most of them offer mediocre food at exorbitant prices.
+* '''Whatever restaurant you go, always see the prices on the menu.''' Every restaurant is obliged to put its full menu with prices outside the restaurant. If you can't find this, the place is most likely to be very expensive.
+* '''Never enter its erotic/topless bars'''. It would cost a hundred times more than you can imagine in your worst dreams and you will have to pay anyway.
+* '''Don't try to pick up girls'''. There are many great places to meet Hungarian women, but Váci Street is not one of them.
+* '''Change money only in exchange offices'''. Though not as frequent as it used to be ten years ago, Váci Street still has street money changers waiting for you. Don't use their service.
+
+See details in ''Tourist traps'' section below.
+
+As a general rule, you find better quality and prices outside Váci utca.}}
+
+===Crime===
+Budapest is potentially one of the safest cities in the world for its size. There are no slums or districts you should avoid, particularly not in the touristy areas or nearby. As a traveller, you should take only normal precautions: don't show off your money and don't wear flashy jewellery. Magyars tend to be friendly with foreigners; racism or xenophobia against tourists is practically unknown.
+
+As in most other big cities, [[pickpocketing]] is the most common crime against tourists. The rate of picked pockets is relatively low by Western European and U.S. standards, and you're unlikely to have any problem if you follow some basic rules you wouldn't forget in Paris, Brussels or Vienna. The most important rules are that you never wear a backpack or purse on your back in public transportation or other places with a lot of people, and make sure that you have your wallet in one of your front pockets.
+
+Younger Hungarian policemen mostly speak some basic English. Tourists have no reason to be afraid of them unless they break the law.
+
+During the peak tourist season, police patrolling major tourist areas are accompanied by bilingual or multi-lingual students who assist with problems or complaints. Police have also opened a 24/7 TourInform office in one of Budapest's busiest areas. It is located at Sütő Street 2, District V, and they are able to receive complaints and render assistance in English and German.
+
+===By night===
+[[File:Budapest Chain Bridge at night.jpg|thumb|Budapest's Chain Bridge and Castle Hill at night]]
+Mostly there's no reason to have concerns about Budapest by night. In practice, the '''whole city''', including all the touristy areas, Pest within the inner ring road (the line of ''Szent István körút–Teréz körút–Erzsébet körút–József körút–Ferenc körút'', popularly known as ''Nagykörút''), and Buda are '''safe''' even before dawn. Most locals avoid walking alone by night in outer zones of districts 8th and 9th in Pest, as these are shady, though not particularly dangerous, areas. Areas in 8th district behind Népszínház utca - József körút can be a bit risky, although the district is CCTV monitored by the police. If you don't have special thing to do there, try not to have a walk at night at Lujza, Dankó, Magdolna Streets and their surroundings: also, it's not a very attractive area. Népszínház utca itself is not a very nice place after dark, but usually not risky.
+
+Some big panel areas on the outskirts of the city (parts of Újpest and Kőbánya, residential areas unknown by tourists) also not the best places to have a walk without knowing where to go. The area around Keleti pályaudvar is also not very friendly, but usually nothing happens. Avoid homeless people asking for money or selling something in the big underpasses. The subway at Nyugati tér collects different types of people; it is generally not risky because of heavy traffic day and night, but try not to look very "lost" there.
+
+Beautiful during the day, bigger public parks like ''Városliget'', are better avoided at night. Don't take a healthy walk at Népliget after dark. The famous 'chill-out' place at Római part (3rd district) can be deserted especially after 01:00 and in winter, although it's usually safe. Don't go to the dark paths alone around Citadella at night.
+
+Night buses and the tram no.6 passing through the city centre can be very crowded at peak socialising times on Friday and Saturday nights. You may come across aggressive drunk youngsters on the vehicles or at the stops. Keep a low profile or avoid the public transportation system on weekend nights. Major night lines are now guarded by security staff.
+
+===Tourist traps===
+Like in several cities of the world, in Budapest the major scams for the inexperienced visitor are '''taxis''' and '''restaurants'''. Much of the following would apply to a number of highly touristed cities in Europe.
+
+In the past, the airport taxis used to be a traveller's nightmare. Now, things have got better: Főtaxi - contracted partner of the airport - is so far reported to be reliable and works according to advertised prices; for details, read the ''Airport transfer'' section. Főtaxi has a stand outside the terminal building, enjoying the exclusive right to wait there, though other companies can come to pick up passengers if called by phone. Sometimes scam taxi drivers will still solicit services inside the terminal to take you for a ride with a very hungry meter. [http://www.ferihegyexpress.com/en/ Fixed price information on the internet].
+
+Alternatives to Főtaxi include calling another trusted cab firm (saving €5-10), or to use the Airport Minibus service. Airport Minibus has a booth inside the terminal, and they will allocate you to a minibus with several others who are going to the same area of the city. Depending on how lucky you are, yours may be the first destination or the last. However, it is only cheaper than a taxi if you are travelling alone. If you travel from the city to the airport, pre-order your taxi on the chosen company's phone number or call for the [http://www.airportshuttle.hu/ Airport Shuttle]. The Airport Shuttle is reasonably priced, reliable and an efficient way to get to the airport.
+
+The situation around railway and bus stations is still not regulated. The worst is probably Keleti Pályaudvar: never trust drivers hanging around the arrival side; rather, order a taxi by phone (some cars display their company's number). If that's not possible, take only taxis with a logo of the bigger companies, and with a proper sign on the roof and taxi licence plate. As a general rule, make sure the taximeter is on (and not set to the special "extortionate rate for unwary tourists") or agree the price with the driver beforehand. Many cases have been reported in which taxi drivers have extorted hundreds of euros from unwary visitors. Smaller crimes include being given change in worthless, obsolete Romanian or other currency, which is not instantly recognizable by tourists as non-Hungarian currency. Other drivers take a longer route, which means a higher price, if you don't have an agreed price. If you have an agreed price, you can be sure to arrive to your destination in the shortest route possible. A typical taxi drive within the central zones should be in the range of Ft1,200-3,000 as of early 2014.
+
+Similar abuses have also happened in restaurants and bars, almost all of them in the vicinity of Váci utca in the touristy heart of Pest. You should avoid the eateries and bars of the zone. However, these are not typical, the majority of restaurants and pubs in Budapest are reliable. In Hungary, it's compulsory to put the menu card outside the entrance; if it's not the case, don't enter.
+
+Don't take any tip on the streets, especially if the person is apparently a gift from heaven and is being very, very nice to you.
+
+Don't befriend the girls hanging around Váci utca, and never accept any invitation for a drink from them: you can be sure that they will lead you to fake Champagne, but you will be left only with the bill, and it's unlikely that a small conversation with them will be worth the hundreds of euros. You'll find the same sort of girls in erotic and topless bars; avoid them unless you're ready to pay your monthly salary for a glass of wine. The standard trick is to produce a menu with small print at the bottom stating that the first drink costs Ft15,000 and consumption is compulsory. This modified menu might be produced only when the bill is presented. Most of the erotic bars in Budapest are tourist traps.
+
+A common scam is for attractive women to walk up to men and ask for directions to a particular bar. If you respond "I don't know", they will ask you if you have a map and say "let's go together" they commonly tell you a story such as "I just got in from Bratislava and am just looking for a good place to get a drink...".
+
+The most popular scam involves a blond girl and a shorter girl with dark hair. They always act together and ask for a cigarette or the time. Next, they invite single men for a drink, in a bar at Váci utca only accessible by a lift from the street. Once there, each drink costs around €50, but you only find that out at the end when you receive the €500 bill. So '''never go to the lift bar (Városközpont) at Váci utca'''.
+
+Travellers are cautioned to avoid any establishment offering "adult" entertainment. A common scam in these places is for an attractive woman to join you at your table and ask for a drink. The problem is that her drink will cost €250 or something similar. You will not be allowed to leave until you pay. If you threaten to call the police, you will probably be informed that the bouncer is an off duty police officer.
+
+'''TopBudapestOrg''' maintains [http://topbudapest.org/dos-donts-in-budapest/black-list-bars-night-clubs-budapest-hungary/ a list of blacklisted clubs and bars]{{Dead link|date=June 2024 |bot=InternetArchiveBot }}.
+
+Money conversion: like in other places, even if a restaurant or bar accepts euros, it's better to have forints since their conversion rate is usually way worse than the rate at exchange offices. It is better to avoid exchange offices inside airports and railway stations, those in the centre of the city offer a much better exchange rate.
+
+If you see people gambling on the streets, usually in popular tourists' destinations like Buda Castle, stay away. The ''modus operandi'' usually involves a guy playing the '''classic "shell game"'''. This involves covering a ball (or small trinket) with either a bottle cap or a match box and swirling it around with two other bottle caps, asking people to guess the position of the ball. The game is set in a way that you can easily see the ball's position. This is done to lure the unsuspecting person into placing a wager. There are usually two main players and, between them, they will lose and win money back and forth to give the appearance that it is a fair game: do not be tricked. They are from the same gang. Once you get greedy and get lured in, you will surely lose your money. The person in control of the bottle caps will remove the ball from their position through sleight of hand, and you will never see your money back. Besides the two or three other players involved, there are usually at least two lookouts: one on each side of 'stage'.
+
+On the other hand, Hungarian people are usually friendly, welcoming and interested towards foreigners, and nothing should happen to you unless you put yourself in harm's way. If you don't bother them, they won't bother you, and nothing should get in your way of having a great holiday.
+
+==Stay healthy==
+* {{listing
+| name=Emergencies
+| phone=112 (free call)
+}}
+* {{listing
+| name= Ambulance
+| phone=104 (free call)
+}}
+* '''{{listing|name=Police|phone=107 (free call)|lastedit=2024-06-26}}'''
+* '''{{listing|name=Fire Dept.|phone=105 (free call)|lastedit=2024-06-26}}'''
+* For pharmacies, see each of our district articles. Each of Budapest's 23 districts has a pharmacy that is open in the evenings, on a varying rotation.
+* Emergency treatment centres (Hungarian: ''Orvosi Ügyelet'') are open 24/7. Read more in our various [[Budapest#Districts|district]] articles.
+* {{listing
+|name=Emergency Dental | alt=Központi Stomatológiai Intézet | url=http://semmelweis.hu/fszoi/ | email= | address=VIII. Szentkirályi u. 40
+| lat=47.48958 | long=19.066415 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 3 jms.svg|15px]], [[File:BKV metro 2014.svg|15px]] [[File:BKV m 4 jms.svg|15px]]: Kálvin tér further bus 9 to stop 'Szentkirályi utca'
+| phone=+36 1 3176600 | hours=M-F 20:00-08:00, Sa Su 24 hr| price= | content=
+}}
+* {{listing
+|name=I. and XII. district Joint Emergency Medical Service for adults |alt=Sürgősségi orvosi ügyelet |url= http://www.budavari-euszolg.hu/ugyelet.htm|email=titkarsag@orvosiugyeletkht.hu|address=XII. Beethoven utca. 8 |lat=47.49326|long=19.01872 |directions= Tram 59, 59A, 59B from [[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: 'Széll Kálmán tér' |phone=+36 1 2126636 |hours= 24/7|price= |content=Outpatient and home patient care. Emergency services free (for European) with European Health Insurance Card, Card replacement form or E-112 Card.
+}}
+* {{listing
+| name=Emergency medical service for kids | alt=Gyermekorvosi ügyelet (FŐNIX SOS Rt.) | url= | email=
+| address=XII. Diós árok 1-3. main entrance | lat=47.5107 | long=19.003526 | directions=St. John Hospital, Bldg. 24. (Doktor Kluge Endre út) - [[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Széll Kálmán tér further tram 56, 56A, 59, 59B, 61 to stop 'Szent János Kórház'
+| phone=+36 1 2125979, +36 1 458 4500 | tollfree= | fax=
+| hours=M-F 20:00-08:00, Sa Su 24 hr| price=
+| content=Emergency services free (for European) with European Health Insurance Card, Card replacement form or E-112 Card. +phone (special for foreigners) +36 20 9990025
+}}
+
+== Connect ==
+
+As of Sept 2021, Budapest has 5G from Telecom, Telenor and Vodafone, and 4G from Digi. Wifi is widely available.
+
+==Cope==
+
+===Embassies===
+The Consular Service site maintains a complete searchable database of [http://konzuliszolgalat.kormany.hu Honorary Consuls in Hungary].
+* {{flag|Austria}} {{listing
+| name=Austria | alt=Budapesti Osztrák Nagykövetség | url=http://www.bmeia.gv.at/hu/nagykoevetseg/budapest/metanavigation/kezdolap.html | email=
+| address=Benczúr u. 16. | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]:: Hősök tere
+| phone=+36 1 479-7010 | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+* {{flag|Azerbaijan}} {{listing
+| name=Azerbaijan | alt= | url=http://www.azerembassy.hu/ | email=budapest@azembassy.hu
+| address=Eötvös utca 14 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]] [[File:BKV m 2 jms.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: Deák Ferenc tér
+| phone=+36 1 374-6070, +36 1 374-6071 | tollfree= | fax= | hours= M-F 09:00–18:00 | price=
+| content=Single entry €60, processing time 10 days.
+}}
+* {{flag|Belgium}} {{listing
+| name=Belgium | url=http://www.diplomatie.be/budapest/ | email=
+| address=Toldy Ferenc utca 13 | lat= | long= | directions=
+| phone=+36 1 457 9960 | tollfree= | fax=
+| hours=M-F 09:00-16:00 | price= | content=
+}}
+* {{flag|Canada}} {{listing
+| name=Canada | url=http://www.canadainternational.gc.ca/hungary-hongrie/
+| email=bpest@international.gc.ca
+| address=Ganz u. 12-14 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Széll Kálmán tér
+| phone=+36 1 392-3360 | tollfree= | fax=+36 1 392-3390
+| hours=M-Th 08:00-16:30, F 08:00-13:30 | price= | content=
+}}
+* {{flag|Czech Republic}} {{listing
+| name=Czech Republic | alt= | url=http://www.mzv.cz/budapest/hu/index.html
+| email=consulate_budapest@mzv.cz
+| address=VI., Szegfű utca 4 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]: Oktogon
+| phone=+36 1 462 5014 | tollfree= | fax=
+| hours=M-F 09:00-11:00 | price= | content=
+}}
+* {{flag|China}} {{listing
+| name=China | alt= | url=http://www.chinaembassy.hu | email=
+| address=Városligeti fasor 20-22 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]:
+| phone=+36 1 413-2401, +36 1 413-2419 | tollfree= | fax=+36 1 322-9067
+| hours= | price=
+| content=
+}}
+* {{flag|Croatia}} {{listing
+| name=Croatia | url=http://hu.mvp.hr/ | email=vrhbp@mvpei.hr
+| address=Munkácsy Mihály u. 15 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]:
+| phone=+36 1 354 1315 | tollfree= | fax=
+| hours=M-F 09:00-17:00 | price= | content=
+}}
+* {{flag|Denmark}} {{listing
+| name=Denmark | alt=Danmarks Ambassade, Ungarn | url=http://ungarn.um.dk/ | email=budamb@um.dk
+| address=Határőr út 37 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]:: Széll Kálmán tér, bus 39 to Határőr út
+| phone=+36 1 487 9000 | tollfree= | fax=
+| hours=M-F 09:00-13:00 | price=
+| content=
+}}
+* {{flag|Egypt}} {{listing
+| name=Egypt |url=http://www.mfa.gov.eg/english/embassies/Egyptian_Embassy_budapest/Pages/default.aspx
+| email=egyptembassybudapest@yahoo.com | address=1125 Istenhegyi út. 7/B
+| lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Széll Kálmán tér &amp; bus 21, 21A, 221 to Kék Golyó utca
+| phone=+36 1 225-2150 | tollfree= | fax=+361 2258596
+| hours=M-F 09:00-15:00 | price= | content=
+}}
+* {{flag|Finland}} {{listing
+| name=Finland | alt=Finn Nagykövetség, Suomen suurlähetystö | url=http://www.finland.hu
+| email=sanomat.bud@formin.fi
+| address=1118 Kelenhegyi út 16/A | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 4 jms.svg|15px]] Szent Gellért tér; Tram 19, 41, 47, 48, 49, 56, 56A to Szent Gellért tér
+| phone=+36 1 279 2500 | tollfree= | fax=+36 1 385 0843
+| hours=M-F 09:00-12:00 | price= | content=
+| wikidata=Q1001543
+}}
+* {{flag|France}} {{listing
+| name=France | alt= | url=http://www.ambafrance-hu.org/ | email=BUDAPEST-AMBA@diplomatie.gouv.fr
+| address=Lendvay utca 27 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]: Hősök tere
+| phone=+36 1 374 11 00, +36 20 91 06 413 (For emergency) | tollfree= | fax=+36 1 374 11 40
+| hours=M-F 09:00-12:30 | price=
+| content=
+}}
+* {{flag|Georgia}} {{listing
+| name=Georgia | url=http://www.hungary.mfa.gov.ge | email=budapest.emb@mfa.gov.ge
+| address= H-1125 Virányos út 6/b | lat=47.512218 | long=18.999207
+| directions=
+| phone=+36 1 202 3390, +36 1 202 3388 | tollfree= | fax=+36 1 214 3299, +36 1 214 7637 | hours=
+| price= | content=
+}}
+* {{flag|Germany}} {{listing
+| name=Germany | url=http://www.budapest.diplo.de/ | email=
+| address= Úri utca 64-66 | lat= | long=
+| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Széll Kálmán tér, bus 16, 16A, 116 to Kapisztrán tér
+| phone=+36 1 488 3500 | tollfree= | fax= | hours=M–Tu, F 09:00–12:00; Th 13:30–15:30
+| price= | content=
+}}
+* {{flag|Greece}} {{listing
+| name=Greece | url=http://www.mfa.gr/budapest | email=gremb.bud@mfa.gr
+| address=Szegfű utca 3 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]: Kodály körönd
+| phone=+36 1 413 2621 | tollfree= | fax=+36 1 342 1934
+| hours=M-F 09:00-16:00 | price= | content=
+}}
+* {{flag|India}} {{listing
+| name=India | alt= | url=http://www.indianembassy.hu/ {{dead link|December 2020}} | email=
+| address=Búzavirág utca 14, | lat= | long= | directions=
+| phone=+36 1 325-7742 | tollfree= | fax=+36 1 325-7745
+| hours=M-F 09:00-17:30 | price=Visa €55
+| content= Visa Application M-Th 10:00-12:00, Collection of Visa 16:00-17:00
+}}
+* {{flag|Indonesia}} {{listing
+| name=Indonesia | alt= | url=https://kemlu.go.id/budapest/en | email=
+| address=Városligeti fasor 26 | lat=47.50971 | long=19.07624 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]: Bajza utca
+| phone=+36-1 413-3800 | tollfree= | fax=+36 1 322-8669
+| hours= | price= | content=
+}}
+* {{flag|Israel}} {{listing
+| name=Israel | url=http://embassies.gov.il/Budapest/Pages/default.aspx | email=
+| address=Fullánk utca 8 | lat= | long=
+| directions=Bus 11, 111 to Móricz Zsigmond Gimnázium; bus 149 to Tüske utca
+| phone=+36 1 392 6200 | tollfree= | fax=
+| hours=M-F 09:00-12:00 | price=
+| content=
+}}
+* {{flag|Italy}} {{listing
+| name=Italy | alt=Olasz Nagykövetség | url=http://www.ambbudapest.esteri.it | email=ambasciata.budapest@esteri.it
+| address=Stefánia út 95 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Keleti pályaudvar &amp; bus 5, 7, 110, 112 to Stefánia út / Thököly út stop; Trolley 72, 75 to Stefánia út / Thököly út stop
+| phone=+36 1 460-6200 | tollfree= | fax=+36 1 4606 260
+| hours=M-F 09:30–12:30 | price=
+| content=
+}}
+* {{flag|Japan}} {{listing
+| name=Japan | alt=在ハンガリー日本国大使館 | url=http://www.hu.emb-japan.go.jp/index_h.htm
+| email=consul@bp.mofa.go.jp
+| address=Zalai u. 7 | lat=| long=
+| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Széll Kálmán tér, bus 156 to Dániel út stop
+| phone=+36 1-398-3100 | tollfree= | fax=
+| hours=M-F 08:30-12:30 &amp; 14:00-17:45 | price= | content=
+}}
+* {{flag|South Korea}} {{listing
+| name=Republic of Korea | alt=주 헝가리 대한민국 대사관 | url= | email=korcom@t-online.hu
+| address=Andrássy út 109 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]:: Bajza utca
+| phone=+36 1 462-3080 | tollfree= | fax=
+| hours=08:30-17:00 | price= | content=
+}}
+* {{flag|Macedonia}} {{listing
+| name=Macedonia | url= | email=
+| address=Andrássy út 130, floor 1-2 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]: Hősök tere
+| phone=+36 1 336 0510 | tollfree= | fax= | hours= | price= | content=
+}}
+* {{flag|the Netherlands}} {{listing
+| name=Netherlands | alt=Holland Királyság Budapesti Nagykövetsége | url= | email=
+| address=Füge utca 5-7 | lat= | long=
+| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Batthyány tér &amp; bus 11 to Bimbó út
+| phone=+36 1 3366 300 | tollfree= | fax=
+| hours=M-F 08:30-12:30 &amp; 13:00-16:30 for phone. Visits by appointment only | price=
+| content=
+}}
+* {{flag|Norway}} {{listing
+| name=Norway | url=http://www.norvegia.hu/ | email=emb.budapest@mfa.no
+| address=Ostrom u. 13 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Széll Kálmán tér
+| phone=+36 1 325 33 00 | tollfree= | fax= +36 1 325 33 99
+| hours=M-F 09:00-15:30, lunch: 12:30-13:00 | price= | content=
+| wikidata=Q19383561
+}}
+* {{flag|Philippines}} {{listing
+| name=Philippines | alt=Filippin Köztársaság Nagykövetség
+| url=http://budapestpe.dfa.gov.ph/ | email=consular@philembassy.hu
+| address=Gábor Áron utca 58 | lat=47.521 | long=19.012 | directions=M2:
+| phone=+36 1 391 4300 | tollfree= | fax=
+| hours= M-F 08:00-17:00
+| lastedit=2017-07-04| price= | content=
+}}
+* {{flag|Poland}} {{listing
+| name=Poland | alt= | url=https://www.gov.pl/web/wegry | email=budapeszt.amb.wk@msz.gov.pl
+| address=Városligeti fasor 16 | lat=47.5089 | long=19.0753 | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]: Bajza utca
+| phone=+36 1 413-8200 | tollfree= | fax=+36 1 351-1722
+| hours=M Th F 09:00-13:00, W 12:00-17:00 | price=
+| wikidata=Q11685577
+| content=
+}}
+* {{flag|Romania}} {{listing
+| name=Romania | alt= | url=http://budapesta.mae.ro/en | email=budapesta@mae.ro
+| address=Thököly út 72 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]] [[File:BKV m 4 jms.svg|15px]]: Keleti pályaudvar
+| phone=+36 1-384-8394, +36 1 220-1666 (Consular phone) | tollfree=
+| hours=07:30-14:30 | price=
+| lastedit=2021-12-03
+| content=
+}}
+* {{flag|Saudi Arabia}} {{listing
+| name=Saudi Arabia | alt=سفارة المملكة العربية السعودية سعود | url=http://embassies.mofa.gov.sa/sites/Hungary/EN/Pages/default.aspx | email=hucon@mofa.gov.sa
+| address=Bérc utca, 16 | lat= | long= | directions=
+| phone=+36 1 436-9500 | tollfree= | fax=
+| hours=M-F 09:00-15:00 | price=
+| content=
+}}
+* {{flag|Spain}}{{listing
+| name=Spain | url=http://www.exteriores.gob.es/embajadas/budapest/es/Paginas/inicio.aspx | email=emb.budapest@maec.es
+| address=Eötvös utca 11/B | lat=47.505718 | long=19.064914
+| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]: Oktogon
+| phone=+36 1 202 40 06, +36 1 202 40 15 | tollfree= | fax=+36 1 202 42 06
+| hours=M-F 09:00 - 16:30 | price= | content=
+| wikidata=
+|alt=|wikipedia=|image=|lastedit=2017-06-22}}
+* {{flag|Switzerland}} {{listing
+| name=Switzerland | alt= | url=http://www.eda.admin.ch/budapest | email=
+| address=Stefánia út. 107 | lat= | long=
+| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]:Puskás Ferenc Stadion
+| phone=+36 1 460 70 40 | tollfree= | fax=
+| hours=By appointment only | price=
+| content=
+}}
+* {{flag|Sweden}} {{listing
+| name=Sweden | url=http://www.swedenabroad.com/budapest
+| email=ambassaden.budapest@gov.se | address=Kapás utca 6-12 | lat= | long=
+| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Batthyány tér &amp; bus 39 to Fazekas utca stop
+| phone=+36 1 460 6020 | tollfree= | fax=+36 1 460 6021
+| hours=M-F 10:00-12:00 | price= | content=
+}}
+* {{flag|United Kingdom}} {{listing
+| name=United Kingdom | url=http://ukinhungary.fco.gov.uk/en/about-us/our-embassy/contact-us/
+| email= info@britemb.hu | address=Harmincad utca 6 | lat= | long=
+| directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]]: Vörösmarty tér; [[File:BKV metro 2014.svg|15px]] [[File:BKV m 1 jms.svg|15px]] [[File:BKV m 2 jms.svg|15px]] [[File:BKV m 3 jms.svg|15px]]: Deák tér; bus 105, 210, 210B
+| phone=+36 1 266 2888 | tollfree= | fax=+36 1 429 6296
+| hours=M-Th 08:00-16:30, F 08:00-13:00 | price= | content=
+| wikidata=Q851139
+}}
+* {{flag|United States}} {{listing
+| name=United States | alt= | url=https://hu.usembassy.gov/ | email=acs.budapest@state.gov
+| address=Szabadság tér 12 | lat= | long= | directions=[[File:BKV metro 2014.svg|15px]] [[File:BKV m 2 jms.svg|15px]]: Kossuth Lajos tér
+| phone=+36 1 475-4400 | tollfree= | fax=+36 1 475-4764
+| hours= | price=
+| wikidata=Q783754
+| content=In a monument building; read more: [[Budapest/Belváros#Lipotvaros|Lipotvaros]]. After hours emergencies +36 1 475-4703/4924
+}}
+
+==Go next==
+===Day tours===
+* {{listing | image=Apaj református templom.JPG
+| name=Apaj | alt= | url= | address= | lat=47.11337| long=19.08772
+| directions=50 km from Budapest
+|lastedit=2021-09-18| content=Take a tour in the Upper Kiskunság Plain which is part of the Kiskunság National Park, the closest ''Puszta''.
+}}
+[[File:Királykastély.JPG|thumb|Royal Palace of [[Gödöllő]]]]
+* {{listing | image=Alcsútdoboz - Palace.jpg
+| name=Arboretum of Alcsút|alt=Alcsúti Arborétum| url=http://www.dinpi.hu/alcsutiarboretum | email=info@alcsuti-arboretum.hu| address=Fejér County, Alcsútdoboz | lat=47.42577 | long=18.60256 | directions=West 40 km - take M1 highway turn south after Bicske or By bus line 1253 to Felcsút from Népliget bus station and walk ~2 km (daily 3-5 times)| phone=+36 22 353219 | hours=W-Su 10:00-18:00 | price=Ft700, guided tours 2-hr-long Ft7000 per group | content=This Nature reserve is part of the Danube-Ipoly National Park. Sights: Habsburg castle remains, Castle Chapel, Palm House ruins, House of Research, Dollhouse, Bear's House, Gloriette, Grotta, The Lion Fountain, Crowned Bridge, giant plane tree, giant thuja.
+}}
+* [[Budakeszi]] (take city bus #22 from M2:Széll Kálmán square) Located in a green area. The north gate of the [[Budapest/Hegyvidék|Hegyvidék]] is a good excursion place. There is a significant German minority with own church and museum. Also famous for the Wildlife Park.
+* {{listing | image=Minaret (7014. számú műemlék) 6.jpg
+| name=[[Érd]] | alt= | url= | address= Pest county | lat=47.377 | long=18.923
+| directions=the first train stop from [[Budapest/South Buda]]
+| content= - a suburb of Budapest, the biggest village in all Europe
+}}
+* {{listing | image=EsztergomMontage2.JPG
+| name=[[Esztergom]] | alt= | url= | email=
+| address= | lat=47.795629| long=18.742622 | directions=50&amp;nbsp;km north - intercity buses from M3 'Árpád híd'/'Újpest-Városkapu' or train from Nyugati Railway Station (1 hour, ~Ft1500)| content=Site of the '''biggest basilica''' (church) in Central Europe include the '''world's largest altarpiece''' which painted for a single canvas, the richest collection of Hungarian ecclesiastical treasures, the only Renaissance memory, of Hungary, the red marble Bakócz chapel. Part of the UNESCO World Heritage Tentative List.
+}}
+* {{listing | image=Fót, Károlyi-kastély.jpg
+| name=Fót | alt= | url= | address= Pest county | lat=47.61812 | long= 19.19032
+| directions=17 km north of the edge of Budapest
+| content=Visit the Reformed church, a beautiful example of the Hungarian Romantic architecture painted boarded ceilings, sculptures of its made Carrara 's marble. The other main sight is the Károlyi Palace (1850)}}
+[[File:Limes4-en.png|thumb|The "Limes Sarmatiae", "Devil's Dyke" or "Devil's Ditch" in eastern Pannonian plain, a group of lines of Roman fortifications done by Constantine I]]
+* {{listing
+| name=[[Gödöllő]] | alt= | url= | email=
+| address=Pest county | lat=47.606 | long=19.354 | directions=by [http://www.mav.hu/en MÁV suburban rail – Keleti pályaudvar] or HÉV ("local/suburban trains" supported by [http://www.bkv.hu/en/suburban_railway_schedules BKV]) from M2: 'Örs vezér tere' to Gödöllő (to Csömör is wrong direction, be aware of the splitting of HÉV lines H8 and H9).30&amp;nbsp;km east
+| phone= | tollfree=
+| hours= | price=
+| image=University of Gödöllő 03.JPG
+| content=A town full of parks, and home to Grassalkovich-kastély (Grassalkovich Palace), formerly a Royal Palace also here is an Arboretum. This palace was the occasional residence of Sisi, Habsburg Empress Elizabeth. Visit the European rarity, a working, 200-year-old Baroque Theatre in the Palace. The great royal park became special with its old trees which could see Sisi in the 19th century. Take a walk in the '''[http://www.dinpi.hu/index.php?pg=menu_2073 Gödöllő Landscape Protection Area]''' with lot of historical and cultural memories such Sarmatian, Scythian and Avar places: remains of cemeteries, earthworks, trenches in the neighborhood of Valkó, Szada, Pécel settlements and here is a part of the famous the Devil's Dykes (Hungarian: Ördög/Csörsz árok or the Limes Sarmatiae). Also there is one of '''the biggest pilgrimage place''', the Shrine Temple in Máriabesnyő village.
+}}
+* {{listing | image=
+| name=Mogyoród | alt= | url= | address= | lat=| long=
+| directions=east toward Gödöllő |lastedit=2023-07-09| content=The '''Formula 1 racetrack''' is located here. Every year, hundreds of thousands of visitors come to enjoy the event. Kart driving all year round at the nearby Hungarokart Centre.
+}}
+* {{listing | image=Teleki-kastély (7250. számú műemlék) 4.jpg
+| name=[[Pomáz]] | alt= | url= | address=Pest county | lat=47.6474 | long=19.02699
+| directions=Danube Bend east side | content=Teleki-Wattay Palace and the Stone Hill
+}}
+* {{listing | image=Orszagkozepe1.jpg
+| name=Pusztavacs |alt= | url= | address=Pest county |lat=47.17128 |long=19.50108
+| directions=54 km south-east of Budapest
+| content=Equestrianism.
+}}
+* {{listing | image=Ráckeve, Savoyai-kastély.JPG
+| name=[[Ráckeve]]| alt= | url= | email=| address=Pest county | lat=47.161 | long=18.943
+| directions=take suburban rail from 'Vágóhíd' terminal
+| content=Famous for being the only standing '''Gothic Serbian cathedral''' in Hungary and Savoya Castle.
+}}
+* {{listing
+| name=[[Szentendre]] | alt= | url= | email=
+| address=Pest county | lat=47.668 | long=19.076
+| directions=Danube Bend west side. From M2: Batthyany Square, take a suburban train 'HÉV' (supported by [http://www.bkv.hu/en/suburban_railway_schedules BKV]) to Szentendre - 19&amp;nbsp;km north
+| phone= | tollfree= | fax= | image=Szentendre légifotón.jpg
+| hours= | price=
+| content=A picturesque town, the Mediterranean atmosphere of its thanks to Greeks Dalmatians and Serbs who are settled since the 14th century. At city limit can find the biggest open-air '''ethnomuseum''' of Hungary. The most visited small town of Hungary. Also known for exquisite marzipan products.
+}}
+* {{listing | image=Catedral of Vác.jpg
+| name=[[Vác]]| alt= | url= | address=Pest county | lat=47.779 | long=19.129
+| directions= on the Danube bend east side - reached from Budapest by [http://www.mav.hu/en MÁV suburban rail – Nyugati pályaudvar], 32&amp;nbsp;km north
+| content=Visit a beautiful square, all houses on it are national level protected monuments. Also must-see is Memento Mori; this exhibition is unique in all of Europe. In the Dominican church crypt you can see naturally '''mummified corpses''' in coffins. Otherwise, the '''Arc de Triomphe''', built for the visit of Empress Maria Theresa, is here. This is the only one of its kind in all of Hungary, and the only place in the country where you can walk on a '''Baroque bridge''' which decorated sculptures }}
+* {{listing | image=Vácrátót légifotó1.jpg
+| name=Vácrátót |alt= |url= | address=Pest county | lat=47.710833 | long=19.235278
+| directions=
+| content=There is the richest '''botanical garden''' of Hungary and the Manor of the Vigyázó Castle }}
+* {{listing
+| name=Veresegyház | alt= | url= | email=
+| address=Pest county | lat=47.65046 | long=19.28299 | directions=
+| phone= | tollfree=
+| hours= | price=
+| image=Veresegyház légifotó4.jpg
+| content=Sight of the bear sanctuary, Roman Catholic Church: built in 1777, Roman Catholic cemetery: in 1806 and 1849, Reformed Church: was built in 1786.
+}}
+[[File:Rám-szakadék1.jpg|thumb|Rám Cleft near [[Visegrád]]]]
+* {{listing
+| name=[[Visegrád]] | alt= | url= | email=
+| address=Pest county | lat=47.7847 | long=18.9712 | directions=Danube Bend west side
+| phone= | tollfree=
+| hours= | price=
+| image=Visegrád Mountain Fastness 01.jpg
+| content=Famous for its former royal palace partially rebuilt in Renaissance style, medieval residential tower, and impressive citadel. remains of a '''13th-century fortification system''' can be seen here, including hexagonal, five-storey residential tower, which like nowhere to be found along the Danube River. Part of the UNESCO World Heritage Tentative List. Suburban bus service by [http://www.volanbusz.hu/en/domestictravel/interurban Volánbusz] - Take a biking or walking tour to Visegrád Mountains (sights of its: Illuminated ditch (Holdvilág-árok), Rám Cleft (Rám-szakadék) titled as '''one of top nature sights''' of Hungary the last one started from Dömös village
+}}
+* {{listing
+| name=Zsámbék | alt= | url= | email=
+| address= | lat=47.55 | long=18.716667 | directions=30 km west of Budapest along the M1 motorway. Take a suburban bus from M2: 'Széll Kálmán Square'
+| phone= | tollfree=
+| hours= | price=
+| image=Premontrei prépostsági templom romja (7623. számú műemlék).jpg
+| content=This village famous for its '''13th-century church ruins'''. The building was ruined by an 18th-century earthquake, but the tower and wall sections remains provide a unique backdrop for summer outdoor concerts and to theatrical performances. Another interesting feature of the village is '''the country's only museum of light'''.
+}}
+
+For more on Pest County's places, see: [[Central Hungary]].
+
+===Further away===
+* {{listing | image=Megyeszékhely - Heves megye - Eger.jpg
+| name=[[Eger]]|alt= | url=| lat=47.907137| long=20.376098| directions=150&amp;nbsp;km northeast | content=A small and charming town, a possible one-day tour }}
+
+{{routebox
+| image1=M1 (Hu) Otszogletu kek tabla.svg
+| imagesize1=22
+| directionl1=W
+| majorl1=[[Mosonmagyaróvár]]
+| minorl1=[[Győr]]
+| directionr1=E
+| majorr1=END
+| minorr1=
+
+| image2=M2 (Hu) Otszogletu kek tabla.svg
+| imagesize2=22
+| directionl2=N
+| majorl2=[[Vác]]
+| minorl2=
+| directionr2=S
+| majorr2=END
+| minorr2=
+
+| image3=M3 (Hu) Otszogletu kek tabla.svg
+| imagesize3=22
+| directionl3=W
+| majorl3=END
+| minorl3=
+| directionr3=E
+| majorr3=[[Debrecen]]
+
+| minorr3=[[Gyöngyös]]
+
+| image4=M5 (Hu) Otszogletu kek tabla.svg
+| imagesize4=22
+| directionl4=N
+| majorl4=END
+| minorl4=
+| directionr4=S
+| majorr4=[[Szeged]]
+| minorr4=[[Kecskemét]]
+
+| image5=M6 (Hu) Otszogletu kek tabla.svg
+| imagesize5=22
+| directionl5=N
+| majorl5=END
+| minorl5=
+| directionr5=S
+| majorr5=[[File:M60 (Hu) Otszogletu kek tabla.svg|20px]] [[Pécs]]
+| minorr5=[[Szekszárd]]
+
+| image6=M7 (Hu) Otszogletu kek tabla.svg
+| imagesize6=22
+| directionl6=W
+| majorl6=[[Siófok]]
+| minorl6=[[Székesfehérvár]]
+| directionr6=E
+| majorr6=END
+| minorr6=
+
+| image7=EV 6 Atlantic Ocean to Black Sea.svg
+| imagesize7=30
+| directionl7=W
+| majorl7=[[Bratislava]]
+| minorl7=[[Esztergom]]
+| directionr7=E
+| majorr7=[[Belgrade]]
+| minorr7=[[Dunaújváros]]
+| link7=[[ EuroVelo cycling routes]]
+| caption1= 
+
+}}
+
+{{IsPartOf|Central Hungary}}
+{{geo|47.4908|19.081|zoom=10}}
+{{guidecity}}</text>
+      <sha1>hkdptrjf3l0mi5esommi0h3dyv01ygu</sha1>
+    </revision>
+  </page>
+</mediawiki>

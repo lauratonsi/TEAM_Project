@@ -1,0 +1,1273 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikivoyage</sitename>
+    <dbname>enwikivoyage</dbname>
+    <base>https://en.wikivoyage.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.46.0-wmf.24</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikivoyage</namespace>
+      <namespace key="5" case="first-letter">Wikivoyage talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1728" case="first-letter">Event</namespace>
+      <namespace key="1729" case="first-letter">Event talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Warsaw</title>
+    <ns>0</ns>
+    <id>38480</id>
+    <revision>
+      <id>5245120</id>
+      <parentid>5245119</parentid>
+      <timestamp>2026-03-26T20:47:39Z</timestamp>
+      <contributor>
+        <username>Andyrom75</username>
+        <id>107092</id>
+      </contributor>
+      <comment>/* Embassies */ fix listing</comment>
+      <origin>5245120</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="112762" sha1="hcjprv2hykihle2ye9xens9dsls8ipi" xml:space="preserve">{{other uses}}
+{{pagebanner|Warsaw banner.jpg}}
+{{printDistricts}}
+'''Warsaw''' ([[Polish phrasebook|Polish]]: ''Warszawa'') is [[Poland]]'s capital and largest city. Warsaw is a bustling metropolis and one of the European Union's fastest-developing capitals and the Union's ninth most populous urban centre. It has a mixture of new and old in its eclectic architectural mix, and is constantly changing.  There is a large variety of museums, galleries and other tourist attractions, and there is always something happening throughout the year.
+
+While sprawling, it is quite easy to navigate for tourists thanks to a good public transit system, and most important sights are quite close to each other. There is no shortage of accommodation options and a wide choice of restaurants and bars. Warsaw's nightlife is also on the rebound, and a reborn cafe culture has taken over the city.
+
+==Districts==
+{{Regionlist
+|regionmap=Wikivoyage Regions Warsaw District Map.png
+|regionmapsize=350px
+|regionmaptext=Districts of Warsaw
+|region1name=[[Warsaw/Old and New Town|Old and New Town]]
+|region1color=#e2ca27
+|region1items=
+|region1description=The Old Town is the historic core of the city that was contained in its city walls in the times it was still a small town, before it became the country's capital in the late 16th century. The New Town, directly to its north, was the first expansion of Warsaw beyond those city walls, which complements the historic core with more buildings from 16th, 17th and 18th century. Both were almost completely destroyed during the Second World War and meticulously reconstructed after the war.
+
+|region2name=[[Warsaw/Śródmieście|Śródmieście]]
+|region2color=#d56d76
+|region2items=
+|region2description=The most central district in Warsaw, as implied by its Polish name. It is the area where most travelers will spend their time in Warsaw, as most major attractions and hotels are primarily located here, including the Royal Route with historical royal and noble residences, Jewish monuments and memorials, as well as the modern buildings, including famous Palace of Culture and Science. Administratively, it encompasses both the Old and New Town, described in their separate article.
+
+|region3name=[[Warsaw/Western Centre|Western Centre]]
+|region3color=#cea8ce
+|region3items=Wola, Ochota, Żoliborz
+|region3description=The districts directly to the west of Śródmieście contain many historic buildings and significant points of interest. Most of the district of Wola has an industrial past, while having been a large part of the Jewish ghetto during the Second World War, it also contains the oldest of Warsaw's cemeteries, but nowadays is changing into a modern high-rise business centre. Żoliborz and Ochota have always had a more residential character, but they are also attractive as an urban complex.
+
+|region4name=[[Warsaw/Praga|Praga]]
+|region4color=#c4cd81
+|region4items=Praga Północ, Praga Południe
+|region4description=The eastern bank of the river was a separate city until the 19th century, and contains its fair share of history and attractions as well. Historically less affluent and considered unattractive or borderline dangerous for decades, it started to develop rapidly into a trendy part of the city in the 21st century.
+
+|region5name=[[Warsaw/South|Southern Warsaw]]
+|region5color=#eec1a2
+|region5items=Mokotów, Ursynów, Wilanów
+|region5description=The Southern part of Warsaw is one of the most intensely developing following the Second World War until today. The dense, yet peaceful districts of Mokotów and Ursynów have some interesting gems hidden between the apartment buildings. The southern terminal of the Royal Route, Wilanów is home to the Wilanów Palace.
+
+|region6name=[[Warsaw/North|Northern Warsaw]]
+|region6color=#cfe4ad
+|region6items=Bielany, Białołęka, Targówek
+|region6description=The northern districts of Warsaw are residential "bedrooms of the city", but with several specific reasons for a traveler to go there.
+
+|region7name=[[Warsaw/West|Western Warsaw]]
+|region7color=#86b5bb
+|region7items=Bemowo, Włochy, Ursus
+|region7description=The western parts of Warsaw contains historical villages mixed with modern estates; they are also known for the Warsaw Chopin Airport.
+
+|region8name=[[Warsaw/East|Eastern Warsaw]]
+|region8color=#b2d9e7
+|region8items=Rembertów, Wawer, and Wesoła
+|region8description=The sprawling green residential districts stand in contrast to the otherwise dense, high rise apartment complexes of other districts, and have also several specific tourist attractions.
+}}
+
+==Understand==
+[[File:Metropolitan-Warszawa-Zachód.jpg|250px|thumb|Present-day Warsaw is a mixture of the new and old]]
+
+A city of 1.8 million inhabitants (2021), it sits on the Vistula River (Polish: ''Wisła'') in the middle of the country.
+
+Warsaw's history of rapid development after many wars that ravaged and destroyed the city has earned it a reputation as a "phoenix city", able to recreate itself from the ruins and regain its erstwhile glory every time. During the Second World War, it suffered a fate similar to [[Rotterdam]] and [[Dresden]] in that it was almost completely razed, although in the case of Warsaw it was a much more tragic story of successive destruction and defeat. Due to the great efforts of its surviving inhabitants and, indeed the entire nation, it was rebuilt from a field of rubble, with its historic core recreated, but much of its heritage was lost. Warsaw also had one of the largest Jewish populations in Europe, which for the most part perished during the war, making Warsaw an important place of Holocaust remembrance.
+
+===History===
+====Before becoming the capital====
+There are records of human settlements and economic activity in the area of what is now Warsaw from the 9th century onwards, but it wasn't until the 13th century that Warsaw was founded by the Dukes of [[Mazovia]]. While developing as an administrative and economic centre, it played second fiddle to [[Płock]] within Mazovia until the 15th century, and was by no means a match for Poland's former capital, [[Kraków]]. It gained growing importance due to its economic might and strategically important central location in Poland, cemented when the Polish Sejm (parliament of nobles) relocated there permanently in the 16th century, and it became the site of royal elections.
+
+====As capital city of Poland====
+[[File:Oś Saska.JPG|250px|thumb|The Saxon Axis, one of Warsaw's first urban planning projects, on a 1781 map]]
+In 1596, it became the ''de facto'' capital of the country when King Sigismund III Vasa decided to permanently relocate to what is now the Royal Castle in Warsaw. The city started to develop rapidly beyond the what is now the Old and New Town, as noblemen started moving in and building mansions and palaces around town. In the 17th century, Praga, on the right-hand side of the river Vistula, was incorporated as a separate town (and did not become a part of Warsaw until the 19th century).
+
+While ravaged by wars and natural disasters along with many other European cities in this period, Warsaw continued to grow and modernize, with baroque residences, including [[Warsaw/Wilanów|Wilanów]],  being built in the 17th century, and the Saxon kings initiating the first large-scale urban planning projects in the early 1700s. The last king of independent Poland, Stanisław August Poniatowski, further modernized the city following the ideals of the Enlightenment in the second half of the 18th century.
+
+At the end of 18th century, the weakened Republic of Poland was partitioned, through a period of forced diplomacy, military actions and uprisings, and Warsaw first fell to Prussian rule, losing most of its importance. As the French emperor Napoleon marched eastwards with his army, he reestablished a small Polish state known as the Duchy of Warsaw, after its eponymous capital, but it was short-lived and was absorbed by the Russian empire in 1815, after Napoleon's defeat.
+
+====Under Russian rule====
+[[File:Warsaw MKL Bd. 16 1890 (128535731).jpg|250px|thumb|German map of Warsaw from 1890]]
+Warsaw remained a capital city under the Russian rule, as the Kingdom of Poland was reestablished, although with Russian tsars as hereditary kings and not much political independence. Warsaw was then the westernmost of major cities of the Russian empire and enjoyed economic growth as a commercial and industrial centre. While repeated uprisings and attempts to regain independence failed, Warsaw was still enriched with the creation of many cultural and educational institutions, many surviving to this day.
+
+Warsaw's growth was curbed by a double line of military forts, protecting the strategically important Russian outpost, which by the second half of the 19th century made Warsaw one of the most dense and overpopulated cities of its time. To aid the failing hygiene, the authorities started constructing the pioneering Warsaw waterworks (led by William Lindley), and first district heating and warm water installations were laid.
+
+At the turn of the century, Warsaw was electrified, gaining its first electric power plant, electric tramways, and a telephone network. At the start of the First World War, Warsaw was bustling, modern city of almost 1 million inhabitants, rife with opulent, belle-epoque architecture adapted to its density.
+
+====Between the World Wars====
+[[File:Warszawa 1935.png|250px|thumb|Warsaw in 1935]]
+As Poland regained independence, Warsaw became the capital city of an independent country again. It suffered heavily during the war, and was soon threatened by the advancing Soviet forces, who were only repelled at the borders in the 1920 Battle of Warsaw. While political instability and struggles ensued, Poland enjoyed economic growth, optimism and proper attention to planning and urbanism in that period, and Warsaw benefited from that greatly, especially under its last interwar President, Stefan Starzyński.
+
+Warsaw gained a state-of-the-art airport in Okęcie, a central railway through station connecting all major railway links that used to go through or terminate in the city, and an experimental TV broadcasting station. Modern and attractive planned residential districts were created outside of the historic forts line, most notably northwards in [[Warsaw/Żoliborz|Żoliborz]] and Bielany. Warsaw continued to mix the new and old and many modern buildings filled in gaps between or replaced older buildings across the city, providing for the eclectic look Warsaw for which is known today.
+
+The developments of that time, while later destroyed to a large extent in the Second World War, were instrumental to shaping Warsaw in many ways to how it was known today. Most were either rebuilt verbatim or in a similar form and place, while some survived.
+
+====Second World War====
+[[File:Destroyed Warsaw, capital of Poland, January 1945.jpg|250px|thumb|Warsaw was all but razed during the Second World War]]
+For most of the Second World War, Warsaw was occupied by Nazi Germany, but it did not surrender without major fights that affected the city – over 10% of the buildings were destroyed, with the infrastructure and many other buildings damaged. The German authorities treated Warsaw as expendable and had grand plans of totally rebuilding it as a planned city even before the war, with Germanic and Nazi symbolism replacing all of the Polish heritage. This did not come into fruition, but explained why little heed was paid to preserving the city, which was also periodically bombed by the Soviet forces after 1941.
+
+It was an especially tragic period for the Jewish population of Warsaw, which had been a significant part of the general population over pretty much all of Warsaw's history. The Nazi forces confined Jews to the Warsaw Ghetto, sprawling over much of the Western Śródmieście and the district of Wola, and proceeded with their plans to annihilate them. In 1942 the Germans carried out the Grossaktion Warschau, when more than 250,000 Jewish people were taken to Treblinka death camp. The minority of Jews that stayed in the Ghetto eventually carried out the Warsaw Ghetto Uprising of 1943. The uprising failed with around 50 thousand Jews killed or sent to concentration camps.
+
+In the final period of the war, the dramatic and tragic Warsaw Uprising took place in 1944. (The Warsaw Ghetto Uprising of 1943 and the Warsaw Uprising of 1944 are entirely separate historic events.) A furious Fuhrer ordered the obliteration of Warsaw and the indiscriminate massacre of all Poles in the city. Despite combat gallantry under limited weapon supply, Polish partisans did not liberate Warsaw from the German forces before the Soviets marched in. The Red Army then captured the crippled and all but razed city, cementing Poland's fate as a communist satellite state of the Soviet Union.
+
+====Post-World War II – rebuilding the city====
+[[File:Pałac Kultury i Nauki Warszawa (0069).jpg|250px|thumb|The Stalinist Palace of Culture and Science became a towering symbol of post-war Warsaw]]
+[[File:The Palace Of Culture Warsaw Poland Travel Photography (111546747).jpeg|thumb|250x250px|Today, the Palace is surrounded by modern highrises]]
+By 1945, Warsaw was almost completely destroyed. It is estimated that over 80% of the city was destroyed, including almost the entire city centre and most historic and significant buildings. Of almost 1.4 million inhabitants, half died during the war (including the vast majority of the Jewish population), others were forcibly removed or escaped voluntarily, and only about 10% of the initial population was found inhabiting the ruins of the city.
+
+To rebuild the city was thus an enormous task, but there was no hesitation in the resolve to achieve it. A special committee of architects and urban planners conducted the efforts. Their paradigms shaped the city as it is known today. On the one hand, there was meticulous effort to restore the oldest and most important historic buildings using extant documentation, but also old photos and even paintings. On the other, the communist ideology ran very much against the character of pre-war Warsaw, and practical reasons and urban planning opportunities dictated planning on a larger scale, envisaging an expansive, much lower-density city.
+
+Most architects and historians held much the late 19th century architecture in low regard and thus many of the historic buildings and areas were rebuilt to resemble their shape in the 18th century or earlier, while ideological and practical reasons limited the restoration of ornamentation to less important buildings, and centralized urban planning provided for a much more harmonious look of the rebuilt historic sections of the city than could be witnessed from before the war. The restoration was mostly completed in the 1940s and early 1950s, but it took until the 1974 to rebuild the Royal Castle. After the Royal Castle, not many other buildings were restored – among notable exceptions are the buildings of the northern side of Plac Teatralny, only recreated in late 1990s.
+
+Apart from historic restoration, in the 1950s Warsaw has also gained a fair share of socialist-realistic architecture, which was all about monumentalism and ideologically-themed decoration. Its most prominent example is the controversial Palace of Culture and Science, which grew to become one of Warsaw's symbols. The emphasis, however, was on housing the returning and rapidly growing population, and thus Warsaw also gained many nondescript, gray residential buildings. As population continued to grow and means were scarce in the centrally-planned socialist economy, the authorities turned to prefabricated concerte, creating sprawling ''Plattenbau'' estates around Warsaw.
+
+====Contemporary Warsaw====
+Since the fall of communism in 1989, Warsaw has been developing much more rapidly than Poland as a whole. It's hard to recognize the city if you saw it ten years ago, and more changes are constantly taking place. Warsaw has long been the easiest place in Poland to find employment, and for this reason many of the Polish inhabitants of the city are first or second generation, originating from all over the country.
+{{Infobox|Capital''ist'' insult|The building at Nowy Świat 6/12 served as the headquarters for the Central Committee of the Polish United Workers' Party until 1991 when some creative anti-communists decided to make the communist headquarters the home for the Warsaw Stock Exchange and the Banking Finance Center. The Warsaw Stock Exchange has since moved to the building directly behind the communist HQ, but the irony remains.}}
+Even though much of Warsaw seems to imitate western cities, there are many peculiarities to be found here that you will not find in western capitals. Examples include the communist-era ''bar mleczny'' (lit. 'milk bar') that remain in operation (essentially cheap cafeterias for no-frills, working-class traditional Polish dining, which have remained incredibly popular in the face of westernization). Europe's largest outdoor marketplace, once around the old stadium, has disappeared as the new National Stadium was built for the Euro 2012 football championships.
+
+===Climate===
+{{climate chart
+|Warsaw
+|-3.3 |1.4 |35.6
+|-2.6 |3.1 |34.4
+|0.2 |7.9 |34.2
+|4.9 |15.1 |36.8
+|9.3 |20.4 |58.1
+|12.9 |23.5 |67.8
+|14.9 |25.6 |81.5
+|14.5 |25.1 |63.3
+|10.2 |19.5 |50.9
+|5.7 |13.3 |42.6
+|2.0 |6.9 |40.8
+|-1.8 |2.7 |41.7
+
+|float=right
+|clear=right
+|source=[[:w:Warsaw]]
+|description=
+}}
+
+Summers in Warsaw can vary from mild to exhaustingly hot. In most residences and some hotels, there is no air conditioning, which means the days and nights can be hot to the point of interrupting one's sleep. Travelers should bring light, summer clothes for the day, but bring an extra jacket for evenings, which can sometimes get a little chilly.
+
+Winters, on the other hand, can get very cold (sometimes as low as -20 °C). Weather can often force the city to come to a standstill. When it snows, it may take up to an hour's time just to travel a few city blocks with traffic at a standstill and road crews seemingly caught off guard (despite warnings from meteorologists in several days in advance). Public transportation will also be utter chaos with buses and trams running late. On the first day of snow in 2010, it took upwards of three hours to travel from [[Warsaw/Wola|Wola]] to the northern tip of [[Warsaw/Mokotów|Mokotów]]; a trip that usually takes no more than 30–45 minutes. Bring heavy, water-resistant shoes when traveling in Poland in late autumn to early spring.
+
+===Tourism===
+The [http://www.warsawtour.pl '''Warsaw Tourist Office'''] (''Stołeczne Biuro Turystyki'') is the official tourist information agency in Warsaw and can provide visitors with information regarding attractions, transport and events. They also have free maps and brochures for travelers. They operate [https://warsawtour.pl/en/warsaw-tourist-information/ four locations] in Warsaw:
+* in the Palace of Culture and Science, entrance from ''Emilii Plater'' Street
+* at the Old Town Market Square (''Rynek Starego Miasta'') in the Old Town
+* in the Praga Koneser Centre
+
+The '''City of Warsaw''' has a lot of useful information on its [https://en.um.warszawa.pl/ website]. A popular source of practical tips, contacts, and current event information is the '''[http://www.warsawinsider.pl/ Warsaw Insider]''', available at every concierge, tourist information centre and larger newsagents. The '''[http://www.warsawvoice.pl Warsaw Voice]''' is the city's most popular English-language weekly, and maintains [http://www.warsawvoice.pl/baza_wydarzen/lista_wydarzen.php?layout=wda&amp;lang=en a good calendar of events]. '''[http://www.destinationwarsaw.com Destination Warsaw]''' has some useful information, but you need to be aware that it is run by ''Warsaw Destination Alliance'', whose members are some of the tourist-related businesses in Warsaw, so the website obviously serves their promotional needs. Its main goal is the promotion of Warsaw as a destination abroad. An interesting alternative may be independent news portals such as [https://warsawcity.info/ '''Warsaw City'''].You will find a lot of information about Warsaw cinemas, theaters, museums, parks, concerts, etc.
+
+=== Orientation ===
+==== Warsaw and the Vistula ====
+As is the case with most major cities, Warsaw is situated on a river. The Vistula river (Polish: ''Wisła'') crosses the city on a north–south axis, dividing it into two parts. The western part is usually referred to as the left bank (Polish: ''lewy brzeg'' adj. ''lewobrzeżna Warszawa'') and the eastern part as the right bank (Polish: ''prawy brzeg'' adj. ''prawobrzeżna Warszawa''). Warsaw was founded on the left bank, while the right bank was a separate municipality, called Praga, which was incorporated into Warsaw in the 19th century. Therefore, many would refer to the right bank as "Praga", even if Praga proper is only two districts of the right bank.
+
+Vistula in Warsaw is a broad, sprawling and partly unregulated river, which flooded the surrounding areas often in the past and continues to be somewhat of a threat today. Therefore, Warsaw is not really on the river in the sense many cities like London or Paris are, but rather near to the river, as Vienna is. The historic parts of left-bank Warsaw are a certain distance apart from the river, on an elevation called Warsaw escarpment. The part of left-bank Warsaw closer to the river (and less elevated with regard to it) called Powiśle used to be of secondary importance and stature. The right bank is less elevated and most of the development there is separated from the river by a wide belt of shrubbery and natural beaches, allowing for flooding in periods of high tide. It is therefore visually and physically removed from the left bank.
+[[File:Świętokrzyski Bridge - Warsaw 2012.jpg|250px|thumb|''Świętokrzyski'' is the shortest and most pedestrian-friendly of the bridges over the Vistula in Warsaw]]
+Ten bridges cross the Vistula within the boundaries of Warsaw. They are, starting from south:
+* '''Anny Jagielonki'''
+* '''Siekierkowski'''
+* '''Łazienkowski'''
+* '''Poniatowskiego'''
+* '''Średnicowy''' (railway bridge only)
+* '''Świętokrzyski'''
+* '''Śląsko-Dąbrowski'''
+* '''Gdański'''
+* '''Grota-Roweckiego'''
+* '''Skłodowskiej-Curie'''
+
+====City centre====
+Warsaw's left bank, or western part of the city is the dominant part, and the part deemed the city centre lies therein.
+
+The right bank was the first one to become populated, during the 9th or 10th century. However, Warsaw's left bank or the western part of the city is the dominant one, and the present city's central district, called [[Warsaw/Śródmieście|Śródmieście]] lies on the left bank. The Old Town is fully contained within the borders of the city center.
+
+The central point of the city is at the intersection of Al. Jerozolimskie and ul. Marszałkowska, near the entrance to the Metro Centrum subway station. The main railway station, Warszawa Centralna, is also close by. It is good to know that the Palace of Culture is a landmark visible from almost any location in Warsaw.  Should you ever get lost in the city, just walk toward the Palace of Culture and Science.
+
+==== Street numbering ====
+[[File:9, Belgijska Street in Warsaw - 01.jpg|thumb|250x250px|Building number sign with direction towards ascending numbers shown]]
+Traditionally, streets parallel with Vistula are numbered along the river current, i.e. the buildings with the lowest numbers are the southernmost. Streets roughly perpendicular to the Vistula are numbered from the river outwards, i.e. the lowest numbers are the closest to the river. One side of the street always has even numbers, while the other has odd ones (so if you are looking for number 8 and you see number 7, look at the opposite side of the street). There are several exceptions to those rules, e.g. the Puławska street in southern Warsaw has building numbers starting from the north, while some housing estates have sprawling areas with buildings sharing the same street name, with building numbers assigned in various ways.
+
+==== City Information System (MSI) ====
+The City Information System (''MSI'' – ''Miejski System Informacji'') can be of further aid to visitors to Warsaw. The MSI divides every district into several neighbourhoods (with informative purposes, no administrative or other role), with the neighbourhoods indicated in red on signage throughout the city. You can find the name of the MSI neighbourhood you are in on the red stripes of the building number and street signs. They are also indicated in red on directional signage, showing the way to get to a given neighbourhood. A rundown of the MSI neighbourhoods and helpful schematic maps can be found [https://zdm.waw.pl/miejski-system-informacji/obszary-msi/ here] (the website is in Polish, but the schematics are of universal informative value, just click on the district for the rundown of the areas therein)
+
+The districts as such are indicated on signposts with white background, while streets and other POIs with blue background, except for the Old Town and Royal Road areas, where the background is brown and a different font is used to indicate their historic character. The building number signs also often feature a small arrow pointing to the direction the building numbers in a street ascend. Street signs at intersection indicate the building numbers to be found within the block it is in (i.e. until the next intersection). On some signposts you can also find small signs showing the relation of the street they're on to the Vistula.
+
+Other elements that can be of interest to visitors are pylons with neighbourhood maps and transparent boards on historic and significant buildings, which explain briefly their history and significance. Similar boards under street signs explain the origin of the name of the street - in case of streets named after people, they contain a short bio and usually a small portrait. An increasing number of those boards contain descriptions in both Polish and English, while others are in Polish only.
+&lt;gallery&gt;
+File:Corner streets Domaniewska and Langego in Warsaw - 01.jpg|Street signs at an intersection indicating building numbers to be found in the nearest block
+File:POL WAW MSI Tablica kierunkowa.jpg|Direction table at a road in [[Warsaw/Ochota|Ochota]]
+File:Tablica MSI Trakt Królewski.jpg|A pylon with the map of the Royal Road
+File:Grójecka104MSI.jpg|A transparent info board on a historic building
+File:PL MSI informacja kierunkowa dla pieszych.jpg|A fingerpost in the historic area (Old Town / Royal Road)
+File:Tabliczka MSI Wisła prostopadle lewa.jpg|A small sign indicating the street you are in is perpendicular to the Vistula and you are heading away from the river
+&lt;/gallery&gt;
+
+== Get in ==
+{{mapframe | name=Warsaw transport hubs | 52.250 | 21.000 | height=500 | width=500 | show=go | zoom=11 }}
+=== By plane ===
+[[File:Terminal A Warsaw Chopin Airport.JPG | thumb | 300px | Chopin is the main airport ]]
+Warsaw has two airports: Chopin ({{IATA|WAW}}) is the main one 8 km south, while Modlin ({{IATA|WMI}}) 40 km north is only used by low-cost carriers.
+
+==== Warsaw Chopin Airport ====
+{{go
+| name=Chopin Airport | alt=Lotnisko Chopina w Warszawie, {{IATA|WAW}} | url=http://www.lotnisko-chopina.pl/?lang=en | email=
+| address= | lat=52.165833 | long=20.967222 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=Warsaw Chopin Airport | wikidata=Q465071 | lastedit=2021-11-20 
+| content=This was upgraded in 2015 and now has a single Terminal A; it's easy to navigate and has the usual facilities including car hire. It's 8 km south of city centre in Okęcie, Włochy district. It has both budget and full-service flights to most major European cities. Intercontinental destinations are New York JFK and Newark, Chicago O'Hare, Toronto, Seoul, Beijing, Tel Aviv and the Gulf states. Domestic flights are reducing as the trains speed up, but include Poznań, Kraków, Katowice, Rzeszów, Gdańsk and Wrocław. 
+}}
+
+===== To and from Chopin Airport =====
+[[File:Warszawa Lotnisko Chopina 2.jpg | 250px | thumb | Entrance to the airport railway station ]]
+
+'''[https://www.wtp.waw.pl/en/public-transport-step-by-step/airports-transport/ By train]{{Dead link|date=April 2025 |bot=InternetArchiveBot }}:''' Lotnisko Chopina station is next to Arrivals. ''Szybka Kolej Miejska'' (''SKM'') train Line S2 runs downtown every 30 min, taking 25 min via Służewiec, Zachodnia (West) station, Śródmieście station (for Centralna bus and railway stations), Stadion, Wschodnia (East) station and Sulejówek. It runs to the city 06:00-23:30 and outward 05:00-23:30. Line S3 runs downtown hourly through Warszawa Zachodnia (West), Warszawa Centralna and Warszawa Wschodnia (East) to Legionowo Piaski / Radzymin.
+
+Regular Warsaw transport tickets issued by ZTM (the local transport operator which runs city buses, trams and the metro) are valid on SKM train services between the airport and Warsaw. The airport is in fare zone 1 so a single adult ride is 3.40 zł. If you need a bus at the other end, get a one-transfer ticket (valid 75 min) for 4.40 zł. Buy tickets from the machines near the platforms - you shouldn't need to validate them as they're stamped on issue.
+
+[https://www.mazowieckie.com.pl/en Koleje Mazowieckie] (Mazovian Railways or KML, the provincial local train operator) also operates direct connections (RL) between Modlin, Warszawa Centralna and Chopin Airport hourly. Single transfer tickets and timed tickets of ZTM are also accepted on RL airport trains operated by KM on the section Warszawa Płudy – Warszawa Lotnisko Chopina.
+
+'''By bus:''' Four daytime bus lines and one night bus ply to and from the airport. Single-fare tickets for the bus cost 4.40 zł (as of May 2023) from any kiosk. There is a ticket machine (which accepts coins, notes and credit cards) near the bus stop. You need to validate the ticket when you board the bus. There are also ticket machines in most of the buses, please note that they only accept cards. Drivers do not sell tickets anymore. 
+
+: - Bus 175 runs from Plac Piłsudskiego near Old Town via Centralna station and Metro Centrum, Nowy Świat and the University. It runs 04:30-23:00 every 20 min and takes 30-45 min.
+: - Bus 188 runs from Gocławek Wschodni in Praga Południe, via Śródmieście and Politechnika metro station. It runs 05:00-23:00. 
+: - Bus 148 runs from Rondo Wiatraczna in Praga Południe, east side of the city, via Ursynów, Mokotów and Imielin metro station.
+: - Bus 331 only runs in peak hours from Wilanowska metro station in Mokotów, where many inter-city buses stop.
+: - Night Bus N32 runs from Centralna bus station, 23:00-05:00. 
+
+'''By taxi:''' The airport recommends [https://eletaxi.pl/en/ Ele Taxi] +48 22 811 11 11; a reasonable fare from city centre might be 40 zł. There's a taxi kiosk within Arrivals. Other operators can only pick you up from outside Departures. Have nothing to do with the touts and sharks lurking outside Arrivals: see [[Warsaw#Taxis]] for more info.
+
+==== Warsaw Modlin International Airport ====
+[[File:Nowy Dwór Mazowiecki, Terminal - fotopolska.eu (329166).jpg | thumb | 300px | Modlin is no-frills and 40 km out ]]
+{{go
+| name=Modlin Airport | alt={{IATA|WMI}} | url=https://www.modlinairport.pl/ | email=
+| address= | lat=52.451111 | long=20.651667 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikipedia=Warsaw Modlin Airport | image=Warsaw Modlin Airport.jpg | wikidata=Q1401995
+| lastedit=2021-11-20
+| content=In Nowy Dwór Mazowiecki, 40 km north of Warsaw, the airport fields flights from low-cost carriers like Ryanair, Wizz Air and Air Arabia. The airport is modern and simple but has the basics.
+}}
+
+===== To and from Modlin Airport =====
+
+'''By train:''' Modlin town railway station is 2 km east of the airport, so you take the shuttle bus to Modlin then a [https://www.mazowieckie.com.pl/en regional train] to Warsaw. Get a combined airport ticket (''Bilet Lotniskowy'') for 19 zł, which also lets you use public transport in Warsaw's Zone 1 for 75 min. Total travel time is up to 90 min.
+
+'''By bus:''' Contibus runs from the airport to the city centre, tickets can be bought at arrivals or on the bus with cash or card. They also run to the airport, tickets can be bought on board or online. If buying online you must separately download the ticket from their website once payment clears.
+
+Flixbus also run via the airport to other cities such as Gdańsk.
+
+=== By train ===
+[[File:Dworzec Centralny w Warszawie radek kolakowski.jpg | thumb | 300px | The slabby 1975 Warszawa Centralna: don't despair, the city gets better after this ]]
+Intercity trains are run by PKP. These nominally require reservations, but outside busy times you can walk up and get a ticket for immediate travel.
+
+From [[Berlin]] trains run every two hours, taking 6 hr via [[Frankfurt (Oder)]], Rzepin, Świebodzin, Zbąszynek, [[Poznań]], Konin and Kutno. From Poznań trains take around 2 hr 30 min.
+
+From [[Kraków]] trains run non-stop every two hours, taking under 3 hr. From Ukraine via Lviv and [[Przemyśl]] you usually change at Kraków, but the nightly sleeper from [[Kyiv]] runs via [[Chełm]] and [[Lublin]], taking 15 hr 30 min to Warsaw.
+
+From [[Gdynia]] and [[Gdańsk]] trains run non-stop hourly, taking 2 hr 40 min.
+
+From [[Budapest]] one daytime and one overnight train runs via Visegrad, [[Bratislava]], [[Ostrava]] and [[Katowice]], taking 10-14 hr. From [[Katowice]] they run every hour or two, taking 2 hr 30 min. 
+
+From [[Vienna]] there's likewise one daytime and one overnight train via Breclav, Ostrava and Katowice, taking 8 hr to Warsaw.
+
+From [[Prague]] trains run via [[Olomouc]], [[Ostrava]] and [[Katowice]], with the daytime train taking 8 hr 30 min to Warsaw and the overnight train 11 hr.
+
+From [[Szczecin]] trains take 7 hours via [[Poznań]] (where you may have to change), Konin and Kutno, with five services per day.
+
+From [[Vilnius]] and [[Kaunas]] two trains run daily via Mockava on the border (where you change gauge and train) and Białystok. The midday arrival continues to Poznań and Szczecin, the evening train is for Kraków. The domestic section from [[Białystok]] runs every two hours and takes 2 hr. The eastbound train may be shown as for Mockava, but it's a seamless through-service. 
+
+All trains from Belarus and connections to Russia remain suspended in 2025.
+
+Warsaw has three long-distance railway stations: {{marker | type=go | name=Warszawa Zachodnia (West) | lat=52.219 | long=20.966 }}, {{marker | type=go | name=Warszawa Centralna | lat=52.229 | long=21.003 }} and {{marker | type=go | name=Warszawa Wschodnia (East) | lat=52.252 | long=21.051 }}. 
+
+Most trains cross the city, thus the train from Berlin stops at West and Central then terminates at East, while the train from Gdansk stops at East, Central and West then continues to Kraków. So it's similar to Brussels, where trains cross the city north-south, and the central station is served by all trains but is never the terminus.
+
+Centralna Station is the closest to the main tourist sites and facilities. It's a slabby communist-era building of 1975, but it's functional and easy to navigate. The ticket offices are in the main hall, with platforms below (and the suburban station of Śródmieście deeper still in the bowels of the Earth). As trains are running through and not terminating, they stay only a few minutes here, so head for your platform as soon as it's shown on the departure board. Lots of cafes in the subways here. The bus platforms are north side (just local buses), with other stops in the adjacent streets, the trams run west side, and the Metro is a short walk.  
+
+'''Suburban trains:''' see "Get around" for local services including the airport trains, mostly running through Warszawa Śródmieście beneath Centralna.
+
+=== By bus ===
+[[File:Warszawa zachodnia bus station.jpg | thumb | 300px | Warszawa Zachodnia bus terminal]]
+Long-distance bus companies and stations in Poland are often called PKS, a legacy of the communist monopoly ''Przedsiębiorstwo Komunikacji Samochodowej'' (meaning "motor transport company"). After liberalisation in 1989 PKS was fractured into 176 local companies, which have variously failed, thrived or been taken over. 
+* {{go
+| name=Dworzec PKS Warszawa Zachodnia | alt= | url= | email=
+| address=Al. Jerozolimskie, [[Warsaw/Śródmieście#Go | Śródmieście]] | lat=52.218425 | long=20.963128 | directions=south side of Zachodnia railway station
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q48850679
+| lastedit=2021-11-20
+| content=Most inter-city and international buses arrive here. To get elsewhere in the city, use a local train, or centre-bound buses (south side of Al. Jerozolimskie) 127, 158 or 517. Night buses N35 and N85 run to Dworzec Centralny every 30 min from midnight.
+}}
+* '''Dworzec Centralny''' is not the "central bus station" but the bus platforms north side of Centralna railway station in [[Warsaw/Śródmieście#Go | Śródmieście]]. These are just local buses, but include the night buses. Lots more bus stops in the adjacent streets, and trams stop west side on Al Jana Pawła II.
+* {{marker|name=Metro Wilanowska|type=go|wikidata=Q2662377|lat=52.180|long=21.023}} is an interchange in the south district of [[Warsaw/South#Go | Mokotów]]. Several intercity buses stop here, though Flixbus no longer do.
+* {{marker|name=Metro Młociny|type=go|wikidata=Q638928}} is a transport hub at the north edge of the city, with a metro station, tram terminus (lines 2, 6, 11 and 33), and a large bus station used by city lines and suburban buses towards Łomianki. Flixbus stops here and at Modlin Airport on its way to Gdańsk.
+
+===By car===
+Four European "E-roads" lead to Warsaw: {{European road||E|30}} ({{European road|PL|A|2}}), {{European road||E|77}} ({{European road|PL|DK|7}}),  {{European road||E|67}} under the unofficial name of '''[[Via Baltica]]''', ({{European road|PL|A|8}}), and {{European road||E|372}} ({{European road|PL|DK|17}}). The ''E-numbers'' are usually displayed on signs but it is best to know the national road numbers too, which are the numbers in parentheses.
+
+What follows is a list of streets you will find yourself on when approaching the city from different directions:
+
+* '''North-west''': ul. Wybrzeże Gdyńskie or "Wisłostrada" in [[Warsaw/Bielany|Bielany]] and then in [[Warsaw/Zoliborz|Żoliborz]] (along the left bank):  {{European road|PL|DK|7}} –  {{European road||E|77}}  [[Gdansk|Gdańsk]] ([[Denmark|DK]]) ([[Russia|RU]]) ([[Sweden|S]])
+* '''North-east''': ul. Radzymińska in [[Warsaw/Targowek|Targówek]] and then al. Solidarności in [[Warsaw/Praga Polnoc|Praga Północ]]  {{European road|PL|DK|8}} – {{European road||E|67}} [[Bialystok|Białystok]] ([[Belarus|BY]]) ([[Lithuania|LT]])
+* '''East and south-east''': ul. Płowiecka and ul. Czecha in [[Warsaw/Praga Południe|Praga Południe]] {{European road|PL|DK|2}} – {{European road||E|30}} [[Terespol]] ([[Belarus|BY]]); {{European road|PL|DK|17}} – {{European road||E|372}} [[Lublin]] ([[Ukraine|UA]])
+* '''West''': ul. Wolska and ul. Połczyńska in [[Warsaw/Bemowo|Bemowo]] and then in [[Warsaw/Wola|Wola]] {{European road|PL|DK|2}} –  {{European road||E|30}}  ''[[Poznań]]'' ([[Germany|D]])
+* '''South-west''': al. Krakowska in [[Warsaw/Włochy|Włochy]] and then ul. Grójecka in [[Warsaw/Ochota|Ochota]]  {{European road|PL|DK|7}}  –  {{European road||E|77}} [[Kraków]] ([[Slovakia|SK]]);  {{European road|PL|DK|8}} –  {{European road||E|67}}  [[Katowice]] ([[Czech Republic|CZ]])
+
+The cities listed above are the ones displayed on signs in the city. The [[:WikiPedia:List of international license plate codes|abbreviations]] in (parentheses) show you which neighboring countries can be reached with a road. If you are coming to the city, follow the blue-on-white ''Centrum'' signs. One exception is when you are coming from the north-east: follow the ''Praga'' sign unless you are driving a lorry.
+
+==== Driving distances ====
+
+'''In Poland''' –
+'''[[Białystok]]''' {{km|190}};
+'''[[Gdańsk]]''' {{km|390}};
+'''[[Kielce]]''' {{km|180}};
+'''[[Kraków]]''' {{km|290}};
+'''[[Olsztyn]]''' {{km|210}};
+'''[[Poznań]]''' {{km|310}};
+'''[[Siedlce]]''' {{km|100}};
+'''[[Toruń]]''' {{km|210}}
+
+'''In other countries''' –
+'''[[Berlin]] ([[Germany|D]])''' {{km|570}};
+'''[[Budapest]] ([[Hungary|H]])''' {{km|700}};
+'''[[Kaliningrad]] ([[Russia|RU]])''' {{km|350}}
+
+[[File:Warsaw as seen from the Palace of Culture and Science (9632719056).jpg|thumbnail|right|Traffic in Warsaw remains busy until late in the night]]
+
+==== Car hire ====
+Most international car rental companies (including Alamo, Avis, Budget, Dollar, Europcar, Hertz, National, Sixt and Thrifty) are present in Warsaw, there are also many local companies. The usual pick-up and return places are the airport, the Warszawa Centralna railway station or major hotels in the city centre, most companies offer to arrange for pick-up and return at other locations at a fee. The regular caveats and requirements as in other European Union countries apply.
+
+It is a legal requirement for you to carry your driving license, insurance documents and the vehicle registration documents at all times when driving the car. If the police stop you without any of them, they are likely to impose a fine.
+
+==Get around==
+===Public transport===
+[[File:Warszawa metro plan1.svg|thumb|upright=1.6|250px|A map of the Warsaw Metro, showing the north-south Line 1, the operational central part of east-west Line 2, and its planned extensions]]
+The public transport system in Warsaw is generally well-developed, with some '''200 bus routes''' and '''30 tram lines'''. The route descriptions on the tram stops are easy to follow (although bus stop notices are more complex), but it can last longer, however, to travel between destinations far from the city center. Warsaw has two underground metro lines, one going from south to north on the left bank, and the other from the east to the west. There are also some regional urban rail services (Polish: ''Szybka Kolej Miejska'' or ''SKM''), although they depart at most every 30 minutes only. You can consult [https://www.wtp.waw.pl/en/maps-schemas/ schemas]{{Dead link|date=April 2025 |bot=InternetArchiveBot }} on operator site for detailed information.
+
+All of the abovementioned means of public transit share a single fare and ticketing system, operated by [https://www.wtp.waw.pl/en/ ZTM], a unit within the City of Warsaw responsible for the organization of all public transit. You can buy paper tickets from machines at some stops, or on board ''some'' trams. These must be validated on board. Tickets are available for single journeys and also for 24 and 72 hours. You can also buy tickets using the '''[https://jakdojade.pl/warszawa/trasa/ jakdojade.pl]''' app ([https://apps.apple.com/app/id506795511 iOS], [https://play.google.com/store/apps/details?id=com.citynav.jakdojade.pl.android Android], [https://appgallery.cloud.huawei.com/ag/n/app/C101769825 Huawei] apps). Mobile tickets can be validated by scanning a QR code on board. Jakdojade can help you plan the most convenient trip with the public transit between two points in the city. Google Maps can also do that, however they update bus schedules less often. There is also [https://pl.easyway.info/en/cities/warsaw Easyway] journey planner.
+
+====Metro====
+Warsaw's metro system opened in 1995 and is one of the newest underground railway systems in [[Europe]]. Operated by [https://metro.waw.pl/ Metro Warszawskie sp. z o.o.] it runs daily from early morning until midnight at 3-10 minute intervals. On Friday and Saturday, the ''Metro'' runs until 03:00. Trains and stations are clean and neat. The system consists of two lines; the '''M1''' going from Młociny to Kabaty, and the '''M2''' going from Bemowo to Bródno. The subway does not go to many tourist destinations; however, several stations will take you in a general vicinity of some attractions. The M2 is being extended westwards, new stations are to be opened in 2026.
+
+====Szybka Kolej Miejska====
+[[File:19 WE-SKM Warszawa (1).JPG|right|thumb|An SKM train - note the ecru and red livery]]
+''Szybka Kolej Miejska'' (''SKM'') runs on the railway tracks shared with other regional and long-distance trains. SKM trains can be distinguished by their white and ecru livery.  SKM reaches many suburban locations outside of the boundaries of Warsaw, as well as the Chopin Airport. SKM stations are quite far from each other, so the trains are best used to traverse longer distances or travel to remote locations within the Warsaw metropolis.
+[[File:SKM Warszawa - wszystkie linie.svg|thumb|right|Map of SKM lines]]
+As of 2023 there are four SKM lines and variants of them, most ('''S1''' and '''S2''') stopping at the Warszawa Śródmieście station in the city centre or the Warszawa Centralna ('''S3'''), which is connected to the former by an underground passageway. Except for '''S4''', all of the lines share the same stretch route through central Warsaw between Warszawa Zachodnia and Warszawa Wschodnia, connecting the [[Warsaw/Śródmieście|Śródmieście]] district to [[Warsaw/Wola|Wola]], [[Warsaw/Ochota|Ochota]] and [[Warsaw/Praga|Praga]], as well as stopping at Warszawa Stadion station, which serves Stadion Narodowy.
+* Line '''S1''' runs between [[Pruszków]] and [[Otwock]], through [[Piastów]], [[Warsaw/Ursus|Ursus]], [[Warsaw/Włochy|Włochy]], [[Warsaw/Wawer|Wawer]]
+* Line '''S2''' runs between the Chopin Airport and [[Sulejówek Miłosna]], through [[Warsaw/Rembertów|Rembertów]] and [[Warsaw/Wesoła|Wesoła]].
+* Line '''S3''' runs between the Chopin Airport and [[Wieliszew]] along the same central rail stretch as long-distance trains, stopping at Warszawa Centralna instead of Warszawa Śródmieście and Warszawa Stadion and in [[Warsaw/Białołęka|Białołęka]]
+* Line '''S4''' runs between [[Wieliszew]] and [[Legionowo Piaski]] through [[Warsaw/Białołęka|Białołęka]], [[Warsaw/Praga|Praga]], [[Warsaw/Żoliborz|Żoliborz]] and [[Warsaw/Wola|Wola]] to Warszawa Zachodnia. Then it runs through [[Warsaw/Ochota|Ochota]], [[Warsaw/Mokotów|Mokotów]], and [[Warsaw/Ursynów|Ursynów]] to [[Piaseczno]]. It will take you to the Warsaw Zoo. This line ''does not stop'' at any station within the core city centre.
+* Line '''S40''' is a variant of '''S4''' which starts in Warszawa Glowna. It runs through Warszawa Zachodnia,[[Warsaw/Ochota|Ochota]], [[Warsaw/Mokotów|Mokotów]], and [[Warsaw/Ursynów|Ursynów]] to [[Piaseczno]]
+
+==== Suburban trains ====
+
+'''Warszawa Śródmieście''' is beneath Warsaw Centralna station: the only buildings at street level are lobbies for the escalators and lifts. It has trains:
+: - west to Zachodnia (West) station, Błonie, Sochaczew, Łowicz and Kutno
+: - southwest to Zachodnia, Grodzisk Mazowiecki, Żyrardów and Skierniewice
+: - south to Zachodnia, Służewiec and Chopin Airport, with other trains branching at Służewiec for Piaseczno, Warka and [[Radom]]
+: - east to Centralna and Wschodnia (East) stations, Sulejówek, Mińsk Mazowiecki, Mrozy and Siedlce
+: - on lines S1 and S2 of the city metro. Walk through the subway to Centrum metro station for the other lines. 
+: Warszawa Śródmieście WKD is a separate platform for [http://www.wkd.com.pl/ WKD] (''Warszawska Kolej Dojazdowa'') trains to Grodzisk Mazowiecki via Pruszków, Milanówek and Podkowa Leśna.
+
+Warszawa Gdańska (Metro Dworzec Gdański) is the station for [[Ciechanów]], Działdowo, Mława and Nasielsk.
+
+Warszawa Wileńska on ul. Targowa is the station for Wołomin, Małkinia, Tłuszcz and Zielonka.
+
+====Buses====
+Bus route numbers consist of three digits. Only the first digit has any meaning, the latter being merely ordinal. Here's the key to understanding Warsaw bus route numbers:
+
+:{| border="0" cellpadding="2"
+! !! Normal !! Expedited !! Suburban
+|-
+! All-Day Service
+| '''1xx''' and '''2xx''' || '''5xx''' ||  '''7xx''' 
+|-
+! Certain Hours Only (Usually Peak)
+| '''3xx''' || '''4xx''' ||  '''8xx''' 
+|}
+
+Other than that:
+*  '''Nxx'''  are night routes.
+*  '''9xx'''  are special routes.
+*  '''E-x'''  are express routes, which link the farthest districts to the city centre, call at very few stops and operate during peak hours only.
+*  '''Z-x'''  are replacement routes for trams or ''metro'' disabled by maintenance, accident or some other special conditions
+*'''C-xx'''  are routes which operate only on All Saints' Day (1st November) and All Souls' Day (2nd November) to accommodate people visiting the cemeteries
+
+Most bus lines operate from around 05:00 to 23:00 (but check the schedule for your particular connection), outside of those hours you need to resort to night buses (see below). The running intervals can be as few as 5 minutes (major routes during peak hours) to nearly 2 hours (certain suburban routes). Usually, you will wait 20 minutes at most.
+
+There are a few routes that are of certain interest to tourists:
+* '''148''', '''175'''  and  '''188'''  operate to and from the airport.
+* '''[https://www.wtp.waw.pl/en/timetables/?wtp_dt=2023-04-20&amp;wtp_md=3&amp;wtp_ln=180 180]{{Dead link|date=April 2025 |bot=InternetArchiveBot }}''', this line drives from Chomiczówka, through Powązki Cemetery, POLIN Museum, the Old Town and Castle Square, by the Royal Route to Łazienki Complex and [[Warsaw/Wilanów|Wilanów]]. In many parts 180 is covered by 116.
+[[File:Solaris Urbino 18 III, -8585, MZA Warszawa (28892070645).jpg|thumb|250x250px|City buses are painted red and yellow]]
+'''Requesting a stop''' – certain bus stops are request-only (Polish: ''na żądanie''):
+* If you want to get off, press the ''stop'' (red) button. In certain older buses, the button is above the door (and may not be red).
+* If you want to get on a bus, wave your hand when you see the bus approaching to indicate your intention to the driver
+
+The doors will not open automatically in air-conditioned buses and trams, and in all of them in the winter. To open it, locate the button labelled ''drzwi'' (blue) and press it.
+
+'''Not all bus stops that have "Centrum" in their name are in the city center.''' For example, there is a bus route '''525''' that goes from Centrum (the actual city center) to Centrum Zdrowia Dziecka in [[Warsaw/Wawer|Wawer]]. This is always clear from the route map.
+
+==== Night buses ====
+In the night when regular buses, trams, the metro and SKM do not run, a system of night bus lines will take you basically to every part of city. Most buses start and finish at the back of Central Railway Station (Dworzec Centralny). All buses operate at 30-minute intervals and depart from their central stop at Dw. Centralny 15 and 45 minutes after the hour, which facilitates changing. For a map of all the night bus lines visit [https://www.wtp.waw.pl/wp-content/uploads/sites/2/2020/07/mapa-noc.pdf ZTM]{{Dead link|date=April 2025 |bot=InternetArchiveBot }}. Lines operate from different stops within the Dworzec Centralny area – consult the schematic at the bottom of the map to make sure you are waiting at the right stop.
+
+All night bus stops (except for Dw. Centralny and Centrum) are '''request stops'''. Signal well in advance to give the bus drivers time to slow down and pull up at the stop.
+
+====Trams====
+Trams in Warsaw have the obvious appeal to tourists in that it is easier to predict where they are going – they usually go straight ahead and only rarely turn, as there are not many tramway junctions in Warsaw. The trams will also have the speed advantage over buses in the city centre during rush hours.
+
+Tram lines have single- and double-digit numbers. Trams with numbers above 40 operate in certain times only. The tram services can end as early as at 22:00, but most routes are served until midnight.
+
+Between June and August, a '''[http://www.ztm.waw.pl/?c=151&amp;l=2 special tourist line T]{{Dead link|date=March 2025 |bot=InternetArchiveBot }}''' is operated using historic cars from pl. Narutowicza .
+
+====Tickets====
+
+Public transportation tickets are issued and controlled by the single Public Transport Authority of Warsaw (Polish: ''Zarząd Transportu Miejskiego'' or ''[http://www.ztm.waw.pl/ ZTM]{{Dead link|date=March 2025 |bot=InternetArchiveBot }}'')  and are valid for all city buses, trams, the metro and SKM. Some tickets are also valid in the suburban trains (''Koleje Mazowieckie''' and ''WKD'').
+
+===== Ticket zones =====
+
+There are only two ticket zones in Warsaw – Zone 1, which covers the entirety of the City of Warsaw within its city limits ('''including''' the ''Warsaw Chopin Airport''), and Zone 2, which covers the surrounding municipalities covered by ZTM's common ticketing scheme. It is safe to say that most tourists will never wander outside of Zone 1, unless they have a specific interest in one of the municipalities neighbouring Warsaw. Almost all ticket types exist in two variants – for Zone 1 and for Zones 1+2.
+
+=====Ticket types and pricing=====
+
+There are many different ticket options and quirks in Warsaw, but do not get overwhelmed – most of them will not be of interest to a casual tourist. The regular ticket tariff is actually quite simple, with a selection of tickets available. The prices below are for standard tickets in each type; most are also available as reduced price tickets (50%) or for both the 1st and 2nd tariff zones (the latter covering most of Warsaw's far suburbs), usually some 40% more expensive than 1st zone tickets. Poles usually call zone 1+2 tickets just zone 2 tickets.
+
+* Short-term time-limit tickets allow you to travel with unlimited transfers for a limited time. There are three types of those tickets (all prices are for a normal fare, reduced is usually 50%):
+** 20-minute (zone 1+2) – '''3.40 zł'''
+** 75-minute (zone 1)  – '''4.40 zł''' (alternatively this ticket entitles you to a single bus journey within Zone 1, it can be longer than 75 minutes)
+** 90-minute (zone 1+2) – '''7.00 zł''' (alternatively this ticket entitles you to a single bus journey within Zone 1 and 2, it can be longer than 90 minutes)
+* The 90-minute is your safest bet if you are not sure how far your destination is, or whether it's within the city's limits. For short rides within the city centre a 20-minute ticket is usually enough.
+* There is also a variety of mid-term tickets allowing you to travel with unlimited transfers for longer periods:
+** 24h ticket (zone 1; valid for 24 hours since its validation, not from the moment of sale) – '''15 zł'''
+** 24h ticket (zone 1+2) – '''26 zł'''
+** 72h ticket (zone 1) – '''36 zł'''
+** Weekend ticket (from 19:00 on Friday till 08:00 on Monday) – '''24 zł'''
+
+There are reduced-fare tickets for every ticket type, at 50% of the fare price. There is a long list of those entitled to travel on reduced-fare tickets available at the [http://www.ztm.waw.pl/?c=142&amp;l=2 ZTM website]{{Dead link|date=March 2025 |bot=InternetArchiveBot }}, but for the most part it does not concern foreign tourists, except for children under the age of 7 and students under the age of 26 in possession of an International Student Identity Card (ISIC).
+
+Senior citizens: people from 65 to 69 years can get a one-year-ticket for zone 1 and 2 for 50 zł. People from 70 years and older ride for free.
+
+Visit the WTP website for an overview of available tickets and  [https://www.wtp.waw.pl/en/ticket-tariff/ current ticket prices]{{Dead link|date=April 2025 |bot=InternetArchiveBot }}.
+
+===== Where to buy? =====
+[[File:C10 Rondo ONZ - POP ZTM, Otwarcie M2, 2015-03-08.jpg|thumb|250x250px|ZTM service point]]
+Tickets can be purchased in automated ticket machines that are abundant across the city, especially at major transit hubs. They are either red and gray or blue and yellow, and rather conspicuous, even if they can be mistaken for an ATM or vice-versa. There are such machines at every metro station and at railway stations within the city centre, as well as at some of the more busy bus stops (e.g. at the Warsaw Chopin Airport). The ticket machines have a multi-lingual menu and are pretty easy to operate if you know [[Warsaw#Ticket types and pricing|what ticket type]] you want to buy. They accept credit and debit cards, as well as Polish zloty coins and bank notes. Some machines can be quite slow, so take your time and be patient for the machine to respond to your query.
+[[File:Ticket machine in Warsaw (25211525896).jpg|thumb|250x250px|Different generations of ZTM ticket machines next to an ATM]]
+ZTM has a network of service points where you can also purchase tickets. Those are the only places where you can have your personal travelcard made, which you would need if you intend to use a 30- or 90-day ticket.
+
+Many kiosks, shops and post offices also have tickets on sale – it is indicated by a sticker saying ''Sprzedaż biletów ZTM''. Shops and kiosks surrounding the major transit hubs often do ''not'' sell tickets if there are ticket machines nearby.
+
+In almost all buses, trams and SKM trains, there are ticket machines which can sell you tickets for the ride on that particular vehicle - they do NOT sell other tickets such as the 24h pass. They are different from other ticket types in that they have a printed QR code, and that they do not require validation. In case of ticket machine failure, you can purchase your ticket from the train attendant on board the SKM train. In case there is no ticket machine in the vehicle, or it is inoperable, people are not allowed to ride that vehicle and in case of control a fine may be given. On-board ticket machines do not accept cash payments; it is possible to pay with a credit card or via the BLIK system.
+
+A more convenient alternative to traditional tickets are digital tickets one can obtain through mobile phone apps such as SkyCash, MoBilet, mPay or Jakojade. These require you to top up a "wallet" to buy the ticket (which can be annoying if you have money left over), then scan a QR code in each vehicle.
+
+You can find more information on purchasing tickets and ticket sale locations at the [https://www.wtp.waw.pl/en/where-to-buy-a-ticket/ WTP's English-language website]{{Dead link|date=April 2025 |bot=InternetArchiveBot }}. A point of sale locator map] is also available there.
+[[File:17-06-2012-SKM 35WE-001 Wnętrze (16).JPG|thumb|375x375px|The all-important yellow validator]]
+
+===== Ticket validation and inspection =====
+
+Immediately '''validate your ticket''' after boarding the bus or tram (in a yellow validator). If one validator is out of order, look for another. A steady yellow light means that only the plastic card reader is working. If all the validators in a bus glow red – they may be locked, likely because an inspection is underway (and it is too late for you) or the driver forgot to turn them on (and you need to remind him or her). If you buy vehicle-and-fare ticket (with the QR code) in special ticket machine inside a bus or tram, you don't need to validate it.
+
+When entering the metro, you will need to validate or present your ticket to open the gate. There are other ways to access the platform for people with special needs (wheelchairs, strollers, large luggage etc.), such as elevators and open gates, so if you are intending on using those, make sure you find a yellow ticket validator before you descend to the platform – they should be next to elevators. Exit gates open without a ticket. Possession of a valid ticket is compulsory for everybody at the metro platform regardless of whether they intend to ride a train or not, even if just using it as an underground passage or accompanying someone.
+
+Timed tickets only need to be activated once, on your first journey. In case of carton tickets, the ticket validator will print the time limit until which the ticket is valid.
+
+Tickets are ''not'' checked by the drivers. They may be randomly inspected in a station or in a bus/tram by uniformed inspectors with portable ticket/card readers, so it is up to you to have a valid (activated) ticket. The ticket inspectors in Warsaw are paid a commission on the number of fare-dodgers they catch, so they are rarely lenient and generally rather harsh to deal with. Being caught without a valid ticket might be one of the least pleasant experiences possible in Warsaw, so do your best to avoid it.
+
+===By car===
+
+====Parking====
+There is a '''paid-parking zone''' in the center of the city. This applies '''M-F 08:00—18:00'''. Parking costs '''3.00 zł''' for the first hour. Subsequent hours cost more although there is no hour limit. ''0.60 zł'' is the minimum payment. You can pay with coins (10 groszy upwards and you will be given the exact time you have paid for after you have paid the minimum charge) or with the ''Warsaw City Card'' (not the tourist card). From 2015 the old parking machines have been systematically replaced by the new ones, which no longer accept payment with Warsaw City Card. They do however accept payment with major credit cards. The parking ticket should be left under the windscreen for inspection.
+
+Parking fees can also be paid with mobile phone apps such as moBILET and SkyCash. In that case the driver should leave a special sticker with the name of the app under the windscreen, but a handwritten note is also accepted.
+
+====Taxis====
+The maximum base fare (''taryfa 1'') is 3.00 zł/km and applies to journeys within the city (zone 1) on weekdays. The cheapest companies charge between 1.40 zł/km and 2.00 zł/km. Taxi drivers can charge 150% of the base fare (''taryfa 2'') at night or on weekends and public holidays, and 200% of the base fare (''taryfa 3'') for journeys into the suburbs. Watch out for blue rectangular signs saying ''taxi 2 strefa'' (''Taxi Zone 2''), they can charge 300% of the base fare (''taryfa 4'') at night and in the suburbs or on weekends and public holidays).
+
+In addition, they can also charge you 8 zł initial fee (''closing the door''), 40 zł an hour for waiting for you if you are not in the first zone, and for getting back to the boundary of the first zone if you left in zone 2. There are no surcharges for additional passengers (normally up to 4 should fit), or for luggage.
+
+They cannot charge you for anything else. There is no obligation or custom of tipping the drivers. The driver is required by law to give you a receipt. The full route must be written on the receipt. If the route was suboptimal, the fare can then be challenged. Call the City Guard (Polish: ''Straż Miejska'') at 986 or ''+48 (22'') 986 from a mobile phone should there be any problems.
+
+The aforementioned prices apply only to registered taxis. Others (non-taxi carriers) may charge you whatever they feel like, so they are best avoided.
+
+'''[https://www.uber.com/pl/cities/warsaw/ Uber]''' [https://www.uber.com/pl/cities/warsaw/ fares] in Warsaw (as of May 2016) are 5 zł for closing the door, plus 0.20 zł per minute, plus 1.40 zł per kilometre.
+
+A legal taxi will have its number displayed on the front door under the window (black digits on white), on a ''TAXI'' sign (not ''TAX1'' or ''TAKI''), on a sticker with the base fare displayed on the passenger (rear) door window, and on the driver's ID card visible inside the cab. All taxi meter fares are in zł not in euro, even though some drivers will accept payment in euro. In this case he or she will convert the meter fare to euro and most likely round it up to the nearest €5 (to avoid payment with coins, which are harder to exchange). So, if the meter shows "40.0" and you are asked to pay €10 – that's ok, but if the drivers tries to charge you €40, saying that the meter fare is in euro – you are certainly being ripped off.
+
+===By bike===
+[[File:Veturilo Warszawa 04.jpg|250px|thumb|A Veturilo bike-sharing station]]
+Warsaw is slowly changing into a bike-friendly city, the bike path network covers many parts of the city, but not every important street. You may find yourself forced to ride on the pavement or the street itself at some points, neither of which is really comfortable or advisable – or indeed, can be deemed illegal. There is an [https://mapa.um.warszawa.pl/mapaApp1/mapa?service=rowery official bike path map]{{Dead link|date=November 2024 |bot=InternetArchiveBot }} provided by the city, which may be helpful in planning your cycling routes.
+
+Warsaw has started warming up to bicycles, however, and has a bike-sharing scheme similar to other cities around the world, called [https://veturilo.waw.pl/en/ Veturilo]. It operates only between March and November (closing for winter). You need a credit card or a bank transfer and a mobile phone to pre-register at the website, and to pay 10 zł initial fee, which is credited to your account. To rent a bike, you need to type in your code and the code of the bike you want to rent at the station's terminal, and there you go. Also you can use the app of the same name which makes the rental experience easier and quicker. The first 20 minutes of your rental are free, the first hour is 1 zł and then the fees increase every hour, because Veturilo bikes are meant for very short trips. Whenever you completed your trip, just lock your bike in the nearest station and check yourself out. There are maps of nearest points and the surroundings provided at every Veturilo station, the Veturilo mobile app also shows the nearest stations and the list of all available bikes on each station.
+
+Since Veturilo is part of the Nextbike network, your existing Nextbike account or an account of a different Nextbike member system will work just fine with Venturilo, the only condition is that you need to accept the Venturilo terms of use.
+
+==See==
+
+This is the city of Frederic Chopin, Maria Skłodowska-Curie, Władysław Szpilman and Pola Negri. Warsaw Old Town is inscribed on the [[UNESCO World Heritage List]]. Take a walk and explore the streets and squares which have been painstakingly rebuilt after the last war. Check out the tumultuous history of the metropolis on both sides of the Vistula river. Explore special places and associated with the uprisings, especially one, which took place in the Ghetto and second, which happened in 1944. Book a guided city walk across the city and discover how it has changed since the fall of communism. Most of the major sightseeing attractions are concentrated in [[Warsaw/Śródmieście|Śródmieście]], with some more in surrounding districts, the exception park and palace in [[Warsaw/Wilanów|Wilanów]]. Check the attractions of the Vistula river banks. That said, every district has something to offer if you have the time and want to research more, so do refer to [[Warsaw#Districts|district articles]] for details.
+
+That said, most tourists will probably:
+* Visit the '''Old and New Town''', the (recreated) oldest part of the city of Warsaw with the '''Royal Castle'''
+* From there, stroll down '''Krakowskie Przedmieście''' and '''Nowy Świat''' streets (parts of the ''"Royal Route"'')
+*Travel along the '''Royal Route''' (''Trakt Królewski'') linking the '''Royal Castle''' to the '''Royal Palace''' in [[Warsaw/Wilanow|Wilanów]] (''Pałac Królewski w Wilanowie''), some 10&amp;nbsp;kilometers farther
+* See '''Łazienki Park''' with the '''Chopin Monument''' (and attend one of the free open-air concerts in the summertime)
+* Take the elevator to the top of '''Palace of Culture and Science''' for a panoramic view of the city, or at least take a photo of this modern-day symbol of Warsaw
+* Visit the most important museums – '''Warsaw Uprising Museum''', '''National Museum''' and the '''POLIN Museum of the History of Polish Jews'''
+*Relax on the '''Vistula Boulevards''' (''Bulwary Wiślane''), spreading out over {{km|6}} of the Vistula banks
+
+==Do==
+[[File:Plac Zamkowy w Warszawie 2020d.jpg|thumb|The Castle Square (''pl. Zamkowy'') in the Old Town (''Stare Miasto'')]]
+
+===Explore===
+Go on a tour of Warsaw – the Old Town and surrounding districts are sufficiently compact to allow a number of excellent walking tours through its history-filled streets. You'll see amazing things you would otherwise miss. Details are usually available from the reception desks of hostels and hotels.
+
+===Concerts and performances===
+
+Warsaw is home to several professional musical and play companies.  Being the capital city means the [https://teatrwielki.pl/ Polish National Opera] and the [http://www.filharmonia.pl/ Warsaw Philharmonic] (also, National Philharmonic) call Warsaw home.  There are a number of other companies, including play companies and theaters that will likely be of interest to travellers.
+
+The [https://chopininwarsaw.pl/ Presto Music Agency] organises Chopin concerts at several venues across the city.
+
+Headline music acts perform at the Bemowo airport in the [[Warsaw/Bemowo|Bemowo]] district and at the Stadion Narodowy (National Stadium) in the [[Warsaw/Praga Południe|Praga Południe]] district of Warsaw.  Smaller acts are hosted at clubs and concert halls around the city, but primarily [[Warsaw/Śródmieście|in the center of Warsaw]].
+
+===Festivals===
+
+* {{do
+| name=The Cross-Culture Warsaw Festival | alt=Festiwal Skrzyżowanie Kultur | url=http://www.festival.warszawa.pl/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q9371196
+| content=World music festival. Concerts and music workshops, documentary screenings, exhibitions.
+}}
+* {{do
+| name=Jewish Culture Festival – The Singer's Warsaw | alt=Festiwal Kultury Żydowskiej – Warszawa Singera | url=https://shalom.org.pl/festiwal-kultury-zydowskiej-warszawa-singera/ | email=shalom@shalom.org.pl
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q5445786
+| lastedit=2024-10-26
+| content=August.
+}}
+* {{do
+| name=Warsaw Film Festival | alt=Warszawski Festiwal Filmowy | url=http://www.wff.pl | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=Warsaw International Film Festival | wikidata=Q1578899
+| content=October.
+}}
+* {{do
+| name=Planete+ Doc Film Festival | alt= | url=http://planetedocff.pl/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikidata=Q33077544
+| content=Documentary films. May.
+}}
+* {{do
+| name=Burn Selector Festival | url=http://selectorfestival.pl/en | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=250 zł for two-day pass
+| content=Electronic &amp; alternative music festival. September.
+}}
+* {{do
+| name=Orange Warsaw Festival | alt= | url=http://www.orangewarsawfestival.pl/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=300 – 1000 zł for two-day pass
+| wikidata=Q7099761
+| content=Big pop music festival on the Horse Racetrack Służewiec. May.
+}}
+* {{do
+| name=Warsaw Summer Jazz Days | alt= | url=http://www.adamiakjazz.pl/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q9371092
+| content=July.
+}}
+* {{do
+| name=Warsaw Autumn | alt=Warszawska Jesień | url=http://warszawska-jesien.art.pl/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q1711944
+| content=International festival of contemporary music. September.
+}}
+*[https://en.wosp.org.pl '''Grand Final of The Great Orchestra of Christmas Charity'''] (Finał Wielkiej Orkiestry Świątecznej Pomocy). Annual charity event with thousands of fundraisers on the streets, free concerts in the city centre (usually Defilad Square or Bankowy Square), colourful TV studio with access from the street, mass street runs and number of local events and activities in the districts. Some attractions might be paid by donation to the collection box. Raised money are spent on high-quality medical equipment for the children hospitals in Poland. Usually on 2nd Sunday of January.
+* {{do
+| name=Long Night of Museums | alt=Noc Muzeów | url=http://www.um.warszawa.pl/nocmuzeow/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=Free
+| content=A great opportunity to wander around with your date or friends and grab an ice cream cone from one of the many cafes that stay open late. Most museums and galleries will stay open past midnight. Noc Muzeów usually occurs around mid-May.
+}}
+
+[[File:Stadion Narodowy w Warszawie 20120422.jpg|250px|thumb|If you are coming to Warsaw for a major football match, chances are it will be at the ''Stadion Narodowy'']]
+
+=== Sports ===
+
+* '''Football:''' National soccer games are played at Stadion Narodowy (National Stadium), a multi-purpose arena on the river's right bank, 3 km east of city centre.
+: [https://legia.com/pilka-nozna Legia Warszawa] play soccer in Ekstraklasa, the top tier. Their home ground is Piłsudski Stadium (or Polish Army Stadium), capacity 31,800. It's at Łazienkowska 3, two km southeast of city centre.
+: [https://kspolonia.pl/ Polonia Warsaw] play in I Liga the second tier, at Kazimierz Sosnkowski Stadium (capacity 7000) 1 km north of Old Town centre. 
+* '''Warsaw Eagles''' play American football, at the American Football Field, Tobruk Ave, 5 km north of city centre.
+
+==Learn==
+
+===Universities===
+[[File:Buw.jpg|250px|thumb|The Library of the University of Warsaw is now the scene to the many languages spoken by its foreign and exchange students]]
+* {{listing
+| name=University of Warsaw | alt=Uniwersytet Warszawski | url=http://www.uw.edu.pl/ | email=
+| address=ul. Krakowskie Przedmiescie 26/28 | lat=52.240281 | long=21.019169 | directions=
+| phone=+48 22 552 00 00 | tollfree= | fax=
+| hours= | price=
+| wikipedia=University of Warsaw | image=Warszawa, ul. Krakowskie Przedmieście 26, 28 20170517 001.jpg | wikidata=Q144488
+| content=The University of Warsaw is Poland's largest university and offers a large variety of courses and programs to choose from. University of Warsaw has about 50,000 students enrolled.
+}}
+* {{listing
+| name=Warsaw University of Technology | alt=Politechnika Warszawska | url=http://www.pw.edu.pl/engpw | email=
+| address=pl. Politechniki 1 | lat=52.220278 | long=21.010556 | directions=
+| phone=+48 22 234 72 11 | tollfree= | fax=
+| hours= | price=
+| wikipedia=Warsaw University of Technology | image=Warszawa 8613.jpg | wikidata=Q1718656
+| content=The biggest Polish technical university.
+}}
+* {{listing
+| name=Warsaw School of Economics | alt=Szkoła Główna Handlowa | url=http://www.sgh.waw.pl | email=informacja@sgh.waw.pl
+| address=al. Niepodległości 162 | lat=52.208889 | long=21.008889 | directions=
+| phone=+48 22 564 60 00 | tollfree= | fax=
+| hours= | price=
+| wikipedia=Warsaw School of Economics | image=Szkoła Główna Handlowa w Warszawie 2016.jpg | wikidata=Q1394594
+| content=Poland's largest economics school.
+}}
+* {{listing
+| name=Warsaw University of Life Sciences | alt=Szkoła Główna Gospodarstwa Wiejskiego | url=http://www.sggw.waw.pl | email=
+| address=ul. Nowoursynowska 166 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+|wikidata=Q681|lastedit=2023-02-19| content=It began as an agricultural school, and is now a rapidly expanding university.
+}}
+* {{listing
+| name=Collegium Civitas | url=http://www.collegium.edu.pl | email=
+| address=Plac Kultury i Nauki, 12th floor, pl. Defilad 1 | lat= | long= | directions=
+| phone=+48 22 656 71 87 | tollfree= | fax=
+| hours= | price=
+|wikidata=Q5147001|lastedit=2023-02-19| content=This is a private school inside the Palace of Culture of Science. Majors include Sociology, Political Science, American Studies, International Relations, and Human Rights and Genocide Studies. For those interested, some programs are conducted in English.
+}}
+* {{listing
+| name=Warszawski Uniwersytet Medyczny | alt=Medical University of Warsaw | url=http://www.wum.edu.pl/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+|wikidata=Q496351|lastedit=2023-02-19| content=A medical college.
+}}
+* {{listing
+| name=The Academy of Arts | alt=Akademia Sztuk Pięknych | url=http://www.asp.waw.pl/menu.aspx?MENU_ID=6 | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=Academy of Fine Arts in Warsaw | image=6 Warszawa 157.jpg | wikidata=Q414066
+|lastedit=2023-02-19| content=
+}}
+* {{listing
+| name=Uniwersytet Kardynała Stefana Wyszyńskiego | url=http://www.uksw.edu.pl | email=info@uksw.edu.pl
+| address=ul. Dewajtis 5 | lat= | long= | directions=
+| phone=+48 22 561 88 00 | tollfree= | fax=
+| hours= | price=
+|wikidata=Q1416331
+|lastedit=2023-02-19| content=This is a well-known Catholic university.
+}}
+* {{listing
+| name=Leon Kozminski Academy | url=http://www.kozminski.edu.pl | email=uczelnia@kozminski.edu.pl
+| address=ul. Jagiellońska 59 | lat= | long= | directions= in the Praga Połnoc district
+| phone=+48 22 519 21 00 | tollfree= | fax=+48 22 814 11 56
+| hours= | price=
+|wikidata=Q2822255
+|lastedit=2023-02-19| content=This is a private school specializing in law and business management majors.
+}}
+* {{listing
+| name=SWPS University | alt=University of Social Sciences and Humanities | url=http://www.swps.pl/ | email=swps@swps.edu.pl
+| address=ul. Chodakowska 19/31 | lat=52.248417 | long=21.065889 | directions=
+| phone=+48 22 517 96 00 | tollfree=
+| hours= | price=
+| wikidata=Q7970913
+| content=
+}}
+
+===Polish language===
+
+* {{listing
+| name=Institute of Polish Language and Culture for Foreigners | url=http://www.polonicum.uw.edu.pl/en/ | email=
+| address=ul. Krakowskie Przedmieście 32 | lat= | long= | directions=
+| phone=+48 22 5521530 | tollfree= | fax=
+| hours= | price=
+|wikidata=Q16616882|lastedit=2023-02-19| content=Part of the Warsaw University. 1200 zł for a standard course or 1800 zł for an intensive one.
+}}
+* {{listing
+| name=Edu &amp; More Polish Language School for Foreigners | url=http://www.polishonlinenow.com | email=
+| address=ul. Marszałkowska 87/81 | lat= | long= | directions=
+| phone=+48 22 622 14 41 | tollfree= | fax=
+| hours= | price=
+| content=599 zł for a group course. It's also an e-learning platform for learning Polish online.
+}}
+===Other===
+* {{listing
+| name=French Institute in Warsaw | alt= | url=https://institutfrancais.pl/fr/ | email=
+| address=ul. Widok 12 | lat=52.231436 | long=21.014541 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q3152271
+| lastedit=2024-06-28
+| content=
+}}
+* {{listing
+| name=Italian Institute of Culture | alt= | url=http://www.iicvarsavia.esteri.it/IIC_Varsavia | email=
+| address=ul. Marszałkowska 72 | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q9382936
+| lastedit=2024-06-28
+| content=
+}}
+* {{listing
+| name=Spanish Cervantes Institute | alt= | url=http://varsovia.cervantes.es | email=
+| address=ul. Nowogrodzka 22 | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q24943613
+| lastedit=2024-06-28
+| content=
+}}
+* {{listing
+| name=German Goethe-Institut | alt= | url=http://www.goethe.de/warszawa | email=
+| address=ul. Chmielna 13a | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q11713046
+| lastedit=2024-06-28
+| content=
+}}
+
+==Work==
+
+Home to many international companies, Warsaw has an excellent job market for potential expats.  Of course there are several immigration hurdles, but landing a job should not be overly difficult if you have the right skill sets.
+
+If you're a backpacker who is not an EU citizen and looking for short-term employment this may be somewhat more difficult, as you are legally required to have a work permit. You could find short-term work in the hospitality industry, or as a tutor or an ESL teacher.
+
+If you'd like to work in Warsaw, or Poland for that matter, but don't want to go through the hassle of finding a job opportunity, there are some employment recruiting agencies you can use in your search for a job.  Just a few are:
+
+* {{listing
+| name=Adecco Poland | url=http://www.adecco.pl | email=
+| address=Al. Jerozolimskie 123A | lat= | long= | directions=
+| phone=+48 22 529 76 40 | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+* {{listing
+| name=Randstad | url=http://www.randstad.pl | email=
+| address=Al. Jerozolimskie 56c | lat= | long= | directions=
+| phone=+48 22 462 25 00 | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+
+There is also the possibility to work in startups. Warsaw is the first place for startups in Poland, and the opportunities for foreigners are growing. For some, you do not need to speak the Polish language to start working there.  With [https://www.warsaw-startup-jobs.com this website]{{Dead link|date=January 2025 |bot=InternetArchiveBot }}, you can apply directly to recruiting companies, without going through one extra intermediary.
+
+==Buy==
+
+{{Infobox|Touts Handing Out Flyers|Warsaw has many touts, who mainly congregate at the subway station "Centrum", near the southeastern corner of the Palace of Culture and Science.  They pass out fliers and brochures for all kinds of imaginable and useless services. If you don't want to start a collection of fliers, a simple and easy way to beat the touts at their own game is to simply make a gesture indicating stop with your hand while stating in English "No, thank you" or "I can't understand Polish".  This works surprisingly well, especially on touts who pass out fliers for English language instruction schools.}}
+
+'''ATMs''' (Polish: ''bankomat'') are plentiful around Warsaw. Visa, MasterCard, Visa Electron, and Maestro are widely accepted at most establishments. AmEx and Diners' Club are not as commonly accepted.
+
+Indoor shopping malls (Polish: ''centrum handlowe'' pl. ''centra ~'', often abbreviated ''CH'') are also plentiful in Warsaw. Usually open 08:00—22:00, most malls will have a food court, restaurants, cinema, and some may have a sports hall with billiards tables or a bowling alley.
+
+Auchan and Carrefour are the largest supermarkets in Europe, and they are also present in Poland, offering just about everything, including groceries, at low prices. The biggest supermarket chain is Biedronka. Lidl can be found too and offers great quality at unbeatable prices. In 2019 a new law was passed that does not allow most of the shops to open on Sundays. If you find yourself in need of shopping on Sunday, you have to count on some smaller shops where the owners work for themselves.
+
+==Eat==
+
+Warsaw is not globally renowned for its culinary scene, but it lacks nothing compared to other European capitals with regard to it. There is a wide choice of eateries from the most basic and cheapest to very sophisticated, and many different types of food are available throughout the city. Finding a unique dining experience is feasible daily.
+
+{{eatpricerange|50 zł or less|51 zł - 80 zł|81 zł and up}}For those on a budget, there are many kebab shops sprinkled around Warsaw, especially in [[Warsaw/Śródmieście|Śródmieście]], which offer decent food and portions for the fair price of 7-13 zł a kebab.  Other cheap alternatives are milk bars, which are discussed later in the section, and Vietnamese restaurants.
+
+===Haute cuisine===
+
+If you are looking for a premium dining experience, your best chances are in Śródmieście, but away from the Royal Route. In Praga, head for Saska Kępa, and you will also find a fair share of upscale restaurants in Wilanów. New and innovative places crop up in the most unexpected locations, so do acquaint yourself with the district guides for the latest tips.
+
+Warsaw is home to both Polish restaurants that hold Michelin stars:
+* {{eat
+| name = Atelier Amaro
+| address = ul. Agrykola 1
+| directions = entrance from plac Na Rozdrożu square
+| phone = +48 (22) 628 57 47, +48 607 970 000
+| email = reservations@atelieramaro.pl
+| url = http://atelieramaro.pl/
+| wikipedia = pl:Atelier Amaro|wikidata=Q18423250
+| hours =
+| price = Menus from 260 zł
+| lastedit = 2016-04-15
+| content = Author's cuisine restaurant of chef Wojciech Modest Amaro. The restaurant does not offer ''à la carte'' dishes, in fact it doesn't have a fixed menu at all. Smart casual dress code is expected.
+}}
+* {{eat
+| name = Senses
+| address = ul. Bielańska 12
+| phone = +48 (22) 331 96 97
+| email = restaurant@sensesrestaurant.pl
+| url = http://sensesrestaurant.pl/
+| hours =
+| price = From 170 zł
+| lastedit = 2016-04-15
+| content = A "private dining" restaurant, author's cuisine of chef Andrea Camastra. Reservation required.
+}}
+
+===Food fairs===
+
+The new trend in Warsaw are food fairs, where fresh foodstuffs can be bought directly from producers, both for further processing and preparation at home and as ready dishes for consumption on site. Usually, some space for communal meals is provided. This can be a very nice option for breakfast or lunch. Some of the options are:
+* {{eat
+| name = Targ Śniadaniowy
+| alt = Breakfast fair
+| address = al. Wojska Polskiego 1; Skwer Grupy AK Granat and other places
+| phone =
+| email =
+| url = https://warsawcity.info/targ-sniadaniowy-warszawa-2025/
+| hours = Sa 09:00—16:00
+| price =
+| lastedit = 2016-05-17
+| content = Organised every weekend in various parts of town, usually
+}}
+
+===Fast food===
+
+Tourists will be happy to know there's no shortage of fast food in Warsaw. The city is rife with McDonald's and Subway outlets, there are also many KFCs and Pizza Huts, and a growing number of Burger King restaurants (the latter mostly in shopping centres). For a quick bite, chain cafés that are around every corner in the city centre, the shopping centres and many office buildings will offer you pre-made sandwiches and salads. Some more sophisticated cafés will make salads, ciabattas and sandwiches on site.
+
+There is no particular Polish kind of fast food, as the traditional Polish cuisine does not really lend itself well to quick preparation or quick eating. Therefore, apart from the above international chain places, that niche in Warsaw is filled with kebab places and cheap pizzerias, similar to ones that you would find in most other European cities. Pizzerias are often chain places as well, and many do telephone deliveries, takeaways as well as offer tables to eat on the premises. Kebabs can often only do takeaway, and are often open all night long, much to the delight of taxi drivers and partygoers.
+
+===Milk bars===
+
+Remnant of the communist era, milk bars (Polish: ''bar mleczny'', ''bary mleczne'') were created in the 1960s to serve cheap meals based on milk products. After the fall of communism, most of them closed down but some survived and still bear the climate from the old days. Almost everything inside looks, feels and smells like in the 1980s.  Milk bars attract students and senior citizens, because of the low prices (soup and the main course together may cost as little as 10 zł).  The food served by milk bars can actually be quite palatable.  Even if you can afford more expensive meals, milk bars are interesting because they offer somewhat a view of life before democratization in Poland. Nowadays they became even that popular, that new chains and milk bars are recreated. Some milk bars now even have touch screen ordering kiosks with multilingual menus.
+
+==Drink==
+
+Old Town and areas like pl. Trzech Krzyży, ul. Nowy Świat, ul. Chmielna, ul. Krakowskie Przedmieście in [[Warsaw/Śródmieście|Śródmieście]] are saturated with cafés. Coffee typically costs about 10-15 zł. Beer can cost 5-15 zł for half a liter (the supermarket price being 2.50-3 zł). Drink prices in clubs can go up to 50 zł. Drinking alcoholic beverages in public places is prohibited, but there are several places chosen by the local government where it can be possible.
+
+{{Infobox|Speak easy|If you're looking to mingle with real Varsovians, there's a well-kept, secret row of nameless, dark bars off of Nowy Świat.  They are reportedly good for those wishing to participate in the more decadent side of Varsovian night life.  In truth, the places attract a younger crowd who want to socialize over a beer (usually a relatively low 6 zł for a half liter).  If you'd like to give one of these bars a try, walk through the gateway at Nowy Świat 24.  You'll find a few small buildings with bars tucked away.  The number one tip about visiting one of these bars is ''go early'' if you want find a seat. You won't be able to find one after 22:00. At last count, there are three of the famous "Pijalnia Wódki i Piwa" bars in the city, all of which serve the cheapest beer around. Although these are mostly frequented by locals, Warsaw has a thriving international student community and more often than not, there are some English-speakers around to have a drink with.}}
+
+===Clubs===
+
+Clubs are plentiful in Warsaw and are a very popular way to spend nearly every night out.
+
+The most popular nice and chic clubs are on ul. Mazowiecka in [[Warsaw/Śródmieście|Śródmieście]].
+You will be denied entrance if you wear sport shoes, no matter how expensive they are. Inconspicuous black shoes will normally do the trick.
+
+Student clubs are popular and usually moderately priced, but can be hit or miss.  Normally, the centrally located Hybrydy is a good option for night out. Other student clubs, like Stodoła or Remont in [[Warsaw/Śródmieście|Śródmieście]], and Park in [[Warsaw/Mokotów|Mokotów]], are less predictable and quality isn't necessarily a concern for these clubs' patrons. If the point is to get drunk, then these are the place to go for a cheap drink.
+
+Beware of certain bouncers (for example in Park), they are not the talkative kind if they suspect you of something.
+
+In addition, there are clubs in [[Warsaw/Wola|Wola]] and [[Warsaw/Mokotów|Mokotów]] as well as several popular and down-to-earth clubs in the Praga districts.
+
+===Tea and coffee===
+
+Throw stereotypes out the door. For Poles, one of the most important staples to quench their thirst is not ''wódka'' or beer, but rather tea and coffee. As such, you're likely come across dozens and dozens of cafés.  Chain-wise, [http://www.coffeeheaven.pl Coffee Heaven] and ''W Biegu Cafe'' are the big players. [http://www.starbucks.pl Starbucks]  is also in Warsaw.  The real treat of Warsaw, however, are small cafés that are littered about Warsaw. For the most part, a good cup of tea or coffee can be had for 5-10 zł a cup. A small tea kettle is between 20-30 zł.
+
+==Sleep==
+[[File:InterContinental z Emili Plater Warszawa.jpg|thumb|425x425px|There is no shortage of attractive accommodation options in Warsaw's modern hotels]]
+There are plenty of accommodation options in Warsaw at all budget levels. The most accommodation options are in [[Warsaw/Śródmieście|Śródmieście]], [[Warsaw/Wola|Wola]], and [[Warsaw/Mokotów|Mokotów]]. There are also many business travel hotels in [[Warsaw/Włochy|Włochy]], near the airport.
+
+Warsaw has an oversupply of high-standard hotel rooms, as many luxury hotels were built in Warsaw after 1989. Almost every global upscale chain has at least one property, a few hundred rooms each. Therefore, you can easily snatch room at a modern four- or five-star hotel in the €50-70 range. Warsaw still sees more business than leisure travel, so your best bet to get a great rate are weekend stays. Look for offers and special rates in booking sites and hotel web pages.
+
+If you are on a budget, do not assume that hostels are your only option. Booking in advance at 3/4 star hotels can yield prices only slightly higher than backpacker hostels, for far greater comfort. Do your research in any case before booking to make sure you do not miss out on a great offer.
+
+Breakfast is not included in the room price in most hotels in Poland. Expect steep charges for breakfast, especially if you book a premium hotel at a low price. If you are staying in the city centre, you might find many other breakfast options around your hotel though.
+
+There are campgrounds in [[Warsaw/Włochy|Włochy]], [[Warsaw/Wawer|Wawer]], [[Warsaw/Wola|Wola]], [[Warsaw/Ochota|Ochota]] and [[Warsaw/Mokotów|Mokotów]].
+
+==Connect==
+===Postal service===
+
+* {{listing
+| name=Central Post Office | alt=Poczta Główna | url=http://www.poczta-polska.pl | email=
+| address=ul. Świętokrzyska 31/33 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours=Open 24/7 | price=
+|wikidata=Q116832188|lastedit=2023-02-19| content=
+}}
+
+===Internet===
+====Wifi====
+
+Free wi-fi is widespread in Warsaw. Municipal hot-spots (freewifi.waw.pl) are free of charge and available in over 150 localities throughout the city. Those include the Old Town, most public parks, major city squares, the vicinity of most public buildings and museums. They are all marked by blue or purple "HOT SPOT UM-Warszawa" plaques hanging on street lamps. It is also available in over 300 city buses and some tramways (marked with a white and blue wi-fi icon at the doors).
+
+Most restaurants and cafes also offer access to free wi-fi. The networks are usually either open, or require a password (usually available at the bar) or accepting the regulations (usually in Polish).
+
+====Computers and Internet cafés====
+
+Internet cafés (Polish: ''kawiarenka internetowa'') are rare in Warsaw.
+
+* {{listing
+| name=Tourist Information Center | url= | email=
+| address= | lat= | long= | directions=Palace of Culture and Science Building, just opposite the Central Train Station
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=You can use the computers with Internet for 30 minutes for free.
+}}
+* {{listing
+| name=Arena | url=http://www.arena.sm.pl/ | email=
+| address=Booth 2001D, Centrum metro station building | lat= | long= | directions=500m north from Central Train Station at ul. Marszałkowska, across hotel Novotel
+| phone=+48 22  620 80 32 | tollfree= | fax=
+| hours=07:00-00:00 | price=5 zł/hour, pay as you go
+| content=Over 20 machines.
+}}
+* {{listing
+| name=Cafe Net | url= | email=
+| address=Booth 2010C, Centrum metro station building | lat= | long= | directions=500 m north from Central Train Station at ul. Marszałkowska, across hotel Novotel
+| phone= | tollfree= | fax=
+| hours=07:00-00:00 | price=6 zł/hour, prepay
+| content=Over 20 machines.
+}}
+* {{listing
+| name=Verso | url=http://www.verso.pl/?action=template&amp;name=internet | email=
+| address=Freta 17 | lat= | long= | directions=Stare Miasto – Old Town
+| phone= | tollfree= | fax=
+| hours= | price=5 zł/hour; 1 zł/5 minutes
+| content=Photo and printing shop in which there are 3 computers for public Internet access.
+}}
+
+===Telephones===
+
+The area code for Warsaw is 22, and it must be dialed even when making local calls (however, it will almost always be already included in the number). Don't use "0" at the beginning of the number; otherwise, it will be invalid. When calling internationally to Poland, dial the country code, ''+48 (or 0048)'', followed by the rest of the number.
+
+Pay phones are very rare, and it is therefore best to rely on other means of communication. Pay phones are only operable using calling cards that can be bought at post offices.
+
+Pre-paid SIM cards with Polish phone numbers cost as little as 5 zł and can be purchased from just about any major carrier. Many kiosks sell them. However, it is very likely that you will need a locally issued government ID to purchase it.
+
+For the city info line, call +48 19 115.
+
+==Stay safe==
+
+Warsaw is a safe city overall. The city center has a strong police presence and is generally a very safe area. The Praga districts used to be dangerous, but this is generally more hype than reality. Of course, it would be wise to exercise a little extra caution if you're in an area you do not know well. The bus and rail stations can be a magnet for homeless and drunkards, who, for the most part, will leave you alone.
+
+Some areas south of the Palace of Culture and Science and the train station have a rather seedy feel to them, especially at night. Same goes for much of the neighborhoods immediately surrounding Warsaw-Chopin airport.
+
+Though nowhere nearly as prevalent as in other major cities, pickpockets can sometimes be a problem and you should be careful to hold onto your belongings when in a large crowd or on buses (Number 175, which runs from the airport to city center, is reportedly infamous for pickpockets).  At bars and clubs, a good rule of thumb is the cheaper the door entry and the laxer the bouncers are about letting people in, the more likely you're going to want to keep extra care of your wallet, passport, cell phone, and camera.
+
+Violent behaviour is extremely rare and if it occurs it is most likely alcohol-related. While pubs and clubs are generally very safe, nearby streets may be scenes of brawls, especially late at night. Try to avoid confrontations.
+
+Pub crawl tours are scams. Warsaw has no shortage of pubs to visit on your own time. Both male and female tourists have been sexually abused on organized pub crawl tours by guides. Please keep a wide breath of these.
+
+It is not uncommon taxi drivers will try to scam tourists by overcharging when driving people from the train station. A taxi trip from the train station should cost no more than 15 zł at the maximum. Consider using an alternative service such as Uber or Bolt.
+
+Visitors not knowing Polish may also be the target of "[[Clip joint|bar girls]]," especially in Underground off of ul. Mazowiecka on days where there isn't a cover charge. Be cautious if you encounter a girl speaking English who will offer you a drink or a cigarette. She will then ask you to walk her to her car parked outside of the club and then explain how her friend still inside of the club has her car keys. Then she will ask if you would like to share a cab back to her place for 70 zł and then go back to the club. Doing so puts yourself in danger because you don't know where she lives, and you could be setting yourself up for possible harm or other scams.
+
+Football hooligans can be a problem before or after large football events. Naturally, it's best to avoid them, because they might be violent. At the same time, all major sport events are monitored and controlled by special police units, so unless you find yourself in the middle of the confrontation between hooligans and the police, you should be fine.
+
+It may be good idea to avoid areas close to Unknown Soldier Tomb on 10th day of every month (especially in April) as this area is subject to quite disruptive political happenings and demonstrations related to presidential plane crash in 2010.
+
+In case of emergencies, call emergency services.  The number for the police: '''997''', firefighters: '''998''', Ambulance: '''999'''.  The common European emergency number '''112''' works too.
+
+==Cope==
+
+===Religious services===
+* {{listing
+| name=St Paul's English Speaking Catholic Parish of Warsaw | alt=Kaplica Niepokalanego Poczęcia Najświętszej Maryi Panny | url=http://www.warsawcatholics.pl/ | email=
+| address=al. Solidarności 90 | lat= | long= | directions=Metro: Ratusz Arsenał, then walk west along al. Solidarności for 600 m; tram/bus: Kino Femina
+| phone=+48 22 826 73 95 | tollfree=
+| hours= | price=
+| content=Warsaw's only English-language Catholic Masses are held here, with services at 12:00 and 19:30 every Sunday. The congregation mostly consists of resident foreigners, including many members of the local Filipino community, as well as some locals.
+}}
+* {{listing
+| name=International Christian Fellowship | alt= | url=https://www.icfwarsaw.org/ | email=contact@icf-pl.org
+| address=ul. Puławska 326 | lat= | long= | directions=Corner of ul. Puławska and ul. Płaskowickiej. In the Ursynów district
+| phone=+48 607 309 490 | tollfree= | fax=+48 22 844 7996
+| hours=Service is held every Sunday at 10:30 | price=
+| content=This is a non-denominational church with Protestant leanings. Anyone and everyone is welcome and if you're a newcomer you're likely to be greeted by people who notice a new face in the crowd. You may even be invited for coffee after the service. The congregation is made of Brits, Germans, Poles, Americans, and Aussies, and other nationalities.
+}}
+* {{listing
+| name=Nożyk Synagogue | alt=Synagoga Nożyków | url=http://www.warszawa.jewish.org.pl | email=varshe@jewish.org.pl
+| address=ul. Twarda 6 | lat=52.236 | long=21.001 | directions=
+| phone=+48 22 652 28 05 | tollfree= | fax=+48 22 652 28 05
+| hours=Erev Shabbat services begin 15 minutes before sunset. Shabbat morning services begin at 09:30. Weekday services at at 08:00 and 09:00 on Sunday | price=
+|wikidata=
+|lastedit=2020-04-17| content= This is Warsaw's only Orthodox Jewish synagogue that is still in operation.
+}}
+* {{listing
+| name=Warsaw International Church | url=http://www.wic.org.pl | email=pastor@wic.org.pl
+| address=ul. Miodowa 21b | lat= | long= | directions=Metro: Ratusz Arsenał
+| phone=+48 22 842 23 51 | tollfree= | fax=
+| hours=Worship service and Sunday School every Sunday at 11:00 | price=
+| content=
+}}
+* {{listing
+| name=Islamic Center of Warsaw | url= | email=
+| address=ul. Wiertnicza 103 | lat= | long= | directions=
+| phone=+48 22 88 56 276 | tollfree= | fax=
+| hours= | price=
+|wikidata=Q11787346
+|lastedit=2023-02-19| content=
+}}
+* {{listing
+| name=Sikh Temple Warsaw | alt= | url=https://www.facebook.com/pages/Gurudwara/182886255104602 | email=
+| address=ul. Na Skraju 56, Raszyn | lat=52.16203 | long=20.93341 | directions=
+| phone=+48 22 86 84 541 | tollfree=
+| hours= | price=
+| wikidata=Q60492358
+| content=
+}}
+
+===Laundry===
+
+Most hotels and hostels either offer laundry services or have washers and dryers available for use by guests. Additional fees may be incurred for use of these services or machines. Otherwise, you can find a full-service laundry shop at just about any mall, however, these might be expensive. There are self-service laundromats in Warsaw:
+
+===Embassies===
+
+* {{flag|Belarus}} {{listing
+| name=Belarus | alt=Ambasada Białorusi | url=http://poland.mfa.gov.by/ | email=poland@belembassy.org
+| address=ul Wiertnicza 58 | lat=52.171833 | long=21.081617 | directions=
+| phone=+48 22 742 0990, +48 22 842 5202 | tollfree= | fax=+48 22 742 0980
+| hours=M-F 08:00—16:15 | price=
+| wikidata=Q9149465
+| content=Belarussian Embassy
+}}
+* {{flag|Bulgaria}} {{listing
+| name=Bulgaria | alt=Ambasada Republiki Bułgarii | url=http://www.mfa.bg/embassies/poland | email=office@bgemb.com.pl
+| address=al Ujazdowskie 33/35 | lat=52.225222 | long=21.023475 | directions=
+| phone=+48 629 40 71-75 | tollfree= | fax=+48 628 22 71
+| hours= | price=
+| wikidata=Q24283244
+| content=Bulgarian Embassy
+}}
+* {{flag|Canada}} {{listing
+| name=Canada | alt=Ambasada Kanady | url=http://www.canadainternational.gc.ca/poland-pologne/index.aspx?lang=eng | email=warsaw@international.gc.ca
+| address=ul Jana Matejki 1/5 | lat=52.224722 | long=21.026111 | directions=
+| phone=+48 22 584 3100 | tollfree= | fax=+48 22 584 3192
+| hours= | price=
+| wikipedia=Embassy of Canada to Poland | image=Ambasada Kanady w Warszawie.jpg | wikidata=Q2841867
+| content=Canadian Embassy
+}}
+* {{flag|Czech Republic}} {{listing
+| name=Czech Republic | alt=Ambasada Republiki Czeskiej | url=http://www.mzv.cz/warsaw | email=warsaw@embassy.mzv.cz
+| address=ul Koszykowa 18 | lat=52.221739 | long=21.0206 | directions=
+| phone=+48 22 525 1850 | tollfree= | fax=+48 22 525 1898
+| hours= | price=
+| wikidata=Q9149481
+| content=
+}}
+* {{flag|Denmark}} {{listing
+| name=Denmark | alt=Ambasada Królestwa Danii | url=http://polen.um.dk/ | email=wawamb@um.dk
+| address=ul. Marszałkowska 142 | lat=52.2382 | long=21.0073 | directions=
+| phone=+48 22 565 29 00 | tollfree= | fax=+48 22 565 29 70
+| hours= | price=
+| wikidata=Q9149486
+| content=
+}}
+* {{flag|Finland}} {{listing
+| name=Finland | alt= | url=https://finlandabroad.fi/web/pol/mission | email=sanomat.var@formin.fi
+| address=Ul. Fr. Chopina 4/8, 00-559 Warszawa | lat=52.222911 | long=21.022875 | directions=
+| phone=+48 22 598 9500 | tollfree= | fax=+48 22 621 3442, +48 22 629 3442
+| hours=M-F 09:00-12:00 | price=
+| wikidata=Q9149494
+| content=
+}}
+* {{flag|France}} {{listing
+| name=France | alt=Ambasada Francji | url=https://pl.ambafrance.org/ | email=
+| address=ul. Piękna 1 | lat=52.2238 | long=21.0273 | directions=
+| phone=+48 (22) 529 30 00 | tollfree=
+| hours= | price=
+| wikidata=Q2841777
+| lastedit=2024-06-28
+| content=
+}}
+* {{flag|Georgia}} {{listing
+| name=Georgia | alt=Ambasada Gruzji | url=http://www.poland.mfa.gov.ge | email=warsaw.emb@mfa.gov.ge
+| address=N6 Berneńska Str | lat=52.2287 | long=21.05277 | directions=
+| phone=+48 22 616 62 21, +48 22 616 62 22, +48 22 616 62 25 | tollfree= | fax=+48 22 616 62 26
+| hours= | price=
+| wikidata=Q11685563
+| content=
+}}
+* {{flag|Germany}} {{listing
+| name=Germany | alt=Ambasada Niemiec | url=https://polen.diplo.de | email=
+| address=ul. Jazdów 12 | lat=52.2231 | long=21.02957 | directions=
+| phone=+48 22 58 41 700 | tollfree= | fax=+48 22 58 41 979
+| hours= | price=
+| wikidata=Q9149551
+| content=
+}}
+* {{flag|Greece}} {{listing
+| name=Greece | alt=Ambasada Grecji | url=https://www.mfa.gr/missionsabroad/poland.html | email=gremb.war@mfa.gr
+| address=Górnośląska 35 | lat=52.224683 | long=21.032703 | directions=
+| phone=+48 22 622 9460, +48 22 622 9461 | tollfree= | fax=+48 22 622 9464
+| hours= | price=
+| wikidata=Q9149499
+| content=
+}}
+* {{flag|Hungary}} {{listing
+| name=Hungary | alt=Ambasada Węgier | url=https://varso.mfa.gov.hu/ | email=
+| address=ul Fryderyka Chopina 2 | lat=52.223028 | long=21.023819 | directions=
+| phone=+48 22 628 4451 | tollfree= | fax=+48 22 621 8561
+| hours= | price=
+| wikidata=Q16494353
+| content=
+}}
+* {{flag|Indonesia}} {{listing
+| name=Indonesia | alt=Ambasada Indonezji | url=https://kemlu.go.id/warsaw | email=warsawa.kbri@kemlu.go.id
+| address=ul. Estońska 3/5, 03-903 | lat=52.236356 | long=21.048539 | directions=
+| phone=+48 22 617 5108 | tollfree=
+| hours= | price=
+| wikidata=Q11685566
+| content=Indonesian Embassy
+}}
+* {{flag|Ireland}} {{listing
+| name=Ireland | alt=Ambasada Irlandii | url=https://www.dfa.ie/irish-embassy/poland/about-us/ | email=
+| address=ul Mysia 5, 6F | lat=52.230453 | long=21.019914 | directions=
+| phone=+48 22 849 6633 | tollfree= | fax=+48 22 849 8431
+| hours=09:00—13:00 and 14:00—17:00 | price=
+| image=Irish Embassy, Warsaw.jpg | wikidata=Q11685568
+| content=Irish Embassy
+}}
+* {{flag|Japan}} {{listing
+| name=Japan | alt=Ambasada Japonii | url=http://www.pl.emb-japan.go.jp/ | email=
+| address=ul Szwoleżerów 8 | lat=52.2171 | long=21.04075 | directions=
+| phone=+48 22 696 5000 | tollfree= | fax=+48 22 696 5001
+| hours= | price=
+| wikidata=Q9149515
+| content=
+}}
+* {{flag|Norway}} {{listing
+| name=Norway | alt=Ambasada Królestwa Norwegii | url=https://www.norway.no/poland/ | email=emb.warsaw@mfa.no
+| address=ul Chopina 2A | lat=52.217778 | long=21.008056 | directions=
+| phone=+48 22 696 40 30 | tollfree= | fax=+48 22 628 09 38
+| hours= | price=
+| wikidata=Q11685574
+| content=
+}}
+* {{flag|Philippines}} {{listing
+| name=Philippines | alt=Ambasada Filipin | url=http://warsawpe.dfa.gov.ph | email=
+| address=ul. Stanisława Lentza 11 | lat=52.172958 | long=21.076519 | directions=
+| phone=+48 22 490 2025 | tollfree= | fax=+48 602 541 012
+| hours= | price=
+| wikidata=Q9149491
+| content=
+}}
+* {{flag|Romania}} {{listing
+| name=Romania | alt=Ambasada Rumunii | url=http://varsovia.mae.ro/ | email=varsovia@mae.ro
+| address=ul. Fryderyka Chopina 10 | lat=52.22295 | long=21.02185 | directions=
+| phone=+48 22 621 5983, +48 22 628 3156 | tollfree= | fax=+48 22 628 5264
+| hours=M-F 08:30-17:00 | price=
+| wikidata=Q9149591
+| lastedit=2021-12-03
+| content=Romanian Embassy
+}}
+* {{flag|Russia}} {{listing
+| name=Russia | alt=Ambasada Rosji | url= | email=rusemb_poland@mail.ru
+| address=ul Belwederska 49 | lat=52.210556 | long=21.026667 | directions=
+| phone=+48 22 621 3453, +48 22 621 5954 | tollfree= | fax=+48 22 625 3016
+| hours= | price=
+| wikidata=Q13668487
+| content=Russian Embassy
+}}
+* {{flag|Spain}} {{listing
+| name=Spain | alt=Ambasada Hiszpanii | url=http://www.exteriores.gob.es/Embajadas/VARSOVIA/pl/Paginas/inicio.aspx | email=embesppl@mail.mae.es
+| address=ul Myśliwiecka 4 | lat=52.218414 | long=21.038003 | directions=
+| phone=+48 22 583 4000, +48 22 583 4001 | tollfree= | fax=+48 22 622 5408
+| hours= | price=
+| wikidata=Q11685565
+| content=Spanish Embassy
+}}
+* {{flag|Sweden}} {{listing
+| name=Sweden | alt=Ambasady Szwecji | url=http://www.swedenabroad.com/Warszawa/ | email=ambassaden.warszawa@gov.se
+| address=Ul. Bagatela 3 | lat=52.21336 | long=21.0253 | directions=
+| phone=+48 22 640 89 00 | tollfree= | fax=+48 22 640 89 83
+| hours= | price=
+| wikidata=Q9149608
+| content=
+}}
+* {{flag|United Kingdom}} {{listing
+| name=United Kingdom | alt=Ambasada Wielkiej Brytanii | url=https://www.gov.uk/government/world/organisations/british-embassy-warsaw/ | email=consular@britishembassy.pl
+| address=ul Emilii Plater 28 | lat=52.218375 | long=21.040364 | directions=Inside the Warsaw Corporate Centre
+| phone=+48 22 311 0000, +48 22 696005696 | tollfree= | fax=+48 22 311 0250
+| hours=M Tu Th-F 08:30—14:00; W 08:30—12:00 | price=
+| wikipedia=Embassy of the United Kingdom, Warsaw | image=Pałacyk Śleszyńskich w Warszawie 02.JPG | wikidata=Q9149629
+| content=UK Embassy
+}}
+* {{flag|United States}} {{listing
+| name=United States | alt=Ambasada Stanów Zjednoczonych | url=https://pl.usembassy.gov/ | email=
+| address=Aleje Ujazdowskie 29/31 | lat=52.224167 | long=21.0225 | directions=
+| phone=+48 22 504 2000, +48 22 504 2784 (Emergencies during business hours) | tollfree=
+| hours=business hours are 08:30—17:00  | price=
+| wikipedia=Embassy of the United States, Warsaw | image=Ambasada Stanów Zjednoczonych w Warszawie 2022.jpg | wikidata=Q9149601
+| content=American Embassy. If you have an emergency outside of normal embassy business hours, dial the first phone number and ask to speak with an Embassy Duty Officer.
+}}
+* {{flag|Ukraine}} {{listing
+| name=Ukraine | alt=Ambasada Ukrainy | url=http://poland.mfa.gov.ua/ | email=kancelaria@ukraine-emb.pl
+| address=Al. J.Ch. Szucha 7 | lat=52.215 | long=21.021944 | directions=
+| phone=+48 22 629-34-46, +48 22 622-15-49, +48 22 622-47-97, +48 22 629-05-79 | tollfree= | fax=+48 22 629-81-03
+| hours= | price=
+| wikipedia=Embassy of Ukraine, Warsaw | wikidata=Q2339271
+| content=Ukrainian Embassy
+}}
+* {{flag|Netherlands}} {{listing
+| name=The Netherlands| alt=Ambasada Królestwa Niderlandów | url=https://www.netherlandsandyou.nl/your-country-and-the-netherlands/poland | email=war@minbuza.nl
+| address=ul Kawalerii 10| lat=52.218347 | long=21.040986 | directions=
+| phone=+48 22 5591200 | tollfree= | fax=+48 22 8402638
+| hours=M-F 09:00—17:00 | price=
+| wikidata=Q9149503
+| content=Dutch Embassy
+}}
+
+==Go next==
+[[Image:Poland Zelazowa Wola.jpg|thumb|Chopin's birthplace in ''Żelazowa Wola'']]
+
+* [[Kampinos Forest]] (approximately {{km|15}}, take the 210 bus from Młociny underground station) – A wild and beautiful primeval forest, often called the green lungs of Warsaw, and an ideal choice for a day off from the noise of the city
+* [[Konstancin-Jeziorna]] (approximately {{km|20}}, take the 700 bus) – A spa town with a spacious park. Famous for its clean air and high housing prices.
+* [[Kraków]] (approximately {{km|300}}, in just under 3 hours by hourly IC/Ex trains) – The former capital of Poland, this was the European City of Culture in 2000.
+* [[Lublin]] (approximately {{km|200}}) – A medieval city with a well preserved old town, it is now the largest city and main tourist attraction in eastern Poland.
+* [[Kazimierz Dolny]] (approximately {{km|150}}, less than two hours by TLK train to Puławy, then half an hour by bus) – A Renaissance town with a picturesque marketplace, it is a hub for painters and Boheme.
+* [[Żelazowa Wola]] (approximately {{km|50}}) – The birthplace of Frédéric Chopin.
+* [[Brest (Belarus)|Brest]], {{km|200}} away in Belarus, on the border with [[Poland]] and rich with history from both the Soviet times and before. The Brest Hero Fortress is perhaps the most impressive Soviet monument ever built, and there's the train museum, and its incredible collection of Soviet-time locomotives, as well. You can go there by train (one train a day, that 4-5 hrs). Same visa regulations as rest of [[Belarus]]; the new visa-free regulations for citizens of 80 countries since 2017 is not eligible when coming/leaving by train.
+
+{{related|Polish_phrasebook}}
+
+{{IsPartOf|Mazowieckie}}
+{{geo|52.1|21.0|zoom=9}}
+{{usablecity}}</text>
+      <sha1>hcjprv2hykihle2ye9xens9dsls8ipi</sha1>
+    </revision>
+  </page>
+</mediawiki>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="63.2">
+  <metadata>
+    <title>Lisbon</title>
+    <name_it>Lisbona</name_it>
+    <flag>🇵🇹</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>8</hotel_count>
+    <hotel_price>111.93</hotel_price>
+    <safety index_score="70.2"/>
+    <environment green_score="68"/>
+    <cost_index value="60.5"/>
+    <economic_accessibility score="39.5"/>
+  </indicators>
+  <transport>La città vanta un trasporto pubblico efficiente: la metropolitana per le lunghe distanze, e i caratteristici tram, essenziali per muoversi tra i ripidi quartieri storici.</transport>
+  <accommodation>
+    <hotel>
+      <name>Beira Minho</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Bom Conforto Casa de Hospedes</name>
+      <price>€20 singles</price>
+    </hotel>
+    <hotel>
+      <name>Hotel Avenida Palace</name>
+      <price>Expensive</price>
+    </hotel>
+    <hotel>
+      <name>Goodnight Backpackers Hostel</name>
+      <price>€18-20</price>
+    </hotel>
+    <hotel>
+      <name>Pensão Norte</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="38.6916" lon="-9.2159">
+      <name>Belem Tower</name>
+      <description>Fortified tower symbolizing the Age of Discovery.</description>
+    </attraction>
+    <attraction lat="38.6979" lon="-9.2067">
+      <name>Jeronimos Monastery</name>
+      <description>Former monastery of the Order of Saint Jerome.</description>
+    </attraction>
+    <attraction lat="38.7121" lon="-9.1303">
+      <name>Alfama District</name>
+      <description>Oldest district with narrow streets and Fado houses.</description>
+    </attraction>
+    <attraction lat="38.7139" lon="-9.1334">
+      <name>Sao Jorge Castle</name>
+      <description>Moorish castle overlooking the historic center.</description>
+    </attraction>
+    <attraction lat="38.7075" lon="-9.1364">
+      <name>Praca do Comercio</name>
+      <description>Large harbor-side square, one of Lisbon's main landmarks.</description>
+    </attraction>
+    <attraction lat="38.7121" lon="-9.1394">
+      <name>Santa Justa Lift</name>
+      <description>Neo-Gothic vertical elevator connecting city levels.</description>
+    </attraction>
+    <attraction lat="38.7635" lon="-9.0937">
+      <name>Oceanarium</name>
+      <description>Major aquarium located in the Parque das Nações.</description>
+    </attraction>
+    <attraction lat="38.713" lon="-9.144">
+      <name>Bairro Alto</name>
+      <description>Central district known for shopping and vibrant nightlife.</description>
+    </attraction>
+    <attraction lat="38.7032" lon="-9.1795">
+      <name>LX Factory</name>
+      <description>Creative hub in a former industrial complex.</description>
+    </attraction>
+    <attraction lat="38.6936" lon="-9.2057">
+      <name>Padrão dos Descobrimenti</name>
+      <description>Monument celebrating the Portuguese Age of Discovery.</description>
+    </attraction>
+  </highlights>
+  <description>Capitale dell'accoglienza e della luce, Lisbona è diventata un rifugio per nomadi digitali grazie al clima e ai costi contenuti. Il suo piano di mobilità elettrica sta trasformando i colli storici in un modello di turismo sostenibile.</description>
+  <wiki_intro>'''Baixa''' is a district in Lisbon, Portugal. The ''Baixa'' has many squares and monuments, offering numerous photo opportunities. The area suffered devastating destruction in the Great Earthquake on All Saints' Day, 1 November 1755. Lisbon's "downtown" was rebuilt under the guiding hand of the Marquis of Pombal (''Marquês de Pombal''), who introduced a grid street plan to organize the chaos.
+
+...</wiki_intro>
+</city_report>

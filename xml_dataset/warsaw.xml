@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="69.3">
+  <metadata>
+    <title>Warsaw</title>
+    <name_it>Varsavia</name_it>
+    <flag>🇵🇱</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>98.42</hotel_price>
+    <safety index_score="74.8"/>
+    <environment green_score="75"/>
+    <cost_index value="53.2"/>
+    <economic_accessibility score="46.8"/>
+  </indicators>
+  <transport>Regular Warsaw transport tickets issued by ZTM (the local transport operator which runs city buses, trams and the metro) are valid on SKM train services between the airport and Warsaw. The airport is in fare zone 1 so a single adult ride is 3.40 zł. If you need a bus at the other end, get a one-transfer ticket (valid 75 min) for 4.40 zł.</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="52.2479" lon="21.0144">
+      <name>Royal Castle</name>
+      <description>Reconstructed castle and former royal residence.</description>
+    </attraction>
+    <attraction lat="52.2497" lon="21.0122">
+      <name>Old Town Market</name>
+      <description>The historical heart and oldest part of Warsaw.</description>
+    </attraction>
+    <attraction lat="52.2153" lon="21.0347">
+      <name>Lazienki Park</name>
+      <description>Largest park with a palace on the water.</description>
+    </attraction>
+    <attraction lat="52.2317" lon="21.0061">
+      <name>Palace of Culture</name>
+      <description>Iconic socialist-realist skyscraper and city landmark.</description>
+    </attraction>
+    <attraction lat="52.1642" lon="21.0894">
+      <name>Wilanow Palace</name>
+      <description>Baroque royal palace survived the wars.</description>
+    </attraction>
+    <attraction lat="52.2325" lon="20.9808">
+      <name>Uprising Museum</name>
+      <description>Museum dedicated to the Warsaw Uprising of 1944.</description>
+    </attraction>
+    <attraction lat="52.2444" lon="21.025">
+      <name>Vistula Boulevards</name>
+      <description>Modern riverside promenade with bars and views.</description>
+    </attraction>
+    <attraction lat="52.2494" lon="20.9931">
+      <name>POLIN Museum</name>
+      <description>Museum of the History of Polish Jews.</description>
+    </attraction>
+    <attraction lat="52.2369" lon="21.0089">
+      <name>Saxon Garden</name>
+      <description>Oldest public park in the city.</description>
+    </attraction>
+    <attraction lat="52.25" lon="21.0333">
+      <name>Praga District</name>
+      <description>Artistic district on the right bank of the Vistula.</description>
+    </attraction>
+  </highlights>
+  <description>Esempio straordinario di ricostruzione e resilienza, Varsavia è oggi una metropoli verticale e dinamica. Combina un settore finanziario in crescita con ampi spazi verdi e una sicurezza urbana migliorata.</description>
+  <wiki_intro>'''Warsaw''' (Polish phrasebook|Polish: ''Warszawa'') is Poland's capital and largest city. Warsaw is a bustling metropolis and one of the European Union's fastest-developing capitals and the Union's ninth most populous urban centre. It has a mixture of new and old in its eclectic architectural mix, and is constantly changing.  There is a large variety of museums, galleries and other tourist at...</wiki_intro>
+</city_report>

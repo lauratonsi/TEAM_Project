@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="59.8">
+  <metadata>
+    <title>Budapest</title>
+    <name_it>Budapest</name_it>
+    <flag>🇭🇺</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>96.75</hotel_price>
+    <safety index_score="65.7"/>
+    <environment green_score="60"/>
+    <cost_index value="52.3"/>
+    <economic_accessibility score="47.7"/>
+  </indicators>
+  <transport>Metro + Bus line 200E Bus line 200E runs between Terminal 2 and Kőbánya-Kispest Metro station, taking 25 min, bus fare Ft500. You there buy a Metro ticket for another Ft500 and ride line 3 to the city centre, about 20 mins to the main interchange at Deák Ferenc tér. The bus runs all day every day, with 7-8 minutes frequency during the day, 30-60 minutes at late night.</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="47.5071" lon="19.0456">
+      <name>Hungarian Parliament</name>
+      <description>Magnificent neo-Gothic building on the Danube bank.</description>
+    </attraction>
+    <attraction lat="47.4962" lon="19.0396">
+      <name>Buda Castle</name>
+      <description>Historical palace complex of the Hungarian kings.</description>
+    </attraction>
+    <attraction lat="47.5022" lon="19.0348">
+      <name>Fisherman's Bastion</name>
+      <description>Neo-Romanesque terrace with panoramic views of Pest.</description>
+    </attraction>
+    <attraction lat="47.499" lon="19.0441">
+      <name>Chain Bridge</name>
+      <description>The first permanent bridge connecting Buda and Pest.</description>
+    </attraction>
+    <attraction lat="47.5148" lon="19.0777">
+      <name>Heroes' Square</name>
+      <description>Major square featuring the Millennium Monument.</description>
+    </attraction>
+    <attraction lat="47.5009" lon="19.0514">
+      <name>St. Stephen's Basilica</name>
+      <description>Roman Catholic basilica named after the first King of Hungary.</description>
+    </attraction>
+    <attraction lat="47.5188" lon="19.0814">
+      <name>Széchenyi Thermal Bath</name>
+      <description>Largest medicinal bath in Europe with outdoor pools.</description>
+    </attraction>
+    <attraction lat="47.5273" lon="19.0468">
+      <name>Margaret Island</name>
+      <description>Quiet island park in the middle of the Danube.</description>
+    </attraction>
+    <attraction lat="47.5019" lon="19.0342">
+      <name>Matthias Church</name>
+      <description>Roman Catholic church in the heart of Buda's Castle District.</description>
+    </attraction>
+    <attraction lat="47.4871" lon="19.0583">
+      <name>Great Market Hall</name>
+      <description>Large indoor market offering local food and crafts.</description>
+    </attraction>
+  </highlights>
+  <description>Con un'architettura maestosa e una rete termale storica, Budapest si conferma una delle capitali più accessibili e scenografiche. Le recenti riforme urbane mirano a potenziare il trasporto pubblico e la sicurezza dei quartieri centrali.</description>
+  <wiki_intro>'''Budapest''' is the capital city of Hungary. With a unique, youthful atmosphere, world-class classical music scene, a pulsating nightlife increasingly appreciated among European youth, and last but not least, an exceptional offer of natural thermal baths, Budapest is one of Europe's most delightful and enjoyable cities. Due to the exceedingly scenic setting, and its architecture it is nicknam...</wiki_intro>
+</city_report>

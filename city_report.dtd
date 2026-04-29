@@ -1,0 +1,42 @@
+<!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?)>
+<!ATTLIST city_report 
+    appeal_score CDATA #REQUIRED>
+
+<!ELEMENT metadata (title, name_it, flag)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT name_it (#PCDATA)>
+<!ELEMENT flag (#PCDATA)>
+
+<!ELEMENT indicators (hotel_count, hotel_price, safety, environment, cost_index, economic_accessibility)>
+<!ELEMENT hotel_count (#PCDATA)>
+<!ELEMENT hotel_price (#PCDATA)>
+
+<!ELEMENT safety EMPTY>
+<!ATTLIST safety index_score CDATA #REQUIRED>
+
+<!ELEMENT environment EMPTY>
+<!ATTLIST environment green_score CDATA #REQUIRED>
+
+<!ELEMENT cost_index EMPTY>
+<!ATTLIST cost_index value CDATA #REQUIRED>
+
+<!ELEMENT economic_accessibility EMPTY>
+<!ATTLIST economic_accessibility score CDATA #REQUIRED>
+
+<!ELEMENT transport (#PCDATA)>
+<!ELEMENT accommodation (hotel*)>
+<!ELEMENT hotel (name, price)>
+<!ELEMENT price (#PCDATA)>
+
+<!ELEMENT highlights (attraction*)>
+<!ELEMENT attraction (name, description)>
+<!ATTLIST attraction 
+    lat CDATA #REQUIRED 
+    lon CDATA #REQUIRED>
+
+<!ELEMENT districts (district*)>
+<!ELEMENT district (name, description)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT wiki_intro (#PCDATA)>

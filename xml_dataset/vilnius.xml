@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="69.3">
+  <metadata>
+    <title>Vilnius</title>
+    <name_it>Vilnius</name_it>
+    <flag>🇱🇹</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>23</hotel_count>
+    <hotel_price>104.34</hotel_price>
+    <safety index_score="71.5"/>
+    <environment green_score="80"/>
+    <cost_index value="56.4"/>
+    <economic_accessibility score="43.6"/>
+  </indicators>
+  <transport>Buses leave from outside Arrivals every 15-30 min and take 15 min to go downtown. Simplest is to buy a €1 single ticket by card, and you might pay extra for bulky luggage. "Get around" below describes other ticket deals, such as the smart card Vilniečio kortelė — buy it from the Narvesen kiosk next to Arrivals.</transport>
+  <accommodation>
+    <hotel>
+      <name>Filaretai Hostel</name>
+      <price>Dorm €33 ppn</price>
+    </hotel>
+    <hotel>
+      <name>Jimmy Jumps House</name>
+      <price>Dorm beds from ~€18, privates from ~€40</price>
+    </hotel>
+    <hotel>
+      <name>Pogo Hostel</name>
+      <price>Dorm €20 ppn</price>
+    </hotel>
+    <hotel>
+      <name>City Hotel Algirdas</name>
+      <price>B&amp;amp;B double €50</price>
+    </hotel>
+    <hotel>
+      <name>Domus Maria</name>
+      <price>B&amp;amp;B double €60</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="54.6867" lon="25.2908">
+      <name>Gediminas Tower</name>
+      <description>The only remaining tower of the Upper Castle.</description>
+    </attraction>
+    <attraction lat="54.6831" lon="25.2931">
+      <name>St. Anne's Church</name>
+      <description>Masterpiece of Flamboyant Gothic architecture.</description>
+    </attraction>
+    <attraction lat="54.6806" lon="25.2953">
+      <name>Uzupis</name>
+      <description>Bohemian district that declared its own republic.</description>
+    </attraction>
+    <attraction lat="54.6858" lon="25.2878">
+      <name>Vilnius Cathedral</name>
+      <description>Main Roman Catholic cathedral of Lithuania.</description>
+    </attraction>
+    <attraction lat="54.6744" lon="25.2894">
+      <name>Gates of Dawn</name>
+      <description>The only surviving gate of the city's original walls.</description>
+    </attraction>
+    <attraction lat="54.6858" lon="25.2892">
+      <name>Grand Dukes Palace</name>
+      <description>Reconstructed palace of the Lithuanian rulers.</description>
+    </attraction>
+    <attraction lat="54.6842" lon="25.2953">
+      <name>Bernadine Garden</name>
+      <description>Main park in the heart of the old town.</description>
+    </attraction>
+    <attraction lat="54.6939" lon="25.3058">
+      <name>Church of St. Peter</name>
+      <description>Baroque church known for its white plaster carvings.</description>
+    </attraction>
+    <attraction lat="54.6869" lon="25.2975">
+      <name>Three Crosses</name>
+      <description>Monument on the hill offering panoramic views.</description>
+    </attraction>
+    <attraction lat="54.6878" lon="25.2722">
+      <name>Museum of Occupations</name>
+      <description>Former KGB headquarters now a museum.</description>
+    </attraction>
+  </highlights>
+  <description>Capitale verdeggiante e accogliente, Vilnius si distingue per un centro storico barocco e una politica di incentivi alle startup. Offre una qualità della vita elevata con costi decisamente contenuti.</description>
+  <wiki_intro>'''Vilnius''' is the capital and largest city of Lithuania. It has a beautiful baroque Old Town, listed as a , and excellent tourist facilities in all price ranges.  It stands on the River Neris in the southeast pocket of the country, the Dzūkija region, and in 2023 had a population of 629,000.
+
+== Understand ==
+File:Gediminas Tower in Vilnius (cropped).jpg | thumb | Gediminas Tower 
+Vilnius has ...</wiki_intro>
+</city_report>

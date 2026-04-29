@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="63.2">
+  <metadata>
+    <title>Amsterdam</title>
+    <name_it>Amsterdam</name_it>
+    <flag>🇳🇱</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>6</hotel_count>
+    <hotel_price>157.25</hotel_price>
+    <safety index_score="72.5"/>
+    <environment green_score="78"/>
+    <cost_index value="85.0"/>
+    <economic_accessibility score="15.0"/>
+  </indicators>
+  <transport>From Schiphol Airport. The train station is located directly beneath the airport. From the arrivals hall, walk through Schiphol Plaza to reach the train station.</transport>
+  <accommodation>
+    <hotel>
+      <name>Gaasper Camping Amsterdam</name>
+      <price>Off-season from €16.25, from €18.50 during high-season</price>
+    </hotel>
+    <hotel>
+      <name>A&amp;amp;O Amsterdam Zuidoost</name>
+      <price>€24</price>
+    </hotel>
+    <hotel>
+      <name>Campanile Hotel Amsterdam</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Tulip Inn Amsterdam Riverside</name>
+      <price>€78</price>
+    </hotel>
+    <hotel>
+      <name>EasyHotel Amsterdam Arena Boulevard</name>
+      <price>Doubles from €49</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="52.36" lon="4.8852">
+      <name>Rijksmuseum</name>
+      <description>National museum dedicated to Dutch arts and history.</description>
+    </attraction>
+    <attraction lat="52.3752" lon="4.884">
+      <name>Anne Frank House</name>
+      <description>Historic house where Anne Frank hid during WWII.</description>
+    </attraction>
+    <attraction lat="52.3584" lon="4.8811">
+      <name>Van Gogh Museum</name>
+      <description>World's largest collection of artworks by Vincent van Gogh.</description>
+    </attraction>
+    <attraction lat="52.358" lon="4.8686">
+      <name>Vondelpark</name>
+      <description>The city's most famous and largest public park.</description>
+    </attraction>
+    <attraction lat="52.3731" lon="4.8926">
+      <name>Dam Square</name>
+      <description>The historic center of Amsterdam and site of the Royal Palace.</description>
+    </attraction>
+    <attraction lat="52.3578" lon="4.8917">
+      <name>Heineken Experience</name>
+      <description>Interactive museum in the former brewery of the pilsner brand.</description>
+    </attraction>
+    <attraction lat="52.358" lon="4.8797">
+      <name>Stedelijk Museum</name>
+      <description>Major museum for modern and contemporary art and design.</description>
+    </attraction>
+    <attraction lat="52.3693" lon="4.9013">
+      <name>Rembrandt House</name>
+      <description>The former home and workshop of the painter Rembrandt.</description>
+    </attraction>
+    <attraction lat="52.3842" lon="4.9023">
+      <name>A'DAM Lookout</name>
+      <description>Observation deck with a 360-degree view of the city.</description>
+    </attraction>
+    <attraction lat="52.3725" lon="4.8792">
+      <name>Jordaan District</name>
+      <description>Charming neighborhood known for its narrow canals and boutiques.</description>
+    </attraction>
+  </highlights>
+  <description>Hub globale dell'innovazione sostenibile, Amsterdam eccelle nella mobilità ciclistica e nella gestione creativa degli spazi acquatici. Unisce un dinamismo economico unico a una rete di sicurezza sociale e urbana di primo livello.</description>
+  <wiki_intro>'''[http://www.zuidoost.amsterdam.nl/ Zuidoost]''' (Dutch phrasebook|Dutch for ''Southeast''), often colloquially referred to as the '''Bijlmer''', is a borough of Amsterdam. It is an exclave, separated from the mainland by Duivendrecht and Diemen.
+
+==Understand==
+
+With no shared borders with Amsterdam, Zuidoost is a separate entity. It was built up in the 1960s and 70s as a residential utopia of...</wiki_intro>
+</city_report>

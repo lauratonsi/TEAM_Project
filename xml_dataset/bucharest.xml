@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="60.3">
+  <metadata>
+    <title>Bucharest</title>
+    <name_it>Bucarest</name_it>
+    <flag>🇷🇴</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>41</hotel_count>
+    <hotel_price>90.47</hotel_price>
+    <safety index_score="70.3"/>
+    <environment green_score="55"/>
+    <cost_index value="48.9"/>
+    <economic_accessibility score="51.1"/>
+  </indicators>
+  <transport>Getting there and away: By bus – The Express Bus is usually the best option, as it is inexpensive (50–90 minutes ride) and runs frequently. However, it can get crowded (and it lacks space for luggage) and can get snarled in traffic. The airport bus stop is straight outside Arrivals on the ground floor.</transport>
+  <accommodation>
+    <hotel>
+      <name>Apartamente Regim Hotelier Bucuresti</name>
+      <price>40</price>
+    </hotel>
+    <hotel>
+      <name>Short Term Apartments Rental</name>
+      <price>40</price>
+    </hotel>
+    <hotel>
+      <name>Camping Casa Alba</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Butterfly Villa Hostel</name>
+      <price>From 12/night</price>
+    </hotel>
+    <hotel>
+      <name>Midland Hostel</name>
+      <price>from 8/night</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="44.4275" lon="26.0872">
+      <name>Palace of Parliament</name>
+      <description>The world's second-largest administrative building.</description>
+    </attraction>
+    <attraction lat="44.4414" lon="26.0972">
+      <name>Romanian Athenaeum</name>
+      <description>Iconic concert hall and symbol of Romanian culture.</description>
+    </attraction>
+    <attraction lat="44.4715" lon="26.0762">
+      <name>Village Museum</name>
+      <description>Open-air museum showcasing traditional Romanian life.</description>
+    </attraction>
+    <attraction lat="44.4714" lon="26.0825">
+      <name>Herastrau Park</name>
+      <description>Large park surrounding a lake in northern Bucharest.</description>
+    </attraction>
+    <attraction lat="44.4672" lon="26.0784">
+      <name>Arcul de Triumf</name>
+      <description>Triumphal arch dedicated to Romania's WWI victory.</description>
+    </attraction>
+    <attraction lat="44.431" lon="26.101">
+      <name>Old Town (Lipscani)</name>
+      <description>Historical center with vibrant nightlife and architecture.</description>
+    </attraction>
+    <attraction lat="44.4314" lon="26.0997">
+      <name>Stavropoleos Monastery</name>
+      <description>Small Orthodox monastery known for its Brancovan style.</description>
+    </attraction>
+    <attraction lat="44.4394" lon="26.0975">
+      <name>Revolution Square</name>
+      <description>The site of major events during the 1989 revolution.</description>
+    </attraction>
+    <attraction lat="44.4397" lon="26.0958">
+      <name>National Art Museum</name>
+      <description>Art museum located in the former Royal Palace.</description>
+    </attraction>
+    <attraction lat="44.4318" lon="26.1017">
+      <name>Carturesti Carusel</name>
+      <description>Beautiful bookstore located in a restored 19th-century building.</description>
+    </attraction>
+  </highlights>
+  <description>Metropoli in forte espansione tecnologica, Bucarest offre uno dei migliori rapporti tra costi operativi e qualità delle infrastrutture digitali. Il suo profilo è in rapida evoluzione verso standard di sostenibilità dell'Europa occidentale.</description>
+  <wiki_intro>'''Bucharest''' (Romanian phrasebook|Romanian: ''București'') is Romania's capital and largest city. Bucharest has a very interesting mix of old and new: finding a 300-year-old church near a steel-and-glass tower that sits next to a communist-style building is commonplace in Bucharest. Bucharest offers some excellent attractions, and has cultivated a sophisticated, trendy, and modern sensibility...</wiki_intro>
+</city_report>

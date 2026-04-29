@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="61.7">
+  <metadata>
+    <title>Bratislava</title>
+    <name_it>Bratislava</name_it>
+    <flag>🇸🇰</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>25</hotel_count>
+    <hotel_price>107.49</hotel_price>
+    <safety index_score="68.4"/>
+    <environment green_score="65"/>
+    <cost_index value="58.1"/>
+    <economic_accessibility score="41.9"/>
+  </indicators>
+  <transport>There are no dedicated airport shuttles, however the airport is served as part of the municipal bus network. Use bus No 61 (or N61 at night) for a direct connection to the Central Train Station (Hlavná stanica). Or change for a tram at Trnavské mýto to get to the city (in order to get to the tram stop, use the underpass and the exit marked "Centrum" (city ) and take any tram in the direction towards .</transport>
+  <accommodation>
+    <hotel>
+      <name>Patio Hostel</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Hostel Chors</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Wild Elephants Hostel</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Hotel Arcus</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Aston Business Hotel</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="48.1422" lon="17.1002">
+      <name>Bratislava Castle</name>
+      <description>Main castle of the city overlooking the Danube.</description>
+    </attraction>
+    <attraction lat="48.1415" lon="17.1048">
+      <name>St. Martin's Cathedral</name>
+      <description>Gothic cathedral and former coronation site of kings.</description>
+    </attraction>
+    <attraction lat="48.1449" lon="17.1068">
+      <name>Michael's Gate</name>
+      <description>The only city gate preserved from the medieval fortifications.</description>
+    </attraction>
+    <attraction lat="48.1492" lon="17.1077">
+      <name>Grassalkovich Palace</name>
+      <description>The residence of the President of Slovakia.</description>
+    </attraction>
+    <attraction lat="48.1539" lon="17.0997">
+      <name>Slavin Memorial</name>
+      <description>Monument and cemetery for Soviet soldiers.</description>
+    </attraction>
+    <attraction lat="48.1384" lon="17.1046">
+      <name>UFO Observation Deck</name>
+      <description>Unique bridge structure with a deck offering city views.</description>
+    </attraction>
+    <attraction lat="48.1432" lon="17.1166">
+      <name>Blue Church</name>
+      <description>Art Nouveau church famous for its blue color.</description>
+    </attraction>
+    <attraction lat="48.1442" lon="17.1085">
+      <name>Primate's Palace</name>
+      <description>Neoclassical palace where the Peace of Pressburg was signed.</description>
+    </attraction>
+    <attraction lat="48.1439" lon="17.1086">
+      <name>Old Town Hall</name>
+      <description>Complex of buildings dating back to the 14th century.</description>
+    </attraction>
+    <attraction lat="48.1402" lon="17.1205">
+      <name>Eurovea</name>
+      <description>Modern riverside district for shopping and leisure.</description>
+    </attraction>
+  </highlights>
+  <description>Situata strategicamente sul Danubio, Bratislava combina costi di gestione competitivi con una crescita rapida nel settore dei servizi. La sua dimensione umana permette standard di sicurezza elevati e una rapida transizione verso infrastrutture green.</description>
+  <wiki_intro>'''Bratislava''' (Hungarian phrasebook|Hungarian: ''Pozsony'', German phrasebook|German: ''Pressburg'', known as ''Prešporok'' before 1919), is the capital and largest city of Slovakia. It has a population of more than 475,000 (2021), and is the administrative, cultural and economic centre of the country. For most visitors, it is the entry point into the rest of the country.
+
+Located on the borde...</wiki_intro>
+</city_report>

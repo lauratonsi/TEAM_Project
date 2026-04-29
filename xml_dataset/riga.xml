@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="62.5">
+  <metadata>
+    <title>Riga</title>
+    <name_it>Riga</name_it>
+    <flag>🇱🇻</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>103.23</hotel_price>
+    <safety index_score="62.1"/>
+    <environment green_score="72"/>
+    <cost_index value="55.8"/>
+    <economic_accessibility score="44.2"/>
+  </indicators>
+  <transport>Bus route 22 runs between the airport and the old town, with a stop near the central bus and railway stations as well as old town. These buses operate as any other public transport in Riga; see Riga#Get_around for more information on riding the buses. The journey to the old town takes 30-40 minutes.</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="56.9491" lon="24.1053">
+      <name>Old Town</name>
+      <description>Historical heart of Riga with cobblestone streets.</description>
+    </attraction>
+    <attraction lat="56.9472" lon="24.1069">
+      <name>House of Blackheads</name>
+      <description>Historic building reconstructed after WWII.</description>
+    </attraction>
+    <attraction lat="56.9514" lon="24.1131">
+      <name>Freedom Monument</name>
+      <description>Memorial honoring soldiers killed in the War of Independence.</description>
+    </attraction>
+    <attraction lat="56.9475" lon="24.1094">
+      <name>St. Peter's Church</name>
+      <description>Gothic church with an observation tower.</description>
+    </attraction>
+    <attraction lat="56.9439" lon="24.1158">
+      <name>Central Market</name>
+      <description>Large market in former Zeppelin hangars.</description>
+    </attraction>
+    <attraction lat="56.9592" lon="24.1089">
+      <name>Art Nouveau District</name>
+      <description>Area with the highest concentration of Art Nouveau architecture.</description>
+    </attraction>
+    <attraction lat="56.9539" lon="24.1158">
+      <name>Nativity Cathedral</name>
+      <description>The largest Orthodox cathedral in the city.</description>
+    </attraction>
+    <attraction lat="56.9556" lon="24.1131">
+      <name>Latvian National Museum</name>
+      <description>Art museum in a magnificent historicist building.</description>
+    </attraction>
+    <attraction lat="56.9511" lon="24.1064">
+      <name>Swedish Gate</name>
+      <description>The only remaining gate from the old city walls.</description>
+    </attraction>
+    <attraction lat="56.9714" lon="24.2272">
+      <name>Motor Museum</name>
+      <description>Museum with a large collection of antique vehicles.</description>
+    </attraction>
+  </highlights>
+  <description>Perla del Baltico famosa per l'Art Nouveau, Riga offre spazi verdi immensi e una crescente scena tecnologica. La sua accessibilità economica la rende una scelta strategica per giovani professionisti e viaggiatori consapevoli.</description>
+  <wiki_intro>'''Riga''' is the financial, creative, and cultural centre of Latvia. It is the capital and the largest city in Latvia, it is also the second largest city in the Baltic states|Baltic States after the Lithuania|Lithuanian capital Vilnius. The city lies on the Gulf of Riga, at the mouth of Daugava, Riga has a population of approximately 640,000 inhabitants, or 1/3 of the population of Latvia. The...</wiki_intro>
+</city_report>

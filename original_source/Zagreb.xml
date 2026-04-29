@@ -1,0 +1,1540 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikivoyage</sitename>
+    <dbname>enwikivoyage</dbname>
+    <base>https://en.wikivoyage.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.46.0-wmf.24</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikivoyage</namespace>
+      <namespace key="5" case="first-letter">Wikivoyage talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1728" case="first-letter">Event</namespace>
+      <namespace key="1729" case="first-letter">Event talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Zagreb</title>
+    <ns>0</ns>
+    <id>40239</id>
+    <revision>
+      <id>5258561</id>
+      <parentid>5258528</parentid>
+      <timestamp>2026-04-10T22:05:52Z</timestamp>
+      <contributor>
+        <username>Ikan Kekek</username>
+        <id>36420</id>
+      </contributor>
+      <comment>/* Get around */</comment>
+      <origin>5258561</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="97715" sha1="77d2botduu2cqtc7018yuw7g3cr25fu" xml:space="preserve">{{pagebanner|Zagreb banner.jpg}}
+[[Image:Zagreb trg bana Jelačića.jpg|thumb|350px|right|Ban Jelačić Square]]
+'''Zagreb''' is a city in [[Central Croatia]] and the capital of [[Croatia]]. The city has a charming medieval 'old city' with architecture and cobbled streets reminiscent of [[Vienna]], [[Budapest]], [[Prague]] and other [[Central Europe|Central European]] capitals.
+
+==Understand==
+{{climate chart
+|Zagreb
+|-3.0 |3.7 |43.2
+|-1.8 |6.8 |38.9
+|1.6 |11.9 |52.6
+|5.2 |16.3 |59.3
+|9.8 |21.5 |72.6
+|13.0 |24.5 |95.3
+|14.7 |26.7 |77.4
+|14.4 |26.3 |92.3
+|10.8 |22.1 |85.8
+|6.2 |15.8 |82.9
+|1.4 |8.9 |80.1
+|-1.7 |4.6 |59.6
+
+|float=right
+|clear=right
+|source=[[:w:Zagreb]]
+|description=
+}}
+Zagreb is a vibrant city of around 770,000 people (2021, metropolitan area: 1,100,000). In 2017 it was visited by over a million tourists, mainly from [[Austria]], [[Germany]] and [[Italy]]. Zagreb is also well known for its Advent festival, which occurs from December to early January, boasting vibrant nightlife and additional cultural and gastronomic activities.
+
+===Tourist information===
+* {{listing
+| name=Turistički informativni centar | alt=Tourist Information Centre - Ban Jelačić Square | url=https://www.infozagreb.hr/contact/tourist-information-centre | email=
+| address=Trg bana Josipa Jelačića 11 | lat=45.812716|long=15.978536 | directions=
+| phone= | tollfree= | fax=
+| hours=M-F 09:00-20:00; Sa Su 10:00-18:00 | price=
+| lastedit=2023-07-03
+| content=
+}}
+
+Other information points are located at the airport, bus station, railway station and at the Lotrščak Tower.
+
+==Get in==
+===By plane===
+{{go
+| name=Franjo Tuđman Airport | alt={{IATA|ZAG}} Zagreb International Airport | url=http://www.zagreb-airport.hr | email=
+| address= | lat=45.743056 | long=16.068889 | directions=in the locality of Pleso in 17 km south-east from the city centre
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=Zagreb Airport | image=Zagreb Airpoirt tower.jpg | wikidata=Q128016
+| lastedit=2016-09-09
+| content=Airport facilities include restaurant, cafe, bars, post, bank, ATMs, numerous car renting outlets. It's open 24 hours with 6 cots on the upper level outside security if you need to sleep at the airport. It has limited free Wifi, or paid access to the Internet (via terminal)
+}}
+
+''Getting there:''
+
+* '''Buses''' leave from the airport at 07:00 and every 30 minutes between 08:00 and 20:00. Beyond these hours, there are buses leaving to the main bus station every time a Croatia Airlines plane lands. When traveling to the airport from the main Zagreb bus station, the buses are scheduled between 04:30 and 20:30. A journey takes about 30 min. The price of the single ticket is {{EUR|8}}. Online timetable can be checked at the [https://plesoprijevoz.hr/en/start/ Pleso prijevoz website]{{Dead link|date=December 2025 |bot=InternetArchiveBot }}. Airport buses leave from the [https://www.akz.hr/how-to-reach-us/125 main bus station] which is in the wider city center; they leave from its northeast wing (toward the city)—look for "Croatia Airlines" and "Eurolines" banners on the building.
+* A cheaper local ZET bus '''[https://moovitapp.com/index/en/public_transit-line-290-Zagreb-3761-1433366-7758534-0 290]''' also goes to the city center (and back to the airport) from the main road outside the terminal. 
+* You can also order a taxi, Bolt or Uber. A ride from the airport to the city center can cost from {{EUR|14-20}}.
+
+===By train===
+[[File:Zagreb, Main Station.JPG | thumb | 300px | Glavni Kolodvor station]]
+Five trains a day run from [[Ljubljana]], taking 2 hr 30 min via Zidani Most and the border at Dobova. Two of these start from [[Villach]] (4-5 hr). Tickets cannot be purchased online; they can only be purchased at the station. Second-class tickets are for €9, but first-class is also available.&lt;!--https://www.seat61.com/international-trains/trains-from-Ljubljana.htm#Ljubljana-Zagreb--&gt;
+
+From Zurich, Munich or Vienna change at Villach. From Budapest change at Graz and Zidani Most. 
+
+Domestic trains are slow. Two per day are from [[Rijeka]] (one direct, one with a change), taking 5 hours via just about every intervening village with a j or v in its name. One train a day from [[Split]] takes 8 hours. Three per day run from Hrvatska Kostajnica, taking 1 hr 40 min. Local trains fan out to Harmica, Ivanić-Grad, Koprivnica, Novoselec, Ogulin, Savski Marof, Sisak Caprag, Vinkovci, Virovitica and Zabok. 
+
+See [https://www.hzpp.hr/en Croatia Railways] for timetables and tickets.
+
+Trains no longer cross the border to [[Sarajevo]] in Bosnia. The work-around rail route is to take the train from Zagreb main station at 09:00 to Hrvatska Kostajnica, arriving by 10:45. This is 3 km from the Bosnian border crossing, either take a taxi, or walk south into town then east and cross the river by the first bridge. Once you've entered Bosnia, find a taxi to [[Banja Luka]], 100 km southeast and taking 90 min. You'll reach Banja Luka in time for the 15:45 local train to Sarajevo via Zenica, arriving by 20:40. Or take the direct bus from Zagreb to Banja Luka. 
+
+{{go
+| name=Zagreb Glavni kolodvor | alt= | url=https://www.hzpp.hr/en | email=
+| address=Trg Kralja Tomislava 12 | lat=45.8047 | long=15.9789 | directions=
+| phone= | tollfree= | hours= | price=
+| wikidata=Q140377 | wikipedia=Zagreb Glavni kolodvor
+| lastedit=2025-09-12 
+| content=The main railway station is central, a neo-classical building of 1892. It has left luggage lockers (2€ per 24 hours). Tram stops are outside in the main square. 
+}}
+
+===By bus===
+International bus lines come from [[London]], [[Paris]], [[Rotterdam]] and [[Amsterdam]], numerous cities in [[Germany]], [[Belgium]], [[Switzerland]], [[Italy]], [[Slovakia]], [[Czech Republic]], [[Slovenia]], [[Hungary]], many destinations in [[Bosnia and Herzegovina]], [[Serbia]], [[Montenegro]], and [[Macedonia (Republic)|Macedonia]]. 
+
+Timetable information and prices can be found at the [https://www.akz.hr/en AKZ website]. Croatian and international coach operators maintain scheduled lines covering all major domestic and European cities.
+
+{{go
+| name=Autobusni Kolodvor Zagreb | alt=Zagreb Bus Terminal | url=http://www.akz.hr | email=
+| address=Av. Marina Držića 4 | lat=45.803667 | long=15.993208 | directions=southeast of the railway station - approximately 10 minutes walk, or 3 stops by tram (lines 2 and 6)
+| phone=+385 1 6112 789 | tollfree= | fax=
+| hours= | price=
+| lastedit=2016-09-09
+| content=It has 24/7 luggage storage.
+}}
+
+You can hand over your luggage for safekeeping at the platform 106 of the main bus station. This service operates from 06:00-22:00. For luggage up to 40 kg the price is {{EUR|0.80}} per hour for the first four hours, and {{EUR|0.53}} for any following hour.
+
+The FlixBus ticket office and lounge are easily located.  If you have an active FlixBus ticket (even though it isn't usually checked), the FlixBus lounge is comfortable, with wifi, electric sockets, toilets and tables — ideal to wait for your next ride!  The lounge also includes a clean pay toilet.
+
+===By car===
+Almost all highways (motorway; ''autocesta'' in Croatian) in [[Croatia]] start or end in Zagreb.
+
+Travellers from [[Vienna]] can pass by [[Graz]] and [[Maribor]] and then take the A2 highway upon entering Croatia. Mind the toll in Slovenia.
+
+Travellers from [[Budapest]] can pass by [[Székesfehérvár]] and then use the Croatian A4 motorway. It also connects [[Varaždin]]. You will have to pay toll from shortly after entering Croatia until shortly before reaching Zagreb.
+
+Travellers heading from [[Serbia]], [[Bulgaria]], [[Macedonia (Republic)|Macedonia]], [[Greece]] and [[Turkey]] can use the Croatian A3 motorway to reach Zagreb.
+
+Travellers heading from [[Ljubljana]] can use the A3.
+
+Travellers coming from the west - [[Italy]], [[Rijeka]] or [[Istria]] - can use the A7 motorway (near and bypassing Rijeka), A6 motorway (Rijeka-Bosiljevo) and then the A1 (Bosiljevo-Zagreb).
+
+Those travelling from Italy can bypass the expensive motorway toll in Slovenia by using the state route SS21 through [[Trieste]], route E61 through Slovenia (in a bad shape) and then A7 south to Rijeka, then Rijeka bypass, then A6 east to Bosiljevo and A1 northeast to Zagreb.
+
+Travellers heading from the south - Dalmatian coast ([[Zadar]], [[Split]], [[Dubrovnik]]...) or from [[Montenegro]] - can use the A1 highway, often combined with the state roads D8 (by the coastline) and D1 (through the hinterland).
+
+To use highways in Croatia you must pay in euro. You may also pay by credit card- American Express, Diners, MasterCard, Maestro or Visa cards. A third option is to use the HAC Smart Card, which can reduce the cost of travelling on the Croatian highways by 10-25%. It is issued by [https://www.hac.hr/en/toll/etc?etc=1 Hrvatske Autoceste]{{Dead link|date=October 2023 |bot=InternetArchiveBot }}, but pays off only if travelling more than 500 km (that's a return trip Zagreb-Zadar or Zagreb-Serbia) or 250 km for a seasonal Smart Card (a return trip Zagreb-Rijeka or two return trips to Zagreb from Austrian border). There are also transponders by Hrvatske Autoceste for electronic toll collection (called ENC). You can find a toll [https://www.hac.hr/en/toll details here].
+
+==Get around==
+{{Mapframe|45.8117|15.9747|zoom=14 
+ | type=geoline
+ | type2= mapshapes | id2 = Q2381904
+}}
+[[File:Záhřeb, Kneza Branimira, tramvaj.jpg|thumb|250px|right|Zagreb Tram]]
+
+[[File:Bus Zagreb (1).jpg|thumb|250px|right|Zagreb Bus]]
+[[File:Zagrebacka uspinjaca.jpg|thumb|250px|right|Funicular Railway]]
+[[File:ZG suburban.jpg|thumb|250px|Suburban Railway]]
+Zagreb has a well-developed and efficient public transport system that consists of trams, buses and trains. You can find routes and schedules from [https://hr.easyway.info/en/cities/zagreb Easyway] journey planner or Google maps, or you can download the official ZET app. 
+
+The [http://www.zet.hr/en tram network] operates 24 hours a day - from around 04:30 to just after 00:00 there are 15 "day-time lines" (tram lines 1–9, 11–15 and 17). From 00:00 to 04:00 there are 4 "night" lines (tram lines 31-34) which cover most of the day-time lines on a reduced (around 30-40 minute) frequency. Occasionally, buses replace trams on night lines. Tram lines 1, 3, and 8 do not operate Saturdays, Sundays and on public holidays. Tram 1 doesn't operate in summer. Maps of daytime lines are available under the link "Network of daytime tram lines". Both buses, trams and the funicular are operated by [https://www.zet.hr/en ZET].
+
+==== By bus ====
+As for the buses, there are 138 day-time and 4 night lines. ZET buses cover the area outside the city center, and some neighboring towns in Zagreb county. The buses use the same ticketing system as the trams. There does not appear to be a map of bus routes. Google Maps is probably the easiest planner to use.
+
+==== By funicular ====
+A historic funicular railway (''uspinjača'' in Croatian), one of the steepest and shortest in the world, operates between the lower and upper towns with a travel time of just one minute. The funicular operates every 10 minutes, but for a fee of {{EUR|3.32}} (in addition to regular tickets for everyone on board), an immediate ride can be purchased.
+
+Funicular Fare
+{| class="wikitable"
+|'''Funicular fare – one-way''' 
+|{{EUR|0.66}}
+|-
+|'''Emergency ride fare'''​
+|{{EUR|3.32}}
+|}
+
+==== Ticketing system for buses &amp; trams ====
+[https://www.zet.hr/en ZET] operate city buses, trams, funicular &amp; Sljeme cable car.
+
+Paper tickets &amp; chip cards can be purchased at any news-stand/kiosk ([http://lokator.tisak.hr/?authToken=tisak Tisak]), including at the airport. It is cheaper to buy a ticket here than from a driver. 
+
+Many locals use Stored Value electronic chip cards to pay for the ride. These can be bought at ZET company offices for {{EUR|1.33}} and need to be charged with money in advance. They are also used for the multiple day tickets. The advantage is that they are easier to use than paper tickets, as buses and trams often have fewer machines that accept paper tickets (one by the first and one by the last tram doors, the latter only in low-floor trams). If you want a cheaper short-duration option, you need to select it on the display before waving the chip card, otherwise you'll buy a 1.5-hour ticket.
+
+Another easy option is to buy tickets by smartphone using the [https://www.zet.hr/tickets-and-fares/moj-zet-app/8111 MOJ ZET app] ([https://apps.apple.com/app/id6447687095 iOS], [https://play.google.com/store/apps/details?id=com.zetmobile Android]) which can be topped up in euro increments using a credit card. You purchase tickets on the app and then activate them by reading the blue QR code near the vehicle doors or using NFC.
+{| class="wikitable"
+|'''Single fare, daytime (validity 30 minutes)'''
+|{{EUR|0.53}}
+|-
+|'''Single fare, daytime (validity 60 minutes)'''
+|{{EUR|0.93}}
+|-
+|'''Single fare, daytime (validity 90 minutes)'''
+|{{EUR|1.33}}
+|-
+|'''Single fare, night time'''
+|{{EUR|1.99}}
+|}
+Tickets purchased from the drivers
+{| class="wikitable"
+|'''Single fare, daytime (validity 30 minutes)'''
+|{{EUR|0.80}}
+|-
+|'''Single fare, daytime (validity 60 minutes)'''
+|{{EUR|1.33}}
+|-
+|'''Single fare, daytime (validity 90 minutes)'''
+|{{EUR|1.99}}
+|-
+|'''Single fare, night time'''
+|{{EUR|1.99}}
+|-
+|'''Daily ticket'''
+|{{EUR|3.98}}
+|}Once you enter a vehicle, validate your ticket by inserting it in the little orange machine. All single tickets are valid for travel using all vehicles in a single direction within the allotted time after validation, so you won't need a new one when switching trams and/or buses. Zoned fare exists, but only relevant for travel to places outside of Zagreb city limits; all trams as well as buses in the City of Zagreb are in zone 1. The most significant place in zone 2 is the airport.
+
+==== By train ====
+Trains operated by [http://www.hznet.hr/ Croatian Railways (Hrvatske Željeznice)] run every 15 minutes from the east to west of the city, connecting the suburbs of Zagreb with the central railway station. They are usually the quickest form of transport for those coming from the areas of Zagreb far from the railway station (Glavni kolodvor), or beyond the tram network.
+
+==== Zagreb Card ====
+Travellers who intend to visit many museums may consider buying the [https://zagrebcard.com Zagreb Card]. The card offers unlimited travel on public transport in Zagreb, discounts at virtually all of the city's museums, reduced prices at many restaurants, shops, and service providers and many other concessions. As of 2023, it costs {{EUR|31}} for 24 hours or {{EUR|37}} for 72 hours from the date and time entered on the card. Holders of the card also receive a special booklet with a list of all of the establishments and the discounts available to them. The card can be purchased at any of Zagreb's Tourist Information Centre, at the reception desks of the majority of Zagreb's hotels, and ordered online (shipping cost is added).
+
+==== By bicycle ====
+[[File:Nextbike Bikeshare Station.jpg|thumb|nextbike, Zagreb]]
+There are few companies that offer bicycle rent option:
+
+* {{listing
+| name=BajsZagreb | alt=nextbike | url=https://bajs.zagreb.hr/hr/ | email=bajs@zagreb.hr
+| address= | lat= | long= | directions=
+| phone=+385 1 549 4477 | tollfree=
+| hours= | price=0,50 € / hour
+| lastedit=2023-09-12
+| content=Service is available to everyone at the same price via the nextbike smartphone app. There are more than 180 stations and over 2000 bikes available across the whole of the city.
+}}
+* {{Listing|name=Bicikli Fumić|url=https://biciklifumic.hr/en/bicycle-rental-zagreb/|email=bicikli.fumic@gmail.com|phone=+385 98808062|lastedit=2023-09-12}}
+* {{listing
+| name=Blue Bike | alt= | url=https://rentabikezagreb.com | email=rent@zagrebbybike.com
+| address= | lat= | long= | directions=
+| phone=+385 98 246 320, +385 98 188 3344 | tollfree=
+| hours= | price=
+| lastedit=2023-09-12
+| content=
+}}
+
+'''nextbike''' is the one which offers automated public bike rental stations. Bikes are available at 20 stations in the city. [https://www.nextbike.hr/en/zagreb/locations/]{{Dead link|date=May 2025 |bot=InternetArchiveBot }}
+
+Tariff is {{EUR|0.66}} per 30 mins. Weekly and annual passes are also available for {{EUR|13.27}} and {{EUR|26.54}} respectively. They include unlimited number of free rides up to 30 minutes. Additional 30 min is charged according to the usual tariff. You can pay using mobile application. [https://www.nextbike.hr/en/zagreb/information/]{{Dead link|date=May 2025 |bot=InternetArchiveBot }}
+
+==== By foot ====
+Zagreb is a compact city and can be best explored by walking. For the lower town (Donji Grad) the six squares of Lenuci Horshoe and the Botanical Garden can be covered in about 2 - 3 hours of walking. This area is also the home of Zagreb's major museums, galleries and theaters. The upper town (Gornji Grad) can also be covered in about 2 - 3 hours of walking and includes the cathedral, St. Mark's Church and Main square (Trg Bana Josipa Jelačića) and the Museum of Broken Relationship.
+
+==== By taxi ====
+There are few taxi companies in Zagreb:
+
+* {{Listing|name=Uber|url=https://www.uber.com/global/en/cities/zagreb/|price=|lastedit=2023-09-12}}
+* {{Listing|name=Bolt|url=https://bolt.eu/en/cities/zagreb/|lastedit=2023-09-12}}
+* {{Listing|name=Taxi 1717|url=https://taxi1717.hr/en/|email=info@taxi1717.hr|phone=1717|price=Starting fee: €1.90, price per kilometer driven: €0.90, price per hour of waiting: €6.90|lastedit=2023-09-12}}
+* {{listing | name=Taxi Cammeo | alt= | url=https://cammeo.hr/en/cities/zagreb | email=pohvaleiprituzbe@cammeo.hr
+| address= | lat= | long= | directions=
+| phone=+385 1 1212 | tollfree=
+| hours= | price=Start: €1.33, every additional kilometre: €0.66, minimum tariff: €2.65, minute spent in the vehicle: €0.13
+| lastedit=2023-09-12
+| content=
+}}
+* {{listing | type=
+| name=Ekotaxi | alt= | url=https://ekotaxi.hr/cities/zagreb | email=info@ekotaxi.hr
+| address= | lat= | long= | directions=
+| phone=1414 | tollfree=
+| hours= | price=Start: €1.80, km: €1, per minute: €0.14, min. price: €3.32
+| wikipedia= | wikidata=
+| lastedit=2023-09-12
+| content=
+}}
+
+===By car===
+Zagreb has about average traffic congestion for a city of its size. However [https://www.zagrebparking.hr/en parking] in the inner city is a problem. It is expensive and time limited and empty parking spaces are hard to find. 
+
+City is divided into few zones, parking tariffs are the following:
+
+* I zone: {{EUR|1.6}} per hour or {{EUR|0.8}} per 1/2 hour. Maximum parking time is 2 hours.
+* II zone: {{EUR|0.70}} per hour. Maximum parking time is 3 hours.
+* III zone: {{EUR|0.30}} per hour.
+* IV.1 zone: {{EUR|0.70}} per day.
+* IV.2 zone: {{EUR|1.30}} per day.
+
+Parking payment methods:
+
+* [https://www.zagrebparking.hr/activities/public-parking-lots/parking-payment-methods/zgpark-mobile-application/445 ZgPark mobile application]
+* [https://www.zagrebparking.hr/activities/public-parking-lots/parking-payment-methods/m-parking-442/442 m-parking service]
+* [https://www.zagrebparking.hr/activities/public-parking-lots/parking-payment-methods/parking-meters/440 Parking meters]. Cards are accepted only in newly installed parking meters.
+* [https://www.zagrebparking.hr/activities/public-parking-lots/parking-payment-methods/electronic-parking-permit-purchased-at-a-newsstand/444 Electronic parking permit purchased at a newsstand]
+* [https://www.zagrebparking.hr/activities/public-parking-lots/parking-payment-methods/epk-portal-441/441 Zagrebparking’s ePK Portal]
+
+There are also 2 companies that offer car sharing:
+
+* {{Listing|name=Spin City|url=https://spincity.hr/en/|email=zagreb@spincity.hr|phone=+385 911583003|lastedit=2023-09-12}}
+* {{Listing|name=Avant2Go|url=https://avant2go.hr/en/car-sharing/cities/zagreb|price=Registration fee: €5, daily rate: €0.08+/min, nightly rate: €0.017+/min, per km rate: €0.29/km, minimum rental price: €5, maximum rental price: €29-44 (dependent on car)|lastedit=2023-09-12}}
+
+==See==
+{{mapframe}}
+
+[[File:Kathedrale - Zagreb - 2010.jpg|thumb|200px|right|Zagreb Cathedral]]
+[[File:St Marks Church Zagreb.jpg|thumb|200px|right|St. Mark's Church]]
+[[File:Puerta de Piedra, Zagreb, Croacia, 2014-04-20, DD 02.JPG|thumb|200px|right|Old Stone Gate]]
+[[File:Iglesia de Santa Catarina, Zagreb, Croacia, 2014-04-13, DD 01.jpg|thumb|200px|right|St. Catherine's Church]]
+[[File:Zagreb 's Museum of Broken Relationships entrance interior.jpg|thumb|200px|right|Museum of Broken Relationships]]
+[[File:Klovićevi dvori.jpg|thumb|200px|right|Klovićevi Dvori Galleryl]]
+[[File:Estatua de Tomislav de Croacia, Zagreb, Croacia, 2014-04-20, DD 04.JPG|thumb|200px|right|King Tomislav's Statue at his square]]
+[[File:Jardin botanique de Zagreb, Pavillon.jpg|thumb|200px|right|Pavilion at Botanical Garden]]
+[[File:View at Mimara Museum from Westin Zagreb.jpg|thumb|200px|right|Mimara Museum]]
+[[Image:Archeological museum Zagreb.jpg|thumb|200px|right|Archaeological Museum]]
+[[File:Pabellón del Arte, Zagreb, Croacia, 2014-04-20, DD 02.JPG|thumb|200px|right|Art Pavilion]]
+[[File:Teatro Nacional, Zagreb, Croacia, 2014-04-20, DD 03.JPG|thumb|200px|right|Croatian National Theatre]]
+[[File:Msu-museum-contemporary-art-zagreb-2.jpg|thumb|200px|right|Museum of Contemporary Art]]
+[[File:Kožarić - Prizemljeno sunce.jpg|thumb|200px|right|Grounded Sun]]
+[[Image:Mirogoj Zagreb entrance.jpg|thumb|200px|right|Entrance to Mirogoj cemetery]]
+[[File:Jarun Lake aerial view.jpg|thumb|200px|right|Ariel View of Jarun Lake]]
+[[File:Bundek 20150307 DSC 0108.JPG|thumb|200px|right|Bundek Lake]]
+
+'''Caution:''' Several of Zagreb's historical buildings sustained damage due to a moderate earthquake that struck the city in March 2020 and are temporarily closed until repairs are finished.
+
+The city of Zagreb is mainly divided into two parts '''Gornji grad''' (Upper Town) and '''Donji grad''' (Lower Town). They are the cultural, religious, and commercial hubs of Zagreb. These are where most of the restaurants, bars and tourist sights are located. The Upper Town, which is the medieval core of the city, developed as two separate (and often warring) towns - ''Kaptol'', the seat of the Bishop (where the imposing Cathedral now stands), and ''Gradec'', the free town where tradesmen and artisans lived (proclaimed by King Bela of Hungary in the 12th century) merged in the 1770s to form the northern section of historic Zagreb. Following this, the city expanded south of today's Trg Bana Josipa Jelačića (Jelačić Square) to the railway station and the Sava River.
+
+Apart from the two main parts, the City of Zagreb is extended both north-south and east-west. The northern part consists of the mountains and wilderness while the Southern part extends beyond the River Sava and consists of modern Zagreb and is known as '''Novi Zagreb'''.
+So Zagreb can be classified under five areas:
+* Upper Town (Gornji Grad)
+* Lower Town (Donji Grad)
+* Northern Zagreb
+* Trnje
+* New Zagreb (Novi Zagreb)
+
+* {{see
+| name=Museum of Hangovers | alt=Muzej mamurluka | url=https://www.museumofhangovers.com/ | email=info@museumofhangovers.com
+| address=Vlaška 55 | lat=45.813922 | long=15.983995 | directions = about a 5–7 min walk east from Ban Jelačić Square
+| phone=+385 98819747 | tollfree=
+| hours= | price=
+| image=Interior of the Museum of Hangovers, Zagreb (2025).png
+| lastedit=2025-09-09
+| content=Specialty museum about nightlife culture and hangovers; interactive exhibits and short visit (45–60 min).
+}}
+
+===Gornji Grad (Upper Town)===
+'''Churches and religious structures:'''
+* {{see
+| name=Zagreb Cathedral | alt= | url= | email=
+| address= | lat=45.81447 | long=15.97985 | directions=Kaptol
+| phone= | tollfree=
+| hours=It is closed due to March 2020 earthquake damage | price=Free
+| wikidata=Q312220
+| lastedit=2021-08-28
+| content=The Zagreb Cathedral with its twin spires is the most well known landmark of the city. The original cathedral dates back to 1217 but the present structure dates to 1906. The chief architect was Hermann Bollé.
+}}
+* {{see
+| name=St. Mark's Square | alt=Crkva sv. Marka | url= | email=
+| address= | lat=45.8163 | long=15.9736 | directions=St. Mark's Square
+| phone= | tollfree= | fax=
+| hours= | price=Free
+| lastedit=2015-07-02
+| content=St. Mark's Church is known for its colourful roof tiles depicting the coat of arms of Croatia and Zagreb. St. Mark's Church was constructed in 1499.
+}}
+* {{see
+| name=St. Catherine's Church | alt=Crkva sv. Katarine | url= | email=
+| address=St. Catherine's Square | lat=45.8148 | long=15.9744 | directions=Upper Town
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Baroque style church
+}}
+* {{see
+| name=Old Town Gate | alt= | url= | email=
+| address=at the top of Radićeva street  | lat=45.81575 | long=15.97529 | directions=Upper Town
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=now a shrine to virgin Mary - the '''"Kamenita vrata"''' where you can light a candle and, as the locals believe, your wish will be granted. Please be silent, even if just passing through the Gate. The portrait of Mary is said to be sacred, because it is the only thing that survived the large fire. Near the Old Town Gate is the sculpture of St. George having slain the dragon. The other statue, him fighting the dragon, is located on the Marshal Tito's Square near the Croatian National Theatre (roughly 1 km away).
+}}
+
+'''Parks:'''
+* {{see
+| name=Ribnjak Park | alt= | url= | email=
+| address= | lat=45.8104 | long=15.9782 | directions=next to Zagreb Cathedral, Kaptol
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=the Ribnjak is an English-style park complete with exotic plants, sculptures, and a children's playground. The park used to be the site of Bishop's fish pond.
+}}
+
+'''Museums:'''
+Most museums and historical sights close at 13:00 on Sundays and do not reopen until Tuesday.
+* {{see
+| name=Museum of Broken Relationships | alt=Muzej prekinutih veza | url=http://www.brokenships.com/ | email=info@brokenships.com
+| address=Sv. Ćirila i Metoda 2 | lat=45.81496 | long=15.97354 | directions=
+| phone=+385 14851021 | tollfree= | fax=
+| hours=Oct-May: daily 09:00-21:00; Jun-Sep: 09:00-22:30 | price=€7, 65+ &amp; students €5.50, -12 free with adults
+|lastedit=2023-09-08| content=What remains after a break-up? Museum's permanent display is an opportunity to experience a unique emotional journey through dozens of love leftovers collected from all around the world. Museum is also the winner of Kenneth Hudson Award 2011 for the most innovative museum in Europe.
+}}
+* {{see
+| name=Klovićevi Dvori Gallery | alt=Galerija Klovićevi Dvori | url=https://gkd.hr/en/ | email=
+| address=Jezuitski trg 4 | lat=45.81502 | long=15.97464 | directions=Upper town, close to funicular (uspinjača) and stone gate (kamenita vrata). Bus line 150 (except Sunday) from Trg bana Josipa Jelačića, exit Kamenita vrata or Markov try; back to Trg bana Josipa Jelačića enter at Katarinin trg.
+| phone=+385-1-485-1926 | tollfree= | fax=
+| hours=Tu-F 11:00-19:00, M and holidays closed | price=Around €4, varies by exhibition
+| lastedit=2023-09-12
+| content=This gallery in the old Jesuit monastery with changing exhibitions introduces Croatian and foreign cultural and artistic heritage across all eras. In most exhibitions, photography without flash is permitted.
+}}
+* {{See|name=Zagreb City Museum|url=https://www.mgz.hr/en/|address=Opatička 20|lat=45.81840873|long=15.974753182|directions=Bus 150 (Muzej grada Zagreba)|hours=Tu-Sa 10:00-18:00;Su10:00-14:00; M closed|price=Adults €5; Concessions €3|lastedit=2023-09-22|content=The permanent collection tells the history of the city but there are also temporary exhibitions}}
+
+'''Other:'''
+
+*{{See|name=Lotrščak Tower |url=https://gkd.hr/kula-lotrscak/|directions=By the top of the funicular|hours=11:00-20:00|price=Adults €3; 7-18 €2|lastedit=2023-09-22|content=Great local views if you are prepared to climb the spiral staircase.}}
+*{{See|name=Grič Tunnel|directions=East entrance by Katarina Square, West entrance near the intersection of Mescnička ulica and Strelačka ulica |hours=Daily 09:00-21:00|price=free|lastedit=2024-07-27|content=A 450-m-long pedestrian tunnel that was built as bomb shelter is sometimes used for concerts.}}
+
+===Donji Grad (Lower Town)===
+
+'''Parks:'''
+Other city parks are connected in the "Lenuci Horseshoe", an unfinished project of combining small green squares and parks at the core of the centre of the town.
+
+* {{see
+| name=Strossmayer Square | alt=Strossmayerov trg | url= | email=
+| address= | lat=45.8086 | long=15.9787 | directions=the central position of the eastern wing of the Lenuci Horseshoe
+| phone= | tollfree= | fax=
+| hours= | price=
+|lastedit=2017-01-29| content=Named after Josip Juraj Strossmayer, politician and Roman Catholic Bishop.
+}}
+* {{see
+| name=Zrinjevac Square | alt= | url= | email=
+| address= | lat=45.8104 | long=15.9782 | directions=just southeast of the main square
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=The park of the Academy, connecting the Zrinjevac and Tomislav parks.
+}}
+* {{see
+| name=King Tomislav Square | alt=Trg kralja Tomislava | url= | email=
+| address= | lat=45.8064 | long=15.9788 | directions=south of Zrinjevac, just outside the main railway station (Glavni Kolodvor)
+| phone= | tollfree= | fax=
+| hours= | price=
+|lastedit=2017-01-29| content=Decorated with floor beds and fountains and lined with trees it is dominated by a horse mounted statue of King Tomislav.
+}}
+* {{see
+| name=Botanical Gardens | alt=Botanički vrt | url=https://botanickivrt.biol.pmf.hr/en/ | email=
+| address=Trg Marka Marulića 9A | lat=45.8050 | long=15.9716 | directions=west of main railway station. tram 2,4,9 (Botanički vrt)
+| phone=+385 1-4844-002 | tollfree= | fax=
+| hours=M Tu 10:00-14:00 W-Su 12:00-17:30 | price=Regular €2, students and pupils €1, children free
+|lastedit=2023-09-29| content=Arboretum, greenhouses, Croatian flora, rock gardens, annuals, perennials, and a few animals.
+}}
+* {{see
+| name=Mažuranić Square | alt= | url= | email=
+| address= | lat=45.8080 | long=15.9701 | directions=western wing of Lenuci Horseshoe
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Named after Croatian poet Ivan Mažuranić.
+}}
+* {{see
+| name=Marulić Square | alt= | url= | email=
+| address= | lat=45.8066 | long=15.9701 | directions=southwestern square of Lenuci Horseshoe
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Marulić Square houses the Croatia State Archive, and a statue of Marko Marulić.
+}}
+* {{see
+| name=Republic of Croatia Square | alt=Trg Republike Hrvatske | url= | email=
+| address= | lat=45.8097 | long=15.9701 | directions=northwestern corner of Lenuci Horseshoe
+| phone= | tollfree= | fax=
+| hours= | price=
+|lastedit=2020-05-25| content=One of the largest and greenest squares of Zagreb, with the Croatian National Theatre in its centre.
+}}
+
+'''Museums:'''
+Most museums and historical sights close at 13:00 on Sundays and do not reopen until Tuesday.
+* {{see
+| name=Mimara Museum | alt=Muzej Mimara | url=https://www.mimara.hr/ | email=mimara@mimara.hr
+| address=Trg Franklina Delanoa Roosevelta 5 | lat=45.8082 | long=15.9672 | directions=
+| phone= | tollfree= | fax=
+| hours=Closed to public since the March 2020 earthquake | price=
+|lastedit=2023-09-17| content=Houses some 3,700 works of art donated by Ante Topić Mimara. The collection comprises more than 1,500 exhibits dating from the prehistoric period up to the 20th century. Some of the most famous exhibits include works by Lorenzetti, Raffaello, Giorgione, Veronese, Caravaggio, Canaletto, 60 paintings by the Dutch masters Rembrandt, Van Goyen, Ruisdael, 50 works by the Flemish masters Van der Weyden, Bosch, Rubens, Van Dyck, more than 30 by the Spanish masters Velasquez, Murillo, Goya, some 20 paintings by the German masters Holbein, Liebermann, Leibl, some 30 paintings by the English painters Gainsborough, Turner, Bonington and more than 120 paintings by the French masters Georges de la Tour, Boucher, Chardin, Delacroix, Corot, Manet, Renoir, Degas.
+}}
+* {{see
+| name=Archaeological Museum | alt=Arheološki Muzej | url=https://www.amz.hr/en/home/ | email=
+| address=Trg Nikole Šubića Zrinskog 19 | lat=45.81094 | long=15.97732 | directions=
+| phone=+385 1-4873-101 | tollfree=
+| hours=Opening hours have been limited since the 2020 earthquake; check the website | price=
+| lastedit=2023-09-18
+| content=Possesses over 400,000 objects, not all of them being exhibited. The holdings include evidence of Croatian presence in this area as well as rare samples which have made the museum known to the whole world. The most famous are the Egyptian collection, the Zagreb mummy and bandages with the oldest Etruscan inscription in the world (Liber Linteus Zagrabiensis), and the numismatic collection. A part of the museum is set aside for the collection of stone monuments dating back predominantly to the Roman period.
+}}
+* {{see
+| name=Art Pavilion in Zagreb | alt=Umjetnički paviljon u zagrebu | url=https://umjetnicki-paviljon.hr/?lang=en | email=info@umjetnicki-paviljon.hr
+| address=Trg Kralja Tomislava 22 | lat=45.8072 | long=15.9787 | directions=tram stations Glavni kolodvor (lines 2, 4, 6, 9, 13) or Zrinjevac (lines 6, 13)
+| phone=+385 1-487-6487, +385 1-484-1070 | tollfree= | fax=
+| hours=Temporarily closed since the 2020 earthquake | price=
+| lastedit=2023-09-12
+| content=Designed by the Hungarian architects Korb and Giergl for the Millennium Exhibition 1896 in Budepest, its iron frame was transported to Zagreb after the exhibition, where the permanent pavillion was built by the famous Viennese designers of theatres in Central Europe Hellmer and Fellmer. It is a neo-classical exhibition complex and one of the landmarks of the city centre. The exhibitions are also held in the impressive Meštrović pavilion on Trg žrtava fašizma. 
+}}
+* {{see
+| name=Croatian National Theatre | alt=Hrvatsko Narodno Kazalište | url=http://www.hnk.hr/en/ | email=infocentar@hnk.hr
+| address=Trg Kralja Tomislava 22 | lat=45.8094 | long=15.9701 | directions=at the centre of Republic of Croatia Square
+| phone=+385-1-4888 418 | tollfree= | fax=
+| hours= | price=
+| content=Croatian National Theatre, Zagreb was built in 1895. There are also Croatian National Theatres in [[Split]], [[Rijeka]], [[Osijek]], [[Varaždin]] and [[Zadar]].
+}}
+* {{see
+| name=Modern Gallery | alt=Moderna Galerija | url=http://www.moderna-galerija.hr/ | email=
+| address=Hebrangova 1 | lat=45.80914 | long=15.97756 | directions=
+| phone= | tollfree= | fax=
+| hours=2023 closed for renovations | price=
+|lastedit=2023-10-07| content=Exhibits fine artists of the 19th and 20th centuries.
+}}
+* {{See
+|name=National Museum of Modern Art|alt=NMMU|url=https://nmmu.hr/en/home-english/
+|address=Ul. Andrije Hebranga 1
+|lastedit=2023-09-29
+|content=Closed for renovation.
+}}
+* {{See|name=Josip Račić Gallery|url=https://nmmu.hr/en/home-english/|address=3, Margaretska Street|lat=45.8126337|long=15.974571507|price=free|lastedit=2023-09-29|content=Second smaller site of the National Museum of Modern art hosting temporary exhibitions.}}
+* {{see
+| name=People and Art House Lauba | alt=Kuća za ljude i umjetnost Lauba | url=http://www.lauba.hr/en/ | email=
+| address=Prilaz baruna Filipovića 23a | lat=45.811812142 | long=15.94016163 | directions=
+| phone= | tollfree= | fax=
+| hours=daily 15:00-23:00 | price=
+|lastedit=2023-09-17| content=Presents works from the [[w:Filip Trade Collection|Filip Trade Collection]], a large private collection of modern and contemporary Croatian art and current artistic production.
+}}
+* {{See|name=Museum of Arts and Crafts|url=https://www.muo.hr/|address=Trg Republike Hrvatske 10|lastedit=2023-09-29|content=Closed for reconstruction}}
+*{{see
+| name=Technical Museum Nikola Tesla | alt=Tehnički muzej Nikola Tesla | url=https://tmnt.hr/hr-hr/ | email=
+| address=Savska cesta 18 | lat=45.8040 | long=15.9641 | directions=
+| phone= | tollfree=
+| hours=Tu-F 09:00-17:00; Sa-Su 9:00-13:00 | price=Adult €4, under 7 free, senior and student €3
+| lastedit=2023-09-17
+| content=Has a lot of technical inventions, fire engines, a cabinet of Nikola Tesla, a planetarium and an underground mine.
+}}
+*{{see
+| name=Museum of Illusions | alt= | url=https://muzejiluzija.com/en/home/ | email=
+| address=Ilica 72 | lat=45.813135 | long=15.966383 | directions=Tram 1, 6 ,11, 31 Britanski trg
+| phone= | tollfree=
+| hours=09:00-22:00 | price=Adults €9, age 5-15 €7, students €8
+| lastedit=2023-10-07
+| content=Prepare to be deceived. A few exhibits are more suited to two people.
+}}
+*{{See|name=Typhlological Museum|url=https://www.tifloloskimuzej.hr/en/|address=2nd floor, Draškovićeva ul. 80|lat=45.80621904|long=15.98385312|directions=press bell for entry|hours=closed Sa &amp; Su|price=Adults €3; students &amp; schoolchildren €2; disabled &amp; pensioners free|lastedit=2023-10-20|content=Rather specialised museum focusing on the history of institutions for the blind, writing systems for the blind and other visual impairments together with more modern developments. There is a dark room where you can experience what it is like not to see and identify objects in the dark.}}
+
+'''Street architecture:'''
+* {{see
+| name=The Grounded Sun | alt=Prizemljeno Sunce | url= | email=
+| address=Bogovićeva Street 6 | lat=45.81224 | long=15.97545 | directions=head south from the Ban Jelačić square to the Dubrovnik hotel, then turn right into the Bogovićeva street; you can't miss it
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Prizemljeno sunce by Ivan Kožarić is a 1971 sculpture, a 2-m-wide bronze sphere, which represents the scale model of the Sun, with 9 planets of the solar system in their scaled size compared to this Sun. Mercury is in Margaretska street, a couple of hundred meters to the west, turn right after reaching Cvjetni trg, you should see it on the wall to the right after passing a dozen or so meters. Venus is on the pole of the building with Hypo bank on the Ban Jelačić Square. Earth is in Varšavska street to the left. For other models, click the link of the sculpture above.
+}}
+
+'''Buildings:'''
+* The '''Meštrović Pavilion''' on the Square of the Victims of Fascism (Trg žrtava fašizma) is an impressive circular building with a colonnade that houses art exhibitions.
+
+===Northern Zagreb===
+* {{see
+| name=Maksimir Park &amp; Zagreb Zoo | alt= | url=https://zoo.hr/english/ | email=
+| address= | lat=45.8292 | long=16.0207 | directions=tram #7 (dest Dubrava) if you are coming from the Central Bus Station or trams #11 and #12 from the main square or the #4 (dest Dubec) of your coming from the railway station. Get off at Hondlova
+| phone= | tollfree= | fax=
+| hours= | price=
+|lastedit=2023-09-21| content=The biggest park in Zagreb. Great place to chill out, drink coffee, eat lunch (picnic or at the park's restaurant) or take nice long walks through the forest or by the small lakes. Good for joggers, cyclists, also child and dog friendly. Offers lake rowing. The zoo has red pandas. It has operated since the 1930s.
+}}
+*{{see
+| name=Mirogoj Cemetery | alt= | url= | email=
+| address= | lat=45.8353 | long=15.9865 | directions=
+| phone=+385 1-4696-700 | tollfree= | fax=
+| hours= | price=
+| wikidata=Q1262136
+| lastedit=2015-06-30
+| content=Mirogoj is the central cemetery of Zagreb. It was opened in 1876 north of the city centre. The mortuary, the impressive and picturesque arcades with the church of Christ the King (architect H. Bollé, 1883-1914) make it one of the most impressive cemeteries in the world. Here stand the tombs of notable personalities (including that of basketball hero Drazen Petrovic) who are relevant to Croatian history. To arrive from the central square, go to the nearby Cathedral and take bus number 106 (Kaptol - Mirogoj - Krematorij). The ride takes approximately 10 minutes. The Croatian Day of the Dead is on November 1st. You may find the sight of hundreds of thousands of candles after nightfall impressive and worth seeing, but you may take note that on that day and a few preceding and following days the cemetery will be very busy and quite different from usual peaceful appearance; on those days buses to the cemetery are very frequent but crowded.
+}}
+* {{see
+| name=Medvedgrad Castle and Medvednica | alt= | url= | email=
+| address=Himper ul. 16, | lat=45.924 | long=15.991 | directions=returning (rather intermittent) bus 140 stops close. Alternatively nearest frequent bus services 102: Britanski trg - Mihaljevac. to the Šestina church, then on foot along hiking trail number 12 (from Lagvić to Medvedgrad); Črnomerec - Lukšić - bus line 128, then on foot from Lukšić via Himper along the asphalt road to Medvedgrad; about an hour walking each case; if driving, use of sat-nav is recommended as there are confusing one way systems
+| phone= | tollfree=
+| hours=closed Monday | price=Visitor Centre Adults €7.95 (weekends), €6.6 (weekday) many other ticket options
+| lastedit=2023-09-22
+| content=The imposing mountain overlooking Zagreb (Medvednica) contains a preserved fortress (Medvedgrad) and fascinating views of the city. Being respectful in the fort is a good idea, since it is the site of the Altar of the Homeland memorial, dedicated to Croatian soldiers who died in the Homeland war. There are several historical festivals during the year, including knights tournaments.
+}}
+
+===Novi Zagreb===
+'''Lakes'''
+Zagreb has two very popular lakes:
+* {{see
+| name=Jarun | alt= | url=http://www.jarun.hr | email=
+| address= | lat=45.781 | long=15.921 | directions=at the south part of the city; Tram #5 or #17
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Jarun Lake is a recreational area based around a large lake where locals go to relax, exercise - and party! The centrepiece of the area is the lake, which is used for windsurfing and has a large rowing section with spectator stands. There are also shingle beaches surrounding the water, alongside which are several bars that get very busy during the weekends but are also nice for a sunny lunchtime snack. All the bars there are considered 'fancy' places and usually play commercial music.
+}}
+* {{see
+| name=Bundek | alt= | url= | email=
+| address= | lat=45.7856 | long=15.9855 | directions=Tram 6 (Most mladosti)
+| phone= | tollfree= | fax=
+| hours= | price=
+|lastedit=2023-09-29| content=Park with lake, hosts horticultural shows, firework festivals, workshops, concerts and music festivals (mostly during the summer).
+}}
+
+'''Museums:'''
+* {{see
+| name= Museum of Contemporary Art | alt=Muzej Suvremene Umjetnosti | url=http://www.msu.hr/en/ | email=msu@msu.hr
+| address=Avenija Dubrovnik 17 | lat=45.7788 | long=15.9818 | directions= South of Bundek Lake, Tram 6 &amp; 7
+| phone=+385 1-6052-700, +385 1-6052-701, +385 1-6052-798 | tollfree= | fax=
+| hours= | price=From about €4, scroll down visitor information page on website to see all prices; first Wednesday free
+|lastedit=2023-09-08| content=Follows and presents contemporary trends in fine arts.
+}}
+* {{see
+| name=Croatian Museum of Naïve Art | alt=Hrvatski Muzej Naivne Umjetnosti | url=http://www.hmnu.org | email=
+| address=Sv. Ćirila i Metoda 3 | lat=45.815417 | long=15.973333 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q5187140
+|lastedit=2023-09-08| content=Houses more than one thousand works belonging to Croatian naïve art.
+}}
+
+==Do==
+* {{do
+| name=Strossmayerovo šetalište|alt=Strossmayer's walkway | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=In the summer, it is an outdoor scene for painters, musicians and other artists offering food, drinks, performances and concerts. Popular meeting place for all ages, with a great view of the Lower Town.
+}}
+* {{do
+| name=Vatroslav Lisinski Concert Hall|alt=Koncertna dvorana Vatroslava Lisinskog|address=Trg Stjepana Radića 4|url=https://www.lisinski.hr/en/|lastedit=2023-09-30}}
+* '''Football: [https://gnkdinamo.hr/ GNK Dinamo Zagreb]''' play soccer in HNL, the top tier. Their home ground is Stadion Maksimir (capacity 28,000) 2 km east of city centre.
+: '''[https://nklokomotiva.hr/ NK Lokomotiva]''' also play in HNL, at Stadion Kranjčevićeva (capacity 5000) 1 km southwest of city centre. 
+: '''[https://nk-rudes.hr/ NK Rudeš]''' were relegated in 2024 so they now play in Prva NL the second tier. Their home ground is 3 km west of city centre but they sometimes use the Lokomotiva ground, Stadion Kranjčevićeva.
+* {{do
+| name=Snow Queen Trophy | alt= | url=http://www.snowqueentrophy.com | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Ladies Night Slalom : Zagreb is the only capital in the world that hosts a Ski World Cup race. The slalom event - known as the "Snow Queen Trophy" (Snježna kraljica) - usually takes place in January. It is the most expensive race on the women's world cup tour and an exceptionally popular sporting event in [[Croatia]] that attracts a crowd of around 25 thousand people.
+}}
+*'''Mount Sljeme'''. Part of the Medvednica mountains, this is the highest mountain (1,035 m) of Zagreb and quite popular with hiking, trail running. Take Tram 8 or 14 to the last stop (Mihaljevac) and then change to tram 15 to the Gračansko dolje terminus. From here you can either take the [https://www.infozagreb.hr/en/travel-plan/traveling-in-town/public-transport-and-parking/sljeme-cable-car cable car] (ZET card accepted) or start your hike. You can also go up by bus 140 (Mihaljevac-Sljeme) or car. Different trails exist with good views and restaurants on the top where you can enjoy some traditional Croatian hiking food.
+
+===Cinemas===
+Foreign language movies are subtitled, not dubbed; only children's movies are dubbed. 
+
+A regular ticket will cost you {{EUR|6-7}}. About {{EUR|4}} is the combined price of a medium popcorn and cola.
+
+Main cinema chains are [https://cinestarcinemas.hr CineStar] and [https://www.cineplexx.hr Cineplexx]:
+* {{do
+| name=CineStar Zagreb | alt= | url=http://zagreb.cinestarcinemas.hr/ | email=
+| address=Branimirova 29 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content= 
+|lastedit=2023-09-12}}
+* {{do
+| name=CineStar Novi Zagreb | alt= | url=http://novi-zagreb.cinestarcinemas.hr/ | email=
+| address=Avenija Dubrovnik 16 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content= 
+|lastedit=2023-09-12}}
+* {{Do|name=CineStar Arena IMAX|url=http://arena-zagreb.cinestarcinemas.hr/|address=Ulica Vice Vukova 6|lastedit=2023-09-12}}
+* {{Do|name=Kaptol Boutique Cinema|url=http://www.kaptolcinema.hr/|address=Nova Ves 17|lastedit=2023-09-12}}
+* {{Do|name=CineStar Zagreb Zapad Z Centar|url=http://zapad-zagreb.cinestarcinemas.hr/|address=Ljubljanska avenija 2b|lastedit=2023-09-12}}
+* {{do
+| name=Cineplexx Centar Kaptol | alt= | url=https://www.cineplexx.hr | email=
+| address=Nova Ves 11 | lat= | long= | directions=
+| phone=+385 1 56-33-888 | tollfree= | fax=
+| hours= | price=
+| content= A multiplex cinema (5 screens) within the Kaptol Shopping Centre north of the Cathedral.
+|lastedit=2023-09-12}}
+* {{do
+| name=Cineplexx City Centre One East | alt= | url=https://www.cineplexx.hr | email=
+| address=Slavonska Avenija 11D | lat= | long= | directions=
+| phone=+385 1 563-2400 | tollfree= | fax=
+| hours= | price=
+| content=A multiplex cinema (7 screens) on the east side of Zagreb.
+|lastedit=2023-09-12}}
+*'''Kino Europa''', Varšavska 3. - this cinema is in the city centre.
+*'''Kino Croatia''', Katančićeva 3; +385 1 48-13-711.
+*'''Kino Jadran''', Ilica 42; 062-100-100 (within Croatia).
+*'''Kino Central''', Petrinjska 4; 062-100-100 (within Croatia).
+* {{do
+| name=Kino Tuškanac | alt= | url=http://kinotuskanac.hr/en | email=info@kinotuskanac.hr
+| address=Tuškanac 1 | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=Entrance for programs Kinoteka and Restauracije is free, regular ticket is €4
+| lastedit=2023-09-12
+| content=Showing much more than just European filmography, alternative and older films. Films are screened in their original language with only Croatian subtites.
+}}
+
+==Learn==
+
+The University of Zagreb combined with the Croatian Heritage Foundation ''Matica Hrvatska'' offers comprehensive Croatian language courses for foreigners. The courses occur in the fall and spring semesters along with an intensive one-month course in July. All courses cost around {{EUR|600}}. More information can be found by visiting the University's website.
+
+Many universities in Croatia accept a small group as international students every year, who stay in dorms and learn Croatian.
+
+FER (''Fakultet elektrotehnike i računarstva'', trans. Faculty of Electrical Engineering and Computer Science) is a globally-appreciated school of computer related learning. It is part of the University of Zagreb and accepts around ten international students a year.
+
+Zagreb has its own [[Hacker tourism|hackerspace]] called [https://radiona.org/ Radiona] where anyone interested in computers, technology, machining, science, digital art or electronic art can meet, collaborate, learn and engage in the ongoing workshops open for public.
+
+==Work==
+For creative types, Croatia is occupied by some street performers and many stands selling jewellery or other hand-crafted products, so the populace has an open mind to casually buying things from an interesting stand near the main square or dropping a few coins into a musician's case. 
+
+Zagreb is becoming one of the most popular digital nomad destinations, with a surge of new coworking spaces.
+
+==Buy==
+
+There are many small grocery stores around Croatia such as Konzum and Diona. There you can buy most necessary foods, hygiene products and items like cigarettes and alcohol.
+
+If you have a more specific need (like appliances, cutlery) or wish to go bulk shopping then try one of the larger Konzums or Kaufland.
+
+Bread in Croatia is sold unsliced, and with no preservatives used is generally inedible after the second day, so if you don't eat bread much then ask for half a loaf ("pola").
+
+Most international brands, like Nutella or M&amp;Ms, can be found in the larger stores but are rather expensive. Trying a domestic alternatives is not a bad idea.
+
+Zagreb also has designated areas, the singular being a "platz", where you can buy and bargain for clothes and shoes as well as perfume, chocolate and souvenirs. Illegally imported cigarettes are also cheap (because of high importation taxes).
+
+===Souvenirs===
+
+* {{buy
+| name=Turistički Informativni Centar | url= | email=
+| address=Trg bana Josipa Jelačića 11 | lat= | long= | directions=in the central squar
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Sells everything ranging from postcards and books to pottery and crystal
+}}
+* {{buy
+| name=GEA Gallery | url= | email=
+| address=Radićeva Street 35 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=a wide range of souvenirs that are handmade in Croatia and are very reasonably priced. Very knowledgeable staff.
+}}
+* {{buy
+| name=Millennium | url= | email=
+| address=Radiceva 9 | lat= | long= | directions=off Jelacic square
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Pottery, crystal, costume jewellery, and other gifts.
+}}
+
+===Foreign books===
+
+* {{buy
+| name=Znanje Bookshop | url=https://www.znanje.hr/ | email=
+| address=Gajeva 1 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+* {{buy
+| name=Profil Megastore | url= | email=
+| address=Bogovićeva 7 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+
+==Eat==
+
+Tobacco smoking is banned in all enclosed public spaces, including restaurants and some bars and cafes. The smaller bars and cafes could opt (and some did) to allow smoking.
+
+===Budget===
+There are many take out, pizza-cut, sandwich bars and fast foods around the city. Most are located in the city centre (main square - Ban Jelačić and surrounding blocks). There are also food chains such as the "McDonald's", "Mlinar", "Pan Pek", and the preferred '''"Dubravica"'''. (updated May 2022). You can also find many kebabs and pancake-to-go places.
+
+====In the city centre====
+
+* {{eat
+| name=Nocturno | url= | email=
+| address=Skalinska 4 | lat=45.8148227 | long= 15.9769190 | directions=on Kaptol, between Tkalčićeva street and Cathedral
+| phone=+385 1 4813-394 | tollfree= | fax=
+| hours= | price=| lastedit=2022-05-01
+| content=Good place to try the local gastronomy. An excellent restaurant with a variety of offers and helpful staff and a pleasant atmosphere.
+}}
+* {{eat
+| name=Sandwich Bar Pingvin | url= | email=
+| address=Nikole Tesle 10 | lat=45.8112984 | long=15.9758538 | directions=on one of the central streets, close to the Flower Square and Trg Ban Jelcica
+| phone= +385 1 48 11 446 | tollfree= | fax=
+| hours= | price=| lastedit=2022-05-01
+| content=Classic sandwich bar with a wide menu and reasonably good mix of languages. One of the most popular dishes is the toplo/hladno (hot/cold), a grilled chicken and vegetables sandwich.
+}}
+* {{eat
+| name=La Štruk | alt= | url= | email=
+| address=Skalinska ul. 5 | lat=45.814866 | long=15.976803 | directions=
+| phone= | tollfree=
+| hours= | price=
+| lastedit=2022-05-01
+| content=One of Zagreb's oldest fast food spots. Highly recommended are the grilled cheese sandwich, the grilled stuffed lungic and the zagrebacki sandwich.
+}}
+* {{eat
+| name= Taquitos Bandidos | alt= | url= | email=
+| address=Radićeva ul. 12 | lat=45.8142598 | long=15.9757710 | directions=
+| phone= | tollfree=
+| hours= | price=
+| lastedit=2022-05-01 | content=Exactly what street food should be. Simple, fast, tasty and well thought out creative dishes that surprise you and overdeliver. Try their amazing chipotle sauce! It's Mexican street food.
+}}
+* {{eat
+| name=Plac Kitchen &amp; Grill | alt= | url= | email=
+| address=Dolac 2 | lat=45.8137714| long= 15.9772264| directions=
+| phone= | tollfree=
+| hours= | price=
+| lastedit=2022-05-01 | content=Tasty Cevapcici sausages, fast service and not expensive. Fantastic peppers, cevapi and great special burgers. The restaurant is a bit hidden.
+}}
+* {{eat
+| name=Bistro Dolac | alt= | url= | email=
+| address=Dolac 1 | lat=45.8140499 | long=15.9768724 | directions=
+| phone= | tollfree=
+| hours= | price=
+| lastedit=2022-05-01 | content=Somewhat of a Zagreb institution. The decoration is very "old school" (high ceilings, pot plants, yellow walls, functional furniture).
+}}
+* {{Eat|name=Amfora|address=Dolec 2|lastedit=2023-09-29|content=Seafood Restaurant}}
+
+====Around the central train station====
+
+* {{eat
+| name=MS Grill Restaurant| alt= | url= | email=
+| address=Draškovićeva ul. 57 | lat=45.8058832 | long= 15.9840821 | directions=
+| phone= | tollfree=
+| hours= | price=
+| lastedit=2022-05-01 | content=It's a family owned local restaurant. The staff is very nice and welcoming
+}}
+
+===Mid-range===
+
+*{{eat
+| name=Restaurant Kvatric | url=https://catering-kvatric.hr/en/lokacije/kvatric-restaurant/ | email=
+| address=Maksimirska 9 | lat=45.8154852 | long= 15.9982891 | directions=
+| phone=+385 1 2330 070 | tollfree= | fax=
+| hours= | price=
+ | lastedit=2022-08-01
+| content=Croatian restaurant with very nice food for a reasonable price. Has a nice terrance in the back garden. Close to tramstop 'Kvaternikov Trg'.
+}}
+*{{eat
+| name=Mali Medo | alt= | url=https://pivovara-medvedgrad.hr/en/home/ | email=
+| address=Tkalčićeva 36 | lat=45.815781 | long=15.976551 | directions=
+| phone=+385 1 4929 613 | tollfree=
+| hours= | price=Mains: €4-10
+| content=Another traditional Croatian restaurant. Lively atmosphere, youthful clientele, and all very affordable. Excellent ćevapčići and gulaš, not to mention superb beer.
+}}
+*{{eat 
+| name=Zrno bio bistro | alt= | url=http://zrnobiobistro.hr/ | email=restoran@bio-zrno.hr | address=Medulićeva 20 | lat=45.80994 | long=15.96685 | directions=Walk down the passage with the Books sign|phone=+385 1 4847 540 | tollfree= | fax= | hours=M–Sa 12:00–21:30 (last order 21:00), Su closed 
+| price=Main dishes are €10-14, drinks are €2-5
+ | lastedit=2022-08-01
+| content=Almost all vegan and organic. Some ingredients come from their own Zrno farm, less than an hour away. Mains rich in ''umami'', luscious desserts. An extensive beer and wine list.
+}}
+* {{eat
+| name=VegeHop | url=http://www.vegehop.hr/ | email=
+| address=Vlaška 79 | lat=45.8143114 | long= 15.9882577| directions=
+| phone= | tollfree= | fax=
+| hours=12:00-20:00 | price=| lastedit=2023-10-04
+| content=Vegan dishes.
+}}
+* {{eat
+| name=Koykan Gajeva | url=http://www.facebook.com/koykanworldfood | email=
+| address=Gajeva 8 | lat=45.8111052 | long= 15.9763376| directions=go south from Trg Bana Josipa Jelačića square past the Dubrovnik hotel until you reach Gajeva street (Ulica Ljudevita Gaja Street=Gajeva Street)
+| phone=+385 1 4827-223 | tollfree= | fax=
+| hours= | price=Up to US$10
+ | lastedit=
+| content=Italian piadinas, Japanese teriyaki sticks, oriental wraps, Bubble tea from Taiwan and Japanese mochi cakes.
+}}
+*{{eat
+| name=Oliva | url=http://www.restoran-pizzeria-oliva.com/ | email=restoran.oliva@gmail.com
+| address=Jarunska 5 | lat=45.7838075 | long=15.9485935 | directions=at the Jarun near the students' hall Stjepan Radic at the eastern part of the volleyball centre
+| phone= +385 1 3020 777 | tollfree= | fax=
+| hours=11-24 | price=| lastedit=2022-05-01
+| content=Italian restaurant (pizza, pasta).
+}}
+* {{eat
+| name=Stara Sava | url=http://starasava.hr/ | email=
+| address=Savska cesta 208 | lat=45.7845615 | long=15.9509535 | directions=close to rotor and Mladost sports centre
+| phone=+385 1 3634-322 | tollfree= | fax=
+| hours= | price=| lastedit=2022-05-01
+| content=An excellent pizzeria.
+}}
+* {{Eat|name=Food Garden|url=https://foodgarden.hr/en/|address=Zrinjevac 16|lat=45.8100465|long=15.97752382|directions=Facing Zrinjevac Park|phone=+385 91 609 1666|hours=M-F 08:00-23:00;Sa 09:00-23:00;Su 09:00-22:00|lastedit=2024-04-16|content=Healthy Eating restaurant mainly plant based with some pescetarian options.}}
+
+===Splurge===
+
+* {{eat
+| name=Boban | url= | email=
+| address=Gajeva 9 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Italian food.
+}}
+* {{eat
+| name=Le Bistro | alt= | url= | email=
+| address=Mihanovićeva 1 | lat=45.80535 | long=15.97574 | directions=
+| phone=+385 1 45 66 666 | tollfree= | fax=
+| hours=Daily 08:30-23:00 | price=
+| content=A French restaurant within the Regent Esplanade Hotel.
+}}
+* {{eat
+| name=Restaurant Suhina | url= | email=
+| address=Dr. F. Tuđmana 1, Orešje | lat= | long= | directions=near the Podsused bridge
+| phone=+385 44 1 33 71 562 | tollfree= | fax=
+| hours= | price=
+| content=An old family-run restaurant on the old Samobor road that offers a variety of roasted food.
+}}
+* {{eat
+| name=Takenoko | url=http://www.takenoko.hr/ | email=
+| address=Nova Ves 11, in Kaptol Centar Shopping Centre | lat= | long= | directions=Centar Kaptol
+| phone=+385 1 48 60 530 | tollfree= | fax=
+| hours= | price=
+| content=Zagreb may not be synonymous with sushi restaurants, but this is one is superb. It is not cheap, but sushi they make is incredible.
+}}
+* {{eat
+| name=Velika Klet Obitelji Bunčić | alt= | url=http://www.buncic.hr/hr/velika-klet.htm | email=
+| address=20 km from central Zagreb | lat= | long= | directions=
+| phone=+385 1 2781-132 | tollfree= | fax=
+| hours= | price=
+| content=A very popular place that offers Croatian cuisine, live music on weekends, a stable, fish pond and basketball courtyard.
+}}
+
+===Desserts===
+
+* {{eat
+| name=100% juice bar | url= | email=
+| address=Tkalčićeva 5 | lat= | long= | directions=in the centree of Zagreb; down some stairs - look for the small sign
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Pricey but a good place to get a healthy snack or fruit smoothie.
+}}
+* {{eat
+| name=SladoMazo | url= | email=
+| address=Zelinska 7 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A pancake restaurant with a wide range of crazy both sweet and salty filling ideas.
+}}
+* {{eat
+| name=The Cookie Factory | url=http://www.facebook.com/cookiefactoryzgb | email=
+| address=Tkalčićeva 21 | lat= | long= | directions=head north of the large clock on the Ban Jelačić square towards the Dolac market, and turn left before the stairs; head into the Tkalčićeva street and when you see the statue of Marija Jurić Zagorka the Cookie Factory should be to your left; you'll notice it by the decorated outside with funny drawings
+| phone=+385 99 4949400 | tollfree= | fax=
+| hours=09:00-22:00 | price=
+| content=Homebaked American sweets. Cookies, brownies and bars, krispy treats, muffins, cupcakes, banana breads, scones, cobblers, biscotti, top notch coffee, smoothies, cakes and pies.
+}}
+* {{eat
+| name=Torte i To | url= | email=
+| address=Nova Ves 11, second floor of the Kaptol Centar | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A great little caffe offering the best cheese cake in town, and other great cakes.
+}}
+* {{eat
+| name=Vincek | url= | email=
+| address=Ilica | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours=Closed on Sundays | price=
+| content=The local, best-known ice cream and cake palace in town centre. Offers diet foods.
+}}
+* {{eat
+| name=Konoba Didov San | url= | email=
+| address=Mletačka 11, Upper Town | lat= | long= | directions=
+| phone= +385 14851154| tollfree= | fax=
+| hours= | price=
+| content=Excellent food, unique menu, large portions and great location.
+}}
+
+==Drink==
+===Bars and pubs===
+Many bars are found around Flower square (Cvjetni trg aka Preradovićev trg), the main square (Trg Bana Josipa Jelačića), Preradovićeva, Tkalčićeva, Radićeva, Bogovićeva, and Gajeva streets.
+
+* {{drink
+| name=Booksa | url=http://www.booksa.hr/ | email=
+| address=Martićeva 14d | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A cafe, bookshop and library famous with local young intellectuals.
+}}
+* {{drink
+| name=Cica | url= | email=
+| address=Tkalčićeva | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Bar mostly known for its great and varied choice of the local schnappses (rakija). Interesting always changing, gallery-like interior. The whole bar is small but offers outdoor seating. Very popular and crowded, brimming with young business and student clientele.
+}}
+* {{drink
+| name=Funk club | url= | email=
+| address=Tkalčićeva 52 | lat= | long= | directions=
+| phone=+385 98 672 338 | tollfree= | fax=
+| hours=11:00-02:00 | price=
+| content=Cafe and bar that offers various music night programmes in the basement (mostly alternative, DJs, world music) and spacial backpacker evenings. Very good atmosphere, lots of character, cheap and tasty Rakija shoots and excellent electronic music: funky, electro, jazz, d'n'b, house, dubstep.
+}}
+* {{drink
+| name=Golf | url= | email=
+| address=Preradovićeva | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours=Until 02:00 | price=
+| content=Popular golf-themed cafe/bar.
+}}
+* {{drink
+| name=KIC | url= | email=
+| address=Preradovićeva | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Offers free internet and cheap international call centre. Hosts a cinema with various alternative movies.
+}}
+* {{drink
+| name=Kino Grič | url= | email=
+| address=Jurišićeva | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Old cinema. Hosts movies, festivals, music nights and Zagreb's hipster crowd.
+}}
+* {{drink
+| name=Krivi Put (Wrong Way) | url= | email=
+| address=Savska 14 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+* {{drink
+| name=Mali Medo | url= | email=
+| address=Tkalčićeva | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Offers a good choice of local beer and food. Indoors smoking prohibited. Has a terrace facing Tkalčićeva street.
+}}
+* {{drink
+| name=Melin | url= | email=
+| address=Tkalčićeva | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A cheap bar brimming with young people and students. Offers indoors, a roofed terraced leveled seating and an open terrace facing Tkalčićeva street. Known for crowds of people often drinking even around the bar, in the park and playground in front of it.
+}}
+* {{drink
+| name=Oliver Twist | url= | email=
+| address=Tkalčićeva | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A choice of good Irish beer with a great atmosphere. Big summer terrace in front.
+}}
+* Cafe de Paris
+* {{drink
+| name=Pivnica Medvedgrad | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+* {{drink
+| name=Portal | url= | email=
+| address=Tkalčićeva | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Next to Melin, offers same service, the Portal and Melin crowds often mix at the outdoors terraces.
+}}
+* {{drink
+| name=Purgeraj | url= | email=
+| address=Park Ribnjak | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A bar/club in the Ribnjak park in the city centre. Offers mostly rock, blues and alternative music. Daily happy hour when you get two drinks for the price of one. Sometimes hosts concerts. Popular with student crowd esp on Thursdays when it hosts the popular "take me out" evening offering a mix of indie and alternative music. In the summer, outside Purgeraj, in the Ribnjak park there are live concerts and various workshops offering summer fun under the name 'Park In Zagreb'.
+}}
+* {{drink
+| name=Tolkien's House | url= | email=
+| address=Opatovina | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A small fantasy cafe/bar for Tolkien lovers. Offers a variety of beers, cider and hot drinks.
+}}
+* {{drink
+| name=ŽeraBar | alt= | url=https://zerabar.com/ | email=
+| address=Malogorička 42 | lat= | long= | directions=
+| phone= | tollfree=
+| hours=07:00-23:00 | price=
+| lastedit=2023-01-02
+| content=Bar owned by Crvena jabuka frontman Dražen Žerić.
+}}
+* {{Drink|name=Garden Brewery Taproom|url=https://thegarden.hr/taproom/|address=Slavonska avenija 26/1|lat=45.79586023|long=16.035222497|directions=Tram 2, 3 (Elka) Walk back from tram stop and take first turning left.|lastedit=2023-09-22|content=Out of town brewery tap. Two food concessions on-site. 12+ craft beers brewed on-site.}}
+
+===Clubs===
+
+* {{drink
+| name=Aquarius | url=http://www.aquarius.hr/ | email=
+| address=Aleja Matije Ljubeka bb (Jarun Lake) | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Saturday night is drum'n'bass &amp; dancehall music, Friday is hip-hop/r'n'b night. Good concerts.
+}}
+* {{drink
+| name=BP Club | url=http://www.bpclub.hr/ | email=
+| address=Nikole Tesle 7 | lat= | long= | directions=
+| phone=+385-1 481 44 44 | tollfree= | fax=
+| hours=Daily 22:00-02:00 | price=
+| content=Jazz and blues lovers should check it out.
+}}
+* {{drink
+| name=Funk club | url= | email=
+| address=Tkalčićeva 52 | lat= | long= | directions=
+| phone=+385 98 672 338 | tollfree= | fax=
+| hours=11:00-02:00 | price=
+| content=Very good atmosphere, lots of character, cheap and tasty Rakija shoots and excellent electronic music: funky, electro, jazz, d'n'b, house, dubstep!
+}}
+* {{drink
+| name=Jabuka | url= | email=
+| address=Jabukovac 28 | lat= | long= | directions=
+| phone= +385 1-48 34 397 | tollfree= | fax=
+| hours= | price=
+|lastedit=2023-09-12| content=Cult club for alternative, punk music. Cheap drinks opened on weekends, often concerts of alternative bands. Mostly visited on weekends, especially Fridays. Admission fee: €3.5.
+
+}}
+* {{drink
+| name=KSET | url=https://www.kset.org | email=
+| address=Unska 3 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=Entrance prices from €1.5 (students) to €6-8 for concerts
+|lastedit=2023-09-12| content=A popular student club. Offers various indie and alternative programmes every night of the week. Indoors smoking prohibited. Serves only beer and non alcoholic drinks.
+}}
+* {{drink
+| name=Medika | url=https://attack.hr | email=
+| address=Pierottijeva 11 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+|lastedit=2023-09-12| content=A local alternative club/legalized squat usually loaded with people during weekends, playing various music genres until the early morning. Best Croatian beers for €1.5.
+}}
+* {{drink
+| name=Močvara | alt=URK - Udruženje za razvoj kulture | url=http://www.mochvara.hr/ | email=
+| address=Prisavlje | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q111189446
+| content=A local alternative club (rock, punk, metal, indie) with various concerts and theme nights/programmes. Sometimes hosts festivals, young indie talent concerts, movie nights, exhibitions.
+}}
+* {{drink
+| name=SAX! - Klub hrvatskih glazbenika | url=http://www.sax-zg.hr/ | email=
+| address=Palmotićeva 22/2 | lat= | long= | directions=
+| phone=+385-1 48 72 836 | tollfree= | fax=
+| hours= | price=
+| content=A great place to enjoy live music of a wide array of styles including blues, jazz, rock and pop.
+}}
+* {{drink
+| name=The Jazz Club | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours=Open daily | price=
+| content=Jazz, blues, and funk bands, often from other countries.
+}}
+
+==Sleep==
+
+===Budget===
+
+====Hostels====
+
+* {{sleep
+| name=Chillout Hostel Zagreb | alt= | url=http://www.chillout-hostel-zagreb.com/ | email=info@chillout-hostel-zagreb.com
+| address=Fra Andrije Kačića Miošića 3b | lat=45.81386 | long=15.97270 | directions=
+| phone=+385 14849605 | tollfree= | fax=
+| checkin=14:00 | checkout=11:00 | price=From €25
+|lastedit=2023-09-12| content=A hostel in the city centre, free linen, free towels, free wifi, 24-hr bar and reception
+}}
+* {{sleep
+| name=Fulir Hostel Zagreb | alt= | url= | email=
+| address= | lat=45.81373 | long=15.97552 | directions=
+| phone= | tollfree= | fax=
+| checkin= | checkout= | price=
+|lastedit=2023-09-12| content=2 rooms, including a 12-bed dorm. Great place to meet people, but can be a wait to use the bathroom.
+}}
+* {{sleep
+| name=Funk Lounge | url= | email=booking@funklounge.hr
+| address=Ivana Rendića 28b | lat= | long= | directions=from main train station: take a tram number 4 (direction Dubec), and get off on the 7th station (Masiceva); continue along Maksimirska street until you see 'Dublin Pub' across the street on your left side, cross the street and go behind 'Dublin' on the right side in 15-storey building; just by Mlinar bakery and hair stylist is the entrance
+| phone=+385 1 555 2707 | tollfree= | fax=
+| hours= | price=dorm from: €13, private from: €20
+| checkin=from 13:00 | checkout=until 11:00
+| content=
+}}
+* {{sleep
+| name=Hobo Bear Hostel | alt= | url= | email=
+| address=Meduliceva 4 | lat=45.81249 | long=15.96664 | directions=
+| phone= | tollfree= | fax=
+| checkin=14:00 | checkout=11:00 | price=Dorm bed: €14
+|lastedit=2023-09-12| content=A cozy hostel very near the town centre. There is a basement hang out lounge with a TV, including cable and many DVDs, as well as free (fast) internet and computers. The staff is amazingly helpful and speak perfect English, the beds are comfortable and come with free linens and blankets, and there is also a well stocked kitchen facility.
+}}
+* {{sleep
+| name=Hostel Lika | url= | email=
+| address=Pašmanska 17 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=Dorm bed: €13.5
+| checkin= | checkout=
+|lastedit=2023-09-12| content=Small and cozy hostel a bit out of the city centre.
+}}
+* {{sleep
+| name=Hostel Mali Mrak Zagreb | url=http://www.hostel-zagreb.com/ | email=
+| address=Dubicka 8 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=Dorm bed: €13.5
+| checkin= | checkout=
+|lastedit=2023-09-12| content=
+}}
+* {{sleep
+| name=Nokturno Hostel | url=http://www.hostel.nokturno.hr/ | email=
+| address=Skalinska 2a | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=From €11
+| checkin= | checkout=
+|lastedit=2023-09-12| content=Free internet access, free linens and towels.
+}}
+* {{sleep
+| name=Logistics Youth Centre | url=http://www.hostel-zagreb.hostel.com | email=
+| address=Jakuševečka 87 | lat= | long= | directions=
+| phone= +385 1 6626 035 | tollfree= | fax=
+| hours= | price=
+| checkin= | checkout=
+| content=Logistic youth centre, also works as a regional information centre. From the host, you can get complete information about everything that interests you. The space has 10 rooms, lobby with fireplace, dining room, kitchen and a cinema hall, where you can stream movies from your laptop. The most interesting part is the terrace with space for tents and 30 seats. Located further from downtown, but the centre has its own bus which runs as needed. Parking for approximately 30 vehicles.
+}}
+* {{sleep
+| name=Old Town Zagreb Hostel | url= | email=
+| address=Dordiceva 24 (Ulica Ignjata Dordica) | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=Dorm bed: €13.5
+| checkin= | checkout=
+|lastedit=2023-09-12| content=
+}}
+* {{sleep
+| name=Palmers Lodge Zagreb | url= | email=
+| address=Branimirova 25 | lat= | long= | directions=300 m from the main train station, 700 m from the main bus station.
+| phone= | tollfree= | fax=
+| hours= | price=Dorm bed: €15.5
+| checkin= | checkout=
+|lastedit=2023-09-12| content=
+}}
+* {{sleep
+| name=Ravnice Youth Hostel | url=http://www.ravnice-youth-hostel.hr/ | email=
+| address=I. Ravnice 38d | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| checkin= | checkout=
+| content=
+}}
+* {{Sleep|name=HI Hostel Zagreb|url=https://www.hicroatia.com/en/hostel/hi-hostel-zagreb/|email=zagreb@hicroatia.com|address=Petrinjska 77|lat=45.80701739|long=15.98036991|phone=+385 14841261|checkin=13:00|checkout=10:00|lastedit=2023-09-08|content=Convenient for main station. HI Hostel but can also be booked on common booking sites.}}
+
+===Mid-range===
+
+* {{sleep
+| name=Hotel Jägerhorn | alt= | url=http://www.hotel-jagerhorn.hr | email=
+| address=Ilica 14 | lat=45.81379 | long=15.97379 | directions=
+| phone=+385 1 48-33-877 | tollfree= | fax=
+| checkin= | checkout= | price=
+| content=3-star hotel founded in 1827, Hotel Jägerhorn is the city's oldest standing hotel.
+}}
+* {{sleep
+| name=Arcotel Allegra | alt= | url=http://www.arcotelhotels.com/en/allegra_hotel_zagreb/ | email=
+| address=Branimirova 29 | lat=45.80576 | long=15.98513 | directions=300 m from the central railway station (Glavni kolodvor)
+| phone=+385 1 46-96-000 | tollfree= | fax=
+| checkin= | checkout= | price=
+| content=4-star hotel which is Zagreb's first "lifestyle" hotel. All rooms are spacious and air-conditioned and feature mini bar, safe, internet connection, bigscreen TV and DVD player. A very cool touch are the free apples supplied in your room in a very funky holder!
+}}
+* {{sleep
+| name=Best Western Premier Hotel Astoria | url=https://www.bestwestern.com/content/best-western/en_US/booking-path/hotel-details.89502.html | email=
+| address=Petrinjska 71 | lat= | long= | directions=not far from the central square of Ban Jelačić
+| phone=+385 1 48-08-900 | tollfree= | fax=
+| hours= | price=
+| checkin= | checkout=
+| content=3-star hotel
+}}
+* {{sleep
+| name=Panorama Hotel Zagreb | alt= | url=http://www.panorama-zagreb.com/ | email=
+| address=Trg Kresimira Ćosića 9 | lat=45.80572 | long=15.95212 | directions=in the business district of Zagreb some 2.5 km away from the central railway station (Glavni kolodvor)
+| phone= | tollfree= | fax=
+| checkin= | checkout= | price=
+| content=4-star hotel.
+}}
+* {{sleep
+| name=Hotel Aristos | url=http://www.hotel-aristos.hr/ | email=
+| address=Cebini 33, Buzin | lat= | long= | directions=in the vicinity of the Zagreb airport at the southern gates of Zagreb, in the Buzin commercial centre
+| phone=+385 1 66-95-900 | tollfree= | fax=
+| hours= | price=
+| checkin= | checkout=
+| content=4-star hotel.
+}}
+* {{sleep
+| name=Hotel As | url=http://www.hotel-as.hr/eng/index.php | email=
+| address=Zelengaj 2A | lat= | long= | directions=2.5 km north-west of the railway station (Glavni kolodvor)
+| phone=+385 1 46-09-111 | tollfree= | fax=
+| hours= | price=
+| checkin= | checkout=
+| content=4-star hotel.
+}}
+* {{sleep
+| name=Hotel Central | alt= | url=http://www.hotel-central.hr/en/hotel/ | email=
+| address=Branimirova 3 | lat=45.80546 | long=15.98021 | directions=150 meters from the railway station (Glavni kolodvor)
+| phone=+385 1 48-41-122 | tollfree= | fax=
+| checkin= | checkout= | price=from €57
+| lastedit=2018-04-06
+| content=66 room, 3-star hotel.
+}}
+* {{sleep
+| name=Hotel Dubrovnik | alt= | url=http://www.hotel-dubrovnik.hr/ | email=
+| address=Gajeva 1 | lat=45.81245 | long=15.97672 | directions=overlooking Zagreb's main square - Ban Jelačić Square
+| phone=+385 1 48-63-500 | tollfree= | fax=
+| checkin= | checkout= | price=
+| content=4-star hotel. Clean, centrally located, good service. Some rooms are small.
+}}
+* {{sleep
+| name=Hotel I | alt= | url=http://www.hotel-i.hr/ | email=
+| address=Remetinečka cesta 106 | lat=45.7720 | long=15.9474 | directions=near the southern entrance into Zagreb, south of the Sava and in the vicinity of Zagreb Fair
+| phone=+385 1 65-42-238 | tollfree= | fax=
+| checkin= | checkout= | price=
+| content=3-star hotel.
+}}
+* {{sleep
+| name=Hotel International | alt= | url=http://www.hotel-international.hr/ | email=
+| address=Miramarska 24 | lat=45.79887 | long=15.97400 | directions=several hundred metres south of the central railway station
+| phone=+385 1 61-08-800 | tollfree= | fax=
+| checkin= | checkout= | price=
+| content=3-star hotel.
+}}
+* {{sleep
+| name=Hotel Jadran | alt= | url=http://www.hoteljadran.com.hr/ | email=
+| address=Vlaška 50 | lat=45.81357 | long=15.98466 | directions=in the city centre some 500 m east of the cathedral
+| phone=+385 1 45-53-777 | tollfree= | fax=
+| checkin= | checkout= | price=
+| content=3-star hotel. There is a big shopping centre near-by - the Importanne Gallery.
+}}
+* {{sleep
+| name=Hotel Laguna | url=http://www.hotel-laguna.hr/ | email=
+| address=Kranjčevićeva 29 | lat= | long= | directions=near the Cibona Business Tower
+| phone=+385 1 30-47-000 | tollfree= | fax=
+| hours= | price=
+| checkin= | checkout=
+| content=3-star hotel.
+}}
+* {{sleep
+| name=Hotel Phoenix | url=http://www.hotelphoenix.com.hr/ | email=
+| address=Sesvetska cesta 29 | lat= | long= | directions=in an eastern suburb of Zagreb - Sesvete; 500 m from the motorway on the main road that leads from Zagreb to Dugo Selo
+| phone=+385 1 20-06-333 | tollfree= | fax=
+| hours= | price=
+| checkin= | checkout=
+| content=3-star hotel
+}}
+[[File:Hotel Esplanade, Zagreb, Croacia, 2014-04-13, DD 01.JPG|thumb|200px|right|Hotel Esplanade, Zagreb, [[Croatia]]]]
+[[Image:Palace Hotel Zagreb.JPG|thumb|200px|right|Palace Hotel]]
+
+* {{sleep
+| name=Palace Hotel | alt= | url=http://www.palace.hr/en | email=
+| address=J.J. Strossmayer Square | lat=45.8085 | long=15.9776 | directions=
+| phone=+385 1 48-14-611 | tollfree= | fax=
+| checkin= | checkout= | price=
+| content=4-star hotel. It was built in the Secession style in 1891 and converted into a hotel in 1905. The Arts Pavilion is 50 m away.
+}}
+
+===Splurge===
+
+* {{sleep
+| name=Esplanade Zagreb | alt= | url=http://www.esplanade.hr/ | email=
+| address=Mihanovićeva 1 | lat=45.80520 | long=15.97599 | directions=just across the central railway station
+| phone=+385 1 45-66-666 | tollfree= | fax=
+| checkin= | checkout= | price=
+| content=Built in 1925 for passengers of the famous [[Orient Express]] train, which connected [[Paris]] and [[Istanbul]]. If you can, check the Emerald Ballroom with its soaring dome shaped roof. The hotel includes the Zinfandel's Restaurant, Le Bistro and the Esplanade 1925, the hotel's lounge and cocktail bar.
+}}
+* {{sleep
+| name=Sheraton Zagreb Hotel | alt= | url=https://www.marriott.com/hotels/travel/zagsi-sheraton-zagreb-hotel/ | email=
+| address=Kneza Borne 2 | lat=45.80726 | long=15.98457 | directions=
+| phone=+385 1 45-53-535 | tollfree=
+| checkin=14:00 | checkout=12:00 | price=
+| content=Features air-conditioned rooms and suites with classic furniture and marbled bathrooms. It also includes King Tomislav Restaurant, Fontana Restaurant, Piano Bar, Café Imperial, 17 meeting rooms and an 800-m² Grand Ballroom.
+}}
+* {{sleep
+| name=Westin Zagreb | alt= | url=https://www.marriott.com/hotels/travel/zagwi-the-westin-zagreb/ | email=
+| address=Kršnjavoga 1 | lat=45.8067 | long=15.9661 | directions=next to the Mimara Museum and the Croatian National Theatre
+| phone=+385 1 48-92-000 | tollfree=
+| checkin=14:00 | checkout=12:00 | price=
+| content=The hotel features the Heavenly Bed and Heavenly Shower and probably offers the best view in the city.
+}}
+* {{sleep
+| name=Boutique hotel Le Premier Zagreb | alt= | url=https://www.visitzagreb.hr/zagreb/boutique-hotel-le-premier-zagreb/ | email=
+| address=King Držislav Street 5 | lat=45.8059 | long=15.9856 | directions=in the city centre near Meštrović Pavillion and Croatia National Bank
+| phone=+385 1 4400 880 | tollfree=
+| checkin=14:00 | checkout=12:00 | price=
+| content=5-star hotel
+}}
+
+== Connect ==
+As of April 2023, the city has 5G from all three major carriers (HT, A1 and Telemach). Wi-Fi is widely available in public places.
+
+==Stay safe==
+As with much of Croatia, Zagreb is very safe on the whole. But just as anywhere else in Europe, dark/poorly lit alleys, parks (during the night), and some poorer neighborhoods should be avoided, and common sense should be followed. The chance of getting in trouble in Zagreb is fairly low, especially in the centre where most of the hotels and restaurants are located, and for foreigners, who are in general respected and welcome. Visitors soon realize that '''Zagreb is safer''' than the majority of European capitals such as London, Paris, Vienna, Rome, and Budapest.
+
+'''Pickpocketing isn't a particularly common''' occurrence in Zagreb, but you might be approached by beggars and similar people on the street – ignore them and they will go away. Do be extra careful inside and close to the main railway station.
+
+Though Croatia has become a more tolerant nation, '''outbursts of homophobic behaviour''' have been known to occur regularly, so it is advisable for non-straight couples to not show affection in public, especially in low control conditions and when near groups that look like football hooligans, skinheads or similar. For example, a lesbian couple from UK was assaulted by an angry passenger in a tram, and they suffered minor injuries, and the perpetrator was apprehended by the police.
+
+Park Ribnjak, very close to the city centre, is safe during daytime and worth visiting, especially for children. However, it has become a night-time meeting place of alternative youngsters, and subculture violence involving skinheads and similar violent young people has occasionally occurred. It's best to steer clear of Ribnjak after dark, which shouldn't be a problem because of a lack of interesting activities there for most tourists anyway.
+
+Further, if you are going out at night (especially on weekends), steer clear of any drunk and rowdy groups of young people you might encounter in the street or night trams as random beatings have been known to occur. It is not uncommon for such groups to start unprovoked attacks on passers-by, although they target mainly younger crowd and teenagers. These are not common, but have occurred, and individuals have been beaten up and even killed by such attacks in the past, so take precautions. It is advisable for men not to wear feminine styles.
+
+'''Avoid night clubs playing "Turbo-folk" music''', as violence erupts in them quite easily. Also, do your best to '''avoid strip clubs at all costs'''. Zagreb is not famous for such clubs and they are rare; however, most of them are often run by very shady characters, and often overcharge their guests. Foreigners have been charged {{EUR|2000}} for a bottle of champagne. These clubs overcharge their customers to the extreme, and their bouncers will not have any mercy if you tell them you are unable to pay. You will soon find yourself in a local hospital. This not only applies to strip clubs in Zagreb, but also all over Croatia.
+
+==Cope==
+
+===Reading and speaking===
+Croatian children start learning a foreign language in primary school, and for the majority it is English, so younger people can usually speak the language well enough, and many older people know some. You may also try German or Italian, as both are popular (for historical and cultural reasons).
+
+It is also advisable to learn some basic [[Croatian]] words and phrases - because Zagreb can be a vibrant, busy city, a few basic ''molim'' (please), ''hvala'' (thanks) or ''oprostite'' (excuse me, pardon me, I'm sorry) will go a long way to avoid being ignored by a busy local.
+
+===Visiting during summer===
+Summer time is traditionally time in Zagreb for maintenance and road repairs. If you visit Zagreb at that time, you should do some research on what streets are open and what aren't and also be prepared to get stuck in traffic jams during rush hours.
+
+===Embassies===
+* {{flag|Albania}} {{listing
+| name=Albania | url= | email=embassy.zagreb@mfa.gov.al
+| address=Jurišićeva 2A | lat= | long= | directions=
+| phone=+385 1 481 0679 | tollfree= | fax=+385 1 481 0682
+| hours= | price=
+| content=
+}}
+* {{flag|Australia}} {{listing
+| name=Australia | url=http://www.croatia.embassy.gov.au/ | email=AustEmb.Zagreb@dfat.gov.au
+| address=Centar Kaptol, 3rd Floor | lat= | long= | directions=
+| phone=+385 1 4891 200 | tollfree= | fax=+385 1 4891 216
+| hours=M-F 08:30 - 16:30, except for public holidays | price=
+| content=
+}}
+* {{flag|Austria}} {{listing
+| name=Austria | url=http://www.bmeia.gv.at/botschaft/zagreb.html | email=agram-ob@bmeia.gv.at
+| address=Radnička cesta 80, 9th Floor | lat= | long= | directions=
+| phone=+385 1-488 1050 | tollfree= | fax=+385 1-483 4461
+| hours=Consulary department M-F 09:00 - 12:00 | price=
+| content=
+}}
+* {{flag|Canada}} {{listing
+| name=Canada | url=http://www.canadainternational.gc.ca/croatia-croatie/ | email=zagrb@international.gc.ca
+| address=Prilaz Gjure Deželića 4 | lat= | long= | directions=
+| phone=+385 1 488 1200 | tollfree= | fax=+385 1 488 1230
+| hours=M-Th 10:00 - 12:00 and 13:00 - 15:00; F 10:00 - 13:00 | price=
+| content=
+}}
+* {{flag|China}} {{listing
+| name=China | url= | email=
+| address=Mlinovi 132 | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours=Tu Th 09:00 - 12:00 | price=
+| content=
+}}
+* {{flag|Finland}} {{listing
+| name=Finland | url=http://www.finland.hr| email=sanomat.zag@formin.fi
+| address=Miramarska 23 | lat= | long= | directions=
+| phone=+385 1 6312 080 | tollfree= | fax=+385 1 6312 090
+| hours=M-F 09:00-11:00 | price=
+| content=
+}}
+* {{flag|Germany}} {{listing
+| name=Germany | alt= | url=http://www.zagreb.diplo.de/ | email=
+| address=Ulica grada Vukovara 64 | lat= | long= | directions=
+| phone=+385 1-6300 100, +385 98-227 136 (Emergencies &amp; also SMS) | tollfree= | fax=+385 1-6155 536, 030 1817 67231 (local rate from inside Germany)
+| hours=M-F 09:00 - 12:00 public access, office hours M-Th 07:45-17:00, F 07:45-13:45 | price=
+| content=
+}}
+* {{flag|Greece}} {{listing
+| name=Greece | url= | email=greece-embassy@grembassy.hr, gremb.zgb@mfa.gr
+| address=Opatička 12 | lat= | long= | directions=
+| phone=+385 1 4810444, +385 989 228 848 (Emergencies) | tollfree= | fax=+385 1 481 0419
+| hours=09:00 - 15:30 | price=
+| content=
+}}
+* {{flag|Japan}} {{listing
+| name=Japan | alt= | url=http://www.hr.emb-japan.go.jp/itprtop_hr/index.html | email=
+| address=Boškovićeva 2 | lat= | long= | directions=
+| phone=+385 1 4870 650 | tollfree= | fax=+385 1 4667 334
+| hours=08:30-12:00, 13:00-17:15 | price=
+| content=
+}}
+* {{flag|Macedonia}} {{listing
+| name=Macedonia | url=http://www.missions.gov.mk/zagreb {{dead link|December 2020}} | email=zagreb@mfa.gov.mk
+| address=Kralja Zvonimira 6/1 | lat= | long= | directions=
+| phone=+385 1 457 2812 | tollfree= | fax=+385 1 462 0369
+| hours= | price=
+| content=
+}}
+* {{flag|Norway}} {{listing
+| name=Norway | url=http://www.norwegianembassy.hr/Norsk/Ambassaden/infonorsk/ | email=emb.zagreb@mfa.no
+| address=Grand Centar Hektorovićeva 2 | lat= | long= | directions=
+| phone= +385 1 6273 800 | tollfree= | fax=+385 1 62730 899
+| hours=M-F 08:30 – 16:00 (15 Sep-14 May) and 08:30 – 15:00 (15 May - 14 Sep) | price=
+| content=
+}}
+* {{flag|Romania}} {{listing
+| name=Romania | alt= | url=http://zagreb.mae.ro/en | email=zagreb@mae.ro
+| address=St. Mlinarska 43 | lat= | long= | directions=
+| phone=+385 1 4677660 | tollfree=
+| hours= | price=
+| lastedit=2021-12-03
+| content=
+}}
+*{{flag|South Korea}} {{listing
+| name=South Korea | alt= | url=http://hrv.mofa.go.kr/korean/eu/hrv/main/index.jsp | email=
+| address=Ksaverska cesta 111/A-B | lat= | long= | directions=
+| phone=+385 1 4821 282 | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+* {{flag|Switzerland}} {{listing
+| name=Switzerland | url=https://www.eda.admin.ch/zagreb | email=zag.vertretung@eda.admin.ch, vie.rkc@eda.admin.ch
+| address=Bogovićeva 3 | lat= | long= | directions=
+| phone=+385 1-487 88 00 | tollfree= | fax=+385 1-481 08 90
+| hours= | price=
+| content=
+}}
+* {{flag|United Kingdom}} {{listing
+| name=United Kingdom | url=http://ukincroatia.fco.gov.uk/en/ | email=
+| address=Ivana Lučića 4 | lat= | long= | directions=
+| phone= +385 1 6009 100 | tollfree= | fax=+385 1 6009 111
+| hours=M-Th 08:30-17:00; F 08:30-14:00 | price=
+| content=
+}}
+* {{flag|United States}} {{listing
+| name=United States | alt= | url=https://www.usembassy.gov/croatia/ | email=
+| address=Ulica Thomasa Jeffersona 2 | lat= | long= | directions=Buzin, near the airport, bus lines 166, 229, 268 from Glavni Kolodvor, stop Odra (the first of the 3 Odra stops, stop after Buzin)
+| phone=+385 1-661-2200, +385 1-661-2300 (Consular Services) | tollfree= | fax=
+| hours=08:00 - 16:30 | price=
+| content=
+}}
+
+==Go next==
+* [[Samobor]] - a picturesque medieval town with well preserved old lore and long tourist tradition. 25 km west of Zagreb, accessible by bus (~30 min distance from Zagreb, ticket price ~{{EUR|3}}).
+* [[Sisak]] - a beautiful town at the intersection of 3 rivers with long history. 50 km southeast of Zagreb, accessible by fast train (about 30 min), and bus.
+* [[Vrbovec]] - a town for all who would like to see the typical way of Croatian life. 32 km northeast of Zagreb, accessible by bus.
+* [[Karlovac]] - a stunning town at the intersection of 4 rivers. 45 km southwest of Zagreb, accessible by bus.
+* [[Zapresic]] -Town next to Zagreb, place of life and death of one of the most prominent Croatian historical figure- ban (semi-ruler of Croatia) Josip Jelacic
+* [[Ljubljana]], [[Slovenia]].
+* [[Sarajevo]], [[Bosnia and Herzegovina]], is easily reachable by a direct bus. It offers an interesting mix of cultures in a beautiful landscape.
+
+{{usablecity}}
+{{geo|45.8167|15.9833}}
+{{IsPartOf|Central Croatia}}
+
+{{Mapmask |45.8270,16.0811 |45.8268,16.0829 |45.8265,16.0849 |45.8264,16.0858 |45.8261,16.0866 |45.8257,16.0864 |45.8255,16.0869 |45.8252,16.0873 |45.8245,16.0875 |45.8235,16.0888 |45.8229,16.0892 |45.8219,16.0905 |45.8209,16.0915 |45.8202,16.0926 |45.8195,16.0938 |45.8180,16.0956 |45.8176,16.0962 |45.8174,16.0978 |45.8171,16.0988 |45.8169,16.0992 |45.8154,16.1007 |45.8153,16.1016 |45.8136,16.1015 |45.8105,16.1011 |45.8081,16.1007 |45.8074,16.1005 |45.8065,16.1004 |45.8063,16.1035 |45.8061,16.1046 |45.8060,16.1059 |45.8047,16.1058 |45.8014,16.1033 |45.8014,16.1015 |45.7976,16.1013 |45.7952,16.1024 |45.7910,16.1021 |45.7878,16.1033 |45.7873,16.1017 |45.7868,16.1001 |45.7865,16.0994 |45.7862,16.0987 |45.7858,16.0980 |45.7852,16.0973 |45.7847,16.0968 |45.7843,16.0964 |45.7838,16.0960 |45.7834,16.0954 |45.7831,16.0950 |45.7829,16.0946 |45.7825,16.0935 |45.7824,16.0928 |45.7822,16.0914 |45.7819,16.0890 |45.7818,16.0881 |45.7815,16.0873 |45.7813,16.0865 |45.7806,16.0850 |45.7799,16.0839 |45.7792,16.0828 |45.7781,16.0812 |45.7776,16.0805 |45.7771,16.0800 |45.7765,16.0794 |45.7738,16.0765 |45.7730,16.0753 |45.7723,16.0741 |45.7717,16.0728 |45.7708,16.0707 |45.7700,16.0692 |45.7693,16.0680 |45.7677,16.0662 |45.7661,16.0646 |45.7643,16.0634 |45.7628,16.0623 |45.7620,16.0615 |45.7613,16.0606 |45.7604,16.0591 |45.7596,16.0575 |45.7591,16.0560 |45.7586,16.0543 |45.7585,16.0535 |45.7584,16.0526 |45.7584,16.0517 |45.7585,16.0508 |45.7586,16.0498 |45.7587,16.0489 |45.7590,16.0470 |45.7594,16.0456 |45.7599,16.0440 |45.7609,16.0420 |45.7617,16.0406 |45.7628,16.0386 |45.7607,16.0382 |45.7579,16.0366 |45.7573,16.0367 |45.7566,16.0373 |45.7560,16.0377 |45.7558,16.0379 |45.7557,16.0379 |45.7556,16.0379 |45.7554,16.0379 |45.7550,16.0380 |45.7547,16.0363 |45.7548,16.0351 |45.7548,16.0349 |45.7549,16.0341 |45.7554,16.0342 |45.7555,16.0338 |45.7555,16.0336 |45.7555,16.0332 |45.7555,16.0327 |45.7555,16.0326 |45.7555,16.0326 |45.7552,16.0322 |45.7550,16.0317 |45.7549,16.0297 |45.7548,16.0292 |45.7551,16.0284 |45.7552,16.0281 |45.7552,16.0281 |45.7553,16.0277 |45.7546,16.0271 |45.7539,16.0264 |45.7545,16.0253 |45.7545,16.0252 |45.7543,16.0253 |45.7542,16.0253 |45.7539,16.0253 |45.7538,16.0254 |45.7537,16.0254 |45.7533,16.0253 |45.7529,16.0250 |45.7526,16.0248 |45.7523,16.0244 |45.7522,16.0244 |45.7521,16.0244 |45.7520,16.0243 |45.7517,16.0239 |45.7514,16.0236 |45.7514,16.0235 |45.7513,16.0234 |45.7511,16.0230 |45.7509,16.0228 |45.7505,16.0221 |45.7499,16.0214 |45.7481,16.0195 |45.7494,16.0160 |45.7500,16.0123 |45.7489,16.0048 |45.7527,15.9989 |45.7559,15.9991 |45.7563,15.9943 |45.7573,15.9901 |45.7574,15.9883 |45.7573,15.9872 |45.7570,15.9860 |45.7564,15.9851 |45.7559,15.9846 |45.7549,15.9844 |45.7540,15.9845 |45.7533,15.9850 |45.7530,15.9812 |45.7528,15.9763 |45.7524,15.9707 |45.7495,15.9725 |45.7473,15.9694 |45.7484,15.9648 |45.7486,15.9616 |45.7488,15.9609 |45.7487,15.9592 |45.7489,15.9591 |45.7489,15.9579 |45.7507,15.9547 |45.7503,15.9510 |45.7494,15.9430 |45.7487,15.9371 |45.7483,15.9338 |45.7479,15.9300 |45.7478,15.9263 |45.7480,15.9223 |45.7487,15.9179 |45.7491,15.9164 |45.7498,15.9141 |45.7511,15.9105 |45.7515,15.9097 |45.7527,15.9072 |45.7541,15.9048 |45.7556,15.9026 |45.7563,15.9012 |45.7568,15.9000 |45.7570,15.8988 |45.7602,15.8970 |45.7608,15.8969 |45.7613,15.8968 |45.7629,15.8954 |45.7650,15.8932 |45.7664,15.8918 |45.7676,15.8915 |45.7681,15.8915 |45.7686,15.8917 |45.7690,15.8913 |45.7695,15.8900 |45.7695,15.8896 |45.7695,15.8891 |45.7691,15.8883 |45.7705,15.8863 |45.7728,15.8824 |45.7728,15.8780 |45.7747,15.8748 |45.7775,15.8735 |45.7780,15.8727 |45.7790,15.8708 |45.7819,15.8653 |45.7840,15.8613 |45.7855,15.8581 |45.7858,15.8569 |45.7860,15.8552 |45.7862,15.8541 |45.7865,15.8532 |45.7871,15.8519 |45.7872,15.8501 |45.7872,15.8483 |45.7871,15.8467 |45.7875,15.8453 |45.7880,15.8442 |45.7888,15.8433 |45.7893,15.8429 |45.7912,15.8375 |45.7960,15.8354 |45.7999,15.8352 |45.8028,15.8336 |45.8036,15.8342 |45.8075,15.8310 |45.8088,15.8338 |45.8108,15.8320 |45.8129,15.8301 |45.8132,15.8308 |45.8183,15.8278 |45.8215,15.8245 |45.8265,15.8220 |45.8309,15.8207 |45.8365,15.8220 |45.8420,15.8262 |45.8444,15.8325 |45.8406,15.8367 |45.8412,15.8439 |45.8444,15.8477 |45.8509,15.8506 |45.8547,15.8519 |45.8585,15.8582 |45.8594,15.8701 |45.8626,15.8760 |45.8635,15.8831 |45.8703,15.8857 |45.8794,15.8941 |45.8876,15.9034 |45.8896,15.9106 |45.8912,15.9139 |45.8929,15.9177 |45.8929,15.9213 |45.8932,15.9372 |45.8976,15.9418 |45.9008,15.9469 |45.9015,15.9487 |45.9034,15.9535 |45.9038,15.9546 |45.9059,15.9593 |45.9081,15.9629 |45.9104,15.9656 |45.9138,15.9710 |45.9144,15.9746 |45.9149,15.9777 |45.9155,15.9849 |45.9207,15.9865 |45.9216,15.9896 |45.9254,15.9936 |45.9262,15.9993 |45.9288,16.0004 |45.9313,16.0060 |45.9338,16.0129 |45.9339,16.0183 |45.9352,16.0286 |45.9374,16.0320 |45.9380,16.0441 |45.9377,16.0473 |45.9377,16.0476 |45.9375,16.0480 |45.9374,16.0484 |45.9371,16.0486 |45.9369,16.0487 |45.9368,16.0490 |45.9368,16.0493 |45.9366,16.0504 |45.9367,16.0509 |45.9370,16.0514 |45.9374,16.0518 |45.9372,16.0528 |45.9233,16.0710 |45.9209,16.0745 |45.9186,16.0742 |45.9148,16.0734 |45.9085,16.0734 |45.9044,16.0720 |45.9019,16.0698 |45.8996,16.0686 |45.8982,16.0675 |45.8959,16.0695 |45.8934,16.0709 |45.8920,16.0712 |45.8909,16.0736 |45.8907,16.0770 |45.8891,16.0807 |45.8879,16.0827 |45.8858,16.0834 |45.8834,16.0833 |45.8828,16.0837 |45.8824,16.0839 |45.8819,16.0836 |45.8795,16.0856 |45.8774,16.0884 |45.8773,16.0895 |45.8754,16.0929 |45.8730,16.0945 |45.8697,16.0958 |45.8693,16.0926 |45.8691,16.0896 |45.8691,16.0885 |45.8689,16.0870 |45.8686,16.0857 |45.8686,16.0844 |45.8678,16.0832 |45.8661,16.0822 |45.8650,16.0821 |45.8632,16.0838 |45.8619,16.0852 |45.8615,16.0889 |45.8610,16.0934 |45.8576,16.0979 |45.8460,16.0985 |45.8453,16.0956 |45.8423,16.0835 |45.8422,16.0823 |45.8422,16.0816 |45.8424,16.0810 |45.8428,16.0799 |45.8418,16.0791 |45.8414,16.0791 |45.8411,16.0789 |45.8409,16.0789 |45.8393,16.0789 |45.8385,16.0787 |45.8377,16.0781 |45.8367,16.0774 |45.8352,16.0785 |45.8325,16.0761 |45.8320,16.0772 |45.8318,16.0779 |45.8315,16.0792 |45.8289,16.0782 |45.8291,16.0799 |45.8292,16.0807 |45.8293,16.0812 |45.8291,16.0813 |45.8270,16.0811}}</text>
+      <sha1>77d2botduu2cqtc7018yuw7g3cr25fu</sha1>
+    </revision>
+  </page>
+</mediawiki>

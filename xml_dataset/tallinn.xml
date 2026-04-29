@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="71.1">
+  <metadata>
+    <title>Tallinn</title>
+    <name_it>Tallinn</name_it>
+    <flag>🇪🇪</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>43</hotel_count>
+    <hotel_price>113.78</hotel_price>
+    <safety index_score="76.4"/>
+    <environment green_score="82"/>
+    <cost_index value="61.5"/>
+    <economic_accessibility score="38.5"/>
+  </indicators>
+  <transport>Land transport: Taxis to the old town should cost €7–10. The Bolt app is more popular than Uber (it's Estonian after all!) Tram #2 is diverted until 2025 and doesn't stop at the airport – it will resume when construction of the Rail Baltica terminal has reached a point where the tram can pass under the railway line. Bus #2 and Bus #15 depart roughly every 12–15 min to the centre.</transport>
+  <accommodation>
+    <hotel>
+      <name>16EUR Hostel</name>
+      <price>Dorm bed: from €10; Single: €16-25</price>
+    </hotel>
+    <hotel>
+      <name>Alur Hostel</name>
+      <price>Dorm bed: from €9</price>
+    </hotel>
+    <hotel>
+      <name>Euphoria</name>
+      <price>Dorm bed: from €9</price>
+    </hotel>
+    <hotel>
+      <name>Fat Margeret's</name>
+      <price>Bed from €10</price>
+    </hotel>
+    <hotel>
+      <name>Flying Kiwi Backpackers</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="59.4372" lon="24.7453">
+      <name>Old Town</name>
+      <description>medieval heart of Tallinn, a UNESCO World Heritage site.</description>
+    </attraction>
+    <attraction lat="59.4358" lon="24.7397">
+      <name>Toompea Hill</name>
+      <description>Historic hill with the castle and parliament.</description>
+    </attraction>
+    <attraction lat="59.4358" lon="24.7392">
+      <name>Nevsky Cathedral</name>
+      <description>Grand Orthodox cathedral with onion domes.</description>
+    </attraction>
+    <attraction lat="59.4384" lon="24.7911">
+      <name>Kadriorg Park</name>
+      <description>Park and palace built by Peter the Great.</description>
+    </attraction>
+    <attraction lat="59.4514" lon="24.7386">
+      <name>Seaplane Harbour</name>
+      <description>Maritime museum in historic seaplane hangars.</description>
+    </attraction>
+    <attraction lat="59.4373" lon="24.7451">
+      <name>Town Hall Square</name>
+      <description>The social heart of the city since the 13th century.</description>
+    </attraction>
+    <attraction lat="59.4394" lon="24.7289">
+      <name>Telliskivi</name>
+      <description>Creative city hub with restaurants and galleries.</description>
+    </attraction>
+    <attraction lat="59.4364" lon="24.7961">
+      <name>Kumu Art Museum</name>
+      <description>Main museum for Estonian and international art.</description>
+    </attraction>
+    <attraction lat="59.4411" lon="24.7478">
+      <name>St. Olaf's Church</name>
+      <description>Gothic church once the tallest building in the world.</description>
+    </attraction>
+    <attraction lat="59.4425" lon="24.7492">
+      <name>Fat Margaret</name>
+      <description>Historic gate tower and maritime museum.</description>
+    </attraction>
+  </highlights>
+  <description>La capitale digitale d'Europa, dove ogni servizio è a portata di click e la sicurezza è garantita da tecnologie avanzate. Il suo centro medievale è perfettamente preservato in un ecosistema high-tech.</description>
+  <wiki_intro>'''Tallinn''' is Estonia's capital and largest city. Tallinn is an important port of the Baltic Sea, with the busy passenger section of the port reaching the foothill of the picturesque medieval Old Town, which has been astonishingly well preserved and is a  since 1997. 
+
+==Understand==
+
+On the shore of the Gulf of Finland, it is a city of over 450,000 inhabitants (2023). It is home to a third of...</wiki_intro>
+</city_report>

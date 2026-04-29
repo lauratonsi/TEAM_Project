@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="52.5">
+  <metadata>
+    <title>Brussels</title>
+    <name_it>Bruxelles</name_it>
+    <flag>🇧🇪</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>9</hotel_count>
+    <hotel_price>143.38</hotel_price>
+    <safety index_score="50.1"/>
+    <environment green_score="70"/>
+    <cost_index value="77.5"/>
+    <economic_accessibility score="22.5"/>
+  </indicators>
+  <transport>I tram sono il mezzo più rapido per spostarsi da un punto all'altro della città. È possibile utilizzare autobus e tram con lo stesso biglietto entro un'ora.</transport>
+  <accommodation>
+    <hotel>
+      <name>2Go4 Hostel</name>
+      <price>€20+</price>
+    </hotel>
+    <hotel>
+      <name>Hostel Jacques Brel</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Citadines Sainte-Catherine Brussels</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Hotel Cafe Pacific</name>
+      <price>€120+</price>
+    </hotel>
+    <hotel>
+      <name>Hotel NH Collection Brussels Centre</name>
+      <price>from €99</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="50.8467" lon="4.3524">
+      <name>Grand Place</name>
+      <description>Central square known for its ornate guildhouses.</description>
+    </attraction>
+    <attraction lat="50.8949" lon="4.3415">
+      <name>Atomium</name>
+      <description>Futuristic structure representing an iron crystal.</description>
+    </attraction>
+    <attraction lat="50.845" lon="4.35">
+      <name>Manneken Pis</name>
+      <description>Famous small bronze statue of a boy urinating.</description>
+    </attraction>
+    <attraction lat="50.8417" lon="4.3622">
+      <name>Royal Palace</name>
+      <description>The official residence of the Belgian monarchs.</description>
+    </attraction>
+    <attraction lat="50.84" lon="4.3917">
+      <name>Cinquantenaire</name>
+      <description>Park featuring a triumphal arch and museums.</description>
+    </attraction>
+    <attraction lat="50.894" lon="4.339">
+      <name>Mini-Europe</name>
+      <description>Park with miniature models of European landmarks.</description>
+    </attraction>
+    <attraction lat="50.8511" lon="4.3601">
+      <name>Comic Strip Center</name>
+      <description>Museum dedicated to the history of Belgian comics.</description>
+    </attraction>
+    <attraction lat="50.8422" lon="4.3586">
+      <name>Magritte Museum</name>
+      <description>Museum dedicated to the surrealist artist René Magritte.</description>
+    </attraction>
+    <attraction lat="50.8439" lon="4.3567">
+      <name>Mont des Arts</name>
+      <description>Historic site with gardens and a panoramic city view.</description>
+    </attraction>
+    <attraction lat="50.8478" lon="4.3601">
+      <name>St. Michael Cathedral</name>
+      <description>Gothic church located on the Treurenberg hill.</description>
+    </attraction>
+  </highlights>
+  <description>Cuore politico dell'Unione Europea, Bruxelles gestisce una complessità demografica unica con politiche di inclusione avanzate. Il suo profilo è definito da un'offerta alberghiera di alto profilo e una rete di trasporti capillare.</description>
+  <wiki_intro>The '''Pentagon''' (French: ''Le Pentagone'', Dutch: ''Vijfhoek'') is the historical center of Brussels. It derives its name from the pentagonal shape of the inner beltway that surrounds the area. The Pentagon of Brussels encompasses many charming and beautiful attractions, with deeply ornate buildings on the Grand-Place/Grote Markt, and a fish-and-crustacean overdose of St. Catherine's Square (P...</wiki_intro>
+</city_report>

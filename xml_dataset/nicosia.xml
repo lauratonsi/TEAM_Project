@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="50.9">
+  <metadata>
+    <title>Nicosia</title>
+    <name_it>Nicosia</name_it>
+    <flag>🇨🇾</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>14</hotel_count>
+    <hotel_price>113.22</hotel_price>
+    <safety index_score="67.9"/>
+    <environment green_score="40"/>
+    <cost_index value="61.2"/>
+    <economic_accessibility score="38.8"/>
+  </indicators>
+  <transport>La Città Vecchia è compatta e facilmente esplorabile a piedi. Per l'area metropolitana è in sviluppo una rete di autobus e taxi privati a prezzi accessibili.</transport>
+  <accommodation>
+    <hotel>
+      <name>Averof Hotel</name>
+      <price>sgl €35, dbl €55</price>
+    </hotel>
+    <hotel>
+      <name>Sky Hotel</name>
+      <price>rates from €60</price>
+    </hotel>
+    <hotel>
+      <name>Asty Hotel</name>
+      <price>sgl from €45, dbl from €65</price>
+    </hotel>
+    <hotel>
+      <name>Kipros Accommodation</name>
+      <price>rates from €44</price>
+    </hotel>
+    <hotel>
+      <name>Delphi Hotel</name>
+      <price>rates around €50</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="35.1764" lon="33.3644">
+      <name>Selimiye Mosque</name>
+      <description>Former cathedral converted into a mosque.</description>
+    </attraction>
+    <attraction lat="35.174" lon="33.3614">
+      <name>Ledra Street</name>
+      <description>Main shopping street and crossing point to the north.</description>
+    </attraction>
+    <attraction lat="35.1717" lon="33.3556">
+      <name>Cyprus Museum</name>
+      <description>Oldest and largest archaeological museum in Cyprus.</description>
+    </attraction>
+    <attraction lat="35.1814" lon="33.3614">
+      <name>Kyrenia Gate</name>
+      <description>One of the three gates in the Venetian walls.</description>
+    </attraction>
+    <attraction lat="35.1719" lon="33.3667">
+      <name>Venetian Walls</name>
+      <description>Circular fortifications surrounding the old city.</description>
+    </attraction>
+    <attraction lat="35.1761" lon="33.3625">
+      <name>Buyuk Han</name>
+      <description>Largest caravanserai on the island of Cyprus.</description>
+    </attraction>
+    <attraction lat="35.1731" lon="33.3678">
+      <name>St John's Cathedral</name>
+      <description>Main church of the Church of Cyprus.</description>
+    </attraction>
+    <attraction lat="35.1706" lon="33.3611">
+      <name>Leventis Museum</name>
+      <description>Museum dedicated to the history of Nicosia.</description>
+    </attraction>
+    <attraction lat="35.1736" lon="33.3711">
+      <name>Liberty Monument</name>
+      <description>Sculpture commemorating EOKA's fight for independence.</description>
+    </attraction>
+    <attraction lat="35.1711" lon="33.3617">
+      <name>Shacolas Tower</name>
+      <description>Observatory offering views of the whole city.</description>
+    </attraction>
+  </highlights>
+  <description>Cerniera tra Europa e Medio Oriente, Nicosia offre un clima privilegiato e un costo della vita molto competitivo. Il suo piano di sviluppo mira a integrare modernità architettonica e conservazione delle mura storiche.</description>
+  <wiki_intro>'''Nicosia''' (Greek phrasebook|Greek: ''Λευκωσία''; Turkish phrasebook|Turkish: ''Lefkoşa'') is the capital of Cyprus and is the largest city by far.
+
+While it may not boast the same abundance of archaeological sites and lively beaches as other parts of Cyprus, the city's Old Town, with its museums and churches, is still a pleasant place to explore. What's more, with fewer tourists than the r...</wiki_intro>
+</city_report>

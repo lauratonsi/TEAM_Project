@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="53.1">
+  <metadata>
+    <title>Dublin</title>
+    <name_it>Dublino</name_it>
+    <flag>🇮🇪</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>47</hotel_count>
+    <hotel_price>151.88</hotel_price>
+    <safety index_score="48.9"/>
+    <environment green_score="75"/>
+    <cost_index value="82.1"/>
+    <economic_accessibility score="17.9"/>
+  </indicators>
+  <transport>Tickets and Leap Card On trains and trams, tickets can be purchased from ticket vending machines at the station or stop prior to boarding. Train tickets are valid for the day of purchase and are needed to get through the entry and exit turnstiles at stations. Tram tickets do not have to be validated prior to boarding, but must be used within 90 minutes of purchase.</transport>
+  <accommodation>
+    <hotel>
+      <name>Camac Valley Caravan and Camping Park</name>
+      <price>Tent €12, hook-up €40</price>
+    </hotel>
+    <hotel>
+      <name>Abbey Court Hostel</name>
+      <price>Bunk €35 ppn</price>
+    </hotel>
+    <hotel>
+      <name>Ashling House</name>
+      <price>Double (room only) €140</price>
+    </hotel>
+    <hotel>
+      <name>DCU Summer Rooms</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Latroupe Jacobs Inn</name>
+      <price>Pod €35 ppn</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="53.3419" lon="-6.2867">
+      <name>Guinness Storehouse</name>
+      <description>Brewery experience telling the story of Ireland's famous stout.</description>
+    </attraction>
+    <attraction lat="53.3444" lon="-6.2577">
+      <name>Trinity College</name>
+      <description>Oldest university in Ireland, home to the Book of Kells.</description>
+    </attraction>
+    <attraction lat="53.3455" lon="-6.2644">
+      <name>Temple Bar</name>
+      <description>Vibrant cultural quarter and nightlife hub.</description>
+    </attraction>
+    <attraction lat="53.3429" lon="-6.2674">
+      <name>Dublin Castle</name>
+      <description>Major government complex and former seat of British rule.</description>
+    </attraction>
+    <attraction lat="53.36" lon="-6.325">
+      <name>Phoenix Park</name>
+      <description>One of the largest enclosed recreational spaces in Europe.</description>
+    </attraction>
+    <attraction lat="53.3395" lon="-6.2715">
+      <name>St. Patrick's Cathedral</name>
+      <description>National Cathedral of the Church of Ireland.</description>
+    </attraction>
+    <attraction lat="53.3418" lon="-6.3098">
+      <name>Kilmainham Gaol</name>
+      <description>Former prison now a museum on Irish independence history.</description>
+    </attraction>
+    <attraction lat="53.3463" lon="-6.2631">
+      <name>Ha'penny Bridge</name>
+      <description>Iconic pedestrian bridge over the River Liffey.</description>
+    </attraction>
+    <attraction lat="53.3381" lon="-6.2591">
+      <name>Stephen's Green</name>
+      <description>Victorian public park in the city center.</description>
+    </attraction>
+    <attraction lat="53.3409" lon="-6.2525">
+      <name>National Gallery</name>
+      <description>Museum housing the national collection of Irish and European art.</description>
+    </attraction>
+  </highlights>
+  <description>Porta d'accesso per le multinazionali tech, Dublino bilancia una crescita economica accelerata con il fascino dei suoi distretti storici. La sicurezza e la qualità dell'aria restano priorità centrali nella sua agenda di sviluppo futuro.</description>
+  <wiki_intro>'''Dublin''' (Irish phrasebook|Irish: ''Baile Átha Cliath'', "Town of the Hurdled Ford") is the capital city of Republic of Ireland|Ireland. Its vibrancy, nightlife and tourist attractions are world renowned and it's the most popular entry point for international visitors to Ireland.
+
+As a city, it is disproportionately large for the size of the country with a population of over 2 million in the...</wiki_intro>
+</city_report>

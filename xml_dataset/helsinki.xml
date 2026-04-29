@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="70.4">
+  <metadata>
+    <title>Helsinki</title>
+    <name_it>Helsinki</name_it>
+    <flag>🇫🇮</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>10</hotel_count>
+    <hotel_price>150.78</hotel_price>
+    <safety index_score="76.8"/>
+    <environment green_score="90"/>
+    <cost_index value="81.5"/>
+    <economic_accessibility score="18.5"/>
+  </indicators>
+  <transport>Getting in is easy as almost all local bus and rail lines end in or pass through the city centre, or at least enable you to get to central Helsinki with just one change, like the buses connecting to metro stations in the eastern suburbs. Moreover the Helsinki Central Station is here, the bus station in Kamppi about 500 m from the same and the passenger ports (except Vuosaari) are not far away.</transport>
+  <accommodation>
+    <hotel>
+      <name>Best Western Hotel Carlton</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Cumulus Kaisaniemi</name>
+      <price>From €83 off season</price>
+    </hotel>
+    <hotel>
+      <name>Hobo Hotel</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Hotel Arthur</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Hotel Kämp</name>
+      <price>Rooms from €120</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="60.1702" lon="24.9522">
+      <name>Helsinki Cathedral</name>
+      <description>Evangelical Lutheran cathedral and iconic city landmark.</description>
+    </attraction>
+    <attraction lat="60.1453" lon="24.9888">
+      <name>Suomenlinna</name>
+      <description>UNESCO sea fortress located on a cluster of islands.</description>
+    </attraction>
+    <attraction lat="60.1731" lon="24.9303">
+      <name>Temppeliaukio Church</name>
+      <description>Unique church excavated directly into solid rock.</description>
+    </attraction>
+    <attraction lat="60.1675" lon="24.9542">
+      <name>Market Square</name>
+      <description>Central square hosting food markets and events.</description>
+    </attraction>
+    <attraction lat="60.1821" lon="24.9135">
+      <name>Sibelius Monument</name>
+      <description>Abstract sculpture dedicated to composer Jean Sibelius.</description>
+    </attraction>
+    <attraction lat="60.1686" lon="24.9602">
+      <name>Uspenski Cathedral</name>
+      <description>Eastern Orthodox cathedral with golden onion domes.</description>
+    </attraction>
+    <attraction lat="60.1825" lon="24.8847">
+      <name>Seurasaari</name>
+      <description>Open-air museum on a beautiful forested island.</description>
+    </attraction>
+    <attraction lat="60.17" lon="24.9441">
+      <name>Ateneum</name>
+      <description>Museum housing the biggest collection of art in Finland.</description>
+    </attraction>
+    <attraction lat="60.1704" lon="24.9362">
+      <name>Amos Rex</name>
+      <description>Contemporary art museum with iconic underground skylights.</description>
+    </attraction>
+    <attraction lat="60.1513" lon="24.9303">
+      <name>Löyly</name>
+      <description>Modern public sauna and restaurant on the waterfront.</description>
+    </attraction>
+  </highlights>
+  <description>Pioniera del concetto di 'Smart City', Helsinki integra la natura nel tessuto urbano con una fluidità impressionante. La sua gestione dei dati pubblici e la sicurezza la pongono ai vertici di ogni classifica sulla qualità della vita.</description>
+  <wiki_intro>'''Central Helsinki''' consists of the central parts of Helsinki east of Mannerheimintie, south of Pitkäsilta, west of Unioninkatu and north of Esplanadi; in short the commercial downtown.
+
+This is undoubtedly the liveliest part of Helsinki and much of what a visitor would like to see and experience is located in central Helsinki or — while in other districts — just a few hundred metres away. He...</wiki_intro>
+</city_report>

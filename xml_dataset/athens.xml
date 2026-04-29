@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="47.6">
+  <metadata>
+    <title>Athens</title>
+    <name_it>Atene</name_it>
+    <flag>🇬🇷</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>27</hotel_count>
+    <hotel_price>115.44</hotel_price>
+    <safety index_score="55.2"/>
+    <environment green_score="45"/>
+    <cost_index value="62.4"/>
+    <economic_accessibility score="37.6"/>
+  </indicators>
+  <transport>Transport for Athens (OASA) operates public transportation in Athens. Its subdivisions include STASY and OSY. A single ticket allows you to travel on any types of transport, metro, trams, buses, with unlimited transfers anywhere time within Athens for 90 minutes.</transport>
+  <accommodation>
+    <hotel>
+      <name>Dionissotis Camping</name>
+      <price>€6 per person, €4 per small tent, €6 per large tent/caravan</price>
+    </hotel>
+    <hotel>
+      <name>Athens Backpackers</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Athens Psiri Hotel</name>
+      <price>€35</price>
+    </hotel>
+    <hotel>
+      <name>Safestay Athens Monastiraki</name>
+      <price>€15-50</price>
+    </hotel>
+    <hotel>
+      <name>Hotel Dioskouros Athens</name>
+      <price>€15-20 per person in high season</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="37.9715" lon="23.7257">
+      <name>Acropolis</name>
+      <description>Ancient citadel with the Parthenon and other historic ruins.</description>
+    </attraction>
+    <attraction lat="37.9715" lon="23.7267">
+      <name>Parthenon</name>
+      <description>Iconic temple dedicated to the goddess Athena.</description>
+    </attraction>
+    <attraction lat="37.9681" lon="23.7285">
+      <name>Acropolis Museum</name>
+      <description>Museum housing artifacts found on the Acropolis site.</description>
+    </attraction>
+    <attraction lat="37.9751" lon="23.7225">
+      <name>Ancient Agora</name>
+      <description>The ancient marketplace and heart of public life in Athens.</description>
+    </attraction>
+    <attraction lat="37.9719" lon="23.7303">
+      <name>Plaka</name>
+      <description>Oldest neighborhood with neoclassical houses and tavernas.</description>
+    </attraction>
+    <attraction lat="37.9693" lon="23.7331">
+      <name>Temple of Zeus</name>
+      <description>Ruined colossal temple dedicated to the king of Olympian gods.</description>
+    </attraction>
+    <attraction lat="37.9755" lon="23.7348">
+      <name>Syntagma Square</name>
+      <description>Central square and home of the Hellenic Parliament.</description>
+    </attraction>
+    <attraction lat="37.9891" lon="23.7327">
+      <name>National Archaeology Museum</name>
+      <description>Vast collection of ancient Greek antiquities.</description>
+    </attraction>
+    <attraction lat="37.9683" lon="23.7411">
+      <name>Panathenaic Stadium</name>
+      <description>Marble stadium that hosted the first modern Olympic Games.</description>
+    </attraction>
+    <attraction lat="37.9819" lon="23.7432">
+      <name>Lycabettus Hill</name>
+      <description>Highest point in Athens offering panoramic views.</description>
+    </attraction>
+  </highlights>
+  <description>La culla della civiltà occidentale sta vivendo una rinascita urbana focalizzata sulla digitalizzazione e sul recupero degli spazi storici. Il mix tra eredità monumentale e nuovi incentivi economici la rende un caso di studio strategico nel Mediterraneo.</description>
+  <wiki_intro>'''Athens''' (Greek phrasebook|Greek: , ''Athína'') is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don't come expecting a philo...</wiki_intro>
+</city_report>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="65.2">
+  <metadata>
+    <title>Madrid</title>
+    <name_it>Madrid</name_it>
+    <flag>🇪🇸</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>119.88</hotel_price>
+    <safety index_score="71.3"/>
+    <environment green_score="74"/>
+    <cost_index value="64.8"/>
+    <economic_accessibility score="35.2"/>
+  </indicators>
+  <transport>To and from the airport During the day, Metro a popular best way to reach city centre. Line 8 (pink) runs from Nuevos Ministerios to Terminals 1,2&amp;amp;3, Barajas town (no airport here, don't get off!) and T4. It runs from 06:00 to 01:30, taking 15 min from city to T123 and another 5 min to T4.</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="40.4138" lon="-3.6921">
+      <name>Prado Museum</name>
+      <description>Main Spanish national art museum.</description>
+    </attraction>
+    <attraction lat="40.4179" lon="-3.7144">
+      <name>Royal Palace</name>
+      <description>Official residence of the Spanish royal family.</description>
+    </attraction>
+    <attraction lat="40.4153" lon="-3.6839">
+      <name>Retiro Park</name>
+      <description>Large urban park with a lake and monuments.</description>
+    </attraction>
+    <attraction lat="40.4154" lon="-3.7074">
+      <name>Plaza Mayor</name>
+      <description>Central square in the heart of Madrid.</description>
+    </attraction>
+    <attraction lat="40.4169" lon="-3.7035">
+      <name>Puerta del Sol</name>
+      <description>Busy public square and 'Kilometre Zero' for Spanish roads.</description>
+    </attraction>
+    <attraction lat="40.4079" lon="-3.6946">
+      <name>Reina Sofia Museum</name>
+      <description>National museum of 20th-century art (Guernica).</description>
+    </attraction>
+    <attraction lat="40.4161" lon="-3.6949">
+      <name>Thyssen-Bornemisza</name>
+      <description>Major art museum forming the Golden Triangle of Art.</description>
+    </attraction>
+    <attraction lat="40.42" lon="-3.7011">
+      <name>Gran Via</name>
+      <description>Iconic shopping street with landmark architecture.</description>
+    </attraction>
+    <attraction lat="40.4531" lon="-3.6883">
+      <name>Santiago Bernabéu</name>
+      <description>Stadium and home ground of Real Madrid CF.</description>
+    </attraction>
+    <attraction lat="40.4241" lon="-3.7177">
+      <name>Temple of Debod</name>
+      <description>Ancient Egyptian temple rebuilt in Madrid.</description>
+    </attraction>
+  </highlights>
+  <description>Famosa per la sua energia sociale e i grandi viali alberati, Madrid sta investendo pesantemente in 'foreste urbane' per combattere il calore. La sua accessibilità e la vita notturna sicura la rendono una meta imperdibile.</description>
+  <wiki_intro>'''Madrid''' is Spain's capital and largest city. A city that has been marked by Spain's varied and tumultuous history, Madrid has some of Europe's most impressive cultural and architectural heritage, which includes grand avenues, plazas, buildings and monuments, world-class art galleries and museums, highly popular football teams, and cultural events of international fame for everyone. Madrid ...</wiki_intro>
+</city_report>

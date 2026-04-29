@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="59.1">
+  <metadata>
+    <title>Sofia</title>
+    <name_it>Sofia</name_it>
+    <flag>🇧🇬</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>18</hotel_count>
+    <hotel_price>87.88</hotel_price>
+    <safety index_score="58.4"/>
+    <environment green_score="63"/>
+    <cost_index value="47.5"/>
+    <economic_accessibility score="52.5"/>
+  </indicators>
+  <transport>Sofia Metro Line 4 (Yellow) operates service to the airport between 05:30 and 24:00. The stop is a few metres outside of Terminal 2; follow signs for "Subway" until you leave the southeast corner of the building. The journey to the city centre takes 20–30 minutes.</transport>
+  <accommodation>
+    <hotel>
+      <name>Peter Pan Hostel</name>
+      <price>Private €12-14</price>
+    </hotel>
+    <hotel>
+      <name>Levitt Hostel</name>
+      <price>€10</price>
+    </hotel>
+    <hotel>
+      <name>Crosspoint Sofia Hostel</name>
+      <price>€9-18</price>
+    </hotel>
+    <hotel>
+      <name>Hostel Mostel</name>
+      <price>From €9</price>
+    </hotel>
+    <hotel>
+      <name>Nightingale Hostel</name>
+      <price>€7-12</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="42.6958" lon="23.3328">
+      <name>Nevsky Cathedral</name>
+      <description>One of the largest Orthodox cathedrals in the world.</description>
+    </attraction>
+    <attraction lat="42.6911" lon="23.3203">
+      <name>Vitosha Boulevard</name>
+      <description>Main commercial street with views of Vitosha Mountain.</description>
+    </attraction>
+    <attraction lat="42.6447" lon="23.2661">
+      <name>Boyana Church</name>
+      <description>Medieval church with world-famous frescoes.</description>
+    </attraction>
+    <attraction lat="42.6978" lon="23.3225">
+      <name>Serdica Ruins</name>
+      <description>Ancient Roman ruins in the center of Sofia.</description>
+    </attraction>
+    <attraction lat="42.6936" lon="23.3267">
+      <name>National Theater</name>
+      <description>Beautiful Neoclassical theater building.</description>
+    </attraction>
+    <attraction lat="42.6969" lon="23.3228">
+      <name>St. George Rotunda</name>
+      <description>The oldest building in Sofia, a 4th-century church.</description>
+    </attraction>
+    <attraction lat="42.6994" lon="23.3225">
+      <name>Banya Bashi Mosque</name>
+      <description>16th-century mosque built over natural thermal spas.</description>
+    </attraction>
+    <attraction lat="42.655" lon="23.2708">
+      <name>National History Museum</name>
+      <description>Largest museum in Bulgaria with the Thracian treasures.</description>
+    </attraction>
+    <attraction lat="42.6967" lon="23.3214">
+      <name>Sveta Nedelya</name>
+      <description>Medieval Orthodox cathedral in the heart of the city.</description>
+    </attraction>
+    <attraction lat="42.6975" lon="23.3222">
+      <name>Largo</name>
+      <description>Architectural ensemble of Socialist Classicism.</description>
+    </attraction>
+  </highlights>
+  <description>Situata ai piedi del monte Vitosha, Sofia offre costi di vita imbattibili e un accesso immediato alla natura montana. È una delle capitali emergenti con il più alto potenziale di crescita economica e urbana.</description>
+  <wiki_intro>'''Sofia''' (София) is the capital and largest city of Bulgaria, with about 2 million citizens (including suburbs). It is a dynamic European capital, distinguished by its unique combination of European and communist-style architecture as well as many beautiful Orthodox churches, including the grand Alexander Nevsky Cathedral and the medieval frescos of Boyana Church (a UNESCO World Heritage Site)...</wiki_intro>
+</city_report>

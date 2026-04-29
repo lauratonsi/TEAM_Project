@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="60.9">
+  <metadata>
+    <title>Stockholm</title>
+    <name_it>Stoccolma</name_it>
+    <flag>🇸🇪</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>147.63</hotel_price>
+    <safety index_score="54.2"/>
+    <environment green_score="88"/>
+    <cost_index value="79.8"/>
+    <economic_accessibility score="20.2"/>
+  </indicators>
+  <transport>The most practical option is the airport coaches to the City Terminal in Stockholm (80 min; 199 kr online). A sometimes cheaper option is to take the local bus 515 or 715 to Nyköping's rail station (alight at Nyköping Centralstation), from where SJ regional trains (timetable, direct services run to stations marked in white) on the Norrköping–Nyköping–Stockholm route connect to Stockholm (from 100 kr, cheaper on select days). Tickets can be bought the following two ways: Buy an SL combined ticket from Skavsta to Stockholm, valid on both the local bus and the regional train.</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="59.3281" lon="18.0914">
+      <name>Vasa Museum</name>
+      <description>Maritime museum with a salvaged 17th-century ship.</description>
+    </attraction>
+    <attraction lat="59.3251" lon="18.0708">
+      <name>Gamla Stan</name>
+      <description>The well-preserved medieval old town.</description>
+    </attraction>
+    <attraction lat="59.3275" lon="18.0544">
+      <name>City Hall</name>
+      <description>Building with a tower hosting the Nobel Banquet.</description>
+    </attraction>
+    <attraction lat="59.3253" lon="18.1039">
+      <name>Skansen</name>
+      <description>The world's oldest open-air museum and zoo.</description>
+    </attraction>
+    <attraction lat="59.3249" lon="18.0965">
+      <name>ABBA Museum</name>
+      <description>Interactive museum dedicated to the pop group.</description>
+    </attraction>
+    <attraction lat="59.3268" lon="18.0717">
+      <name>Royal Palace</name>
+      <description>The official residence of the Swedish monarch.</description>
+    </attraction>
+    <attraction lat="59.3261" lon="18.0847">
+      <name>Moderna Museet</name>
+      <description>State museum for modern and contemporary art.</description>
+    </attraction>
+    <attraction lat="59.3217" lon="17.8869">
+      <name>Drottningholm</name>
+      <description>The private residence of the Swedish royal family.</description>
+    </attraction>
+    <attraction lat="59.3178" lon="18.0858">
+      <name>Fotografiska</name>
+      <description>Major center for contemporary photography.</description>
+    </attraction>
+    <attraction lat="59.3233" lon="18.0964">
+      <name>Gröna Lund</name>
+      <description>Historic amusement park on the island of Djurgården.</description>
+    </attraction>
+  </highlights>
+  <description>Distribuita su quattordici isole, Stoccolma incarna l'eleganza scandinava e il design funzionale. La sua dedizione alla pulizia delle acque e alla sicurezza urbana la rende un modello di efficienza sociale.</description>
+  <wiki_intro>'''Stockholm''' is Sweden's capital and largest city, with nearly a million inhabitants in the city, and 2.4 million within Stockholm County (as of 2021). The inner city is made up of 14 islands across Lake '''Mälaren''' and three streams into the brackish '''Baltic Sea''', with the Stockholm archipelago with some 24,000 islands, islets and skerries. Over 30% of the city area is made up of wate...</wiki_intro>
+</city_report>

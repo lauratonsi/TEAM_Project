@@ -1,0 +1,798 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikivoyage</sitename>
+    <dbname>enwikivoyage</dbname>
+    <base>https://en.wikivoyage.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.46.0-wmf.24</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikivoyage</namespace>
+      <namespace key="5" case="first-letter">Wikivoyage talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1728" case="first-letter">Event</namespace>
+      <namespace key="1729" case="first-letter">Event talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Valletta</title>
+    <ns>0</ns>
+    <id>37598</id>
+    <revision>
+      <id>5255175</id>
+      <parentid>5252352</parentid>
+      <timestamp>2026-04-05T21:36:47Z</timestamp>
+      <contributor>
+        <username>~2026-21193-49</username>
+        <id>2392323</id>
+      </contributor>
+      <comment>Spelling correction</comment>
+      <origin>5255175</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="47147" sha1="o85nmjhc5m3g00e6mwrit3eegnyixkd" xml:space="preserve">{{pagebanner|Valletta banner View from Senglea.jpg|unesco=yes|otbp=yes}}
+'''Valletta''' or '''Il-Belt''' is the capital of [[Malta]]. Historically built as harbour city to first capital, Valletta preserves much of its 16th-century architectural heritage built under the Hospitallers. Valletta was one of the earliest sites inscribed on the [[UNESCO World Heritage List]].
+
+==Understand==
+Referred to colloquially as Il-Belt ("The City") in [[Maltese phrasebook|Maltese]], it takes its name from its founder, Grandmaster Jean Parisot de Valette.
+
+With a population of less than 5,200 in 2021, it is the least populated national capital in the European Union. The population of the urban area is 480,000 (2020), so Valletta doesn't feel like a small town. It is also the southernmost capital in the union, and one of only two without rail-based public transit (the other being [[Nicosia]] in [[Cyprus]]).
+
+Valletta was a "[https://valletta2018.org/ European Capital of Culture]" for 2018, an honour it shared with [[Leeuwarden]].
+
+===Climate===
+{{climate chart
+|Valletta
+|10.1 |15.7 |79.3
+|9.5 |15.7 |73.2
+|10.9 |17.4 |45.3
+|12.8 |20.0 |20.7
+|15.8 |24.2 |11.0
+|19.6 |28.7 |6.2
+|22.1 |31.7 |0.2
+|23.0 |32.0 |17.0
+|21.2 |28.6 |60.7
+|18.4 |25.0 |81.8
+|14.9 |20.8 |91.0
+|11.8 |17.2 |93.7
+
+|float=right
+|clear=right
+| description = Source: [[w:Valetta#Climate|Wikipedia]]. Visit [https://www.accuweather.com/en/mt/valletta/233779/daily-weather-forecast/233779 AccuWeather] for a five-day forecast.
+}}
+Being the southernmost European capital except for Nicosia and sitting next to the Mediterranean, Valletta is amongst the places in Europe that have mild and warm weather in most seasons. Nighttime lows are around 9/10°C in the winter, however at that time of the year, it's comparatively rainy. During the summer, expect sunny, hot weather.
+
+==Get in==
+[[File:Stadtbefestigung Valetta.JPG|thumb|Valletta city walls]]
+===By car===
+Most bus routes and many arterial roads converge on Valletta. However, inside the city, there are many one-way streets and some pedestrian zones. Parking can be difficult.  There is a large multi-storey car park in Floriana, about half a kilometre from the City Gate entrance to Valletta.
+
+===By bus===
+In front of the main gate of Valletta is the {{marker|type=go|name=main bus station|lat=35.8940 | long=14.5088}} for the entire island, and [https://www.publictransport.com.mt/journey-planner/ bus lines] covering the island in a grid, most of them spread out from here and return to here.
+
+===By boat===
+[[Image:Valletta Sliema.jpg|thumb|Valletta from Sliema]]
+For those opting not to fly to Malta, '''[https://www.virtuferries.com Virtu Ferries]''' runs ferries from [[Pozzallo]] on the island of [[Sicily]], [[Italy]].
+
+A much shorter journey can be done by [https://www.vallettaferryservices.com/ Valletta Ferry Services] across beautiful Marsamxett harbour from [[Sliema]] and past Manoel Island, for just €1.50. Considerably cheaper than paying for a harbour cruise.
+
+* {{go
+| name=Ferry from [[Three Cities]] | alt= | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=€2 one-way 
+| wikidata=
+| lastedit=2025-02-18
+| content=Every 30 min, leaving Bormla dock on the hour and the half-hour until 19:00. In the summer, the ferry runs several times in the evening (€3).
+}}
+* Water taxis leave whenever they have six people during daylight hours, €3 per person (Feb 2025).
+
+Another little-known way is to visit Vittoriosa by bus and then have the Maltese version of the gondola, the so called Dghajsa, bring you back in style across the spectacular Grand Harbour to Valletta, and drop you off just by Victoria gate for €3.50.
+
+===By plane===
+
+The island's sole airport is {{go
+| name=Malta International Airport | alt={{IATA|MLA}} | url=http://maltairport.com | email=
+| address= | lat=35.8575 | long=14.4775 | directions= in Luqa
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=Malta International Airport | image=Malta International Airport.jpg | wikidata=Q672289
+| content= The airport is the main hub for flag carrier [http://www.airmalta.com Air Malta] and a base for its new owner [http://www.ryanair.com Ryanair] with numerous flights all around Europe and the Mediterranean countries. The airport is also served seasonally by numerous European airlines from their respective hubs, but increasingly flights are available year-round
+}}
+*The [https://www.publictransport.com.mt/en/route/X4 X4 bus] runs from the airport to Valletta, with generally two buses per hour taking about 20 minutes, costing €2.50 in cash or with contant-less bank card on the bus.
+
+==Get around==
+{{mapframe|35.8991|14.5137|zoom=15}}
+{{mapshape}}
+The Valletta peninsula is only a couple of kilometres in length and so the ideal way is to do everything on foot, which enables you to take many shortcuts via stairs.  However, the city is built on a ridge and is steep in parts (requiring walking up and down stairs in some places), which can be tiring. The alternative would be doing it by car, which is not ideal for visitors due to a lack of parking space, direction signs and the fact that the streets are very narrow, often one way and confusing if unfamiliar. Most of the main tourist attractions are along the main street (Triq ir-Republika), which does not involve steep hills.
+
+Another possibility is to rent one of the horsecarts (Karozzin), but be sure to [[haggle]] over the price.
+
+===By taxi===
+* A fleet of [https://www.transport.gov.mt/land/public-transport/other-public-transport/electric-mini-cabs-830 electric mini-cabs] operates during the daytime in Valletta, with a maximum fare of €5.00.
+
+===By bus===
+Bus route 133 operates a circular path around Valletta, departing from the bus terminus and going round the peninsula, including the Valletta Waterfront, Fort St. Elmo and many other locations. However, since most of Valletta is more easily accessible on foot, use this bus only to visit a particular location rather than for general sightseeing.
+
+===By lift===
+
+* {{listing
+| name=Barrakka Lift | alt= | url=http://www.transport.gov.mt/land-transport/other-public-transport/barrakka-lift | email=
+| address= | lat=35.89435 | long=14.51221 | directions=near the Saluting Battery
+| phone= | tollfree=
+| hours=Nov-May: 07:00 - 21:00, Jun-Oct: 07:00 to 24:00 | price=€1.00
+| wikipedia= | wikidata=
+| lastedit=2018-03-29
+| content=A two-cabin lift between the waterfront and the main city level, taking 23 seconds to cover 58 m.
+}}
+
+==See==
+[[File:St Johns Co-cathedral Valletta Malta 2014 5.jpg|thumb|St. John's Co-cathedral]]
+
+* {{see
+| name=St. John's Co Cathedral | alt= | url=http://www.stjohnscocathedral.com/ | email=
+| address= | lat=35.897778 | long=14.512778 | directions=
+| phone= | tollfree= | fax=
+| hours=M-Sa 09:00-16:45, last entry 16:15; closed Su and holidays | price=€15 for adults (includes an audio guide) — buy online to skip the queue for tickets
+| wikipedia=Saint John's Co-Cathedral | image=Malte, La Valette, co-cathédrale St Jean.jpg | wikidata=Q613619
+|lastedit=2025-07-25| content=Unremarkable from the outside, but incredibly ornate on the inside. Each of the different 'langues' (knights of a particular nationality had their own langue) has its own chapel lined along the side of the nave in which they tried to outdo each other in splendour. The barrel-shaped ceiling is a single, huge fresco, the lifework of famed artist Mattia Preti. The floor is entirely taken by the knight's graves intricately inlaid in marble in different colours. One book on the subject describes it as the 'most beautiful floor in the world.' This lesser-known cathedral is one of the most impressive in Europe. Entrance is through the Carappechia Annex on Republic Street, between St. John's Street and St. Lucy Street, directly opposite the Law Courts. An audioguide is included in the entrance fee, which provides detailed historical information. 
+}}
+** {{see
+| name=Belfrey Tour | alt= | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=€5 extra 
+| wikidata=
+| lastedit=2025-07-25
+| content= takes you to a spectacular view of the cathedral from the gallery, and then up to the roof for okay views of the city. Timed tickets are available only at the cathedral; enquire when you go in. 
+}}
+** {{see
+| name=Works by Caravaggio | alt= | url=http://www.maltacultureguide.com/index.php?page=article&amp;article_id=16 | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=included in cathedral admission
+| lastedit=2025-07-25
+| content=Holds two works by Caravaggio, who was briefly himself a knight: the first one is the huge "Beheading of St. John the Baptist" (do not miss the explanatory light show up the staircase on your right), and the more modest ''Saint Jerome Writing'', a more sophisticated version of an earlier work found at Rome's villa Borghese.
+}}
+* {{see
+| name=Palace of the Grand Masters | alt= | url=http://heritagemalta.org/museums-sites/the-palace-armoury/ | email=
+| address= | lat=35.898833 | long=14.514056 | directions=
+| phone=+356 21249349 | tollfree= | fax=
+| hours=Jan Feb: daily 09:00-17:00; Mar-Dec: daily 10:00-18:00; (armoury sometimes closed for functions) | price=Adults €12, senior (60+) or youth (12-17) €10, child (6-11) €8
+| wikipedia=Grandmaster's Palace (Valletta) | image=Sudika Valletta Grandmasters Palace.jpg | wikidata=Q1368885
+| lastedit=2025-02-16
+| content=Now it is the President's office and the Maltese parliament. The staterooms, when accessible, are quite impressive. It also houses the Knights' armoury, which is open to visitors daily from 09:00-17:00. (However, all other parts of the palace are closed to visitors, so what you can see is limited.) At the entrance, you can receive an audio guide, which is included in the entrance fee. It provides you with further historical information about the various armoury of different eras, beginning from the medieval chain mail up to the 17th-century armour.
+}}
+* {{see
+| name=The Malta Experience | alt= | url=http://www.themaltaexperience.com/ | email=
+| address=St Elmo Bastions, Mediterranean St | lat=35.8998 | long=14.5187 | directions=
+| phone=+356 243776, +356 251284 | tollfree=
+| hours=Shows hourly; M-F 11:00-16:00, Sa Su 11:00-14:00 | price=Adult €20, student with ID €15.50, child 5 - 11 years old €9
+| lastedit=2025-02-04
+| content=Despite not being cheap, visitors who have any interest in culture or history and who haven't exhaustively read up on the country before coming here would do well by starting their visit to Malta by going here, as it is an excellent introduction to the country. It gives an impression of major events that shaped the country, but as it's only 45 min long and meant for first-time visitors, don't expect a dry scholarly treatment of the subject.
+}}
+* {{see
+| name=The Upper Barrakka Gardens | alt= | url= | email=
+| address= | lat=35.894722 | long=14.512222 | directions=at the upper south side of the peninsula
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=Upper Barrakka Gardens | image=Upper barrakka gardens-IMG 1669.jpg | wikidata=Q7898477
+| content=The gardens offer a jaw-dropping view of the Grand Harbour. Go on a sunny day and bring champagne!
+}}
+* {{see
+| name=The National Museum of Archaeology | alt= | url=http://www.heritagemalta.org/ | email=
+| address=Auberge de Provence, Republic St | lat=35.8975 | long=14.51125 | directions=
+| phone=+356 2122 1623 | tollfree= | fax=
+| hours=Daily 09:00-18:00 (17:00 in Jan, Feb) | price=€5.00
+| wikipedia=National Museum of Archaeology, Malta | image=The Sleeping Lady, 2009.jpg | wikidata=Q2898298
+| lastedit=2018-03-05
+| content=Even though Malta has an impressive and unique ancient history, this museum, housed in the former Auberge de Provence in Republic Street can be rather a disappointment. The museum is partially being renovated, hopefully bringing something more worthy of its name.
+}}
+
+[[File:Fort St. Elmo, Valletta - panoramio.jpg|thumb|Fort St. Elmo]]
+* {{see
+| name=Fort St. Elmo | alt=National War Museum | url=http://heritagemalta.org/museums-sites/national-war-museum/ | email=
+| address= | lat=35.901944 | long=14.518611 | directions=
+| phone= | tollfree= | fax=
+| hours=Apr-Sep: daily 09:00-18:00; Oct-Mar: daily 09:00-17:00 | price=€10
+| wikipedia=Fort Saint Elmo | image=Fort St. Elmo; Valletta, Malta.jpg | wikidata=Q1438745
+| lastedit=2018-03-05
+| content=Built at the tip of the peninsula by the knights after the Dragut Raid of 1551. During the Great Siege of 1565 the Turks made the mistake of choosing to first take this fort, for which they had planned a week. Instead, the knights and soldiers present fought desperately for a month, buying essential time. The knights in the fort knew they were fighting to the death, and so rather than being taken off the ramparts when wounded, knights would fight on seated in chairs until they couldn't even lift their arms anymore. Today, the fort houses the National War Museum and the Police Academy. The National War Museum is mainly focussed on World Wars 1 and 2, but covers the period from the Bronze Age onwards.
+}}
+* {{see
+| name=Fortifications of Valletta | alt= | url= | email=
+| address= | lat=35.89799 | long=14.50776 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikipedia=Fortifications of Valletta | wikidata=Q20671925
+| lastedit=2018-03-05
+| content=The imposing defence walls and ramparts at the entrance to Valletta, built by the Knights in the late 16th century are interesting to explore.
+}}
+* {{see
+| name=The National Library | alt=Bibliotheca | url=http://education.gov.mt/en/education/malta-libraries/Pages/default.aspx | email=
+| address=36 Old Treasury Street | lat=35.898235 | long=14.513551 | directions=
+| phone=+356 2123 6585 | tollfree= | fax=
+| hours= | price=
+| wikipedia=National Library of Malta | image=National Library of Malta.jpg | wikidata=Q1535341
+| content=An evocative old library on Republic Square, next to the Grandmaster's Palace. Only part of it is open to the public: you will need to take a passport or other photo ID to get in. The entire archives of the Knights of St. John from the Crusades in the 11th century until 1798, when Napoleon took Malta, are kept here, in true Maltese style in rickety wooden filing cabinets.
+}}
+* {{see
+| name=The Sacra Infermeria | alt=Mediterranean Conference Centre | url=http://www.mcc.com.mt/ | email=
+| address= | lat=35.8995 | long=14.518 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikipedia=Mediterranean Conference Centre | image=Malta - Valletta - Triq il-Mediterran-Triq it-Tramuntana - Mediterranean Conference Centre 01 ies.jpg | wikidata=Q16894983
+| content=The great hospital built by the knights in the 16th century was a hospital with the highest level of healthcare available in Europe at the time for men, both rich and poor, with non-contagious diseases (contagious disease patients were placed elsewhere, such as Manoel Island). Originally, it had two long corridors with private curtain-covered beds placed at an angle with ventilation holes leading to a courtyard garden filled with citrus trees and herbal plants. The top floors were mostly destroyed during World War II, including the upper ward. Since then, the courtyard garden was replaced with a 1400-seat theatre. In 1991, this theatre was used for reporters to receive and ask questions during the peace treaty signing between  Gorbachev and George Bush Sr. Since its rebuilding, it now functions as a conference centre for large events, including G7 summits and extravagant weddings. It is rarely open to the public, though guided tour tickets can be purchased alongside The Malta Experience.
+}}
+* {{see
+| name=The Casa Rocca Piccola | alt= | url=http://www.casaroccapiccola.com/ | email=
+| address=74 Republic St. | lat=35.899861 | long=14.515417 | directions=
+| phone=+356 2122 1499 | tollfree= | fax=
+| hours= | price=
+| wikipedia=Casa Rocca Piccola | image=Casa Rocca Piccola.jpeg | wikidata=Q2044132
+| lastedit=2017-12-09
+| content=A Maltese noble family house on Triq ir-Republika, a few hundred metres past the Grand Master's Palace on the right-hand side. Very enjoyable.
+}}
+* {{see
+| name=St. James Cavalier | alt= | url= | email=
+| address= | lat=35.895786 | long=14.510303 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=Saint James Cavalier | image=Malta - Valletta - Triq Girolamo Cassar - St. James Cavalier 01 ies.jpg | wikidata=Q7401400
+| content=A fortress opposite the Auberge of Castille (today the Prime Minister's office) which was built as part of the elaborate defence systems of Valletta. Today it houses a 'Centre for Creativity', with its own theatre, cinema, music room and exhibition halls. Its twin, St. John Cavalier, is the embassy of the Knights of St. John, who are, like the Vatican, recognised by several countries as a sovereign entity.
+}}
+* {{see
+| name=Hal Saflieni Hypogeum | alt= | url=http://heritagemalta.org/museums-sites/hal-saflieni-hypogeum/ | email=
+| address=Triq Ic Cimiterju, Paola | lat=35.86953 | long=14.50689 | directions=reachable by any bus route to Paola (e.g. Route 1,2,3) and a short walk from the bus stops
+| phone=+356 2142 4231 | tollfree= | fax=+356 2124 4231
+| hours=Eight tours are conducted daily, starting on the hour from 09:00 till 16:00 (last tour) | price=€35 in advance (€20 for seniors 60+), €50 for "last minute" tickets, if available
+| wikipedia=Ħal-Saflieni Hypogeum | image=Malta Hypogeum Modell.jpg | wikidata=Q755514
+| lastedit=2024-12-26
+| content=The Hal Saflieni Hypogeum is a subterranean structure excavated c. 2500 BC. Thought to have been built as a sanctuary, it became a necropolis in prehistoric times. It is the only prehistoric underground temple in the world. To ensure its conservation, the site’s microclimate is strictly regulated. For this reason, the site is open to a maximum of 80 visitors each day. Each tour is limited to ten visitors. A tour of the site starts with a brief introductory exhibition and multilingual audio-visual film focusing on the temple building peoples and the Hypogeum’s relationship to Malta’s temple sites. Booking in advance on the [https://heritagemalta.org/ Heritage Malta] website is strongly advised. If unable to book in advance, tickets for tours the next day at 12:00 and 16:00 are sold at the Valletta Museum of Fine Arts the day prior. They are sold at a first come, first serve basis. Depending on the season, lining up prior to the opening of the museum is a necessity for purchasing tickets. Plan on lining up anywhere from half an hour to an hour and a half in advance to ensure ticket purchases.
+}}
+* {{see
+| name=Tarxien Temples | alt= | url=http://heritagemalta.org/museums-sites/tarxien-temples/ | email=
+| address=Triq It Tempji Neolitici, Tarxien | lat=35.869167 | long=14.511944 | directions=
+| phone= | tollfree= | fax=
+| hours=Daily 09:00-17:00, last admission 16:30 | price=€6
+| wikipedia=Tarxien Temples | image=Tarxien temple.jpg | wikidata=Q1064331
+| content=This site, dating from 3600 to 2500 BC, is the most complex of all temple sites in Malta and consists of four megalithic structures.
+}}
+* {{see
+| name=Lascaris War Rooms | alt= | url=https://www.lascariswarrooms.com/ | email=
+| address=Lascaris Ditch | lat=35.89515 | long=14.51201 | directions=
+| phone= | tollfree=
+| hours=M-Sa 10:00 - 16:30, last admission 16:00 | price=Adult (16+) €20, senior €19, family (2 adults &amp; 3 children under 16) €35, child (5-15) €7
+| wikipedia=Lascaris War Rooms | image=War Headquarters, Malta GM2310.jpg | wikidata=Q1648164
+| lastedit=2025-02-16
+| content=Underground complex which was used as the British HQ during the defence of Malta in World War II.
+}}
+* {{see
+| name=St Paul's Pro-Cathedral | alt= | url=http://www.anglicanmalta.org/diocese/st-pauls-pro-cathedral/ | email=
+| address=Independence Square | lat=35.90067 | long=14.51201 | directions=
+| phone= | tollfree= | fax=
+| hours=Daily 10:00 - 15:00 | price=
+| wikidata=Q1280848| wikipedia=St Paul's Pro-Cathedral, Valletta | image=Die St. Paul’s Pro-Cathedral am Independence Square. - panoramio.jpg
+| lastedit=2018-03-06
+| content=Anglican cathedral built in 1844, with memorials to the World War 2 defence of Malta.
+}}
+* {{see
+| name=Malta Postal Museum | alt= | url=http://www.maltapostalmuseum.com/ | email=
+| address=135 Archbishop Street | lat=35.898611 | long=14.514722 | directions=
+| phone= | tollfree= | fax=
+| hours=M-F 10:00 - 16:00, Sa 10:00 - 14:00 | price=€5
+| wikidata=Q24896494| wikipedia=Malta Postal Museum
+| lastedit=2018-03-06
+| content=Museum run by Maltapost, including a working post office.
+}}
+* {{see
+| name=City Gate | alt=Porta di terra | url= | email=
+| address= | lat=35.896111 | long=14.509167 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=City Gate (Valletta) | image=Malta - Valletta - Triq Ir-Repubblika - Valletta City Gate bridge + City Gate 02 ies.jpg | wikidata=Q2044535
+| lastedit=2018-03-11
+| content=The fifth incarnation of the main entrance to the city was built between 2011 and 2014 to design of the Italian architect Renzo Piano. The first gate on this site was built in 1569.
+}}
+* {{see
+| name=Parliament House | alt= | url=https://parlament.mt/ | email=
+| address= | lat=35.896194 | long=14.50975 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=Parliament House (Malta) | image=Parlimentmalta34.jpg | wikidata=Q19882533
+| lastedit=2018-03-11
+| content=Malta Parliament building built between 2011 and 2015 at a cost of €90 million to a design by Renzo Piano. The building's design of two large stone blocks on stilts is controversial, but it has low emissions with solar panels on the roof. Public access to the building is restricted.
+}}
+
+==Do==
+[[File:Valletta-misrah-san-gorg-st-george-s-square.JPG|thumb|St George's Square]]
+[[File:Valletta Saluting battery Malta 2014 7.jpg|thumb|Saluting Battery]]
+[[File:Saluting battery and Grand Harbour in Valletta.jpg|thumb|View from Upper Barrakka Gardens]]
+* {{do
+| name=Coastal Walk | alt= | url= | email=
+| address= | lat=35.90146 | long=14.51160 | directions=
+| phone= | tollfree=
+| hours= | price=
+| lastedit=2018-03-06
+| content=You can take a spectacular walk along the sea around the outside of the city walls. If you go to the mooring place where the ferry for Sliema leaves, there is the possibility to walk over the rocks towards the tip of the peninsula and then around it coming back up into the city just next to the Malta Experience. This walk takes about 30 minutes and is done by virtually no-one. As parts of this walk go via bare rocks, it's recommended to wear proper shoes and only do it in dry weather.
+}}
+* {{do
+| name=St. George's Square | alt=Misraħ San Ġorġ | url= | email=
+| address= | lat=35.89907 | long=14.51361 | directions=
+| phone= | tollfree=
+| hours= | price=
+| image=St George's Square.jpg
+| lastedit=2018-03-05
+| content=At night in St George's Square, there is a lovely water fountain, with coloured spouts of water which pop up and down - a fantastic play opportunity for children. They ''will'' get wet, so don't let them go near if they are wearing their best clothing. Great fun for kids.
+}}
+* {{do
+| name=Audio Guide | alt= | url=http://www.myguide.com.mt/myguide-rentals | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| lastedit=2018-03-05
+| content=To get further historical information about the numerous places of interest in Valletta it can be useful to get an audio guide. It is available in different languages from the Archeology Museum on Republic Street. You can choose independently from the 24 stops and it is not necessary to follow the given order. Stops can easily be skipped or visited in another sequence when tired or full of the new information.
+}}
+* {{do
+| name=Saluting Battery | alt= | url=http://www.salutingbattery.com/visitor-info.html | email=
+| address=Battery Street | lat=35.89460 | long=14.51254 | directions=
+| phone= | tollfree=
+| hours= | price=Entrance €3
+| wikipedia=Saluting Battery (Valletta) | wikidata=Q19508900
+| lastedit=2019-12-17
+| content=A gun is fired twice a day M-Sa, at 12:00 and 16:00.
+}}
+* {{do
+| name=Manoel Theatre | alt=Maltese: It-Teatru Manoel | url=http://www.teatrumanoel.com.mt/ | email=
+| address=Old Theatre St, | lat=35.899827 | long=14.512821 | directions=
+| phone=+356 21246389, +356 22-26-18 | tollfree=
+| hours= | price=
+| wikipedia=Manoel Theatre | image=Manoel theatre (12843882153).jpg | wikidata=Q576800
+| content= 'La Scala' in miniature, a very beautiful 17th-century theatre in its original state. One of the oldest active theaters in Europe, it is the place for many classical music performances but also for instance the hilarious Christmas Panto.
+}}
+* {{do
+| name=Pjazza Teatru Rjal | alt=Open Air Theatre | url=https://culture.gov.mt/en/pjazzateatrurjal/Pages/main.aspx | email=
+| address=Casa Cassar, Triq il-Vittorja | lat=35.89656 | long=14.51034 | directions=
+| phone=+356 22478100 | tollfree=
+| hours= | price=
+| wikipedia=Royal Opera House, Valletta | wikidata=Q576808
+| lastedit=2018-03-05
+| content=Open theatre on the site of the former Royal Opera House which was destroyed by a bomb in 1942. The outdoor theatre was designed by Renzo Piano and opened in 2013.
+}} 
+* {{do
+| name=Valletta International Baroque Festival | alt= | url=https://www.vallettabaroquefestival.mt/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours=Annually in January | price=
+| wikipedia=Valletta International Baroque Festival | wikidata=Q33100022
+| lastedit=2018-03-05
+| content=Festival of baroque music concerts and operas.
+}}
+
+===Football=== 
+There are three local teams playing soccer in the Maltese Premier League. International games are played at the National Stadium, Ta' Qali, near Mdina.
+
+* {{do
+| name=Valletta F.C. | alt= | url=http://www.vallettafcofficial.net | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q331589
+| lastedit=2023-01-02
+| content=
+}}
+* {{do
+| name=Floriana F.C. | alt= | url=http://www.florianafc.com/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q728557
+| lastedit=2023-01-02
+| content=
+}}
+* {{do
+| name=Hibernians F.C. | alt= | url=http://www.hiberniansfc.org/ | email=
+| address=Tony Bezzina Stadium, Paola | lat=35.882917 | long=14.513 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q936187
+| lastedit=2023-01-02
+| content=
+}}
+
+==Learn==
+Several of the Maltese English language institutes are in Valletta.
+&lt;!--Great, that tells me zilch--&gt;
+
+==Buy==
+The main street of Valletta is Republic Street (''Triq Ir-Repubblika''), a busy pedestrianised zone leading down the middle of the Peninsula from the main gate down to Republic Square (''Misrah ir-Repubblika''). This is where many of the better shops are located, although it cannot quite compete with Sliema for clothing.
+
+The best souvenir shop (the least worthless trinkets etc.) can be found at the Malta Experience, but there are many other reasonable souvenir shops in Valletta. At the beginning of Republic Street, there are several reasonable souvenir shops, but prices are far cheaper if you walk 20 meters down South Street (turn left if you have the bus station behind you,) which crosses Republic Street very soon after you have entered through the city gates.
+* {{buy
+| name=il-lokal | alt= | url=https://il-lokal.com/ | email=
+| address=203 Old Bakery St | lat=35.898225 | long=14.510711 | directions=
+| phone= | tollfree=
+| hours= Tu-Sa 10:00-19:00| price=
+| lastedit=2023-07-28
+| content=Locally-made art and design products.
+}}
+* {{buy
+| name=Agenda Bookshop | alt= | url=https://agendabookshop.com/ | email=
+| address=26 Republic St | lat=35.897418 | long=14.511426 | directions=
+| phone=+356 2123 3621 | tollfree=
+| hours= | price=
+| lastedit=2016-12-01
+| content=The best bookshop in Malta is definitely the one formerly known as Sapienzas on Republic Street, but can be a bit more expensive. There is another branch near The Embassy Hotel on St. Lucia Street.
+}}
+* {{buy
+| name=Meli Bookshop | alt= | url= | email=
+| address=185 Old Bakery St | lat=35.898835 | long=14.511596 | directions=
+| phone=+356 2123 7266 | tollfree=
+| hours=M-Sa: 9 am–1 pm, 4–7 pm, F: 9 am–1 pm, 4–7 pm, Sa: 9am-1pm, Su: closed | price=
+| lastedit=2026-01-05
+| content=Small independent bookshop with a varied selection of books, including very old books that are priced in lira.
+}}
+
+There is a daily market selling cheap clothing in the parallel street to Republic Street called Merchants Street (''Triq il-Merkanti'').
+
+The iconic family-owned Wembley Store on Republic Street closed after 101 years.
+
+* {{buy |name=Farmers Market |address=|phone=|email=|fax=|url=|hours=|price=|lat=35.8956 | long=14.5109|lastedit=|content=Every Sunday there's a market in front of St. James Cavalier, with local food products and textiles.}}
+* {{buy
+| name=Fish Market | alt= | url= | email=
+| address= | lat=35.89675 | long=14.51621 | directions=
+| phone= | tollfree=
+| hours= | price=
+| content=Every morning, you can buy fresh fish next to the Castillan Curtains.
+}}
+* {{buy |name=Malta Government's Crafts Centre |address=|phone=|email=|fax=|url=|hours=M–F 09:00–12:30, 13:00–17:00 |price= |lat=35.89731 |long=14.51191 |lastedit=|content=At Malta Government's Crafts Centre local handicrafts are presented, and while you can't buy them there, at the centre they will inform you where the individual objects can be bought.}}
+
+==Eat==
+[[File:Valletta Pro-Kathedrale St. Paul Innen 2.JPG|thumb|St. Paul's Pro-Cathedral]]
+Valletta has a good selection of decent restaurants, especially along the waterfront. Since most tourists stay in Sliema or on the north coast of the island there are fewer of the trashy variety, although it does have the usual fast-food chains. Look out for traditional bakeries, with steaming fresh bread for mere cents.
+
+===Budget===
+At almost every corner you can find ''pastizzerie'' selling pies stuffed with cheese or peas, for just 30-50 cents each and are a popular late-night snack.
+* {{eat
+| name=No.43 | alt= | url=https://www.facebook.com/no43valletta/ | email=
+| address=43, Triq Il-Merkanti | lat=35.897736 | long=14.513663 | directions=
+| phone=+356 2703 2294 | tollfree=
+| hours=M-Sa 08:00-17:00 | price=
+| lastedit=2022-09-01
+| content=Café with fresh sandwiches, soups, salads and home made cakes. At the counter you can choose salads to eat in or take out.
+}}
+* {{eat
+| name=The Submarine | alt= | url= | email=
+| address=Triq il-merkanti 42 | lat= 35.8975738 | long=14.5134883 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+ | lastedit=2022-09-01
+| content=Kind and good sandwiches. The Porchetta is sublime. Most humble ftira and salads in the city. Vegan and Vegetarian friendly.
+}}
+* {{eat
+| name= Croce Bonaci Caterers | alt= | url= | email=
+| address=24D, San Gwann | lat=35.8968500 | long=14.5127245 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+ | lastedit=2022-09-01
+| content=Secluded site with wery good breakfast and tremendous sandwiches. Great little café with friendly and helpful staff. Authentic Maltese food. Excellent welcome.
+}}
+* {{eat
+| name=Museum Cafe | alt= | url= | email=
+| address=Melita St | lat= 35.8965281 | long=14.5116597 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+ | lastedit=2022-09-01
+| content=Cosy little café with very impressive interior and amazing food. It is one of the old Maltese bars as they ought to be. Great to enjoy original Maltese ftira. The owner is super nice and accommodating.
+}}
+* {{eat
+| name=Old Bakery's Pizza e Pasta | alt= | url= | email=
+| address=28 A South Street Valletta | lat= 35.8976313 | long=14.5094764 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+ | lastedit=2022-09-01
+| content=Small size pizza restaurant. Fresh ingredients for a good pizza cooked in a wood oven. The pizza is tasteful like Italian pizzas.
+}}
+* {{eat
+| name=The Circle's Bar And Coffe Shop | alt= | url= | email=
+| address=St. Christopher's Street | lat=35.8996202 | long=14.5148361 | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+ | lastedit=2022-09-01
+| content=The interior is charming and the food is homely. A great air-conditioned place to have a break from the sun.
+}}
+
+===Mid-range===
+
+*{{eat
+| name=De Robertis | alt=Castille Hotel Roof Top Restaurant | url=http://www.hotelcastillemalta.com | email=
+| address=Castille Square | lat=35.8956 | long=14.5118 | directions=corner of St Paul's St
+| phone=+356 2124 3677 | tollfree= | fax=
+| hours=Daily 12:00-14:30, 19:00-22:00 | price=
+| lastedit=2018-03-04
+| content=Great view and tasty food.
+}}
+* {{eat
+| name=Da' Pippo Trattoria | alt= | url=https://www.yellow.com.mt/da-pippo-trattoria_restaurants+valletta/ | email=
+| address=136 Melita St | lat=35.8989 | long=14.5095 | directions=
+| phone=+356 2124 8029 | tollfree= | fax=
+| hours=Daily 11:30-15:30 | price=
+| lastedit=2018-03-04
+| content=A place where locals go for lunch. Good seafood.
+}}
+* {{eat
+| name=Caffe Cordina | alt= | url=http://www.caffecordina.com/ | email=
+| address=244/5 Republic St | lat=35.89856 | long=14.51333 | directions=
+| phone=+356 2123 4385 | tollfree= | fax=
+| hours=M-Sa 08:00-19:00, Su 08:00-16:00 | price=
+| lastedit=2018-03-04
+| content=Venerable cafe, popular for lunch or for pastries &amp; coffee in the coffee bar. Mixed reviews of the food.
+}}
+* {{eat
+| name=Malata Restaurant | alt= | url= | email=
+| address=St Georges Palace Sq | lat=35.89917 | long=14.51331 | directions=
+| phone=+356 2123 3967 | tollfree= | fax=
+| hours= | price=
+| lastedit=2018-03-26
+| content=If you are looking for a place in Valletta to have dinner on a terrace, then this is a nice place to go slightly later in the evening when the square in front of the Grand Master's palace is almost emptied of parked cars.
+}}
+* {{eat | name = Rubino | url = http://www.rubinomalta.com/ | address = 53 Old Bakery Street| lat = 35.899307 | long = 14.512145 | hours = M 12:30 - 14:30, Tu-F 12:30 - 14:30 and 19:30 - 22:30, Sa 19:30 - 22:30 | lastedit = 2018-02-04 | content=Maltese traditional cuisine is served in this restaurant which was opened in 1906. Prior reservation recommended. }}
+* {{eat | name = Scoglitti | address = 8' Triq il-Lanca Marsamxett | lat = 35.900097 | long = 14.509678 | phone = +356 7723 5548 | hours = daily 12:00 - 15:00, 19:00 - 23:00 | lastedit = 2018-02-04
+| content=Fish restaurant right next to the sea. They serve freshly caught fish, lobsters and oysters.}}
+* {{eat | lat=35.89905 | long=14.51634 |address=Triq St Dominic, 143
+| name=Nenu the Artisan Baker
+|hours= Tu-Sa 11:45-15:30 and 18:00-23:30, Su 11:45-16:00
+|phone=+356 225-81535 |url=http://nenuthebaker.com
+| price= [[Malta#Eat|ftira]] €12, mains €14-18
+| content=Bakery famous for its ftira (traditional Maltese ring-formed bread). Also serves Maltese dishes and desserts.
+}}
+* {{eat
+| name=Luciano Restaurant | alt= | url=http://www.vallettaboutique.com/ | email=bookings@vallettaboutique.com
+| address=21/22 Merchant Street | lat=35.8971 | long=14.5130| directions=adjacent to St. John’s Cathedral
+| phone=+356 2123 6212 | tollfree= | fax=
+| hours= | price=
+| lastedit=2022-09-01
+| content=Good food for reasonable prices in a charming location near cathedral - big portions. On 3rd floor of Luciano Hotel.
+}}
+
+===Splurge===
+Often upscale Asian restaurants don't live up to the expectations, at least when it comes to the food. Many such disappointing restaurants are in big upscale hotels.
+* {{eat | name = Legligin | address = 117/119, Santa Lucia Street | lat = 35.899229 | long = 14.511741 | phone = +356 2122 1699 | hours = Tu-Sa 13:00 - 01:00, Su M 18:00 - 01:00 | lastedit = 26-07-2024 | url = https://www.facebook.com/pages/Legligin-Valletta/150267571722429 | price=Set menu €35 lunch, €45 dinner| content=A set menu of Maltese dishes. Food varies each day depending on what they buy at market. Vegetarian options. No à la carte menu. Wine pairing for €40 extra.
+}}
+* {{eat | lat=35.8951 | long=14.51248 |address= Triq Sant’ Orsla |directions=
+| name=Café Deux Baronnes |alt=
+| url= https://www.facebook.com/bestviewinMalta/
+| content=Expensive even by local standards, but the cafe has a relaxed atmosphere and a good view of Grand Harbour and Fort Sant'Angelo.
+}}
+
+==Drink==
+[[File:!! Auberge de Castille at sunrise !!.jpg|thumb|Auberge de Castille at sunrise]]
+*{{drink
+| name=Trabuxu Wine Bar | alt= | url=http://trabuxu.com.mt/ | email=
+| address=2 Strait Street | lat=35.89716 | long=14.51008 | directions=
+| phone=+356 2122 3036 | tollfree= | fax=
+| hours=Tu-Sa 19:00-23:00 | price=
+| lastedit=2018-03-08
+| content=A charming wine bar in an ancient cellar serving light meals. It's at the beginning of a small alley parallel to Republic street, look for the wooden sign with the corkscrew. The bistro is opposite, on South Street.
+}}
+*{{drink
+| name=Rampila Restaurant and Wine bar | alt=Rampila | url=http://www.rampila.com | email=
+| address=St John's Cavalier | lat=35.89685 | long=14.50892 | directions=Enter city via City Gate, first left then left again, you'll see an olive tree, an old stone bench and the railings around the entrance to Rampila.
+| phone=+356 2122 6625 | tollfree= | fax=
+| hours=Daily 12:00-22:30 | price=
+| lastedit=2018-03-04
+| content=Maltese-Mediterranean fusion restaurant and wine bar in the impressive bastions. You can enjoy a fine plate of fresh seafood, meat, game, pasta or risotto there or enjoy a platter and/or dips accompanied by wine from an extensive selection.
+}}
+* {{drink
+| name=The Pub | alt=Ollie's last pub | url= | email=
+| address=136, Archbishop Street | lat=35.89867 | long=14.51472 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikipedia= | wikidata=
+| lastedit=2020-04-03
+| content=A place where actor Oliver Reed died in a drinking match against a group of sailors.
+}}
+* {{drink
+| name=Cafe Society | alt= | url=https://www.instagram.com/cafesociety_valletta/ | email=
+| address=13 Triq San Gwann | lat=35.896471 | long=14.512995 | directions=
+| phone= | tollfree=
+| hours=Daily 12:00-01:00 | price=
+| lastedit=2023-07-28
+| content=The only queer bar in Malta. Great drinks. Guests spill out into the street in warmer months.
+}}
+
+==Sleep==
+[[File:Malta 270915 Valletta 06.jpg|thumb|Ships passing the Saluting Battery]]
+===Budget===
+In Valletta proper, accommodation is rather expensive with nights at midrange hotels often costing €150-200 even in the low season. If you don't want to spend too much of your travel budget on the place to sleep, consider staying in one of the surrounding towns where rates are much lower.
+
+*{{sleep
+| name=Asti Guesthouse | alt=Casa Asti | url=http://www.casaastimalta.com/ | email=
+| address=18 St Ursula St | lat=35.89586 | long=14.51267 | directions=
+| phone=+356 2123 9506 | tollfree= | fax=
+| checkin= | checkout= | price=€20
+| lastedit=2018-03-26
+| content=Small guesthouse. Rooms not en-suite, but three double bathrooms between nine rooms means there is no problem with accessing facilities. Price includes breakfast in a lovely room with a huge chandelier.
+}}
+* {{sleep | lat=35.89539 | long=14.51240
+| name=Grand Harbour Hotel  |alt=
+| address=Battery Street, 47 |directions=
+| url= http://www.grandharbourhotel.com |phone=+356 2124-6003
+| lastedit= 2018-01-07
+| price=standard double rooms from €100 (from €80 in low season), including breakfast
+| content=Rooms equipped with tv, hair dryer, laptop safe, coffeemaker, ironing equipment for clothes. The terrace overlooks the Grand Harbour, but most of the rooms overlook the courtyard.
+}}
+
+=== Mid-range ===
+*{{sleep
+| name=British Hotel | alt= | url=http://www.britishhotel.com/ | email=reservations@britishhotel.com
+| address=40 Battery St | lat=35.8958 | long=14.5132 | directions=
+| phone=+356 2122 4730 | tollfree= | fax=
+| checkin= | checkout= | price=rates from about €120 &lt;!--per booking engines listed on google maps--&gt;
+| lastedit=2018-03-04
+| content=Friendly two-star. Has fantastic staff and a really cool bar with one of the best views in Valletta.
+}}
+*{{sleep
+| name=Valletta G-House | alt= | url=http://www.vallettahouse.com | email=aldo@vallettahouse.com
+| address=60 North St | lat=35.90082 | long=14.51703 | directions=near Fort Elmo
+| phone=+44 7765 4321 | tollfree= | fax=
+| checkin= | checkout= | price=€150/night
+| lastedit=2018-03-04
+| content=Artist's private townhouse, sleeps two. Large bedroom with striking floor tiles and traditional 'galleria', rustic kitchen with all mod-cons and lounge.
+}}
+*{{sleep
+| name=Valletta Suites | alt= | url=http://www.vallettasuites.com | email=
+| address=St Lucia St | lat=35.8996 | long=14.5112| directions=
+| phone=+356 7948 8047 | tollfree= | fax=
+| checkin= | checkout= | price=€140 per suite per night
+| lastedit=2018-03-04
+| content=Boutique hotel with 3 self-contained suites within a 17th-century townhouseː Maison La Vallette, Valletta Nobile and Lucia Nova.
+}}
+* {{sleep | lat=35.89992 | long=14.51229
+| name=De Vilhena  |alt=
+|address=Old Theatre Street 55 |directions=
+|url= http://devilhena.com/ |phone=+356 2124-2020
+| lastedit= 2018-01-07
+| price=rates from €140
+| content=Right in the heart of Valletta, with 22 upscale rooms. Visitors complain about noise, and the fact that breakfast isn't served at the hotel itself.}}
+
+=== Splurge ===
+
+* {{sleep
+| name=Casa Ellul | alt= | url=http://www.casaellul.com | email=info@casaellul.com
+| address=81 Old Theatre Street, Valletta VLT 1429, Malta | lat=35.89984 | long=14.51221| directions=central, on block between West St &amp; Old Mint St
+| phone=+356 21 224 821 | tollfree= | fax=
+| checkin= | checkout= | price=
+| lastedit=2018-03-04
+| content=4-star boutique hotel on a quiet street in central Valletta. Has eight suites (most with balconies) ranged around a central courtyard, with free Wi-Fi, flat-screen TVs and minibars, as well as tea and coffee-making facilities.
+}}
+*{{sleep
+| name=Grand Hotel Excelsior | alt= | url=http://www.excelsior.com.mt | email=info@excelsior.com.mt
+| address=Great Siege Rd, Floriana | lat=35.8972 | long=14.5052 | directions=
+| phone=+356 2125 0520 | tollfree= | fax=
+| checkin= | checkout= | price=
+| lastedit=2018-03-04
+| content=5-star hotel set in 16th-century ramparts
+}}
+*{{sleep
+| name=The Phoenicia | alt= | url=http://www.campbellgrayhotels.com | email=info@phoeniciamalta.com
+| address=The Mall, Floriana | lat=35.8953 | long=14.5071 | directions=
+| phone=+356 2122 5241 | tollfree= | fax=+356 2123 5254
+| checkin=14:00 | checkout=12:00 | price=€250 per room per night
+| wikidata=Q21563450| wikipedia=Hotel Phoenicia
+| lastedit=2018-03-04
+| content=5-star luxury Art-Deco hotel  just outside of the main gate.
+}}
+* {{sleep | lat=35.89806 | long=14.51626
+| name=Palazzo Consiglia  |alt=
+| address=Saint Ursula Street 102 |directions=
+| url= http://palazzoconsiglia.com/ |phone= +356 2124-4222
+| lastedit= 2018-01-07
+| price=rates from about €200 upwards
+| content=Boutique hotel with 13 rooms, each room individually designed. Rooms have the amenities one can expect at an upscale hotel including tv, bathroom, minibar, hairdryer, coffeemaker, free wi-fi. The hotel also has a wellness area and swimmingpool.}}
+*{{sleep
+| name=Osborne Hotel | alt= | url=http://www.osbornehotel.com/ | email=
+| address=50 South St | lat=35.89860 | long=14.50884 | directions=
+| phone=+356 2124 3656 | tollfree= | fax=
+| checkin= | checkout= | price=€200
+| lastedit=2018-03-04
+| content=3-star hotel in a converted palace.
+}}
+* {{sleep | lat=35.89888 | long=14.51541
+| name=The Saint John - AX Hotels  |alt=
+| address=Merchant Street, 176 |directions=
+| url= https://thesaintjohnmalta.com |phone=+356 2124-3243
+| lastedit= 2018-01-07
+|price=rates from €200
+| content=Chain hotel in a historic building. Rooms have the amenities one can expect at a 'splurge' hotel.}}
+
+==Stay safe==
+Most of the usual petty crime that travelers are confronted with happens in Sliema and St. Julians, but it's something to keep in mind.
+
+==Connect==
+Many businesses (restaurants, hotels etc.) offer free [[Wi-Fi]], in addition to the "Free Wi-Fi" zones that exist around Malta. The country has several mobile carriers with 5G and your phone will work just like elsewhere in Europe.
+
+There are several English-language news outlets such as Times of Malta and Loving Malta.
+
+==Cope==
+===Embassies===
+* {{flag|Germany}} {{listing
+| name=Germany | alt= | url=http://www.valletta.diplo.de | email=
+| address=Whitehall Mansions, 3rd floor, ix-Xatt Ta'xbiex  XBX 1035 | lat= | long= | directions=
+| phone=+356 2260 4000 | tollfree= | fax=
+| hours=M-W F 09:00-12:00 and W 13:15-16:15; closed Th Sa Su
+| lastedit=2018-03-04
+| content=
+}}
+* {{flag|Greece}} {{listing
+| name=Greece | alt= | url=http://www.mfa.gr/valletta | email=gremb.val@mfa.gr
+| address=Villino Fond Galland No 6 IR' Rampa, Ta'xbiex XBX 1035 | lat= | long= | directions=
+| phone=+356 2732 0888 | tollfree= | fax=+356 2132 0788
+| hours=M-F 08:30-16:00 | price=
+| lastedit=2018-03-04
+| content=
+}}
+* {{flag|South Korea}} {{listing
+| name=South Korea | alt= | url= | email=
+| address=Exchange Building, Republic Street | lat= | long= | directions=
+| phone=+356 2229 6164 | tollfree= | fax=
+| hours=
+| lastedit=2023-01-02
+| content=
+}}
+* {{flag|United Kingdom}} {{listing
+| name=United Kingdom | alt= | url=https://www.gov.uk/world/organisations/british-high-commission-malta | email=
+| address=Whitehall Mansions, ix-Xatt Ta'xbiex  XBX 1035 | lat= | long= | directions=
+| phone=+356 2323 0000 | tollfree= | fax=
+| hours=
+| lastedit=2023-01-02
+| content=
+}}
+* {{flag|United States}} {{listing
+| name=United States | alt= | url=https://mt.usembassy.gov/ | email=acsmalta@state.gov
+| address=Ta' Qali National Park, Attard | lat= | long= | directions=10 km west of centre
+| phone=+356 2561 4000 (for regular and emergency service) | tollfree= | fax=+356 2124 3229
+| hours=M W 14:00-16:00, Tu Th 09:00-11:00 | price=
+| lastedit=2018-03-04
+| content=
+}}
+
+==Go next==
+
+Almost all of Malta's bus routes start from the large roundabout just outside the main gate, making everywhere in the country accessible.
+
+There is also the ferry which goes to '''[[Sliema]]''', across the bay to the northwest. Sliema and '''[[St. Julian's]]''' further northwest are more modern towns and unlike Valletta more geared towards nightlife and partying.
+
+*'''[[Mdina]]'''
+*'''[[Cottonera]]''' (Three Cities) — the name used when referring to the three historic and ancient cities of Birgu (aka Vittoriosa), Isla (aka Senglea) and Bormla (aka Cospicua), three towns conglomerated by 16th century fortifications called the Cottonera lines.
+*'''[[Gozo]]'''
+*[[Northern Harbor of Malta]]
+*[[Southern Harbor of Malta]]
+
+Valletta is a UNESCO [[World Heritage Site]] but two more can be found in the suburb of Tarxien, in the form of the Megalithic Temples and the Hypogeum
+
+{{guidecity}}
+{{geo|35.897778|14.512500}}
+{{isPartOf|Malta Island}}</text>
+      <sha1>o85nmjhc5m3g00e6mwrit3eegnyixkd</sha1>
+    </revision>
+  </page>
+</mediawiki>

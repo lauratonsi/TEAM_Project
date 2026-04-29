@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="67.9">
+  <metadata>
+    <title>Vienna</title>
+    <name_it>Vienna</name_it>
+    <flag>🇦🇹</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>142.27</hotel_price>
+    <safety index_score="73.2"/>
+    <environment green_score="85"/>
+    <cost_index value="76.9"/>
+    <economic_accessibility score="23.1"/>
+  </indicators>
+  <transport>Vienna International Airport Vienna International Airport Vienna International Airport url email address lat48.110278 long16.569722 directionsjust outside the city limits of Vienna on the far side of the City of Schwechat phone tollfree hours price wikipediaVienna International Airport image2011-06-14 10-23-53 Austria Niederösterreich Fischamend Markt.jpg wikidataQ32999 lastedit2025-07-26 contentTo get to Vienna, you have three different railway options. The cheaper but slower S-Bahn line S7 (24 minutes; €4.60) and the more expensive but faster City Airport Train (15 minutes; from €11) both go to Wien-Mitte/Landstraße. If you are taking the S7 train, and you have a valid Vienna public transportation ticket, you only need to purchase a ticket from the airport to Schwechat, as all onward stations are covered by the zone 100 ticket.</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="48.1845" lon="16.3122">
+      <name>Schönbrunn Palace</name>
+      <description>Grand Baroque palace and former summer residence.</description>
+    </attraction>
+    <attraction lat="48.2084" lon="16.3731">
+      <name>St. Stephen's</name>
+      <description>Iconic Gothic cathedral in the city center.</description>
+    </attraction>
+    <attraction lat="48.1915" lon="16.3808">
+      <name>Belvedere</name>
+      <description>Historic complex with two Baroque palaces and art.</description>
+    </attraction>
+    <attraction lat="48.2166" lon="16.3958">
+      <name>Prater</name>
+      <description>Large public park with a giant Ferris wheel.</description>
+    </attraction>
+    <attraction lat="48.2065" lon="16.3653">
+      <name>Hofburg</name>
+      <description>Former imperial palace of the Habsburgs.</description>
+    </attraction>
+    <attraction lat="48.203" lon="16.3691">
+      <name>State Opera</name>
+      <description>One of the leading opera houses in the world.</description>
+    </attraction>
+    <attraction lat="48.1973" lon="16.361">
+      <name>Naschmarkt</name>
+      <description>Famous open-air market for food and goods.</description>
+    </attraction>
+    <attraction lat="48.2047" lon="16.3681">
+      <name>Albertina</name>
+      <description>Art museum with one of the world's largest print rooms.</description>
+    </attraction>
+    <attraction lat="48.2037" lon="16.3617">
+      <name>Kunsthistorisches</name>
+      <description>Imperial museum of art and artifacts.</description>
+    </attraction>
+    <attraction lat="48.2109" lon="16.3575">
+      <name>Rathaus</name>
+      <description>Neogothic city hall building and event square.</description>
+    </attraction>
+  </highlights>
+  <description>Costantemente premiata come città più vivibile al mondo, Vienna eccelle nell'edilizia sociale e nel trasporto pubblico. Il suo equilibrio tra cultura imperiale e modernità sostenibile è la sua firma distintiva.</description>
+  <wiki_intro>'''Vienna''' (German phrasebook|German: ''Wien''; Austro-Bavarian: ''Wean'') is the capital of Austria and by far its most populous city, with an urban population of 2 million and a metropolitan population of 2.9 million (2023). It is the country's artistic, cultural, economic and political centre. It is known for its high living standards, relaxed yet elegant lifestyle and rich musical life.
+...</wiki_intro>
+</city_report>

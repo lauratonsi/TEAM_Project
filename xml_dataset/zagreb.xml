@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="67.9">
+  <metadata>
+    <title>Zagreb</title>
+    <name_it>Zagabria</name_it>
+    <flag>🇭🇷</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>30</hotel_count>
+    <hotel_price>101.38</hotel_price>
+    <safety index_score="77.1"/>
+    <environment green_score="70"/>
+    <cost_index value="54.8"/>
+    <economic_accessibility score="45.2"/>
+  </indicators>
+  <transport>Buses leave from the airport at 07:00 and every 30 minutes between 08:00 and 20:00. Beyond these hours, there are buses leaving to the main bus station every time a Croatia Airlines plane lands. When traveling to the airport from the main Zagreb bus station, the buses are scheduled between 04:30 and 20:30.</transport>
+  <accommodation>
+    <hotel>
+      <name>Chillout Hostel Zagreb</name>
+      <price>From €25</price>
+    </hotel>
+    <hotel>
+      <name>Fulir Hostel Zagreb</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Funk Lounge</name>
+      <price>dorm from: €13, private from: €20</price>
+    </hotel>
+    <hotel>
+      <name>Hobo Bear Hostel</name>
+      <price>Dorm bed: €14</price>
+    </hotel>
+    <hotel>
+      <name>Hostel Lika</name>
+      <price>Dorm bed: €13.5</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="45.8144" lon="15.9792">
+      <name>Zagreb Cathedral</name>
+      <description>Gothic cathedral and tallest building in Croatia.</description>
+    </attraction>
+    <attraction lat="45.8164" lon="15.9739">
+      <name>St. Mark's Church</name>
+      <description>Church famous for its colorful tiled roof.</description>
+    </attraction>
+    <attraction lat="45.815" lon="15.9733">
+      <name>Upper Town</name>
+      <description>Historic medieval core of Zagreb (Gradec).</description>
+    </attraction>
+    <attraction lat="45.8131" lon="15.9772">
+      <name>Ban Jelacic Square</name>
+      <description>The central square and meeting point of the city.</description>
+    </attraction>
+    <attraction lat="45.8242" lon="16.0189">
+      <name>Maksimir Park</name>
+      <description>Oldest public park in South East Europe.</description>
+    </attraction>
+    <attraction lat="45.815" lon="15.9731">
+      <name>Museum of Broken Relationships</name>
+      <description>Unique museum dedicated to failed love stories.</description>
+    </attraction>
+    <attraction lat="45.8139" lon="15.9775">
+      <name>Dolac Market</name>
+      <description>The main open-air farmers market.</description>
+    </attraction>
+    <attraction lat="45.8144" lon="15.9733">
+      <name>Lotrščak Tower</name>
+      <description>13th-century tower with a daily cannon shot.</description>
+    </attraction>
+    <attraction lat="45.8106" lon="15.9783">
+      <name>Zrinjevac Park</name>
+      <description>Park with a music pavilion and fountains.</description>
+    </attraction>
+    <attraction lat="45.8086" lon="15.9678">
+      <name>Mimara Museum</name>
+      <description>Art museum housing the collection of Wiltrud and Ante Mimara.</description>
+    </attraction>
+  </highlights>
+  <description>Città dalla doppia anima, mitteleuropea e mediterranea, Zagabria offre una vivibilità rilassata e sicura. I suoi parchi a forma di ferro di cavallo e la vita dei caffè la rendono accogliente e vivace.</description>
+  <wiki_intro>Image:Zagreb trg bana Jelačića.jpg|thumb|350px|right|Ban Jelačić Square
+'''Zagreb''' is a city in Central Croatia and the capital of Croatia. The city has a charming medieval 'old city' with architecture and cobbled streets reminiscent of Vienna, Budapest, Prague and other Central Europe|Central European capitals.
+
+==Understand==
+{{climate chart
+|Zagreb
+|-3.0 |3.7 |43.2
+|-1.8 |6.8 |38.9
+|1.6 |11....</wiki_intro>
+</city_report>

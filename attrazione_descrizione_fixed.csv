@@ -1,0 +1,301 @@
+City,Attraction,Latitude,Longitude,Description
+Amsterdam,Rijksmuseum,52.36,4.8852,National museum dedicated to Dutch arts and history.
+Amsterdam,Anne Frank House,52.3752,4.884,Historic house where Anne Frank hid during WWII.
+Amsterdam,Van Gogh Museum,52.3584,4.8811,World's largest collection of artworks by Vincent van Gogh.
+Amsterdam,Vondelpark,52.358,4.8686,The city's most famous and largest public park.
+Amsterdam,Dam Square,52.3731,4.8926,The historic center of Amsterdam and site of the Royal Palace.
+Amsterdam,Heineken Experience,52.3578,4.8917,Interactive museum in the former brewery of the pilsner brand.
+Amsterdam,Stedelijk Museum,52.358,4.8797,Major museum for modern and contemporary art and design.
+Amsterdam,Rembrandt House,52.3693,4.9013,The former home and workshop of the painter Rembrandt.
+Amsterdam,A'DAM Lookout,52.3842,4.9023,Observation deck with a 360-degree view of the city.
+Amsterdam,Jordaan District,52.3725,4.8792,Charming neighborhood known for its narrow canals and boutiques.
+Athens,Acropolis,37.9715,23.7257,Ancient citadel with the Parthenon and other historic ruins.
+Athens,Parthenon,37.9715,23.7267,Iconic temple dedicated to the goddess Athena.
+Athens,Acropolis Museum,37.9681,23.7285,Museum housing artifacts found on the Acropolis site.
+Athens,Ancient Agora,37.9751,23.7225,The ancient marketplace and heart of public life in Athens.
+Athens,Plaka,37.9719,23.7303,Oldest neighborhood with neoclassical houses and tavernas.
+Athens,Temple of Zeus,37.9693,23.7331,Ruined colossal temple dedicated to the king of Olympian gods.
+Athens,Syntagma Square,37.9755,23.7348,Central square and home of the Hellenic Parliament.
+Athens,National Archaeology Museum,37.9891,23.7327,Vast collection of ancient Greek antiquities.
+Athens,Panathenaic Stadium,37.9683,23.7411,Marble stadium that hosted the first modern Olympic Games.
+Athens,Lycabettus Hill,37.9819,23.7432,Highest point in Athens offering panoramic views.
+Berlin,Brandenburg Gate,52.5163,13.3777,Neoclassical monument symbolizing German unity.
+Berlin,Reichstag,52.5186,13.3761,Historic parliament building with a modern glass dome.
+Berlin,East Side Gallery,52.505,13.4397,Longest remaining section of the Berlin Wall with murals.
+Berlin,Museum Island,52.5169,13.3999,UNESCO site housing five world-renowned museums.
+Berlin,Berlin Cathedral,52.519,13.4011,Grand 19th-century cathedral on the Spree river.
+Berlin,TV Tower,52.5208,13.4094,Iconic landmark offering views from 203 meters up.
+Berlin,Checkpoint Charlie,52.5074,13.3904,Famous former border crossing between East and West.
+Berlin,Holocaust Memorial,52.5139,13.3786,Memorial to the murdered Jews of Europe.
+Berlin,Charlottenburg Palace,52.5212,13.2958,Largest palace in Berlin with beautiful gardens.
+Berlin,Potsdamer Platz,52.5094,13.3767,Public square and symbol of Berlin's urban renewal.
+Bratislava,Bratislava Castle,48.1422,17.1002,Main castle of the city overlooking the Danube.
+Bratislava,St. Martin's Cathedral,48.1415,17.1048,Gothic cathedral and former coronation site of kings.
+Bratislava,Michael's Gate,48.1449,17.1068,The only city gate preserved from the medieval fortifications.
+Bratislava,Grassalkovich Palace,48.1492,17.1077,The residence of the President of Slovakia.
+Bratislava,Slavin Memorial,48.1539,17.0997,Monument and cemetery for Soviet soldiers.
+Bratislava,UFO Observation Deck,48.1384,17.1046,Unique bridge structure with a deck offering city views.
+Bratislava,Blue Church,48.1432,17.1166,Art Nouveau church famous for its blue color.
+Bratislava,Primate's Palace,48.1442,17.1085,Neoclassical palace where the Peace of Pressburg was signed.
+Bratislava,Old Town Hall,48.1439,17.1086,Complex of buildings dating back to the 14th century.
+Bratislava,Eurovea,48.1402,17.1205,Modern riverside district for shopping and leisure.
+Brussels,Grand Place,50.8467,4.3524,Central square known for its ornate guildhouses.
+Brussels,Atomium,50.8949,4.3415,Futuristic structure representing an iron crystal.
+Brussels,Manneken Pis,50.845,4.35,Famous small bronze statue of a boy urinating.
+Brussels,Royal Palace,50.8417,4.3622,The official residence of the Belgian monarchs.
+Brussels,Cinquantenaire,50.84,4.3917,Park featuring a triumphal arch and museums.
+Brussels,Mini-Europe,50.894,4.339,Park with miniature models of European landmarks.
+Brussels,Comic Strip Center,50.8511,4.3601,Museum dedicated to the history of Belgian comics.
+Brussels,Magritte Museum,50.8422,4.3586,Museum dedicated to the surrealist artist René Magritte.
+Brussels,Mont des Arts,50.8439,4.3567,Historic site with gardens and a panoramic city view.
+Brussels,St. Michael Cathedral,50.8478,4.3601,Gothic church located on the Treurenberg hill.
+Bucharest,Palace of Parliament,44.4275,26.0872,The world's second-largest administrative building.
+Bucharest,Romanian Athenaeum,44.4414,26.0972,Iconic concert hall and symbol of Romanian culture.
+Bucharest,Village Museum,44.4715,26.0762,Open-air museum showcasing traditional Romanian life.
+Bucharest,Herastrau Park,44.4714,26.0825,Large park surrounding a lake in northern Bucharest.
+Bucharest,Arcul de Triumf,44.4672,26.0784,Triumphal arch dedicated to Romania's WWI victory.
+Bucharest,Old Town (Lipscani),44.431,26.101,Historical center with vibrant nightlife and architecture.
+Bucharest,Stavropoleos Monastery,44.4314,26.0997,Small Orthodox monastery known for its Brancovan style.
+Bucharest,Revolution Square,44.4394,26.0975,The site of major events during the 1989 revolution.
+Bucharest,National Art Museum,44.4397,26.0958,Art museum located in the former Royal Palace.
+Bucharest,Carturesti Carusel,44.4318,26.1017,Beautiful bookstore located in a restored 19th-century building.
+Budapest,Hungarian Parliament,47.5071,19.0456,Magnificent neo-Gothic building on the Danube bank.
+Budapest,Buda Castle,47.4962,19.0396,Historical palace complex of the Hungarian kings.
+Budapest,Fisherman's Bastion,47.5022,19.0348,Neo-Romanesque terrace with panoramic views of Pest.
+Budapest,Chain Bridge,47.499,19.0441,The first permanent bridge connecting Buda and Pest.
+Budapest,Heroes' Square,47.5148,19.0777,Major square featuring the Millennium Monument.
+Budapest,St. Stephen's Basilica,47.5009,19.0514,Roman Catholic basilica named after the first King of Hungary.
+Budapest,Széchenyi Thermal Bath,47.5188,19.0814,Largest medicinal bath in Europe with outdoor pools.
+Budapest,Margaret Island,47.5273,19.0468,Quiet island park in the middle of the Danube.
+Budapest,Matthias Church,47.5019,19.0342,Roman Catholic church in the heart of Buda's Castle District.
+Budapest,Great Market Hall,47.4871,19.0583,Large indoor market offering local food and crafts.
+Copenhagen,Little Mermaid,55.6929,12.5993,Small bronze statue inspired by Hans Christian Andersen.
+Copenhagen,Tivoli Gardens,55.6737,12.5681,Famous amusement park and pleasure garden.
+Copenhagen,Nyhavn,55.6811,12.5893,17th-century waterfront and entertainment district.
+Copenhagen,Amalienborg,55.6841,12.5931,The winter residence of the Danish royal family.
+Copenhagen,Rosenborg Castle,55.6858,12.5772,Renaissance castle housing the crown jewels.
+Copenhagen,Round Tower,55.6814,12.5758,17th-century tower built as an astronomical observatory.
+Copenhagen,Christiania,55.6731,12.5997,Self-proclaimed autonomous anarchist district.
+Copenhagen,Strøget,55.6786,12.5744,One of Europe's longest pedestrian shopping streets.
+Copenhagen,Christiansborg,55.6762,12.5805,Palace housing the Danish Parliament and Supreme Court.
+Copenhagen,National Museum,55.6746,12.5748,Denmark's central museum of cultural history.
+Dublin,Guinness Storehouse,53.3419,-6.2867,Brewery experience telling the story of Ireland's famous stout.
+Dublin,Trinity College,53.3444,-6.2577,"Oldest university in Ireland, home to the Book of Kells."
+Dublin,Temple Bar,53.3455,-6.2644,Vibrant cultural quarter and nightlife hub.
+Dublin,Dublin Castle,53.3429,-6.2674,Major government complex and former seat of British rule.
+Dublin,Phoenix Park,53.36,-6.325,One of the largest enclosed recreational spaces in Europe.
+Dublin,St. Patrick's Cathedral,53.3395,-6.2715,National Cathedral of the Church of Ireland.
+Dublin,Kilmainham Gaol,53.3418,-6.3098,Former prison now a museum on Irish independence history.
+Dublin,Ha'penny Bridge,53.3463,-6.2631,Iconic pedestrian bridge over the River Liffey.
+Dublin,Stephen's Green,53.3381,-6.2591,Victorian public park in the city center.
+Dublin,National Gallery,53.3409,-6.2525,Museum housing the national collection of Irish and European art.
+Helsinki,Helsinki Cathedral,60.1702,24.9522,Evangelical Lutheran cathedral and iconic city landmark.
+Helsinki,Suomenlinna,60.1453,24.9888,UNESCO sea fortress located on a cluster of islands.
+Helsinki,Temppeliaukio Church,60.1731,24.9303,Unique church excavated directly into solid rock.
+Helsinki,Market Square,60.1675,24.9542,Central square hosting food markets and events.
+Helsinki,Sibelius Monument,60.1821,24.9135,Abstract sculpture dedicated to composer Jean Sibelius.
+Helsinki,Uspenski Cathedral,60.1686,24.9602,Eastern Orthodox cathedral with golden onion domes.
+Helsinki,Seurasaari,60.1825,24.8847,Open-air museum on a beautiful forested island.
+Helsinki,Ateneum,60.17,24.9441,Museum housing the biggest collection of art in Finland.
+Helsinki,Amos Rex,60.1704,24.9362,Contemporary art museum with iconic underground skylights.
+Helsinki,Löyly,60.1513,24.9303,Modern public sauna and restaurant on the waterfront.
+Lisbon,Belem Tower,38.6916,-9.2159,Fortified tower symbolizing the Age of Discovery.
+Lisbon,Jeronimos Monastery,38.6979,-9.2067,Former monastery of the Order of Saint Jerome.
+Lisbon,Alfama District,38.7121,-9.1303,Oldest district with narrow streets and Fado houses.
+Lisbon,Sao Jorge Castle,38.7139,-9.1334,Moorish castle overlooking the historic center.
+Lisbon,Praca do Comercio,38.7075,-9.1364,"Large harbor-side square, one of Lisbon's main landmarks."
+Lisbon,Santa Justa Lift,38.7121,-9.1394,Neo-Gothic vertical elevator connecting city levels.
+Lisbon,Oceanarium,38.7635,-9.0937,Major aquarium located in the Parque das Nações.
+Lisbon,Bairro Alto,38.713,-9.144,Central district known for shopping and vibrant nightlife.
+Lisbon,LX Factory,38.7032,-9.1795,Creative hub in a former industrial complex.
+Lisbon,Padrão dos Descobrimenti,38.6936,-9.2057,Monument celebrating the Portuguese Age of Discovery.
+Ljubljana,Ljubljana Castle,46.0492,14.5083,Medieval castle offering panoramic views of the city.
+Ljubljana,Triple Bridge,46.0514,14.5061,Group of three bridges designed by Jože Plečnik.
+Ljubljana,Tivoli Park,46.0539,14.4981,The largest and most beautiful park in Ljubljana.
+Ljubljana,Dragon Bridge,46.052,14.5103,Art Nouveau bridge decorated with dragon statues.
+Ljubljana,Preseren Square,46.0514,14.5058,The central square and heart of the city.
+Ljubljana,Metelkova Mesto,46.0567,14.5167,Autonomous social centre in former military barracks.
+Ljubljana,Cathedral of St. Nicholas,46.0508,14.5081,Baroque cathedral with iconic green dome and twin towers.
+Ljubljana,National Gallery,46.0536,14.5006,Slovenia's main museum of historical art.
+Ljubljana,Robba Fountain,46.0503,14.5069,Baroque fountain representing the three rivers of Carniola.
+Ljubljana,Skyscraper (Nebotičnik),46.0528,14.5033,Iconic modernist building with a terrace cafe.
+London,British Museum,51.5194,-0.127,"Museum dedicated to human history, art and culture."
+London,Tower of London,51.5081,-0.0759,Historic castle and home of the Crown Jewels.
+London,London Eye,51.5033,-0.1195,Giant Ferris wheel with views over the Thames.
+London,Buckingham Palace,51.5014,-0.1419,The official residence of the UK monarch.
+London,Westminster Abbey,51.4994,-0.1273,Gothic abbey church and site of royal coronations.
+London,Tower Bridge,51.5055,-0.0754,Iconic combined bascule and suspension bridge.
+London,Tate Modern,51.5076,-0.0994,National gallery of international modern art.
+London,St Paul's Cathedral,51.5138,-0.0984,Anglican cathedral and seat of the Bishop of London.
+London,The Shard,51.5045,-0.0865,Tallest building in the UK with an observation deck.
+London,Natural History Museum,51.4967,-0.1764,Museum housing vast specimens from natural history.
+Luxembourg,Casemates du Bock,49.6117,6.1342,Tunnel system part of the city's ancient fortifications.
+Luxembourg,Grand Ducal Palace,49.6108,6.1311,The official residence of the Grand Duke of Luxembourg.
+Luxembourg,Place d'Armes,49.6114,6.1286,Central square in the heart of the old city.
+Luxembourg,Adolphe Bridge,49.6083,6.1269,Double-decked arch bridge and city symbol.
+Luxembourg,Grund District,49.6075,6.1353,Picturesque valley neighborhood below the city center.
+Luxembourg,Mudam,49.6169,6.1397,Museum of modern art designed by I.M. Pei.
+Luxembourg,Notre-Dame Cathedral,49.6097,6.1314,Jesuit church and the only cathedral in the country.
+Luxembourg,Philharmonie,49.6186,6.1422,Modern concert hall on the Kirchberg plateau.
+Luxembourg,Chemin de la Corniche,49.6111,6.1339,Pedestrian promenade called 'the most beautiful balcony in Europe'.
+Luxembourg,Fort Thüngen,49.6164,6.1392,Historic fortification and home of the Dräi Eechelen Museum.
+Madrid,Prado Museum,40.4138,-3.6921,Main Spanish national art museum.
+Madrid,Royal Palace,40.4179,-3.7144,Official residence of the Spanish royal family.
+Madrid,Retiro Park,40.4153,-3.6839,Large urban park with a lake and monuments.
+Madrid,Plaza Mayor,40.4154,-3.7074,Central square in the heart of Madrid.
+Madrid,Puerta del Sol,40.4169,-3.7035,Busy public square and 'Kilometre Zero' for Spanish roads.
+Madrid,Reina Sofia Museum,40.4079,-3.6946,National museum of 20th-century art (Guernica).
+Madrid,Thyssen-Bornemisza,40.4161,-3.6949,Major art museum forming the Golden Triangle of Art.
+Madrid,Gran Via,40.42,-3.7011,Iconic shopping street with landmark architecture.
+Madrid,Santiago Bernabéu,40.4531,-3.6883,Stadium and home ground of Real Madrid CF.
+Madrid,Temple of Debod,40.4241,-3.7177,Ancient Egyptian temple rebuilt in Madrid.
+Nicosia,Selimiye Mosque,35.1764,33.3644,Former cathedral converted into a mosque.
+Nicosia,Ledra Street,35.174,33.3614,Main shopping street and crossing point to the north.
+Nicosia,Cyprus Museum,35.1717,33.3556,Oldest and largest archaeological museum in Cyprus.
+Nicosia,Kyrenia Gate,35.1814,33.3614,One of the three gates in the Venetian walls.
+Nicosia,Venetian Walls,35.1719,33.3667,Circular fortifications surrounding the old city.
+Nicosia,Buyuk Han,35.1761,33.3625,Largest caravanserai on the island of Cyprus.
+Nicosia,St John's Cathedral,35.1731,33.3678,Main church of the Church of Cyprus.
+Nicosia,Leventis Museum,35.1706,33.3611,Museum dedicated to the history of Nicosia.
+Nicosia,Liberty Monument,35.1736,33.3711,Sculpture commemorating EOKA's fight for independence.
+Nicosia,Shacolas Tower,35.1711,33.3617,Observatory offering views of the whole city.
+Oslo,Vigeland Park,59.9271,10.7008,Large park with sculptures by Gustav Vigeland.
+Oslo,Opera House,59.9075,10.7533,Modern architectural landmark with a walkable roof.
+Oslo,Akershus Fortress,59.9064,10.7361,Medieval castle built to protect and provide a royal residence.
+Oslo,Fram Museum,59.9036,10.6994,Museum dedicated to Norwegian polar exploration.
+Oslo,Holmenkollen,59.9641,10.6675,Ski jumping hill and museum.
+Oslo,Munch Museum,59.9044,10.7553,Museum dedicated to the life and works of Edvard Munch.
+Oslo,Kon-Tiki Museum,59.9036,10.6983,Museum housing vessels from Thor Heyerdahl's expeditions.
+Oslo,National Gallery,59.9161,10.7375,Home to Norway's largest collection of art (The Scream).
+Oslo,City Hall,59.9122,10.7336,Iconic building hosting the Nobel Peace Prize ceremony.
+Oslo,Karl Johans Gate,59.9136,10.7397,The main street of Oslo connecting the station and palace.
+Paris,Eiffel Tower,48.8584,2.2945,Global icon of France and landmark of Paris.
+Paris,Louvre Museum,48.8606,2.3376,The world's largest art museum.
+Paris,Notre-Dame,48.853,2.3499,Iconic Gothic cathedral on the île de la Cité.
+Paris,Arc de Triomphe,48.8738,2.295,Monument honoring those who fought for France.
+Paris,Sacre-Coeur,48.8867,2.3431,White basilica on the summit of Montmartre.
+Paris,Musée d'Orsay,48.8599,2.3265,Museum in a former station with Impressionist art.
+Paris,Panthéon,48.8462,2.3449,Secular mausoleum for distinguished French citizens.
+Paris,Centre Pompidou,48.8606,2.3522,High-tech building housing a major modern art museum.
+Paris,Sainte-Chapelle,48.8554,2.345,Gothic chapel with spectacular stained glass.
+Paris,Tuileries Garden,48.8633,2.3272,Public garden between the Louvre and Place de la Concorde.
+Prague,Charles Bridge,50.0865,14.4114,Historic 14th-century bridge with 30 statues.
+Prague,Prague Castle,50.0911,14.4016,Largest ancient castle complex in the world.
+Prague,Old Town Square,50.0875,14.4214,Central square with the Astronomical Clock.
+Prague,St. Vitus Cathedral,50.0908,14.4005,Gothic masterpiece located within the castle walls.
+Prague,Astronomical Clock,50.087,14.4207,15th-century medieval clock on the Town Hall.
+Prague,Josefov,50.0894,14.4181,The Jewish Quarter with historic synagogues and cemetery.
+Prague,Wenceslas Square,50.0817,14.4278,Major city square and center of business and culture.
+Prague,Dancing House,50.0755,14.4142,Modern architectural landmark designed by Gehry.
+Prague,Lennon Wall,50.0862,14.4069,Wall filled with John Lennon-inspired graffiti and lyrics.
+Prague,Petrin Lookout,50.0835,14.3951,Steel tower on a hill resembling the Eiffel Tower.
+Reykjavik,Hallgrimskirkja,64.1417,-21.9267,Iconic Lutheran church inspired by basalt columns.
+Reykjavik,Harpa,64.1503,-21.9328,Modern concert hall and conference center.
+Reykjavik,Sun Voyager,64.1475,-21.9222,Steel sculpture of a boat located on the waterfront.
+Reykjavik,Perlan,64.1294,-21.9189,Landmark building with a museum and revolving restaurant.
+Reykjavik,Laugavegur,64.1456,-21.9286,The main shopping and nightlife street of Reykjavik.
+Reykjavik,National Museum,64.1419,-21.9481,Museum showcasing Iceland's history from the settlement.
+Reykjavik,Tjörnin Lake,64.1444,-21.9392,Quiet lake in the city center popular for bird watching.
+Reykjavik,Settlement Exhibition,64.1472,-21.9422,Museum based on a 10th-century Viking longhouse.
+Reykjavik,Blue Lagoon (Bus),63.8804,-22.4495,Geothermal spa (reached by bus from the capital).
+Reykjavik,Imagine Peace Tower,64.1644,-21.8953,Memorial to John Lennon on Viðey Island.
+Riga,Old Town,56.9491,24.1053,Historical heart of Riga with cobblestone streets.
+Riga,House of Blackheads,56.9472,24.1069,Historic building reconstructed after WWII.
+Riga,Freedom Monument,56.9514,24.1131,Memorial honoring soldiers killed in the War of Independence.
+Riga,St. Peter's Church,56.9475,24.1094,Gothic church with an observation tower.
+Riga,Central Market,56.9439,24.1158,Large market in former Zeppelin hangars.
+Riga,Art Nouveau District,56.9592,24.1089,Area with the highest concentration of Art Nouveau architecture.
+Riga,Nativity Cathedral,56.9539,24.1158,The largest Orthodox cathedral in the city.
+Riga,Latvian National Museum,56.9556,24.1131,Art museum in a magnificent historicist building.
+Riga,Swedish Gate,56.9511,24.1064,The only remaining gate from the old city walls.
+Riga,Motor Museum,56.9714,24.2272,Museum with a large collection of antique vehicles.
+Rome,Colosseum,41.8902,12.4922,The largest ancient amphitheatre ever built.
+Rome,Pantheon,41.8986,12.4769,Ancient Roman temple with a massive dome.
+Rome,Trevi Fountain,41.9009,12.4833,Iconic Baronque fountain where tourists throw coins.
+Rome,Roman Forum,41.8925,12.4853,Ruins of the heart of ancient Roman public life.
+Rome,Vatican Museums,41.9065,12.4548,Art museums including the Sistine Chapel.
+Rome,St. Peter's Basilica,41.9022,12.4539,Major Renaissance church in Vatican City.
+Rome,Piazza Navona,41.8992,12.4731,Square built on an ancient stadium with Bernini fountains.
+Rome,Spanish Steps,41.9059,12.4828,Famous monumental stairway of 135 steps.
+Rome,Castel Sant'Angelo,41.9031,12.4663,Hadrian's mausoleum converted into a papal fortress.
+Rome,Borghese Gallery,41.9142,12.4921,Museum in a villa housing Bernini and Caravaggio.
+Sofia,Nevsky Cathedral,42.6958,23.3328,One of the largest Orthodox cathedrals in the world.
+Sofia,Vitosha Boulevard,42.6911,23.3203,Main commercial street with views of Vitosha Mountain.
+Sofia,Boyana Church,42.6447,23.2661,Medieval church with world-famous frescoes.
+Sofia,Serdica Ruins,42.6978,23.3225,Ancient Roman ruins in the center of Sofia.
+Sofia,National Theater,42.6936,23.3267,Beautiful Neoclassical theater building.
+Sofia,St. George Rotunda,42.6969,23.3228,"The oldest building in Sofia, a 4th-century church."
+Sofia,Banya Bashi Mosque,42.6994,23.3225,16th-century mosque built over natural thermal spas.
+Sofia,National History Museum,42.655,23.2708,Largest museum in Bulgaria with the Thracian treasures.
+Sofia,Sveta Nedelya,42.6967,23.3214,Medieval Orthodox cathedral in the heart of the city.
+Sofia,Largo,42.6975,23.3222,Architectural ensemble of Socialist Classicism.
+Stockholm,Vasa Museum,59.3281,18.0914,Maritime museum with a salvaged 17th-century ship.
+Stockholm,Gamla Stan,59.3251,18.0708,The well-preserved medieval old town.
+Stockholm,City Hall,59.3275,18.0544,Building with a tower hosting the Nobel Banquet.
+Stockholm,Skansen,59.3253,18.1039,The world's oldest open-air museum and zoo.
+Stockholm,ABBA Museum,59.3249,18.0965,Interactive museum dedicated to the pop group.
+Stockholm,Royal Palace,59.3268,18.0717,The official residence of the Swedish monarch.
+Stockholm,Moderna Museet,59.3261,18.0847,State museum for modern and contemporary art.
+Stockholm,Drottningholm,59.3217,17.8869,The private residence of the Swedish royal family.
+Stockholm,Fotografiska,59.3178,18.0858,Major center for contemporary photography.
+Stockholm,Gröna Lund,59.3233,18.0964,Historic amusement park on the island of Djurgården.
+Tallinn,Old Town,59.4372,24.7453,"medieval heart of Tallinn, a UNESCO World Heritage site."
+Tallinn,Toompea Hill,59.4358,24.7397,Historic hill with the castle and parliament.
+Tallinn,Nevsky Cathedral,59.4358,24.7392,Grand Orthodox cathedral with onion domes.
+Tallinn,Kadriorg Park,59.4384,24.7911,Park and palace built by Peter the Great.
+Tallinn,Seaplane Harbour,59.4514,24.7386,Maritime museum in historic seaplane hangars.
+Tallinn,Town Hall Square,59.4373,24.7451,The social heart of the city since the 13th century.
+Tallinn,Telliskivi,59.4394,24.7289,Creative city hub with restaurants and galleries.
+Tallinn,Kumu Art Museum,59.4364,24.7961,Main museum for Estonian and international art.
+Tallinn,St. Olaf's Church,59.4411,24.7478,Gothic church once the tallest building in the world.
+Tallinn,Fat Margaret,59.4425,24.7492,Historic gate tower and maritime museum.
+Valletta,Upper Barrakka,35.8949,14.5123,Public gardens with panoramic views of the harbor.
+Valletta,St. John's Cathedral,35.8977,14.5126,Highly decorated Baroque church with Caravaggio art.
+Valletta,Grand Harbour,35.8944,14.5186,The historic natural harbor of Malta.
+Valletta,Fort St. Elmo,35.9019,14.5186,Star-shaped fort and National War Museum.
+Valletta,Grandmaster's Palace,35.8986,14.5136,The historic center of government in Malta.
+Valletta,Republic Street,35.8983,14.5128,The main shopping and commercial street.
+Valletta,National Archaeology,35.8979,14.5113,Museum housing prehistoric artifacts from the islands.
+Valletta,Casa Rocca Piccola,35.8997,14.5139,16th-century palace belonging to a noble family.
+Valletta,Teatru Manoel,35.8997,14.5125,One of the oldest working theaters in Europe.
+Valletta,Hastings Gardens,35.8989,14.5086,Quiet gardens on top of the St. John's Bastion.
+Vienna,Schönbrunn Palace,48.1845,16.3122,Grand Baroque palace and former summer residence.
+Vienna,St. Stephen's,48.2084,16.3731,Iconic Gothic cathedral in the city center.
+Vienna,Belvedere,48.1915,16.3808,Historic complex with two Baroque palaces and art.
+Vienna,Prater,48.2166,16.3958,Large public park with a giant Ferris wheel.
+Vienna,Hofburg,48.2065,16.3653,Former imperial palace of the Habsburgs.
+Vienna,State Opera,48.203,16.3691,One of the leading opera houses in the world.
+Vienna,Naschmarkt,48.1973,16.361,Famous open-air market for food and goods.
+Vienna,Albertina,48.2047,16.3681,Art museum with one of the world's largest print rooms.
+Vienna,Kunsthistorisches,48.2037,16.3617,Imperial museum of art and artifacts.
+Vienna,Rathaus,48.2109,16.3575,Neogothic city hall building and event square.
+Vilnius,Gediminas Tower,54.6867,25.2908,The only remaining tower of the Upper Castle.
+Vilnius,St. Anne's Church,54.6831,25.2931,Masterpiece of Flamboyant Gothic architecture.
+Vilnius,Uzupis,54.6806,25.2953,Bohemian district that declared its own republic.
+Vilnius,Vilnius Cathedral,54.6858,25.2878,Main Roman Catholic cathedral of Lithuania.
+Vilnius,Gates of Dawn,54.6744,25.2894,The only surviving gate of the city's original walls.
+Vilnius,Grand Dukes Palace,54.6858,25.2892,Reconstructed palace of the Lithuanian rulers.
+Vilnius,Bernadine Garden,54.6842,25.2953,Main park in the heart of the old town.
+Vilnius,Church of St. Peter,54.6939,25.3058,Baroque church known for its white plaster carvings.
+Vilnius,Three Crosses,54.6869,25.2975,Monument on the hill offering panoramic views.
+Vilnius,Museum of Occupations,54.6878,25.2722,Former KGB headquarters now a museum.
+Warsaw,Royal Castle,52.2479,21.0144,Reconstructed castle and former royal residence.
+Warsaw,Old Town Market,52.2497,21.0122,The historical heart and oldest part of Warsaw.
+Warsaw,Lazienki Park,52.2153,21.0347,Largest park with a palace on the water.
+Warsaw,Palace of Culture,52.2317,21.0061,Iconic socialist-realist skyscraper and city landmark.
+Warsaw,Wilanow Palace,52.1642,21.0894,Baroque royal palace survived the wars.
+Warsaw,Uprising Museum,52.2325,20.9808,Museum dedicated to the Warsaw Uprising of 1944.
+Warsaw,Vistula Boulevards,52.2444,21.025,Modern riverside promenade with bars and views.
+Warsaw,POLIN Museum,52.2494,20.9931,Museum of the History of Polish Jews.
+Warsaw,Saxon Garden,52.2369,21.0089,Oldest public park in the city.
+Warsaw,Praga District,52.25,21.0333,Artistic district on the right bank of the Vistula.
+Zagreb,Zagreb Cathedral,45.8144,15.9792,Gothic cathedral and tallest building in Croatia.
+Zagreb,St. Mark's Church,45.8164,15.9739,Church famous for its colorful tiled roof.
+Zagreb,Upper Town,45.815,15.9733,Historic medieval core of Zagreb (Gradec).
+Zagreb,Ban Jelacic Square,45.8131,15.9772,The central square and meeting point of the city.
+Zagreb,Maksimir Park,45.8242,16.0189,Oldest public park in South East Europe.
+Zagreb,Museum of Broken Relationships,45.815,15.9731,Unique museum dedicated to failed love stories.
+Zagreb,Dolac Market,45.8139,15.9775,The main open-air farmers market.
+Zagreb,Lotrščak Tower,45.8144,15.9733,13th-century tower with a daily cannon shot.
+Zagreb,Zrinjevac Park,45.8106,15.9783,Park with a music pavilion and fountains.
+Zagreb,Mimara Museum,45.8086,15.9678,Art museum housing the collection of Wiltrud and Ante Mimara.

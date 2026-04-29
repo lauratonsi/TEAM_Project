@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="66.0">
+  <metadata>
+    <title>Copenhagen</title>
+    <name_it>Copenaghen</name_it>
+    <flag>🇩🇰</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>10</hotel_count>
+    <hotel_price>163.35</hotel_price>
+    <safety index_score="74.1"/>
+    <environment green_score="85"/>
+    <cost_index value="88.3"/>
+    <economic_accessibility score="11.7"/>
+  </indicators>
+  <transport>By train It takes 13 minutes to get to Copenhagen Central Station from the airport, and the trains stops at Amager's two other train stations; Tårnby and Ørestad (interchange with Metro line 1) en route. To Malmö Central Station in Sweden it takes 20 minutes. Trains run every 20 minutes throughout the day, and every 10 minutes towards the central station during rush-hour.</transport>
+  <accommodation>
+    <hotel>
+      <name>Copenhagen Camping</name>
+      <price>Prezzo N/D</price>
+    </hotel>
+    <hotel>
+      <name>Danhostel Amager</name>
+      <price>Dorm beds from 130 kr, Singles from 380 kr</price>
+    </hotel>
+    <hotel>
+      <name>Dragør Badehotel</name>
+      <price>Single from 370 kr</price>
+    </hotel>
+    <hotel>
+      <name>Dragør Fort</name>
+      <price>Doubles from 695 kr</price>
+    </hotel>
+    <hotel>
+      <name>House of Colors</name>
+      <price>580 kr for one person, 680 kr for two, discount for stays of one week or longer</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="55.6929" lon="12.5993">
+      <name>Little Mermaid</name>
+      <description>Small bronze statue inspired by Hans Christian Andersen.</description>
+    </attraction>
+    <attraction lat="55.6737" lon="12.5681">
+      <name>Tivoli Gardens</name>
+      <description>Famous amusement park and pleasure garden.</description>
+    </attraction>
+    <attraction lat="55.6811" lon="12.5893">
+      <name>Nyhavn</name>
+      <description>17th-century waterfront and entertainment district.</description>
+    </attraction>
+    <attraction lat="55.6841" lon="12.5931">
+      <name>Amalienborg</name>
+      <description>The winter residence of the Danish royal family.</description>
+    </attraction>
+    <attraction lat="55.6858" lon="12.5772">
+      <name>Rosenborg Castle</name>
+      <description>Renaissance castle housing the crown jewels.</description>
+    </attraction>
+    <attraction lat="55.6814" lon="12.5758">
+      <name>Round Tower</name>
+      <description>17th-century tower built as an astronomical observatory.</description>
+    </attraction>
+    <attraction lat="55.6731" lon="12.5997">
+      <name>Christiania</name>
+      <description>Self-proclaimed autonomous anarchist district.</description>
+    </attraction>
+    <attraction lat="55.6786" lon="12.5744">
+      <name>Strøget</name>
+      <description>One of Europe's longest pedestrian shopping streets.</description>
+    </attraction>
+    <attraction lat="55.6762" lon="12.5805">
+      <name>Christiansborg</name>
+      <description>Palace housing the Danish Parliament and Supreme Court.</description>
+    </attraction>
+    <attraction lat="55.6746" lon="12.5748">
+      <name>National Museum</name>
+      <description>Denmark's central museum of cultural history.</description>
+    </attraction>
+  </highlights>
+  <description>Leader mondiale della transizione ecologica, Copenaghen è il punto di riferimento per la vivibilità urbana e la felicità dei cittadini. Il costo della vita è bilanciato da servizi pubblici d'eccellenza e un senso di sicurezza pervasivo.</description>
+  <wiki_intro>'''Amager''' (pronounced Ama'r) is a district and island east and southeast of central Copenhagen, covering some , and mostly notable as the home of '''Copenhagen Airport''' and the charming old fishing hamlet of '''Dragør'''. It was built as a waste depot for the evolving city of Copenhagen, was and long considered the backwaters of the city. This old working class district is now undergoing ra...</wiki_intro>
+</city_report>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="46.1">
+  <metadata>
+    <title>Paris</title>
+    <name_it>Parigi</name_it>
+    <flag>🇫🇷</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>156.7</hotel_price>
+    <safety index_score="42.5"/>
+    <environment green_score="65"/>
+    <cost_index value="84.7"/>
+    <economic_accessibility score="15.3"/>
+  </indicators>
+  <transport></transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="48.8584" lon="2.2945">
+      <name>Eiffel Tower</name>
+      <description>Global icon of France and landmark of Paris.</description>
+    </attraction>
+    <attraction lat="48.8606" lon="2.3376">
+      <name>Louvre Museum</name>
+      <description>The world's largest art museum.</description>
+    </attraction>
+    <attraction lat="48.853" lon="2.3499">
+      <name>Notre-Dame</name>
+      <description>Iconic Gothic cathedral on the île de la Cité.</description>
+    </attraction>
+    <attraction lat="48.8738" lon="2.295">
+      <name>Arc de Triomphe</name>
+      <description>Monument honoring those who fought for France.</description>
+    </attraction>
+    <attraction lat="48.8867" lon="2.3431">
+      <name>Sacre-Coeur</name>
+      <description>White basilica on the summit of Montmartre.</description>
+    </attraction>
+    <attraction lat="48.8599" lon="2.3265">
+      <name>Musée d'Orsay</name>
+      <description>Museum in a former station with Impressionist art.</description>
+    </attraction>
+    <attraction lat="48.8462" lon="2.3449">
+      <name>Panthéon</name>
+      <description>Secular mausoleum for distinguished French citizens.</description>
+    </attraction>
+    <attraction lat="48.8606" lon="2.3522">
+      <name>Centre Pompidou</name>
+      <description>High-tech building housing a major modern art museum.</description>
+    </attraction>
+    <attraction lat="48.8554" lon="2.345">
+      <name>Sainte-Chapelle</name>
+      <description>Gothic chapel with spectacular stained glass.</description>
+    </attraction>
+    <attraction lat="48.8633" lon="2.3272">
+      <name>Tuileries Garden</name>
+      <description>Public garden between the Louvre and Place de la Concorde.</description>
+    </attraction>
+  </highlights>
+  <description>La Ville Lumière sta rivoluzionando la sua mobilità interna eliminando le auto a favore di piste ciclabili e giardini pensili. Resta l'indiscussa capitale del lusso e del turismo culturale con standard di accoglienza elevatissimi.</description>
+  <wiki_intro>The '''Left Bank''' in travellers' terms generally refers to the "Left Bank" (French, ''Rive Gauche'') of the River Seine in the France|French capital city of Paris.
+
+The '''Left Bank''' defies precise definition but generally refers to those ''arrondissements'' (districts) on the southern bank of the river as it flows though central Paris:
+
+*the Paris/5th arrondissement|5th arrondissement - the ...</wiki_intro>
+</city_report>

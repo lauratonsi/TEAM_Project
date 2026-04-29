@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="69.0">
+  <metadata>
+    <title>Oslo</title>
+    <name_it>Oslo</name_it>
+    <flag>🇳🇴</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>165.02</hotel_price>
+    <safety index_score="75.1"/>
+    <environment green_score="92"/>
+    <cost_index value="89.2"/>
+    <economic_accessibility score="10.8"/>
+  </indicators>
+  <transport>Flytoget (Airport Express Train), operates high speed express trains, generally taking 19-22 minutes to reach Oslo Central Station (Oslo S). Trains to Oslo Central Station depart every 10 minutes on weekdays from 07.00 to 23.10, Sundays from 11.30 to 23.10, and every 20 minutes at other times (04.40-06.50 and 23.10-00.50 everyday, 07.20-11.20 Sundays, and all-day during Saturdays and bank holidays). Every 20 minutes from 05.30 to 00.50, the train also calls at Lillestrøm and continues past Oslo S to Drammen, stopping at Nationaltheatret station, which is more convenient for destinations in the western end of the city .</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="59.9271" lon="10.7008">
+      <name>Vigeland Park</name>
+      <description>Large park with sculptures by Gustav Vigeland.</description>
+    </attraction>
+    <attraction lat="59.9075" lon="10.7533">
+      <name>Opera House</name>
+      <description>Modern architectural landmark with a walkable roof.</description>
+    </attraction>
+    <attraction lat="59.9064" lon="10.7361">
+      <name>Akershus Fortress</name>
+      <description>Medieval castle built to protect and provide a royal residence.</description>
+    </attraction>
+    <attraction lat="59.9036" lon="10.6994">
+      <name>Fram Museum</name>
+      <description>Museum dedicated to Norwegian polar exploration.</description>
+    </attraction>
+    <attraction lat="59.9641" lon="10.6675">
+      <name>Holmenkollen</name>
+      <description>Ski jumping hill and museum.</description>
+    </attraction>
+    <attraction lat="59.9044" lon="10.7553">
+      <name>Munch Museum</name>
+      <description>Museum dedicated to the life and works of Edvard Munch.</description>
+    </attraction>
+    <attraction lat="59.9036" lon="10.6983">
+      <name>Kon-Tiki Museum</name>
+      <description>Museum housing vessels from Thor Heyerdahl's expeditions.</description>
+    </attraction>
+    <attraction lat="59.9161" lon="10.7375">
+      <name>National Gallery</name>
+      <description>Home to Norway's largest collection of art (The Scream).</description>
+    </attraction>
+    <attraction lat="59.9122" lon="10.7336">
+      <name>City Hall</name>
+      <description>Iconic building hosting the Nobel Peace Prize ceremony.</description>
+    </attraction>
+    <attraction lat="59.9136" lon="10.7397">
+      <name>Karl Johans Gate</name>
+      <description>The main street of Oslo connecting the station and palace.</description>
+    </attraction>
+  </highlights>
+  <description>Capitale mondiale della mobilità elettrica, Oslo è circondata da foreste e fiordi che penetrano fino in centro. Rappresenta il picco della sostenibilità ambientale unita a una stabilità economica granitica.</description>
+  <wiki_intro>'''Oslo''' is Norway's capital and largest city, with 700,000 citizens in the city proper and about 1.5 million inhabitants in greater Oslo. It is in East Norway|the East of the country in the Oslofjorden fjords of Norway|fjord, extending over an inlet of the Skagerrak strait. It is spaciously laid out and surrounded by green hills and mountains and includes 40 islands and 343 lakes. Oslo offer...</wiki_intro>
+</city_report>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="70.6">
+  <metadata>
+    <title>Reykjavik</title>
+  </metadata>
+  <indicators>
+    <hotel_price>161.88</hotel_price>
+    <safety index_score="82.3"/>
+    <environment green_score="88"/>
+    <cost_index value="87.5"/>
+    <economic_accessibility score="12.5"/>
+  </indicators>
+  <highlights>
+    <attraction lat="64.1417" lon="-21.9267">
+      <name>Hallgrimskirkja</name>
+      <description>Iconic Lutheran church inspired by basalt columns.</description>
+    </attraction>
+    <attraction lat="64.1503" lon="-21.9328">
+      <name>Harpa</name>
+      <description>Modern concert hall and conference center.</description>
+    </attraction>
+    <attraction lat="64.1475" lon="-21.9222">
+      <name>Sun Voyager</name>
+      <description>Steel sculpture of a boat located on the waterfront.</description>
+    </attraction>
+    <attraction lat="64.1294" lon="-21.9189">
+      <name>Perlan</name>
+      <description>Landmark building with a museum and revolving restaurant.</description>
+    </attraction>
+    <attraction lat="64.1456" lon="-21.9286">
+      <name>Laugavegur</name>
+      <description>The main shopping and nightlife street of Reykjavik.</description>
+    </attraction>
+    <attraction lat="64.1419" lon="-21.9481">
+      <name>National Museum</name>
+      <description>Museum showcasing Iceland's history from the settlement.</description>
+    </attraction>
+    <attraction lat="64.1444" lon="-21.9392">
+      <name>Tjörnin Lake</name>
+      <description>Quiet lake in the city center popular for bird watching.</description>
+    </attraction>
+    <attraction lat="64.1472" lon="-21.9422">
+      <name>Settlement Exhibition</name>
+      <description>Museum based on a 10th-century Viking longhouse.</description>
+    </attraction>
+    <attraction lat="63.8804" lon="-22.4495">
+      <name>Blue Lagoon (Bus)</name>
+      <description>Geothermal spa (reached by bus from the capital).</description>
+    </attraction>
+    <attraction lat="64.1644" lon="-21.8953">
+      <name>Imagine Peace Tower</name>
+      <description>Memorial to John Lennon on Viðey Island.</description>
+    </attraction>
+  </highlights>
+  <description>La capitale più settentrionale del mondo è un laboratorio di energia geotermica e sicurezza assoluta. Piccola e pulita, Reykjavik offre un'esperienza di vita a stretto contatto con una natura incontaminata.</description>
+</city_report>

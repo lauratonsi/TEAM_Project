@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="62.9">
+  <metadata>
+    <title>Luxembourg</title>
+    <name_it>Lussemburgo</name_it>
+    <flag>🇱🇺</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>0</hotel_count>
+    <hotel_price>159.84</hotel_price>
+    <safety index_score="73.5"/>
+    <environment green_score="77"/>
+    <cost_index value="86.4"/>
+    <economic_accessibility score="13.6"/>
+  </indicators>
+  <transport>Il modo migliore per muoversi è attraverso la rete di autobus interurbani e la fitta rete stradale. I treni collegano direttamente il centro con i distretti principali.</transport>
+  <accommodation/>
+  <highlights>
+    <attraction lat="49.6117" lon="6.1342">
+      <name>Casemates du Bock</name>
+      <description>Tunnel system part of the city's ancient fortifications.</description>
+    </attraction>
+    <attraction lat="49.6108" lon="6.1311">
+      <name>Grand Ducal Palace</name>
+      <description>The official residence of the Grand Duke of Luxembourg.</description>
+    </attraction>
+    <attraction lat="49.6114" lon="6.1286">
+      <name>Place d'Armes</name>
+      <description>Central square in the heart of the old city.</description>
+    </attraction>
+    <attraction lat="49.6083" lon="6.1269">
+      <name>Adolphe Bridge</name>
+      <description>Double-decked arch bridge and city symbol.</description>
+    </attraction>
+    <attraction lat="49.6075" lon="6.1353">
+      <name>Grund District</name>
+      <description>Picturesque valley neighborhood below the city center.</description>
+    </attraction>
+    <attraction lat="49.6169" lon="6.1397">
+      <name>Mudam</name>
+      <description>Museum of modern art designed by I.M. Pei.</description>
+    </attraction>
+    <attraction lat="49.6097" lon="6.1314">
+      <name>Notre-Dame Cathedral</name>
+      <description>Jesuit church and the only cathedral in the country.</description>
+    </attraction>
+    <attraction lat="49.6186" lon="6.1422">
+      <name>Philharmonie</name>
+      <description>Modern concert hall on the Kirchberg plateau.</description>
+    </attraction>
+    <attraction lat="49.6111" lon="6.1339">
+      <name>Chemin de la Corniche</name>
+      <description>Pedestrian promenade called 'the most beautiful balcony in Europe'.</description>
+    </attraction>
+    <attraction lat="49.6164" lon="6.1392">
+      <name>Fort Thüngen</name>
+      <description>Historic fortification and home of the Dräi Eechelen Museum.</description>
+    </attraction>
+  </highlights>
+  <description>Centro finanziario d'élite, il Lussemburgo offre trasporti pubblici gratuiti e uno dei livelli di sicurezza più alti al mondo. È il paradigma della capitale ricca che investe massicciamente nel benessere dei suoi residenti.</description>
+  <wiki_intro>File:Bridge in Mullerthal.jpg|thumb|300px|Bridge over a small stream in Mullerthal
+'''Mullerthal''' (Luxembourgish: ''Mëllerdall'') is a natural region in eastern Luxembourg. It is commonly referred to as ''Luxembourg's Little Switzerland''. Its biggest city is Echternach, and the region consists of the same area as the canton of Echternach.
+
+==Cities and towns==
+
+
+* , small town with a large ca...</wiki_intro>
+</city_report>

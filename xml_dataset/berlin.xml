@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<city_report appeal_score="62.3">
+  <metadata>
+    <title>Berlin</title>
+    <name_it>Berlino</name_it>
+    <flag>🇩🇪</flag>
+  </metadata>
+  <indicators>
+    <hotel_count>21</hotel_count>
+    <hotel_price>137.27</hotel_price>
+    <safety index_score="60.8"/>
+    <environment green_score="82"/>
+    <cost_index value="74.2"/>
+    <economic_accessibility score="25.8"/>
+  </indicators>
+  <transport>The area covered in this guide is expansive, but the most popular attractions are almost all near the Zoologischer Garten train station and the Ku'damm, and thus easily within walking distance. If you want to visit the outlying ones, you may want to use Berlin's excellent public transportation system - the U-Bahn, S-Bahn and the bus networks. West Berlin, unlike East Berlin, had its tram network dismantled and you will find no trams here.</transport>
+  <accommodation>
+    <hotel>
+      <name>Amstel House Berlin</name>
+      <price>Four-bedded dorms from €12/person/night. Single and twin rooms en-suite also available</price>
+    </hotel>
+    <hotel>
+      <name>Gasteiner Hof</name>
+      <price>Rooms from €30, breakfast included</price>
+    </hotel>
+    <hotel>
+      <name>Jet Pak City</name>
+      <price>Double rooms start at €30 per person, sleeping hall starts at €18 per person</price>
+    </hotel>
+    <hotel>
+      <name>Meininger Hotel Berlin Central Station</name>
+      <price>Double Rooms start at €39 per person, dormitory starts at €21</price>
+    </hotel>
+    <hotel>
+      <name>Three Little Pigs Hostel</name>
+      <price>€13</price>
+    </hotel>
+  </accommodation>
+  <highlights>
+    <attraction lat="52.5163" lon="13.3777">
+      <name>Brandenburg Gate</name>
+      <description>Neoclassical monument symbolizing German unity.</description>
+    </attraction>
+    <attraction lat="52.5186" lon="13.3761">
+      <name>Reichstag</name>
+      <description>Historic parliament building with a modern glass dome.</description>
+    </attraction>
+    <attraction lat="52.505" lon="13.4397">
+      <name>East Side Gallery</name>
+      <description>Longest remaining section of the Berlin Wall with murals.</description>
+    </attraction>
+    <attraction lat="52.5169" lon="13.3999">
+      <name>Museum Island</name>
+      <description>UNESCO site housing five world-renowned museums.</description>
+    </attraction>
+    <attraction lat="52.519" lon="13.4011">
+      <name>Berlin Cathedral</name>
+      <description>Grand 19th-century cathedral on the Spree river.</description>
+    </attraction>
+    <attraction lat="52.5208" lon="13.4094">
+      <name>TV Tower</name>
+      <description>Iconic landmark offering views from 203 meters up.</description>
+    </attraction>
+    <attraction lat="52.5074" lon="13.3904">
+      <name>Checkpoint Charlie</name>
+      <description>Famous former border crossing between East and West.</description>
+    </attraction>
+    <attraction lat="52.5139" lon="13.3786">
+      <name>Holocaust Memorial</name>
+      <description>Memorial to the murdered Jews of Europe.</description>
+    </attraction>
+    <attraction lat="52.5212" lon="13.2958">
+      <name>Charlottenburg Palace</name>
+      <description>Largest palace in Berlin with beautiful gardens.</description>
+    </attraction>
+    <attraction lat="52.5094" lon="13.3767">
+      <name>Potsdamer Platz</name>
+      <description>Public square and symbol of Berlin's urban renewal.</description>
+    </attraction>
+  </highlights>
+  <description>Capitale della resilienza e della cultura underground, Berlino offre una vastità di parchi pubblici senza eguali tra le grandi metropoli europee. Il mercato immobiliare e la sicurezza la rendono un magnete per talenti tecnologici e creativi.</description>
+  <wiki_intro>File:Berlin_Wikivoyage_locator_maps_-_City_West.png|150px|thumb|right|Location of the City West in Berlin
+'''City West''' is the heart of former West Berlin and even after reunification it represents the main retail centre of Berlin — all the best and most expensive shops are here. The area also includes some landmarks of great historical and cultural interest, as well as a large number of accomm...</wiki_intro>
+</city_report>
