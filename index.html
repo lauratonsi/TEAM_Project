@@ -22,6 +22,65 @@
         </div>
         <div id="chat-output" style="margin-top:15px; padding:10px; font-size:0.9rem; color:var(--slate-500); border-left:3px solid var(--accent)">Sistema pronto. Caricamento dati V16 completato.</div>
     </section>
+    <script>
+    (function(){
+        const input = document.getElementById('chat-input');
+        const btn = document.getElementById('chat-btn');
+        const out = document.getElementById('chat-output');
+
+        async function ask(q){
+            out.textContent = 'Caricamento in corso...';
+            btn.disabled = true;
+            try{
+                const params = new URLSearchParams({q, simulated_rag: 'true', k: '5'});
+                const res = await fetch('/query?' + params.toString());
+                if(!res.ok){
+                    const txt = await res.text();
+                    out.textContent = 'Errore dal server: ' + txt;
+                    return;
+                }
+                const data = await res.json();
+                if(data.error){
+                    out.textContent = 'Errore: ' + data.error;
+                    return;
+                }
+                if(data.answer){
+                    // show generated answer and sources
+                    const frag = document.createElement('div');
+                    frag.innerHTML = '<strong>Risposta (generata):</strong><p>' + data.answer.replace(/\n/g,'<br>') + '</p>';
+                    const src = document.createElement('div');
+                    src.innerHTML = '<strong>Fonti:</strong>';
+                    const ul = document.createElement('ul');
+                    (data.sources || []).forEach((s, i)=>{
+                        const li = document.createElement('li');
+                        li.textContent = `#${i+1} (${s.city||'n/a'}, score=${(s.score||0).toFixed(3)}): ${s.text.substring(0,200)}...`;
+                        ul.appendChild(li);
+                    });
+                    src.appendChild(ul);
+                    out.innerHTML = '';
+                    out.appendChild(frag);
+                    out.appendChild(src);
+                } else if(data.results){
+                    const ul = document.createElement('ul');
+                    (data.results || []).forEach((r,i)=>{
+                        const li = document.createElement('li');
+                        li.textContent = `#${i+1} (${r.city||'n/a'}, score=${(r.score||0).toFixed(3)}): ${r.text.substring(0,200)}...`;
+                        ul.appendChild(li);
+                    });
+                    out.innerHTML = '<strong>Risultati di retrieval:</strong>';
+                    out.appendChild(ul);
+                } else {
+                    out.textContent = JSON.stringify(data);
+                }
+            }catch(e){
+                out.textContent = 'Errore: ' + e.message;
+            } finally{ btn.disabled = false; }
+        }
+
+        btn.addEventListener('click', ()=>{ const q = input.value.trim(); if(q) ask(q); });
+        input.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ const q = input.value.trim(); if(q) ask(q); }});
+    })();
+    </script>
     <iframe id="map-frame" src="mappa_attrazioni.html"></iframe>
     <main class="container">
             <article class="city-card" itemscope itemtype="https://schema.org/City">

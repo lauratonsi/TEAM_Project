@@ -45,6 +45,20 @@ python -m rag.api
 
 GET http://127.0.0.1:8000/query?q=your+question
 
+Default simulated RAG
+
+This service can run in a lightweight simulated RAG mode without any external model. It retrieves the top matching chunks from the local index and then generates a concise answer using local heuristics.
+
+Use the URL parameter `simulated_rag=true` to enable it:
+
+```bash
+curl "http://127.0.0.1:8000/query?q=Che%20posti%20consigli%20a%20Roma&simulated_rag=true"
+```
+
+The response includes both a generated answer and the source chunks it relied on.
+
+Optional real LLM synthesis
+
 Optional: if you set `OPENAI_API_KEY` in the environment and call `/query?use_llm=true`, the service will synthesize an answer with the configured OpenAI model.
 
 Local LLM (no API keys)

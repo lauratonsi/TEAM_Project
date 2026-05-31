@@ -1,6 +1,9 @@
 # Ignore local model files and environment files
 /models/
 .env
+
+# Ignore generated vector index data
+/rag_index/
 __pycache__/
 *.py[cod]
 .DS_Store
