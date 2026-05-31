@@ -58,7 +58,29 @@
       <description>Museum housing vast specimens from natural history.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>City of London</name>
+      <description>Vibrant and truly multicultural, London is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South-East England. Greater London has a population of a little over 9 million. Considered one of the world's leading "global cities", London remains an international capital of culture, music, education, fashion, politics,...</description>
+    </district>
+    <district>
+      <name>Westminster</name>
+      <description>Quartiere di Londra.</description>
+    </district>
+    <district>
+      <name>Camden</name>
+      <description>Quartiere di Londra.</description>
+    </district>
+    <district>
+      <name>Wandsworth</name>
+      <description>Quartiere di Londra.</description>
+    </district>
+    <district>
+      <name>Southwark-Lewisham</name>
+      <description>Quartiere di Londra.</description>
+    </district>
+  </districts>
   <description>Metropoli globale dal potere economico inesauribile, Londra gestisce flussi turistici immensi con sistemi di sicurezza d'avanguardia. Nonostante i costi elevati, resta il baricentro dell'innovazione e della diversità culturale europea.</description>
-  <wiki_intro>File:Brompton Oratory Nave 2, London, UK - Diliff.jpg|thumb|260x260px|London is home some of the best architecture in the world
-Vibrant and truly multicultural, '''London''' is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South East (England)|South-East England. '''Greater London''' has a population of a little...</wiki_intro>
+  <wiki_intro>Vibrant and truly multicultural, London is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South-East England. Greater London has a population of a little over 9 million. Considered one of the world's leading "global cities", London remains an international capital of culture, music, education, fashion, politics,...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_Westminster,_London_-_Jan_2006.jpg</landmark_image>
 </city_report>

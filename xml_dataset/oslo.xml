@@ -58,6 +58,29 @@
       <description>The main street of Oslo connecting the station and palace.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Sentrum</name>
+      <description>Quartiere di Oslo.</description>
+    </district>
+    <district>
+      <name>West</name>
+      <description>Quartiere di Oslo.</description>
+    </district>
+    <district>
+      <name>Inner North</name>
+      <description>Quartiere di Oslo.</description>
+    </district>
+    <district>
+      <name>Inner East</name>
+      <description>Quartiere di Oslo.</description>
+    </district>
+    <district>
+      <name>North</name>
+      <description>Quartiere di Oslo.</description>
+    </district>
+  </districts>
   <description>Capitale mondiale della mobilità elettrica, Oslo è circondata da foreste e fiordi che penetrano fino in centro. Rappresenta il picco della sostenibilità ambientale unita a una stabilità economica granitica.</description>
-  <wiki_intro>'''Oslo''' is Norway's capital and largest city, with 700,000 citizens in the city proper and about 1.5 million inhabitants in greater Oslo. It is in East Norway|the East of the country in the Oslofjorden fjords of Norway|fjord, extending over an inlet of the Skagerrak strait. It is spaciously laid out and surrounded by green hills and mountains and includes 40 islands and 343 lakes. Oslo offer...</wiki_intro>
+  <wiki_intro>Oslo is Norway's capital and largest city, with 700,000 citizens in the city proper and about 1.5 million inhabitants in greater Oslo. It is in the East of the country in the Oslofjorden fjord, extending over an inlet of the Skagerrak strait. It is spaciously laid out and surrounded by green hills and mountains and includes 40 islands and 343 lakes. Oslo offers ski slopes for alpine skiing and...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Operahuset_Oslo.jpg</landmark_image>
 </city_report>

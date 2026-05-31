@@ -71,9 +71,31 @@
       <description>Museum in a villa housing Bernini and Caravaggio.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Aventino-Testaccio</name>
+      <description>Aventino and Testaccio are neighbourhoods of Rome. Aventino is named for the hill which rises up near the Tiber river and is one of the legendary seven hills of Rome. Diagonally opposite at the end of Circus Maximus is the Celian Hill, another of the seven hills.
+Testaccio is an area to the southwest of Aventino along the bank of the Tiber and is named for the eighth hill of Rome, a man made hill...</description>
+    </district>
+    <district>
+      <name>Colosseo</name>
+      <description>The Colosseo district is the heart of ancient Rome and the Roman Empire. It has the Colosseum, the Forum, and the Capitoline Museum. Via dei Fori Imperiali cuts through the centre of the Rome/Colosseo district, connecting Piazza Venezia with the Colosseum. It is well served by buses, although if you are into serious sightseeing you are likely to want to walk instead as the Roman Forum is on your...</description>
+    </district>
+    <district>
+      <name>Esquilino-San Giovanni</name>
+      <description>Esquilino and San Giovanni are adjacent neighborhoods in Rome. Esquilino is named for the Esquiline hill on which it stands. It lies south of the Termini station and is centred more or less on the Piazza Vittorio Emmanuele II. It is now partly a Chinese immigrant neighbourhood, and specialty groceries and shoe stores abound. San Giovanni is named after the Basilica, which is the Roman Catholic...</description>
+    </district>
+    <district>
+      <name>Modern Centre</name>
+      <description>The Modern Centre of Rome, home to the Via Veneto, Quirinale, Castro Pretorio, Repubblica, and Trevi neighbourhoods, is the city's hub of activity, especially shopping and nightlife. It's also home to a huge assortment of hotels, and it's likely that you'll be staying here, despite the fact that most of Rome's historic attractions are elsewhere. The Modern Centre of Rome is not hard to find as...</description>
+    </district>
+    <district>
+      <name>Nomentano</name>
+      <description>Nomentano is a district of Rome. The San Lorenzo neighborhood is a student area south-east of Rome's main train station (Termini). It has a small street market (food, clothing), unpretentious caffès and is a major centre of Rome's night life. The Nomentano area is easily reachable by bus from Termini Station (90) from Piazza Venezia or via Nazionale (60) or by Metro Line (stops: Castro Pretorio,...</description>
+    </district>
+  </districts>
   <description>Città eterna dalla bellezza stratificata, Roma sta affrontando la sfida della modernizzazione nel rispetto dei suoi vincoli archeologici. Il suo fascino monumentale resta un asset insostituibile nel panorama mondiale.</description>
-  <wiki_intro>Image:Età imperiale, chiusino a forma di mascherone di divinità fluviale, detta bocca della verità, collocata qui nel 1632.jpg|thumb|Roman lie detector: the Bocca della Verità in Santa Maria in Cosmedin
-'''Aventino''' and '''Testaccio''' are neighbourhoods of Rome.
-
-Aventino is named for the hill which rises up near the Tiber river and is one of the legendary seven hills of Rome. Diagonally oppos...</wiki_intro>
+  <wiki_intro>Aventino and Testaccio are neighbourhoods of Rome. Aventino is named for the hill which rises up near the Tiber river and is one of the legendary seven hills of Rome. Diagonally opposite at the end of Circus Maximus is the Celian Hill, another of the seven hills.
+Testaccio is an area to the southwest of Aventino along the bank of the Tiber and is named for the eighth hill of Rome, a man made hill...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome-April_2007-1-_copie_2B.jpg</landmark_image>
 </city_report>

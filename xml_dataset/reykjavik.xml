@@ -3,14 +3,19 @@
 <city_report appeal_score="70.6">
   <metadata>
     <title>Reykjavik</title>
+    <name_it>Reykjavík</name_it>
+    <flag>🇮🇸</flag>
   </metadata>
   <indicators>
+    <hotel_count>0</hotel_count>
     <hotel_price>161.88</hotel_price>
     <safety index_score="82.3"/>
     <environment green_score="88"/>
     <cost_index value="87.5"/>
     <economic_accessibility score="12.5"/>
   </indicators>
+  <transport>Informazioni sul trasporto pubblico in aggiornamento.</transport>
+  <accommodation/>
   <highlights>
     <attraction lat="64.1417" lon="-21.9267">
       <name>Hallgrimskirkja</name>
@@ -54,4 +59,6 @@
     </attraction>
   </highlights>
   <description>La capitale più settentrionale del mondo è un laboratorio di energia geotermica e sicurezza assoluta. Piccola e pulita, Reykjavik offre un'esperienza di vita a stretto contatto con una natura incontaminata.</description>
+  <wiki_intro>Reykjavík is the capital of and largest city in Iceland and with an urban area population of around 233,000 (2019), it is the home to two-thirds of Iceland's population. It is the centre of culture and life of the Icelandic people, and is one of the focal points of tourism in Iceland. The city is spread out, and has sprawling suburbs. The city centre, however, is a very small area characterised...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja.jpg</landmark_image>
 </city_report>

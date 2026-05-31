@@ -14,7 +14,7 @@
     <cost_index value="76.9"/>
     <economic_accessibility score="23.1"/>
   </indicators>
-  <transport>Vienna International Airport Vienna International Airport Vienna International Airport url email address lat48.110278 long16.569722 directionsjust outside the city limits of Vienna on the far side of the City of Schwechat phone tollfree hours price wikipediaVienna International Airport image2011-06-14 10-23-53 Austria Niederösterreich Fischamend Markt.jpg wikidataQ32999 lastedit2025-07-26 contentTo get to Vienna, you have three different railway options. The cheaper but slower S-Bahn line S7 (24 minutes; €4.60) and the more expensive but faster City Airport Train (15 minutes; from €11) both go to Wien-Mitte/Landstraße. If you are taking the S7 train, and you have a valid Vienna public transportation ticket, you only need to purchase a ticket from the airport to Schwechat, as all onward stations are covered by the zone 100 ticket.</transport>
+  <transport>Vienna International Airport Vienna International Airport Vienna International Airport url email address lat48.110278 long16.569722 directionsjust outside the city limits of Vienna on the far side of the City of Schwechat phone tollfree hours price wikipediaVienna International Airport image2011-06-14 10-23-53 Austria Niederösterreich Fischamend Markt.jpg wikidataQ32999 lastedit2025-07-26 contentTo get to Vienna, you have three different railway options. The cheaper but slower S-Bahn line S7 (24 minutes; €4.60) and the more expensive but faster City Airport Train (15 minutes; from €11) both go to Wien-Mitte/Landstraße.</transport>
   <accommodation/>
   <highlights>
     <attraction lat="48.1845" lon="16.3122">
@@ -58,7 +58,29 @@
       <description>Neogothic city hall building and event square.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Innere Stadt</name>
+      <description>Quartiere di Vienna.</description>
+    </district>
+    <district>
+      <name>Landstraße</name>
+      <description>Quartiere di Vienna.</description>
+    </district>
+    <district>
+      <name>Wieden</name>
+      <description>Quartiere di Vienna.</description>
+    </district>
+    <district>
+      <name>Margareten</name>
+      <description>Quartiere di Vienna.</description>
+    </district>
+    <district>
+      <name>Mariahilf</name>
+      <description>Quartiere di Vienna.</description>
+    </district>
+  </districts>
   <description>Costantemente premiata come città più vivibile al mondo, Vienna eccelle nell'edilizia sociale e nel trasporto pubblico. Il suo equilibrio tra cultura imperiale e modernità sostenibile è la sua firma distintiva.</description>
-  <wiki_intro>'''Vienna''' (German phrasebook|German: ''Wien''; Austro-Bavarian: ''Wean'') is the capital of Austria and by far its most populous city, with an urban population of 2 million and a metropolitan population of 2.9 million (2023). It is the country's artistic, cultural, economic and political centre. It is known for its high living standards, relaxed yet elegant lifestyle and rich musical life.
-...</wiki_intro>
+  <wiki_intro>Vienna (German: Wien; Austro-Bavarian: Wean) is the capital of Austria and by far its most populous city, with an urban population of 2 million and a metropolitan population of 2.9 million (2023). It is the country's artistic, cultural, economic and political centre. It is known for its high living standards, relaxed yet elegant lifestyle and rich musical life. Vienna, renowned as the former seat...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Schoenbrunn_front_view.jpg</landmark_image>
 </city_report>

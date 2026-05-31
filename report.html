@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Report &amp; Documentazione — EuroCity</title>
+  <style>
+    .report-nav {
+      max-width: 950px; margin: 0 auto 0; padding: 18px 20px;
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .report-nav a {
+      background: var(--slate-100); color: var(--slate-800);
+      padding: 7px 18px; border-radius: 20px; text-decoration: none;
+      font-size: 0.82rem; font-weight: 700; border: 1px solid var(--slate-200);
+      transition: 0.2s;
+    }
+    .report-nav a:hover { background: var(--accent); color: white; }
+    .report-section {
+      max-width: 950px; margin: 36px auto; background: white;
+      border-radius: 20px; padding: 40px 44px;
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .report-section h2 {
+      font-size: 1.35rem; font-weight: 800; margin: 0 0 24px;
+      padding-bottom: 12px; border-bottom: 3px solid var(--accent);
+      color: var(--primary-dark);
+    }
+    .report-section h3 {
+      font-size: 1rem; font-weight: 800; color: var(--slate-800);
+      margin: 24px 0 10px;
+    }
+    .rstat-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+      margin-bottom: 32px;
+    }
+    .rstat-card {
+      background: var(--slate-50); border: 1px solid var(--slate-100);
+      border-radius: 14px; padding: 18px 12px; text-align: center;
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .rstat-val { font-size: 1.8rem; font-weight: 800; }
+    .rstat-label {
+      font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+      color: var(--slate-500); letter-spacing: 0.06em;
+    }
+    .rank-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .rank-table td { padding: 8px 6px; vertical-align: middle; }
+    .rank-table tr:not(:last-child) { border-bottom: 1px solid var(--slate-100); }
+    .rank-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      margin-bottom: 10px;
+    }
+    .rank-block h3 { margin-top: 0; }
+    .pipeline-steps {
+      display: flex; flex-direction: column; gap: 0;
+      position: relative; margin: 8px 0 0;
+    }
+    .pipeline-step {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 18px 0; position: relative;
+    }
+    .pipeline-step:not(:last-child)::after {
+      content: ''; position: absolute; left: 20px; top: 56px;
+      width: 2px; height: calc(100% - 20px);
+      background: var(--slate-200);
+    }
+    .step-num {
+      min-width: 40px; height: 40px; background: var(--accent);
+      color: white; border-radius: 50%; display: flex;
+      align-items: center; justify-content: center;
+      font-weight: 800; font-size: 0.95rem; z-index: 1;
+    }
+    .step-body p { margin: 4px 0 0; font-size: 0.9rem; color: var(--slate-500); }
+    code {
+      background: var(--slate-100); padding: 2px 6px; border-radius: 4px;
+      font-family: monospace; font-size: 0.85em;
+    }
+    pre {
+      background: #0f172a; color: #e2e8f0; padding: 20px 24px;
+      border-radius: 12px; overflow-x: auto; font-size: 0.82rem;
+      line-height: 1.6; margin: 0;
+    }
+    .technique-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .technique-card {
+      background: var(--slate-50); border: 1px solid var(--slate-200);
+      border-radius: 14px; padding: 20px;
+    }
+    .technique-card h4 {
+      margin: 0 0 8px; font-size: 0.9rem; color: var(--accent);
+      font-weight: 800;
+    }
+    .technique-card p {
+      margin: 0; font-size: 0.87rem; color: var(--slate-500);
+      line-height: 1.5;
+    }
+    .ai-badge {
+      display: inline-block; background: #f0fdf4; color: #166534;
+      border: 1px solid #bbf7d0; border-radius: 8px;
+      padding: 3px 10px; font-size: 0.78rem; font-weight: 700;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 768px) {
+      .rstat-grid { grid-template-columns: 1fr 1fr; }
+      .rank-grid, .technique-grid { grid-template-columns: 1fr; }
+      .report-section { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>EuroCity — Report &amp; Documentazione</h1>
+  <div class="desc-portale">
+    <p>Statistiche estratte algoritmicamente dai file XML. Documentazione della pipeline TEAM.</p>
+    <nav style="margin-top:18px;">
+      <a href="index.html" style="color:#fff; background:rgba(255,255,255,0.15); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem; border:1px solid rgba(255,255,255,0.3);">← Torna alla Dashboard</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="report-nav">
+  <a href="#statistiche">📊 Statistiche</a>
+  <a href="#ranking">🏆 Classifiche</a>
+  <a href="#architettura">⚙️ Architettura</a>
+  <a href="#dtd">📄 Schema DTD</a>
+  <a href="#parsing">🔬 Tecniche di Parsing</a>
+  <a href="#ai">🤖 Utilizzo AI</a>
+</nav>
+
+<!-- ===== STATISTICHE ===== -->
+<section class="report-section" id="statistiche">
+  <h2>📊 Statistiche Comparative — Dati Estratti dai File XML</h2>
+  <div class="rstat-grid">
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>30</span><span class='rstat-label'>Capitali analizzate</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>370</span><span class='rstat-label'>Strutture ricettive</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>300</span><span class='rstat-label'>Attrazioni catalogate</span></div><div class='rstat-card'><span class='rstat-val' style='color:#8b5cf6'>19/30</span><span class='rstat-label'>Città con distretti</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>61.3</span><span class='rstat-label'>Appeal medio</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>66.0</span><span class='rstat-label'>Safety medio</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>71.8</span><span class='rstat-label'>Green medio</span></div><div class='rstat-card'><span class='rstat-val' style='color:#f59e0b'>30</span><span class='rstat-label'>File XML validati</span></div>
+  </div>
+  <p style="font-size:0.85rem; color:var(--slate-500); margin:0;">
+    Tutti i valori sono calcolati a runtime leggendo i 30 file XML nella cartella
+    <code>xml_dataset/</code>. Formula <b>Appeal Score</b> = Safety×0.4 + Green×0.4 + (100−Costo)×0.2.
+  </p>
+</section>
+
+<!-- ===== CLASSIFICHE ===== -->
+<section class="report-section" id="ranking">
+  <h2>🏆 Classifiche per Indicatore</h2>
+  <div class="rank-grid">
+    <div class="rank-block">
+      <h3>Appeal Score (composito)</h3>
+      <table class="rank-table"><tbody><tr><td style='color:var(--slate-500); width:28px'>1</td><td>🇸🇮 Lubiana</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:164px; background:var(--accent); border-radius:4px;'></div><b>74.7</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>2</td><td>🇪🇪 Tallinn</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:156px; background:var(--accent); border-radius:4px;'></div><b>71.1</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>3</td><td>🇮🇸 Reykjavík</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:155px; background:var(--accent); border-radius:4px;'></div><b>70.6</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>4</td><td>🇫🇮 Helsinki</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:155px; background:var(--accent); border-radius:4px;'></div><b>70.4</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>5</td><td>🇨🇿 Praga</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:154px; background:var(--accent); border-radius:4px;'></div><b>70.0</b></div></td></tr></tbody></table>
+    </div>
+    <div class="rank-block">
+      <h3>Indice di Sicurezza</h3>
+      <table class="rank-table"><tbody><tr><td style='color:var(--slate-500); width:28px'>1</td><td>🇮🇸 Reykjavík</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:181px; background:var(--accent); border-radius:4px;'></div><b>82.3</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>2</td><td>🇸🇮 Lubiana</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:172px; background:var(--accent); border-radius:4px;'></div><b>78.4</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>3</td><td>🇭🇷 Zagabria</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:170px; background:var(--accent); border-radius:4px;'></div><b>77.1</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>4</td><td>🇫🇮 Helsinki</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:169px; background:var(--accent); border-radius:4px;'></div><b>76.8</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>5</td><td>🇪🇪 Tallinn</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:168px; background:var(--accent); border-radius:4px;'></div><b>76.4</b></div></td></tr></tbody></table>
+    </div>
+    <div class="rank-block">
+      <h3>Green Score (sostenibilità)</h3>
+      <table class="rank-table"><tbody><tr><td style='color:var(--slate-500); width:28px'>1</td><td>🇳🇴 Oslo</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:202px; background:var(--accent); border-radius:4px;'></div><b>92</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>2</td><td>🇫🇮 Helsinki</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:198px; background:var(--accent); border-radius:4px;'></div><b>90</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>3</td><td>🇸🇮 Lubiana</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:194px; background:var(--accent); border-radius:4px;'></div><b>88</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>4</td><td>🇮🇸 Reykjavík</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:194px; background:var(--accent); border-radius:4px;'></div><b>88</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>5</td><td>🇸🇪 Stoccolma</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:194px; background:var(--accent); border-radius:4px;'></div><b>88</b></div></td></tr></tbody></table>
+    </div>
+    <div class="rank-block">
+      <h3>Più Accessibili Economicamente</h3>
+      <table class="rank-table"><tbody><tr><td style='color:var(--slate-500); width:28px'>1</td><td>🇧🇬 Sofia</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:193px; background:var(--accent); border-radius:4px;'></div><b>87.88€/notte</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>2</td><td>🇷🇴 Bucarest</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:199px; background:var(--accent); border-radius:4px;'></div><b>90.47€/notte</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>3</td><td>🇭🇺 Budapest</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:213px; background:var(--accent); border-radius:4px;'></div><b>96.75€/notte</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>4</td><td>🇵🇱 Varsavia</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:217px; background:var(--accent); border-radius:4px;'></div><b>98.42€/notte</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>5</td><td>🇭🇷 Zagabria</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:223px; background:var(--accent); border-radius:4px;'></div><b>101.38€/notte</b></div></td></tr></tbody></table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ARCHITETTURA ===== -->
+<section class="report-section" id="architettura">
+  <h2>⚙️ Architettura della Pipeline TEAM</h2>
+  <p>
+    Il progetto è composto da tre script Python eseguiti in sequenza. La pipeline trasforma
+    dump MediaWiki (formato XML Wikivoyage) in file XML conformi al DTD, e da questi genera
+    pagine HTML navigabili.
+  </p>
+  <div class="pipeline-steps">
+    <div class="pipeline-step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3 style="margin:0;"><code>extract_wiki_info.py</code> — Fase di Preparazione</h3>
+        <p>
+          Scarica e analizza i dump Wikivoyage in <code>original_source/</code>. Utilizza
+          <b>mwparserfromhell</b> e <b>spaCy</b> per l'estrazione di testo strutturato.
+          Produce <code>wiki_text_pulito.csv</code> (trasporti, hotel, distretti) e
+          <code>attrazione_descrizione_fixed.csv</code> (attrazioni con coordinate geografiche).
+          I dati di sicurezza, costo della vita e green score provengono da
+          <code>city_indices.json</code>.
+        </p>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3 style="margin:0;"><code>final_processor.py</code> — Elaborazione Principale</h3>
+        <p>
+          Script centrale del progetto. Per ogni capitale: individua la pagina principale nel dump
+          Wikivoyage (gestendo assenza della pagina principale e varianti accentate come
+          <i>Reykjavík</i>), pulisce il testo Wikitext con regex, estrae i distretti dal CSV
+          con descrizioni dalle sotto-pagine, valida il file XML risultante rispetto al DTD tramite
+          <b>lxml.etree.DTD</b>, e scrive in <code>xml_dataset/</code>.
+        </p>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3 style="margin:0;"><code>deploy_dashboard.py</code> — Generazione Output HTML</h3>
+        <p>
+          Legge i 30 file XML validati e produce <code>index.html</code> (dashboard navigabile
+          con griglia di card) e questo file <code>report.html</code>. Le card includono
+          <b>microdata Schema.org</b> (<code>itemscope itemtype="City"</code>) per la
+          leggibilità da parte dei motori di ricerca. I dati delle città vengono anche serializzati
+          come JSON inline per il <i>Virtual Analyst</i> interattivo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCHEMA DTD ===== -->
+<section class="report-section" id="dtd">
+  <h2>📄 Schema DTD — Struttura dei Documenti XML</h2>
+  <p>
+    Ogni file in <code>xml_dataset/</code> è validato rispetto a <code>city_report.dtd</code>
+    prima della scrittura. La validazione è eseguita a runtime con <code>lxml.etree.DTD</code>.
+    I file non validi vengono segnalati ma non scritti.
+  </p>
+  <h3>Struttura ad albero</h3>
+  <pre>city_report [@appeal_score]
+├── metadata
+│   ├── title          (nome EN)
+│   ├── name_it        (nome IT)
+│   └── flag           (emoji bandiera)
+├── indicators
+│   ├── hotel_count
+│   ├── hotel_price
+│   ├── safety         [@index_score]
+│   ├── environment    [@green_score]
+│   ├── cost_index     [@value]
+│   └── economic_accessibility [@score]
+├── transport          (testo descrittivo)
+├── accommodation
+│   └── hotel*
+│       ├── name
+│       └── price
+├── highlights
+│   └── attraction*    [@lat @lon]
+│       ├── name
+│       └── description
+├── districts?
+│   └── district*
+│       ├── name
+│       └── description
+├── description        (sintesi strategica IT)
+├── wiki_intro?        (intro da Wikivoyage, ripulita)
+└── landmark_image?    (URL immagine simbolo)</pre>
+  <h3>Dichiarazione DTD (file sorgente)</h3>
+  <pre>&lt;!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?)&gt;
+&lt;!ATTLIST city_report 
+    appeal_score CDATA #REQUIRED&gt;
+
+&lt;!ELEMENT metadata (title, name_it, flag)&gt;
+&lt;!ELEMENT title (#PCDATA)&gt;
+&lt;!ELEMENT name_it (#PCDATA)&gt;
+&lt;!ELEMENT flag (#PCDATA)&gt;
+
+&lt;!ELEMENT indicators (hotel_count, hotel_price, safety, environment, cost_index, economic_accessibility)&gt;
+&lt;!ELEMENT hotel_count (#PCDATA)&gt;
+&lt;!ELEMENT hotel_price (#PCDATA)&gt;
+
+&lt;!ELEMENT safety EMPTY&gt;
+&lt;!ATTLIST safety index_score CDATA #REQUIRED&gt;
+
+&lt;!ELEMENT environment EMPTY&gt;
+&lt;!ATTLIST environment green_score CDATA #REQUIRED&gt;
+
+&lt;!ELEMENT cost_index EMPTY&gt;
+&lt;!ATTLIST cost_index value CDATA #REQUIRED&gt;
+
+&lt;!ELEMENT economic_accessibility EMPTY&gt;
+&lt;!ATTLIST economic_accessibility score CDATA #REQUIRED&gt;
+
+&lt;!ELEMENT transport (#PCDATA)&gt;
+&lt;!ELEMENT accommodation (hotel*)&gt;
+&lt;!ELEMENT hotel (name, price)&gt;
+&lt;!ELEMENT price (#PCDATA)&gt;
+
+&lt;!ELEMENT highlights (attraction*)&gt;
+&lt;!ELEMENT attraction (name, description)&gt;
+&lt;!ATTLIST attraction 
+    lat CDATA #REQUIRED 
+    lon CDATA #REQUIRED&gt;
+
+&lt;!ELEMENT districts (district*)&gt;
+&lt;!ELEMENT district (name, description)&gt;
+
+&lt;!ELEMENT name (#PCDATA)&gt;
+&lt;!ELEMENT description (#PCDATA)&gt;
+&lt;!ELEMENT wiki_intro (#PCDATA)&gt;
+&lt;!ELEMENT landmark_image (#PCDATA)&gt;</pre>
+</section>
+
+<!-- ===== PARSING ===== -->
+<section class="report-section" id="parsing">
+  <h2>🔬 Tecniche di Parsing e Pulizia del Testo</h2>
+  <div class="technique-grid">
+    <div class="technique-card">
+      <h4>Parsing MediaWiki XML con lxml</h4>
+      <p>
+        I dump Wikivoyage sono file XML con namespace
+        <code>http://www.mediawiki.org/xml/export-0.11/</code>.
+        La libreria <code>lxml.etree</code> li analizza con
+        <code>tree.findall('.//mw:page', ns)</code>.
+        Ogni dump contiene più pagine: la pagina principale della città
+        e le pagine dei singoli distretti (<code>Città/Distretto</code>).
+      </p>
+    </div>
+    <div class="technique-card">
+      <h4>Selezione della Pagina Principale</h4>
+      <p>
+        L'algoritmo cerca nell'ordine: (1) pagina con titolo esatto uguale al nome della
+        città; (2) prima pagina con titolo <code>Città/XYZ</code>; (3) prima pagina che
+        contiene il nome della città. La comparazione è <b>accent-insensitive</b>
+        tramite <code>unicodedata.normalize('NFKD')</code>, necessario per Reykjavík.
+      </p>
+    </div>
+    <div class="technique-card">
+      <h4>Pulizia del Wikitext</h4>
+      <p>
+        Il testo grezzo in formato Wikitext viene ripulito con sequenze di regex:
+        rimozione dei template <code>{"{"}...{"}"}</code> (5 passate per nested),
+        link <code>[[...]]</code> → testo visibile,
+        link <code>[http://url testo]</code> → solo testo,
+        header <code>== ... ==</code>, tag HTML, marcatori bold/italic <code>'''</code>,
+        hatnote di disambiguazione (<code>:For other...</code>).
+        Il testo finale viene troncato a 400 caratteri.
+      </p>
+    </div>
+    <div class="technique-card">
+      <h4>Estrazione dei Distretti</h4>
+      <p>
+        La colonna <code>Districts</code> del CSV fornisce i nomi dei distretti
+        (estratti nella fase 1). I nomi vengono ripuliti da rumore (es. <i>"Visitor info:"</i>,
+        <i>"Buses"</i>, toponomastica storica come <i>"Laibach"</i>).
+        Per ogni distretto si cerca la sotto-pagina corrispondente nel dump XML
+        e se ne estrae il testo introduttivo come descrizione.
+        Per Luxembourg e Stockholm sono stati definiti override manuali
+        perché il CSV conteneva dati errati (siti naturali, municipalità di contea).
+      </p>
+    </div>
+    <div class="technique-card">
+      <h4>Validazione DTD con lxml</h4>
+      <p>
+        Prima di ogni scrittura, l'albero XML viene validato con
+        <code>lxml.etree.DTD(open('city_report.dtd', 'rb')).validate(root)</code>.
+        Tutti i 30 file superano la validazione. Gli elementi opzionali
+        (<code>districts?</code>, <code>wiki_intro?</code>, <code>landmark_image?</code>)
+        non vengono creati se i dati corrispondenti sono assenti.
+      </p>
+    </div>
+    <div class="technique-card">
+      <h4>Microdata Schema.org nell'HTML</h4>
+      <p>
+        Ogni card nella dashboard è annotata con
+        <code>itemscope itemtype="https://schema.org/City"</code>
+        e <code>itemprop="name"</code> sul nome della città.
+        Le annotazioni microdata sono generate direttamente dallo script
+        <code>deploy_dashboard.py</code>, come richiesto dalle linee guida del progetto.
+      </p>
+    </div>
+    <div class="technique-card">
+      <h4>Gestione delle Eccezioni</h4>
+      <p>
+        Ogni città è elaborata in un blocco <code>try/except</code> indipendente:
+        un file corrotto non blocca la pipeline. La funzione <code>find_orig_file()</code>
+        usa confronto accent-insensitive per trovare i file sorgente con nomi accentati.
+        I dati mancanti nel CSV (es. Paris transport = NaN, Reykjavik non presente)
+        vengono gestiti con <code>TRANSPORT_PATCH</code> e iterando su
+        <code>city_indices.json</code> anziché sul CSV.
+      </p>
+    </div>
+    <div class="technique-card">
+      <h4>Coordinate Geografiche e Mappa</h4>
+      <p>
+        Le attrazioni hanno attributi <code>@lat</code> e <code>@lon</code> estratti
+        dal CSV <code>attrazione_descrizione_fixed.csv</code>. La dashboard genera link
+        diretti a Google Maps (<code>?q=lat,lon</code>) e la mappa interattiva
+        <code>mappa_attrazioni.html</code> visualizza tutti i punti su Leaflet.js.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI ===== -->
+<section class="report-section" id="ai">
+  <h2>🤖 Dichiarazione Utilizzo Strumenti AI</h2>
+  <p>
+    Come previsto dalle linee guida del progetto TEAM, l'utilizzo di strumenti AI è
+    dichiarato e documentato di seguito.
+  </p>
+
+  <h3>Claude Code (Anthropic) — Assistenza allo Sviluppo</h3>
+  <span class="ai-badge">Claude Code / claude-sonnet-4-6</span>
+  <p>
+    Lo strumento Claude Code è stato utilizzato per:
+  </p>
+  <ul style="font-size:0.9rem; color:var(--slate-500); line-height:1.8;">
+    <li>Debugging della pipeline di parsing (problema selezione pagina principale nei dump Wikivoyage multi-pagina)</li>
+    <li>Scrittura della funzione <code>advanced_wiki_cleaner()</code> per la pulizia del Wikitext con regex</li>
+    <li>Risoluzione del problema accent-insensitive per Reykjavík (uso di <code>unicodedata.normalize</code>)</li>
+    <li>Identificazione e correzione del bug nell'estrazione distretti in <code>deploy_dashboard.py</code> (<code>d.text</code> invece di <code>d.findtext('name')</code>)</li>
+    <li>Generazione della griglia di override distretti per Luxembourg e Stockholm</li>
+    <li>Generazione di questo file <code>report.html</code> e del <code>README.md</code></li>
+  </ul>
+
+  <h3>AI per i Contenuti del Dataset</h3>
+  <span class="ai-badge">city_descriptions.json</span>
+  <p>
+    Le sintesi strategiche in italiano in <code>city_descriptions.json</code>
+    (mostrate come <i>Strategic Summary</i> nelle card) sono state generate con Claude
+    (Anthropic) tramite prompt strutturati del tipo:
+  </p>
+  <pre style="font-size:0.8rem;">Genera una descrizione strategica in italiano (max 2 frasi) di [CITTÀ]
+come capitale europea, focalizzandoti su: innovazione urbana, sostenibilità,
+sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</pre>
+  <p style="margin-top:16px;">
+    I file XML sorgente in <code>original_source/</code> provengono da
+    <b>Wikivoyage</b> (licenza CC-BY-SA), scaricati tramite le API MediaWiki.
+    I dati di sicurezza e costo della vita provengono da dataset pubblici
+    (Numbeo, EIU) aggregati in <code>city_indices.json</code>.
+    Le immagini landmark provengono da <b>Wikimedia Commons</b> (licenza libera)
+    tramite URL <code>Special:FilePath</code>.
+  </p>
+</section>
+
+<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+  Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
+  Università di Bologna — A.A. 2024/2025
+</footer>
+</body>
+</html>

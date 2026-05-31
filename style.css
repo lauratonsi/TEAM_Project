@@ -217,9 +217,35 @@ header h1 {
     transition: 0.2s;
 }
 
-.maps-link:hover { 
-    background: var(--blue-500); 
-    color: white; 
+.maps-link:hover {
+    background: var(--blue-500);
+    color: white;
+}
+
+/* 10b. LANDMARK IMAGE */
+.landmark-img-wrap {
+    width: calc(100% + 70px);
+    margin: -35px -35px 25px -35px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    height: 200px;
+}
+
+.landmark-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.city-card:hover .landmark-img {
+    transform: scale(1.04);
+}
+
+.district-block {
+    background: #F0FDF4;
+    border-left: 4px solid var(--green-500);
 }
 
 /* 10. MAP FRAME GLOBALE */

@@ -58,6 +58,29 @@
       <description>Historic amusement park on the island of Djurgården.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Gamla Stan</name>
+      <description>La città vecchia medievale sull'isolotto, cuore storico di Stoccolma.</description>
+    </district>
+    <district>
+      <name>Södermalm</name>
+      <description>Il quartiere hipster e creativo con caffè, mercati e viste panoramiche.</description>
+    </district>
+    <district>
+      <name>Östermalm</name>
+      <description>Il quartiere elegante con il Mercato Östermalm e ambasciate.</description>
+    </district>
+    <district>
+      <name>Norrmalm</name>
+      <description>Il centro commerciale e culturale, sede della stazione centrale.</description>
+    </district>
+    <district>
+      <name>Kungsholmen</name>
+      <description>Isola con il Municipio (Stadshuset) e zone residenziali tranquille.</description>
+    </district>
+  </districts>
   <description>Distribuita su quattordici isole, Stoccolma incarna l'eleganza scandinava e il design funzionale. La sua dedizione alla pulizia delle acque e alla sicurezza urbana la rende un modello di efficienza sociale.</description>
-  <wiki_intro>'''Stockholm''' is Sweden's capital and largest city, with nearly a million inhabitants in the city, and 2.4 million within Stockholm County (as of 2021). The inner city is made up of 14 islands across Lake '''Mälaren''' and three streams into the brackish '''Baltic Sea''', with the Stockholm archipelago with some 24,000 islands, islets and skerries. Over 30% of the city area is made up of wate...</wiki_intro>
+  <wiki_intro>Stockholm is Sweden's capital and largest city, with nearly a million inhabitants in the city, and 2.4 million within Stockholm County (as of 2021). The inner city is made up of 14 islands across Lake Mälaren and three streams into the brackish Baltic Sea, with the Stockholm archipelago with some 24,000 islands, islets and skerries. Over 30% of the city area is made up of waterways, and another...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Stockholm_City_Hall_(Stadshuset)_2016.jpg</landmark_image>
 </city_report>

@@ -58,6 +58,29 @@
       <description>Ancient Egyptian temple rebuilt in Madrid.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Retiro-Paseo del Arte</name>
+      <description>Quartiere di Madrid.</description>
+    </district>
+    <district>
+      <name>Salamanca</name>
+      <description>Quartiere di Madrid.</description>
+    </district>
+    <district>
+      <name>Chamberí-Castellana</name>
+      <description>Quartiere di Madrid.</description>
+    </district>
+    <district>
+      <name>Moncloa</name>
+      <description>Quartiere di Madrid.</description>
+    </district>
+    <district>
+      <name>Arganzuela</name>
+      <description>Quartiere di Madrid.</description>
+    </district>
+  </districts>
   <description>Famosa per la sua energia sociale e i grandi viali alberati, Madrid sta investendo pesantemente in 'foreste urbane' per combattere il calore. La sua accessibilità e la vita notturna sicura la rendono una meta imperdibile.</description>
-  <wiki_intro>'''Madrid''' is Spain's capital and largest city. A city that has been marked by Spain's varied and tumultuous history, Madrid has some of Europe's most impressive cultural and architectural heritage, which includes grand avenues, plazas, buildings and monuments, world-class art galleries and museums, highly popular football teams, and cultural events of international fame for everyone. Madrid ...</wiki_intro>
+  <wiki_intro>Madrid is Spain's capital and largest city. A city that has been marked by Spain's varied and tumultuous history, Madrid has some of Europe's most impressive cultural and architectural heritage, which includes grand avenues, plazas, buildings and monuments, world-class art galleries and museums, highly popular football teams, and cultural events of international fame for everyone. Madrid is also...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Real_de_Madrid_1.jpg</landmark_image>
 </city_report>

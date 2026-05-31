@@ -79,10 +79,29 @@
       <description>Charming neighborhood known for its narrow canals and boutiques.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Zuidoost</name>
+      <description>Zuidoost (Dutch for Southeast), often colloquially referred to as the Bijlmer, is a borough of Amsterdam. It is an exclave, separated from the mainland by Duivendrecht and Diemen. With no shared borders with Amsterdam, Zuidoost is a separate entity. It was built up in the 1960s and 70s as a residential utopia of sorts with apartment blocks separated by tracts of green. Also known as ‘De Bijlmer’,...</description>
+    </district>
+    <district>
+      <name>Canal District</name>
+      <description>The Canal District (Dutch: Grachtengordel) is the famous 17th-century district surrounding the Binnenstad of Amsterdam. The whole district is designated as a UNESCO World Heritage Site for its unique cultural and historical value, and its property values are among the highest in the country. This article also deals with the Leidseplein and the Rembrandtplein, the two prime nightlife spots of the...</description>
+    </district>
+    <district>
+      <name>Oost</name>
+      <description>Oost (Dutch for East) is a borough of Amsterdam. It lies between the Amstel River in the west and the IJ in the east. It should not be regarded as a homogeneous area, as there are many different neighbourhoods with their own cultures and identities. The main area is around the Oosterpark. The Eastern Docklands and IJburg are also lively upper middle class areas and their modern architecture shows...</description>
+    </district>
+    <district>
+      <name>Jordaan</name>
+      <description>The Jordaan is a district in the centre of Amsterdam. It used to be a working-class neighbourhood, but has become one of the most upscale areas of the Netherlands, known for its art galleries, speciality shops and boutique restaurants. Among the Dutch, the Jordaan is known for its folk singers; several of its most popular musicians now have a statue in their memory at the corner of Prinsengracht...</description>
+    </district>
+    <district>
+      <name>Noord</name>
+      <description>Noord (Dutch for North) is the borough of Amsterdam north of the IJ. It is a residential district, and with about 86,000 inhabitants, it is a medium-sized city (and it is growing at a rapid pace—three new neighbourhoods are under construction). This district has remained well off the radar among tourists visiting Amsterdam, so amenities are not well-developed. It looks strikingly different from...</description>
+    </district>
+  </districts>
   <description>Hub globale dell'innovazione sostenibile, Amsterdam eccelle nella mobilità ciclistica e nella gestione creativa degli spazi acquatici. Unisce un dinamismo economico unico a una rete di sicurezza sociale e urbana di primo livello.</description>
-  <wiki_intro>'''[http://www.zuidoost.amsterdam.nl/ Zuidoost]''' (Dutch phrasebook|Dutch for ''Southeast''), often colloquially referred to as the '''Bijlmer''', is a borough of Amsterdam. It is an exclave, separated from the mainland by Duivendrecht and Diemen.
-
-==Understand==
-
-With no shared borders with Amsterdam, Zuidoost is a separate entity. It was built up in the 1960s and 70s as a residential utopia of...</wiki_intro>
+  <wiki_intro>Zuidoost (Dutch for Southeast), often colloquially referred to as the Bijlmer, is a borough of Amsterdam. It is an exclave, separated from the mainland by Duivendrecht and Diemen. With no shared borders with Amsterdam, Zuidoost is a separate entity. It was built up in the 1960s and 70s as a residential utopia of sorts with apartment blocks separated by tracts of green. Also known as ‘De Bijlmer’,...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Rijksmuseum_Amsterdam_2016.jpg</landmark_image>
 </city_report>

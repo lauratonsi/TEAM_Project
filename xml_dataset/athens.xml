@@ -79,6 +79,29 @@
       <description>Highest point in Athens offering panoramic views.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Central Athens</name>
+      <description>Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don't come expecting a philosopher's theme park;...</description>
+    </district>
+    <district>
+      <name>North Athens</name>
+      <description>Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don't come expecting a philosopher's theme park;...</description>
+    </district>
+    <district>
+      <name>West Athens</name>
+      <description>Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don't come expecting a philosopher's theme park;...</description>
+    </district>
+    <district>
+      <name>Piraeus (Area)</name>
+      <description>Quartiere di Atene.</description>
+    </district>
+    <district>
+      <name>South Athens</name>
+      <description>Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don't come expecting a philosopher's theme park;...</description>
+    </district>
+  </districts>
   <description>La culla della civiltà occidentale sta vivendo una rinascita urbana focalizzata sulla digitalizzazione e sul recupero degli spazi storici. Il mix tra eredità monumentale e nuovi incentivi economici la rende un caso di studio strategico nel Mediterraneo.</description>
-  <wiki_intro>'''Athens''' (Greek phrasebook|Greek: , ''Athína'') is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don't come expecting a philo...</wiki_intro>
+  <wiki_intro>Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don't come expecting a philosopher's theme park;...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/The_Parthenon_in_Athens.jpg</landmark_image>
 </city_report>

@@ -13,6 +13,8 @@ INPUT_JSON_DESC = 'city_descriptions.json'
 DTD_FILE = 'city_report.dtd'
 OUTPUT_DIR = 'xml_dataset'
 
+MW_NS = 'http://www.mediawiki.org/xml/export-0.11/'
+
 CITY_MAP = {
     "London": {"it": "Londra", "flag": "🇬🇧"}, "Prague": {"it": "Praga", "flag": "🇨🇿"},
     "Copenhagen": {"it": "Copenaghen", "flag": "🇩🇰"}, "Warsaw": {"it": "Varsavia", "flag": "🇵🇱"},
@@ -29,19 +31,282 @@ CITY_MAP = {
     "Reykjavik": {"it": "Reykjavík", "flag": "🇮🇸"}, "Sofia": {"it": "Sofia", "flag": "🇧🇬"},
     "Tallinn": {"it": "Tallinn", "flag": "🇪🇪"}, "Riga": {"it": "Riga", "flag": "🇱🇻"},
     "Vilnius": {"it": "Vilnius", "flag": "🇱🇹"}, "Nicosia": {"it": "Nicosia", "flag": "🇨🇾"},
-    "Bern": {"it": "Berna", "flag": "🇨🇭"}
 }
 
+# Landmark images via Wikimedia Commons Special:FilePath (stable redirect URLs)
+LANDMARK_IMAGES = {
+    "Amsterdam":  "https://commons.wikimedia.org/wiki/Special:FilePath/Rijksmuseum_Amsterdam_2016.jpg",
+    "Athens":     "https://commons.wikimedia.org/wiki/Special:FilePath/The_Parthenon_in_Athens.jpg",
+    "Berlin":     "https://commons.wikimedia.org/wiki/Special:FilePath/Brandenburger_Tor_abends.jpg",
+    "Bratislava": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_hrad_1.jpg",
+    "Brussels":   "https://commons.wikimedia.org/wiki/Special:FilePath/Grand-Place_bruxelles.jpg",
+    "Bucharest":  "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_the_Parliament,_Bucharest.jpg",
+    "Budapest":   "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_Parliament_Jan_2009.jpg",
+    "Copenhagen": "https://commons.wikimedia.org/wiki/Special:FilePath/Copenhagen_-_Nyhavn_(2).jpg",
+    "Dublin":     "https://commons.wikimedia.org/wiki/Special:FilePath/Samuel_Beckett_Bridge,_Dublin.jpg",
+    "Helsinki":   "https://commons.wikimedia.org/wiki/Special:FilePath/Helsinki_Senate_Square_2.jpg",
+    "Lisbon":     "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_de_Belem_Lisboa.jpg",
+    "Ljubljana":  "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_castle_walls.jpg",
+    "London":     "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_Westminster,_London_-_Jan_2006.jpg",
+    "Luxembourg": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_City_Adolphe_Bridge_01.jpg",
+    "Madrid":     "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Real_de_Madrid_1.jpg",
+    "Nicosia":    "https://commons.wikimedia.org/wiki/Special:FilePath/Nicosia,_Cyprus.jpg",
+    "Oslo":       "https://commons.wikimedia.org/wiki/Special:FilePath/Operahuset_Oslo.jpg",
+    "Paris":      "https://commons.wikimedia.org/wiki/Special:FilePath/Tour_Eiffel_Trocadero.jpg",
+    "Prague":     "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Bridge_and_Prague_Castle.jpg",
+    "Reykjavik":  "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja.jpg",
+    "Riga":       "https://commons.wikimedia.org/wiki/Special:FilePath/House_of_Blackheads,_Riga_2.jpg",
+    "Rome":       "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome-April_2007-1-_copie_2B.jpg",
+    "Sofia":      "https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_Nevsky_Cathedral_Sofia_2.jpg",
+    "Stockholm":  "https://commons.wikimedia.org/wiki/Special:FilePath/Stockholm_City_Hall_(Stadshuset)_2016.jpg",
+    "Tallinn":    "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_-_June_2012.jpg",
+    "Valletta":   "https://commons.wikimedia.org/wiki/Special:FilePath/Valletta_Malta_2015.jpg",
+    "Vienna":     "https://commons.wikimedia.org/wiki/Special:FilePath/Schoenbrunn_front_view.jpg",
+    "Vilnius":    "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius_Old_Town_January_2011.jpg",
+    "Warsaw":     "https://commons.wikimedia.org/wiki/Special:FilePath/Warsaw_Royal_Castle.jpg",
+    "Zagreb":     "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_cathedral.jpg",
+}
+
+# Patch transport for cities where CSV extraction failed
+TRANSPORT_PATCH = {
+    "Paris": (
+        "Dall'aeroporto CDG: RER B fino a Gare du Nord (35 min) o RoissyBus fino a Opéra (75 min). "
+        "In città: metro (16 linee), bus e RER coprono tutta l'area metropolitana."
+    ),
+}
+
+# District names that are clearly noise (not real city districts)
+_NOISE_DISTRICTS = {
+    'visitor info', 'visitor info:', 'buses', 'bus', 'trams', 'tram',
+    'green line', 'world heritage site', 'world heritage', 'laibach', 'reval',
+    'tourist information', 'tourist information:', 'to and from the airport:',
+    'il-belt', 'to and from the airport',
+    # Luxembourg - these are Mullerthal nature sites, not Luxembourg City districts
+    'mullerthal', 'schéissendëmpel', 'hohllay', 'beaufort castles',
+    # Stockholm County municipalities (not Stockholm city districts)
+    'stockholm county', 'norrtälje', 'sigtuna', 'norrort',
+    'stockholm archipelago', 'södertörn', 'södertälje',
+}
+
+# Per-city district overrides (when CSV data is completely wrong)
+_DISTRICT_OVERRIDES = {
+    # Luxembourg City actual quarters
+    "Luxembourg": [
+        ("Ville-Haute", "Il centro storico e politico della città, sede del Palazzo Granducale."),
+        ("Grund", "Il pittoresco quartiere medievale sul fiume Alzette, noto per i suoi bistrot."),
+        ("Kirchberg", "Il quartiere europeo, sede delle istituzioni UE e del museo MUDAM."),
+        ("Clausen", "Quartiere residenziale lungo l'Alzette, famoso per le sue birrerie."),
+        ("Limpertsberg", "Quartiere verde e borghese, con l'università e negozi di qualità."),
+    ],
+    # Stockholm city districts (instead of county municipalities)
+    "Stockholm": [
+        ("Gamla Stan", "La città vecchia medievale sull'isolotto, cuore storico di Stoccolma."),
+        ("Södermalm", "Il quartiere hipster e creativo con caffè, mercati e viste panoramiche."),
+        ("Östermalm", "Il quartiere elegante con il Mercato Östermalm e ambasciate."),
+        ("Norrmalm", "Il centro commerciale e culturale, sede della stazione centrale."),
+        ("Kungsholmen", "Isola con il Municipio (Stadshuset) e zone residenziali tranquille."),
+    ],
+}
+
+
 def clean_xml_text(text):
-    if not text or str(text).lower() == 'nan': return ""
+    if not text or str(text).lower() == 'nan':
+        return ""
     return str(text).strip().replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+
+def advanced_wiki_cleaner(raw_text):
+    """Clean Wikivoyage/Wikipedia wikitext into plain prose."""
+    if not raw_text or str(raw_text).lower() == 'nan':
+        return ""
+    text = str(raw_text)
+    # Remove templates (5 passes for nested ones)
+    for _ in range(5):
+        text = re.sub(r'\{\{[^{}]*?\}\}', '', text, flags=re.DOTALL)
+    # Remove wiki tables
+    text = re.sub(r'\{\|.*?\|\}', '', text, flags=re.DOTALL)
+    # Remove file/image links
+    text = re.sub(r'\[\[(File|Image|Categoria|Category):.*?\]\]', '', text,
+                  flags=re.IGNORECASE | re.DOTALL)
+    # [[link|display text]] → display text
+    text = re.sub(r'\[\[[^|\]]*\|([^\]]+)\]\]', r'\1', text)
+    # [[link]] → link text
+    text = re.sub(r'\[\[([^\]]+)\]\]', r'\1', text)
+    # [http://url display text] → display text
+    text = re.sub(r'\[https?://\S+\s+([^\]]*)\]', r'\1', text)
+    # [http://url] (bare URL in brackets) → remove
+    text = re.sub(r'\[https?://\S+\]', '', text)
+    # Remove disambiguation hatnotes (:For other places..., :See also...)
+    text = re.sub(r'^:.*\n?', '', text, flags=re.MULTILINE)
+    # Remove bold/italic wiki markers
+    text = re.sub(r"'{2,}", '', text)
+    # Remove HTML tags
+    text = re.sub(r'<[^>]+>', '', text)
+    # Remove section headers (== Header ==)
+    text = re.sub(r'=+[^=\n]*=+', '', text)
+    # Normalize whitespace
+    text = re.sub(r'[ \t]+', ' ', text)
+    text = re.sub(r'\n\s*\n+', ' ', text)
+    text = text.strip()
+    text = clean_xml_text(text)
+
+    if len(text) > 400:
+        truncated = text[:400]
+        last_space = truncated.rfind(' ')
+        text = (truncated[:last_space] + "...") if last_space > 0 else (truncated + "...")
+    return text if len(text) > 10 else ""
+
+
+import unicodedata as _ud
+
+
+def _ascii_lower(s):
+    """Lower-case and strip accents for accent-insensitive comparison."""
+    return _ud.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
+
+
+def find_orig_file(orig_dir, name):
+    """Locate the original XML file, tolerating accent variants (e.g. Reykjavík vs Reykjavik)."""
+    direct = os.path.join(orig_dir, f"{name}.xml")
+    if os.path.exists(direct):
+        return direct
+    name_ascii = _ascii_lower(name)
+    for fname in os.listdir(orig_dir):
+        if fname.lower().endswith('.xml') and _ascii_lower(fname[:-4]) == name_ascii:
+            return os.path.join(orig_dir, fname)
+    return direct  # will not exist; caller checks
+
+
+def _get_pages(orig_file):
+    """Return list of (title, text) pairs from a Wikivoyage MediaWiki XML dump."""
+    ns = {'mw': MW_NS}
+    tree = etree.parse(orig_file)
+    result = []
+    for page in tree.findall('.//mw:page', ns):
+        title = page.findtext('mw:title', namespaces=ns) or ""
+        text = page.findtext('.//mw:text', namespaces=ns) or ""
+        result.append((title, text))
+    return result
+
+
+def get_city_main_text(orig_file, city_name):
+    """
+    Find the most relevant intro text for a city from its Wikivoyage dump.
+
+    Priority:
+      1. Page whose title matches the city name (accent-insensitive)
+      2. First page whose title starts with "CityName/"
+      3. First page whose title contains the city name
+      4. Empty string (no usable page found)
+    """
+    if not os.path.exists(orig_file):
+        return ""
+    pages = _get_pages(orig_file)
+    city_ascii = _ascii_lower(city_name)
+
+    # Priority 1: accent-insensitive exact title match
+    for title, text in pages:
+        if _ascii_lower(title) == city_ascii:
+            return text
+
+    # Priority 2: "CityName/SubPage" — use first sub-page about the city
+    for title, text in pages:
+        if _ascii_lower(title).startswith(city_ascii + "/"):
+            return text
+
+    # Priority 3: title contains the city name but is not a Category page
+    for title, text in pages:
+        if city_ascii in _ascii_lower(title) and not title.startswith("Category:"):
+            return text
+
+    return ""
+
+
+def get_subpage_texts(orig_file, city_name):
+    """
+    Return {normalised_district_key: wiki_text} for all sub-pages of a city.
+    Keys have any "CityName/" prefix stripped and are lower-cased.
+    Uses accent-insensitive prefix stripping so Reykjavik matches Reykjavík/.
+    """
+    if not os.path.exists(orig_file):
+        return {}
+    pages = _get_pages(orig_file)
+    city_ascii = _ascii_lower(city_name)
+    prefix_ascii = city_ascii + "/"
+    result = {}
+    for title, text in pages:
+        title_ascii = _ascii_lower(title)
+        if title_ascii.startswith(prefix_ascii):
+            key = title[len(city_name) + 1:]  # strip prefix by character count
+        else:
+            key = title
+        result[key.lower()] = text
+    return result
+
+
+def clean_district_names(raw_str, city_name):
+    """
+    Parse pipe-separated district names from the CSV Districts column.
+    Strips any "CityName/" prefix and removes known noise entries.
+    Returns at most 5 clean district names.
+    """
+    if not raw_str or str(raw_str).lower() == 'nan':
+        return []
+    prefix = f"{city_name}/"
+    seen = set()
+    result = []
+    for part in str(raw_str).split('|'):
+        d = part.strip()
+        if d.startswith(prefix):
+            d = d[len(prefix):]
+        d = d.strip()
+        if not d or len(d) < 3:
+            continue
+        if d.lower() in _NOISE_DISTRICTS:
+            continue
+        if d.endswith(':'):          # header labels like "Visitor info:"
+            continue
+        if d.lower() not in seen:
+            seen.add(d.lower())
+            result.append(d)
+    return result[:5]
+
+
+def get_district_description(district_name, subpage_texts):
+    """
+    Try to find a wiki intro for a district by fuzzy-matching its name
+    against the available sub-page texts.
+    """
+    d_lower = district_name.lower()
+    # Exact key match
+    if d_lower in subpage_texts:
+        return advanced_wiki_cleaner(subpage_texts[d_lower])
+    # Partial match: district name contained in a page key or vice-versa
+    words = [w for w in d_lower.split() if len(w) > 3]
+    for key, text in subpage_texts.items():
+        if d_lower in key or key in d_lower or any(w in key for w in words):
+            cleaned = advanced_wiki_cleaner(text)
+            if cleaned:
+                return cleaned
+    return ""
+
+
+def _row_get(row, key, default=''):
+    """Get a value from either a pandas Series row or an empty fallback dict."""
+    if isinstance(row, dict):
+        return row.get(key, default)
+    try:
+        val = row[key]
+        return val if pd.notna(val) else default
+    except (KeyError, TypeError):
+        return default
+
 
 def parse_hotels(hotel_str):
     hotels = []
-    if not hotel_str or str(hotel_str).lower() == 'nan': return hotels
-    parts = hotel_str.split('|')
-    for p in parts:
-        # Cerca il pattern "Nome (Prezzo)"
+    if not hotel_str or str(hotel_str).lower() == 'nan':
+        return hotels
+    for p in hotel_str.split('|'):
         match = re.search(r'^(.*?)\s*\((.*?)\)$', p.strip())
         if match:
             hotels.append({'n': match.group(1).strip(), 'p': match.group(2).strip()})
@@ -49,77 +314,142 @@ def parse_hotels(hotel_str):
             hotels.append({'n': p.strip(), 'p': 'Prezzo N/D'})
     return hotels
 
+
 def run_pipeline():
-    print("🚀 Iniezione dati totali negli XML...")
-    if not os.path.exists(OUTPUT_DIR): os.makedirs(OUTPUT_DIR)
-    
+    print("🚀 Avvio pipeline completa: estrazione, pulizia e validazione DTD...")
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
+
     try:
         dtd = etree.DTD(open(DTD_FILE, 'rb'))
-        df_wiki = pd.read_csv(INPUT_CSV_WIKI).set_index('City')
+        df_wiki_raw = pd.read_csv(INPUT_CSV_WIKI)
+        # Build a lookup dict keyed by upper-case city name; values are row dicts
+        wiki_lookup = {
+            row['City'].upper(): row
+            for _, row in df_wiki_raw.iterrows()
+        }
         df_attr = pd.read_csv(INPUT_CSV_ATTR)
         with open(INPUT_JSON_INDICES, 'r', encoding='utf-8') as f:
-            indices = {c['city'].upper(): c for c in json.load(f)['capitali']}
+            city_entries = json.load(f)['capitali']
         with open(INPUT_JSON_DESC, 'r', encoding='utf-8') as f:
             narratives = json.load(f)
     except Exception as e:
-        print(f"❌ Errore fatale: {e}")
+        print(f"❌ Errore fatale nel caricamento dei dati: {e}")
         return
 
-    for city_name_upper, wiki_row in df_wiki.iterrows():
-        city_idx = indices.get(city_name_upper)
-        if not city_idx: continue
-        
+    for city_idx in city_entries:
         name = city_idx['city']
-        # Calcolo appeal basato sui tuoi indici
-        score = round((city_idx['safety']*0.4 + city_idx['green_score']*0.4 + (100-city_idx['cost_of_living'])*0.2), 1)
-        
+        # Only process cities that are in the CITY_MAP
+        if name not in CITY_MAP:
+            continue
+        # Supplementary CSV row (may be absent for some cities like Reykjavik)
+        wiki_row = wiki_lookup.get(name.upper(), {})
+        orig_file = find_orig_file(ORIGINAL_XML_DIR, name)
+
+        # --- Estrazione testo principale dalla pagina Wikivoyage corretta ---
+        full_text = get_city_main_text(orig_file, name)
+        subpage_texts = get_subpage_texts(orig_file, name)
+
+        score = round(
+            city_idx['safety'] * 0.4
+            + city_idx['green_score'] * 0.4
+            + (100 - city_idx['cost_of_living']) * 0.2,
+            1
+        )
+
         root = etree.Element("city_report", appeal_score=str(score))
-        
+
+        # --- metadata ---
         meta = etree.SubElement(root, "metadata")
         etree.SubElement(meta, "title").text = name
         etree.SubElement(meta, "name_it").text = CITY_MAP.get(name, {}).get("it", name)
         etree.SubElement(meta, "flag").text = CITY_MAP.get(name, {}).get("flag", "🇪🇺")
 
+        # --- indicators ---
         ind = etree.SubElement(root, "indicators")
-        etree.SubElement(ind, "hotel_count").text = str(wiki_row['Hotel_Count'])
+        hotel_count = _row_get(wiki_row, 'Hotel_Count', 0)
+        etree.SubElement(ind, "hotel_count").text = str(hotel_count)
         etree.SubElement(ind, "hotel_price").text = str(round(city_idx['cost_of_living'] * 1.85, 2))
         etree.SubElement(ind, "safety", index_score=str(city_idx['safety']))
         etree.SubElement(ind, "environment", green_score=str(city_idx['green_score']))
         etree.SubElement(ind, "cost_index", value=str(city_idx['cost_of_living']))
         etree.SubElement(ind, "economic_accessibility", score=str(round(100 - city_idx['cost_of_living'], 1)))
 
-        etree.SubElement(root, "transport").text = clean_xml_text(wiki_row['Transport_Text'])
+        # --- transport (with patch fallback for missing entries) ---
+        transport_text = str(_row_get(wiki_row, 'Transport_Text', ''))
+        if not transport_text or transport_text.lower() == 'nan':
+            transport_text = TRANSPORT_PATCH.get(
+                name,
+                "Informazioni sul trasporto pubblico in aggiornamento."
+            )
+        etree.SubElement(root, "transport").text = clean_xml_text(transport_text)
 
+        # --- accommodation ---
         acc_node = etree.SubElement(root, "accommodation")
-        for h in parse_hotels(str(wiki_row['Hotels_Extracted'])):
+        for h in parse_hotels(str(_row_get(wiki_row, 'Hotels_Extracted', ''))):
             h_node = etree.SubElement(acc_node, "hotel")
             etree.SubElement(h_node, "name").text = clean_xml_text(h['n'])
             etree.SubElement(h_node, "price").text = clean_xml_text(h['p'])
 
+        # --- highlights / attractions ---
         high = etree.SubElement(root, "highlights")
         for _, row in df_attr[df_attr['City'] == name].head(10).iterrows():
-            attr = etree.SubElement(high, "attraction", lat=str(row['Latitude']), lon=str(row['Longitude']))
+            attr = etree.SubElement(high, "attraction",
+                                    lat=str(row['Latitude']), lon=str(row['Longitude']))
             etree.SubElement(attr, "name").text = clean_xml_text(row['Attraction'])
             etree.SubElement(attr, "description").text = clean_xml_text(row['Description'])
 
-        etree.SubElement(root, "description").text = clean_xml_text(narratives.get(name, f"Analisi di {name}"))
+        # --- districts: per-city overrides > CSV > (no districts) ---
+        if name in _DISTRICT_OVERRIDES:
+            override_list = _DISTRICT_OVERRIDES[name]
+            if override_list:
+                dist_tag = etree.SubElement(root, "districts")
+                for dname, ddesc in override_list:
+                    d_node = etree.SubElement(dist_tag, "district")
+                    etree.SubElement(d_node, "name").text = clean_xml_text(dname)
+                    etree.SubElement(d_node, "description").text = clean_xml_text(ddesc)
+        else:
+            csv_districts_raw = str(_row_get(wiki_row, 'Districts', ''))
+            district_names = clean_district_names(csv_districts_raw, name)
+            if district_names:
+                dist_tag = etree.SubElement(root, "districts")
+                city_it = CITY_MAP.get(name, {}).get("it", name)
+                for dname in district_names:
+                    d_node = etree.SubElement(dist_tag, "district")
+                    etree.SubElement(d_node, "name").text = clean_xml_text(dname)
+                    desc = get_district_description(dname, subpage_texts)
+                    if not desc:
+                        desc = clean_xml_text(f"Quartiere di {city_it}.")
+                    etree.SubElement(d_node, "description").text = desc
 
-        # Recupero Wiki Intro per completezza
-        orig_file = os.path.join(ORIGINAL_XML_DIR, f"{name}.xml")
-        wiki_intro_text = "Intro non disponibile."
-        if os.path.exists(orig_file):
-            tree_orig = etree.parse(orig_file)
-            full_text = tree_orig.xpath("string(//*[local-name()='text'])")
-            wiki_intro_text = re.sub(r'\{\{.*?\}\}|\[\[|\]\]', '', full_text)[:400] + "..."
-        etree.SubElement(root, "wiki_intro").text = clean_xml_text(wiki_intro_text)
+        # --- strategic description (Italian narrative) ---
+        etree.SubElement(root, "description").text = clean_xml_text(
+            narratives.get(name, f"Analisi di {name}.")
+        )
 
+        # --- wiki intro from the correct main page ---
+        wiki_intro_text = advanced_wiki_cleaner(full_text)
+        if wiki_intro_text:
+            etree.SubElement(root, "wiki_intro").text = wiki_intro_text
+
+        # --- landmark image ---
+        landmark = LANDMARK_IMAGES.get(name, "")
+        if landmark:
+            etree.SubElement(root, "landmark_image").text = landmark
+
+        # --- DTD validation and output ---
         if dtd.validate(root):
             tree = etree.ElementTree(root)
-            tree.write(os.path.join(OUTPUT_DIR, f"{name.lower()}.xml"), 
-                       xml_declaration=True, encoding='UTF-8', pretty_print=True,
-                       doctype=f'<!DOCTYPE city_report SYSTEM "{DTD_FILE}">')
+            tree.write(
+                os.path.join(OUTPUT_DIR, f"{name.lower()}.xml"),
+                xml_declaration=True, encoding='UTF-8', pretty_print=True,
+                doctype=f'<!DOCTYPE city_report SYSTEM "{DTD_FILE}">'
+            )
             print(f"✅ {name} generato correttamente.")
         else:
-            print(f"⚠️ Errore DTD su {name}: {dtd.error_log.filter_from_errors()}")
+            errors = dtd.error_log.filter_from_errors()
+            print(f"⚠️  Errore DTD su {name}: {errors}")
 
-if __name__ == "__main__": run_pipeline()
+
+if __name__ == "__main__":
+    run_pipeline()

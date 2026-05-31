@@ -58,6 +58,29 @@
       <description>Artistic district on the right bank of the Vistula.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Old and New Town</name>
+      <description>Quartiere di Varsavia.</description>
+    </district>
+    <district>
+      <name>Śródmieście</name>
+      <description>Quartiere di Varsavia.</description>
+    </district>
+    <district>
+      <name>Western Centre</name>
+      <description>Quartiere di Varsavia.</description>
+    </district>
+    <district>
+      <name>Praga</name>
+      <description>Quartiere di Varsavia.</description>
+    </district>
+    <district>
+      <name>South</name>
+      <description>Quartiere di Varsavia.</description>
+    </district>
+  </districts>
   <description>Esempio straordinario di ricostruzione e resilienza, Varsavia è oggi una metropoli verticale e dinamica. Combina un settore finanziario in crescita con ampi spazi verdi e una sicurezza urbana migliorata.</description>
-  <wiki_intro>'''Warsaw''' (Polish phrasebook|Polish: ''Warszawa'') is Poland's capital and largest city. Warsaw is a bustling metropolis and one of the European Union's fastest-developing capitals and the Union's ninth most populous urban centre. It has a mixture of new and old in its eclectic architectural mix, and is constantly changing.  There is a large variety of museums, galleries and other tourist at...</wiki_intro>
+  <wiki_intro>Warsaw (Polish: Warszawa) is Poland's capital and largest city. Warsaw is a bustling metropolis and one of the European Union's fastest-developing capitals and the Union's ninth most populous urban centre. It has a mixture of new and old in its eclectic architectural mix, and is constantly changing. There is a large variety of museums, galleries and other tourist attractions, and there is always...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Warsaw_Royal_Castle.jpg</landmark_image>
 </city_report>

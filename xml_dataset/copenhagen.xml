@@ -79,6 +79,29 @@
       <description>Denmark's central museum of cultural history.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Amager</name>
+      <description>Amager (pronounced Ama'r) is a district and island east and southeast of central Copenhagen, covering some , and mostly notable as the home of Copenhagen Airport and the charming old fishing hamlet of Dragør. It was built as a waste depot for the evolving city of Copenhagen, was and long considered the backwaters of the city. This old working class district is now undergoing rapid development,...</description>
+    </district>
+    <district>
+      <name>Østerbro</name>
+      <description>Østerbro is a mainly residential district of Copenhagen, just north of the inner city. With its quiet cobblestone and tree lined streets, and its excellent shopping and cafe life, it makes for a good excursion from the downtown area. Along with Frederiksberg in the west, Østerbro has long been considered the posh or upper class district of Copenhagen. These days this is mainly due to the...</description>
+    </district>
+    <district>
+      <name>Christiania</name>
+      <description>Christiania is a self-governing "free town" established in 1971, a city within the city, on the site of a military barracks as an alternative to mainstream culture. Christiania is considered to be the fourth largest tourist attraction in Copenhagen. Christiania is an intentional community and commune of about 850 to 1,000 residents, covering 7.7 hectares (19 acres) in the borough of...</description>
+    </district>
+    <district>
+      <name>Christianshavn</name>
+      <description>Christianshavn is a district east of the inner city of Copenhagen. Once a working-class neighbourhood, today Christianshavn is a trendy part of the city with its own unique identity. people from all walks of life, live side-by-side among cool cafes, old school bodegas, fancy restaurants and charming 19th-century houses along picturesque canals. Further north, Holmen is an old naval area, that has...</description>
+    </district>
+    <district>
+      <name>Frederiksberg</name>
+      <description>Frederiksberg might look like a part of Copenhagen to a traveller, but the municipality of Frederiksberg is an enclave of 103,000 people (2022) inside the municipality of Copenhagen. The inhabitants of Frederiksberg have historically been richer than their neighbours around them, although the rest of Copenhagen is catching up. Frederiksberg still has more parks, big villas with gardens, wide...</description>
+    </district>
+  </districts>
   <description>Leader mondiale della transizione ecologica, Copenaghen è il punto di riferimento per la vivibilità urbana e la felicità dei cittadini. Il costo della vita è bilanciato da servizi pubblici d'eccellenza e un senso di sicurezza pervasivo.</description>
-  <wiki_intro>'''Amager''' (pronounced Ama'r) is a district and island east and southeast of central Copenhagen, covering some , and mostly notable as the home of '''Copenhagen Airport''' and the charming old fishing hamlet of '''Dragør'''. It was built as a waste depot for the evolving city of Copenhagen, was and long considered the backwaters of the city. This old working class district is now undergoing ra...</wiki_intro>
+  <wiki_intro>Amager (pronounced Ama'r) is a district and island east and southeast of central Copenhagen, covering some , and mostly notable as the home of Copenhagen Airport and the charming old fishing hamlet of Dragør. It was built as a waste depot for the evolving city of Copenhagen, was and long considered the backwaters of the city. This old working class district is now undergoing rapid development,...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Copenhagen_-_Nyhavn_(2).jpg</landmark_image>
 </city_report>

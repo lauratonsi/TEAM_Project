@@ -14,7 +14,7 @@
     <cost_index value="84.7"/>
     <economic_accessibility score="15.3"/>
   </indicators>
-  <transport></transport>
+  <transport>Dall'aeroporto CDG: RER B fino a Gare du Nord (35 min) o RoissyBus fino a Opéra (75 min). In città: metro (16 linee), bus e RER coprono tutta l'area metropolitana.</transport>
   <accommodation/>
   <highlights>
     <attraction lat="48.8584" lon="2.2945">
@@ -58,10 +58,29 @@
       <description>Public garden between the Louvre and Place de la Concorde.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>10th arrondissement</name>
+      <description>The 10th arrondissement of Paris centres on the Canal Saint Martin and the restaurants and cafés which line its banks. Part sleepy faubourg — as suburbs were called in 18th century Paris — and part industrial centre, the 10th arrondissement has lately enjoyed the benefits of both the booming nightlife scene in the neighbouring 11th, as well as the Parisian cycling and roller-blading boom. The...</description>
+    </district>
+    <district>
+      <name>11th arrondissement</name>
+      <description>The 11th Arrondissement is home to two quite different but equally blossoming centres of Parisian nightlife. The streets just northwest of Place de la Bastille are full of little bars which attract a mix of young suburban Parisians, expats, and foreigners. Many have a Latin American theme. The restaurants, bars, and wine-bars around Rue Oberkampf in the north of the 11th and rue de Charonne near...</description>
+    </district>
+    <district>
+      <name>12th arrondissement</name>
+      <description>The 12th arrondissement of Paris is one of the largest of the city's districts even without the 2,460 acre Bois de Vincennes, which more than doubles its size. Gare de Lyon in the 12th will likely be your arrival point if you are coming from Switzerland, Italy, or the south of France. Métro, line 14, serves Gare de Lyon and Gare de Bercy. Line 1 crosses the arrondissement east-west serving...</description>
+    </district>
+    <district>
+      <name>13th arrondissement</name>
+      <description>The 13th arrondissement of Paris is primarily a residential and business district in the southeast of Paris, on the Left Bank of the Seine. Although not usually recognised as a natural magnet for tourists, the 13th nonetheless does hold several attractions of interest to the traveller that include the Bibliothèque Nationale de France (national library), completed in 1996, and part of a major new...</description>
+    </district>
+    <district>
+      <name>14th arrondissement</name>
+      <description>Although largely residential, the 14th arrondissement is best known for its northeastern quartier Montparnasse, for the Paris Catacombs and the Parc Montsouris. The Cité Universitaire is also found in this district traditionally known for lively cafés and restaurants around the Boulevard du Montparnasse and the rue Daguerre. The Tour Montparnasse and Gare Montparnasse are in the 15th...</description>
+    </district>
+  </districts>
   <description>La Ville Lumière sta rivoluzionando la sua mobilità interna eliminando le auto a favore di piste ciclabili e giardini pensili. Resta l'indiscussa capitale del lusso e del turismo culturale con standard di accoglienza elevatissimi.</description>
-  <wiki_intro>The '''Left Bank''' in travellers' terms generally refers to the "Left Bank" (French, ''Rive Gauche'') of the River Seine in the France|French capital city of Paris.
-
-The '''Left Bank''' defies precise definition but generally refers to those ''arrondissements'' (districts) on the southern bank of the river as it flows though central Paris:
-
-*the Paris/5th arrondissement|5th arrondissement - the ...</wiki_intro>
+  <wiki_intro>The 10th arrondissement of Paris centres on the Canal Saint Martin and the restaurants and cafés which line its banks. Part sleepy faubourg — as suburbs were called in 18th century Paris — and part industrial centre, the 10th arrondissement has lately enjoyed the benefits of both the booming nightlife scene in the neighbouring 11th, as well as the Parisian cycling and roller-blading boom. The...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Tour_Eiffel_Trocadero.jpg</landmark_image>
 </city_report>

@@ -79,8 +79,29 @@
       <description>Modern public sauna and restaurant on the waterfront.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Central</name>
+      <description>Central Helsinki consists of the central parts of Helsinki east of Mannerheimintie, south of Pitkäsilta, west of Unioninkatu and north of Esplanadi; in short the commercial downtown. This is undoubtedly the liveliest part of Helsinki and much of what a visitor would like to see and experience is located in central Helsinki or — while in other districts — just a few hundred metres away. Here you...</description>
+    </district>
+    <district>
+      <name>West</name>
+      <description>Western Helsinki comprises the parts Helsinki that are west of the railway, northwest of Baana and all the way past Munkkiniemi and Munkkivuori shopping mall up to the Haaga roundabout. Choosing the right form of transportation very much depends on which part of this city district you want to visit. For the northern parts, many buses from central Helsinki to western Vantaa and northern Espoo...</description>
+    </district>
+    <district>
+      <name>Inner East</name>
+      <description>Inner East comprises the parts of Helsinki east of the railway, north of Pitkäsilta, south of freeways 4 and 45 and west of Kulosaari. In this part of the city you can see districts of old wooden houses and postmodern, blocky concrete districts built as the "city districts of the future" in the 1970s.  Most buses to and from the eastern parts of Vantaa (including the airport bus 615 to the city...</description>
+    </district>
+    <district>
+      <name>Eastern suburbs</name>
+      <description>Helsinki's Eastern Suburbs are the easternmost part of Helsinki. The most convenient mode of public transportation from the city center is the metro – actually most of Helsinki's metro stations are located here. Alternatively you can take the bus. From the airport, bus 561 brings you to Itäkeskus, the main public transportation hub of Eastern Helsinki. If you are driving, highway 170 from Porvoo...</description>
+    </district>
+    <district>
+      <name>Northern suburbs</name>
+      <description>Helsinki's northern suburbs are the northernmost part of Helsinki and form the continuum between Vantaa and more central parts of Helsinki. Here, this is defined as northwest of motorway 4 and north of Käpylä, Hakamäentie and Haaga roundabout; in other words north of the tram line termini. Like much of the peripheral Capital Region it's dominated by apartment buildings, industrial areas and a...</description>
+    </district>
+  </districts>
   <description>Pioniera del concetto di 'Smart City', Helsinki integra la natura nel tessuto urbano con una fluidità impressionante. La sua gestione dei dati pubblici e la sicurezza la pongono ai vertici di ogni classifica sulla qualità della vita.</description>
-  <wiki_intro>'''Central Helsinki''' consists of the central parts of Helsinki east of Mannerheimintie, south of Pitkäsilta, west of Unioninkatu and north of Esplanadi; in short the commercial downtown.
-
-This is undoubtedly the liveliest part of Helsinki and much of what a visitor would like to see and experience is located in central Helsinki or — while in other districts — just a few hundred metres away. He...</wiki_intro>
+  <wiki_intro>Central Helsinki consists of the central parts of Helsinki east of Mannerheimintie, south of Pitkäsilta, west of Unioninkatu and north of Esplanadi; in short the commercial downtown. This is undoubtedly the liveliest part of Helsinki and much of what a visitor would like to see and experience is located in central Helsinki or — while in other districts — just a few hundred metres away. Here you...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Helsinki_Senate_Square_2.jpg</landmark_image>
 </city_report>

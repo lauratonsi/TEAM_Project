@@ -1,4 +1,4 @@
-<!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?)>
+<!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?)>
 <!ATTLIST city_report 
     appeal_score CDATA #REQUIRED>
 
@@ -40,3 +40,4 @@
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT wiki_intro (#PCDATA)>
+<!ELEMENT landmark_image (#PCDATA)>

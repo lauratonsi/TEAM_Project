@@ -58,12 +58,33 @@
       <description>Historic fortification and home of the Dräi Eechelen Museum.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Ville-Haute</name>
+      <description>Il centro storico e politico della città, sede del Palazzo Granducale.</description>
+    </district>
+    <district>
+      <name>Grund</name>
+      <description>Il pittoresco quartiere medievale sul fiume Alzette, noto per i suoi bistrot.</description>
+    </district>
+    <district>
+      <name>Kirchberg</name>
+      <description>Il quartiere europeo, sede delle istituzioni UE e del museo MUDAM.</description>
+    </district>
+    <district>
+      <name>Clausen</name>
+      <description>Quartiere residenziale lungo l'Alzette, famoso per le sue birrerie.</description>
+    </district>
+    <district>
+      <name>Limpertsberg</name>
+      <description>Quartiere verde e borghese, con l'università e negozi di qualità.</description>
+    </district>
+  </districts>
   <description>Centro finanziario d'élite, il Lussemburgo offre trasporti pubblici gratuiti e uno dei livelli di sicurezza più alti al mondo. È il paradigma della capitale ricca che investe massicciamente nel benessere dei suoi residenti.</description>
-  <wiki_intro>File:Bridge in Mullerthal.jpg|thumb|300px|Bridge over a small stream in Mullerthal
-'''Mullerthal''' (Luxembourgish: ''Mëllerdall'') is a natural region in eastern Luxembourg. It is commonly referred to as ''Luxembourg's Little Switzerland''. Its biggest city is Echternach, and the region consists of the same area as the canton of Echternach.
-
-==Cities and towns==
-
-
-* , small town with a large ca...</wiki_intro>
+  <wiki_intro>The Moselle Valley is one of five regions of Luxembourg, located along the eastern border with Germany. * — capital of the region.
+* — An old spa town and the only larger destination not located along the Moselle river.
+* — Former Roman settlement that over time turned into the town it is today.
+* — Signing place of the Schengen Agreement.
+* — City on the merging point of the Sûre (Sauer) into...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_City_Adolphe_Bridge_01.jpg</landmark_image>
 </city_report>

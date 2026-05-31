@@ -79,8 +79,56 @@
       <description>Monument celebrating the Portuguese Age of Discovery.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Baixa</name>
+      <description>Baixa is a district in Lisbon, Portugal. The Baixa has many squares and monuments, offering numerous photo opportunities. The area suffered devastating destruction in the Great Earthquake on All Saints' Day, 1 November 1755. Lisbon's "downtown" was rebuilt under the guiding hand of the Marquis of Pombal (Marquês de Pombal), who introduced a grid street plan to organize the chaos. The Baixa is...</description>
+    </district>
+    <district>
+      <name>Bairro Alto</name>
+      <description>Bairro Alto is a district in Lisbon, Portugal. Beyond Bairro Alto itself, the district includes other neighbourhoods, notably Chiado and Príncipe Real. Bairro Alto is recognized for being Lisbon's centre of trendy, youthful dining and nightlife. Many high-end international shops can be found in Chiado and along Avenida da Liberdade, a wide, tree-lined boulevard. Three Lisbon Metro lines serve the...</description>
+    </district>
+    <district>
+      <name>Alfama</name>
+      <description>Alfama is a district in Lisbon, Portugal. The most popular and most fun way to travel into and through Alfama is on the and trams.
+* 
+*  * 
+*
+* 
+* 
+*
+*
+* 
+* 
+* *  *  * All these are around the Castelo de S. Jorge: * 
+* 
+* 
+* 
+* 
+*  * 
+* 
+* 
+* 
+*  *  * 
+* 
+*  *
+*
+*
+*
+* 
+* 
+*</description>
+    </district>
+    <district>
+      <name>Belém</name>
+      <description>Belém is a district in Lisbon, Portugal. Take bus 728 to the west (direction Restelo), which follows the coast line and provides an express service with few stops. Or take the Cascais suburban train (line Cascais todos or Oeiras; the express trains don't stop in Belém) to Belém and walk to the attractions. Tram to the west (Algés direction) follows the Junqueira residential line. Check the route...</description>
+    </district>
+    <district>
+      <name>Parque das Nações</name>
+      <description>Parque das Nações is a district in Lisbon, Portugal. The "Park of the Nations" was built from scratch for Expo '98 (1998 Lisbon World Exposition) in the northeastern end of Lisbon. After the Expo, many of the impressive constructions and decorations were kept, while new residential, commercial, and office buildings were added to form a thriving, mixed-use district consisting exclusively of modern...</description>
+    </district>
+  </districts>
   <description>Capitale dell'accoglienza e della luce, Lisbona è diventata un rifugio per nomadi digitali grazie al clima e ai costi contenuti. Il suo piano di mobilità elettrica sta trasformando i colli storici in un modello di turismo sostenibile.</description>
-  <wiki_intro>'''Baixa''' is a district in Lisbon, Portugal. The ''Baixa'' has many squares and monuments, offering numerous photo opportunities. The area suffered devastating destruction in the Great Earthquake on All Saints' Day, 1 November 1755. Lisbon's "downtown" was rebuilt under the guiding hand of the Marquis of Pombal (''Marquês de Pombal''), who introduced a grid street plan to organize the chaos.
-
-...</wiki_intro>
+  <wiki_intro>Baixa is a district in Lisbon, Portugal. The Baixa has many squares and monuments, offering numerous photo opportunities. The area suffered devastating destruction in the Great Earthquake on All Saints' Day, 1 November 1755. Lisbon's "downtown" was rebuilt under the guiding hand of the Marquis of Pombal (Marquês de Pombal), who introduced a grid street plan to organize the chaos. The Baixa is...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Torre_de_Belem_Lisboa.jpg</landmark_image>
 </city_report>

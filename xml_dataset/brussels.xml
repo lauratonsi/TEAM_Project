@@ -79,6 +79,34 @@
       <description>Gothic church located on the Treurenberg hill.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>Pentagon</name>
+      <description>The Pentagon (French: Le Pentagone, Dutch: Vijfhoek) is the historical center of Brussels. It derives its name from the pentagonal shape of the inner beltway that surrounds the area. The Pentagon of Brussels encompasses many charming and beautiful attractions, with deeply ornate buildings on the Grand-Place/Grote Markt, and a fish-and-crustacean overdose of St. Catherine's Square (Place...</description>
+    </district>
+    <district>
+      <name>European Quarter</name>
+      <description>The European Quarter (French: Quartier européen, Dutch: Europese wijk) in Brussels, Belgium is a large office area east of the center which is mostly taken up by the European Union. The district also houses the large Parc de Cinquantenaire and a beautiful, but expensive, residential area on its northern edge. Metro line 5 goes straight through the district, and 6 also traverses the western edge....</description>
+    </district>
+    <district>
+      <name>West</name>
+      <description>The West contains the extensive western suburbs of Brussels. Except for the Sacred Heart basilica, tourists usually do not visit this part of the city.  ]]
+* 
+* 
+* 
+*  *  * Football: RSC Anderlecht play soccer in First Division A, the country's top tier. Their home ground is Lotto Park, capacity 22,500. 
+*  *</description>
+    </district>
+    <district>
+      <name>South</name>
+      <description>The South district in the Belgian capital of Brussels comprises the municipalities of Saint-Gilles / Sint-Gillis, Forest / Vorst and Uccle / Ukkel. Forest (pronounced with a silent "st") is the French name of one of the municipalities surrounding Brussels (the Flemish name is Vorst), known for its historically important abbey, a collection of art deco buildings and a major concert hall. Green and...</description>
+    </district>
+    <district>
+      <name>Centre</name>
+      <description>The Centre is the historic centre of Brussels, including the world's most beautiful town square, the Grand-Place which is listed as .  is on the eastern end of the city centre. It is a terminus station for most regional (suburban) services and many other intercity services (including from the Netherlands) stop by. The city centre has two metro stations, both on lines 1/5 (both metro lines share...</description>
+    </district>
+  </districts>
   <description>Cuore politico dell'Unione Europea, Bruxelles gestisce una complessità demografica unica con politiche di inclusione avanzate. Il suo profilo è definito da un'offerta alberghiera di alto profilo e una rete di trasporti capillare.</description>
-  <wiki_intro>The '''Pentagon''' (French: ''Le Pentagone'', Dutch: ''Vijfhoek'') is the historical center of Brussels. It derives its name from the pentagonal shape of the inner beltway that surrounds the area. The Pentagon of Brussels encompasses many charming and beautiful attractions, with deeply ornate buildings on the Grand-Place/Grote Markt, and a fish-and-crustacean overdose of St. Catherine's Square (P...</wiki_intro>
+  <wiki_intro>The Pentagon (French: Le Pentagone, Dutch: Vijfhoek) is the historical center of Brussels. It derives its name from the pentagonal shape of the inner beltway that surrounds the area. The Pentagon of Brussels encompasses many charming and beautiful attractions, with deeply ornate buildings on the Grand-Place/Grote Markt, and a fish-and-crustacean overdose of St. Catherine's Square (Place...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Grand-Place_bruxelles.jpg</landmark_image>
 </city_report>

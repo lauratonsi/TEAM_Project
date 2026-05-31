@@ -79,7 +79,29 @@
       <description>Public square and symbol of Berlin's urban renewal.</description>
     </attraction>
   </highlights>
+  <districts>
+    <district>
+      <name>City West</name>
+      <description>City West is the heart of former West Berlin and even after reunification it represents the main retail centre of Berlin — all the best and most expensive shops are here. The area also includes some landmarks of great historical and cultural interest, as well as a large number of accommodation and entertainment options. After Berlin was split into two by the division of Germany, West Berlin had...</description>
+    </district>
+    <district>
+      <name>East</name>
+      <description>The East is a district of Berlin. It consists of the boroughs Pankow (except for Prenzlauer Berg), Lichtenberg, Hohenschönhausen, Marzahn and Hellersdorf. The most interesting places for tourists are in Lichtenberg: the Stasi (secret service of the GDR) relics and museums, the Tierpark (zoo) and some remarkable architecture such as the Mies van der Rohe house. Lichtenberg is a district in the...</description>
+    </district>
+    <district>
+      <name>East Central</name>
+      <description>East Central is a trendy, bohemian, artsy area that consists of Kreuzberg, Friedrichshain, Prenzlauer Berg (sometimes called Prenzlberg), Wedding and Gesundbrunnen. The western district Kreuzberg was merged with the eastern district Friedrichshain in 2001. They skew towards a young and alternative, often politically left-oriented crowd. Both districts feature a very heterogeneous architecture,...</description>
+    </district>
+    <district>
+      <name>Mitte</name>
+      <description>Mitte, literally meaning "the middle" and being a contraction of Stadtmitte (city centre), contains the historical heart of Berlin and represents in many ways the real centre of the city. It is here that you will find the vast majority of the most popular sights. "Mitte" can refer both to a larger district (Bezirk) and its smaller borough (Ortsteil), which was a separate district until 2001 when...</description>
+    </district>
+    <district>
+      <name>Reinickendorf and Spandau</name>
+      <description>The northwest of Berlin consists of the boroughs of Spandau and Reinickendorf was urbanized in the 19th century. Before that, it largely consisted of small towns. In the early 20th century, it was the working-class area with heavy industry where Siemens was founded; indeed, part of Reinickendorf is called Siemensstadt. The area is more residential today, though big industrial complexes remain....</description>
+    </district>
+  </districts>
   <description>Capitale della resilienza e della cultura underground, Berlino offre una vastità di parchi pubblici senza eguali tra le grandi metropoli europee. Il mercato immobiliare e la sicurezza la rendono un magnete per talenti tecnologici e creativi.</description>
-  <wiki_intro>File:Berlin_Wikivoyage_locator_maps_-_City_West.png|150px|thumb|right|Location of the City West in Berlin
-'''City West''' is the heart of former West Berlin and even after reunification it represents the main retail centre of Berlin — all the best and most expensive shops are here. The area also includes some landmarks of great historical and cultural interest, as well as a large number of accomm...</wiki_intro>
+  <wiki_intro>City West is the heart of former West Berlin and even after reunification it represents the main retail centre of Berlin — all the best and most expensive shops are here. The area also includes some landmarks of great historical and cultural interest, as well as a large number of accommodation and entertainment options. After Berlin was split into two by the division of Germany, West Berlin had...</wiki_intro>
+  <landmark_image>https://commons.wikimedia.org/wiki/Special:FilePath/Brandenburger_Tor_abends.jpg</landmark_image>
 </city_report>
