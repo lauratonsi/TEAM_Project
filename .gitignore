@@ -1,3 +1,6 @@
+# Ignore local model files and environment files
+/models/
+.env
 __pycache__/
 *.py[cod]
 .DS_Store
