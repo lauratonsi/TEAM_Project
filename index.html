@@ -32,8 +32,9 @@
             out.textContent = 'Caricamento in corso...';
             btn.disabled = true;
             try{
+                const API_BASE = 'http://127.0.0.1:8000';
                 const params = new URLSearchParams({q, simulated_rag: 'true', k: '5'});
-                const res = await fetch('/query?' + params.toString());
+                const res = await fetch(API_BASE + '/query?' + params.toString());
                 if(!res.ok){
                     const txt = await res.text();
                     out.textContent = 'Errore dal server: ' + txt;
