@@ -3,6 +3,21 @@ import mwparserfromhell
 from lxml import etree
 import re
 import csv
+import spacy
+
+# Load SpaCy model once (upgraded to large for better NER and sentence segmentation)
+nlp = spacy.load('en_core_web_lg')
+import requests
+
+# Try to import Google Cloud Language (optional)
+try:
+    from google.cloud import language_v1
+    GOOGLE_LANGUAGE_AVAILABLE = True
+    google_language_client = language_v1.LanguageServiceClient()
+except Exception as e:
+    print(f"⚠️  Google Cloud Language not available: {e}")
+    GOOGLE_LANGUAGE_AVAILABLE = False
+    google_language_client = None
 
 ORIGINAL_DIR = 'original_source'
 XML_DATASET = 'xml_dataset'
@@ -30,13 +45,30 @@ def rescue_wiki_templates(text):
         return ""
     return re.sub(r'\{\{([^}]+)\}\}', extract_val, str(text))
 
+def fetch_wikivoyage_html(city_name):
+    """Fetch HTML content from Wikivoyage API for cleaner extraction"""
+    url = f"https://en.wikivoyage.org/api/rest_v1/page/html/{city_name.replace(' ', '_')}"
+    try:
+        response = requests.get(url, timeout=10)
+        if response.status_code == 200:
+            return response.text
+        else:
+            print(f"API error for {city_name}: {response.status_code}")
+            return None
+    except Exception as e:
+        print(f"Error fetching {city_name}: {e}")
+        return None
+
 def bulletproof_clean(text):
     if not text: return ""
     # Salvataggio pre-parsing
     text = rescue_wiki_templates(text)
     
+    # Aggressive URL removal
     text = re.sub(r'\[https?://[^\s]+\s+([^\]]+)\]', r'\1', text)
     text = re.sub(r'https?://[^\s\]]+', '', text)
+    text = re.sub(r'www\.[^\s]+', '', text)
+    text = re.sub(r'\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b', '', text)
     
     try: text = mwparserfromhell.parse(text).strip_code()
     except: pass
@@ -46,15 +78,73 @@ def bulletproof_clean(text):
     text = re.sub(r'(?i)\b(right|left|center|thumb|thumbnail)\b', '', text)
     text = re.sub(r'[\[\]\*=\|]', '', text)
     text = re.sub(r'<[^>]+>', '', text)
+    text = re.sub(r'\{[^}]+\}', '', text)
+    text = re.sub(r'\|[^\s]+\|', '', text)
     text = text.replace('\n', ' ').replace('\r', '')
     text = re.sub(r'\s{2,}', ' ', text)
     return text.strip()
 
+def extract_districts_from_wikitext(wikicode, city_name):
+    """Extract districts from wikitext sections (Districts, Neighborhoods, Orientation)"""
+    districts = []
+    wikicode_str = str(wikicode)
+    
+    # Method 1: Look for [[District Name]] links in Districts section
+    sections = re.split(r'==\s*(?:Districts|Neighborhoods|Orientation|Areas?)\s*==', wikicode_str, flags=re.IGNORECASE)
+    if len(sections) > 1:
+        district_section = sections[1].split('==')[0]  # Get text until next section
+        links = re.findall(r'\[\[([^\]|]+)(?:\|[^\]]+)?\]\]', district_section)
+        for link in links:
+            clean = link.strip()
+            if len(clean) > 2 and not any(x in clean.lower() for x in ['file:', 'image:', 'category:', 'wikipedia']):
+                # Remove city name from district name
+                clean = re.sub(rf'\({city_name}\)|\({city_name} [^)]*\)', '', clean).strip()
+                if clean and clean != city_name:
+                    districts.append(clean)
+    
+    # Method 2: Look for '''Bold text''' district names in text (if Method 1 found nothing)
+    if not districts:
+        bold_matches = re.findall(r"'''([^']+)'''", wikicode_str[:5000])  # First 5000 chars only
+        for match in bold_matches:
+            if len(match) > 2 and len(match) < 50 and match[0].isupper():
+                clean = match.strip()
+                if clean not in districts and city_name.lower() not in clean.lower():
+                    districts.append(clean)
+    
+    return districts[:10]  # Limit to 10 districts
+
 def get_sentences(text, max_sentences=3):
     if not text: return ""
-    sentences = re.split(r'(?<=[.!?])\s+', text)
-    sentences = [s.strip() for s in sentences if len(s.strip()) > 5]
+    doc = nlp(text)
+    sentences = [sent.text.strip() for sent in doc.sents if len(sent.text.strip()) > 5]
     return " ".join(sentences[:max_sentences])
+
+def enhance_transport_text_with_google_language(text, city_name):
+    """Try to enhance transport text using Google Cloud Language API.
+    Falls back to SpaCy/regex extraction if API is unavailable."""
+    if not GOOGLE_LANGUAGE_AVAILABLE or not google_language_client or not text:
+        return text
+    
+    try:
+        document = language_v1.Document(content=text, type_=language_v1.Document.Type.PLAIN_TEXT)
+        response = google_language_client.analyze_entities(document=document, encoding_type='UTF8')
+        
+        # Extract transport-related entities
+        transport_keywords = {'transit', 'transportation', 'metro', 'bus', 'train', 'tram', 'taxi', 'airport', 'station', 'line'}
+        relevant_entities = []
+        
+        for entity in response.entities:
+            if any(kw in entity.name.lower() for kw in transport_keywords):
+                relevant_entities.append(entity.name)
+        
+        # If we found relevant entities, combine with original text
+        if relevant_entities:
+            enhanced = text + " [Enhanced: " + ", ".join(relevant_entities) + "]"
+            return enhanced[:500]  # Limit length
+        return text
+    except Exception as e:
+        print(f"  Google Language API failed for {city_name}: {e}")
+        return text
 
 def get_transport_by_density(wikicode, city_name):
     # Applica la patch se la città è problematica
@@ -104,8 +194,22 @@ def extract_city_data_v16(city_id, city_name):
     if not main_text: return None
     wikicode = mwparserfromhell.parse(main_text)
     
-    data = {'hotels': [], 'transport': get_transport_by_density(wikicode, city_name)}
+    data = {'hotels': [], 'transport': get_transport_by_density(wikicode, city_name), 'districts': []}
 
+    # Estrai distretti dai titoli delle pagine (con pulizia aggressiva)
+    for page in pages:
+        title = page.xpath("string(.//mw:title)", namespaces=namespaces).strip()
+        if "/" in title and title.lower().startswith(city_name.lower() + "/"):
+            district = title.split("/", 1)[1]
+            # Clean district name: remove URLs, templates, and special chars
+            district = re.sub(r'https?://[^\s]+|www\.[^\s]+', '', district)
+            district = re.sub(r'\{[^}]+\}|\[[^\]]+\]|[|*=]', '', district)
+            district = district.strip()
+            if len(district) > 2 and not any(c in district for c in ['http', 'url', 'email']):
+                data['districts'].append(district)    
+    # Se non trovati distretti da sottopagine, estrai dal wikitext
+    if not data['districts']:
+        data['districts'] = extract_districts_from_wikitext(wikicode, city_name)
     for template in wikicode.filter_templates():
         t_name = template.name.lower().strip()
         is_hotel = False
@@ -131,7 +235,7 @@ def run_v16_master():
     csv_filename = "wiki_text_pulito.csv"
     with open(csv_filename, mode='w', newline='', encoding='utf-8') as csv_file:
         writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(['City', 'Hotel_Count', 'Transport_Text', 'Hotels_Extracted'])
+        writer.writerow(['City', 'Hotel_Count', 'Transport_Text', 'Hotels_Extracted', 'Districts'])
     
         for filename in sorted(os.listdir(XML_DATASET)):
             if filename.endswith('.xml'):
@@ -158,11 +262,19 @@ def run_v16_master():
                         etree.SubElement(h_node, "name").text = h['n']
                         etree.SubElement(h_node, "price").text = h['p']
 
+                old_dist = root.find("districts")
+                if old_dist is not None: root.remove(old_dist)
+                if res['districts']:
+                    cont_dist = etree.SubElement(root, "districts")
+                    for d in res['districts']:
+                        etree.SubElement(cont_dist, "district").text = d
+
                 tree_target.write(target_path, xml_declaration=True, encoding='UTF-8', pretty_print=True)
 
                 # ESPORTO IL CSV PER CONTROLLO
                 hotels_str = " | ".join([f"{h['n']} ({h['p']})" for h in res['hotels'][:5]])
-                writer.writerow([city_id.upper(), len(res['hotels']), res['transport'], hotels_str])
+                districts_str = " | ".join(res['districts'])
+                writer.writerow([city_id.upper(), len(res['hotels']), res['transport'], hotels_str, districts_str])
                 print(f"📍 {city_id.upper():12} | XML Salvato | Frasi testate: OK")
 
     print("-" * 85)
