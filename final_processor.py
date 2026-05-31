@@ -33,38 +33,38 @@ CITY_MAP = {
     "Vilnius": {"it": "Vilnius", "flag": "🇱🇹"}, "Nicosia": {"it": "Nicosia", "flag": "🇨🇾"},
 }
 
-# Landmark images via Wikimedia Commons Special:FilePath (stable redirect URLs)
+# Landmark images — scaricate in locale con download_images.py (Wikimedia Commons, licenza libera)
 LANDMARK_IMAGES = {
-    "Amsterdam":  "https://commons.wikimedia.org/wiki/Special:FilePath/Rijksmuseum_Amsterdam_2016.jpg",
-    "Athens":     "https://commons.wikimedia.org/wiki/Special:FilePath/The_Parthenon_in_Athens.jpg",
-    "Berlin":     "https://commons.wikimedia.org/wiki/Special:FilePath/Brandenburger_Tor_abends.jpg",
-    "Bratislava": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_hrad_1.jpg",
-    "Brussels":   "https://commons.wikimedia.org/wiki/Special:FilePath/Grand-Place_bruxelles.jpg",
-    "Bucharest":  "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_the_Parliament,_Bucharest.jpg",
-    "Budapest":   "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_Parliament_Jan_2009.jpg",
-    "Copenhagen": "https://commons.wikimedia.org/wiki/Special:FilePath/Copenhagen_-_Nyhavn_(2).jpg",
-    "Dublin":     "https://commons.wikimedia.org/wiki/Special:FilePath/Samuel_Beckett_Bridge,_Dublin.jpg",
-    "Helsinki":   "https://commons.wikimedia.org/wiki/Special:FilePath/Helsinki_Senate_Square_2.jpg",
-    "Lisbon":     "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_de_Belem_Lisboa.jpg",
-    "Ljubljana":  "https://commons.wikimedia.org/wiki/Special:FilePath/Ljubljana_castle_walls.jpg",
-    "London":     "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_Westminster,_London_-_Jan_2006.jpg",
-    "Luxembourg": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_City_Adolphe_Bridge_01.jpg",
-    "Madrid":     "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Real_de_Madrid_1.jpg",
-    "Nicosia":    "https://commons.wikimedia.org/wiki/Special:FilePath/Nicosia,_Cyprus.jpg",
-    "Oslo":       "https://commons.wikimedia.org/wiki/Special:FilePath/Operahuset_Oslo.jpg",
-    "Paris":      "https://commons.wikimedia.org/wiki/Special:FilePath/Tour_Eiffel_Trocadero.jpg",
-    "Prague":     "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Bridge_and_Prague_Castle.jpg",
-    "Reykjavik":  "https://commons.wikimedia.org/wiki/Special:FilePath/Hallgrimskirkja.jpg",
-    "Riga":       "https://commons.wikimedia.org/wiki/Special:FilePath/House_of_Blackheads,_Riga_2.jpg",
-    "Rome":       "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome-April_2007-1-_copie_2B.jpg",
-    "Sofia":      "https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_Nevsky_Cathedral_Sofia_2.jpg",
-    "Stockholm":  "https://commons.wikimedia.org/wiki/Special:FilePath/Stockholm_City_Hall_(Stadshuset)_2016.jpg",
-    "Tallinn":    "https://commons.wikimedia.org/wiki/Special:FilePath/Tallinn_-_June_2012.jpg",
-    "Valletta":   "https://commons.wikimedia.org/wiki/Special:FilePath/Valletta_Malta_2015.jpg",
-    "Vienna":     "https://commons.wikimedia.org/wiki/Special:FilePath/Schoenbrunn_front_view.jpg",
-    "Vilnius":    "https://commons.wikimedia.org/wiki/Special:FilePath/Vilnius_Old_Town_January_2011.jpg",
-    "Warsaw":     "https://commons.wikimedia.org/wiki/Special:FilePath/Warsaw_Royal_Castle.jpg",
-    "Zagreb":     "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_cathedral.jpg",
+    "Amsterdam":  "assets/images/amsterdam.jpg",
+    "Athens":     "assets/images/athens.jpg",
+    "Berlin":     "assets/images/berlin.jpg",
+    "Bratislava": "assets/images/bratislava.jpg",
+    "Brussels":   "assets/images/brussels.jpg",
+    "Bucharest":  "assets/images/bucharest.jpg",
+    "Budapest":   "assets/images/budapest.jpg",
+    "Copenhagen": "assets/images/copenhagen.jpg",
+    "Dublin":     "assets/images/dublin.jpg",
+    "Helsinki":   "assets/images/helsinki.jpg",
+    "Lisbon":     "assets/images/lisbon.jpg",
+    "Ljubljana":  "assets/images/ljubljana.jpg",
+    "London":     "assets/images/london.jpg",
+    "Luxembourg": "assets/images/luxembourg.jpg",
+    "Madrid":     "assets/images/madrid.jpg",
+    "Nicosia":    "assets/images/nicosia.jpg",
+    "Oslo":       "assets/images/oslo.jpg",
+    "Paris":      "assets/images/paris.jpg",
+    "Prague":     "assets/images/prague.jpg",
+    "Reykjavik":  "assets/images/reykjavik.jpg",
+    "Riga":       "assets/images/riga.jpg",
+    "Rome":       "assets/images/rome.jpg",
+    "Sofia":      "assets/images/sofia.jpg",
+    "Stockholm":  "assets/images/stockholm.jpg",
+    "Tallinn":    "assets/images/tallinn.jpg",
+    "Valletta":   "assets/images/valletta.jpg",
+    "Vienna":     "assets/images/vienna.jpg",
+    "Vilnius":    "assets/images/vilnius.jpg",
+    "Warsaw":     "assets/images/warsaw.jpg",
+    "Zagreb":     "assets/images/zagreb.jpg",
 }
 
 # Patch transport for cities where CSV extraction failed
@@ -150,8 +150,8 @@ def advanced_wiki_cleaner(raw_text):
     text = text.strip()
     text = clean_xml_text(text)
 
-    if len(text) > 400:
-        truncated = text[:400]
+    if len(text) > 1500:
+        truncated = text[:1500]
         last_space = truncated.rfind(' ')
         text = (truncated[:last_space] + "...") if last_space > 0 else (truncated + "...")
     return text if len(text) > 10 else ""
@@ -209,10 +209,18 @@ def get_city_main_text(orig_file, city_name):
         if _ascii_lower(title) == city_ascii:
             return text
 
-    # Priority 2: "CityName/SubPage" — use first sub-page about the city
+    # Priority 2a: "CityName/Understand" — Wikivoyage intro section
     for title, text in pages:
-        if _ascii_lower(title).startswith(city_ascii + "/"):
+        if _ascii_lower(title) == city_ascii + "/understand":
             return text
+
+    # Priority 2b: sub-page with most content (avoids picking a small peripheral district)
+    subpages = [
+        (title, text) for title, text in pages
+        if _ascii_lower(title).startswith(city_ascii + "/")
+    ]
+    if subpages:
+        return max(subpages, key=lambda t: len(t[1]))[1]
 
     # Priority 3: title contains the city name but is not a Category page
     for title, text in pages:

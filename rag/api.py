@@ -11,10 +11,8 @@ from . import ingest, vectorstore
 
 app = FastAPI(title='Minimal RAG Service')
 
-# load .env if present
 load_dotenv()
 
-# Allow cross-origin requests from the frontend. In production, restrict this to your domain.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -32,127 +30,132 @@ class QueryRequest(BaseModel):
 
 CITY_ALIASES = {
     'roma': 'ROME',
+    'rome': 'ROME',
     'londra': 'LONDON',
+    'london': 'LONDON',
     'parigi': 'PARIS',
+    'paris': 'PARIS',
     'bruxelles': 'BRUSSELS',
+    'brussels': 'BRUSSELS',
     'castel': 'PRAGUE',
     'praga': 'PRAGUE',
+    'prague': 'PRAGUE',
     'copenaghen': 'COPENHAGEN',
+    'copenhagen': 'COPENHAGEN',
     'dublino': 'DUBLIN',
+    'dublin': 'DUBLIN',
     'lussemburgo': 'LUXEMBOURG',
+    'luxembourg': 'LUXEMBOURG',
     'zagabria': 'ZAGREB',
+    'zagreb': 'ZAGREB',
     'nijmegen': 'AMSTERDAM',
+    'amsterdam': 'AMSTERDAM',
     'vienna': 'VIENNA',
     'budapest': 'BUDAPEST',
     'sofia': 'SOFIA',
     'oslo': 'OSLO',
+    'tallinn': 'TALLINN',
     'talinn': 'TALLINN',
     'porto': 'OOSTENDA',
     'lisbona': 'LISBON',
+    'lisbon': 'LISBON',
     'nicosia': 'NICOSIA',
     'vilnius': 'VILNIUS',
     'reykjavik': 'REYKJAVIK',
     'bratislava': 'BRATISLAVA',
 }
 
-CITY_LOOKUP = {
-    **{k.lower(): v for k, v in CITY_ALIASES.items()},
-    **{v.lower(): v for v in set(CITY_ALIASES.values())},
+CITY_LOOKUP = {k.lower(): v for k, v in CITY_ALIASES.items()}
+CITY_PATTERN = re.compile(
+    r"\b(" + r"|".join(sorted(map(re.escape, CITY_LOOKUP.keys()), key=len, reverse=True)) + r")\b",
+    re.I,
+)
+
+# Intent keyword sets
+_INTENT_KEYWORDS = {
+    'transport': {'aeroporto', 'aeroporti', 'bus', 'tram', 'metro', 'treno', 'taxi', 'trasporto', 'trasporti', 'transport'},
+    'hotel': {'hotel', 'hostel', 'alloggio', 'albergo', 'b&b', 'ostello', 'accommodation'},
+    'attractions': {'museo', 'musei', 'monumento', 'monumenti', 'piazza', 'attrazioni', 'vedere', 'visitare', 'colosseo', 'vaticano', 'chiesa', 'palazzo'},
+    'safety': {'sicurezza', 'sicuro', 'pericolo', 'criminalità', 'quartiere'},
 }
-CITY_PATTERN = re.compile(r"\b(" + r"|".join(sorted(map(re.escape, CITY_LOOKUP.keys()), key=len, reverse=True)) + r")\b", re.I)
 
 
 def extract_city(text: str) -> str:
-    text = (text or '').strip()
-    if not text:
-        return ''
-    first_token = text.split(None, 1)[0]
-    if first_token.isalpha() and len(first_token) <= 20:
-        return first_token.upper()
-    match = CITY_PATTERN.search(text)
-    if match:
-        return CITY_LOOKUP[match.group(1).lower()]
-    return ''
+    match = CITY_PATTERN.search(text or '')
+    return CITY_LOOKUP[match.group(1).lower()] if match else ''
 
 
-def find_query_city(query: str) -> str:
-    query_lower = query.lower()
-    for token, city in CITY_LOOKUP.items():
-        if re.search(rf"\b{re.escape(token)}\b", query_lower):
-            return city
-    return ''
+def detect_intent(query: str) -> str:
+    q = query.lower()
+    tokens = set(re.findall(r'\w+', q))
+    scores = {intent: len(tokens & kw) for intent, kw in _INTENT_KEYWORDS.items()}
+    best = max(scores, key=lambda k: scores[k])
+    return best if scores[best] > 0 else 'general'
 
 
 def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3) -> tuple[str, list[dict]]:
     if not results:
         return '', []
     tokens = [t for t in re.findall(r"\w+", query.lower()) if len(t) > 2]
-    topic_keywords = {
-        'aeroporto': 4,
-        'alloggio': 3,
-        'hotel': 4,
-        'hostel': 3,
-        'b&b': 3,
-        'bus': 2,
-        'tram': 2,
-        'metro': 2,
-        'tren': 2,
-        'sicurezza': 3,
-        'sicuro': 3,
-        'verde': 2,
-        'parco': 2,
-        'centro': 2,
-        'attrazion': 2,
-        'museo': 2,
-        'ristor': 2,
-        'ristorante': 2,
-        'cibo': 2,
-        'costo': 2,
-        'budget': 2,
-        'spesa': 2,
-        'trasporto': 3,
-        'trasporti': 3,
-        'aeroporti': 3,
-        'taxi': 2,
+    intent = detect_intent(query)
+
+    intent_weights: dict[str, dict[str, int]] = {
+        'transport': {'aeroporto': 5, 'aeroporti': 5, 'bus': 4, 'tram': 4, 'metro': 4, 'treno': 4, 'taxi': 3, 'trasporto': 4, 'trasporti': 4},
+        'hotel': {'hotel': 5, 'hostel': 4, 'alloggio': 5, 'albergo': 4, 'b&b': 4, 'ostello': 4},
+        'attractions': {'museo': 4, 'musei': 4, 'monumento': 4, 'piazza': 3, 'vedere': 5, 'visitare': 5, 'colosseo': 5, 'vaticano': 4},
+        'safety': {'sicurezza': 5, 'sicuro': 4, 'pericolo': 4, 'criminalità': 4},
+        'general': {'attrazioni': 3, 'costo': 2, 'budget': 2, 'spesa': 2, 'verde': 2, 'parco': 2},
     }
-    query_city = find_query_city(query)
+    topic_keywords = intent_weights.get(intent, intent_weights['general'])
+    # always include some general keywords with lower weight
+    for kw, w in intent_weights['general'].items():
+        topic_keywords.setdefault(kw, w)
+
+    accommodation_terms = {'hotel', 'hostel', 'alloggio', 'albergo', 'b&b'}
+    wants_accommodation = intent == 'hotel' or any(term in tokens for term in accommodation_terms)
+
+    query_city = extract_city(query)
     if query_city:
-        city_results = [r for r in results if extract_city(r.get('text', '')) == query_city]
+        city_results = [r for r in results if extract_city(r.get('text', '')) == query_city
+                        or r.get('city', '').upper() == query_city]
         if not city_results:
             _, all_docs = vectorstore.load_index()
-            city_results = [d for d in all_docs if extract_city(d.get('text', '')) == query_city]
+            city_results = [d for d in all_docs if extract_city(d.get('text', '')) == query_city
+                            or d.get('city', '').upper() == query_city]
         if city_results:
             results = city_results
+
     scored_results = []
     for r in results:
         text_lower = r.get('text', '').lower()
         score = 0
         if query_city and query_city.lower() in text_lower:
             score += 5
-        if extract_city(r.get('text', '')) == query_city:
-            score += 3
+        if r.get('city', '').upper() == query_city:
+            score += 4
         for t in tokens:
             if re.search(rf"\b{re.escape(t)}\b", text_lower):
                 score += 2
         for keyword, weight in topic_keywords.items():
             if keyword in text_lower:
                 score += weight
-        score += min(3, float(r.get('score', 0)) * 10)
+        score += min(3, float(r.get('rrf_score', r.get('score', 0))) * 10)
         scored_results.append((score, r))
-    scored_results.sort(key=lambda item: (-item[0], -item[1].get('score', 0)))
+    scored_results.sort(key=lambda item: (-item[0], -item[1].get('rrf_score', item[1].get('score', 0))))
     top_results = [item[1] for item in scored_results[:5]] if scored_results else results[:5]
 
-    accommodation_terms = {'hotel', 'hostel', 'alloggio', 'albergo', 'b&b'}
-    wants_accommodation = any(term in tokens for term in accommodation_terms)
     if query_city and wants_accommodation:
-        city_docs = [r for r in top_results if extract_city(r.get('text', '')) == query_city]
+        city_docs = [r for r in top_results if extract_city(r.get('text', '')) == query_city
+                     or r.get('city', '').upper() == query_city]
         if city_docs and not any(any(term in r.get('text', '').lower() for term in accommodation_terms) for r in city_docs):
-            return f"Ho trovato informazioni locali su {query_city}, ma il dataset non contiene dettagli specifici sugli hotel per quella città.", top_results
+            display_city = query_city.title()
+            return f"Ho trovato informazioni locali su {display_city}, ma il dataset non contiene dettagli specifici sugli hotel per quella città.", top_results
 
     matches = []
     for r in top_results:
         text = r.get('text', '').replace('\n', ' ').strip()
-        sentences = re.split(r'(?<=[.!?])\s+', text)
+        normalized = re.sub(r'\s*\|\s*', '. ', text)
+        sentences = re.split(r'(?<=[.!?])\s+', normalized)
         for sentence in sentences:
             if not sentence:
                 continue
@@ -162,7 +165,10 @@ def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3
                 sentence_score += 2
             sentence_score += sum(2 for t in tokens if re.search(rf"\b{re.escape(t)}\b", sentence_lower))
             sentence_score += sum(weight for keyword, weight in topic_keywords.items() if keyword in sentence_lower)
-            if sentence_score > 0:
+            if not wants_accommodation and any(term in sentence_lower for term in accommodation_terms):
+                continue
+            has_topic = any(keyword in sentence_lower for keyword in topic_keywords)
+            if sentence_score > 0 and (len(sentence.split()) > 3 or has_topic):
                 matches.append((sentence_score, len(sentence), sentence.strip()))
     if matches:
         matches.sort(key=lambda item: (-item[0], item[1]))
@@ -175,7 +181,8 @@ def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3
                 continue
             selected.append(sentence)
             seen.add(sentence)
-        header = f"Informazioni utili{(' su ' + query_city) if query_city else ''}: "
+        display_city = query_city.title() if query_city else ''
+        header = f"Informazioni utili{(' su ' + display_city) if display_city else ''}: "
         return header + ' '.join(selected), top_results
 
     best_doc = top_results[0]
@@ -193,10 +200,10 @@ def run_ingest():
 @app.get('/query')
 def query(q: str = Query(..., description='Query text'), k: int = 5, use_llm: bool = False, simulated_rag: bool = False):
     if simulated_rag:
-        internal_results = vectorstore.search(q, k=max(k, 50))
+        internal_results = vectorstore.hybrid_search(q, k=max(k, 50))
         answer, sources = simulated_rag_answer(q, internal_results)
         return {'answer': answer, 'sources': sources[:k]}
-    results = vectorstore.search(q, k=k)
+    results = vectorstore.hybrid_search(q, k=k)
 
     if use_llm and os.getenv('OPENAI_API_KEY'):
         try:

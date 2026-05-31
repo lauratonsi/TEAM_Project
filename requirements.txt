@@ -5,3 +5,4 @@ faiss-cpu
 numpy
 openai
 python-dotenv
+rank-bm25>=0.2.2

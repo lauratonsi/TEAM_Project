@@ -237,9 +237,10 @@ def deploy():
     files = sorted([f for f in os.listdir(XML_DIR) if f.endswith('.xml')])
     for filename in files:
         try:
+            city_lower = filename.replace('.xml', '')
             tree = etree.parse(os.path.join(XML_DIR, filename))
             root = tree.getroot()
-            
+
             # 1. Estrazione dati strutturati
             city_obj = {
                 'name_en': root.findtext(".//title"),
@@ -261,6 +262,7 @@ def deploy():
                     for d in root.xpath(".//district")
                 ],
                 'landmark_image': root.findtext("landmark_image") or "",
+                'city_lower': city_lower,
             }
             city_data.append(city_obj)
 
@@ -314,7 +316,7 @@ def deploy():
             cards_html += f"""
             <article class="city-card" itemscope itemtype="https://schema.org/City">
                 {landmark_html}
-                <h2 class="city-title"><span>{city_obj['flag']}</span> <span itemprop="name">{city_obj['name_it']}</span></h2>
+                <h2 class="city-title"><span>{city_obj['flag']}</span> <a href="{city_lower}.html" style="text-decoration:none; color:inherit;" itemprop="name">{city_obj['name_it']}</a></h2>
                 
                 <div class="stats-box">
                     <div class="stat-item"><span class="stat-label">Appeal</span><span class="stat-val" style="color:var(--accent)">{city_obj['appeal']}</span></div>
@@ -343,6 +345,7 @@ def deploy():
                 </div>
 
                 {attractions_html}
+                <a href="{city_lower}.html" class="detail-link">Scheda completa →</a>
             </article>"""
         except Exception as e:
             print(f"⚠️ Errore su {filename}: {e}")
@@ -351,7 +354,9 @@ def deploy():
     full_html = f"""<!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8"><link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
     <title>EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -405,6 +410,156 @@ def deploy():
     print(f"✅ Dashboard generata correttamente con {len(city_data)} città.")
 
     generate_report(city_data)
+    generate_city_pages(city_data)
+
+
+def generate_city_pages(city_data):
+    """Generate one HTML file per city: {city_lower}.html with full content, microdata, XML download link."""
+    print("📄 Generazione pagine individuali per città...")
+    cities = sorted(city_data, key=lambda c: c['city_lower'])
+    n = len(cities)
+
+    for i, city in enumerate(cities):
+        prev_city = cities[(i - 1) % n]
+        next_city = cities[(i + 1) % n]
+        cl = city['city_lower']
+
+        # --- Microdata: geo from first attraction ---
+        geo_html = ""
+        if city['attractions']:
+            a0 = city['attractions'][0]
+            geo_html = (
+                f"<div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>"
+                f"<meta itemprop='latitude' content='{a0['lat']}'>"
+                f"<meta itemprop='longitude' content='{a0['lon']}'>"
+                f"</div>"
+            )
+
+        # --- Landmark image ---
+        lm_html = ""
+        if city['landmark_image']:
+            lm_html = (
+                f"<div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'>"
+                f"<img itemprop='image' src='{city['landmark_image']}' alt='Landmark di {city['name_it']}' "
+                f"style='width:100%; height:100%; object-fit:cover;'></div>"
+            )
+
+        # --- Stats box ---
+        stats_html = f"""
+        <div class='stats-box'>
+            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>{city['appeal']}</span></div>
+            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>{city['price']}€</span></div>
+            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>{city['safety']}</span></div>
+            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>{city['green']}</span></div>
+            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>{city['hotel_count']}</span></div>
+            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>{city['economy']}</span></div>
+        </div>"""
+
+        # --- Hotels ---
+        hotel_li = "".join([f"<li><b>{h['n']}</b> <small>({h['p']})</small></li>" for h in city['hotels']])
+        hotel_html = (
+            f"<div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span>"
+            f"<ul style='margin:0; padding-left:15px;'>{hotel_li}</ul></div>"
+        ) if hotel_li else ""
+
+        # --- Transport ---
+        transport_html = (
+            f"<div class='info-block transport-block'>"
+            f"<span class='block-title'>🚇 Mobilità Urbana</span>"
+            f"<p style='margin:0;'>{city['transport']}</p></div>"
+        )
+
+        # --- Districts ---
+        dist_li = "".join([
+            f"<li><b>{d['n']}</b>" + (f": {d['d'][:200]}..." if len(d['d']) > 200 else (f": {d['d']}" if d['d'] else "")) + "</li>"
+            for d in city['districts']
+        ])
+        districts_html = (
+            f"<div class='info-block district-block'><span class='block-title'>🏙️ Distretti</span>"
+            f"<ul style='margin:0; padding-left:15px;'>{dist_li}</ul></div>"
+        ) if dist_li else ""
+
+        # --- Descriptions ---
+        desc_html = f"""
+        <div class='city-desc'>
+            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p style='font-weight:600; margin:0;' itemprop='description'>{city['story_it']}</p>
+            </div>
+            {'<div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;">' + city['wiki_intro'] + '</p></div>' if city['wiki_intro'] else ''}
+        </div>"""
+
+        # --- Attractions with microdata ---
+        attr_items = ""
+        for a in city['attractions']:
+            attr_items += f"""
+            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
+                <span class='attr-name' itemprop='name'>{a['n']}</span>
+                <meta itemprop='description' content='{a['d'].replace("'", "&apos;")}'>
+                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
+                    <meta itemprop='latitude' content='{a['lat']}'>
+                    <meta itemprop='longitude' content='{a['lon']}'>
+                </div>
+                <p class='attr-desc'>{a['d']}</p>
+                <a href='https://www.google.com/maps?q={a['lat']},{a['lon']}' target='_blank' class='maps-link'>📍 MAPS</a>
+            </li>"""
+        attractions_html = f"""
+        <div class='attractions'>
+            <span class='block-title'>Strategic Sights &amp; Coordinates</span>
+            <ul style='padding:0; margin:0;'>{attr_items}</ul>
+        </div>"""
+
+        page_html = f"""<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>{city['name_it']} — EuroCity Strategic Intelligence</title>
+</head>
+<body>
+<header>
+    <h1>EuroCity Strategic Intelligence</h1>
+    <div class="desc-portale">
+        <nav style="margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+            <a href="index.html" style="color:#fff; background:rgba(255,255,255,0.2); padding:8px 18px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">← Indice</a>
+            <a href="report.html" style="color:#fff; background:var(--accent); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">📊 Report</a>
+        </nav>
+    </div>
+</header>
+<nav class="city-nav">
+    <a href="{prev_city['city_lower']}.html">← {prev_city['flag']} {prev_city['name_it']}</a>
+    <span class="city-nav-title">{city['flag']} {city['name_it']}</span>
+    <a href="{next_city['city_lower']}.html">{next_city['flag']} {next_city['name_it']} →</a>
+</nav>
+<main class="city-detail" itemscope itemtype="https://schema.org/City">
+    <meta itemprop="name" content="{city['name_it']}">
+    <link itemprop="url" href="https://en.wikipedia.org/wiki/{city['name_en']}">
+    {geo_html}
+    {lm_html}
+    <h1 class="city-title" style="margin-bottom:25px;">{city['flag']} {city['name_it']}</h1>
+    {stats_html}
+    {transport_html}
+    {hotel_html}
+    {districts_html}
+    {desc_html}
+    {attractions_html}
+    <div class="download-block">
+        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Sorgente dati strutturato (XML valido secondo <code>city_report.dtd</code>):</p>
+        <a href="xml_dataset/{cl}.xml" download class="download-link">📥 Scarica file XML sorgente</a>
+    </div>
+</main>
+<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+    Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
+    Università di Bologna — A.A. 2024/2025
+</footer>
+</body>
+</html>"""
+
+        with open(f"{cl}.html", 'w', encoding='utf-8') as f:
+            f.write(page_html)
+
+    print(f"✅ Generate {n} pagine HTML individuali.")
 
 
 def generate_report(city_data):

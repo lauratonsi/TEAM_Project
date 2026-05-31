@@ -71,8 +71,8 @@ header h1 {
 
 /* 5. GRID E LAYOUT CARDS */
 .container { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
     gap: 30px; 
     padding: 20px 40px 80px; 
     max-width: 1700px;
@@ -125,10 +125,10 @@ header h1 {
 
 .stat-label { 
     display: block; 
-    font-size: 0.6rem; 
-    text-transform: uppercase; 
-    color: var(--slate-500); 
-    font-weight: 800; 
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--slate-500);
+    font-weight: 800;
     letter-spacing: 0.05em;
     margin-bottom: 4px;
 }
@@ -264,4 +264,71 @@ header h1 {
     .container { padding: 20px; }
     .stats-box { grid-template-columns: 1fr 1fr; }
     header h1 { font-size: 2.2rem; }
+}
+
+/* NAVIGAZIONE PAGINE INDIVIDUALI CITTÀ */
+.city-nav {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.city-nav a { color: var(--accent); text-decoration: none; }
+.city-nav a:hover { text-decoration: underline; }
+.city-nav .city-nav-title { color: var(--slate-800); }
+
+/* DOWNLOAD XML */
+.download-block {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid var(--slate-100);
+    text-align: center;
+}
+.download-link {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+.download-link:hover { background: var(--accent); color: white; }
+
+/* LINK DETTAGLIO IN INDEX */
+.detail-link {
+    display: block;
+    text-align: right;
+    margin-top: 15px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-top: 1px solid var(--slate-100);
+    padding-top: 12px;
+}
+.detail-link:hover { text-decoration: underline; }
+
+/* PAGINA DETTAGLIO CITTÀ */
+.city-detail {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+@media (max-width: 480px) {
+    .container { grid-template-columns: 1fr; padding: 12px; }
+    header { padding: 50px 16px; }
+    header h1 { font-size: 1.6rem; }
+    .chat-section { padding: 18px; margin: -20px 12px 30px; }
+    #map-frame { height: 260px; }
 }
