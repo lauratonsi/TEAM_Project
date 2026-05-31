@@ -266,86 +266,32 @@ def deploy():
             }
             city_data.append(city_obj)
 
-            # 2. Costruzione HTML Hotel (Top 3)
-            hotel_li = "".join([f"<li><b>{h['n']}</b> <small>({h['p']})</small></li>" for h in city_obj['hotels'][:3]])
-            hotel_html = f"<div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'>{hotel_li}</ul></div>" if hotel_li else ""
-
-            # 3. Costruzione HTML Distretti
-            if city_obj['districts']:
-                district_li = "".join([
-                    f"<li><b>{d['n']}</b>" + (f": {d['d']}" if d['d'] else "") + "</li>"
-                    for d in city_obj['districts']
-                ])
-                districts_html = (
-                    f"<div class='info-block district-block'>"
-                    f"<span class='block-title'>🏙️ Distretti</span>"
-                    f"<ul style='margin:0; padding-left:15px;'>{district_li}</ul></div>"
-                )
-            else:
-                districts_html = ""
-
-            # 3b. Landmark image
-            landmark_html = ""
-            if city_obj.get('landmark_image'):
-                img_src = city_obj['landmark_image']
-                img_alt = city_obj['name_it']
-                landmark_html = (
-                    f"<div class='landmark-img-wrap'>"
-                    f"<img src='{img_src}' alt='Landmark di {img_alt}' "
-                    f"class='landmark-img' loading='lazy'>"
-                    f"</div>"
-                )
-
-            # 4. Costruzione HTML Attrazioni (Novità Reintegrata)
-            attr_li = ""
-            for a in city_obj['attractions']:
-                attr_li += f"""
-                <li class="attr-item">
-                    <span class="attr-name">{a['n']}</span>
-                    <p class="attr-desc">{a['d']}</p>
-                    <a href="https://www.google.com/maps?q={a['lat']},{a['lon']}" target="_blank" class="maps-link">📍 MAPS</a>
-                </li>"""
-            
-            attractions_html = f"""
-            <div class="attractions">
-                <span class="block-title">Strategic Sights & Coordinates</span>
-                <ul style="padding:0; margin:0;">{attr_li}</ul>
-            </div>"""
-
-            # 4. Iniezione nel template della Card
+            # Card compatta per index: solo immagine + stats + CTA
+            img_src = city_obj.get('landmark_image', '')
+            n_attr = len(city_obj['attractions'])
             cards_html += f"""
             <article class="city-card" itemscope itemtype="https://schema.org/City">
-                {landmark_html}
-                <h2 class="city-title"><span>{city_obj['flag']}</span> <a href="{city_lower}.html" style="text-decoration:none; color:inherit;" itemprop="name">{city_obj['name_it']}</a></h2>
-                
-                <div class="stats-box">
-                    <div class="stat-item"><span class="stat-label">Appeal</span><span class="stat-val" style="color:var(--accent)">{city_obj['appeal']}</span></div>
-                    <div class="stat-item"><span class="stat-label">Budget</span><span class="stat-val">{city_obj['price']}€</span></div>
-                    <div class="stat-item"><span class="stat-label">Safety</span><span class="stat-val">{city_obj['safety']}</span></div>
-                    <div class="stat-item"><span class="stat-label">Green</span><span class="stat-val" style="color:var(--green-500)">{city_obj['green']}</span></div>
-                    <div class="stat-item"><span class="stat-label">Strutture</span><span class="stat-val" style="color:var(--blue-500)">{city_obj['hotel_count']}</span></div>
-                    <div class="stat-item"><span class="stat-label">Accesso</span><span class="stat-val">{city_obj['economy']}</span></div>
-                </div>
-                
-                <div class="info-block transport-block">
-                    <span class="block-title">🚇 Mobilità Urbana</span>
-                    <p style="margin:0;">{city_obj['transport']}</p>
-                </div>
-
-                {hotel_html}
-
-                {districts_html}
-
-                <div class="city-desc">
-                    <div class="desc-section" style="border-left: 3px solid var(--blue-500); padding-left: 15px; background: #f0f9ff;">
-                        <span class="source-tag">🎯 Strategic Summary</span>
-                        <p style="font-weight:600; margin:0;">{city_obj['story_it']}</p>
+                <div class="landmark-img-wrap">
+                    <img src="{img_src}" alt="Landmark di {city_obj['name_it']}" class="landmark-img" loading="lazy">
+                    <div class="city-card-overlay">
+                        <h2 class="city-title-overlay">
+                            <span>{city_obj['flag']}</span>
+                            <a href="{city_lower}.html" itemprop="name" class="city-overlay-link">{city_obj['name_it']}</a>
+                        </h2>
+                        <div class="city-score-badge">{city_obj['appeal']}<small> score</small></div>
                     </div>
-                    {'<div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;">' + city_obj['wiki_intro'] + '</p></div>' if city_obj['wiki_intro'] else ''}
                 </div>
-
-                {attractions_html}
-                <a href="{city_lower}.html" class="detail-link">Scheda completa →</a>
+                <div class="city-card-body">
+                    <div class="stats-box">
+                        <div class="stat-item"><span class="stat-label">Budget</span><span class="stat-val">{city_obj['price']}€</span></div>
+                        <div class="stat-item"><span class="stat-label">Safety</span><span class="stat-val">{city_obj['safety']}</span></div>
+                        <div class="stat-item"><span class="stat-label">Green</span><span class="stat-val" style="color:var(--green-500)">{city_obj['green']}</span></div>
+                        <div class="stat-item"><span class="stat-label">Strutture</span><span class="stat-val" style="color:var(--blue-500)">{city_obj['hotel_count']}</span></div>
+                        <div class="stat-item"><span class="stat-label">Accesso</span><span class="stat-val">{city_obj['economy']}</span></div>
+                        <div class="stat-item"><span class="stat-label">Attrazioni</span><span class="stat-val">{n_attr}</span></div>
+                    </div>
+                    <a href="{city_lower}.html" class="card-cta">Scopri {city_obj['name_it']} →</a>
+                </div>
             </article>"""
         except Exception as e:
             print(f"⚠️ Errore su {filename}: {e}")

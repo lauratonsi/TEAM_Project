@@ -3,6 +3,7 @@
 
 :root {
     --accent: #E74C3C;
+    --accent-dark: #C0392B;
     --green-500: #27AE60;
     --blue-500: #3498db;
     --primary-dark: #0F172A;
@@ -11,52 +12,67 @@
     --slate-200: #E2E8F0;
     --slate-500: #64748B;
     --slate-800: #1E293B;
-    --bg: #F4F7FA;
+    --bg: #EEF2F7;
+    --card-radius: 22px;
 }
 
 /* 2. RESET E BASE */
-body { 
-    font-family: 'Inter', sans-serif; 
-    background: var(--bg); 
-    margin: 0; 
-    color: var(--slate-800); 
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    margin: 0;
+    color: var(--slate-800);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
-/* 3. HEADER E DESCRIZIONE */
-header { 
-    background: var(--primary-dark); 
-    color: white; 
-    padding: 80px 20px; 
-    text-align: center; 
-    border-bottom: 6px solid var(--accent); 
+/* 3. HEADER */
+header {
+    background: linear-gradient(135deg, #0F172A 0%, #1a2e4a 60%, #1e3a58 100%);
+    color: white;
+    padding: 90px 20px 100px;
+    text-align: center;
+    border-bottom: 5px solid var(--accent);
+    position: relative;
+    overflow: hidden;
+}
+
+/* puntini decorativi */
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 800;
-    margin: 0;
+    margin: 0 0 8px;
     letter-spacing: -0.05em;
+    position: relative;
 }
 
 .desc-portale p {
-    max-width: 700px;
-    margin: 20px auto 0;
-    opacity: 0.8;
+    max-width: 680px;
+    margin: 12px auto 0;
+    opacity: 0.7;
     font-size: 1rem;
+    position: relative;
 }
 
-/* 4. CHAT SECTION (L'Analista Virtuale) */
+/* 4. CHAT SECTION */
 .chat-section {
-    max-width: 850px;
-    margin: -40px auto 40px;
+    max-width: 860px;
+    margin: -48px auto 48px;
     background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    padding: 28px 32px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.06);
     border: 1px solid var(--slate-200);
-    position: relative; 
+    position: relative;
     z-index: 20;
 }
 
@@ -65,80 +81,183 @@ header h1 {
     margin-bottom: 10px;
     color: var(--accent);
     text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
 }
 
 /* 5. GRID E LAYOUT CARDS */
-.container { 
+.container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
-    gap: 30px; 
-    padding: 20px 40px 80px; 
-    max-width: 1700px;
+    grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+    gap: 28px;
+    padding: 20px 40px 80px;
+    max-width: 1600px;
     margin: auto;
 }
 
-.city-card { 
-    background: white; 
-    border-radius: 20px; 
-    padding: 35px; 
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); 
-    border: 1px solid var(--slate-200); 
+.city-card {
+    background: white;
+    border-radius: var(--card-radius);
+    padding: 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.04);
+    border: 1px solid var(--slate-200);
     position: relative;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s ease;
 }
 
 .city-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.06);
 }
 
-.city-title { 
-    display: flex; 
-    align-items: center; 
-    gap: 15px; 
-    margin: 0 0 25px 0; 
-    font-size: 1.8rem; 
+/* 5b. LANDMARK IMAGE CON OVERLAY GRADIENTE */
+.landmark-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.landmark-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.city-card:hover .landmark-img {
+    transform: scale(1.06);
+}
+
+.city-card-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(5,10,25,0.88));
+    padding: 40px 16px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.city-title-overlay {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
     font-weight: 800;
+    line-height: 1.2;
 }
 
-.city-title span { font-size: 2.2rem; }
-
-/* 6. STATS GRID (3x2) */
-.stats-box { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 12px; 
-    margin-bottom: 25px; 
+.city-overlay-link {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 
-.stat-item { 
-    background: var(--slate-50); 
-    padding: 12px 5px; 
-    border-radius: 12px; 
-    text-align: center; 
-    border: 1px solid var(--slate-100); 
+.city-overlay-link:hover { text-decoration: underline; }
+
+.city-score-badge {
+    background: var(--accent);
+    color: white;
+    border-radius: 10px;
+    padding: 5px 11px;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.3;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-shadow: 0 2px 10px rgba(231,76,60,0.5);
+    text-align: center;
 }
 
-.stat-label { 
-    display: block; 
-    font-size: 0.72rem;
+.city-score-badge small {
+    font-size: 0.58rem;
+    font-weight: 600;
+    opacity: 0.85;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 5c. CORPO DELLA CARD */
+.city-card-body {
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* 6. STATS GRID (3×2) */
+.stats-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.stat-item {
+    background: var(--slate-50);
+    padding: 10px 6px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--slate-100);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.66rem;
     text-transform: uppercase;
     color: var(--slate-500);
     font-weight: 800;
     letter-spacing: 0.05em;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
-.stat-val { 
-    font-weight: 800; 
-    font-size: 1.1rem; 
+.stat-val {
+    font-weight: 800;
+    font-size: 1.05rem;
 }
 
-/* 7. INFO BLOCKS (Trasporti e Hotel) */
+/* PULSANTE CTA */
+.card-cta {
+    display: block;
+    background: var(--accent);
+    color: white;
+    text-align: center;
+    padding: 13px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.88rem;
+    margin-top: auto;
+    letter-spacing: 0.3px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.card-cta:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(231,76,60,0.35);
+}
+
+/* 6b. TITOLO CITTÀ (pagine individuali) */
+.city-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 25px 0;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* 7. INFO BLOCKS */
 .info-block {
     margin-bottom: 20px;
     padding: 15px;
@@ -146,15 +265,20 @@ header h1 {
     font-size: 0.9rem;
 }
 
-.transport-block { 
-    background: #EFF6FF; 
-    border-left: 4px solid var(--blue-500); 
-    color: #1E40AF; 
+.transport-block {
+    background: #EFF6FF;
+    border-left: 4px solid var(--blue-500);
+    color: #1E40AF;
 }
 
-.hotel-block { 
-    background: var(--slate-50); 
-    border-left: 4px solid var(--slate-500); 
+.hotel-block {
+    background: var(--slate-50);
+    border-left: 4px solid var(--slate-500);
+}
+
+.district-block {
+    background: #F0FDF4;
+    border-left: 4px solid var(--green-500);
 }
 
 .block-title {
@@ -166,54 +290,54 @@ header h1 {
     opacity: 0.7;
 }
 
-/* 8. DESCRIZIONI E INSIGHTS */
-.desc-section { 
-    margin-bottom: 20px; 
+/* 8. DESCRIZIONI */
+.desc-section {
+    margin-bottom: 20px;
     padding: 15px;
     border-radius: 12px;
 }
 
-.source-tag { 
-    font-size: 0.65rem; 
-    font-weight: 800; 
-    text-transform: uppercase; 
-    margin-bottom: 5px; 
-    display: block; 
-}
-
-/* 9. ATTRAZIONI E MAPS */
-.attractions { 
-    margin-top: auto; 
-    padding-top: 25px; 
-    border-top: 2px solid var(--slate-100); 
-}
-
-.attr-item { 
-    list-style: none; 
-    margin-bottom: 18px; 
-}
-
-.attr-name { 
-    color: var(--accent); 
-    font-weight: 800; 
-    font-size: 0.95rem; 
+.source-tag {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 5px;
     display: block;
 }
 
-.attr-desc { 
-    font-size: 0.85rem; 
-    color: var(--slate-500); 
+/* 9. ATTRAZIONI */
+.attractions {
+    margin-top: auto;
+    padding-top: 25px;
+    border-top: 2px solid var(--slate-100);
+}
+
+.attr-item {
+    list-style: none;
+    margin-bottom: 18px;
+}
+
+.attr-name {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 0.95rem;
+    display: block;
+}
+
+.attr-desc {
+    font-size: 0.85rem;
+    color: var(--slate-500);
     margin: 4px 0 8px 0;
 }
 
-.maps-link { 
-    font-size: 0.7rem; 
-    font-weight: 800; 
-    text-decoration: none; 
-    color: var(--blue-500); 
-    border: 1px solid var(--blue-500); 
-    padding: 3px 10px; 
-    border-radius: 6px; 
+.maps-link {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--blue-500);
+    border: 1px solid var(--blue-500);
+    padding: 3px 10px;
+    border-radius: 6px;
     transition: 0.2s;
 }
 
@@ -222,51 +346,18 @@ header h1 {
     color: white;
 }
 
-/* 10b. LANDMARK IMAGE */
-.landmark-img-wrap {
-    width: calc(100% + 70px);
-    margin: -35px -35px 25px -35px;
-    border-radius: 20px 20px 0 0;
-    overflow: hidden;
-    height: 200px;
-}
-
-.landmark-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* 10. MAP FRAME */
+#map-frame {
+    width: 90%;
+    height: 450px;
+    margin: 0 auto 40px;
     display: block;
-    transition: transform 0.4s ease;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
 }
 
-.city-card:hover .landmark-img {
-    transform: scale(1.04);
-}
-
-.district-block {
-    background: #F0FDF4;
-    border-left: 4px solid var(--green-500);
-}
-
-/* 10. MAP FRAME GLOBALE */
-#map-frame { 
-    width: 90%; 
-    height: 450px; 
-    margin: 0 auto 40px; 
-    display: block; 
-    border-radius: 20px; 
-    border: none; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .container { padding: 20px; }
-    .stats-box { grid-template-columns: 1fr 1fr; }
-    header h1 { font-size: 2.2rem; }
-}
-
-/* NAVIGAZIONE PAGINE INDIVIDUALI CITTÀ */
+/* NAVIGAZIONE PAGINE INDIVIDUALI */
 .city-nav {
     max-width: 1000px;
     margin: 20px auto;
@@ -280,6 +371,7 @@ header h1 {
     font-weight: 700;
     font-size: 0.9rem;
 }
+
 .city-nav a { color: var(--accent); text-decoration: none; }
 .city-nav a:hover { text-decoration: underline; }
 .city-nav .city-nav-title { color: var(--slate-800); }
@@ -291,6 +383,7 @@ header h1 {
     border-top: 2px solid var(--slate-100);
     text-align: center;
 }
+
 .download-link {
     display: inline-block;
     padding: 10px 24px;
@@ -302,21 +395,8 @@ header h1 {
     font-size: 0.9rem;
     transition: 0.2s;
 }
-.download-link:hover { background: var(--accent); color: white; }
 
-/* LINK DETTAGLIO IN INDEX */
-.detail-link {
-    display: block;
-    text-align: right;
-    margin-top: 15px;
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-decoration: none;
-    border-top: 1px solid var(--slate-100);
-    padding-top: 12px;
-}
-.detail-link:hover { text-decoration: underline; }
+.download-link:hover { background: var(--accent); color: white; }
 
 /* PAGINA DETTAGLIO CITTÀ */
 .city-detail {
@@ -325,10 +405,19 @@ header h1 {
     padding: 0 20px;
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container { padding: 20px; gap: 20px; }
+    .stats-box { grid-template-columns: 1fr 1fr; }
+    header h1 { font-size: 2.2rem; }
+    header { padding: 70px 20px 80px; }
+}
+
 @media (max-width: 480px) {
     .container { grid-template-columns: 1fr; padding: 12px; }
-    header { padding: 50px 16px; }
+    header { padding: 50px 16px 60px; }
     header h1 { font-size: 1.6rem; }
     .chat-section { padding: 18px; margin: -20px 12px 30px; }
     #map-frame { height: 260px; }
+    .city-nav { font-size: 0.8rem; padding: 10px 14px; }
 }
