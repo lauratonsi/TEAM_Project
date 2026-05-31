@@ -5,4 +5,3 @@ faiss-cpu
 numpy
 openai
 python-dotenv
-llama-cpp-python
