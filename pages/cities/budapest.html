@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇭🇺 Budapest</span>
     <a href="copenhagen.html">🇩🇰 Copenaghen →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇭🇺 Budapest
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Budapest">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Budapest">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇭🇺 Budapest</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>59.8</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>96.75€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>65.7</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>60</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>0</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>47.7</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>59.8</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:60%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>96.75€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>65.7</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:66%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>60</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:60%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>47.7</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:48%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Metro + Bus line 200E Bus line 200E runs between Terminal 2 and Kőbánya-Kispest Metro station, taking 25 min, bus fare Ft500. You there buy a Metro ticket for another Ft500 and ride line 3 to the city centre, about 20 mins to the main interchange at Deák Ferenc tér. The bus runs all day every day, with 7-8 minutes frequency during the day, 30-60 minutes at late night.</p></div>
     
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

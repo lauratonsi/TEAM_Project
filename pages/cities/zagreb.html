@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇭🇷 Zagabria</span>
     <a href="amsterdam.html">🇳🇱 Amsterdam →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇭🇷 Zagabria
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Zagabria">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Zagreb">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇭🇷 Zagabria</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>67.9</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>101.38€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>77.1</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>70</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>30</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>45.2</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>67.9</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:68%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>101.38€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>77.1</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:77%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>70</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:70%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>30</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>45.2</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:45%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Buses leave from the airport at 07:00 and every 30 minutes between 08:00 and 20:00. Beyond these hours, there are buses leaving to the main bus station every time a Croatia Airlines plane lands. When traveling to the airport from the main Zagreb bus station, the buses are scheduled between 04:30 and 20:30.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Chillout Hostel Zagreb</b> <small>(From €25)</small></li><li><b>Fulir Hostel Zagreb</b> <small>(Prezzo N/D)</small></li><li><b>Funk Lounge</b> <small>(dorm from: €13, private from: €20)</small></li><li><b>Hobo Bear Hostel</b> <small>(Dorm bed: €14)</small></li><li><b>Hostel Lika</b> <small>(Dorm bed: €13.5)</small></li></ul></div>
@@ -163,5 +189,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

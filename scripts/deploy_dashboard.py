@@ -354,9 +354,18 @@ def generate_map(city_data):
     print(f"🗺️  Mappa rigenerata: {MAP_FILE}")
 
 
+def _fv(x):
+    try: return float(x or 0)
+    except: return 0.0
+
+def _pct(val, maxv=100):
+    try: return round(min(100, max(0, float(val or 0) / maxv * 100)))
+    except: return 0
+
+
 def deploy():
     print("🚀 Generazione Dashboard: Reintegro Attrazioni + Griglia 3x2...")
-    
+
     city_data = []
     cards_html = ""
 
@@ -399,8 +408,12 @@ def deploy():
             # Card compatta per index: solo immagine + stats + CTA
             img_src = city_obj.get('landmark_image', '')
             n_attr = len(city_obj['attractions'])
+            s_pct = _pct(city_obj['safety'])
+            g_pct = _pct(city_obj['green'])
+            p_pct = _pct(city_obj['price'], 2.5)   # max €250
+            e_pct = _pct(city_obj['economy'])
             cards_html += f"""
-            <article class="city-card" itemscope itemtype="https://schema.org/City">
+            <article class="city-card" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" itemscope itemtype="https://schema.org/City">
                 <div class="landmark-img-wrap">
                     <img src="{img_src}" alt="Landmark di {city_obj['name_it']}" class="landmark-img" loading="lazy">
                     <div class="city-card-overlay">
@@ -413,12 +426,34 @@ def deploy():
                 </div>
                 <div class="city-card-body">
                     <div class="stats-box">
-                        <div class="stat-item"><span class="stat-label">Budget</span><span class="stat-val">{city_obj['price']}€</span></div>
-                        <div class="stat-item"><span class="stat-label">Safety</span><span class="stat-val">{city_obj['safety']}</span></div>
-                        <div class="stat-item"><span class="stat-label">Green</span><span class="stat-val" style="color:var(--green-500)">{city_obj['green']}</span></div>
-                        <div class="stat-item"><span class="stat-label">Strutture</span><span class="stat-val" style="color:var(--blue-500)">{city_obj['hotel_count']}</span></div>
-                        <div class="stat-item"><span class="stat-label">Accesso</span><span class="stat-val">{city_obj['economy']}</span></div>
-                        <div class="stat-item"><span class="stat-label">Attrazioni</span><span class="stat-val">{n_attr}</span></div>
+                        <div class="stat-item">
+                            <span class="stat-label">Budget</span>
+                            <span class="stat-val">{city_obj['price']}€</span>
+                            <div class="score-bar-wrap"><div class="score-bar-fill amber" style="width:{p_pct}%"></div></div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Safety</span>
+                            <span class="stat-val">{city_obj['safety']}</span>
+                            <div class="score-bar-wrap"><div class="score-bar-fill green" style="width:{s_pct}%"></div></div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Green</span>
+                            <span class="stat-val" style="color:var(--green-500)">{city_obj['green']}</span>
+                            <div class="score-bar-wrap"><div class="score-bar-fill green" style="width:{g_pct}%"></div></div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Strutture</span>
+                            <span class="stat-val" style="color:var(--blue-500)">{city_obj['hotel_count']}</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Accesso</span>
+                            <span class="stat-val">{city_obj['economy']}</span>
+                            <div class="score-bar-wrap"><div class="score-bar-fill blue" style="width:{e_pct}%"></div></div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Attrazioni</span>
+                            <span class="stat-val">{n_attr}</span>
+                        </div>
                     </div>
                     <a href="pages/cities/{city_lower}.html" class="card-cta">Scopri {city_obj['name_it']} →</a>
                 </div>
@@ -461,7 +496,51 @@ def deploy():
         <div id="chat-output" style="margin-top:15px; padding:10px; font-size:0.9rem; color:var(--slate-500); border-left:3px solid var(--accent)">Sistema pronto. Caricamento dati V16 completato.</div>
     </section>
     <div id="map-inline"></div>
-    <main class="container">{cards_html}</main>
+
+    <section style="max-width:860px; margin:0 auto 32px; padding:0 20px;">
+      <div style="background:#fff; border-radius:16px; border:1px solid var(--slate-200);
+                  padding:22px 28px; box-shadow:0 2px 12px rgba(0,0,0,0.05);">
+        <p style="font-size:0.82rem; font-weight:800; text-transform:uppercase;
+                  letter-spacing:1.2px; color:var(--accent); margin:0 0 10px;">
+          🔍 Come funziona il Virtual Analyst</p>
+        <p style="font-size:0.9rem; color:var(--slate-500); margin:0 0 14px; line-height:1.65;">
+          Il <b>Virtual Analyst</b> è un sistema <b>RAG</b> (Retrieval-Augmented Generation)
+          costruito sui <b>320 chunk testuali</b> estratti dai 30 file XML validati del dataset.
+          Ogni query passa attraverso una ricerca ibrida <b>BM25 + vettoriale</b> (FAISS +
+          <code>all-MiniLM-L6-v2</code>) con <b>Reciprocal Rank Fusion</b>, poi rileva
+          l'intento (trasporti / hotel / attrazioni / sicurezza) e seleziona i chunk più
+          rilevanti per sezione. Risponde in tempo reale senza LLM esterno.
+        </p>
+        <p style="font-size:0.82rem; font-weight:700; color:var(--slate-800); margin:0 0 8px;">
+          Esempi di domande:</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
+            data-q="trasporti Roma" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🚇 trasporti Roma</button>
+          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
+            data-q="hotel Amsterdam" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🏨 hotel Amsterdam</button>
+          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
+            data-q="cosa vedere a Parigi" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🗺️ cosa vedere a Parigi</button>
+          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
+            data-q="sicurezza Berlino" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🛡️ sicurezza Berlino</button>
+          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
+            data-q="quartieri di Praga" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🏘️ quartieri di Praga</button>
+        </div>
+        <p style="font-size:0.75rem; color:var(--slate-500); margin:12px 0 0; border-top:1px solid var(--slate-100); padding-top:10px;">
+          ⚠️ <b>Limiti:</b> conosce solo le 30 capitali nel dataset; non ha informazioni
+          su eventi recenti; alcune città mancano di dati hotel (Budapest, Londra, Parigi…)
+          perché assenti nelle sorgenti Wikivoyage analizzate.
+        </p>
+      </div>
+    </section>
+
+    <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">🌍 Tutte</button>
+        <button class="filter-btn" data-filter="safety">🛡️ Top Safety ≥ 70</button>
+        <button class="filter-btn" data-filter="green">🌱 Top Green ≥ 70</button>
+        <button class="filter-btn" data-filter="budget">💰 Budget ≤ 100€</button>
+    </div>
+    <main class="container" id="city-grid">{cards_html}</main>
+    <button id="back-to-top" title="Torna in cima">↑</button>
     <script>
         const cityData = {json.dumps(city_data)};
         document.getElementById('chat-btn').onclick = function() {{
@@ -488,7 +567,44 @@ def deploy():
     </script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
-""" + inline_map_js + "\n</body></html>"
+"""  + inline_map_js + """
+    <script>
+    /* --- sticky header + back-to-top --- */
+    const btt = document.getElementById('back-to-top');
+    const hdr = document.querySelector('header');
+    window.addEventListener('scroll', () => {{
+        btt.classList.toggle('visible', scrollY > 400);
+        hdr.classList.toggle('scrolled', scrollY > 60);
+    }});
+    btt.onclick = () => window.scrollTo({{top: 0, behavior: 'smooth'}});
+
+    /* --- filter buttons --- */
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {{
+        btn.addEventListener('click', () => {{
+            document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const f = btn.dataset.filter;
+            document.querySelectorAll('#city-grid .city-card').forEach(card => {{
+                const s = parseFloat(card.dataset.safety || 0);
+                const g = parseFloat(card.dataset.green  || 0);
+                const p = parseFloat(card.dataset.price  || 999);
+                let show = true;
+                if (f === 'safety') show = s >= 70;
+                if (f === 'green')  show = g >= 70;
+                if (f === 'budget') show = p <= 100;
+                card.style.display = show ? '' : 'none';
+            }});
+        }});
+    }});
+
+    /* --- card entrance animation --- */
+    document.body.classList.add('js-loaded');
+    const observer = new IntersectionObserver(entries => {{
+        entries.forEach(e => {{ if (e.isIntersecting) {{ e.target.classList.add('visible'); observer.unobserve(e.target); }} }});
+    }}, {{rootMargin: '0px 0px -50px 0px'}});
+    document.querySelectorAll('.city-card').forEach(c => observer.observe(c));
+    </script>
+</body></html>"""
 
     with open(OUTPUT_HTML, 'w', encoding='utf-8') as f:
         f.write(full_html)
@@ -534,14 +650,40 @@ def generate_city_pages(city_data):
             )
 
         # --- Stats box ---
+        _s = _pct(city['safety']); _g = _pct(city['green'])
+        _p = _pct(city['price'], 2.5); _e = _pct(city['economy'])
+        _a = _pct(city['appeal'])
         stats_html = f"""
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>{city['appeal']}</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>{city['price']}€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>{city['safety']}</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>{city['green']}</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>{city['hotel_count']}</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>{city['economy']}</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>{city['appeal']}</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:{_a}%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>{city['price']}€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:{_p}%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>{city['safety']}</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:{_s}%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>{city['green']}</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:{_g}%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>{city['hotel_count']}</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>{city['economy']}</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:{_e}%'></div></div>
+            </div>
         </div>"""
 
         # --- Hotels ---
@@ -621,6 +763,9 @@ def generate_city_pages(city_data):
     <span class="city-nav-title">{city['flag']} {city['name_it']}</span>
     <a href="{next_city['city_lower']}.html">{next_city['flag']} {next_city['name_it']} →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › {city['flag']} {city['name_it']}
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="{city['name_it']}">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/{city['name_en']}">
@@ -642,6 +787,16 @@ def generate_city_pages(city_data):
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {{
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+}});
+btt.onclick = () => window.scrollTo({{top: 0, behavior: 'smooth'}});
+</script>
 </body>
 </html>"""
 
@@ -847,6 +1002,7 @@ def generate_report(city_data):
   <a href="#dtd">📄 Schema DTD</a>
   <a href="#parsing">🔬 Tecniche di Parsing</a>
   <a href="#ai">🤖 Utilizzo AI</a>
+  <a href="#team">👥 Team</a>
 </nav>
 
 <!-- ===== STATISTICHE ===== -->
@@ -888,48 +1044,68 @@ def generate_report(city_data):
 <section class="report-section" id="architettura">
   <h2>⚙️ Architettura della Pipeline TEAM</h2>
   <p>
-    Il progetto è composto da tre script Python eseguiti in sequenza. La pipeline trasforma
-    dump MediaWiki (formato XML Wikivoyage) in file XML conformi al DTD, e da questi genera
-    pagine HTML navigabili.
+    Il progetto è composto da quattro componenti Python. La pipeline trasforma dump MediaWiki
+    in file XML conformi al DTD, genera le pagine HTML navigabili e indicizza i contenuti
+    in un sistema RAG per le query in linguaggio naturale.
   </p>
   <div class="pipeline-steps">
     <div class="pipeline-step">
       <div class="step-num">1</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>extract_wiki_info.py</code> — Fase di Preparazione</h3>
+        <h3 style="margin:0;"><code>extract_wiki_info.py</code> — Preparazione dati</h3>
         <p>
-          Scarica e analizza i dump Wikivoyage in <code>original_source/</code>. Utilizza
-          <b>mwparserfromhell</b> e <b>spaCy</b> per l'estrazione di testo strutturato.
+          Analizza i dump Wikivoyage in <code>data/original_source/</code>. Utilizza
+          <b>mwparserfromhell</b> e <b>spaCy</b> per estrarre testo strutturato.
           Produce <code>wiki_text_pulito.csv</code> (trasporti, hotel, distretti) e
           <code>attrazione_descrizione_fixed.csv</code> (attrazioni con coordinate geografiche).
-          I dati di sicurezza, costo della vita e green score provengono da
-          <code>city_indices.json</code>.
+          I dati di sicurezza, costo della vita e green score provengono da <code>city_indices.json</code>.
         </p>
       </div>
     </div>
     <div class="pipeline-step">
       <div class="step-num">2</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>final_processor.py</code> — Elaborazione Principale</h3>
+        <h3 style="margin:0;"><code>final_processor.py</code> — Elaborazione e validazione XML</h3>
         <p>
-          Script centrale del progetto. Per ogni capitale: individua la pagina principale nel dump
-          Wikivoyage (gestendo assenza della pagina principale e varianti accentate come
-          <i>Reykjavík</i>), pulisce il testo Wikitext con regex, estrae i distretti dal CSV
-          con descrizioni dalle sotto-pagine, valida il file XML risultante rispetto al DTD tramite
-          <b>lxml.etree.DTD</b>, e scrive in <code>xml_dataset/</code>.
+          Script centrale del progetto. Per ogni capitale individua la pagina principale nel dump,
+          pulisce il Wikitext con regex, estrae distretti con descrizioni dalle sotto-pagine,
+          valida il file XML risultante rispetto al DTD tramite <b>lxml.etree.DTD</b>
+          e scrive i file in <code>data/xml_dataset/</code>.
         </p>
       </div>
     </div>
     <div class="pipeline-step">
       <div class="step-num">3</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>deploy_dashboard.py</code> — Generazione Output HTML</h3>
+        <h3 style="margin:0;"><code>deploy_dashboard.py</code> — Generazione HTML</h3>
         <p>
-          Legge i 30 file XML validati e produce <code>index.html</code> (dashboard navigabile
-          con griglia di card) e questo file <code>report.html</code>. Le card includono
-          <b>microdata Schema.org</b> (<code>itemscope itemtype="City"</code>) per la
-          leggibilità da parte dei motori di ricerca. I dati delle città vengono anche serializzati
-          come JSON inline per il <i>Virtual Analyst</i> interattivo.
+          Legge i 30 file XML validati e produce <code>index.html</code> (dashboard con griglia
+          di card), le 30 pagine città e questo <code>report.html</code>. Le card includono
+          <b>microdata Schema.org</b> (<code>itemscope itemtype="City"</code>). I dati vengono
+          anche serializzati come JSON inline per il Virtual Analyst client-side.
+        </p>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h3 style="margin:0;"><code>rag/</code> — Sistema RAG per query in linguaggio naturale</h3>
+        <p>
+          Modulo indipendente composto da tre file: <code>ingest.py</code> legge i 30 XML e
+          costruisce <b>320 chunk testuali</b> tematici (trasporti, hotel, distretti, attrazioni,
+          descrizione strategica, panoramica wiki) prefissati con il nome della città.
+          <code>vectorstore.py</code> indicizza i chunk in un indice <b>FAISS IndexFlatIP</b>
+          (384 dimensioni, <code>all-MiniLM-L6-v2</code>) e mantiene un indice <b>BM25Okapi</b>
+          parallelo; la ricerca ibrida applica <b>Reciprocal Rank Fusion</b> (α=0.5).
+          <code>api.py</code> (FastAPI su <code>127.0.0.1:8000</code>) riceve la query,
+          rileva l'intento (transport / hotel / attractions / safety / general), boosta i chunk
+          della sezione corrispondente e sintetizza la risposta estraendo le frasi più rilevanti
+          — senza LLM esterno.
+        </p>
+        <p style="font-size:0.82rem;color:var(--slate-500);margin:8px 0 0;">
+          <b>Limiti noti:</b> alcune città (Londra, Budapest, Parigi…) mancano di dati hotel
+          nelle sorgenti Wikivoyage originali; l'estrazione di frasi è euristica e non
+          garantisce coerenza sintattica sulle risposte lunghe.
         </p>
       </div>
     </div>
@@ -1094,26 +1270,108 @@ def generate_report(city_data):
   <span class="ai-badge">city_descriptions.json</span>
   <p>
     Le sintesi strategiche in italiano in <code>city_descriptions.json</code>
-    (mostrate come <i>Strategic Summary</i> nelle card) sono state generate con Claude
-    (Anthropic) tramite prompt strutturati del tipo:
+    (mostrate come <i>Strategic Summary</i> nelle card) sono state generate con
+    <b>Gemini</b> (Google AI) tramite prompt strutturati. Fonte: testo a scopo
+    didattico, non estratto da una singola fonte primaria.
   </p>
   <pre style="font-size:0.8rem;">Genera una descrizione strategica in italiano (max 2 frasi) di [CITTÀ]
 come capitale europea, focalizzandoti su: innovazione urbana, sostenibilità,
 sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</pre>
-  <p style="margin-top:16px;">
-    I file XML sorgente in <code>original_source/</code> provengono da
-    <b>Wikivoyage</b> (licenza CC-BY-SA), scaricati tramite le API MediaWiki.
-    I dati di sicurezza e costo della vita provengono da dataset pubblici
-    (Numbeo, EIU) aggregati in <code>city_indices.json</code>.
-    Le immagini landmark provengono da <b>Wikimedia Commons</b> (licenza libera)
-    tramite URL <code>Special:FilePath</code>.
+
+  <h3 style="margin-top:28px;">Fonti degli Indici Numerici</h3>
+  <span class="ai-badge">city_indices.json</span>
+
+  <table style="width:100%;border-collapse:collapse;font-size:0.88rem;margin-top:12px">
+    <thead>
+      <tr style="background:var(--slate-50);text-align:left">
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Indicatore</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Fonte originale</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Rielaborazione</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Nota</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><b>Safety Index</b></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">
+          <a href="https://www.numbeo.com/crime/region_rankings.jsp?title=2024&amp;region=150" target="_blank">Numbeo Safety Index 2024</a>
+        </td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">AI (Gemini)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">Valori adattati; scarto stimato ±5–10 pt rispetto ai dati Numbeo originali</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><b>Cost of Living</b></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">
+          <a href="https://www.numbeo.com/cost-of-living/region_rankings.jsp?title=2024&amp;region=150" target="_blank">Numbeo Cost of Living Index 2024</a>
+        </td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">AI (Gemini)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">Normalizzato sulla scala europea (Numbeo usa NYC = 100 come riferimento)</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px"><b>Green Score</b></td>
+        <td style="padding:8px 12px">
+          <a href="https://environment.ec.europa.eu/topics/urban-environment/european-green-capital-award_en" target="_blank">EU Green Capital Award</a> + EEA City Statistics
+        </td>
+        <td style="padding:8px 12px">Stima sintetica AI (Gemini)</td>
+        <td style="padding:8px 12px;color:#C0392B"><b>⚠️ Non validato da un indice ufficiale 0–100.</b> Stima composita basata su: EU Green Capital Award, aree verdi pro capite, emissioni CO₂, politiche mobilità.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top:20px;">
+    I file XML sorgente provengono da <b>Wikivoyage</b> (licenza CC-BY-SA), scaricati
+    tramite le API MediaWiki. Le immagini landmark provengono da <b>Wikimedia Commons</b>
+    (licenza libera) tramite Wikipedia pageimages API.
   </p>
+  <p style="background:#FEF3C7;border-left:4px solid #F59E0B;padding:12px 16px;border-radius:8px;font-size:0.85rem;margin-top:12px">
+    ⚠️ <b>Avvertenza accademica:</b> i valori numerici in <code>city_indices.json</code>
+    sono stime rielaborate con AI a partire da fonti pubbliche. Non sostituiscono
+    la consultazione diretta dei dataset originali Numbeo o EEA per usi di ricerca.
+  </p>
+</section>
+
+<section class="report-section" id="team">
+  <h2>👥 Il Team</h2>
+  <p class="section-intro">Progetto sviluppato nell'ambito della Laurea Magistrale in
+    <a href="https://corsi.unibo.it/magistrale/PoliticheInnovazioneDigitale" target="_blank">
+    Governance e Politiche dell'Innovazione Digitale (GEPID)</a> —
+    Università di Bologna, A.A. 2024/2025.</p>
+  <div class="team-grid">
+    <article class="team-card">
+      <img src="https://github.com/lauratonsi.png" alt="Laura Tonsi" class="team-avatar">
+      <div>
+        <p class="team-name">Laura Tonsi</p>
+        <p style="color:var(--slate-500);font-size:0.88rem;margin:0 0 4px">Architettura ETL, RAG pipeline, frontend</p>
+        <a href="https://github.com/lauratonsi" target="_blank" class="team-github">
+          ⬡ github.com/lauratonsi</a>
+      </div>
+    </article>
+    <article class="team-card">
+      <img src="https://github.com/SusannaCioni.png" alt="Susanna Cioni" class="team-avatar">
+      <div>
+        <p class="team-name">Susanna Cioni</p>
+        <p style="color:var(--slate-500);font-size:0.88rem;margin:0 0 4px">Analisi dati, XML/DTD, scoring</p>
+        <a href="https://github.com/SusannaCioni" target="_blank" class="team-github">
+          ⬡ github.com/SusannaCioni</a>
+      </div>
+    </article>
+  </div>
 </section>
 
 <footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
   Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
   Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {{
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+}});
+btt.onclick = () => window.scrollTo({{top: 0, behavior: 'smooth'}});
+</script>
 </body>
 </html>"""
 

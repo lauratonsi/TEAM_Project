@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇳🇱 Amsterdam</span>
     <a href="athens.html">🇬🇷 Atene →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇳🇱 Amsterdam
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Amsterdam">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Amsterdam">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇳🇱 Amsterdam</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>63.2</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>157.25€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>72.5</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>78</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>6</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>15.0</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>63.2</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:63%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>157.25€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>72.5</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:72%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>78</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:78%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>6</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>15.0</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:15%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>From Schiphol Airport. The train station is located directly beneath the airport. From the arrivals hall, walk through Schiphol Plaza to reach the train station.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Gaasper Camping Amsterdam</b> <small>(Off-season from €16.25, from €18.50 during high-season)</small></li><li><b>A&amp;O Amsterdam Zuidoost</b> <small>(€24)</small></li><li><b>Campanile Hotel Amsterdam</b> <small>(Prezzo N/D)</small></li><li><b>Tulip Inn Amsterdam Riverside</b> <small>(€78)</small></li><li><b>EasyHotel Amsterdam Arena Boulevard</b> <small>(Doubles from €49)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

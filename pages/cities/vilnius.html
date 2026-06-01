@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇱🇹 Vilnius</span>
     <a href="warsaw.html">🇵🇱 Varsavia →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇱🇹 Vilnius
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Vilnius">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Vilnius">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇱🇹 Vilnius</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>69.3</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>104.34€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>71.5</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>80</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>23</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>43.6</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>69.3</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:69%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>104.34€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>71.5</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:72%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>80</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:80%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>23</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>43.6</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:44%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Buses leave from outside Arrivals every 15-30 min and take 15 min to go downtown. Simplest is to buy a €1 single ticket by card, and you might pay extra for bulky luggage. "Get around" below describes other ticket deals, such as the smart card Vilniečio kortelė — buy it from the Narvesen kiosk next to Arrivals.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Filaretai Hostel</b> <small>(Dorm €33 ppn)</small></li><li><b>Jimmy Jumps House</b> <small>(Dorm beds from ~€18, privates from ~€40)</small></li><li><b>Pogo Hostel</b> <small>(Dorm €20 ppn)</small></li><li><b>City Hotel Algirdas</b> <small>(B&amp;B double €50)</small></li><li><b>Domus Maria</b> <small>(B&amp;B double €60)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

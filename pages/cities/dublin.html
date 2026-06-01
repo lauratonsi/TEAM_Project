@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇮🇪 Dublino</span>
     <a href="helsinki.html">🇫🇮 Helsinki →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇮🇪 Dublino
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Dublino">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Dublin">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇮🇪 Dublino</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>53.1</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>151.88€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>48.9</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>75</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>47</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>17.9</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>53.1</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:53%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>151.88€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>48.9</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:49%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>75</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:75%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>47</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>17.9</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:18%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Tickets and Leap Card On trains and trams, tickets can be purchased from ticket vending machines at the station or stop prior to boarding. Train tickets are valid for the day of purchase and are needed to get through the entry and exit turnstiles at stations. Tram tickets do not have to be validated prior to boarding, but must be used within 90 minutes of purchase.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Camac Valley Caravan and Camping Park</b> <small>(Tent €12, hook-up €40)</small></li><li><b>Abbey Court Hostel</b> <small>(Bunk €35 ppn)</small></li><li><b>Ashling House</b> <small>(Double (room only) €140)</small></li><li><b>DCU Summer Rooms</b> <small>(Prezzo N/D)</small></li><li><b>Latroupe Jacobs Inn</b> <small>(Pod €35 ppn)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

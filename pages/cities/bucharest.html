@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇷🇴 Bucarest</span>
     <a href="budapest.html">🇭🇺 Budapest →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇷🇴 Bucarest
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Bucarest">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Bucharest">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇷🇴 Bucarest</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>60.3</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>90.47€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>70.3</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>55</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>41</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>51.1</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>60.3</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:60%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>90.47€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>70.3</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:70%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>55</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:55%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>41</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>51.1</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:51%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Getting there and away: By bus – The Express Bus is usually the best option, as it is inexpensive (50–90 minutes ride) and runs frequently. However, it can get crowded (and it lacks space for luggage) and can get snarled in traffic. The airport bus stop is straight outside Arrivals on the ground floor.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Apartamente Regim Hotelier Bucuresti</b> <small>(40)</small></li><li><b>Short Term Apartments Rental</b> <small>(40)</small></li><li><b>Camping Casa Alba</b> <small>(Prezzo N/D)</small></li><li><b>Butterfly Villa Hostel</b> <small>(From 12/night)</small></li><li><b>Midland Hostel</b> <small>(from 8/night)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

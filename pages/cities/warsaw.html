@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇵🇱 Varsavia</span>
     <a href="zagreb.html">🇭🇷 Zagabria →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇵🇱 Varsavia
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Varsavia">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Warsaw">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇵🇱 Varsavia</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>69.3</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>98.42€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>74.8</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>75</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>0</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>46.8</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>69.3</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:69%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>98.42€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>74.8</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:75%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>75</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:75%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>46.8</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:47%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Regular Warsaw transport tickets issued by ZTM (the local transport operator which runs city buses, trams and the metro) are valid on SKM train services between the airport and Warsaw. The airport is in fare zone 1 so a single adult ride is 3.40 zł. If you need a bus at the other end, get a one-transfer ticket (valid 75 min) for 4.40 zł.</p></div>
     
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

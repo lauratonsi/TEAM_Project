@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇮🇹 Roma</span>
     <a href="sofia.html">🇧🇬 Sofia →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇮🇹 Roma
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Roma">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Rome">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇮🇹 Roma</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>48.4</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>132.28€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>46.8</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>60</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>3</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>28.5</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>48.4</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:48%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>132.28€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>46.8</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:47%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>60</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:60%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>3</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>28.5</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:28%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Testaccio is a short walk from the metro station and Circus Maximus also has its own metro station on the rome line (Circo Massimo). Near Piramide Metro station is Ostiense railway station, with regular connections to and from Fiumicino Airport. From Piramide you can also get trains to Ostia.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Gazometro B&amp;B Rome</b> <small>(Prezzo N/D)</small></li><li><b>Hotels Aventine, San Anselmo and San Pio</b> <small>(Prezzo N/D)</small></li><li><b>Testaccio Hotel, Sonder</b> <small>(Single €99, double €121)</small></li></ul></div>
@@ -180,5 +206,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

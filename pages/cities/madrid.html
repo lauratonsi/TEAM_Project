@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇪🇸 Madrid</span>
     <a href="nicosia.html">🇨🇾 Nicosia →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇪🇸 Madrid
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Madrid">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Madrid">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇪🇸 Madrid</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>65.2</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>119.88€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>71.3</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>74</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>0</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>35.2</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>65.2</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:65%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>119.88€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>71.3</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:71%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>74</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:74%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>35.2</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:35%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>To and from the airport During the day, Metro a popular best way to reach city centre. Line 8 (pink) runs from Nuevos Ministerios to Terminals 1,2&amp;3, Barajas town (no airport here, don't get off!) and T4. It runs from 06:00 to 01:30, taking 15 min from city to T123 and another 5 min to T4.</p></div>
     
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

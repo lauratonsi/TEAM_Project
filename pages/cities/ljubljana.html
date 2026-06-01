@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇸🇮 Lubiana</span>
     <a href="london.html">🇬🇧 Londra →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇸🇮 Lubiana
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Lubiana">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Ljubljana">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇸🇮 Lubiana</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>74.7</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>109.52€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>78.4</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>88</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>23</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>40.8</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>74.7</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:75%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>109.52€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>78.4</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:78%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>88</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:88%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>23</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>40.8</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:41%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Getting there and away: By bus: Arriva Bus takes 50 min to the main bus and railway station ("Ljubljana AP", Stand 28), with several stops. It runs every 30 min M-F 05:20-20:10, and Sa Su holidays 06:10–19:10. The fare is €4.10, pay the driver on boarding; cannot pay with the city Urbana card.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Aladin Hostel</b> <small>(Dorm €15)</small></li><li><b>Celica</b> <small>(Dorm €20)</small></li><li><b>Hostel Tabor</b> <small>(B&amp;B double €54)</small></li><li><b>Fluxus Hostel</b> <small>(Dorm €21 ppn)</small></li><li><b>Most Hostel</b> <small>(Dorm €21 ppn, double €60)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

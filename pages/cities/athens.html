@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇬🇷 Atene</span>
     <a href="berlin.html">🇩🇪 Berlino →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇬🇷 Atene
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Atene">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Athens">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇬🇷 Atene</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>47.6</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>115.44€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>55.2</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>45</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>27</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>37.6</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>47.6</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:48%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>115.44€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>55.2</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:55%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>45</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:45%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>27</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>37.6</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:38%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Transport for Athens (OASA) operates public transportation in Athens. Its subdivisions include STASY and OSY. A single ticket allows you to travel on any types of transport, metro, trams, buses, with unlimited transfers anywhere time within Athens for 90 minutes.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Dionissotis Camping</b> <small>(€6 per person, €4 per small tent, €6 per large tent/caravan)</small></li><li><b>Athens Backpackers</b> <small>(Prezzo N/D)</small></li><li><b>Athens Psiri Hotel</b> <small>(€35)</small></li><li><b>Safestay Athens Monastiraki</b> <small>(€15-50)</small></li><li><b>Hotel Dioskouros Athens</b> <small>(€15-20 per person in high season)</small></li></ul></div>
@@ -165,5 +191,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

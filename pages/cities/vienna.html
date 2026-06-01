@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇦🇹 Vienna</span>
     <a href="vilnius.html">🇱🇹 Vilnius →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇦🇹 Vienna
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Vienna">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Vienna">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇦🇹 Vienna</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>67.9</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>142.27€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>73.2</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>85</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>0</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>23.1</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>67.9</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:68%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>142.27€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>73.2</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:73%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>85</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:85%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>23.1</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:23%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Vienna International Airport Vienna International Airport Vienna International Airport url email address lat48.110278 long16.569722 directionsjust outside the city limits of Vienna on the far side of the City of Schwechat phone tollfree hours price wikipediaVienna International Airport image2011-06-14 10-23-53 Austria Niederösterreich Fischamend Markt.jpg wikidataQ32999 lastedit2025-07-26 contentTo get to Vienna, you have three different railway options. The cheaper but slower S-Bahn line S7 (24 minutes; €4.60) and the more expensive but faster City Airport Train (15 minutes; from €11) both go to Wien-Mitte/Landstraße.</p></div>
     
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

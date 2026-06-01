@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇩🇰 Copenaghen</span>
     <a href="dublin.html">🇮🇪 Dublino →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇩🇰 Copenaghen
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Copenaghen">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Copenhagen">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇩🇰 Copenaghen</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>66.0</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>163.35€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>74.1</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>85</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>10</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>11.7</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>66.0</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:66%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>163.35€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>74.1</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:74%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>85</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:85%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>10</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>11.7</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:12%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>By train It takes 13 minutes to get to Copenhagen Central Station from the airport, and the trains stops at Amager's two other train stations; Tårnby and Ørestad (interchange with Metro line 1) en route. To Malmö Central Station in Sweden it takes 20 minutes. Trains run every 20 minutes throughout the day, and every 10 minutes towards the central station during rush-hour.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Copenhagen Camping</b> <small>(Prezzo N/D)</small></li><li><b>Danhostel Amager</b> <small>(Dorm beds from 130 kr, Singles from 380 kr)</small></li><li><b>Dragør Badehotel</b> <small>(Single from 370 kr)</small></li><li><b>Dragør Fort</b> <small>(Doubles from 695 kr)</small></li><li><b>House of Colors</b> <small>(580 kr for one person, 680 kr for two, discount for stays of one week or longer)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

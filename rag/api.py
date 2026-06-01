@@ -114,14 +114,21 @@ def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3
     accommodation_terms = {'hotel', 'hostel', 'alloggio', 'albergo', 'b&b'}
     wants_accommodation = intent == 'hotel' or any(term in tokens for term in accommodation_terms)
 
+    # section corrispondente all'intento — usata per boost
+    intent_section = {
+        'transport': 'transport',
+        'hotel': 'hotels',
+        'attractions': 'attractions',
+        'safety': 'description',
+        'general': None,
+    }.get(intent)
+
     query_city = extract_city(query)
     if query_city:
-        city_results = [r for r in results if extract_city(r.get('text', '')) == query_city
-                        or r.get('city', '').upper() == query_city]
+        city_results = [r for r in results if r.get('city', '').upper() == query_city]
         if not city_results:
             _, all_docs = vectorstore.load_index()
-            city_results = [d for d in all_docs if extract_city(d.get('text', '')) == query_city
-                            or d.get('city', '').upper() == query_city]
+            city_results = [d for d in all_docs if d.get('city', '').upper() == query_city]
         if city_results:
             results = city_results
 
@@ -129,13 +136,17 @@ def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3
     for r in results:
         text_lower = r.get('text', '').lower()
         score = 0
-        if query_city and query_city.lower() in text_lower:
-            score += 5
+        # city match
         if r.get('city', '').upper() == query_city:
-            score += 4
+            score += 6
+        # section match: fortissimo boost se il chunk è esattamente del tipo cercato
+        if intent_section and r.get('section') == intent_section:
+            score += 8
+        # token match
         for t in tokens:
             if re.search(rf"\b{re.escape(t)}\b", text_lower):
                 score += 2
+        # keyword match
         for keyword, weight in topic_keywords.items():
             if keyword in text_lower:
                 score += weight

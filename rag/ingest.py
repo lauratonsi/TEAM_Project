@@ -1,13 +1,13 @@
-import csv
 import json
 import re
 from pathlib import Path
+from lxml import etree
 from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_CSV = ROOT / 'data' / 'wiki_text_pulito.csv'
+XML_DIR = ROOT / 'data' / 'xml_dataset'
 OUT_DIR = ROOT / 'rag_index'
 OUT_DIR.mkdir(exist_ok=True)
 
@@ -19,7 +19,6 @@ def chunk_text(text, max_chars=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     text = text.replace('\n', ' ').strip()
     if len(text) <= max_chars:
         return [text]
-    # split on sentence boundaries first
     sentences = re.split(r'(?<=[.!?])\s+', text)
     chunks = []
     current = ''
@@ -29,7 +28,6 @@ def chunk_text(text, max_chars=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
         else:
             if current:
                 chunks.append(current)
-            # if a single sentence exceeds max_chars, split it hard
             if len(sent) > max_chars:
                 for i in range(0, len(sent), max_chars - overlap):
                     chunks.append(sent[i:i + max_chars].strip())
@@ -38,7 +36,6 @@ def chunk_text(text, max_chars=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
                 current = sent
     if current:
         chunks.append(current)
-    # add overlap: prepend tail of previous chunk to each chunk
     if overlap and len(chunks) > 1:
         overlapped = [chunks[0]]
         for i in range(1, len(chunks)):
@@ -48,54 +45,88 @@ def chunk_text(text, max_chars=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     return chunks
 
 
-def read_csv_rows(csv_path):
-    rows = []
-    with open(csv_path, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for r in reader:
-            rows.append(r)
-    return rows
-
-
 def build_embeddings_and_index(model_name='all-MiniLM-L6-v2'):
-    print('Loading CSV:', DATA_CSV)
-    rows = read_csv_rows(DATA_CSV)
-    docs = []
-    for r in rows:
-        # use actual CSV columns; fall back gracefully if schema differs
-        city = r.get('City') or r.get('city') or r.get('citta') or r.get('city_name') or ''
-        source = r.get('source') or ''
-        parts = [
-            r.get('Transport_Text') or '',
-            r.get('Districts') or '',
-            r.get('Hotels_Extracted') or '',
-            r.get('text') or r.get('paragraph') or r.get('description') or '',
-        ]
-        text = ' '.join(p for p in parts if p).strip()
-        if not text:
-            text = ' '.join(v for v in r.values() if v)
-        for chunk in chunk_text(text):
-            # prefix city name so BM25 and keyword matching benefit from it
-            prefixed = f"[{city}] {chunk}" if city else chunk
-            docs.append({'text': prefixed, 'city': city, 'source': source})
+    if not XML_DIR.exists():
+        raise FileNotFoundError(f'XML directory not found: {XML_DIR}')
 
-    print(f'Prepared {len(docs)} text chunks')
+    xml_files = sorted(XML_DIR.glob('*.xml'))
+    print(f'Loading {len(xml_files)} XML files from {XML_DIR}')
+
+    docs = []
+
+    for xml_file in xml_files:
+        try:
+            tree = etree.parse(str(xml_file))
+            root = tree.getroot()
+        except Exception as e:
+            print(f'  ⚠️  Skipping {xml_file.name}: {e}')
+            continue
+
+        city = (root.findtext('metadata/title') or xml_file.stem).upper()
+
+        def add(text, section):
+            if not text or not text.strip():
+                return
+            for chunk in chunk_text(text.strip()):
+                docs.append({
+                    'text': f'[{city}] {chunk}',
+                    'city': city,
+                    'section': section,
+                    'source': xml_file.name,
+                })
+
+        # Transport
+        add(root.findtext('transport'), 'transport')
+
+        # Hotels
+        hotels = root.xpath('.//accommodation/hotel')
+        if hotels:
+            hotel_parts = [
+                f"{h.findtext('name')} ({h.findtext('price') or 'N/D'})"
+                for h in hotels if h.findtext('name')
+            ]
+            if hotel_parts:
+                add('Hotel e alloggi: ' + '; '.join(hotel_parts), 'hotels')
+
+        # Districts — one chunk per district (long descriptions get split)
+        for district in root.xpath('.//districts/district'):
+            name = district.findtext('name') or ''
+            desc = district.findtext('description') or ''
+            if name:
+                add(f'Quartiere {name}: {desc}', 'districts')
+
+        # Strategic description (Italian summary)
+        add(root.findtext('description'), 'description')
+
+        # Wiki intro (often long — will be chunked)
+        add(root.findtext('wiki_intro'), 'wiki_intro')
+
+        # Attractions
+        attractions = root.xpath('.//highlights/attraction')
+        if attractions:
+            parts = [
+                f"{a.findtext('name')}: {a.findtext('description')}"
+                for a in attractions if a.findtext('name')
+            ]
+            if parts:
+                add('Attrazioni: ' + '; '.join(parts), 'attractions')
+
+    print(f'Prepared {len(docs)} text chunks from {len(xml_files)} cities')
+
     model = SentenceTransformer(model_name)
     texts = [d['text'] for d in docs]
     embeddings = model.encode(texts, show_progress_bar=True, convert_to_numpy=True)
 
-    # normalize embeddings for cosine similarity via inner product
     faiss.normalize_L2(embeddings)
     dim = embeddings.shape[1]
     index = faiss.IndexFlatIP(dim)
     index.add(embeddings)
 
     faiss.write_index(index, str(OUT_DIR / 'index.faiss'))
-    # save docs metadata
     with open(OUT_DIR / 'docs.json', 'w', encoding='utf-8') as f:
         json.dump(docs, f, ensure_ascii=False, indent=2)
 
-    print('Saved index and docs to', OUT_DIR)
+    print(f'Saved index and docs to {OUT_DIR}')
     return len(docs)
 
 

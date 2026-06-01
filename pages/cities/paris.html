@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇫🇷 Parigi</span>
     <a href="prague.html">🇨🇿 Praga →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇫🇷 Parigi
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Parigi">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Paris">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇫🇷 Parigi</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>46.1</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>156.7€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>42.5</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>65</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>0</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>15.3</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>46.1</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:46%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>156.7€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>42.5</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:42%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>65</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:65%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>15.3</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:15%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Dall'aeroporto CDG: RER B fino a Gare du Nord (35 min) o RoissyBus fino a Opéra (75 min). In città: metro (16 linee), bus e RER coprono tutta l'area metropolitana.</p></div>
     
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

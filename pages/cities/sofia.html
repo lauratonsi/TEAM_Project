@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇧🇬 Sofia</span>
     <a href="stockholm.html">🇸🇪 Stoccolma →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇧🇬 Sofia
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Sofia">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Sofia">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇧🇬 Sofia</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>59.1</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>87.88€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>58.4</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>63</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>18</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>52.5</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>59.1</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:59%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>87.88€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>58.4</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:58%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>63</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:63%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>18</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>52.5</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:52%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Sofia Metro Line 4 (Yellow) operates service to the airport between 05:30 and 24:00. The stop is a few metres outside of Terminal 2; follow signs for "Subway" until you leave the southeast corner of the building. The journey to the city centre takes 20–30 minutes.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Peter Pan Hostel</b> <small>(Private €12-14)</small></li><li><b>Levitt Hostel</b> <small>(€10)</small></li><li><b>Crosspoint Sofia Hostel</b> <small>(€9-18)</small></li><li><b>Hostel Mostel</b> <small>(From €9)</small></li><li><b>Nightingale Hostel</b> <small>(€7-12)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

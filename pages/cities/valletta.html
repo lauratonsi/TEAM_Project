@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇲🇹 La Valletta</span>
     <a href="vienna.html">🇦🇹 Vienna →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇲🇹 La Valletta
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="La Valletta">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Valletta">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇲🇹 La Valletta</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>44.8</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>126.54€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>61.2</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>35</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>12</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>31.6</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>44.8</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:45%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>126.54€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>61.2</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:61%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>35</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:35%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>12</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>31.6</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:32%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>By bus In front of the main gate of Valletta is the main bus station for the entire island, and bus lines covering the island in a grid, most of them spread out from here and return to here.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Asti Guesthouse</b> <small>(€20)</small></li><li><b>Grand Harbour Hotel</b> <small>(standard double rooms from €100 (from €80 in low season), including breakfast)</small></li><li><b>British Hotel</b> <small>(rates from about €120)</small></li><li><b>Valletta G-House</b> <small>(€150/night)</small></li><li><b>Valletta Suites</b> <small>(€140 per suite per night)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

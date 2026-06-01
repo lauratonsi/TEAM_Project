@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇸🇪 Stoccolma</span>
     <a href="tallinn.html">🇪🇪 Tallinn →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇸🇪 Stoccolma
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Stoccolma">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Stockholm">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇸🇪 Stoccolma</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>60.9</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>147.63€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>54.2</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>88</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>0</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>20.2</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>60.9</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:61%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>147.63€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>54.2</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:54%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>88</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:88%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>20.2</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:20%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>The most practical option is the airport coaches to the City Terminal in Stockholm (80 min; 199 kr online). A sometimes cheaper option is to take the local bus 515 or 715 to Nyköping's rail station (alight at Nyköping Centralstation), from where SJ regional trains (timetable, direct services run to stations marked in white) on the Norrköping–Nyköping–Stockholm route connect to Stockholm (from 100 kr, cheaper on select days). Tickets can be bought the following two ways: Buy an SL combined ticket from Skavsta to Stockholm, valid on both the local bus and the regional train.</p></div>
     
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

@@ -1,4 +1,30 @@
 {
+  "_sources": {
+    "safety": {
+      "label": "Safety Index",
+      "description": "Indice di sicurezza percepita (0–100, più alto = più sicuro). Valori adattati da Numbeo Safety Index 2024 con rielaborazione AI (Gemini).",
+      "original_source": "Numbeo Safety Index 2024",
+      "url": "https://www.numbeo.com/crime/region_rankings.jsp?title=2024&region=150",
+      "note": "I valori sono approssimati rispetto ai dati ufficiali Numbeo; possono discostarsi di ±5–10 punti."
+    },
+    "cost_of_living": {
+      "label": "Cost of Living Index",
+      "description": "Indice del costo della vita (0–100+). Valori adattati da Numbeo Cost of Living Index 2024 con rielaborazione AI (Gemini).",
+      "original_source": "Numbeo Cost of Living Index 2024",
+      "url": "https://www.numbeo.com/cost-of-living/region_rankings.jsp?title=2024&region=150",
+      "note": "Il riferimento Numbeo usa NYC = 100. I valori qui sono normalizzati sulla scala europea."
+    },
+    "green_score": {
+      "label": "Green Score",
+      "description": "Punteggio di sostenibilità ambientale (0–100). Non corrisponde a un singolo indice pubblicato: è una stima sintetica AI (Gemini) che considera EU Green Capital Award, aree verdi pro capite, emissioni CO2 e politiche di mobilità sostenibile.",
+      "original_source": "Stima sintetica AI (Gemini) — fonti di riferimento: EU Green Capital Award, EEA City Statistics",
+      "url": "https://environment.ec.europa.eu/topics/urban-environment/european-green-capital-award_en",
+      "note": "ATTENZIONE: questi valori non sono validati da una fonte ufficiale. Usare con cautela per scopi accademici."
+    },
+    "generated_by": "Gemini (Google AI)",
+    "validated_against": "Numbeo 2024 (safety, cost_of_living); EU EEA (green_score parzialmente)",
+    "last_updated": "2025"
+  },
   "capitali": [
     {"city": "Amsterdam", "safety": 72.5, "cost_of_living": 85.0, "green_score": 78},
     {"city": "Athens", "safety": 55.2, "cost_of_living": 62.4, "green_score": 45},

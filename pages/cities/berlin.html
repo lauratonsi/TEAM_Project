@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇩🇪 Berlino</span>
     <a href="bratislava.html">🇸🇰 Bratislava →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇩🇪 Berlino
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Berlino">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Berlin">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇩🇪 Berlino</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>62.3</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>137.27€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>60.8</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>82</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>21</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>25.8</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>62.3</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:62%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>137.27€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>60.8</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:61%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>82</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:82%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>21</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>25.8</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:26%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>The area covered in this guide is expansive, but the most popular attractions are almost all near the Zoologischer Garten train station and the Ku'damm, and thus easily within walking distance. If you want to visit the outlying ones, you may want to use Berlin's excellent public transportation system - the U-Bahn, S-Bahn and the bus networks. West Berlin, unlike East Berlin, had its tram network dismantled and you will find no trams here.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Amstel House Berlin</b> <small>(Four-bedded dorms from €12/person/night. Single and twin rooms en-suite also available)</small></li><li><b>Gasteiner Hof</b> <small>(Rooms from €30, breakfast included)</small></li><li><b>Jet Pak City</b> <small>(Double rooms start at €30 per person, sleeping hall starts at €18 per person)</small></li><li><b>Meininger Hotel Berlin Central Station</b> <small>(Double Rooms start at €39 per person, dormitory starts at €21)</small></li><li><b>Three Little Pigs Hostel</b> <small>(€13)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

@@ -1,4 +1,11 @@
 {
+    "_source": {
+        "type": "AI-generated",
+        "generated_by": "Gemini (Google AI)",
+        "language": "it",
+        "description": "Descrizioni strategiche sintetiche delle capitali europee. Redatte con AI (Gemini) a partire da fonti secondarie (Wikipedia, Wikivoyage, rapporti istituzionali). Non sono citate da una singola fonte primaria.",
+        "note": "Testi a scopo didattico — Progetto TEAM, UniBo A.A. 2024/2025."
+    },
     "Amsterdam": "Hub globale dell'innovazione sostenibile, Amsterdam eccelle nella mobilità ciclistica e nella gestione creativa degli spazi acquatici. Unisce un dinamismo economico unico a una rete di sicurezza sociale e urbana di primo livello.",
     "Athens": "La culla della civiltà occidentale sta vivendo una rinascita urbana focalizzata sulla digitalizzazione e sul recupero degli spazi storici. Il mix tra eredità monumentale e nuovi incentivi economici la rende un caso di studio strategico nel Mediterraneo.",
     "Berlin": "Capitale della resilienza e della cultura underground, Berlino offre una vastità di parchi pubblici senza eguali tra le grandi metropoli europee. Il mercato immobiliare e la sicurezza la rendono un magnete per talenti tecnologici e creativi.",

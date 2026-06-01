@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇨🇾 Nicosia</span>
     <a href="oslo.html">🇳🇴 Oslo →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇨🇾 Nicosia
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Nicosia">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Nicosia">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇨🇾 Nicosia</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>50.9</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>113.22€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>67.9</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>40</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>14</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>38.8</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>50.9</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:51%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>113.22€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>67.9</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:68%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>40</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:40%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>14</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>38.8</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:39%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>La Città Vecchia è compatta e facilmente esplorabile a piedi. Per l'area metropolitana è in sviluppo una rete di autobus e taxi privati a prezzi accessibili.</p></div>
     <div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span><ul style='margin:0; padding-left:15px;'><li><b>Averof Hotel</b> <small>(sgl €35, dbl €55)</small></li><li><b>Sky Hotel</b> <small>(rates from €60)</small></li><li><b>Asty Hotel</b> <small>(sgl from €45, dbl from €65)</small></li><li><b>Kipros Accommodation</b> <small>(rates from €44)</small></li><li><b>Delphi Hotel</b> <small>(rates around €50)</small></li></ul></div>
@@ -161,5 +187,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>

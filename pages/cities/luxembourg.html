@@ -21,6 +21,9 @@
     <span class="city-nav-title">🇱🇺 Lussemburgo</span>
     <a href="madrid.html">🇪🇸 Madrid →</a>
 </nav>
+<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
+    <a href="../../index.html">🏠 Home</a> › 🇱🇺 Lussemburgo
+</nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Lussemburgo">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/Luxembourg">
@@ -29,12 +32,35 @@
     <h1 class="city-title" style="margin-bottom:25px;">🇱🇺 Lussemburgo</h1>
     
         <div class='stats-box'>
-            <div class='stat-item'><span class='stat-label'>Appeal</span><span class='stat-val' style='color:var(--accent)'>62.9</span></div>
-            <div class='stat-item'><span class='stat-label'>Budget</span><span class='stat-val'>159.84€</span></div>
-            <div class='stat-item'><span class='stat-label'>Safety</span><span class='stat-val'>73.5</span></div>
-            <div class='stat-item'><span class='stat-label'>Green</span><span class='stat-val' style='color:var(--green-500)'>77</span></div>
-            <div class='stat-item'><span class='stat-label'>Strutture</span><span class='stat-val' style='color:var(--blue-500)'>0</span></div>
-            <div class='stat-item'><span class='stat-label'>Accesso</span><span class='stat-val'>13.6</span></div>
+            <div class='stat-item'>
+                <span class='stat-label'>Appeal</span>
+                <span class='stat-val' style='color:var(--accent)'>62.9</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:63%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Budget</span>
+                <span class='stat-val'>159.84€</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Safety</span>
+                <span class='stat-val'>73.5</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:74%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Green</span>
+                <span class='stat-val' style='color:var(--green-500)'>77</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:77%'></div></div>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Strutture</span>
+                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            </div>
+            <div class='stat-item'>
+                <span class='stat-label'>Accesso</span>
+                <span class='stat-val'>13.6</span>
+                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:14%'></div></div>
+            </div>
         </div>
     <div class='info-block transport-block'><span class='block-title'>🚇 Mobilità Urbana</span><p style='margin:0;'>Il modo migliore per muoversi è attraverso la rete di autobus interurbani e la fitta rete stradale. I treni collegano direttamente il centro con i distretti principali.</p></div>
     
@@ -166,5 +192,15 @@
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
+<button id="back-to-top" title="Torna in cima">↑</button>
+<script>
+const btt = document.getElementById('back-to-top');
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', scrollY > 400);
+    hdr.classList.toggle('scrolled', scrollY > 60);
+});
+btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
 </body>
 </html>
