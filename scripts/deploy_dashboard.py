@@ -469,6 +469,47 @@ def deploy():
     # Mappa inline: pre-calcolata fuori dall'f-string per evitare conflitti {}
     inline_map_js = _map_js_block(city_data, 'map-inline', 'pages/cities/')
 
+    n_attractions = sum(len(c['attractions']) for c in city_data)
+    n_hotels      = sum(len(c['hotels'])      for c in city_data)
+
+    # Il secondo blocco <script> è una stringa NON f-string: usare { e } singoli (non {{ }})
+    js_block = """<script>
+/* back-to-top */
+const btt = document.getElementById('back-to-top');
+window.addEventListener('scroll', function() {
+    btt.classList.toggle('visible', window.scrollY > 400);
+});
+btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+
+/* filter buttons */
+document.querySelectorAll('.filter-btn[data-filter]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn[data-filter]').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var f = btn.dataset.filter;
+        document.querySelectorAll('#city-grid .city-card').forEach(function(card) {
+            var s = parseFloat(card.dataset.safety || 0);
+            var g = parseFloat(card.dataset.green  || 0);
+            var p = parseFloat(card.dataset.price  || 999);
+            var show = true;
+            if (f === 'safety') show = s >= 70;
+            if (f === 'green')  show = g >= 70;
+            if (f === 'budget') show = p <= 120;
+            card.style.display = show ? '' : 'none';
+        });
+    });
+});
+
+/* card entrance animation */
+document.body.classList.add('js-loaded');
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+}, {rootMargin: '0px 0px -50px 0px'});
+document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c); });
+</script>"""
+
     # Template finale HTML
     full_html = f"""<!DOCTYPE html>
 <html lang="it">
@@ -482,139 +523,191 @@ def deploy():
     <title>EuroCity Strategic Intelligence</title>
 </head>
 <body>
-    <header>
-        <h1>EuroCity Strategic Intelligence</h1>
-        <div class="desc-portale">
-            <p>Analisi comparativa delle capitali europee basata su dati estratti algoritmicamente da MediaWiki. <b>Appeal Score:</b> Sicurezza (40%), Ambiente (40%), Accesso (20%).</p>
-            <nav style="margin-top:18px;">
-                <a href="pages/report.html" style="color:#fff; background:var(--accent); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">📊 Report &amp; Documentazione</a>
-                <a href="pages/mappa_attrazioni.html" style="color:#fff; background:rgba(255,255,255,0.18); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">🗺️ Mappa Fullscreen</a>
-            </nav>
-        </div>
-    </header>
-    <section class="chat-section">
-        <strong style="display:block; margin-bottom:10px; color:var(--accent)">🤖 Virtual Analyst</strong>
-        <div style="display:flex; gap:10px;">
-            <input type="text" id="chat-input" style="flex:1; padding:12px; border:1px solid #ddd; border-radius:8px;" placeholder="Chiedi dettagli su una città...">
-            <button id="chat-btn" style="background:var(--accent); color:white; border:none; padding:10px 25px; border-radius:8px; font-weight:800; cursor:pointer;">ASK</button>
-        </div>
-        <div id="chat-output" style="margin-top:15px; padding:10px; font-size:0.9rem; color:var(--slate-500); border-left:3px solid var(--accent)">Sistema pronto. Caricamento dati V16 completato.</div>
-    </section>
-    <div id="map-inline"></div>
 
-    <section style="max-width:860px; margin:0 auto 32px; padding:0 20px;">
-      <div style="background:#fff; border-radius:16px; border:1px solid var(--slate-200);
-                  padding:22px 28px; box-shadow:0 2px 12px rgba(0,0,0,0.05);">
-        <p style="font-size:0.82rem; font-weight:800; text-transform:uppercase;
-                  letter-spacing:1.2px; color:var(--accent); margin:0 0 10px;">
-          🔍 Come funziona il Virtual Analyst</p>
-        <p style="font-size:0.9rem; color:var(--slate-500); margin:0 0 14px; line-height:1.65;">
-          Il <b>Virtual Analyst</b> è un sistema <b>RAG</b> (Retrieval-Augmented Generation)
-          costruito sui <b>320 chunk testuali</b> estratti dai 30 file XML validati del dataset.
-          Ogni query passa attraverso una ricerca ibrida <b>BM25 + vettoriale</b> (FAISS +
-          <code>all-MiniLM-L6-v2</code>) con <b>Reciprocal Rank Fusion</b>, poi rileva
-          l'intento (trasporti / hotel / attrazioni / sicurezza) e seleziona i chunk più
-          rilevanti per sezione. Risponde in tempo reale senza LLM esterno.
-        </p>
-        <p style="font-size:0.82rem; font-weight:700; color:var(--slate-800); margin:0 0 8px;">
-          Esempi di domande:</p>
-        <div style="display:flex; flex-wrap:wrap; gap:8px;">
-          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
-            data-q="trasporti Roma" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🚇 trasporti Roma</button>
-          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
-            data-q="hotel Amsterdam" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🏨 hotel Amsterdam</button>
-          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
-            data-q="cosa vedere a Parigi" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🗺️ cosa vedere a Parigi</button>
-          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
-            data-q="sicurezza Berlino" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🛡️ sicurezza Berlino</button>
-          <button onclick="document.getElementById('chat-input').value=this.dataset.q; document.getElementById('chat-btn').click()"
-            data-q="quartieri di Praga" class="filter-btn" style="font-size:0.78rem; padding:5px 13px;">🏘️ quartieri di Praga</button>
-        </div>
-        <p style="font-size:0.75rem; color:var(--slate-500); margin:12px 0 0; border-top:1px solid var(--slate-100); padding-top:10px;">
-          ⚠️ <b>Limiti:</b> conosce solo le 30 capitali nel dataset; non ha informazioni
-          su eventi recenti; alcune città mancano di dati hotel (Budapest, Londra, Parigi…)
-          perché assenti nelle sorgenti Wikivoyage analizzate.
-        </p>
-      </div>
-    </section>
-
-    <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">🌍 Tutte</button>
-        <button class="filter-btn" data-filter="safety">🛡️ Top Safety ≥ 70</button>
-        <button class="filter-btn" data-filter="green">🌱 Top Green ≥ 70</button>
-        <button class="filter-btn" data-filter="budget">💰 Budget ≤ 120€</button>
+<!-- ═══ TOPBAR STICKY ══════════════════════════════════════════════════ -->
+<header class="topbar">
+    <div class="topbar-inner">
+        <span class="topbar-logo">EuroCity <b>SI</b></span>
+        <nav class="topbar-nav">
+            <a href="#" class="active">🏠 Home</a>
+            <a href="pages/report.html">📊 Report</a>
+            <a href="pages/mappa_attrazioni.html">🗺️ Mappa</a>
+        </nav>
     </div>
-    <main class="container" id="city-grid">{cards_html}</main>
-    <button id="back-to-top" title="Torna in cima">↑</button>
-    <script>
-        const cityData = {json.dumps(city_data)};
-        document.getElementById('chat-btn').onclick = function() {{
-            const q = document.getElementById('chat-input').value.toLowerCase();
-            const out = document.getElementById('chat-output');
-            let res = "Città non trovata nel database.";
+</header>
 
-            cityData.forEach(c => {{
-                if (q.includes(c.name_it.toLowerCase()) || q.includes(c.name_en.toLowerCase())) {{
-                    if (q.includes("hotel") || q.includes("quanti")) {{
-                        res = `<b>${{c.name_it}}</b>: Abbiamo analizzato ${{c.hotel_count}} strutture. Le principali selection includono: ${{c.hotels.map(h => h.n).join(", ")}}.`;
-                    }} else if (q.includes("trasport") || q.includes("muoversi")) {{
-                        res = `<b>${{c.name_it}}</b> (Mobilità): ${{c.transport}}`;
-                    }} else if (q.includes("distrett") || q.includes("quartier")) {{
-                        const dn = c.districts.map(d => d.n).join(", ");
-                        res = `<b>${{c.name_it}}</b> (Distretti): ${{dn || "Nessun distretto estratto."}}`;
-                    }} else {{
-                        res = `<b>${{c.name_it}}</b>: ${{c.story_it}}`;
-                    }}
-                }}
-            }});
-            out.innerHTML = res;
-        }};
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
-"""  + inline_map_js + """
-    <script>
-    /* --- sticky header + back-to-top --- */
-    const btt = document.getElementById('back-to-top');
-    const hdr = document.querySelector('header');
-    window.addEventListener('scroll', () => {{
-        btt.classList.toggle('visible', scrollY > 400);
-        hdr.classList.toggle('scrolled', scrollY > 60);
-    }});
-    btt.onclick = () => window.scrollTo({{top: 0, behavior: 'smooth'}});
+<!-- ═══ HERO ════════════════════════════════════════════════════════════ -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">30 capitali europee,<br>un'unica intelligence.</h1>
+        <p class="hero-sub">
+            EuroCity raccoglie, struttura e analizza dati su sicurezza, sostenibilità
+            e accessibilità delle capitali UE — estratti algoritmicamente da Wikivoyage
+            e arricchiti con indici internazionali. Ogni città ha la sua scheda XML,
+            validata DTD, e una pagina navigabile con mappa interattiva.
+        </p>
+        <div class="hero-stats">
+            <div class="hero-stat"><span class="hs-num">{len(city_data)}</span><span class="hs-lbl">capitali</span></div>
+            <div class="hero-stat"><span class="hs-num">{n_attractions}</span><span class="hs-lbl">attrazioni</span></div>
+            <div class="hero-stat"><span class="hs-num">{n_hotels}</span><span class="hs-lbl">strutture</span></div>
+            <div class="hero-stat"><span class="hs-num">30</span><span class="hs-lbl">file XML</span></div>
+        </div>
+    </div>
+</section>
 
-    /* --- filter buttons --- */
-    document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {{
-        btn.addEventListener('click', () => {{
-            document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const f = btn.dataset.filter;
-            document.querySelectorAll('#city-grid .city-card').forEach(card => {{
-                const s = parseFloat(card.dataset.safety || 0);
-                const g = parseFloat(card.dataset.green  || 0);
-                const p = parseFloat(card.dataset.price  || 999);
-                let show = true;
-                if (f === 'safety') show = s >= 70;
-                if (f === 'green')  show = g >= 70;
-                if (f === 'budget') show = p <= 120;
-                card.style.display = show ? '' : 'none';
-            }});
-        }});
-    }});
+<!-- ═══ VIRTUAL ANALYST (chat + RAG unificati) ══════════════════════ -->
+<section class="analyst-panel">
+    <div class="analyst-header">
+        <div class="analyst-icon">🤖</div>
+        <div>
+            <p class="analyst-title">Virtual Analyst</p>
+            <p class="analyst-sub">Sistema RAG · BM25 + FAISS · 320 chunk XML</p>
+        </div>
+    </div>
+    <div class="analyst-input-row">
+        <input type="text" id="chat-input" class="analyst-input"
+               placeholder="Es: sicurezza a Vienna, hotel Amsterdam, trasporti Roma…">
+        <button id="chat-btn" class="analyst-btn">Chiedi</button>
+    </div>
+    <div id="chat-output" class="analyst-output">
+        Sistema pronto — digita una domanda o clicca un esempio.
+    </div>
+    <div class="analyst-chips">
+        <button class="chip" data-q="trasporti Roma">🚇 trasporti Roma</button>
+        <button class="chip" data-q="hotel Amsterdam">🏨 hotel Amsterdam</button>
+        <button class="chip" data-q="cosa vedere a Parigi">🗺️ vedere Parigi</button>
+        <button class="chip" data-q="sicurezza Berlino">🛡️ sicurezza Berlino</button>
+        <button class="chip" data-q="quartieri di Praga">🏘️ quartieri Praga</button>
+        <button class="chip" data-q="città più verde">🌱 città più verde</button>
+        <button class="chip" data-q="confronta Roma e Parigi">⚖️ Roma vs Parigi</button>
+    </div>
+    <details class="analyst-details">
+        <summary>Come funziona? — architettura RAG</summary>
+        <p>
+            Il Virtual Analyst è un sistema <b>RAG</b> (Retrieval-Augmented Generation)
+            costruito sui <b>320 chunk testuali</b> estratti dai 30 file XML validati.
+            Ogni query usa ricerca ibrida <b>BM25 + vettoriale</b> (FAISS + <code>all-MiniLM-L6-v2</code>)
+            con <b>Reciprocal Rank Fusion</b>, rileva l'intento (hotel / trasporti / attrazioni / sicurezza)
+            e risponde in tempo reale senza LLM esterno.
+        </p>
+        <p style="font-size:0.8rem; color:var(--slate-500); margin:8px 0 0;">
+            ⚠️ Conosce solo le 30 capitali del dataset; alcune mancano di dati hotel perché
+            assenti nelle sorgenti Wikivoyage.
+        </p>
+    </details>
+</section>
 
-    /* --- card entrance animation --- */
-    document.body.classList.add('js-loaded');
-    const observer = new IntersectionObserver(entries => {{
-        entries.forEach(e => {{ if (e.isIntersecting) {{ e.target.classList.add('visible'); observer.unobserve(e.target); }} }});
-    }}, {{rootMargin: '0px 0px -50px 0px'}});
-    document.querySelectorAll('.city-card').forEach(c => observer.observe(c));
-    </script>
-<footer style="text-align:center; padding:40px 20px; color:var(--slate-500); font-size:0.82rem; border-top:1px solid var(--slate-200); margin-top:20px;">
-    Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
-    Università di Bologna — A.A. 2024/2025 ·
-    <a href="pages/report.html" style="color:var(--accent); text-decoration:none; font-weight:700;">Report &amp; Documentazione</a>
+<!-- ═══ MAPPA INLINE ════════════════════════════════════════════════════ -->
+<div id="map-inline"></div>
+
+<!-- ═══ FILTRI + GRIGLIA ════════════════════════════════════════════════ -->
+<div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">🌍 Tutte le capitali</button>
+    <button class="filter-btn" data-filter="safety">🛡️ Sicurezza ≥ 70</button>
+    <button class="filter-btn" data-filter="green">🌱 Verde ≥ 70</button>
+    <button class="filter-btn" data-filter="budget">💰 Budget ≤ 120€/notte</button>
+</div>
+<main class="container" id="city-grid">{cards_html}</main>
+
+<button id="back-to-top" title="Torna in cima">↑</button>
+
+<footer class="site-footer">
+    Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale ·
+    Università di Bologna A.A. 2024/2025
+    <br>
+    <a href="pages/report.html">📊 Report &amp; Documentazione</a>
 </footer>
-</body></html>"""
+
+<script>
+const cityData = {json.dumps(city_data)};
+
+/* chat query — tenta il server RAG locale, poi fallback client-side */
+const RAG_API = 'http://127.0.0.1:8000';
+
+async function runQuery() {{
+    const q = document.getElementById('chat-input').value.trim();
+    const out = document.getElementById('chat-output');
+    if (!q) return;
+    out.innerHTML = '<span style="color:#64748b;font-size:.9rem">⏳ Cerco...</span>';
+    try {{
+        const ctrl = new AbortController();
+        const tid = setTimeout(() => ctrl.abort(), 5000);
+        const resp = await fetch(
+            RAG_API + '/query?q=' + encodeURIComponent(q) + '&simulated_rag=true&k=5',
+            {{signal: ctrl.signal}}
+        );
+        clearTimeout(tid);
+        if (resp.ok) {{
+            const data = await resp.json();
+            let html = '<p style="margin:0">' + (data.answer || '') + '</p>';
+            if (data.sources && data.sources.length) {{
+                html += '<details style="margin-top:8px"><summary style="cursor:pointer;color:#64748b;font-size:.82rem">📚 Fonti (' + data.sources.length + ')</summary>' +
+                    '<ul style="margin:4px 0;padding-left:18px;font-size:.82rem;color:#64748b">' +
+                    data.sources.slice(0,3).map(s => '<li>[' + s.city + '] <em>' + s.section + '</em></li>').join('') +
+                    '</ul></details>';
+            }}
+            out.innerHTML = html;
+            return;
+        }}
+    }} catch(e) {{ /* server non disponibile — usa fallback client-side */ }}
+    clientSideAnswer(q.toLowerCase());
+}}
+
+function clientSideAnswer(q) {{
+    const out = document.getElementById('chat-output');
+    let res = "❓ Città non trovata. Prova: <em>sicurezza Vienna</em>, <em>hotel Roma</em>, <em>confronta Oslo e Berlino</em>.";
+    cityData.forEach(function(c) {{
+        if (q.includes(c.name_it.toLowerCase()) || q.includes((c.name_en || '').toLowerCase())) {{
+            if (/hotel|alloggio|dorm|ostello/.test(q)) {{
+                var li = c.hotels.map(h => '<li><b>' + h.n + '</b> <span style="color:#64748b">(' + h.p + ')</span></li>').join('');
+                res = '<b>🏨 Strutture — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + (li || '<li>Nessun dato nel dataset</li>') + '</ul>';
+            }} else if (/trasport|muoversi|aeroporto|arriv/.test(q)) {{
+                res = '<b>🚇 Mobilità — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + c.transport + '</p>';
+            }} else if (/distrett|quartier|zona/.test(q)) {{
+                var dn = c.districts.map(d => d.n).join(', ');
+                res = '<b>🏘️ Distretti — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + (dn || 'Nessun distretto disponibile.') + '</p>';
+            }} else if (/attrazione|visitare|vedere|turismo|museo/.test(q)) {{
+                var al = c.attractions.slice(0,5).map(a => '<li><b>' + a.n + '</b> — <span style="color:#64748b;font-size:.88em">' + a.d + '</span></li>').join('');
+                res = '<b>📍 Attrazioni — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + al + '</ul>';
+            }} else if (/sicur|safety|pericol/.test(q)) {{
+                res = '<b>🛡️ ' + c.flag + ' ' + c.name_it + '</b> — Safety Index: <b>' + c.safety + '</b> · Appeal: <b>' + c.appeal + '</b><p style="color:#64748b;margin:4px 0;font-size:.9em">' + c.story_it + '</p>';
+            }} else {{
+                res = '<b>' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + c.story_it + '</p>';
+            }}
+        }}
+    }});
+    /* query globali senza nome città */
+    if (res.startsWith('❓')) {{
+        if (/sicur|safe/.test(q)) {{
+            var top = cityData.slice().sort((a,b) => b.safety-a.safety).slice(0,5);
+            res = '<b>🛡️ Top 5 Sicurezza</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.safety + '</li>').join('') + '</ol>';
+        }} else if (/verde|green|ecolog/.test(q)) {{
+            var top = cityData.slice().sort((a,b) => b.green-a.green).slice(0,5);
+            res = '<b>🌱 Top 5 Verde</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.green + '</li>').join('') + '</ol>';
+        }} else if (/econom|cheap|economica|basso/.test(q)) {{
+            var top = cityData.slice().sort((a,b) => a.price-b.price).slice(0,5);
+            res = '<b>💰 Top 5 Economiche</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + Math.round(c.price) + '€/notte</li>').join('') + '</ol>';
+        }} else if (/appeal|miglior|top|ranking/.test(q)) {{
+            var top = cityData.slice().sort((a,b) => b.appeal-a.appeal).slice(0,5);
+            res = '<b>⭐ Top 5 Appeal</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.appeal + '</li>').join('') + '</ol>';
+        }} else if (/confronta|vs/.test(q)) {{
+            res = 'Per confrontare due città digita: <em>"confronta Roma e Parigi"</em> o <em>"Roma vs Berlino"</em>.';
+        }}
+    }}
+    out.innerHTML = res;
+}}
+document.getElementById('chat-btn').onclick = runQuery;
+document.getElementById('chat-input').addEventListener('keydown', function(e) {{ if (e.key === 'Enter') runQuery(); }});
+document.querySelectorAll('.chip').forEach(function(chip) {{
+    chip.onclick = function() {{
+        document.getElementById('chat-input').value = chip.dataset.q;
+        runQuery();
+    }};
+}});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+""" + inline_map_js + "\n" + js_block + "\n</body></html>"
 
     with open(OUTPUT_HTML, 'w', encoding='utf-8') as f:
         f.write(full_html)
@@ -730,25 +823,29 @@ def generate_city_pages(city_data):
             {'<div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;">' + city['wiki_intro'] + '</p></div>' if city['wiki_intro'] else ''}
         </div>"""
 
-        # --- Attractions with microdata ---
-        attr_items = ""
-        for a in city['attractions']:
-            attr_items += f"""
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>{a['n']}</span>
-                <meta itemprop='description' content='{a['d'].replace("'", "&apos;")}'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='{a['lat']}'>
-                    <meta itemprop='longitude' content='{a['lon']}'>
-                </div>
-                <p class='attr-desc'>{a['d']}</p>
-                <a href='https://www.google.com/maps?q={a['lat']},{a['lon']}' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>"""
-        attractions_html = f"""
-        <div class='attractions'>
-            <span class='block-title'>Strategic Sights &amp; Coordinates</span>
-            <ul style='padding:0; margin:0;'>{attr_items}</ul>
-        </div>"""
+        # --- Attractions with microdata (tabular layout) ---
+        attr_rows = ""
+        for idx, a in enumerate(city['attractions'], 1):
+            attr_rows += (
+                f"<tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>"
+                f"<td class='atn'>{idx}</td>"
+                f"<td class='atn-name'><span itemprop='name'>{a['n']}</span>"
+                f"<div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>"
+                f"<meta itemprop='latitude' content='{a['lat']}'>"
+                f"<meta itemprop='longitude' content='{a['lon']}'></div></td>"
+                f"<td class='atn-desc'><span itemprop='description'>{a['d']}</span></td>"
+                f"<td class='atn-map'>"
+                f"<a href='https://www.google.com/maps?q={a['lat']},{a['lon']}' target='_blank' class='maps-link'>📍</a>"
+                f"</td></tr>"
+            )
+        attractions_html = (
+            "<div class='attractions'>"
+            "<span class='block-title'>Strategic Sights &amp; Coordinates</span>"
+            "<table class='attr-table'>"
+            "<thead><tr><th>#</th><th>Attrazione</th><th>Descrizione</th><th></th></tr></thead>"
+            f"<tbody>{attr_rows}</tbody>"
+            "</table></div>"
+        )
 
         page_html = f"""<!DOCTYPE html>
 <html lang="it">
@@ -759,12 +856,13 @@ def generate_city_pages(city_data):
     <title>{city['name_it']} — EuroCity Strategic Intelligence</title>
 </head>
 <body>
-<header>
-    <h1>EuroCity Strategic Intelligence</h1>
-    <div class="desc-portale">
-        <nav style="margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-            <a href="../../index.html" style="color:#fff; background:rgba(255,255,255,0.2); padding:8px 18px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">← Indice</a>
-            <a href="../../pages/report.html" style="color:#fff; background:var(--accent); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">📊 Report</a>
+<header class="topbar">
+    <div class="topbar-inner">
+        <a href="../../index.html" class="topbar-logo">EuroCity <b>SI</b></a>
+        <nav class="topbar-nav">
+            <a href="../../index.html">🏠 Home</a>
+            <a href="../../pages/report.html">📊 Report</a>
+            <a href="../../pages/mappa_attrazioni.html">🗺️ Mappa</a>
         </nav>
     </div>
 </header>
@@ -772,9 +870,6 @@ def generate_city_pages(city_data):
     <a href="{prev_city['city_lower']}.html">← {prev_city['flag']} {prev_city['name_it']}</a>
     <span class="city-nav-title">{city['flag']} {city['name_it']}</span>
     <a href="{next_city['city_lower']}.html">{next_city['flag']} {next_city['name_it']} →</a>
-</nav>
-<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
-    <a href="../../index.html">🏠 Home</a> › {city['flag']} {city['name_it']}
 </nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="{city['name_it']}">
@@ -799,13 +894,11 @@ def generate_city_pages(city_data):
 </footer>
 <button id="back-to-top" title="Torna in cima">↑</button>
 <script>
-const btt = document.getElementById('back-to-top');
-const hdr = document.querySelector('header');
-window.addEventListener('scroll', () => {{
-    btt.classList.toggle('visible', scrollY > 400);
-    hdr.classList.toggle('scrolled', scrollY > 60);
+var btt = document.getElementById('back-to-top');
+window.addEventListener('scroll', function() {{
+    btt.classList.toggle('visible', window.scrollY > 400);
 }});
-btt.onclick = () => window.scrollTo({{top: 0, behavior: 'smooth'}});
+btt.onclick = function() {{ window.scrollTo({{top: 0, behavior: 'smooth'}}); }};
 </script>
 </body>
 </html>"""
@@ -995,15 +1088,23 @@ def generate_report(city_data):
   </style>
 </head>
 <body>
-<header>
-  <h1>EuroCity — Report &amp; Documentazione</h1>
-  <div class="desc-portale">
-    <p>Statistiche estratte algoritmicamente dai file XML. Documentazione della pipeline TEAM.</p>
-    <nav style="margin-top:18px;">
-      <a href="../index.html" style="color:#fff; background:rgba(255,255,255,0.15); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem; border:1px solid rgba(255,255,255,0.3);">← Torna alla Dashboard</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="../index.html" class="topbar-logo">EuroCity <b>SI</b></a>
+    <nav class="topbar-nav">
+      <a href="../index.html">🏠 Home</a>
+      <a href="report.html" class="active">📊 Report</a>
+      <a href="mappa_attrazioni.html">🗺️ Mappa</a>
     </nav>
   </div>
 </header>
+<div style="background:linear-gradient(135deg,#0F172A 0%,#1a2e4a 60%,#1e3a58 100%);
+            color:white; padding:40px 24px 50px; text-align:center; border-bottom:4px solid var(--accent);">
+  <h1 style="font-size:clamp(1.5rem,3vw,2.4rem);font-weight:800;margin:0 0 8px;letter-spacing:-0.03em;">
+    Report &amp; Documentazione</h1>
+  <p style="opacity:0.7;font-size:1rem;margin:0;">
+    Statistiche estratte algoritmicamente · Pipeline TEAM · UniBo A.A. 2024/2025</p>
+</div>
 
 <nav class="report-nav">
   <a href="#statistiche">📊 Statistiche</a>

@@ -7,12 +7,13 @@
     <title>Roma — EuroCity Strategic Intelligence</title>
 </head>
 <body>
-<header>
-    <h1>EuroCity Strategic Intelligence</h1>
-    <div class="desc-portale">
-        <nav style="margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-            <a href="../../index.html" style="color:#fff; background:rgba(255,255,255,0.2); padding:8px 18px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">← Indice</a>
-            <a href="../../pages/report.html" style="color:#fff; background:var(--accent); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">📊 Report</a>
+<header class="topbar">
+    <div class="topbar-inner">
+        <a href="../../index.html" class="topbar-logo">EuroCity <b>SI</b></a>
+        <nav class="topbar-nav">
+            <a href="../../index.html">🏠 Home</a>
+            <a href="../../pages/report.html">📊 Report</a>
+            <a href="../../pages/mappa_attrazioni.html">🗺️ Mappa</a>
         </nav>
     </div>
 </header>
@@ -20,9 +21,6 @@
     <a href="riga.html">← 🇱🇻 Riga</a>
     <span class="city-nav-title">🇮🇹 Roma</span>
     <a href="sofia.html">🇧🇬 Sofia →</a>
-</nav>
-<nav class="breadcrumb" style="max-width:900px; margin:12px auto 0; padding:0 20px;">
-    <a href="../../index.html">🏠 Home</a> › 🇮🇹 Roma
 </nav>
 <main class="city-detail" itemscope itemtype="https://schema.org/City">
     <meta itemprop="name" content="Roma">
@@ -92,111 +90,7 @@
 *  * Rent a boat and take a row on the lake in the Borghese Gardens.
 * The streets to the west of the Spanish Steps, such as Via dei Condotti, house...</p></div>
         </div>
-    
-        <div class='attractions'>
-            <span class='block-title'>Strategic Sights &amp; Coordinates</span>
-            <ul style='padding:0; margin:0;'>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>Colosseum</span>
-                <meta itemprop='description' content='The largest ancient amphitheatre ever built.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.8902'>
-                    <meta itemprop='longitude' content='12.4922'>
-                </div>
-                <p class='attr-desc'>The largest ancient amphitheatre ever built.</p>
-                <a href='https://www.google.com/maps?q=41.8902,12.4922' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>Pantheon</span>
-                <meta itemprop='description' content='Ancient Roman temple with a massive dome.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.8986'>
-                    <meta itemprop='longitude' content='12.4769'>
-                </div>
-                <p class='attr-desc'>Ancient Roman temple with a massive dome.</p>
-                <a href='https://www.google.com/maps?q=41.8986,12.4769' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>Trevi Fountain</span>
-                <meta itemprop='description' content='Iconic Baronque fountain where tourists throw coins.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.9009'>
-                    <meta itemprop='longitude' content='12.4833'>
-                </div>
-                <p class='attr-desc'>Iconic Baronque fountain where tourists throw coins.</p>
-                <a href='https://www.google.com/maps?q=41.9009,12.4833' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>Roman Forum</span>
-                <meta itemprop='description' content='Ruins of the heart of ancient Roman public life.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.8925'>
-                    <meta itemprop='longitude' content='12.4853'>
-                </div>
-                <p class='attr-desc'>Ruins of the heart of ancient Roman public life.</p>
-                <a href='https://www.google.com/maps?q=41.8925,12.4853' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>Vatican Museums</span>
-                <meta itemprop='description' content='Art museums including the Sistine Chapel.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.9065'>
-                    <meta itemprop='longitude' content='12.4548'>
-                </div>
-                <p class='attr-desc'>Art museums including the Sistine Chapel.</p>
-                <a href='https://www.google.com/maps?q=41.9065,12.4548' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>St. Peter's Basilica</span>
-                <meta itemprop='description' content='Major Renaissance church in Vatican City.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.9022'>
-                    <meta itemprop='longitude' content='12.4539'>
-                </div>
-                <p class='attr-desc'>Major Renaissance church in Vatican City.</p>
-                <a href='https://www.google.com/maps?q=41.9022,12.4539' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>Piazza Navona</span>
-                <meta itemprop='description' content='Square built on an ancient stadium with Bernini fountains.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.8992'>
-                    <meta itemprop='longitude' content='12.4731'>
-                </div>
-                <p class='attr-desc'>Square built on an ancient stadium with Bernini fountains.</p>
-                <a href='https://www.google.com/maps?q=41.8992,12.4731' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>Spanish Steps</span>
-                <meta itemprop='description' content='Famous monumental stairway of 135 steps.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.9059'>
-                    <meta itemprop='longitude' content='12.4828'>
-                </div>
-                <p class='attr-desc'>Famous monumental stairway of 135 steps.</p>
-                <a href='https://www.google.com/maps?q=41.9059,12.4828' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>Castel Sant'Angelo</span>
-                <meta itemprop='description' content='Hadrian&apos;s mausoleum converted into a papal fortress.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.9031'>
-                    <meta itemprop='longitude' content='12.4663'>
-                </div>
-                <p class='attr-desc'>Hadrian's mausoleum converted into a papal fortress.</p>
-                <a href='https://www.google.com/maps?q=41.9031,12.4663' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li>
-            <li class='attr-item' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>
-                <span class='attr-name' itemprop='name'>Borghese Gallery</span>
-                <meta itemprop='description' content='Museum in a villa housing Bernini and Caravaggio.'>
-                <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>
-                    <meta itemprop='latitude' content='41.9142'>
-                    <meta itemprop='longitude' content='12.4921'>
-                </div>
-                <p class='attr-desc'>Museum in a villa housing Bernini and Caravaggio.</p>
-                <a href='https://www.google.com/maps?q=41.9142,12.4921' target='_blank' class='maps-link'>📍 MAPS</a>
-            </li></ul>
-        </div>
+    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attrazione</th><th>Descrizione</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Colosseum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.8902'><meta itemprop='longitude' content='12.4922'></div></td><td class='atn-desc'><span itemprop='description'>The largest ancient amphitheatre ever built.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.8902,12.4922' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Pantheon</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.8986'><meta itemprop='longitude' content='12.4769'></div></td><td class='atn-desc'><span itemprop='description'>Ancient Roman temple with a massive dome.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.8986,12.4769' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Trevi Fountain</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.9009'><meta itemprop='longitude' content='12.4833'></div></td><td class='atn-desc'><span itemprop='description'>Iconic Baronque fountain where tourists throw coins.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.9009,12.4833' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Roman Forum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.8925'><meta itemprop='longitude' content='12.4853'></div></td><td class='atn-desc'><span itemprop='description'>Ruins of the heart of ancient Roman public life.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.8925,12.4853' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Vatican Museums</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.9065'><meta itemprop='longitude' content='12.4548'></div></td><td class='atn-desc'><span itemprop='description'>Art museums including the Sistine Chapel.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.9065,12.4548' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>St. Peter's Basilica</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.9022'><meta itemprop='longitude' content='12.4539'></div></td><td class='atn-desc'><span itemprop='description'>Major Renaissance church in Vatican City.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.9022,12.4539' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Piazza Navona</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.8992'><meta itemprop='longitude' content='12.4731'></div></td><td class='atn-desc'><span itemprop='description'>Square built on an ancient stadium with Bernini fountains.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.8992,12.4731' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Spanish Steps</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.9059'><meta itemprop='longitude' content='12.4828'></div></td><td class='atn-desc'><span itemprop='description'>Famous monumental stairway of 135 steps.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.9059,12.4828' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Castel Sant'Angelo</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.9031'><meta itemprop='longitude' content='12.4663'></div></td><td class='atn-desc'><span itemprop='description'>Hadrian's mausoleum converted into a papal fortress.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.9031,12.4663' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Borghese Gallery</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='41.9142'><meta itemprop='longitude' content='12.4921'></div></td><td class='atn-desc'><span itemprop='description'>Museum in a villa housing Bernini and Caravaggio.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=41.9142,12.4921' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
     <div class="download-block">
         <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Sorgente dati strutturato (XML valido secondo <code>city_report.dtd</code>):</p>
         <a href="../../data/xml_dataset/rome.xml" download class="download-link">📥 Scarica file XML sorgente</a>
@@ -208,13 +102,11 @@
 </footer>
 <button id="back-to-top" title="Torna in cima">↑</button>
 <script>
-const btt = document.getElementById('back-to-top');
-const hdr = document.querySelector('header');
-window.addEventListener('scroll', () => {
-    btt.classList.toggle('visible', scrollY > 400);
-    hdr.classList.toggle('scrolled', scrollY > 60);
+var btt = document.getElementById('back-to-top');
+window.addEventListener('scroll', function() {
+    btt.classList.toggle('visible', window.scrollY > 400);
 });
-btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
 </script>
 </body>
 </html>

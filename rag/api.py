@@ -1,4 +1,5 @@
 import os
+import httpx
 import uvicorn
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,6 +13,9 @@ from . import ingest, vectorstore
 app = FastAPI(title='Minimal RAG Service')
 
 load_dotenv()
+
+OLLAMA_URL = os.getenv('OLLAMA_URL', 'http://localhost:11434')
+OLLAMA_MODEL = os.getenv('OLLAMA_MODEL', 'llama3.2')
 
 app.add_middleware(
     CORSMiddleware,
@@ -37,7 +41,6 @@ CITY_ALIASES = {
     'paris': 'PARIS',
     'bruxelles': 'BRUSSELS',
     'brussels': 'BRUSSELS',
-    'castel': 'PRAGUE',
     'praga': 'PRAGUE',
     'prague': 'PRAGUE',
     'copenaghen': 'COPENHAGEN',
@@ -48,7 +51,6 @@ CITY_ALIASES = {
     'luxembourg': 'LUXEMBOURG',
     'zagabria': 'ZAGREB',
     'zagreb': 'ZAGREB',
-    'nijmegen': 'AMSTERDAM',
     'amsterdam': 'AMSTERDAM',
     'vienna': 'VIENNA',
     'budapest': 'BUDAPEST',
@@ -56,13 +58,30 @@ CITY_ALIASES = {
     'oslo': 'OSLO',
     'tallinn': 'TALLINN',
     'talinn': 'TALLINN',
-    'porto': 'OOSTENDA',
     'lisbona': 'LISBON',
     'lisbon': 'LISBON',
     'nicosia': 'NICOSIA',
     'vilnius': 'VILNIUS',
     'reykjavik': 'REYKJAVIK',
     'bratislava': 'BRATISLAVA',
+    # Previously missing capitals
+    'atene': 'ATHENS',
+    'athens': 'ATHENS',
+    'berlino': 'BERLIN',
+    'berlin': 'BERLIN',
+    'bucarest': 'BUCHAREST',
+    'bucharest': 'BUCHAREST',
+    'helsinki': 'HELSINKI',
+    'lubiana': 'LJUBLJANA',
+    'ljubljana': 'LJUBLJANA',
+    'madrid': 'MADRID',
+    'riga': 'RIGA',
+    'stoccolma': 'STOCKHOLM',
+    'stockholm': 'STOCKHOLM',
+    'valletta': 'VALLETTA',
+    'la valletta': 'VALLETTA',
+    'varsavia': 'WARSAW',
+    'warsaw': 'WARSAW',
 }
 
 CITY_LOOKUP = {k.lower(): v for k, v in CITY_ALIASES.items()}
@@ -73,10 +92,13 @@ CITY_PATTERN = re.compile(
 
 # Intent keyword sets
 _INTENT_KEYWORDS = {
-    'transport': {'aeroporto', 'aeroporti', 'bus', 'tram', 'metro', 'treno', 'taxi', 'trasporto', 'trasporti', 'transport'},
-    'hotel': {'hotel', 'hostel', 'alloggio', 'albergo', 'b&b', 'ostello', 'accommodation'},
-    'attractions': {'museo', 'musei', 'monumento', 'monumenti', 'piazza', 'attrazioni', 'vedere', 'visitare', 'colosseo', 'vaticano', 'chiesa', 'palazzo'},
-    'safety': {'sicurezza', 'sicuro', 'pericolo', 'criminalità', 'quartiere'},
+    'transport': {'aeroporto', 'aeroporti', 'bus', 'tram', 'metro', 'treno', 'taxi', 'trasporto', 'trasporti',
+                  'transport', 'gira', 'girare', 'muoversi', 'spostarsi', 'mobilità', 'raggiungere', 'arrivare',
+                  'arrivo', 'partenza', 'stazione', 'fermata', 'volo', 'volare'},
+    'hotel': {'hotel', 'hostel', 'alloggio', 'albergo', 'b&b', 'ostello', 'accommodation', 'dormire', 'pernottare'},
+    'attractions': {'museo', 'musei', 'monumento', 'monumenti', 'piazza', 'attrazioni', 'vedere', 'visitare',
+                    'colosseo', 'vaticano', 'chiesa', 'palazzo', 'parco', 'tour', 'turismo', 'fare', 'cosa'},
+    'safety': {'sicurezza', 'sicuro', 'pericolo', 'criminalità', 'pericoloso', 'rischio', 'rischioso'},
 }
 
 
@@ -93,35 +115,106 @@ def detect_intent(query: str) -> str:
     return best if scores[best] > 0 else 'general'
 
 
+def ollama_synthesize(query: str, chunks: list[dict]) -> Optional[str]:
+    """Use Ollama to synthesize a natural-language answer from retrieved chunks.
+    Returns None if Ollama is unavailable, so the caller can fall back gracefully."""
+    if not chunks:
+        return None
+    context = "\n\n".join(
+        f"[{c.get('city', '')} — {c.get('section', '')}]\n{c.get('text', '')}"
+        for c in chunks[:5]
+    )
+    prompt = (
+        "Sei un assistente specializzato nelle capitali europee. "
+        "Rispondi SOLO in italiano, in modo conciso (max 4 frasi), "
+        "usando esclusivamente le informazioni nelle fonti sottostanti. "
+        "Se le fonti non contengono la risposta, dillo chiaramente.\n\n"
+        f"Fonti:\n{context}\n\n"
+        f"Domanda: {query}\n\n"
+        "Risposta:"
+    )
+    try:
+        resp = httpx.post(
+            f"{OLLAMA_URL}/api/generate",
+            json={"model": OLLAMA_MODEL, "prompt": prompt, "stream": False},
+            timeout=30.0,
+        )
+        if resp.status_code == 200:
+            text = resp.json().get("response", "").strip()
+            return text if text else None
+    except Exception:
+        pass
+    return None
+
+
+_INTENT_WEIGHTS: dict[str, dict[str, int]] = {
+    'transport': {'aeroporto': 5, 'aeroporti': 5, 'bus': 4, 'tram': 4, 'metro': 4, 'treno': 4, 'taxi': 3, 'trasporto': 4, 'trasporti': 4},
+    'hotel': {'hotel': 5, 'hostel': 4, 'alloggio': 5, 'albergo': 4, 'b&b': 4, 'ostello': 4},
+    'attractions': {'museo': 4, 'musei': 4, 'monumento': 4, 'piazza': 3, 'vedere': 5, 'visitare': 5, 'colosseo': 5, 'vaticano': 4},
+    'safety': {'sicurezza': 5, 'sicuro': 4, 'pericolo': 4, 'criminalità': 4},
+    'general': {'attrazioni': 3, 'costo': 2, 'budget': 2, 'spesa': 2, 'verde': 2, 'parco': 2},
+}
+
+_INTENT_SECTION = {
+    'transport': 'transport',
+    'hotel': 'hotels',
+    'attractions': 'attractions',
+    'safety': 'description',
+    'general': None,
+}
+
+
+def rank_chunks(query: str, results: list[dict], k: int = 5) -> list[dict]:
+    """Score and rank chunks by relevance to query. Used by Ollama synthesis path."""
+    if not results:
+        return []
+    tokens = [t for t in re.findall(r"\w+", query.lower()) if len(t) > 2]
+    intent = detect_intent(query)
+    intent_section = _INTENT_SECTION.get(intent)
+    topic_keywords = {**_INTENT_WEIGHTS.get(intent, {}), **_INTENT_WEIGHTS['general']}
+
+    query_city = extract_city(query)
+    pool = results
+    if query_city:
+        city_results = [r for r in results if r.get('city', '').upper() == query_city]
+        if not city_results:
+            _, all_docs = vectorstore.load_index()
+            city_results = [d for d in all_docs if d.get('city', '').upper() == query_city]
+        if city_results:
+            pool = city_results
+
+    scored = []
+    for r in pool:
+        text_lower = r.get('text', '').lower()
+        score = 0
+        if r.get('city', '').upper() == query_city:
+            score += 6
+        if intent_section and r.get('section') == intent_section:
+            score += 8
+        for t in tokens:
+            if re.search(rf"\b{re.escape(t)}\b", text_lower):
+                score += 2
+        for keyword, weight in topic_keywords.items():
+            if keyword in text_lower:
+                score += weight
+        score += min(3, float(r.get('rrf_score', r.get('score', 0))) * 10)
+        scored.append((score, r))
+    scored.sort(key=lambda x: (-x[0], -x[1].get('rrf_score', x[1].get('score', 0))))
+    return [r for _, r in scored[:k]]
+
+
 def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3) -> tuple[str, list[dict]]:
     if not results:
         return '', []
     tokens = [t for t in re.findall(r"\w+", query.lower()) if len(t) > 2]
     intent = detect_intent(query)
 
-    intent_weights: dict[str, dict[str, int]] = {
-        'transport': {'aeroporto': 5, 'aeroporti': 5, 'bus': 4, 'tram': 4, 'metro': 4, 'treno': 4, 'taxi': 3, 'trasporto': 4, 'trasporti': 4},
-        'hotel': {'hotel': 5, 'hostel': 4, 'alloggio': 5, 'albergo': 4, 'b&b': 4, 'ostello': 4},
-        'attractions': {'museo': 4, 'musei': 4, 'monumento': 4, 'piazza': 3, 'vedere': 5, 'visitare': 5, 'colosseo': 5, 'vaticano': 4},
-        'safety': {'sicurezza': 5, 'sicuro': 4, 'pericolo': 4, 'criminalità': 4},
-        'general': {'attrazioni': 3, 'costo': 2, 'budget': 2, 'spesa': 2, 'verde': 2, 'parco': 2},
-    }
-    topic_keywords = intent_weights.get(intent, intent_weights['general'])
-    # always include some general keywords with lower weight
-    for kw, w in intent_weights['general'].items():
-        topic_keywords.setdefault(kw, w)
+    topic_keywords = {**_INTENT_WEIGHTS.get(intent, _INTENT_WEIGHTS['general']), **_INTENT_WEIGHTS['general']}
 
     accommodation_terms = {'hotel', 'hostel', 'alloggio', 'albergo', 'b&b'}
     wants_accommodation = intent == 'hotel' or any(term in tokens for term in accommodation_terms)
 
-    # section corrispondente all'intento — usata per boost
-    intent_section = {
-        'transport': 'transport',
-        'hotel': 'hotels',
-        'attractions': 'attractions',
-        'safety': 'description',
-        'general': None,
-    }.get(intent)
+    intent_section = _INTENT_SECTION.get(intent)
 
     query_city = extract_city(query)
     if query_city:
@@ -136,17 +229,13 @@ def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3
     for r in results:
         text_lower = r.get('text', '').lower()
         score = 0
-        # city match
         if r.get('city', '').upper() == query_city:
             score += 6
-        # section match: fortissimo boost se il chunk è esattamente del tipo cercato
         if intent_section and r.get('section') == intent_section:
             score += 8
-        # token match
         for t in tokens:
             if re.search(rf"\b{re.escape(t)}\b", text_lower):
                 score += 2
-        # keyword match
         for keyword, weight in topic_keywords.items():
             if keyword in text_lower:
                 score += weight
@@ -162,9 +251,22 @@ def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3
             display_city = query_city.title()
             return f"Ho trovato informazioni locali su {display_city}, ma il dataset non contiene dettagli specifici sugli hotel per quella città.", top_results
 
+    # Se il chunk #1 matcha già la sezione cercata, usalo direttamente (evita sentence mixing)
+    if intent_section and top_results and top_results[0].get('section') == intent_section:
+        text = top_results[0].get('text', '').replace('\n', ' ').strip()
+        text = re.sub(r'^\[[A-Z\s]+\]\s*', '', text)
+        excerpt = text[:450].rstrip()
+        last_stop = max(excerpt.rfind('.'), excerpt.rfind('!'), excerpt.rfind('?'))
+        if last_stop > 80:
+            excerpt = excerpt[:last_stop + 1]
+        display_city = query_city.title() if query_city else ''
+        header = f"Informazioni su {display_city}: " if display_city else ""
+        return header + excerpt, top_results
+
     matches = []
     for r in top_results:
         text = r.get('text', '').replace('\n', ' ').strip()
+        text = re.sub(r'^\[[A-Z\s]+\]\s*', '', text)  # strip [CITY] prefix
         normalized = re.sub(r'\s*\|\s*', '. ', text)
         sentences = re.split(r'(?<=[.!?])\s+', normalized)
         for sentence in sentences:
@@ -212,8 +314,12 @@ def run_ingest():
 def query(q: str = Query(..., description='Query text'), k: int = 5, use_llm: bool = False, simulated_rag: bool = False):
     if simulated_rag:
         internal_results = vectorstore.hybrid_search(q, k=max(k, 50))
-        answer, sources = simulated_rag_answer(q, internal_results)
-        return {'answer': answer, 'sources': sources[:k]}
+        top_chunks = rank_chunks(q, internal_results, k=k)
+        answer = ollama_synthesize(q, top_chunks)
+        if not answer:
+            answer, _ = simulated_rag_answer(q, internal_results)
+        return {'answer': answer, 'sources': top_chunks}
+
     results = vectorstore.hybrid_search(q, k=k)
 
     if use_llm and os.getenv('OPENAI_API_KEY'):
@@ -238,7 +344,13 @@ def query(q: str = Query(..., description='Query text'), k: int = 5, use_llm: bo
 
 @app.get('/health')
 def health():
-    return {'status': 'ok'}
+    ollama_ok = False
+    try:
+        r = httpx.get(f"{OLLAMA_URL}/api/tags", timeout=2.0)
+        ollama_ok = r.status_code == 200
+    except Exception:
+        pass
+    return {'status': 'ok', 'ollama': ollama_ok, 'ollama_model': OLLAMA_MODEL}
 
 
 if __name__ == '__main__':
