@@ -1,15 +1,18 @@
 import os
 import json
 import re
+from pathlib import Path
 import pandas as pd
 from lxml import etree
 
+ROOT = Path(__file__).resolve().parent.parent
+
 # --- CONFIGURAZIONE ---
-ORIGINAL_XML_DIR = 'original_source' 
-INPUT_JSON = 'city_indices.json'
-INPUT_CSV = 'attrazione_descrizione_fixed.csv'
-DTD_FILE = 'city_report.dtd' # Deve esistere nella cartella
-OUTPUT_DIR = 'xml_dataset'
+ORIGINAL_XML_DIR = str(ROOT / 'data' / 'original_source')
+INPUT_JSON = str(ROOT / 'data' / 'city_indices.json')
+INPUT_CSV = str(ROOT / 'data' / 'attrazione_descrizione_fixed.csv')
+DTD_FILE = str(ROOT / 'data' / 'city_report.dtd')
+OUTPUT_DIR = str(ROOT / 'data' / 'xml_dataset')
 
 if not os.path.exists(OUTPUT_DIR): os.makedirs(OUTPUT_DIR)
 

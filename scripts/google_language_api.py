@@ -1,10 +1,13 @@
 import os
 import csv
 import json
+from pathlib import Path
 from google.cloud import language_v1
 
-CSV_INPUT = 'wiki_text_pulito.csv'
-JSON_OUTPUT = 'google_language_analysis.json'
+ROOT = Path(__file__).resolve().parent.parent
+
+CSV_INPUT = str(ROOT / 'data' / 'wiki_text_pulito.csv')
+JSON_OUTPUT = str(ROOT / 'data' / 'google_language_analysis.json')
 
 
 def get_language_client():

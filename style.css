@@ -346,16 +346,31 @@ header h1 {
     color: white;
 }
 
-/* 10. MAP FRAME */
-#map-frame {
+/* 10. MAP INLINE */
+#map-inline {
     width: 90%;
     height: 450px;
     margin: 0 auto 40px;
     display: block;
     border-radius: 20px;
-    border: none;
+    overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.07);
 }
+
+/* Popup e marker capitale (usati da Leaflet inline e mappa standalone) */
+.cap-mk {
+    display: flex; align-items: center; gap: 4px;
+    padding: 4px 9px; border-radius: 20px;
+    font-weight: 800; font-size: 0.72rem; color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35); white-space: nowrap;
+}
+.mp { min-width: 190px; max-width: 260px; }
+.mp h4 { font-size: 0.9rem; margin: 0 0 2px; }
+.pl {
+    display: inline-block; margin-top: 7px;
+    color: #E74C3C; font-weight: 700; font-size: 0.78rem; text-decoration: none;
+}
+.pl:hover { text-decoration: underline; }
 
 /* NAVIGAZIONE PAGINE INDIVIDUALI */
 .city-nav {

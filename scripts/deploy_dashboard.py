@@ -1,5 +1,8 @@
 import os, json, re
+from pathlib import Path
 from lxml import etree
+
+ROOT = Path(__file__).resolve().parent.parent
 
 
 # ---------------------------------------------------------------------------
@@ -218,11 +221,138 @@ document.querySelectorAll('.query-chip').forEach(function(chip) {
 """
 
 # --- CONFIGURAZIONE ---
-XML_DIR = 'xml_dataset'
-OUTPUT_HTML = 'index.html'
-REPORT_HTML = 'report.html'
-MAP_FILE = 'mappa_attrazioni.html'
-DTD_FILE = 'city_report.dtd'
+XML_DIR = str(ROOT / 'data' / 'xml_dataset')
+OUTPUT_HTML = str(ROOT / 'index.html')
+REPORT_HTML = str(ROOT / 'pages' / 'report.html')
+MAP_FILE = str(ROOT / 'pages' / 'mappa_attrazioni.html')
+DTD_FILE = str(ROOT / 'data' / 'city_report.dtd')
+
+# --- MAPPA: coordinate capitali e palette colori ---
+CAPITAL_COORDS = {
+    'amsterdam': (52.3676, 4.9041), 'athens': (37.9838, 23.7275),
+    'berlin': (52.5200, 13.4050), 'bratislava': (48.1486, 17.1077),
+    'brussels': (50.8503, 4.3517), 'bucharest': (44.4268, 26.1025),
+    'budapest': (47.4979, 19.0402), 'copenhagen': (55.6761, 12.5683),
+    'dublin': (53.3498, -6.2603), 'helsinki': (60.1699, 24.9384),
+    'lisbon': (38.7169, -9.1395), 'ljubljana': (46.0569, 14.5058),
+    'london': (51.5074, -0.1278), 'luxembourg': (49.6117, 6.1319),
+    'madrid': (40.4168, -3.7038), 'nicosia': (35.1856, 33.3823),
+    'oslo': (59.9139, 10.7522), 'paris': (48.8566, 2.3522),
+    'prague': (50.0755, 14.4378), 'reykjavik': (64.1355, -21.8954),
+    'riga': (56.9460, 24.1059), 'rome': (41.9028, 12.4964),
+    'sofia': (42.6977, 23.3219), 'stockholm': (59.3293, 18.0686),
+    'tallinn': (59.4370, 24.7536), 'valletta': (35.8989, 14.5146),
+    'vienna': (48.2082, 16.3738), 'vilnius': (54.6872, 25.2797),
+    'warsaw': (52.2297, 21.0122), 'zagreb': (45.8150, 15.9819),
+}
+
+CITY_PALETTE = [
+    '#E74C3C','#3498DB','#2ECC71','#F39C12','#9B59B6',
+    '#1ABC9C','#E67E22','#34495E','#E91E63','#00BCD4',
+    '#FF5722','#607D8B','#8BC34A','#FF9800','#673AB7',
+    '#795548','#C0392B','#2980B9','#27AE60','#D35400',
+    '#8E44AD','#16A085','#2C3E50','#F1C40F','#17A589',
+    '#884EA0','#1A5276','#1E8449','#922B21','#1F618D',
+]
+
+
+def _map_js_block(city_data, div_id, city_link_prefix=''):
+    """Restituisce il blocco <script> Leaflet per il div indicato.
+    city_link_prefix: prefisso URL per i link alle pagine città."""
+    sorted_cities = sorted(city_data, key=lambda c: c['city_lower'])
+    color_map = {c['city_lower']: CITY_PALETTE[i % len(CITY_PALETTE)]
+                 for i, c in enumerate(sorted_cities)}
+
+    map_data = []
+    for city in sorted_cities:
+        cl = city['city_lower']
+        color = color_map[cl]
+        coord = CAPITAL_COORDS.get(cl, (None, None))
+        valid_attrs = []
+        for a in city['attractions']:
+            try:
+                valid_attrs.append({'n': a['n'] or '', 'd': a['d'] or '',
+                                    'lat': float(a['lat']), 'lon': float(a['lon'])})
+            except (TypeError, ValueError):
+                pass
+        map_data.append({
+            'cl': cl, 'name': city['name_it'], 'flag': city['flag'],
+            'appeal': city['appeal'], 'color': color,
+            'link': city_link_prefix + cl + '.html',
+            'capLat': coord[0], 'capLon': coord[1],
+            'attrs': valid_attrs,
+        })
+
+    map_data_json = json.dumps(map_data, ensure_ascii=False)
+    # I nomi di variabili JS non possono contenere trattini
+    var_id = div_id.replace('-', '_')
+
+    # Stringa non-f-string: le {} di JS non conflittano con Python
+    js = (
+        "<script>\n"
+        "var map_VID=L.map('DID',{center:[52,15],zoom:4});\n"
+        "L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',"
+        "{attribution:'\\u00a9 OpenStreetMap \\u00a9 CARTO',maxZoom:19}).addTo(map_VID);\n"
+        "var cluster_VID=L.markerClusterGroup({chunkedLoading:true});\n"
+        "var mapData_VID=DATA_JSON;\n"
+        "mapData_VID.forEach(function(c){\n"
+        "  c.attrs.forEach(function(a){\n"
+        "    L.circleMarker([a.lat,a.lon],{radius:7,color:c.color,fillColor:c.color,fillOpacity:0.85,weight:2})\n"
+        "    .addTo(cluster_VID)\n"
+        "    .bindPopup('<div class=\"mp\"><h4 style=\"color:'+c.color+';margin:0 0 3px\">'+a.n+'</h4>'\n"
+        "      +'<small style=\"color:#888\">'+c.flag+' '+c.name+'</small>'\n"
+        "      +'<p style=\"margin:6px 0;font-size:.8rem\">'+a.d+'</p>'\n"
+        "      +'<a href=\"'+c.link+'\" class=\"pl\">Scopri '+c.name+' \\u2192</a></div>')\n"
+        "    .bindTooltip(a.n+' ('+c.name+')');\n"
+        "  });\n"
+        "  if(c.capLat!==null){\n"
+        "    L.marker([c.capLat,c.capLon],{icon:L.divIcon({\n"
+        "      className:'',\n"
+        "      html:'<div class=\"cap-mk\" style=\"background:'+c.color+'\">'+'<span>'+c.flag+'</span><b>'+c.appeal+'</b></div>',\n"
+        "      iconSize:[70,28],iconAnchor:[35,14]\n"
+        "    })}).addTo(map_VID)\n"
+        "    .bindPopup('<div class=\"mp\"><b>'+c.flag+' '+c.name+'</b>'\n"
+        "      +'<br>Appeal: <b>'+c.appeal+'</b>'\n"
+        "      +'<br><a href=\"'+c.link+'\" class=\"pl\">Scopri '+c.name+' \\u2192</a></div>');\n"
+        "  }\n"
+        "});\n"
+        "map_VID.addLayer(cluster_VID);\n"
+        "</script>"
+    ).replace('VID', var_id).replace('DID', div_id).replace('DATA_JSON', map_data_json)
+
+    return js
+
+
+def generate_map(city_data):
+    """Genera pages/mappa_attrazioni.html: Leaflet con marker colorati per città, capitali e popup."""
+    map_js = _map_js_block(city_data, 'map', 'cities/')
+    map_html = (
+        "<!DOCTYPE html>\n<html lang='it'><head>\n"
+        "<meta charset='UTF-8'>\n"
+        "<meta name='viewport' content='width=device-width,initial-scale=1'>\n"
+        "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css'>\n"
+        "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css'>\n"
+        "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css'>\n"
+        "<style>\n"
+        "html,body,#map{height:100%;margin:0;font-family:Inter,sans-serif}\n"
+        ".cap-mk{display:flex;align-items:center;gap:4px;padding:4px 9px;border-radius:20px;"
+        "font-weight:800;font-size:.72rem;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.35);white-space:nowrap}\n"
+        ".mp{min-width:190px;max-width:260px}\n"
+        ".mp h4{font-size:.9rem;margin:0 0 2px}\n"
+        ".pl{display:inline-block;margin-top:7px;color:#E74C3C;font-weight:700;font-size:.78rem;text-decoration:none}\n"
+        ".pl:hover{text-decoration:underline}\n"
+        "</style>\n"
+        "</head><body>\n"
+        "<div id='map'></div>\n"
+        "<script src='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js'></script>\n"
+        "<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js'></script>\n"
+        + map_js + "\n</body></html>"
+    )
+    os.makedirs(os.path.dirname(MAP_FILE), exist_ok=True)
+    with open(MAP_FILE, 'w', encoding='utf-8') as f:
+        f.write(map_html)
+    print(f"🗺️  Mappa rigenerata: {MAP_FILE}")
+
 
 def deploy():
     print("🚀 Generazione Dashboard: Reintegro Attrazioni + Griglia 3x2...")
@@ -296,6 +426,9 @@ def deploy():
         except Exception as e:
             print(f"⚠️ Errore su {filename}: {e}")
 
+    # Mappa inline: pre-calcolata fuori dall'f-string per evitare conflitti {}
+    inline_map_js = _map_js_block(city_data, 'map-inline', 'pages/cities/')
+
     # Template finale HTML
     full_html = f"""<!DOCTYPE html>
 <html lang="it">
@@ -303,6 +436,9 @@ def deploy():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">
     <title>EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -311,7 +447,8 @@ def deploy():
         <div class="desc-portale">
             <p>Analisi comparativa delle capitali europee basata su dati estratti algoritmicamente da MediaWiki. <b>Appeal Score:</b> Sicurezza (40%), Ambiente (40%), Accesso (20%).</p>
             <nav style="margin-top:18px;">
-                <a href="report.html" style="color:#fff; background:var(--accent); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">📊 Report &amp; Documentazione</a>
+                <a href="pages/report.html" style="color:#fff; background:var(--accent); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">📊 Report &amp; Documentazione</a>
+                <a href="pages/mappa_attrazioni.html" style="color:#fff; background:rgba(255,255,255,0.18); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">🗺️ Mappa Fullscreen</a>
             </nav>
         </div>
     </header>
@@ -323,7 +460,7 @@ def deploy():
         </div>
         <div id="chat-output" style="margin-top:15px; padding:10px; font-size:0.9rem; color:var(--slate-500); border-left:3px solid var(--accent)">Sistema pronto. Caricamento dati V16 completato.</div>
     </section>
-    <iframe id="map-frame" src="{MAP_FILE}"></iframe>
+    <div id="map-inline"></div>
     <main class="container">{cards_html}</main>
     <script>
         const cityData = {json.dumps(city_data)};
@@ -331,7 +468,7 @@ def deploy():
             const q = document.getElementById('chat-input').value.toLowerCase();
             const out = document.getElementById('chat-output');
             let res = "Città non trovata nel database.";
-            
+
             cityData.forEach(c => {{
                 if (q.includes(c.name_it.toLowerCase()) || q.includes(c.name_en.toLowerCase())) {{
                     if (q.includes("hotel") || q.includes("quanti")) {{
@@ -349,7 +486,9 @@ def deploy():
             out.innerHTML = res;
         }};
     </script>
-</body></html>"""
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+""" + inline_map_js + "\n</body></html>"
 
     with open(OUTPUT_HTML, 'w', encoding='utf-8') as f:
         f.write(full_html)
@@ -357,6 +496,7 @@ def deploy():
 
     generate_report(city_data)
     generate_city_pages(city_data)
+    generate_map(city_data)
 
 
 def generate_city_pages(city_data):
@@ -492,7 +632,7 @@ def generate_city_pages(city_data):
     {attractions_html}
     <div class="download-block">
         <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Sorgente dati strutturato (XML valido secondo <code>city_report.dtd</code>):</p>
-        <a href="xml_dataset/{cl}.xml" download class="download-link">📥 Scarica file XML sorgente</a>
+        <a href="../../data/xml_dataset/{cl}.xml" download class="download-link">📥 Scarica file XML sorgente</a>
     </div>
 </main>
 <footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
@@ -502,7 +642,7 @@ def generate_city_pages(city_data):
 </body>
 </html>"""
 
-        with open(f"{cl}.html", 'w', encoding='utf-8') as f:
+        with open(ROOT / 'pages' / 'cities' / f"{cl}.html", 'w', encoding='utf-8') as f:
             f.write(page_html)
 
     print(f"✅ Generate {n} pagine HTML individuali.")

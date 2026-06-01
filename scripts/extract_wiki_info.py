@@ -1,8 +1,11 @@
 import os
+from pathlib import Path
 import mwparserfromhell
 from lxml import etree
 import re
 import csv
+
+ROOT = Path(__file__).resolve().parent.parent
 import spacy
 
 # Load SpaCy model once (upgraded to large for better NER and sentence segmentation)
@@ -19,8 +22,8 @@ except Exception as e:
     GOOGLE_LANGUAGE_AVAILABLE = False
     google_language_client = None
 
-ORIGINAL_DIR = 'original_source'
-XML_DATASET = 'xml_dataset'
+ORIGINAL_DIR = str(ROOT / 'data' / 'original_source')
+XML_DATASET = str(ROOT / 'data' / 'xml_dataset')
 
 # Le patch definitive iniettate direttamente alla fonte
 TRANSPORT_PATCH = {
@@ -232,7 +235,7 @@ def run_v16_master():
     print("💎 V16 HUMAN-READABLE ENGINE: Aggiornamento XML e CSV in corso...")
     print("-" * 85)
     
-    csv_filename = "wiki_text_pulito.csv"
+    csv_filename = str(ROOT / 'data' / 'wiki_text_pulito.csv')
     with open(csv_filename, mode='w', newline='', encoding='utf-8') as csv_file:
         writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(['City', 'Hotel_Count', 'Transport_Text', 'Hotels_Extracted', 'Districts'])

@@ -5,10 +5,12 @@ Usa la Wikipedia pageimages API come fonte affidabile, poi salva in locale.
 import os
 import sys
 import time
+from pathlib import Path
 from typing import Optional
 import requests
 
-OUT_DIR = "assets/images"
+ROOT = Path(__file__).resolve().parent.parent
+OUT_DIR = str(ROOT / 'assets' / 'images')
 HEADERS = {"User-Agent": "EuroCityBot/1.0 (educational project; ltonsi13@gmail.com)"}
 
 # Sovrascritture manuali per città con nomi Wikipedia non standard

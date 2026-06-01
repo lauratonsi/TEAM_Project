@@ -7,7 +7,7 @@ import faiss
 import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_CSV = ROOT / 'wiki_text_pulito.csv'
+DATA_CSV = ROOT / 'data' / 'wiki_text_pulito.csv'
 OUT_DIR = ROOT / 'rag_index'
 OUT_DIR.mkdir(exist_ok=True)
 

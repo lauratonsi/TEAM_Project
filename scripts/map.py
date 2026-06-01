@@ -2,12 +2,13 @@ import pandas as pd
 import folium
 from folium.plugins import MarkerCluster
 import os
-import webbrowser # Per aprire la mappa automaticamente nel browser
+from pathlib import Path
+import webbrowser
 
-# --- CONFIGURAZIONE PERCORSI LOCALI ---
-# Assicurati che il file CSV sia nella stessa cartella dello script
-csv_path = 'attrazione_descrizione_fixed.csv' 
-output_map_path = 'mappa_attrazioni.html'
+ROOT = Path(__file__).resolve().parent.parent
+
+csv_path = str(ROOT / 'data' / 'attrazione_descrizione_fixed.csv')
+output_map_path = str(ROOT / 'pages' / 'mappa_attrazioni.html')
 
 if os.path.exists(csv_path):
     print(f"📖 Caricamento dati da {csv_path}...")

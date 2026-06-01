@@ -1,17 +1,20 @@
 import os
 import json
 import re
+from pathlib import Path
 import pandas as pd
 from lxml import etree
 
+ROOT = Path(__file__).resolve().parent.parent
+
 # --- CONFIGURAZIONE ---
-ORIGINAL_XML_DIR = 'original_source'
-INPUT_JSON_INDICES = 'city_indices.json'
-INPUT_CSV_WIKI = 'wiki_text_pulito.csv'
-INPUT_CSV_ATTR = 'attrazione_descrizione_fixed.csv'
-INPUT_JSON_DESC = 'city_descriptions.json'
-DTD_FILE = 'city_report.dtd'
-OUTPUT_DIR = 'xml_dataset'
+ORIGINAL_XML_DIR = str(ROOT / 'data' / 'original_source')
+INPUT_JSON_INDICES = str(ROOT / 'data' / 'city_indices.json')
+INPUT_CSV_WIKI = str(ROOT / 'data' / 'wiki_text_pulito.csv')
+INPUT_CSV_ATTR = str(ROOT / 'data' / 'attrazione_descrizione_fixed.csv')
+INPUT_JSON_DESC = str(ROOT / 'data' / 'city_descriptions.json')
+DTD_FILE = str(ROOT / 'data' / 'city_report.dtd')
+OUTPUT_DIR = str(ROOT / 'data' / 'xml_dataset')
 
 MW_NS = 'http://www.mediawiki.org/xml/export-0.11/'
 
