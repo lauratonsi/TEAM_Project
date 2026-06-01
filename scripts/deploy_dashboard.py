@@ -406,7 +406,7 @@ def deploy():
                     <div class="city-card-overlay">
                         <h2 class="city-title-overlay">
                             <span>{city_obj['flag']}</span>
-                            <a href="{city_lower}.html" itemprop="name" class="city-overlay-link">{city_obj['name_it']}</a>
+                            <a href="pages/cities/{city_lower}.html" itemprop="name" class="city-overlay-link">{city_obj['name_it']}</a>
                         </h2>
                         <div class="city-score-badge">{city_obj['appeal']}<small> score</small></div>
                     </div>
@@ -420,7 +420,7 @@ def deploy():
                         <div class="stat-item"><span class="stat-label">Accesso</span><span class="stat-val">{city_obj['economy']}</span></div>
                         <div class="stat-item"><span class="stat-label">Attrazioni</span><span class="stat-val">{n_attr}</span></div>
                     </div>
-                    <a href="{city_lower}.html" class="card-cta">Scopri {city_obj['name_it']} →</a>
+                    <a href="pages/cities/{city_lower}.html" class="card-cta">Scopri {city_obj['name_it']} →</a>
                 </div>
             </article>"""
         except Exception as e:
@@ -524,9 +524,12 @@ def generate_city_pages(city_data):
         # --- Landmark image ---
         lm_html = ""
         if city['landmark_image']:
+            img_url = city['landmark_image']
+            if not img_url.startswith('http'):
+                img_url = '../../' + img_url.lstrip('/')
             lm_html = (
                 f"<div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'>"
-                f"<img itemprop='image' src='{city['landmark_image']}' alt='Landmark di {city['name_it']}' "
+                f"<img itemprop='image' src='{img_url}' alt='Landmark di {city['name_it']}' "
                 f"style='width:100%; height:100%; object-fit:cover;'></div>"
             )
 
@@ -600,7 +603,7 @@ def generate_city_pages(city_data):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>{city['name_it']} — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -608,8 +611,8 @@ def generate_city_pages(city_data):
     <h1>EuroCity Strategic Intelligence</h1>
     <div class="desc-portale">
         <nav style="margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-            <a href="index.html" style="color:#fff; background:rgba(255,255,255,0.2); padding:8px 18px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">← Indice</a>
-            <a href="report.html" style="color:#fff; background:var(--accent); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">📊 Report</a>
+            <a href="../../index.html" style="color:#fff; background:rgba(255,255,255,0.2); padding:8px 18px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">← Indice</a>
+            <a href="../../pages/report.html" style="color:#fff; background:var(--accent); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">📊 Report</a>
         </nav>
     </div>
 </header>
@@ -718,7 +721,7 @@ def generate_report(city_data):
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <title>Report &amp; Documentazione — EuroCity</title>
   <style>
     .report-nav {{
@@ -832,7 +835,7 @@ def generate_report(city_data):
   <div class="desc-portale">
     <p>Statistiche estratte algoritmicamente dai file XML. Documentazione della pipeline TEAM.</p>
     <nav style="margin-top:18px;">
-      <a href="index.html" style="color:#fff; background:rgba(255,255,255,0.15); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem; border:1px solid rgba(255,255,255,0.3);">← Torna alla Dashboard</a>
+      <a href="../index.html" style="color:#fff; background:rgba(255,255,255,0.15); padding:8px 22px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem; border:1px solid rgba(255,255,255,0.3);">← Torna alla Dashboard</a>
     </nav>
   </div>
 </header>
