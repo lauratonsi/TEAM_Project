@@ -44,12 +44,12 @@ function rankOf(city, key) {
 /* ---------- render: confronto due città ---------- */
 function renderComparison(a, b) {
     var rows = [
-        ['Appeal Score', 'appeal', 1],
-        ['Safety',       'safety', 1],
-        ['Green',        'green',  1],
-        ['Accessibilità','economy',1],
-        ['Budget/notte', 'price', -1],
-        ['Strutture',    'hotel_count', 1],
+        ['Appeal Score',  'appeal',      1],
+        ['Safety',        'safety',      1],
+        ['Green',         'green',       1],
+        ['Affordability', 'economy',     1],
+        ['Budget/night',  'price',      -1],
+        ['Venues',        'hotel_count', 1],
     ];
     var rowsHtml = rows.map(function(r) {
         var lbl = r[0], key = r[1], dir = r[2];
@@ -215,7 +215,7 @@ document.querySelectorAll('.query-chip').forEach(function(chip) {
     var totH = cityData.reduce(function(s,c){ return s + parseInt(c.hotel_count||0); }, 0);
     var totA = cityData.reduce(function(s,c){ return s + c.attractions.length; }, 0);
     var el = document.getElementById('chat-status');
-    if (el) el.textContent = cityData.length + ' capitali · ' + totA + ' attrazioni · ' + totH + ' strutture';
+    if (el) el.textContent = cityData.length + ' capitals · ' + totA + ' attractions · ' + totH + ' venues';
 })();
 </script>
 """
@@ -660,7 +660,7 @@ async function runQuery() {{
     const q = document.getElementById('chat-input').value.trim();
     const out = document.getElementById('chat-output');
     if (!q) return;
-    out.innerHTML = '<span style="color:#64748b;font-size:.9rem">⏳ Cerco...</span>';
+    out.innerHTML = '<span style="color:#64748b;font-size:.9rem">⏳ Searching...</span>';
     try {{
         const ctrl = new AbortController();
         const tid = setTimeout(() => ctrl.abort(), 5000);
@@ -673,7 +673,7 @@ async function runQuery() {{
             const data = await resp.json();
             let html = '<p style="margin:0">' + (data.answer || '') + '</p>';
             if (data.sources && data.sources.length) {{
-                html += '<details style="margin-top:8px"><summary style="cursor:pointer;color:#64748b;font-size:.82rem">📚 Fonti (' + data.sources.length + ')</summary>' +
+                html += '<details style="margin-top:8px"><summary style="cursor:pointer;color:#64748b;font-size:.82rem">📚 Sources (' + data.sources.length + ')</summary>' +
                     '<ul style="margin:4px 0;padding-left:18px;font-size:.82rem;color:#64748b">' +
                     data.sources.slice(0,3).map(s => '<li>[' + s.city + '] <em>' + s.section + '</em></li>').join('') +
                     '</ul></details>';
@@ -687,43 +687,54 @@ async function runQuery() {{
 
 function clientSideAnswer(q) {{
     const out = document.getElementById('chat-output');
-    let res = "❓ Città non trovata. Prova: <em>sicurezza Vienna</em>, <em>hotel Roma</em>, <em>confronta Oslo e Berlino</em>.";
+    let res = '❓ City not found. Try: <em>safety Vienna</em>, <em>hotels Rome</em>, <em>bars Berlin</em>, <em>compare Oslo and Berlin</em>.';
     cityData.forEach(function(c) {{
         if (q.includes(c.name_it.toLowerCase()) || q.includes((c.name_en || '').toLowerCase())) {{
-            if (/hotel|alloggio|dorm|ostello/.test(q)) {{
+            if (/hotel|alloggio|dorm|ostello|stay|accommodation|sleep|lodg/.test(q)) {{
                 var li = c.hotels.map(h => '<li><b>' + h.n + '</b> <span style="color:#64748b">(' + h.p + ')</span></li>').join('');
-                res = '<b>🏨 Strutture — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + (li || '<li>Nessun dato nel dataset</li>') + '</ul>';
-            }} else if (/trasport|muoversi|aeroporto|arriv/.test(q)) {{
-                res = '<b>🚇 Mobilità — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + c.transport + '</p>';
-            }} else if (/distrett|quartier|zona/.test(q)) {{
+                res = '<b>🏨 Accommodation — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + (li || '<li>No data in dataset</li>') + '</ul>';
+            }} else if (/trasport|muoversi|aeroporto|arriv|transport|airport|metro|subway|bus|train|tram|get.to|getting/.test(q)) {{
+                res = '<b>🚇 Transport — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + c.transport + '</p>';
+            }} else if (/distrett|quartier|zona|district|neighborhood|area|quarter/.test(q)) {{
                 var dn = c.districts.map(d => d.n).join(', ');
-                res = '<b>🏘️ Distretti — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + (dn || 'Nessun distretto disponibile.') + '</p>';
-            }} else if (/attrazione|visitare|vedere|turismo|museo/.test(q)) {{
-                var al = c.attractions.slice(0,5).map(a => '<li><b>' + a.n + '</b> — <span style="color:#64748b;font-size:.88em">' + a.d + '</span></li>').join('');
-                res = '<b>📍 Attrazioni — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + al + '</ul>';
-            }} else if (/sicur|safety|pericol/.test(q)) {{
-                res = '<b>🛡️ ' + c.flag + ' ' + c.name_it + '</b> — Safety Index: <b>' + c.safety + '</b> · Appeal: <b>' + c.appeal + '</b><p style="color:#64748b;margin:4px 0;font-size:.9em">' + c.story_it + '</p>';
+                res = '<b>🏘️ Districts — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + (dn || 'No district data available.') + '</p>';
+            }} else if (/attrazione|visitare|vedere|turismo|museo|sight|museum|visit|attraction|landmark|tour/.test(q)) {{
+                var al = c.attractions.slice(0,5).map(a => '<li><b>' + a.n + '</b> — <span style="color:#64748b;font-size:.88em">' + a.d + '</span> <a href="https://www.google.com/maps?q=' + a.lat + ',' + a.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍</a></li>').join('');
+                res = '<b>🗺️ Attractions — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + al + '</ul>';
+            }} else if (/bar|pub|drink|beer|nightlife|bere|birra|club|nightclub|aperitivo/.test(q)) {{
+                if (!c.nightlife || !c.nightlife.length) {{
+                    res = '<b>' + c.flag + ' ' + c.name_it + '</b>: no nightlife data available.';
+                }} else {{
+                    var nl = c.nightlife.map(v => '<li>' + (v.cat==='nightclub'?'🎵':'🍺') + ' <b>' + v.n + '</b> <span style="color:#94a3b8;font-size:.82em">(' + v.cat + ')</span> <a href="https://www.google.com/maps?q=' + v.lat + ',' + v.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍</a></li>').join('');
+                    res = '<b>🍺 Where to Drink — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + nl + '</ul>';
+                }}
+            }} else if (/sicur|safety|pericol|crime|safe|danger/.test(q)) {{
+                res = '<b>🛡️ ' + c.flag + ' ' + c.name_it + '</b> — Safety Index: <b>' + c.safety + '</b> · Appeal: <b>' + c.appeal + '</b>';
+            }} else if (/verde|green|sustainab|ecolog/.test(q)) {{
+                res = '<b>🌱 ' + c.flag + ' ' + c.name_it + '</b> — Green Score: <b>' + c.green + '</b>';
+            }} else if (/cost|budget|price|cheap|expens|afford/.test(q)) {{
+                res = '<b>💰 ' + c.flag + ' ' + c.name_it + '</b> — Budget: <b>' + Math.round(c.price) + '€/night</b> · Cost of living: <b>' + c.economy + '</b>';
             }} else {{
-                res = '<b>' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + c.story_it + '</p>';
+                res = '<b>' + c.flag + ' ' + c.name_it + '</b><div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:6px 0;font-size:.87em"><span>⭐ Appeal: <b>' + c.appeal + '</b></span><span>🛡️ Safety: <b>' + c.safety + '</b></span><span>🌱 Green: <b>' + c.green + '</b></span><span>💰 Budget: <b>' + Math.round(c.price) + '€</b></span></div>';
             }}
         }}
     }});
-    /* query globali senza nome città */
+    /* global queries without city name */
     if (res.startsWith('❓')) {{
         if (/sicur|safe/.test(q)) {{
             var top = cityData.slice().sort((a,b) => b.safety-a.safety).slice(0,5);
-            res = '<b>🛡️ Top 5 Sicurezza</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.safety + '</li>').join('') + '</ol>';
-        }} else if (/verde|green|ecolog/.test(q)) {{
+            res = '<b>🛡️ Top 5 Safest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.safety + '</li>').join('') + '</ol>';
+        }} else if (/verde|green|ecolog|sustainab/.test(q)) {{
             var top = cityData.slice().sort((a,b) => b.green-a.green).slice(0,5);
-            res = '<b>🌱 Top 5 Verde</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.green + '</li>').join('') + '</ol>';
-        }} else if (/econom|cheap|economica|basso/.test(q)) {{
+            res = '<b>🌱 Top 5 Greenest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.green + '</li>').join('') + '</ol>';
+        }} else if (/econom|cheap|afford|basso|budget/.test(q)) {{
             var top = cityData.slice().sort((a,b) => a.price-b.price).slice(0,5);
-            res = '<b>💰 Top 5 Economiche</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + Math.round(c.price) + '€/notte</li>').join('') + '</ol>';
-        }} else if (/appeal|miglior|top|ranking/.test(q)) {{
+            res = '<b>💰 Top 5 Most Affordable</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + Math.round(c.price) + '€/night</li>').join('') + '</ol>';
+        }} else if (/appeal|best|top|ranking/.test(q)) {{
             var top = cityData.slice().sort((a,b) => b.appeal-a.appeal).slice(0,5);
-            res = '<b>⭐ Top 5 Appeal</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.appeal + '</li>').join('') + '</ol>';
-        }} else if (/confronta|vs/.test(q)) {{
-            res = 'Per confrontare due città digita: <em>"confronta Roma e Parigi"</em> o <em>"Roma vs Berlino"</em>.';
+            res = '<b>⭐ Top 5 by Appeal Score</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.appeal + '</li>').join('') + '</ol>';
+        }} else if (/confronta|compare|vs/.test(q)) {{
+            res = 'To compare two cities type: <em>"compare Rome and Paris"</em> or <em>"Rome vs Berlin"</em>.';
         }}
     }}
     out.innerHTML = res;

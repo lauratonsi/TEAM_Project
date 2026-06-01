@@ -93,12 +93,18 @@ CITY_PATTERN = re.compile(
 # Intent keyword sets
 _INTENT_KEYWORDS = {
     'transport': {'aeroporto', 'aeroporti', 'bus', 'tram', 'metro', 'treno', 'taxi', 'trasporto', 'trasporti',
-                  'transport', 'gira', 'girare', 'muoversi', 'spostarsi', 'mobilità', 'raggiungere', 'arrivare',
-                  'arrivo', 'partenza', 'stazione', 'fermata', 'volo', 'volare'},
-    'hotel': {'hotel', 'hostel', 'alloggio', 'albergo', 'b&b', 'ostello', 'accommodation', 'dormire', 'pernottare'},
+                  'transport', 'airport', 'subway', 'train', 'gira', 'girare', 'muoversi', 'spostarsi',
+                  'mobilità', 'raggiungere', 'arrivare', 'arrivo', 'partenza', 'stazione', 'fermata',
+                  'volo', 'volare', 'getting', 'get to', 'reach', 'travel'},
+    'hotel': {'hotel', 'hostel', 'alloggio', 'albergo', 'b&b', 'ostello', 'accommodation', 'dormire',
+              'pernottare', 'stay', 'sleep', 'lodging', 'lodge', 'airbnb', 'booking'},
     'attractions': {'museo', 'musei', 'monumento', 'monumenti', 'piazza', 'attrazioni', 'vedere', 'visitare',
-                    'colosseo', 'vaticano', 'chiesa', 'palazzo', 'parco', 'tour', 'turismo', 'fare', 'cosa'},
-    'safety': {'sicurezza', 'sicuro', 'pericolo', 'criminalità', 'pericoloso', 'rischio', 'rischioso'},
+                    'colosseo', 'vaticano', 'chiesa', 'palazzo', 'parco', 'tour', 'turismo', 'fare', 'cosa',
+                    'museum', 'monument', 'landmark', 'sight', 'visit', 'attraction', 'square'},
+    'safety': {'sicurezza', 'sicuro', 'pericolo', 'criminalità', 'pericoloso', 'rischio', 'rischioso',
+               'safety', 'safe', 'dangerous', 'crime', 'secure'},
+    'nightlife': {'bar', 'pub', 'drink', 'beer', 'nightclub', 'club', 'nightlife', 'aperitivo', 'bere',
+                  'birra', 'locale', 'cocktail', 'lounge', 'biergarten'},
 }
 
 
@@ -148,11 +154,18 @@ def ollama_synthesize(query: str, chunks: list[dict]) -> Optional[str]:
 
 
 _INTENT_WEIGHTS: dict[str, dict[str, int]] = {
-    'transport': {'aeroporto': 5, 'aeroporti': 5, 'bus': 4, 'tram': 4, 'metro': 4, 'treno': 4, 'taxi': 3, 'trasporto': 4, 'trasporti': 4},
-    'hotel': {'hotel': 5, 'hostel': 4, 'alloggio': 5, 'albergo': 4, 'b&b': 4, 'ostello': 4},
-    'attractions': {'museo': 4, 'musei': 4, 'monumento': 4, 'piazza': 3, 'vedere': 5, 'visitare': 5, 'colosseo': 5, 'vaticano': 4},
-    'safety': {'sicurezza': 5, 'sicuro': 4, 'pericolo': 4, 'criminalità': 4},
-    'general': {'attrazioni': 3, 'costo': 2, 'budget': 2, 'spesa': 2, 'verde': 2, 'parco': 2},
+    'transport': {'aeroporto': 5, 'aeroporti': 5, 'bus': 4, 'tram': 4, 'metro': 4, 'treno': 4, 'taxi': 3,
+                  'trasporto': 4, 'trasporti': 4, 'airport': 5, 'subway': 4, 'train': 4, 'transport': 4},
+    'hotel': {'hotel': 5, 'hostel': 4, 'alloggio': 5, 'albergo': 4, 'b&b': 4, 'ostello': 4,
+              'accommodation': 5, 'stay': 4, 'sleep': 4, 'lodging': 4},
+    'attractions': {'museo': 4, 'musei': 4, 'monumento': 4, 'piazza': 3, 'vedere': 5, 'visitare': 5,
+                    'colosseo': 5, 'vaticano': 4, 'museum': 4, 'landmark': 4, 'sight': 4, 'visit': 5},
+    'safety': {'sicurezza': 5, 'sicuro': 4, 'pericolo': 4, 'criminalità': 4,
+               'safety': 5, 'safe': 4, 'crime': 4, 'dangerous': 4},
+    'nightlife': {'bar': 5, 'pub': 5, 'nightclub': 5, 'club': 4, 'drink': 4, 'beer': 4,
+                  'nightlife': 5, 'cocktail': 3, 'aperitivo': 4, 'birra': 4},
+    'general': {'attrazioni': 3, 'costo': 2, 'budget': 2, 'spesa': 2, 'verde': 2, 'parco': 2,
+                'cost': 2, 'green': 2, 'attractions': 3},
 }
 
 _INTENT_SECTION = {
@@ -160,6 +173,7 @@ _INTENT_SECTION = {
     'hotel': 'hotels',
     'attractions': 'attractions',
     'safety': 'description',
+    'nightlife': 'nightlife',
     'general': None,
 }
 
