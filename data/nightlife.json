@@ -1151,10 +1151,52 @@
   ],
   "Stockholm": [
     {
-      "name": "Stockhom village Bistro",
-      "category": "bar",
-      "lat": 44.4837527,
-      "lon": -92.2618523
+      "name": "Akkurat",
+      "category": "pub",
+      "lat": 59.3198089,
+      "lon": 18.0688539
+    },
+    {
+      "name": "Bagpipers's Inn",
+      "category": "pub",
+      "lat": 59.3403556,
+      "lon": 18.0311352
+    },
+    {
+      "name": "Bar City Central",
+      "category": "pub",
+      "lat": 59.3340492,
+      "lon": 18.0565703
+    },
+    {
+      "name": "Belgobaren",
+      "category": "pub",
+      "lat": 59.3327653,
+      "lon": 18.0581755
+    },
+    {
+      "name": "Berns",
+      "category": "nightclub",
+      "lat": 59.3321771,
+      "lon": 18.0738967
+    },
+    {
+      "name": "Brother Tuck",
+      "category": "pub",
+      "lat": 59.3098213,
+      "lon": 18.0758442
+    },
+    {
+      "name": "Fasching",
+      "category": "nightclub",
+      "lat": 59.3333991,
+      "lon": 18.0557611
+    },
+    {
+      "name": "Flying Scotsman Inn",
+      "category": "pub",
+      "lat": 59.333999,
+      "lon": 18.037233
     }
   ],
   "Tallinn": [

@@ -84,9 +84,37 @@
   <wiki_intro>Stockholm is Sweden's capital and largest city, with nearly a million inhabitants in the city, and 2.4 million within Stockholm County (as of 2021). The inner city is made up of 14 islands across Lake Mälaren and three streams into the brackish Baltic Sea, with the Stockholm archipelago with some 24,000 islands, islets and skerries. Over 30% of the city area is made up of waterways, and another 30% is made up of green areas. Air and water are said to be the freshest of any European capital. Stockholm hosts the Nobel Prize ceremony and has around 70 museums. Stockholm is the hub of most Swedish rail and bus traffic and has two of the country's busiest airports nearby, so it is a good starting point for visiting other parts of Sweden. Stockholm's suburbs sprawl out across most of Stockholm County. Stockholm's administrative division may be perplexing - municipal borders might cut right through neighbourhoods. This article describes areas that are geographically close and easy to visit together as districts; the administrative borders of districts and municipalities may differ. The outer parts of the county consist of Norrtälje, Sigtuna, Norrort, Stockholm Archipelago, Södertörn and Södertälje. Due to the post-glacial rebound, Stockholm is slowly rising from the sea. Mälaren was a bay of the Baltic Sea throughout the Viking Age of the 9th and 10th centuries; today's Stockholm was the waterway for the first Swedish cities; Birka, Uppsala, and Sigtuna. As Sigtuna was sacked by...</wiki_intro>
   <landmark_image>assets/images/stockholm.jpg</landmark_image>
   <nightlife>
-    <venue lat="44.4837527" lon="-92.2618523">
-      <name>Stockhom village Bistro</name>
-      <category>bar</category>
+    <venue lat="59.3198089" lon="18.0688539">
+      <name>Akkurat</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="59.3403556" lon="18.0311352">
+      <name>Bagpipers's Inn</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="59.3340492" lon="18.0565703">
+      <name>Bar City Central</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="59.3327653" lon="18.0581755">
+      <name>Belgobaren</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="59.3321771" lon="18.0738967">
+      <name>Berns</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="59.3098213" lon="18.0758442">
+      <name>Brother Tuck</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="59.3333991" lon="18.0557611">
+      <name>Fasching</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="59.333999" lon="18.037233">
+      <name>Flying Scotsman Inn</name>
+      <category>pub</category>
     </venue>
   </nightlife>
 </city_report>

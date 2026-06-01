@@ -97,17 +97,28 @@ def fetch_venues(city: str) -> list:
             )
             r.raise_for_status()
             elements = r.json().get("elements", [])
+            # Calcola bbox attesa per filtrare venue con coordinate OSM errate
+            s = lat - LAT_OFFSET * 1.5
+            n = lat + LAT_OFFSET * 1.5
+            w = lon - LON_OFFSET * 1.5
+            e = lon + LON_OFFSET * 1.5
             venues = []
             for el in elements:
                 tags = el.get("tags", {})
                 name = tags.get("name", "").strip()
                 if not name:
                     continue
+                vlat, vlon = el.get("lat"), el.get("lon")
+                if vlat is None or vlon is None:
+                    continue
+                # Scarta venue con coordinate fuori dalla bbox della città
+                if not (s <= vlat <= n and w <= vlon <= e):
+                    continue
                 venues.append({
                     "name": name,
                     "category": tags.get("amenity", "bar"),
-                    "lat": el.get("lat"),
-                    "lon": el.get("lon"),
+                    "lat": vlat,
+                    "lon": vlon,
                 })
             venues.sort(key=lambda v: v["name"].lower())
             return venues[:MAX_VENUES]
