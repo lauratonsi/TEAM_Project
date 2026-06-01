@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="59.8">
   <metadata>
     <title>Budapest</title>
@@ -58,7 +58,41 @@
       <description>Large indoor market offering local food and crafts.</description>
     </attraction>
   </highlights>
-  <description>Con un'architettura maestosa e una rete termale storica, Budapest si conferma una delle capitali più accessibili e scenografiche. Le recenti riforme urbane mirano a potenziare il trasporto pubblico e la sicurezza dei quartieri centrali.</description>
+  <description>With majestic architecture and a historic thermal bath network, Budapest remains one of the most accessible and scenic capitals. Recent urban reforms aim to strengthen public transport and the safety of central districts.</description>
   <wiki_intro>Budapest is the capital city of Hungary. With a unique, youthful atmosphere, world-class classical music scene, a pulsating nightlife increasingly appreciated among European youth, and last but not least, an exceptional offer of natural thermal baths, Budapest is one of Europe's most delightful and enjoyable cities. Due to the exceedingly scenic setting, and its architecture it is nicknamed "Paris of the East". The modern-day Budapest results from the amalgamation of two historic cities lying right opposite each other over the Danube river. Buda is the western (right) bank side, with the high hill atop which the Buda castle sits. Pest is the relatively flat eastern (left) bank side, with the Parliament, numerous other stately buildings, and busy streets retaining all their 19th century architectural heritage. In 1987 Budapest was added to the for the cultural and architectural significance of the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue. Although Budapest is administratively divided into 23 numbered districts (always written in Roman numerals) it is colloquially often divided into parts, roughly corresponding to the two major cities of Buda and Pest, which it comprises. Listings of particular points of interests - museums, historic monuments, restaurants, bars, hotels, shopping opportunities and such - can be found in the following articles: Of course, quarters often offer their own atmosphere due to their history and inhabitants. Roughly speaking,...</wiki_intro>
   <landmark_image>assets/images/budapest.jpg</landmark_image>
+  <nightlife>
+    <venue lat="47.4978693" lon="19.068726">
+      <name>Akácfa söröző</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="47.5016715" lon="19.0397561">
+      <name>Belgian Brasserie Henri</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="47.5083433" lon="19.0547717">
+      <name>Bordizsár</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="47.4973062" lon="19.0389453">
+      <name>Budapest Terrace</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="47.50485" lon="19.0623146">
+      <name>Cactus Juice</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="47.520504" lon="19.0578122">
+      <name>Cafe Room</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="47.5037114" lon="19.0637906">
+      <name>Café Vian kávéház</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="47.5018029" lon="19.0553158">
+      <name>Captain Cook</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

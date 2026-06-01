@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="74.7">
   <metadata>
     <title>Ljubljana</title>
@@ -79,7 +79,41 @@
       <description>Iconic modernist building with a terrace cafe.</description>
     </attraction>
   </highlights>
-  <description>Eletta capitale verde d'Europa, Lubiana vanta un centro storico interamente pedonalizzato e un controllo della sicurezza d'eccellenza. Rappresenta il modello ideale di piccola capitale sostenibile e sicura.</description>
+  <description>Elected Green Capital of Europe, Ljubljana boasts a fully pedestrianized historic center and excellent security control. It represents the ideal model of a small sustainable and safe capital.</description>
   <wiki_intro>Ljubljana ("lee-oo-blee-AH-nuh") is the small but delightful capital of Slovenia. While the city's population had grown to 295,500 in 2020, the sights and amenities are concentrated in the charming old centre. It's full of artists, museums, and galleries, it's friendly and easy to reach, and it's a good base for exploring the rest of the country. Ljubljana stands at the entrance to a plain in an otherwise mountainous region, the confluence of several river valleys, so it's been a focus for settlement, trade and transport since prehistory. The first known city was the Roman Colonia Iulia Aemona; in medieval times it became Laibach and this name is still used by some German-speakers (as well as modern Slovenia's most notable cultural export, the band of that name). It fell under the gravity of Austria-Hungary and was a duchy or province of the Habsburg Empire until 1918. For much of the 20th century it was part of Yugoslavia until independence in 1991. This means that Ljubljana has simply been a regional capital, and has only been the national capital of a relatively small country for a few decades. The city landscape reflects this: it's compact and walkable, cosy and friendly, rather than grandiose. There are no vast ceremonial boulevards, bling palaces or imperial fists of fortification. It's not a place where you hop around ticking off must-see sights, like a bug with a selfie-stick for antennae. Relax, stroll and enjoy the atmosphere. No-one really knows how its current...</wiki_intro>
   <landmark_image>assets/images/ljubljana.jpg</landmark_image>
+  <nightlife>
+    <venue lat="46.0503648" lon="14.5053083">
+      <name>...In En Pelin</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="46.0557953" lon="14.5080434">
+      <name>10ka, klub smeha</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="46.0431596" lon="14.5032606">
+      <name>Apotheka</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="46.0450094" lon="14.5067236">
+      <name>Arhiv</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="46.0547833" lon="14.5087356">
+      <name>Bangladeš</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="46.0375051" lon="14.4584658">
+      <name>Bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="46.0514114" lon="14.5083244">
+      <name>Bar "Shakira"</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="46.066765" lon="14.491929">
+      <name>Bar 99</name>
+      <category>bar</category>
+    </venue>
+  </nightlife>
 </city_report>

@@ -1,4 +1,4 @@
-<!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?)>
+<!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?)>
 <!ATTLIST city_report 
     appeal_score CDATA #REQUIRED>
 
@@ -41,3 +41,9 @@
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT wiki_intro (#PCDATA)>
 <!ELEMENT landmark_image (#PCDATA)>
+
+<!ELEMENT nightlife (venue*)>
+<!ELEMENT venue (name, category)>
+<!ATTLIST venue lat CDATA #IMPLIED
+               lon CDATA #IMPLIED>
+<!ELEMENT category (#PCDATA)>

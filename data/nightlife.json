@@ -1,0 +1,1460 @@
+{
+  "Amsterdam": [
+    {
+      "name": "'Skek",
+      "category": "pub",
+      "lat": 52.3760606,
+      "lon": 4.9001777
+    },
+    {
+      "name": "'t Sluisje",
+      "category": "pub",
+      "lat": 52.3912178,
+      "lon": 4.9382277
+    },
+    {
+      "name": "Arie Op De Hoek",
+      "category": "pub",
+      "lat": 52.3566879,
+      "lon": 4.8904823
+    },
+    {
+      "name": "Bar Botanique Cafe Tropique",
+      "category": "pub",
+      "lat": 52.3634486,
+      "lon": 4.9303273
+    },
+    {
+      "name": "Bax",
+      "category": "pub",
+      "lat": 52.3656085,
+      "lon": 4.8679756
+    },
+    {
+      "name": "Bern",
+      "category": "pub",
+      "lat": 52.3724859,
+      "lon": 4.9009348
+    },
+    {
+      "name": "Brouwerij 't IJ",
+      "category": "pub",
+      "lat": 52.3666977,
+      "lon": 4.9263471
+    },
+    {
+      "name": "Cafe 't Podium",
+      "category": "pub",
+      "lat": 52.3526052,
+      "lon": 4.8908646
+    }
+  ],
+  "Athens": [
+    {
+      "name": "7 Jokers",
+      "category": "bar",
+      "lat": 37.9769161,
+      "lon": 23.732861
+    },
+    {
+      "name": "ACRO bar",
+      "category": "bar",
+      "lat": 37.975977,
+      "lon": 23.7161799
+    },
+    {
+      "name": "After Dark",
+      "category": "bar",
+      "lat": 37.9831211,
+      "lon": 23.7366482
+    },
+    {
+      "name": "Alphaville",
+      "category": "bar",
+      "lat": 37.9818864,
+      "lon": 23.7166125
+    },
+    {
+      "name": "Amora",
+      "category": "bar",
+      "lat": 37.9969291,
+      "lon": 23.723771
+    },
+    {
+      "name": "Anodos",
+      "category": "nightclub",
+      "lat": 37.9711118,
+      "lon": 23.7045141
+    },
+    {
+      "name": "Blue Bird",
+      "category": "bar",
+      "lat": 37.9742911,
+      "lon": 23.7316857
+    },
+    {
+      "name": "Box",
+      "category": "bar",
+      "lat": 37.984424,
+      "lon": 23.7345382
+    }
+  ],
+  "Berlin": [
+    {
+      "name": "Albert's",
+      "category": "bar",
+      "lat": 52.56382,
+      "lon": 13.328849
+    },
+    {
+      "name": "ASeven Club",
+      "category": "nightclub",
+      "lat": 52.5232268,
+      "lon": 13.4164254
+    },
+    {
+      "name": "Bar im Wasserturm",
+      "category": "bar",
+      "lat": 52.547659,
+      "lon": 13.4887104
+    },
+    {
+      "name": "Bei Schlawinchen",
+      "category": "pub",
+      "lat": 52.4927208,
+      "lon": 13.4217007
+    },
+    {
+      "name": "Bellboy Berlin",
+      "category": "bar",
+      "lat": 52.512055,
+      "lon": 13.3918753
+    },
+    {
+      "name": "Blaumilchkanal",
+      "category": "pub",
+      "lat": 52.5511652,
+      "lon": 13.4043646
+    },
+    {
+      "name": "booze bar berlin",
+      "category": "bar",
+      "lat": 52.5127422,
+      "lon": 13.458706
+    },
+    {
+      "name": "Bären-Eck",
+      "category": "pub",
+      "lat": 52.5700374,
+      "lon": 13.3221149
+    }
+  ],
+  "Bratislava": [
+    {
+      "name": "Amajka",
+      "category": "pub",
+      "lat": 48.1806419,
+      "lon": 17.1845266
+    },
+    {
+      "name": "Americke pub",
+      "category": "pub",
+      "lat": 48.1515503,
+      "lon": 17.1184819
+    },
+    {
+      "name": "Bastion",
+      "category": "pub",
+      "lat": 48.1590046,
+      "lon": 17.1161827
+    },
+    {
+      "name": "Bernard pri Lýceu",
+      "category": "pub",
+      "lat": 48.1475592,
+      "lon": 17.1063371
+    },
+    {
+      "name": "Black Rose",
+      "category": "pub",
+      "lat": 48.1786793,
+      "lon": 17.0505322
+    },
+    {
+      "name": "C2",
+      "category": "nightclub",
+      "lat": 48.1032675,
+      "lon": 17.040655
+    },
+    {
+      "name": "Chilli Pub",
+      "category": "pub",
+      "lat": 48.1527045,
+      "lon": 17.0863227
+    },
+    {
+      "name": "Coral",
+      "category": "pub",
+      "lat": 48.1623963,
+      "lon": 17.0499081
+    }
+  ],
+  "Brussels": [
+    {
+      "name": "'t Amusement",
+      "category": "pub",
+      "lat": 50.8945197,
+      "lon": 4.4338512
+    },
+    {
+      "name": "'t Zuidpaleis",
+      "category": "bar",
+      "lat": 50.8474396,
+      "lon": 4.3496613
+    },
+    {
+      "name": "Au 140",
+      "category": "pub",
+      "lat": 50.9041033,
+      "lon": 4.304737
+    },
+    {
+      "name": "Au Bon Coin",
+      "category": "pub",
+      "lat": 50.8962835,
+      "lon": 4.3927382
+    },
+    {
+      "name": "Au Bon Coin",
+      "category": "pub",
+      "lat": 50.8854765,
+      "lon": 4.3180751
+    },
+    {
+      "name": "BBP Bailli",
+      "category": "pub",
+      "lat": 50.8272547,
+      "lon": 4.3633948
+    },
+    {
+      "name": "Belgica",
+      "category": "bar",
+      "lat": 50.8464012,
+      "lon": 4.3497269
+    },
+    {
+      "name": "Brasserie Verschueren",
+      "category": "pub",
+      "lat": 50.8302079,
+      "lon": 4.3442551
+    }
+  ],
+  "Bucharest": [
+    {
+      "name": "112 Bar",
+      "category": "bar",
+      "lat": 44.4421391,
+      "lon": 26.0944235
+    },
+    {
+      "name": "1974 Niște Domni și Fiii",
+      "category": "bar",
+      "lat": 44.4307357,
+      "lon": 26.1018712
+    },
+    {
+      "name": "1UP Gamers Pub",
+      "category": "pub",
+      "lat": 44.4449566,
+      "lon": 26.0962978
+    },
+    {
+      "name": "Abel's Wine Bar",
+      "category": "bar",
+      "lat": 44.4300616,
+      "lon": 26.0973551
+    },
+    {
+      "name": "Agartha Club",
+      "category": "nightclub",
+      "lat": 44.4306672,
+      "lon": 26.1013188
+    },
+    {
+      "name": "Alan Dala",
+      "category": "bar",
+      "lat": 44.4476748,
+      "lon": 26.1060993
+    },
+    {
+      "name": "Alexa",
+      "category": "bar",
+      "lat": 44.4130209,
+      "lon": 26.1688469
+    },
+    {
+      "name": "Altfel",
+      "category": "bar",
+      "lat": 44.4312812,
+      "lon": 26.0999145
+    }
+  ],
+  "Budapest": [
+    {
+      "name": "Akácfa söröző",
+      "category": "pub",
+      "lat": 47.4978693,
+      "lon": 19.068726
+    },
+    {
+      "name": "Belgian Brasserie Henri",
+      "category": "pub",
+      "lat": 47.5016715,
+      "lon": 19.0397561
+    },
+    {
+      "name": "Bordizsár",
+      "category": "pub",
+      "lat": 47.5083433,
+      "lon": 19.0547717
+    },
+    {
+      "name": "Budapest Terrace",
+      "category": "pub",
+      "lat": 47.4973062,
+      "lon": 19.0389453
+    },
+    {
+      "name": "Cactus Juice",
+      "category": "bar",
+      "lat": 47.50485,
+      "lon": 19.0623146
+    },
+    {
+      "name": "Cafe Room",
+      "category": "pub",
+      "lat": 47.520504,
+      "lon": 19.0578122
+    },
+    {
+      "name": "Café Vian kávéház",
+      "category": "pub",
+      "lat": 47.5037114,
+      "lon": 19.0637906
+    },
+    {
+      "name": "Captain Cook",
+      "category": "pub",
+      "lat": 47.5018029,
+      "lon": 19.0553158
+    }
+  ],
+  "Copenhagen": [
+    {
+      "name": "ALEFARM NBRO",
+      "category": "bar",
+      "lat": 55.6871555,
+      "lon": 12.5621011
+    },
+    {
+      "name": "Alléenberg",
+      "category": "pub",
+      "lat": 55.6752681,
+      "lon": 12.5328906
+    },
+    {
+      "name": "Bankeråt",
+      "category": "pub",
+      "lat": 55.6834082,
+      "lon": 12.5651843
+    },
+    {
+      "name": "Bartof Café",
+      "category": "pub",
+      "lat": 55.6836628,
+      "lon": 12.5245604
+    },
+    {
+      "name": "Black Swan",
+      "category": "bar",
+      "lat": 55.6864894,
+      "lon": 12.5874331
+    },
+    {
+      "name": "Blågårds Apotek",
+      "category": "bar",
+      "lat": 55.6864556,
+      "lon": 12.5579695
+    },
+    {
+      "name": "Bodega 48",
+      "category": "pub",
+      "lat": 55.6814563,
+      "lon": 12.5495147
+    },
+    {
+      "name": "Bodega Teglskægget",
+      "category": "bar",
+      "lat": 55.6696051,
+      "lon": 12.4918721
+    }
+  ],
+  "Dublin": [
+    {
+      "name": "Anseo",
+      "category": "pub",
+      "lat": 53.3353226,
+      "lon": -6.264995
+    },
+    {
+      "name": "Arlington Bar & Restaurant",
+      "category": "pub",
+      "lat": 53.3472522,
+      "lon": -6.2609325
+    },
+    {
+      "name": "Bar@Tolka",
+      "category": "bar",
+      "lat": 53.3676758,
+      "lon": -6.2512678
+    },
+    {
+      "name": "Brady’s",
+      "category": "pub",
+      "lat": 53.3098046,
+      "lon": -6.2841368
+    },
+    {
+      "name": "Club M",
+      "category": "nightclub",
+      "lat": 53.3448128,
+      "lon": -6.2623304
+    },
+    {
+      "name": "Coman's",
+      "category": "pub",
+      "lat": 53.312007,
+      "lon": -6.2748056
+    },
+    {
+      "name": "Crowe’s",
+      "category": "pub",
+      "lat": 53.3291081,
+      "lon": -6.2305605
+    },
+    {
+      "name": "Fallon’s",
+      "category": "pub",
+      "lat": 53.3389839,
+      "lon": -6.2733761
+    }
+  ],
+  "Helsinki": [
+    {
+      "name": "Alcatraz Club",
+      "category": "nightclub",
+      "lat": 60.1677068,
+      "lon": 24.9363589
+    },
+    {
+      "name": "Amsterdam",
+      "category": "pub",
+      "lat": 60.1625836,
+      "lon": 24.9143167
+    },
+    {
+      "name": "Anna.K",
+      "category": "pub",
+      "lat": 60.1672061,
+      "lon": 24.9366771
+    },
+    {
+      "name": "Backas Bar",
+      "category": "pub",
+      "lat": 60.19261,
+      "lon": 24.9612206
+    },
+    {
+      "name": "Bar 36",
+      "category": "pub",
+      "lat": 60.1952162,
+      "lon": 24.8999173
+    },
+    {
+      "name": "Bar Chaplin",
+      "category": "pub",
+      "lat": 60.1715906,
+      "lon": 24.9463852
+    },
+    {
+      "name": "Bar Favela",
+      "category": "bar",
+      "lat": 60.1719895,
+      "lon": 24.9204769
+    },
+    {
+      "name": "Bar Keskari",
+      "category": "pub",
+      "lat": 60.2296028,
+      "lon": 24.896449
+    }
+  ],
+  "Lisbon": [
+    {
+      "name": "3D",
+      "category": "bar",
+      "lat": 38.7043089,
+      "lon": -9.1749231
+    },
+    {
+      "name": "A Tasca do Chico",
+      "category": "pub",
+      "lat": 38.7116311,
+      "lon": -9.144132
+    },
+    {
+      "name": "A Tentadora",
+      "category": "pub",
+      "lat": 38.6809443,
+      "lon": -9.1539133
+    },
+    {
+      "name": "Apprazível",
+      "category": "bar",
+      "lat": 38.7105866,
+      "lon": -9.1401197
+    },
+    {
+      "name": "B'leza",
+      "category": "nightclub",
+      "lat": 38.7054835,
+      "lon": -9.1473475
+    },
+    {
+      "name": "Bar Arché Cohiba",
+      "category": "pub",
+      "lat": 38.7128224,
+      "lon": -9.1437112
+    },
+    {
+      "name": "Bar Charh",
+      "category": "bar",
+      "lat": 38.7352581,
+      "lon": -9.1555128
+    },
+    {
+      "name": "Bicaense",
+      "category": "bar",
+      "lat": 38.7100003,
+      "lon": -9.1451806
+    }
+  ],
+  "Ljubljana": [
+    {
+      "name": "...In En Pelin",
+      "category": "bar",
+      "lat": 46.0503648,
+      "lon": 14.5053083
+    },
+    {
+      "name": "10ka, klub smeha",
+      "category": "pub",
+      "lat": 46.0557953,
+      "lon": 14.5080434
+    },
+    {
+      "name": "Apotheka",
+      "category": "bar",
+      "lat": 46.0431596,
+      "lon": 14.5032606
+    },
+    {
+      "name": "Arhiv",
+      "category": "pub",
+      "lat": 46.0450094,
+      "lon": 14.5067236
+    },
+    {
+      "name": "Bangladeš",
+      "category": "pub",
+      "lat": 46.0547833,
+      "lon": 14.5087356
+    },
+    {
+      "name": "Bar",
+      "category": "bar",
+      "lat": 46.0375051,
+      "lon": 14.4584658
+    },
+    {
+      "name": "Bar \"Shakira\"",
+      "category": "bar",
+      "lat": 46.0514114,
+      "lon": 14.5083244
+    },
+    {
+      "name": "Bar 99",
+      "category": "bar",
+      "lat": 46.066765,
+      "lon": 14.491929
+    }
+  ],
+  "London": [
+    {
+      "name": "26 Furnival Street",
+      "category": "pub",
+      "lat": 51.5167141,
+      "lon": -0.1103638
+    },
+    {
+      "name": "Aces and Eights Saloon Bar",
+      "category": "pub",
+      "lat": 51.5566538,
+      "lon": -0.1383959
+    },
+    {
+      "name": "All Bar One",
+      "category": "bar",
+      "lat": 51.5163376,
+      "lon": -0.119321
+    },
+    {
+      "name": "Bar Story",
+      "category": "bar",
+      "lat": 51.4695231,
+      "lon": -0.0698846
+    },
+    {
+      "name": "Canalside Bar",
+      "category": "bar",
+      "lat": 51.5411992,
+      "lon": -0.1458705
+    },
+    {
+      "name": "Crown & Cushion",
+      "category": "pub",
+      "lat": 51.4994616,
+      "lon": -0.1139642
+    },
+    {
+      "name": "Duke of St. Albans",
+      "category": "pub",
+      "lat": 51.5614305,
+      "lon": -0.1504467
+    },
+    {
+      "name": "Fox on the Green",
+      "category": "bar",
+      "lat": 51.536675,
+      "lon": -0.1031148
+    }
+  ],
+  "Luxembourg": [
+    {
+      "name": ":buvette",
+      "category": "bar",
+      "lat": 49.6017703,
+      "lon": 6.1365904
+    },
+    {
+      "name": "Albicastrense",
+      "category": "pub",
+      "lat": 49.5977436,
+      "lon": 6.1348685
+    },
+    {
+      "name": "Alison café",
+      "category": "pub",
+      "lat": 49.6038566,
+      "lon": 6.1298819
+    },
+    {
+      "name": "Am klenge Bistro BTwo",
+      "category": "pub",
+      "lat": 49.594574,
+      "lon": 6.1407228
+    },
+    {
+      "name": "Art Scène",
+      "category": "pub",
+      "lat": 49.6113179,
+      "lon": 6.1337032
+    },
+    {
+      "name": "Au Bon Vivant",
+      "category": "pub",
+      "lat": 49.595316,
+      "lon": 6.1374921
+    },
+    {
+      "name": "Bar Liberty",
+      "category": "pub",
+      "lat": 49.6238045,
+      "lon": 6.1054447
+    },
+    {
+      "name": "Barbarella",
+      "category": "pub",
+      "lat": 49.6008067,
+      "lon": 6.130821
+    }
+  ],
+  "Madrid": [
+    {
+      "name": "Bar Barocco",
+      "category": "bar",
+      "lat": 40.4130638,
+      "lon": -3.7129344
+    },
+    {
+      "name": "Bar Díaz",
+      "category": "pub",
+      "lat": 40.4039506,
+      "lon": -3.7014278
+    },
+    {
+      "name": "Bar la familia",
+      "category": "pub",
+      "lat": 40.4048223,
+      "lon": -3.6960055
+    },
+    {
+      "name": "Bar Teide",
+      "category": "pub",
+      "lat": 40.4041585,
+      "lon": -3.6959215
+    },
+    {
+      "name": "Café Melo's",
+      "category": "pub",
+      "lat": 40.4097328,
+      "lon": -3.7010866
+    },
+    {
+      "name": "Casablanca",
+      "category": "pub",
+      "lat": 40.4108575,
+      "lon": -3.6957127
+    },
+    {
+      "name": "Cervecería San Andrés",
+      "category": "pub",
+      "lat": 40.4118925,
+      "lon": -3.7109337
+    },
+    {
+      "name": "Cervercería Erte",
+      "category": "pub",
+      "lat": 40.4192413,
+      "lon": -3.7074836
+    }
+  ],
+  "Nicosia": [
+    {
+      "name": "Abbey Garden",
+      "category": "pub",
+      "lat": 35.1596682,
+      "lon": 33.3561106
+    },
+    {
+      "name": "Allou",
+      "category": "pub",
+      "lat": 35.1636055,
+      "lon": 33.3584549
+    },
+    {
+      "name": "Babylon",
+      "category": "pub",
+      "lat": 35.1630446,
+      "lon": 33.3551565
+    },
+    {
+      "name": "BARaki Live",
+      "category": "bar",
+      "lat": 35.1630898,
+      "lon": 33.3585924
+    },
+    {
+      "name": "Blurry Lights",
+      "category": "bar",
+      "lat": 35.1646859,
+      "lon": 33.3605366
+    },
+    {
+      "name": "Brewfellas",
+      "category": "bar",
+      "lat": 35.1737286,
+      "lon": 33.3612322
+    },
+    {
+      "name": "Caprice",
+      "category": "pub",
+      "lat": 35.168404,
+      "lon": 33.3592474
+    },
+    {
+      "name": "Carry Pride",
+      "category": "bar",
+      "lat": 35.1626192,
+      "lon": 33.3541143
+    }
+  ],
+  "Oslo": [
+    {
+      "name": "Alf nabolagsbar",
+      "category": "bar",
+      "lat": 59.9274649,
+      "lon": 10.7510975
+    },
+    {
+      "name": "Bar Bellini",
+      "category": "bar",
+      "lat": 59.9236161,
+      "lon": 10.7573918
+    },
+    {
+      "name": "Bar Boca",
+      "category": "bar",
+      "lat": 59.9252056,
+      "lon": 10.7593699
+    },
+    {
+      "name": "Beer Palace",
+      "category": "pub",
+      "lat": 59.9105204,
+      "lon": 10.7261726
+    },
+    {
+      "name": "Brødrene Bergh",
+      "category": "bar",
+      "lat": 59.9141,
+      "lon": 10.738227
+    },
+    {
+      "name": "Buen Bar",
+      "category": "bar",
+      "lat": 59.9297631,
+      "lon": 10.7803576
+    },
+    {
+      "name": "Bydelskroa",
+      "category": "pub",
+      "lat": 59.9127213,
+      "lon": 10.7734065
+    },
+    {
+      "name": "Cacadou",
+      "category": "pub",
+      "lat": 59.9168848,
+      "lon": 10.7532829
+    }
+  ],
+  "Paris": [
+    {
+      "name": "25° Est",
+      "category": "bar",
+      "lat": 48.883838,
+      "lon": 2.3707362
+    },
+    {
+      "name": "Atelier 103",
+      "category": "pub",
+      "lat": 48.8632455,
+      "lon": 2.3860891
+    },
+    {
+      "name": "Bar Hemingway",
+      "category": "bar",
+      "lat": 48.8687856,
+      "lon": 2.3275106
+    },
+    {
+      "name": "Bar nouveau",
+      "category": "pub",
+      "lat": 48.861504,
+      "lon": 2.3575623
+    },
+    {
+      "name": "Café Charbon",
+      "category": "bar",
+      "lat": 48.8658567,
+      "lon": 2.3778299
+    },
+    {
+      "name": "Café Chéri(e)",
+      "category": "bar",
+      "lat": 48.874105,
+      "lon": 2.3752878
+    },
+    {
+      "name": "Ces années là",
+      "category": "bar",
+      "lat": 48.8474549,
+      "lon": 2.3471635
+    },
+    {
+      "name": "Drunken Bunny",
+      "category": "pub",
+      "lat": 48.8429884,
+      "lon": 2.3495493
+    }
+  ],
+  "Prague": [
+    {
+      "name": "Absintherie Franz Kafka",
+      "category": "bar",
+      "lat": 50.0874351,
+      "lon": 14.4193478
+    },
+    {
+      "name": "Belzepub",
+      "category": "pub",
+      "lat": 50.0824881,
+      "lon": 14.444303
+    },
+    {
+      "name": "Ber.lin Bar",
+      "category": "bar",
+      "lat": 50.0747455,
+      "lon": 14.431049
+    },
+    {
+      "name": "Café-Bar Duende",
+      "category": "bar",
+      "lat": 50.0842199,
+      "lon": 14.4142283
+    },
+    {
+      "name": "Club Montana",
+      "category": "pub",
+      "lat": 50.0999349,
+      "lon": 14.4879307
+    },
+    {
+      "name": "Craft Beer Spot",
+      "category": "bar",
+      "lat": 50.0804853,
+      "lon": 14.405884
+    },
+    {
+      "name": "District 3 Bar",
+      "category": "bar",
+      "lat": 50.0862561,
+      "lon": 14.4416022
+    },
+    {
+      "name": "Hostinec \"u Anduly\"",
+      "category": "pub",
+      "lat": 50.086847,
+      "lon": 14.3760312
+    }
+  ],
+  "Reykjavik": [
+    {
+      "name": "American Bar",
+      "category": "pub",
+      "lat": 64.1476951,
+      "lon": -21.940116
+    },
+    {
+      "name": "Billiardbarinn",
+      "category": "pub",
+      "lat": 64.1287706,
+      "lon": -21.8660783
+    },
+    {
+      "name": "Bird",
+      "category": "pub",
+      "lat": 64.1486444,
+      "lon": -21.9398559
+    },
+    {
+      "name": "Café Bar 8",
+      "category": "bar",
+      "lat": 64.1052642,
+      "lon": -21.8150646
+    },
+    {
+      "name": "Catalina",
+      "category": "pub",
+      "lat": 64.1126745,
+      "lon": -21.9022563
+    },
+    {
+      "name": "Classik Rock",
+      "category": "pub",
+      "lat": 64.1388421,
+      "lon": -21.885631
+    },
+    {
+      "name": "Crystal Champagne Bar",
+      "category": "pub",
+      "lat": 64.1487969,
+      "lon": -21.9404036
+    },
+    {
+      "name": "Den Danske Kro",
+      "category": "pub",
+      "lat": 64.1463823,
+      "lon": -21.9336621
+    }
+  ],
+  "Riga": [
+    {
+      "name": "13 krēsli",
+      "category": "pub",
+      "lat": 56.9492836,
+      "lon": 24.105903
+    },
+    {
+      "name": "Aka Latviešu virtuve",
+      "category": "bar",
+      "lat": 56.9469015,
+      "lon": 24.1127752
+    },
+    {
+      "name": "Alus Dārzs",
+      "category": "bar",
+      "lat": 56.9553822,
+      "lon": 24.1743201
+    },
+    {
+      "name": "Black dragon",
+      "category": "bar",
+      "lat": 56.9263963,
+      "lon": 24.1701644
+    },
+    {
+      "name": "Blues House",
+      "category": "bar",
+      "lat": 56.9560192,
+      "lon": 24.1093673
+    },
+    {
+      "name": "Bon-Vivant",
+      "category": "pub",
+      "lat": 56.9466142,
+      "lon": 24.1103808
+    },
+    {
+      "name": "Bruklinas krogs un viskija bārs",
+      "category": "pub",
+      "lat": 56.9535179,
+      "lon": 24.127078
+    },
+    {
+      "name": "Cabo cafe",
+      "category": "bar",
+      "lat": 57.0045916,
+      "lon": 24.1767692
+    }
+  ],
+  "Rome": [
+    {
+      "name": "404 Name Not Found",
+      "category": "pub",
+      "lat": 41.8876051,
+      "lon": 12.4771625
+    },
+    {
+      "name": "ABC",
+      "category": "pub",
+      "lat": 41.9622761,
+      "lon": 12.5186845
+    },
+    {
+      "name": "Alexanderplatz",
+      "category": "bar",
+      "lat": 41.9090849,
+      "lon": 12.4536435
+    },
+    {
+      "name": "Art Two",
+      "category": "bar",
+      "lat": 41.889666,
+      "lon": 12.4690788
+    },
+    {
+      "name": "Bar Cornetteria",
+      "category": "pub",
+      "lat": 41.871175,
+      "lon": 12.4790787
+    },
+    {
+      "name": "Bar dei Cesaroni",
+      "category": "bar",
+      "lat": 41.8627773,
+      "lon": 12.4899263
+    },
+    {
+      "name": "Bar San Calisto",
+      "category": "bar",
+      "lat": 41.8890547,
+      "lon": 12.4707375
+    },
+    {
+      "name": "Baraka Bistrot",
+      "category": "pub",
+      "lat": 41.89224,
+      "lon": 12.5661173
+    }
+  ],
+  "Sofia": [
+    {
+      "name": "120ска",
+      "category": "bar",
+      "lat": 42.647392,
+      "lon": 23.3725373
+    },
+    {
+      "name": "3 oz. bar",
+      "category": "bar",
+      "lat": 42.6862595,
+      "lon": 23.3220992
+    },
+    {
+      "name": "Ale House",
+      "category": "pub",
+      "lat": 42.6900767,
+      "lon": 23.3204954
+    },
+    {
+      "name": "Art Club",
+      "category": "bar",
+      "lat": 42.6902288,
+      "lon": 23.3393279
+    },
+    {
+      "name": "Baskerville",
+      "category": "bar",
+      "lat": 42.6940747,
+      "lon": 23.3186521
+    },
+    {
+      "name": "Caligo",
+      "category": "bar",
+      "lat": 42.6913226,
+      "lon": 23.3205792
+    },
+    {
+      "name": "Club 303",
+      "category": "bar",
+      "lat": 42.6869936,
+      "lon": 23.2395698
+    },
+    {
+      "name": "Coda",
+      "category": "bar",
+      "lat": 42.6946385,
+      "lon": 23.3190705
+    }
+  ],
+  "Stockholm": [
+    {
+      "name": "Stockhom village Bistro",
+      "category": "bar",
+      "lat": 44.4837527,
+      "lon": -92.2618523
+    }
+  ],
+  "Tallinn": [
+    {
+      "name": "Baila",
+      "category": "bar",
+      "lat": 59.4358937,
+      "lon": 24.747503
+    },
+    {
+      "name": "Black Mount Pubi",
+      "category": "bar",
+      "lat": 59.408641,
+      "lon": 24.6746628
+    },
+    {
+      "name": "Borsi",
+      "category": "bar",
+      "lat": 59.4388359,
+      "lon": 24.7439968
+    },
+    {
+      "name": "Butterfly Lounge",
+      "category": "bar",
+      "lat": 59.4376116,
+      "lon": 24.7518225
+    },
+    {
+      "name": "Club Hollywood",
+      "category": "nightclub",
+      "lat": 59.4351515,
+      "lon": 24.7455099
+    },
+    {
+      "name": "Club Münt",
+      "category": "nightclub",
+      "lat": 59.4354098,
+      "lon": 24.7474924
+    },
+    {
+      "name": "Cubano Baar",
+      "category": "bar",
+      "lat": 59.4352764,
+      "lon": 24.7323042
+    },
+    {
+      "name": "DM Baar",
+      "category": "pub",
+      "lat": 59.4375887,
+      "lon": 24.744038
+    }
+  ],
+  "Valletta": [
+    {
+      "name": "222 Wine Bar",
+      "category": "bar",
+      "lat": 35.8999391,
+      "lon": 14.5088802
+    },
+    {
+      "name": "Bar Native",
+      "category": "bar",
+      "lat": 35.9244566,
+      "lon": 14.488431
+    },
+    {
+      "name": "Bellini",
+      "category": "bar",
+      "lat": 35.9222347,
+      "lon": 14.4910566
+    },
+    {
+      "name": "Black Gold Saloon Malta",
+      "category": "bar",
+      "lat": 35.9081685,
+      "lon": 14.5006288
+    },
+    {
+      "name": "Butterfly Bar",
+      "category": "bar",
+      "lat": 35.8951718,
+      "lon": 14.4656418
+    },
+    {
+      "name": "Chequers",
+      "category": "bar",
+      "lat": 35.9080856,
+      "lon": 14.5004518
+    },
+    {
+      "name": "City of London",
+      "category": "pub",
+      "lat": 35.9158518,
+      "lon": 14.4933316
+    },
+    {
+      "name": "Club 22",
+      "category": "nightclub",
+      "lat": 35.9221301,
+      "lon": 14.4923768
+    }
+  ],
+  "Vienna": [
+    {
+      "name": "'s Beisl am Eck",
+      "category": "pub",
+      "lat": 48.2177686,
+      "lon": 16.3374533
+    },
+    {
+      "name": "'s Stammbeisl",
+      "category": "pub",
+      "lat": 48.2060233,
+      "lon": 16.3865177
+    },
+    {
+      "name": "6er Haus",
+      "category": "pub",
+      "lat": 48.2171591,
+      "lon": 16.3774265
+    },
+    {
+      "name": "Anton Frank - cafe bar",
+      "category": "pub",
+      "lat": 48.2290642,
+      "lon": 16.3437056
+    },
+    {
+      "name": "BackBone Irish Pub",
+      "category": "pub",
+      "lat": 48.2044132,
+      "lon": 16.3432618
+    },
+    {
+      "name": "Bockshorn Irish Pub",
+      "category": "pub",
+      "lat": 48.2098841,
+      "lon": 16.3677
+    },
+    {
+      "name": "Brendl",
+      "category": "pub",
+      "lat": 48.2160352,
+      "lon": 16.3784001
+    },
+    {
+      "name": "Bricks",
+      "category": "nightclub",
+      "lat": 48.218708,
+      "lon": 16.3810931
+    }
+  ],
+  "Vilnius": [
+    {
+      "name": "13 statinių",
+      "category": "bar",
+      "lat": 54.6840708,
+      "lon": 25.2903339
+    },
+    {
+      "name": "Akivarai",
+      "category": "pub",
+      "lat": 54.6888598,
+      "lon": 25.2757378
+    },
+    {
+      "name": "Akvariumas",
+      "category": "pub",
+      "lat": 54.6797935,
+      "lon": 25.277749
+    },
+    {
+      "name": "Alaus biblioteka",
+      "category": "pub",
+      "lat": 54.6799771,
+      "lon": 25.2787171
+    },
+    {
+      "name": "Alaus namai",
+      "category": "pub",
+      "lat": 54.6936373,
+      "lon": 25.2689725
+    },
+    {
+      "name": "Alaus studija",
+      "category": "pub",
+      "lat": 54.7079381,
+      "lon": 25.2956792
+    },
+    {
+      "name": "Amatininkai",
+      "category": "pub",
+      "lat": 54.679263,
+      "lon": 25.287105
+    },
+    {
+      "name": "Apuokas",
+      "category": "pub",
+      "lat": 54.6764695,
+      "lon": 25.2895043
+    }
+  ],
+  "Warsaw": [
+    {
+      "name": "Amarant",
+      "category": "pub",
+      "lat": 52.2071732,
+      "lon": 20.9724513
+    },
+    {
+      "name": "Azyl",
+      "category": "bar",
+      "lat": 52.2294067,
+      "lon": 21.0147013
+    },
+    {
+      "name": "Bar pod Kufelkiem",
+      "category": "pub",
+      "lat": 52.2480169,
+      "lon": 21.0455613
+    },
+    {
+      "name": "Beirut",
+      "category": "bar",
+      "lat": 52.2247707,
+      "lon": 21.0122492
+    },
+    {
+      "name": "Bez Słowa",
+      "category": "pub",
+      "lat": 52.1737627,
+      "lon": 21.0450075
+    },
+    {
+      "name": "Bluesky",
+      "category": "bar",
+      "lat": 52.2400168,
+      "lon": 21.0765039
+    },
+    {
+      "name": "Cafe Foksal",
+      "category": "pub",
+      "lat": 52.2334668,
+      "lon": 21.0202035
+    },
+    {
+      "name": "Cafe Rock'n'Roll",
+      "category": "pub",
+      "lat": 52.2178857,
+      "lon": 21.0170602
+    }
+  ],
+  "Zagreb": [
+    {
+      "name": "& More by Sheraton bar",
+      "category": "bar",
+      "lat": 45.8074304,
+      "lon": 15.9841948
+    },
+    {
+      "name": "808 bar",
+      "category": "bar",
+      "lat": 45.8007542,
+      "lon": 15.9723829
+    },
+    {
+      "name": "A most unusual garden",
+      "category": "bar",
+      "lat": 45.7872642,
+      "lon": 15.9529793
+    },
+    {
+      "name": "Absolut bar",
+      "category": "bar",
+      "lat": 45.7859116,
+      "lon": 15.9528122
+    },
+    {
+      "name": "After Eight",
+      "category": "bar",
+      "lat": 45.7957109,
+      "lon": 15.9000845
+    },
+    {
+      "name": "Akunbar",
+      "category": "bar",
+      "lat": 45.8088727,
+      "lon": 15.9973586
+    },
+    {
+      "name": "Ambasada",
+      "category": "pub",
+      "lat": 45.8077358,
+      "lon": 15.9965759
+    },
+    {
+      "name": "Anera",
+      "category": "pub",
+      "lat": 45.7961008,
+      "lon": 15.9697694
+    }
+  ]
+}

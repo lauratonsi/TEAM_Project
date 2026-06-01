@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="59.1">
   <metadata>
     <title>Sofia</title>
@@ -79,7 +79,41 @@
       <description>Architectural ensemble of Socialist Classicism.</description>
     </attraction>
   </highlights>
-  <description>Situata ai piedi del monte Vitosha, Sofia offre costi di vita imbattibili e un accesso immediato alla natura montana. È una delle capitali emergenti con il più alto potenziale di crescita economica e urbana.</description>
+  <description>Located at the foot of Mount Vitosha, Sofia offers unbeatable living costs and immediate access to mountain nature. It is one of the emerging capitals with the highest potential for economic and urban growth.</description>
   <wiki_intro>Sofia (София) is the capital and largest city of Bulgaria, with about 2 million citizens (including suburbs). It is a dynamic European capital, distinguished by its unique combination of European and communist-style architecture as well as many beautiful Orthodox churches, including the grand Alexander Nevsky Cathedral and the medieval frescos of Boyana Church (a UNESCO World Heritage Site). Furthermore, it claims to be one of the few European capitals with beautiful scenery and a developed ski-resort so close to it, the Vitosha mountain. The city has had several names over the past 2,500 years: the Romans called it Serdika when they took it from a Thracian tribe with a similar name, the Slavs called it Sredets when they integrated it into the first Bulgarian Empire, and the Ottomans called it Sofia, the Greek word for "wisdom", when they made it their base for the Balkans. You can still find remnants from each of these societies in parts of the city. People first came here for the hot water springs that still flow abundantly in the centre of the city. Many of the later Roman emperors took a liking to these thermal baths, and developed the city into a regional capital; Emperor Constantine even considered building his imperial capital here instead of Constantinople. From there, Sofia has had ups and downs; sacked by the Huns, then a fortress for the first Bulgarians, then sieged and rebuilt by the Ottomans. The decline of Sofia towards the end of the Ottoman Empire was...</wiki_intro>
   <landmark_image>assets/images/sofia.jpg</landmark_image>
+  <nightlife>
+    <venue lat="42.647392" lon="23.3725373">
+      <name>120ска</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="42.6862595" lon="23.3220992">
+      <name>3 oz. bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="42.6900767" lon="23.3204954">
+      <name>Ale House</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="42.6902288" lon="23.3393279">
+      <name>Art Club</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="42.6940747" lon="23.3186521">
+      <name>Baskerville</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="42.6913226" lon="23.3205792">
+      <name>Caligo</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="42.6869936" lon="23.2395698">
+      <name>Club 303</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="42.6946385" lon="23.3190705">
+      <name>Coda</name>
+      <category>bar</category>
+    </venue>
+  </nightlife>
 </city_report>

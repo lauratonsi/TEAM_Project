@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="65.2">
   <metadata>
     <title>Madrid</title>
@@ -80,7 +80,41 @@
       <description>Quartiere di Madrid.</description>
     </district>
   </districts>
-  <description>Famosa per la sua energia sociale e i grandi viali alberati, Madrid sta investendo pesantemente in 'foreste urbane' per combattere il calore. La sua accessibilità e la vita notturna sicura la rendono una meta imperdibile.</description>
+  <description>Famous for its social energy and broad tree-lined avenues, Madrid is investing heavily in 'urban forests' to counter heat. Its accessibility and safe nightlife make it an unmissable destination.</description>
   <wiki_intro>Madrid is Spain's capital and largest city. A city that has been marked by Spain's varied and tumultuous history, Madrid has some of Europe's most impressive cultural and architectural heritage, which includes grand avenues, plazas, buildings and monuments, world-class art galleries and museums, highly popular football teams, and cultural events of international fame for everyone. Madrid is also renowned for gastronomic delights and a nightlife lasting up until dawn. Madrid is more often than not disregarded by tourists who gravitate to other parts of the country. But though it may appear to lack some of the breathtaking architecture of Barcelona, the frenetic energy of London and Berlin, or the flair of Paris and Rome, Madrid is a massive treasure chest that has something for those who are willing to get off the beaten tourist tracks. It might not be the most sought-after city, but those who seek out what Madrid has to offer will discover a city of unexpected beauty.  Madrid has over 3.4 million residents within the city limits and 7 million people live in the autonomous Community of Madrid region (as of 2025). Madrid is just northeast of the geographical centre of the Iberian Peninsula, in the middle of the Spanish central Castillian plateau (Meseta central), at an average altitude of . Nearly all of the most famous tourist areas are in the centre of the city including Puerta del Sol, Plaza Mayor, Palacio Real, and Plaza de Colón. The major streets in Madrid include the...</wiki_intro>
   <landmark_image>assets/images/madrid.jpg</landmark_image>
+  <nightlife>
+    <venue lat="40.4130638" lon="-3.7129344">
+      <name>Bar Barocco</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="40.4039506" lon="-3.7014278">
+      <name>Bar Díaz</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="40.4048223" lon="-3.6960055">
+      <name>Bar la familia</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="40.4041585" lon="-3.6959215">
+      <name>Bar Teide</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="40.4097328" lon="-3.7010866">
+      <name>Café Melo's</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="40.4108575" lon="-3.6957127">
+      <name>Casablanca</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="40.4118925" lon="-3.7109337">
+      <name>Cervecería San Andrés</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="40.4192413" lon="-3.7074836">
+      <name>Cervercería Erte</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

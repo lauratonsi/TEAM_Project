@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="63.2">
   <metadata>
     <title>Lisbon</title>
@@ -256,7 +256,7 @@
 *</description>
     </district>
   </districts>
-  <description>Capitale dell'accoglienza e della luce, Lisbona è diventata un rifugio per nomadi digitali grazie al clima e ai costi contenuti. Il suo piano di mobilità elettrica sta trasformando i colli storici in un modello di turismo sostenibile.</description>
+  <description>Capital of hospitality and light, Lisbon has become a haven for digital nomads thanks to its climate and affordable costs. Its electric mobility plan is transforming the historic hills into a model of sustainable tourism.</description>
   <wiki_intro>Bairro Alto is a district in Lisbon, Portugal. Beyond Bairro Alto itself, the district includes other neighbourhoods, notably Chiado and Príncipe Real. Bairro Alto is recognized for being Lisbon's centre of trendy, youthful dining and nightlife. Many high-end international shops can be found in Chiado and along Avenida da Liberdade, a wide, tree-lined boulevard. Three Lisbon Metro lines serve the district:
 * — Marquês de Pombal, Rato
 * — Marquês de Pombal, Avenida, Restauradores, Baixa–Chiado
@@ -328,4 +328,38 @@
 * 
 *</wiki_intro>
   <landmark_image>assets/images/lisbon.jpg</landmark_image>
+  <nightlife>
+    <venue lat="38.7043089" lon="-9.1749231">
+      <name>3D</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="38.7116311" lon="-9.144132">
+      <name>A Tasca do Chico</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="38.6809443" lon="-9.1539133">
+      <name>A Tentadora</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="38.7105866" lon="-9.1401197">
+      <name>Apprazível</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="38.7054835" lon="-9.1473475">
+      <name>B'leza</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="38.7128224" lon="-9.1437112">
+      <name>Bar Arché Cohiba</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="38.7352581" lon="-9.1555128">
+      <name>Bar Charh</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="38.7100003" lon="-9.1451806">
+      <name>Bicaense</name>
+      <category>bar</category>
+    </venue>
+  </nightlife>
 </city_report>

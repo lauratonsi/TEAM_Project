@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="70.6">
   <metadata>
     <title>Reykjavik</title>
@@ -58,7 +58,41 @@
       <description>Memorial to John Lennon on Viðey Island.</description>
     </attraction>
   </highlights>
-  <description>La capitale più settentrionale del mondo è un laboratorio di energia geotermica e sicurezza assoluta. Piccola e pulita, Reykjavik offre un'esperienza di vita a stretto contatto con una natura incontaminata.</description>
+  <description>The northernmost capital in the world is a laboratory of geothermal energy and absolute safety. Small and clean, Reykjavik offers a life experience in close contact with unspoiled nature.</description>
   <wiki_intro>Reykjavík is the capital of and largest city in Iceland and with an urban area population of around 233,000 (2019), it is the home to two-thirds of Iceland's population. It is the centre of culture and life of the Icelandic people, and is one of the focal points of tourism in Iceland. The city is spread out, and has sprawling suburbs. The city centre, however, is a very small area characterised by eclectic and colourful houses, with good shopping, dining and drinking. Reykjavik has the distinction of being the world's northernmost capital city of a UN member state, though its winters are surprisingly mild for a city of its latitude. When it started to develop as a town in the 18th century, Reykjavík had already been inhabited for almost a thousand years. Legend has it that the first permanent settler in Iceland was a Norwegian named Ingólfur Arnarson. He is said to have thrown his seat pillars into the sea en route to Iceland, and decided to settle wherever the pillars were found. The pillars washed up in Reykjavík, and so that was where he set up his farm. Although the story of Ingólfur Arnarson is not widely believed to be true by modern historians, it's clear that Reykjavík was one of the first settlements in Iceland. Archaeological remains confirm that people were living there around the year 871, and for the first few centuries of Icelandic settlement, Reykjavík was a large manor farm. Its fortunes steadily waned as other centres of power increased in importance. By the...</wiki_intro>
   <landmark_image>assets/images/reykjavik.jpg</landmark_image>
+  <nightlife>
+    <venue lat="64.1476951" lon="-21.940116">
+      <name>American Bar</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="64.1287706" lon="-21.8660783">
+      <name>Billiardbarinn</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="64.1486444" lon="-21.9398559">
+      <name>Bird</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="64.1052642" lon="-21.8150646">
+      <name>Café Bar 8</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="64.1126745" lon="-21.9022563">
+      <name>Catalina</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="64.1388421" lon="-21.885631">
+      <name>Classik Rock</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="64.1487969" lon="-21.9404036">
+      <name>Crystal Champagne Bar</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="64.1463823" lon="-21.9336621">
+      <name>Den Danske Kro</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="47.6">
   <metadata>
     <title>Athens</title>
@@ -117,11 +117,45 @@
 * South Athens - The location of most beaches accessible by public transport. According to mythology, the Greek Gods Poseidon and Athena wanted to claim the city for their own. To persuade the people to accept them, they granted gifts. Poseidon struck his spear into the ground and produced running water. Athena gave the city olive trees, which...</description>
     </district>
   </districts>
-  <description>La culla della civiltà occidentale sta vivendo una rinascita urbana focalizzata sulla digitalizzazione e sul recupero degli spazi storici. Il mix tra eredità monumentale e nuovi incentivi economici la rende un caso di studio strategico nel Mediterraneo.</description>
+  <description>The cradle of Western civilization is undergoing an urban renaissance focused on digitization and the recovery of historic spaces. The mix of monumental heritage and new economic incentives makes it a strategic case study in the Mediterranean.</description>
   <wiki_intro>Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don't come expecting a philosopher's theme park; contemporary Athens is the graffiti-coated, fast-beating urban heart of the country, where modern Greek culture, business and social life flourish amidst ancient monuments. Athens is the largest city in Greece, and sprawls across the majority of the Attica region. Most areas of interest to visitors will be found within the central Athens municipality. The following are the five main regions.  * Central Athens - The active heart of the city. Most ancient sites as well as museums can be found here. 
 * North Athens - A mainly residential area. Contains some museums, high end restaurants and malls, and activities.
 * West Athens - Residential with some malls. 
 * Piraeus (Area) - Athens' main port. Location of National Library as well as some activities.
 * South Athens - The location of most beaches accessible by public transport. According to mythology, the Greek Gods Poseidon and Athena wanted to claim the city for their own. To persuade the people to accept them, they granted gifts. Poseidon struck his spear into the ground and produced running water. Athena gave the city olive trees, which...</wiki_intro>
   <landmark_image>assets/images/athens.jpg</landmark_image>
+  <nightlife>
+    <venue lat="37.9769161" lon="23.732861">
+      <name>7 Jokers</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="37.975977" lon="23.7161799">
+      <name>ACRO bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="37.9831211" lon="23.7366482">
+      <name>After Dark</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="37.9818864" lon="23.7166125">
+      <name>Alphaville</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="37.9969291" lon="23.723771">
+      <name>Amora</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="37.9711118" lon="23.7045141">
+      <name>Anodos</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="37.9742911" lon="23.7316857">
+      <name>Blue Bird</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="37.984424" lon="23.7345382">
+      <name>Box</name>
+      <category>bar</category>
+    </venue>
+  </nightlife>
 </city_report>

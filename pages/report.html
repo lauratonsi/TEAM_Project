@@ -284,7 +284,7 @@
 ├── wiki_intro?        (intro da Wikivoyage, ripulita)
 └── landmark_image?    (URL immagine simbolo)</pre>
   <h3>Dichiarazione DTD (file sorgente)</h3>
-  <pre>&lt;!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?)&gt;
+  <pre>&lt;!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?)&gt;
 &lt;!ATTLIST city_report 
     appeal_score CDATA #REQUIRED&gt;
 
@@ -326,7 +326,13 @@
 &lt;!ELEMENT name (#PCDATA)&gt;
 &lt;!ELEMENT description (#PCDATA)&gt;
 &lt;!ELEMENT wiki_intro (#PCDATA)&gt;
-&lt;!ELEMENT landmark_image (#PCDATA)&gt;</pre>
+&lt;!ELEMENT landmark_image (#PCDATA)&gt;
+
+&lt;!ELEMENT nightlife (venue*)&gt;
+&lt;!ELEMENT venue (name, category)&gt;
+&lt;!ATTLIST venue lat CDATA #IMPLIED
+               lon CDATA #IMPLIED&gt;
+&lt;!ELEMENT category (#PCDATA)&gt;</pre>
 </section>
 
 <!-- ===== PARSING ===== -->
@@ -536,7 +542,7 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
   Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
   Università di Bologna — A.A. 2024/2025
 </footer>
-<button id="back-to-top" title="Torna in cima">↑</button>
+<button id="back-to-top" title="Back to top">↑</button>
 <script>
 const btt = document.getElementById('back-to-top');
 const hdr = document.querySelector('header');

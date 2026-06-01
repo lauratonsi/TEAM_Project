@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="62.3">
   <metadata>
     <title>Berlin</title>
@@ -101,7 +101,41 @@
       <description>The northwest of Berlin consists of the boroughs of Spandau and Reinickendorf was urbanized in the 19th century. Before that, it largely consisted of small towns. In the early 20th century, it was the working-class area with heavy industry where Siemens was founded; indeed, part of Reinickendorf is called Siemensstadt. The area is more residential today, though big industrial complexes remain. Spandau is the westernmost borough (Bezirk) of the German capital city of Berlin. It is a green area near the Spree and Havel rivers. Once a town in its own right, Spandau is one of the oldest areas in the Berlin region and retains much of its unique character, having been spared the worst of the Allied bombing in the Second World War that so devastated the rest of the city. The center of the district is formed by a dense network of medieval streets and a market square, retaining a large number of timber-framed buildings. Spandau was the site of the military prison in which Hitler's deputy Rudolf Hess was imprisoned after the 1946 Nuremberg trials until his death in 1987. The prison was then demolished. Despite being part of Berlin, neither Berliners nor Spandauers usually consider that fact to apply in popular thought. If for example, you ask a taxi driver to take you to the "city center", they will most likely take you to the center of Spandau, not necessarily Mitte or the old heart of West Berlin. It's as much in the boondocks as some Berliners ever venture, and even those who...</description>
     </district>
   </districts>
-  <description>Capitale della resilienza e della cultura underground, Berlino offre una vastità di parchi pubblici senza eguali tra le grandi metropoli europee. Il mercato immobiliare e la sicurezza la rendono un magnete per talenti tecnologici e creativi.</description>
+  <description>Capital of resilience and underground culture, Berlin offers an unparalleled breadth of public parks among major European metropolises. The real estate market and security make it a magnet for tech and creative talent.</description>
   <wiki_intro>Mitte, literally meaning "the middle" and being a contraction of Stadtmitte (city centre), contains the historical heart of Berlin and represents in many ways the real centre of the city. It is here that you will find the vast majority of the most popular sights. "Mitte" can refer both to a larger district (Bezirk) and its smaller borough (Ortsteil), which was a separate district until 2001 when the administrative division of Berlin changed. This guide focuses on the smaller Ortsteil Mitte and the Ortsteil Tiergarten, both of which belong to Bezirk Mitte. Tiergarten is the borough extending northwest from the Zoologischer Garten train station, taking its name from the large park that covers most of its area, which in turn takes its name from the world's oldest zoo in its southern end, close to the train station. On the outskirts of the park there are many little neighbourhoods of varying characters, detached from each other by the park. For other Ortsteile contained within the present-day Bezirk Mitte see Berlin/City West (Moabit and Hansaviertel) and Berlin/East Central (Wedding and Gesundbrunnen). The border between the Ortsteile Mitte and Tiergarten runs right across the Potsdamer Platz, and most of the buildings and institutions described here are actually in Tiergarten, but for the sake of making this guide more useful are described along with the others which fall in Mitte proper. For points of interest lying further West, see Berlin/City West. Before the reunification...</wiki_intro>
   <landmark_image>assets/images/berlin.jpg</landmark_image>
+  <nightlife>
+    <venue lat="52.56382" lon="13.328849">
+      <name>Albert's</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="52.5232268" lon="13.4164254">
+      <name>ASeven Club</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="52.547659" lon="13.4887104">
+      <name>Bar im Wasserturm</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="52.4927208" lon="13.4217007">
+      <name>Bei Schlawinchen</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.512055" lon="13.3918753">
+      <name>Bellboy Berlin</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="52.5511652" lon="13.4043646">
+      <name>Blaumilchkanal</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.5127422" lon="13.458706">
+      <name>booze bar berlin</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="52.5700374" lon="13.3221149">
+      <name>Bären-Eck</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

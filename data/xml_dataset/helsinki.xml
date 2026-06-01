@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="70.4">
   <metadata>
     <title>Helsinki</title>
@@ -200,7 +200,41 @@
       <description>Helsinki's northern suburbs are the northernmost part of Helsinki and form the continuum between Vantaa and more central parts of Helsinki. Here, this is defined as northwest of motorway 4 and north of Käpylä, Hakamäentie and Haaga roundabout; in other words north of the tram line termini. Like much of the peripheral Capital Region it's dominated by apartment buildings, industrial areas and a couple of malls but no major attractions are located here. Still, if you're a fan of outdoor activities like running or biking you might be interested in Helsinki's own "Central Park". You can get in from elsewhere in Helsinki, Espoo and Vantaa by local trains and local buses. See Journey Planner or Google Maps for routes and schedules. One notable bus route is the 550, known as Jokeri, a bus rapid transit (BRT) line. As of 2023, it was replaced by a light rail line, Raide-Jokeri (tram line 15). If coming by intercity train from the north or east and are going to somewhere in northeastern Helsinki, get off in Tikkurila and take a local train to your destination. Also, the trains from the () along the Ring Line stops at many suburbs. One of the most significant traffic points in northern Helsinki, , is located along the railway line between the center of Helsinki and Tikkurila, in the immediate vicinity of many commercial services. Helsinki's general aviation airport Malmi is located in northern Helsinki. Roads leading north from Helsinki, i.e. highways and freeways 120, 3, 130, 45 and 4...</description>
     </district>
   </districts>
-  <description>Pioniera del concetto di 'Smart City', Helsinki integra la natura nel tessuto urbano con una fluidità impressionante. La sua gestione dei dati pubblici e la sicurezza la pongono ai vertici di ogni classifica sulla qualità della vita.</description>
+  <description>Pioneer of the 'Smart City' concept, Helsinki integrates nature into the urban fabric with impressive fluidity. Its public data management and safety place it at the top of every quality-of-life ranking.</description>
   <wiki_intro>Kamppi and Southwestern Helsinki is here defined as the part of the city raying out to the south-west of the city core, stretching along highway 51 to the border of next-door Espoo. Kamppi is for the purposes of this article delimited by Baana and Hietaniemi cemetery in the north-west, Mannerheimintie in the east and Bulevardi in the south-east. In addition to Kamppi, Ruoholahti and Jätkäsaari the article also covers Lauttasaari. South-western Helsinki has something for everyone. The part next to Mannerheimintie with the shopping centres of Kamppi and Forum are not much different from the rest of the centre, though just a block or two into Kamppi the environment becomes much more residential. There is no lack of restaurants, cafés, bars and clubs, though and aside of the centre itself and Kallio, this is a good place to go out for a drink. Ruoholahti, still in the 1980s a somewhat rough and dirty part of the city is now modern and clean with glass and steel office and apartment buildings, partially built on land reclaimed from the sea. Still the former cable factory (nowadays a cultural centre), the Salmisaari power plant and the shipyard reminds of the former industrial character. A bridge to the west lays the island of Lauttasaari, mostly residential. The island of Lauttasaari is the second-biggest island in Finland by population, after the island of Fasta Åland in the Åland archipelago. The name "Lauttasaari" literally means "ferry island" as in the past the only way to...</wiki_intro>
   <landmark_image>assets/images/helsinki.jpg</landmark_image>
+  <nightlife>
+    <venue lat="60.1677068" lon="24.9363589">
+      <name>Alcatraz Club</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="60.1625836" lon="24.9143167">
+      <name>Amsterdam</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="60.1672061" lon="24.9366771">
+      <name>Anna.K</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="60.19261" lon="24.9612206">
+      <name>Backas Bar</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="60.1952162" lon="24.8999173">
+      <name>Bar 36</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="60.1715906" lon="24.9463852">
+      <name>Bar Chaplin</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="60.1719895" lon="24.9204769">
+      <name>Bar Favela</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="60.2296028" lon="24.896449">
+      <name>Bar Keskari</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

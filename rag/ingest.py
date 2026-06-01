@@ -111,6 +111,16 @@ def build_embeddings_and_index(model_name='all-MiniLM-L6-v2'):
             if parts:
                 add('Attrazioni: ' + '; '.join(parts), 'attractions')
 
+        # Nightlife
+        venues = root.xpath('.//nightlife/venue')
+        if venues:
+            venue_parts = [
+                f"{v.findtext('name')} ({v.findtext('category') or 'bar'})"
+                for v in venues if v.findtext('name')
+            ]
+            if venue_parts:
+                add('Bar e locali notturni: ' + '; '.join(venue_parts), 'nightlife')
+
     print(f'Prepared {len(docs)} text chunks from {len(xml_files)} cities')
 
     model = SentenceTransformer(model_name)

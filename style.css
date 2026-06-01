@@ -576,6 +576,7 @@ details[open] .analyst-details summary::before { content: '▾ '; }
     font-weight: 800; font-size: 0.72rem; color: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.35); white-space: nowrap;
 }
+.venue-mk { font-size: 18px; line-height: 28px; text-align: center; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.35)); }
 .mp { min-width: 190px; max-width: 260px; }
 .mp h4 { font-size: 0.9rem; margin: 0 0 2px; }
 .pl {

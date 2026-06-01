@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="71.1">
   <metadata>
     <title>Tallinn</title>
@@ -93,7 +93,41 @@
       <description>Quartiere di Tallinn.</description>
     </district>
   </districts>
-  <description>La capitale digitale d'Europa, dove ogni servizio è a portata di click e la sicurezza è garantita da tecnologie avanzate. Il suo centro medievale è perfettamente preservato in un ecosistema high-tech.</description>
+  <description>The digital capital of Europe, where every service is within a click and safety is guaranteed by advanced technologies. Its medieval center is perfectly preserved within a high-tech ecosystem.</description>
   <wiki_intro>Tallinn is Estonia's capital and largest city. Tallinn is an important port of the Baltic Sea, with the busy passenger section of the port reaching the foothill of the picturesque medieval Old Town, which has been astonishingly well preserved and is a since 1997.  On the shore of the Gulf of Finland, it is a city of over 450,000 inhabitants (2023). It is home to a third of the country's population, and is also the capital of Harju County in Northern Estonia. In a striking contrast to its Old Town, its immediate outskirts are filled with a cluster of modern office towers, with intermittent architectural monuments to the Soviet era. Further out, you will find a bewildering variety of historic and modern neighbourhoods, religious, civic, industrial and maritime heritage. This all provides for the city seeing very sizeable tourist traffic given its size, which in turn means the infrastructure is robust and extensive. Tallinn is a historic city dating back to medieval times. The first fortress on Toompea was built around 1050 and Tallinn was possibly first recorded on a world map in 1154. In 1219, the city was conquered by Valdemar II of Denmark and it became a member of the Hanseatic League in 1285. The city, known as Reval at the time, prospered as a trading town in the 14th century, and much of Tallinn's historic centre was built at this time. Tallinn then became a pawn in the geopolitical games of its big neighbours, passing into Swedish hands in 1561 and then to the Russian...</wiki_intro>
   <landmark_image>assets/images/tallinn.jpg</landmark_image>
+  <nightlife>
+    <venue lat="59.4358937" lon="24.747503">
+      <name>Baila</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="59.408641" lon="24.6746628">
+      <name>Black Mount Pubi</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="59.4388359" lon="24.7439968">
+      <name>Borsi</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="59.4376116" lon="24.7518225">
+      <name>Butterfly Lounge</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="59.4351515" lon="24.7455099">
+      <name>Club Hollywood</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="59.4354098" lon="24.7474924">
+      <name>Club Münt</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="59.4352764" lon="24.7323042">
+      <name>Cubano Baar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="59.4375887" lon="24.744038">
+      <name>DM Baar</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

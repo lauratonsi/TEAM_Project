@@ -125,13 +125,13 @@ def ollama_synthesize(query: str, chunks: list[dict]) -> Optional[str]:
         for c in chunks[:5]
     )
     prompt = (
-        "Sei un assistente specializzato nelle capitali europee. "
-        "Rispondi SOLO in italiano, in modo conciso (max 4 frasi), "
-        "usando esclusivamente le informazioni nelle fonti sottostanti. "
-        "Se le fonti non contengono la risposta, dillo chiaramente.\n\n"
-        f"Fonti:\n{context}\n\n"
-        f"Domanda: {query}\n\n"
-        "Risposta:"
+        "You are an assistant specialised in European capitals. "
+        "Reply ONLY in English, concisely (max 4 sentences), "
+        "using exclusively the information in the sources below. "
+        "If the sources do not contain the answer, say so clearly.\n\n"
+        f"Sources:\n{context}\n\n"
+        f"Question: {query}\n\n"
+        "Answer:"
     )
     try:
         resp = httpx.post(
@@ -249,7 +249,7 @@ def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3
                      or r.get('city', '').upper() == query_city]
         if city_docs and not any(any(term in r.get('text', '').lower() for term in accommodation_terms) for r in city_docs):
             display_city = query_city.title()
-            return f"Ho trovato informazioni locali su {display_city}, ma il dataset non contiene dettagli specifici sugli hotel per quella città.", top_results
+            return f"I found local information about {display_city}, but the dataset contains no specific hotel details for that city.", top_results
 
     # Se il chunk #1 matcha già la sezione cercata, usalo direttamente (evita sentence mixing)
     if intent_section and top_results and top_results[0].get('section') == intent_section:
@@ -260,7 +260,7 @@ def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3
         if last_stop > 80:
             excerpt = excerpt[:last_stop + 1]
         display_city = query_city.title() if query_city else ''
-        header = f"Informazioni su {display_city}: " if display_city else ""
+        header = f"Information about {display_city}: " if display_city else ""
         return header + excerpt, top_results
 
     matches = []
@@ -295,13 +295,13 @@ def simulated_rag_answer(query: str, results: list[dict], max_sentences: int = 3
             selected.append(sentence)
             seen.add(sentence)
         display_city = query_city.title() if query_city else ''
-        header = f"Informazioni utili{(' su ' + display_city) if display_city else ''}: "
+        header = f"Useful information{(' about ' + display_city) if display_city else ''}: "
         return header + ' '.join(selected), top_results
 
     best_doc = top_results[0]
     best_text = best_doc.get('text', '').replace('\n', ' ').strip()
     excerpt = best_text[:450].rstrip()
-    return f"Ecco un estratto utile{(' su ' + query_city) if query_city else ''}: {excerpt}", top_results
+    return f"Here is a relevant excerpt{(' about ' + query_city) if query_city else ''}: {excerpt}", top_results
 
 
 @app.post('/ingest')

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="60.9">
   <metadata>
     <title>Stockholm</title>
@@ -80,7 +80,13 @@
       <description>Isola con il Municipio (Stadshuset) e zone residenziali tranquille.</description>
     </district>
   </districts>
-  <description>Distribuita su quattordici isole, Stoccolma incarna l'eleganza scandinava e il design funzionale. La sua dedizione alla pulizia delle acque e alla sicurezza urbana la rende un modello di efficienza sociale.</description>
+  <description>Spread across fourteen islands, Stockholm embodies Scandinavian elegance and functional design. Its dedication to water cleanliness and urban safety makes it a model of social efficiency.</description>
   <wiki_intro>Stockholm is Sweden's capital and largest city, with nearly a million inhabitants in the city, and 2.4 million within Stockholm County (as of 2021). The inner city is made up of 14 islands across Lake Mälaren and three streams into the brackish Baltic Sea, with the Stockholm archipelago with some 24,000 islands, islets and skerries. Over 30% of the city area is made up of waterways, and another 30% is made up of green areas. Air and water are said to be the freshest of any European capital. Stockholm hosts the Nobel Prize ceremony and has around 70 museums. Stockholm is the hub of most Swedish rail and bus traffic and has two of the country's busiest airports nearby, so it is a good starting point for visiting other parts of Sweden. Stockholm's suburbs sprawl out across most of Stockholm County. Stockholm's administrative division may be perplexing - municipal borders might cut right through neighbourhoods. This article describes areas that are geographically close and easy to visit together as districts; the administrative borders of districts and municipalities may differ. The outer parts of the county consist of Norrtälje, Sigtuna, Norrort, Stockholm Archipelago, Södertörn and Södertälje. Due to the post-glacial rebound, Stockholm is slowly rising from the sea. Mälaren was a bay of the Baltic Sea throughout the Viking Age of the 9th and 10th centuries; today's Stockholm was the waterway for the first Swedish cities; Birka, Uppsala, and Sigtuna. As Sigtuna was sacked by...</wiki_intro>
   <landmark_image>assets/images/stockholm.jpg</landmark_image>
+  <nightlife>
+    <venue lat="44.4837527" lon="-92.2618523">
+      <name>Stockhom village Bistro</name>
+      <category>bar</category>
+    </venue>
+  </nightlife>
 </city_report>

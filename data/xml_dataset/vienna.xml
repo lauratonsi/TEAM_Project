@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="67.9">
   <metadata>
     <title>Vienna</title>
@@ -80,7 +80,41 @@
       <description>Quartiere di Vienna.</description>
     </district>
   </districts>
-  <description>Costantemente premiata come città più vivibile al mondo, Vienna eccelle nell'edilizia sociale e nel trasporto pubblico. Il suo equilibrio tra cultura imperiale e modernità sostenibile è la sua firma distintiva.</description>
+  <description>Consistently ranked the world's most livable city, Vienna excels in social housing and public transport. Its balance between imperial culture and sustainable modernity is its distinctive signature.</description>
   <wiki_intro>Vienna (German: Wien; Austro-Bavarian: Wean) is the capital of Austria and by far its most populous city, with an urban population of 2 million and a metropolitan population of 2.9 million (2023). It is the country's artistic, cultural, economic and political centre. It is known for its high living standards, relaxed yet elegant lifestyle and rich musical life. Vienna, renowned as the former seat of the Habsburg court and its diverse empires, stands not only as a grand metropolis but also as a historical center that has perpetually thrived with a substantial population. This city's distinction lies in its privileged stature, fostering an environment that has nurtured numerous eminent artists, notably Beethoven, Haydn, Liszt, Mozart, Schubert, and Johann Strauss II, among others. It was long the largest German-speaking city in the world before being surpassed by Berlin. The large historic city centre of Vienna filled with monuments to its imperial past is inscribed on the UNESCO World Heritage List. Vienna is broadly divided in inner (1–9) and outer districts (10–23). The 23 districts or wards each have a name and a number. They vary immensely in size and each has its own flair. These function subordinately to the city as decentralized administrative branches of the commune, and make local decisions. Wikivoyage has divided the 23 official districts of Vienna into 13 here for travel purposes. The low-lying Danube plain in and around what is now Vienna has had a human...</wiki_intro>
   <landmark_image>assets/images/vienna.jpg</landmark_image>
+  <nightlife>
+    <venue lat="48.2177686" lon="16.3374533">
+      <name>'s Beisl am Eck</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.2060233" lon="16.3865177">
+      <name>'s Stammbeisl</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.2171591" lon="16.3774265">
+      <name>6er Haus</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.2290642" lon="16.3437056">
+      <name>Anton Frank - cafe bar</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.2044132" lon="16.3432618">
+      <name>BackBone Irish Pub</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.2098841" lon="16.3677">
+      <name>Bockshorn Irish Pub</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.2160352" lon="16.3784001">
+      <name>Brendl</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.218708" lon="16.3810931">
+      <name>Bricks</name>
+      <category>nightclub</category>
+    </venue>
+  </nightlife>
 </city_report>

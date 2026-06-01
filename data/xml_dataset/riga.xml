@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="62.5">
   <metadata>
     <title>Riga</title>
@@ -76,7 +76,41 @@
       <description>Quartiere di Riga.</description>
     </district>
   </districts>
-  <description>Perla del Baltico famosa per l'Art Nouveau, Riga offre spazi verdi immensi e una crescente scena tecnologica. La sua accessibilità economica la rende una scelta strategica per giovani professionisti e viaggiatori consapevoli.</description>
+  <description>Baltic pearl famous for Art Nouveau, Riga offers immense green spaces and a growing tech scene. Its economic accessibility makes it a strategic choice for young professionals and conscious travelers.</description>
   <wiki_intro>Riga is the financial, creative, and cultural centre of Latvia. It is the capital and the largest city in Latvia, it is also the second largest city in the Baltic States after the Lithuanian capital Vilnius. The city lies on the Gulf of Riga, at the mouth of Daugava, Riga has a population of approximately 640,000 inhabitants, or 1/3 of the population of Latvia. The city was part of many empires throughout history, each of which has left its mark on the city. It is famous for Art Nouveau and wooden architecture. Riga's historical centre is listed as a UNESCO World Heritage site. There are many administrative districts in Riga. However, almost all tourist attractions, historic buildings and hotels are contained within the borders of the relatively small and walkable Centra rajons district, which is made up of Vecrīga (the old town) and Centrs (the modern-day business district). However if you have already seen the more famous attractions in the city centre, the outer districts do have their own draws too. On both sides of the mouth of Daugava river, the Gulf of Riga offers extensive sandy seaside beaches, which can be reached by city bus or train. A nude beach can be found a 15-minute walk out of Vecāķi. Riga is famous for its world heritage-listed old town (Vecrīga) and city centre (Centrs), in which over 800 buildings — a third of all buildings — are of the Art Nouveau (aka Jugendstil) style of architecture and thus Riga is one of the best destinations to see this...</wiki_intro>
   <landmark_image>assets/images/riga.jpg</landmark_image>
+  <nightlife>
+    <venue lat="56.9492836" lon="24.105903">
+      <name>13 krēsli</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="56.9469015" lon="24.1127752">
+      <name>Aka Latviešu virtuve</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="56.9553822" lon="24.1743201">
+      <name>Alus Dārzs</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="56.9263963" lon="24.1701644">
+      <name>Black dragon</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="56.9560192" lon="24.1093673">
+      <name>Blues House</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="56.9466142" lon="24.1103808">
+      <name>Bon-Vivant</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="56.9535179" lon="24.127078">
+      <name>Bruklinas krogs un viskija bārs</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="57.0045916" lon="24.1767692">
+      <name>Cabo cafe</name>
+      <category>bar</category>
+    </venue>
+  </nightlife>
 </city_report>

@@ -13,6 +13,7 @@ INPUT_JSON_INDICES = str(ROOT / 'data' / 'city_indices.json')
 INPUT_CSV_WIKI = str(ROOT / 'data' / 'wiki_text_pulito.csv')
 INPUT_CSV_ATTR = str(ROOT / 'data' / 'attrazione_descrizione_fixed.csv')
 INPUT_JSON_DESC = str(ROOT / 'data' / 'city_descriptions.json')
+INPUT_JSON_NIGHTLIFE = str(ROOT / 'data' / 'nightlife.json')
 DTD_FILE = str(ROOT / 'data' / 'city_report.dtd')
 OUTPUT_DIR = str(ROOT / 'data' / 'xml_dataset')
 
@@ -344,6 +345,10 @@ def run_pipeline():
             city_entries = json.load(f)['capitali']
         with open(INPUT_JSON_DESC, 'r', encoding='utf-8') as f:
             narratives = json.load(f)
+        nightlife_data = {}
+        if os.path.exists(INPUT_JSON_NIGHTLIFE):
+            with open(INPUT_JSON_NIGHTLIFE, 'r', encoding='utf-8') as f:
+                nightlife_data = json.load(f)
     except Exception as e:
         print(f"❌ Errore fatale nel caricamento dei dati: {e}")
         return
@@ -447,6 +452,19 @@ def run_pipeline():
         landmark = LANDMARK_IMAGES.get(name, "")
         if landmark:
             etree.SubElement(root, "landmark_image").text = landmark
+
+        # --- nightlife (from Overpass API, optional) ---
+        venues = nightlife_data.get(name, [])
+        if venues:
+            nl_el = etree.SubElement(root, "nightlife")
+            for v in venues:
+                venue_el = etree.SubElement(
+                    nl_el, "venue",
+                    lat=str(v.get("lat", "")),
+                    lon=str(v.get("lon", ""))
+                )
+                etree.SubElement(venue_el, "name").text = clean_xml_text(v["name"])
+                etree.SubElement(venue_el, "category").text = clean_xml_text(v["category"])
 
         # --- DTD validation and output ---
         if dtd.validate(root):

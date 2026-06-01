@@ -78,32 +78,32 @@ function renderComparison(a, b) {
 /* ---------- render: query globale (senza nome città) ---------- */
 function renderGlobal(q) {
     if (/sicur|safe/.test(q))
-        return '<b>🛡️ Top 5 Città più Sicure</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('safety',false),'safety') + '</ol>';
+        return '<b>🛡️ Top 5 Safest Cities</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('safety',false),'safety') + '</ol>';
     if (/verde|green|ecolog|sostenib|ambient/.test(q))
-        return '<b>🌱 Top 5 Città più Verdi</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('green',false),'green') + '</ol>';
+        return '<b>🌱 Top 5 Greenest Cities</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('green',false),'green') + '</ol>';
     if (/econom|cheap|convenien|afford|basso.cost|economica|prezzi.bass/.test(q))
-        return '<b>💰 Top 5 Città più Economiche</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('price',true),'price','€/notte') + '</ol>';
+        return '<b>💰 Top 5 Most Affordable</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('price',true),'price','€/night') + '</ol>';
     if (/cara|costosa|expensiv/.test(q))
-        return '<b>💎 Top 5 Città più Costose</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('price',false),'price','€/notte') + '</ol>';
+        return '<b>💎 Top 5 Most Expensive</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('price',false),'price','€/night') + '</ol>';
     if (/appeal|miglior|top|ranking|consigl|dove.andare|raccomand/.test(q))
-        return '<b>⭐ Top 5 per Appeal Score</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('appeal',false),'appeal') + '</ol>';
+        return '<b>⭐ Top 5 by Appeal Score</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('appeal',false),'appeal') + '</ol>';
     if (/quante|totale|dataset|statist/.test(q)) {
         var totH = cityData.reduce(function(s,c){ return s + parseInt(c.hotel_count||0); }, 0);
         var totA = cityData.reduce(function(s,c){ return s + c.attractions.length; }, 0);
         var wD   = cityData.filter(function(c){ return c.districts.length > 0; }).length;
-        return '<b>📊 Dataset EuroCity</b><ul style="margin:8px 0">' +
-            '<li>🏙️ Capitali analizzate: <b>' + cityData.length + '</b></li>' +
-            '<li>🏨 Strutture ricettive: <b>' + totH + '</b></li>' +
-            '<li>📍 Attrazioni geolocalizzate: <b>' + totA + '</b></li>' +
-            '<li>🏘️ Città con distretti: <b>' + wD + '/' + cityData.length + '</b></li>' +
+        return '<b>📊 EuroCity Dataset</b><ul style="margin:8px 0">' +
+            '<li>🏙️ Capitals analysed: <b>' + cityData.length + '</b></li>' +
+            '<li>🏨 Accommodation venues: <b>' + totH + '</b></li>' +
+            '<li>📍 Geolocated attractions: <b>' + totA + '</b></li>' +
+            '<li>🏘️ Cities with districts: <b>' + wD + '/' + cityData.length + '</b></li>' +
             '</ul>';
     }
-    return '❓ Nessuna città riconosciuta. Prova:<br>' +
+    return '❓ No city recognised. Try:<br>' +
         '<span style="color:#64748b;font-size:0.9em">' +
-        '<em>"Qual è la città più sicura?"</em> · ' +
+        '<em>"Safest city?"</em> · ' +
         '<em>"Top appeal"</em> · ' +
-        '<em>"Hotel a Vienna"</em> · ' +
-        '<em>"Confronta Roma e Parigi"</em>' +
+        '<em>"Hotels in Vienna"</em> · ' +
+        '<em>"Compare Rome and Paris"</em>' +
         '</span>';
 }
 
@@ -113,20 +113,20 @@ function renderCityIntent(c, q) {
         var li = c.hotels.map(function(h) {
             return '<li style="margin-bottom:4px"><b>' + h.n + '</b> <span style="color:#64748b;font-size:0.9em">(' + h.p + ')</span></li>';
         }).join('');
-        return '<b>🏨 Strutture — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:8px 0">' + (li || '<li>Nessun dato</li>') + '</ul>';
+        return '<b>🏨 Accommodation — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:8px 0">' + (li || '<li>No data</li>') + '</ul>';
     }
     if (/trasport|muoversi|aeroporto|arriv|come.arrivare/.test(q))
-        return '<b>🚇 Mobilità — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0;font-size:0.9em">' + c.transport + '</p>';
+        return '<b>🚇 Transport — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0;font-size:0.9em">' + c.transport + '</p>';
 
     if (/distrett|quartier|zona|neighborhood/.test(q)) {
         if (!c.districts.length)
-            return '<b>' + c.flag + ' ' + c.name_it + '</b>: nessun distretto disponibile nel dataset.';
+            return '<b>' + c.flag + ' ' + c.name_it + '</b>: no district data available in the dataset.';
         var li = c.districts.map(function(d) {
             var desc = d.d ? ': <span style="color:#64748b;font-size:0.88em">' +
                              d.d.substring(0, 90) + (d.d.length > 90 ? '…' : '') + '</span>' : '';
             return '<li style="margin-bottom:5px"><b>' + d.n + '</b>' + desc + '</li>';
         }).join('');
-        return '<b>🏘️ Distretti — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:8px 0">' + li + '</ul>';
+        return '<b>🏘️ Districts — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:8px 0">' + li + '</ul>';
     }
     if (/attrazione|visitare|vedere|turismo|cosa.fare|sight|museo|monumento/.test(q)) {
         var li = c.attractions.slice(0, 5).map(function(a) {
@@ -135,31 +135,31 @@ function renderCityIntent(c, q) {
                    '<a href="https://www.google.com/maps?q=' + a.lat + ',' + a.lon +
                    '" target="_blank" style="font-size:0.75em;color:#3498db">📍 Maps</a></li>';
         }).join('');
-        return '<b>🗺️ Attrazioni — ' + c.flag + ' ' + c.name_it + '</b>' +
+        return '<b>🗺️ Attractions — ' + c.flag + ' ' + c.name_it + '</b>' +
                '<ul style="padding-left:0;list-style:none;margin:8px 0">' + li + '</ul>';
     }
     if (/sicur|safety|pericol|crime/.test(q)) {
         var pos = rankOf(c, 'safety');
-        return '<b>🛡️ Sicurezza — ' + c.flag + ' ' + c.name_it + '</b><br>' +
+        return '<b>🛡️ Safety — ' + c.flag + ' ' + c.name_it + '</b><br>' +
                'Safety Index: ' + badge(c.safety, '#27AE60') + '<br>' +
-               '<small style="color:#64748b">Posizione globale: #' + pos + ' di ' + cityData.length + '</small>';
+               '<small style="color:#64748b">Global ranking: #' + pos + ' of ' + cityData.length + '</small>';
     }
     if (/verde|green|ecolog|ambient|sostenib/.test(q)) {
         var pos = rankOf(c, 'green');
-        return '<b>🌱 Sostenibilità — ' + c.flag + ' ' + c.name_it + '</b><br>' +
+        return '<b>🌱 Sustainability — ' + c.flag + ' ' + c.name_it + '</b><br>' +
                'Green Score: ' + badge(c.green, '#27AE60') + '<br>' +
-               '<small style="color:#64748b">Posizione globale: #' + pos + ' di ' + cityData.length + '</small>';
+               '<small style="color:#64748b">Global ranking: #' + pos + ' of ' + cityData.length + '</small>';
     }
     if (/cost|prezz|budget|econom|afford|cara|costosa/.test(q))
         return '<b>💰 Budget — ' + c.flag + ' ' + c.name_it + '</b><br>' +
-               'Costo medio strutture: ' + badge(c.price + '€', '#E74C3C') + '<br>' +
-               'Accessibilità economica: ' + badge(c.economy + '/100', '#3498db');
+               'Avg. accommodation cost: ' + badge(c.price + '€', '#E74C3C') + '<br>' +
+               'Cost of living index: ' + badge(c.economy + '/100', '#3498db');
 
     if (/appeal|score|voto|ranking|classifica/.test(q)) {
         var pos = rankOf(c, 'appeal');
         return '<b>⭐ Appeal — ' + c.flag + ' ' + c.name_it + '</b><br>' +
                'Appeal Score: ' + badge(c.appeal, '#E74C3C') + '<br>' +
-               '<small style="color:#64748b">Safety×0.4 + Green×0.4 + Accesso×0.2 · Posizione: #' + pos + ' di ' + cityData.length + '</small>';
+               '<small style="color:#64748b">Safety×0.4 + Green×0.4 + Affordability×0.2 · Rank: #' + pos + ' of ' + cityData.length + '</small>';
     }
     if (/wiki|storia|descriz|info|racconta|chi.è|intro/.test(q)) {
         var intro = c.wiki_intro || c.story_it;
@@ -172,10 +172,10 @@ function renderCityIntent(c, q) {
             '<span>⭐ Appeal: <b>' + c.appeal + '</b></span>' +
             '<span>🛡️ Safety: <b>' + c.safety + '</b></span>' +
             '<span>🌱 Green: <b>' + c.green + '</b></span>' +
-            '<span>💰 Budget: <b>' + c.price + '€/notte</b></span>' +
+            '<span>💰 Budget: <b>' + c.price + '€/night</b></span>' +
         '</div>' +
         '<p style="color:#64748b;font-size:0.88em;margin:4px 0">' + c.story_it + '</p>' +
-        '<small style="color:#94a3b8">Chiedi su: <em>hotel · trasporti · distretti · attrazioni · sicurezza · appeal</em></small>';
+        '<small style="color:#94a3b8">Ask about: <em>hotels · transport · districts · attractions · safety · appeal</em></small>';
 }
 
 /* ---------- dispatcher principale ---------- */
@@ -275,12 +275,24 @@ def _map_js_block(city_data, div_id, city_link_prefix=''):
                                     'lat': float(a['lat']), 'lon': float(a['lon'])})
             except (TypeError, ValueError):
                 pass
+        valid_venues = []
+        for v in city.get('nightlife', []):
+            try:
+                valid_venues.append({
+                    'n': v['n'] or '',
+                    'cat': v['cat'] or 'bar',
+                    'lat': float(v['lat']),
+                    'lon': float(v['lon']),
+                })
+            except (TypeError, ValueError):
+                pass
         map_data.append({
             'cl': cl, 'name': city['name_it'], 'flag': city['flag'],
             'appeal': city['appeal'], 'color': color,
             'link': city_link_prefix + cl + '.html',
             'capLat': coord[0], 'capLon': coord[1],
             'attrs': valid_attrs,
+            'venues': valid_venues,
         })
 
     map_data_json = json.dumps(map_data, ensure_ascii=False)
@@ -302,8 +314,23 @@ def _map_js_block(city_data, div_id, city_link_prefix=''):
         "    .bindPopup('<div class=\"mp\"><h4 style=\"color:'+c.color+';margin:0 0 3px\">'+a.n+'</h4>'\n"
         "      +'<small style=\"color:#888\">'+c.flag+' '+c.name+'</small>'\n"
         "      +'<p style=\"margin:6px 0;font-size:.8rem\">'+a.d+'</p>'\n"
-        "      +'<a href=\"'+c.link+'\" class=\"pl\">Scopri '+c.name+' \\u2192</a></div>')\n"
+        "      +'<a href=\"'+c.link+'\" class=\"pl\">Explore '+c.name+' \\u2192</a></div>')\n"
         "    .bindTooltip(a.n+' ('+c.name+')');\n"
+        "  });\n"
+        "  var venueIcons={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};\n"
+        "  (c.venues||[]).forEach(function(v){\n"
+        "    var ico=venueIcons[v.cat]||'🍺';\n"
+        "    L.marker([v.lat,v.lon],{icon:L.divIcon({\n"
+        "      className:'',\n"
+        "      html:'<div class=\"venue-mk\">'+ico+'</div>',\n"
+        "      iconSize:[28,28],iconAnchor:[14,14]\n"
+        "    })})\n"
+        "    .addTo(cluster_VID)\n"
+        "    .bindPopup('<div class=\"mp\"><h4 style=\"margin:0 0 3px\">'+ico+' '+v.n+'</h4>'\n"
+        "      +'<small style=\"color:#888\">'+c.flag+' '+c.name+'</small>'\n"
+        "      +'<p style=\"margin:6px 0;font-size:.8rem;color:#64748b\">'+v.cat+'</p>'\n"
+        "      +'<a href=\"'+c.link+'\" class=\"pl\">Explore '+c.name+' \\u2192</a></div>')\n"
+        "    .bindTooltip(v.n+' ('+c.name+')');\n"
         "  });\n"
         "  if(c.capLat!==null){\n"
         "    L.marker([c.capLat,c.capLon],{icon:L.divIcon({\n"
@@ -313,7 +340,7 @@ def _map_js_block(city_data, div_id, city_link_prefix=''):
         "    })}).addTo(map_VID)\n"
         "    .bindPopup('<div class=\"mp\"><b>'+c.flag+' '+c.name+'</b>'\n"
         "      +'<br>Appeal: <b>'+c.appeal+'</b>'\n"
-        "      +'<br><a href=\"'+c.link+'\" class=\"pl\">Scopri '+c.name+' \\u2192</a></div>');\n"
+        "      +'<br><a href=\"'+c.link+'\" class=\"pl\">Explore '+c.name+' \\u2192</a></div>');\n"
         "  }\n"
         "});\n"
         "map_VID.addLayer(cluster_VID);\n"
@@ -337,6 +364,7 @@ def generate_map(city_data):
         "html,body,#map{height:100%;margin:0;font-family:Inter,sans-serif}\n"
         ".cap-mk{display:flex;align-items:center;gap:4px;padding:4px 9px;border-radius:20px;"
         "font-weight:800;font-size:.72rem;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.35);white-space:nowrap}\n"
+        ".venue-mk{font-size:18px;line-height:28px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.35))}\n"
         ".mp{min-width:190px;max-width:260px}\n"
         ".mp h4{font-size:.9rem;margin:0 0 2px}\n"
         ".pl{display:inline-block;margin-top:7px;color:#E74C3C;font-weight:700;font-size:.78rem;text-decoration:none}\n"
@@ -405,6 +433,10 @@ def deploy():
                     {'n': d.findtext('name', ''), 'd': d.findtext('description', '')}
                     for d in root.xpath(".//district")
                 ],
+                'nightlife': [
+                    {'n': v.findtext('name', ''), 'cat': v.findtext('category', 'bar'), 'lat': v.get('lat', ''), 'lon': v.get('lon', '')}
+                    for v in root.xpath(".//venue")
+                ],
                 'landmark_image': root.findtext("landmark_image") or "",
                 'city_lower': city_lower,
             }
@@ -432,35 +464,35 @@ def deploy():
                 <div class="city-card-body">
                     <div class="stats-box">
                         <div class="stat-item">
-                            <span class="stat-label">Budget/notte</span>
+                            <span class="stat-label">Budget/night</span>
                             <span class="stat-val">{_price(city_obj['price'])}€</span>
                             <div class="score-bar-wrap"><div class="score-bar-fill amber" style="width:{p_pct}%"></div></div>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">Sicurezza</span>
+                            <span class="stat-label">Safety</span>
                             <span class="stat-val">{city_obj['safety']}</span>
                             <div class="score-bar-wrap"><div class="score-bar-fill green" style="width:{s_pct}%"></div></div>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">Verde</span>
+                            <span class="stat-label">Green</span>
                             <span class="stat-val" style="color:var(--green-500)">{city_obj['green']}</span>
                             <div class="score-bar-wrap"><div class="score-bar-fill green" style="width:{g_pct}%"></div></div>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">Strutture</span>
+                            <span class="stat-label">Venues</span>
                             <span class="stat-val" style="color:var(--blue-500)">{city_obj['hotel_count']}</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">P. acquisto</span>
+                            <span class="stat-label">Cost of living</span>
                             <span class="stat-val">{city_obj['economy']}</span>
                             <div class="score-bar-wrap"><div class="score-bar-fill blue" style="width:{e_pct}%"></div></div>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">Attrazioni</span>
+                            <span class="stat-label">Attractions</span>
                             <span class="stat-val">{n_attr}</span>
                         </div>
                     </div>
-                    <a href="pages/cities/{city_lower}.html" class="card-cta">Scopri {city_obj['name_it']} →</a>
+                    <a href="pages/cities/{city_lower}.html" class="card-cta">Explore {city_obj['name_it']} →</a>
                 </div>
             </article>"""
         except Exception as e:
@@ -531,7 +563,7 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
         <nav class="topbar-nav">
             <a href="#" class="active">🏠 Home</a>
             <a href="pages/report.html">📊 Report</a>
-            <a href="pages/mappa_attrazioni.html">🗺️ Mappa</a>
+            <a href="pages/mappa_attrazioni.html">🗺️ Map</a>
         </nav>
     </div>
 </header>
@@ -539,18 +571,18 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
 <!-- ═══ HERO ════════════════════════════════════════════════════════════ -->
 <section class="hero">
     <div class="hero-content">
-        <h1 class="hero-title">30 capitali europee,<br>un'unica intelligence.</h1>
+        <h1 class="hero-title">30 European capitals,<br>one intelligence.</h1>
         <p class="hero-sub">
-            EuroCity raccoglie, struttura e analizza dati su sicurezza, sostenibilità
-            e accessibilità delle capitali UE — estratti algoritmicamente da Wikivoyage
-            e arricchiti con indici internazionali. Ogni città ha la sua scheda XML,
-            validata DTD, e una pagina navigabile con mappa interattiva.
+            EuroCity collects, structures and analyses data on safety, sustainability
+            and accessibility of EU capitals — algorithmically extracted from Wikivoyage
+            and enriched with international indices. Each city has its own DTD-validated
+            XML file and a browsable page with an interactive map.
         </p>
         <div class="hero-stats">
-            <div class="hero-stat"><span class="hs-num">{len(city_data)}</span><span class="hs-lbl">capitali</span></div>
-            <div class="hero-stat"><span class="hs-num">{n_attractions}</span><span class="hs-lbl">attrazioni</span></div>
-            <div class="hero-stat"><span class="hs-num">{n_hotels}</span><span class="hs-lbl">strutture</span></div>
-            <div class="hero-stat"><span class="hs-num">30</span><span class="hs-lbl">file XML</span></div>
+            <div class="hero-stat"><span class="hs-num">{len(city_data)}</span><span class="hs-lbl">capitals</span></div>
+            <div class="hero-stat"><span class="hs-num">{n_attractions}</span><span class="hs-lbl">attractions</span></div>
+            <div class="hero-stat"><span class="hs-num">{n_hotels}</span><span class="hs-lbl">venues</span></div>
+            <div class="hero-stat"><span class="hs-num">30</span><span class="hs-lbl">XML files</span></div>
         </div>
     </div>
 </section>
@@ -561,38 +593,38 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
         <div class="analyst-icon">🤖</div>
         <div>
             <p class="analyst-title">Virtual Analyst</p>
-            <p class="analyst-sub">Sistema RAG · BM25 + FAISS · 320 chunk XML</p>
+            <p class="analyst-sub">RAG System · BM25 + FAISS · 320 XML chunks</p>
         </div>
     </div>
     <div class="analyst-input-row">
         <input type="text" id="chat-input" class="analyst-input"
-               placeholder="Es: sicurezza a Vienna, hotel Amsterdam, trasporti Roma…">
-        <button id="chat-btn" class="analyst-btn">Chiedi</button>
+               placeholder="e.g. safety in Vienna, hotels Amsterdam, transport Rome…">
+        <button id="chat-btn" class="analyst-btn">Ask</button>
     </div>
     <div id="chat-output" class="analyst-output">
-        Sistema pronto — digita una domanda o clicca un esempio.
+        System ready — type a question or click an example.
     </div>
     <div class="analyst-chips">
-        <button class="chip" data-q="trasporti Roma">🚇 trasporti Roma</button>
-        <button class="chip" data-q="hotel Amsterdam">🏨 hotel Amsterdam</button>
-        <button class="chip" data-q="cosa vedere a Parigi">🗺️ vedere Parigi</button>
-        <button class="chip" data-q="sicurezza Berlino">🛡️ sicurezza Berlino</button>
-        <button class="chip" data-q="quartieri di Praga">🏘️ quartieri Praga</button>
-        <button class="chip" data-q="città più verde">🌱 città più verde</button>
-        <button class="chip" data-q="confronta Roma e Parigi">⚖️ Roma vs Parigi</button>
+        <button class="chip" data-q="transport Rome">🚇 transport Rome</button>
+        <button class="chip" data-q="hotel Amsterdam">🏨 hotels Amsterdam</button>
+        <button class="chip" data-q="what to see in Paris">🗺️ Paris sights</button>
+        <button class="chip" data-q="safety Berlin">🛡️ safety Berlin</button>
+        <button class="chip" data-q="districts Prague">🏘️ districts Prague</button>
+        <button class="chip" data-q="greenest city">🌱 greenest city</button>
+        <button class="chip" data-q="compare Rome and Paris">⚖️ Rome vs Paris</button>
     </div>
     <details class="analyst-details">
-        <summary>Come funziona? — architettura RAG</summary>
+        <summary>How does it work? — RAG architecture</summary>
         <p>
-            Il Virtual Analyst è un sistema <b>RAG</b> (Retrieval-Augmented Generation)
-            costruito sui <b>320 chunk testuali</b> estratti dai 30 file XML validati.
-            Ogni query usa ricerca ibrida <b>BM25 + vettoriale</b> (FAISS + <code>all-MiniLM-L6-v2</code>)
-            con <b>Reciprocal Rank Fusion</b>, rileva l'intento (hotel / trasporti / attrazioni / sicurezza)
-            e risponde in tempo reale senza LLM esterno.
+            The Virtual Analyst is a <b>RAG</b> (Retrieval-Augmented Generation) system
+            built on <b>320 text chunks</b> extracted from the 30 validated XML files.
+            Each query uses hybrid <b>BM25 + vector search</b> (FAISS + <code>all-MiniLM-L6-v2</code>)
+            with <b>Reciprocal Rank Fusion</b>, detects intent (hotels / transport / attractions / safety)
+            and responds in real time without an external LLM.
         </p>
         <p style="font-size:0.8rem; color:var(--slate-500); margin:8px 0 0;">
-            ⚠️ Conosce solo le 30 capitali del dataset; alcune mancano di dati hotel perché
-            assenti nelle sorgenti Wikivoyage.
+            ⚠️ It knows only the 30 capitals in the dataset; some lack hotel data because
+            they are absent from the Wikivoyage sources.
         </p>
     </details>
 </section>
@@ -602,20 +634,20 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
 
 <!-- ═══ FILTRI + GRIGLIA ════════════════════════════════════════════════ -->
 <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">🌍 Tutte le capitali</button>
-    <button class="filter-btn" data-filter="safety">🛡️ Sicurezza ≥ 70</button>
-    <button class="filter-btn" data-filter="green">🌱 Verde ≥ 70</button>
-    <button class="filter-btn" data-filter="budget">💰 Budget ≤ 120€/notte</button>
+    <button class="filter-btn active" data-filter="all">🌍 All Capitals</button>
+    <button class="filter-btn" data-filter="safety">🛡️ Safety ≥ 70</button>
+    <button class="filter-btn" data-filter="green">🌱 Green ≥ 70</button>
+    <button class="filter-btn" data-filter="budget">💰 Budget ≤ €120/night</button>
 </div>
 <main class="container" id="city-grid">{cards_html}</main>
 
-<button id="back-to-top" title="Torna in cima">↑</button>
+<button id="back-to-top" title="Back to top">↑</button>
 
 <footer class="site-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale ·
     Università di Bologna A.A. 2024/2025
     <br>
-    <a href="pages/report.html">📊 Report &amp; Documentazione</a>
+    <a href="pages/report.html">📊 Report &amp; Documentation</a>
 </footer>
 
 <script>
@@ -779,11 +811,11 @@ def generate_city_pages(city_data):
                 <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:{_g}%'></div></div>
             </div>
             <div class='stat-item'>
-                <span class='stat-label'>Strutture</span>
+                <span class='stat-label'>Venues</span>
                 <span class='stat-val' style='color:var(--blue-500)'>{city['hotel_count']}</span>
             </div>
             <div class='stat-item'>
-                <span class='stat-label'>Accesso</span>
+                <span class='stat-label'>Cost of living</span>
                 <span class='stat-val'>{city['economy']}</span>
                 <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:{_e}%'></div></div>
             </div>
@@ -792,14 +824,14 @@ def generate_city_pages(city_data):
         # --- Hotels ---
         hotel_li = "".join([f"<li><b>{h['n']}</b> <small>({h['p']})</small></li>" for h in city['hotels']])
         hotel_html = (
-            f"<div class='info-block hotel-block'><span class='block-title'>🏨 Dove Dormire</span>"
+            f"<div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span>"
             f"<ul style='margin:0; padding-left:15px;'>{hotel_li}</ul></div>"
         ) if hotel_li else ""
 
         # --- Transport ---
         transport_html = (
             f"<div class='info-block transport-block'>"
-            f"<span class='block-title'>🚇 Mobilità Urbana</span>"
+            f"<span class='block-title'>🚇 Urban Transport</span>"
             f"<p style='margin:0;'>{city['transport']}</p></div>"
         )
 
@@ -809,9 +841,21 @@ def generate_city_pages(city_data):
             for d in city['districts']
         ])
         districts_html = (
-            f"<div class='info-block district-block'><span class='block-title'>🏙️ Distretti</span>"
+            f"<div class='info-block district-block'><span class='block-title'>🏙️ Districts</span>"
             f"<ul style='margin:0; padding-left:15px;'>{dist_li}</ul></div>"
         ) if dist_li else ""
+
+        # --- Nightlife ---
+        night_li = "".join([
+            f"<li><a href='https://www.google.com/maps?q={v['lat']},{v['lon']}' target='_blank'>{v['n']}</a>"
+            f" <span style='color:#94a3b8; font-size:0.82rem;'>({v['cat']})</span></li>"
+            for v in city['nightlife']
+        ])
+        nightlife_html = (
+            f"<div class='info-block nightlife-block'>"
+            f"<span class='block-title'>🍺 Where to Drink</span>"
+            f"<ul style='margin:0; padding-left:15px;'>{night_li}</ul></div>"
+        ) if night_li else ""
 
         # --- Descriptions ---
         desc_html = f"""
@@ -842,13 +886,13 @@ def generate_city_pages(city_data):
             "<div class='attractions'>"
             "<span class='block-title'>Strategic Sights &amp; Coordinates</span>"
             "<table class='attr-table'>"
-            "<thead><tr><th>#</th><th>Attrazione</th><th>Descrizione</th><th></th></tr></thead>"
+            "<thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead>"
             f"<tbody>{attr_rows}</tbody>"
             "</table></div>"
         )
 
         page_html = f"""<!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -862,7 +906,7 @@ def generate_city_pages(city_data):
         <nav class="topbar-nav">
             <a href="../../index.html">🏠 Home</a>
             <a href="../../pages/report.html">📊 Report</a>
-            <a href="../../pages/mappa_attrazioni.html">🗺️ Mappa</a>
+            <a href="../../pages/mappa_attrazioni.html">🗺️ Map</a>
         </nav>
     </div>
 </header>
@@ -881,18 +925,19 @@ def generate_city_pages(city_data):
     {transport_html}
     {hotel_html}
     {districts_html}
+    {nightlife_html}
     {desc_html}
     {attractions_html}
     <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Sorgente dati strutturato (XML valido secondo <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/{cl}.xml" download class="download-link">📥 Scarica file XML sorgente</a>
+        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+        <a href="../../data/xml_dataset/{cl}.xml" download class="download-link">📥 Download XML source</a>
     </div>
 </main>
 <footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
-<button id="back-to-top" title="Torna in cima">↑</button>
+<button id="back-to-top" title="Back to top">↑</button>
 <script>
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {{
@@ -1471,7 +1516,7 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
   Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
   Università di Bologna — A.A. 2024/2025
 </footer>
-<button id="back-to-top" title="Torna in cima">↑</button>
+<button id="back-to-top" title="Back to top">↑</button>
 <script>
 const btt = document.getElementById('back-to-top');
 const hdr = document.querySelector('header');

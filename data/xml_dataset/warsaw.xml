@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="69.3">
   <metadata>
     <title>Warsaw</title>
@@ -80,7 +80,41 @@
       <description>Quartiere di Varsavia.</description>
     </district>
   </districts>
-  <description>Esempio straordinario di ricostruzione e resilienza, Varsavia è oggi una metropoli verticale e dinamica. Combina un settore finanziario in crescita con ampi spazi verdi e una sicurezza urbana migliorata.</description>
+  <description>An extraordinary example of reconstruction and resilience, Warsaw is now a vertical and dynamic metropolis. It combines a growing financial sector with large green spaces and improved urban safety.</description>
   <wiki_intro>Warsaw (Polish: Warszawa) is Poland's capital and largest city. Warsaw is a bustling metropolis and one of the European Union's fastest-developing capitals and the Union's ninth most populous urban centre. It has a mixture of new and old in its eclectic architectural mix, and is constantly changing. There is a large variety of museums, galleries and other tourist attractions, and there is always something happening throughout the year. While sprawling, it is quite easy to navigate for tourists thanks to a good public transit system, and most important sights are quite close to each other. There is no shortage of accommodation options and a wide choice of restaurants and bars. Warsaw's nightlife is also on the rebound, and a reborn cafe culture has taken over the city. A city of 1.8 million inhabitants (2021), it sits on the Vistula River (Polish: Wisła) in the middle of the country. Warsaw's history of rapid development after many wars that ravaged and destroyed the city has earned it a reputation as a "phoenix city", able to recreate itself from the ruins and regain its erstwhile glory every time. During the Second World War, it suffered a fate similar to Rotterdam and Dresden in that it was almost completely razed, although in the case of Warsaw it was a much more tragic story of successive destruction and defeat. Due to the great efforts of its surviving inhabitants and, indeed the entire nation, it was rebuilt from a field of rubble, with its historic core recreated, but...</wiki_intro>
   <landmark_image>assets/images/warsaw.jpg</landmark_image>
+  <nightlife>
+    <venue lat="52.2071732" lon="20.9724513">
+      <name>Amarant</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.2294067" lon="21.0147013">
+      <name>Azyl</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="52.2480169" lon="21.0455613">
+      <name>Bar pod Kufelkiem</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.2247707" lon="21.0122492">
+      <name>Beirut</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="52.1737627" lon="21.0450075">
+      <name>Bez Słowa</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.2400168" lon="21.0765039">
+      <name>Bluesky</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="52.2334668" lon="21.0202035">
+      <name>Cafe Foksal</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.2178857" lon="21.0170602">
+      <name>Cafe Rock'n'Roll</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

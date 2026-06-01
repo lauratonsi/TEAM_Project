@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="46.1">
   <metadata>
     <title>Paris</title>
@@ -117,7 +117,41 @@
 *</description>
     </district>
   </districts>
-  <description>La Ville Lumière sta rivoluzionando la sua mobilità interna eliminando le auto a favore di piste ciclabili e giardini pensili. Resta l'indiscussa capitale del lusso e del turismo culturale con standard di accoglienza elevatissimi.</description>
+  <description>The City of Light is revolutionizing its internal mobility by replacing cars with bike lanes and hanging gardens. It remains the undisputed capital of luxury and cultural tourism with very high hospitality standards.</description>
   <wiki_intro>The centre of contemporary Paris and the site of such landmarks as the Louvre and of the Tuileries and Palais-Royal, the 1st arrondissement is full of attractions for travellers of all inclinations, including some of the finest parks, museums, shops, and bars in the city. The 1st occupies the Right Bank of the River Seine and extends onto the western section of the Île de la Cité in the midst of the river. For occupying such a compact space, the 1st feels remarkably different from one end to the other. The almost incredibly upscale western end of the arrondissement gives way to the hustle and bustle of the big city east of the Palais Royal, and then further east to the pedestrian (and tourist) dominated area around Les Halles and the Samaritaine, where tourists mix with (especially young) Parisiens and Parisiennes in huge numbers (on the order of 800,000 unique visitors per day according to the Mayor's office). The Axe historique is a line of landmarks, which passes through the 1st, extending out to La Défense in the west, and the 4th arrondissement in the east. Paris was historically centred on the Ile de la Cité, but by the time Baron von Hausmann was given the task of carving up the city, the centre had shifted somewhat to the previously suburban Royal Quarter surrounding the Louvre and the Palais Royal, which is why the numbering of the arrondissements started there. With fewer than 18,000 inhabitants, the 1st is statistically the least populous and least densely...</wiki_intro>
   <landmark_image>assets/images/paris.jpg</landmark_image>
+  <nightlife>
+    <venue lat="48.883838" lon="2.3707362">
+      <name>25° Est</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="48.8632455" lon="2.3860891">
+      <name>Atelier 103</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.8687856" lon="2.3275106">
+      <name>Bar Hemingway</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="48.861504" lon="2.3575623">
+      <name>Bar nouveau</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.8658567" lon="2.3778299">
+      <name>Café Charbon</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="48.874105" lon="2.3752878">
+      <name>Café Chéri(e)</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="48.8474549" lon="2.3471635">
+      <name>Ces années là</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="48.8429884" lon="2.3495493">
+      <name>Drunken Bunny</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

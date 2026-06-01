@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="53.1">
   <metadata>
     <title>Dublin</title>
@@ -79,7 +79,41 @@
       <description>Museum housing the national collection of Irish and European art.</description>
     </attraction>
   </highlights>
-  <description>Porta d'accesso per le multinazionali tech, Dublino bilancia una crescita economica accelerata con il fascino dei suoi distretti storici. La sicurezza e la qualità dell'aria restano priorità centrali nella sua agenda di sviluppo futuro.</description>
+  <description>Gateway for tech multinationals, Dublin balances accelerated economic growth with the charm of its historic districts. Security and air quality remain central priorities in its future development agenda.</description>
   <wiki_intro>Dublin (Irish: Baile Átha Cliath, "Town of the Hurdled Ford") is the capital city of Ireland. Its vibrancy, nightlife and tourist attractions are world renowned and it's the most popular entry point for international visitors to Ireland. As a city, it is disproportionately large for the size of the country with a population of over 2 million in the Greater Dublin Region (2022); nearly half of the Republic's population lives in this metropolitan area. The central sights can be navigated by foot, with a few outlying sights, and suburbs sprawling out for miles. The climate is mild, making Dublin a year-round destination. It's seldom freezing in winter, cool in summer and frequently has light showers. For more information, see County Dublin weather chart. Dublin is in a low-lying, fertile area, not boggy by Irish standards, and with good sea access. It became the core of the Gaelic kingdom of Leinster, and the Vikings established a large settlement by what is now Dublin castle, until ejected by Brian Boru at the Battle of Clontarf in 1014. This set a pattern that Dublin was fought for, not fought in. The Normans colonised the southwest and Leinster from the 12th century, and further out they battled with the Gaels, but Dublin sat snug within the "Pale" — the defensive palisade. Similarly with the Tudor conquests; then the city fell swiftly to Cromwell so his atrocities were elsewhere, and King William marched in unopposed after the Battle of the Boyne. 18th century Dublin was...</wiki_intro>
   <landmark_image>assets/images/dublin.jpg</landmark_image>
+  <nightlife>
+    <venue lat="53.3353226" lon="-6.264995">
+      <name>Anseo</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="53.3472522" lon="-6.2609325">
+      <name>Arlington Bar &amp;amp; Restaurant</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="53.3676758" lon="-6.2512678">
+      <name>Bar@Tolka</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="53.3098046" lon="-6.2841368">
+      <name>Brady’s</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="53.3448128" lon="-6.2623304">
+      <name>Club M</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="53.312007" lon="-6.2748056">
+      <name>Coman's</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="53.3291081" lon="-6.2305605">
+      <name>Crowe’s</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="53.3389839" lon="-6.2733761">
+      <name>Fallon’s</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

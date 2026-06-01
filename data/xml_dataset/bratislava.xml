@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="61.7">
   <metadata>
     <title>Bratislava</title>
@@ -79,7 +79,41 @@
       <description>Modern riverside district for shopping and leisure.</description>
     </attraction>
   </highlights>
-  <description>Situata strategicamente sul Danubio, Bratislava combina costi di gestione competitivi con una crescita rapida nel settore dei servizi. La sua dimensione umana permette standard di sicurezza elevati e una rapida transizione verso infrastrutture green.</description>
+  <description>Strategically located on the Danube, Bratislava combines competitive operating costs with rapid growth in the service sector. Its human scale allows for high safety standards and a swift transition to green infrastructure.</description>
   <wiki_intro>Bratislava (Hungarian: Pozsony, German: Pressburg, known as Prešporok before 1919), is the capital and largest city of Slovakia. It has a population of more than 475,000 (2021), and is the administrative, cultural and economic centre of the country. For most visitors, it is the entry point into the rest of the country. Located on the border tripoint of Slovakia, Austria and Hungary, the city has sat in the very hearts of empires since its earliest mention in the 10th century. As such, the city is a place of contrasts; the city centre features the medieval and renaissance old town, as well as the skyscraper-heavy business and shopping district; the outskirts feature both hillside villas, and communist-era apartment blocks. Bratislava has a very pleasant medieval inner city with narrow, winding streets, a hill-top castle next to the river Danube, and many historic churches and buildings to visit. The old town is centered on two squares, Hlavné námestie (main square) and Hviezdoslavovo námestie (Hviezdoslav square, named after a famous Slovak poet). Of a rather different architectural character are some of the communist-era buildings found in the modern parts of the city; a prime example is Petrzalka housing estate, the biggest Communist-era concrete block housing complex in Central Europe, which stretches on endlessly just across the river. Move further east and there are plenty of rural places to explore. There are farms, vineyards, agricultural land, and tiny villages less...</wiki_intro>
   <landmark_image>assets/images/bratislava.jpg</landmark_image>
+  <nightlife>
+    <venue lat="48.1806419" lon="17.1845266">
+      <name>Amajka</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.1515503" lon="17.1184819">
+      <name>Americke pub</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.1590046" lon="17.1161827">
+      <name>Bastion</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.1475592" lon="17.1063371">
+      <name>Bernard pri Lýceu</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.1786793" lon="17.0505322">
+      <name>Black Rose</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.1032675" lon="17.040655">
+      <name>C2</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="48.1527045" lon="17.0863227">
+      <name>Chilli Pub</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="48.1623963" lon="17.0499081">
+      <name>Coral</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="52.5">
   <metadata>
     <title>Brussels</title>
@@ -198,7 +198,7 @@
 *</description>
     </district>
   </districts>
-  <description>Cuore politico dell'Unione Europea, Bruxelles gestisce una complessità demografica unica con politiche di inclusione avanzate. Il suo profilo è definito da un'offerta alberghiera di alto profilo e una rete di trasporti capillare.</description>
+  <description>Political heart of the European Union, Brussels manages unique demographic complexity with advanced inclusion policies. Its profile is defined by a high-end hotel offering and an extensive transport network.</description>
   <wiki_intro>The Pentagon (French: Le Pentagone, Dutch: Vijfhoek) is the historical center of Brussels. It derives its name from the pentagonal shape of the inner beltway that surrounds the area. The Pentagon of Brussels encompasses many charming and beautiful attractions, with deeply ornate buildings on the Grand-Place/Grote Markt, and a fish-and-crustacean overdose of St. Catherine's Square (Place St-Catherine/Sint-Katelijneplein). Stroll along, (and stop in for a drink) at one of the many bars on Place St-Géry/Sint-Goriksplein, or max out your credit card on the trendy Rue Antoine Dansaert/Antoine Dansaertstraat. The Marolles/Marollen neighbourhood close to the medieval centre is one of the few places where the Brussels dialect of Dutch (Flemish) can still be heard. The area is best known for the flea market held daily on the Place du Jeu de Balle/Vossenplein as well as a plethora of shops selling everything from old radios and bent wipers to fine china and expensive Art Nouveau trinkets. * 
 * 
 * 
@@ -239,4 +239,38 @@
 * 
 *  Brussels' tourist restaurant gauntlet can be found in Rue des Bouchers/Beenhouwerstraat, just to the north of Grand-Place. The place has a bad reputation for waiters imposing themselves on passers-by, trying to lure customers into their restaurant. The authorities are aware of this, and are trying to take measures. Some...</wiki_intro>
   <landmark_image>assets/images/brussels.jpg</landmark_image>
+  <nightlife>
+    <venue lat="50.8945197" lon="4.4338512">
+      <name>'t Amusement</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="50.8474396" lon="4.3496613">
+      <name>'t Zuidpaleis</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="50.9041033" lon="4.304737">
+      <name>Au 140</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="50.8962835" lon="4.3927382">
+      <name>Au Bon Coin</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="50.8854765" lon="4.3180751">
+      <name>Au Bon Coin</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="50.8272547" lon="4.3633948">
+      <name>BBP Bailli</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="50.8464012" lon="4.3497269">
+      <name>Belgica</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="50.8302079" lon="4.3442551">
+      <name>Brasserie Verschueren</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="70.0">
   <metadata>
     <title>Prague</title>
@@ -80,7 +80,41 @@
       <description>Quartiere di Praga.</description>
     </district>
   </districts>
-  <description>Custode di un patrimonio UNESCO intatto, Praga è una delle città più sicure e accessibili del continente. Il suo sistema di trasporto pubblico è tra i più efficienti d'Europa, facilitando una vivibilità senza stress.</description>
+  <description>Keeper of an intact UNESCO heritage, Prague is one of the safest and most accessible cities on the continent. Its public transport system is among the most efficient in Europe, enabling stress-free livability.</description>
   <wiki_intro>Prague (Czech: Praha) is the capital and largest city of the Czech Republic. The city's historic buildings and narrow, winding streets are testament to its centuries-old role as capital of the historic region of Bohemia. Prague lies on the banks of the beautiful, meandering Vltava River that reflects the city's golden spires and 9th century castle that dominates the skyline. This historic atmosphere is combined with a certain quirkiness that embraces the entire city. From the Museum of Czech Cubism to the technicolour Jubilee Synagogue; the castle to the river, Prague is a Bohemian capital in every sense. Several incompatible district systems dating from different historical periods are used in Prague, for various purposes – at least three schemes. Making things worse, a given district name can be used in all the systems, but with different meanings. In this guide, a simplified version of the "old" district system is used. Under this system, Prague is divided into ten numbered districts (Praha 1 through Praha 10). Its advantage is that it is used on street signs and house numbers throughout the city, so you can always easily determine which "old" district you are in. If you encounter a district number higher than 10, a different system is being used. For example, Praha 13 is part of the "old" Praha 5 district.  Praha 1 is the oldest part of the city, the original 'Town of Prague', and has by far the largest number of attractions. Praha 2 also contains important historic...</wiki_intro>
   <landmark_image>assets/images/prague.jpg</landmark_image>
+  <nightlife>
+    <venue lat="50.0874351" lon="14.4193478">
+      <name>Absintherie Franz Kafka</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="50.0824881" lon="14.444303">
+      <name>Belzepub</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="50.0747455" lon="14.431049">
+      <name>Ber.lin Bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="50.0842199" lon="14.4142283">
+      <name>Café-Bar Duende</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="50.0999349" lon="14.4879307">
+      <name>Club Montana</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="50.0804853" lon="14.405884">
+      <name>Craft Beer Spot</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="50.0862561" lon="14.4416022">
+      <name>District 3 Bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="50.086847" lon="14.3760312">
+      <name>Hostinec "u Anduly"</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

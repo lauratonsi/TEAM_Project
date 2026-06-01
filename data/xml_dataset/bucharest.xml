@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="60.3">
   <metadata>
     <title>Bucharest</title>
@@ -79,7 +79,41 @@
       <description>Beautiful bookstore located in a restored 19th-century building.</description>
     </attraction>
   </highlights>
-  <description>Metropoli in forte espansione tecnologica, Bucarest offre uno dei migliori rapporti tra costi operativi e qualità delle infrastrutture digitali. Il suo profilo è in rapida evoluzione verso standard di sostenibilità dell'Europa occidentale.</description>
+  <description>A city in strong technological expansion, Bucharest offers one of the best ratios between operating costs and digital infrastructure quality. Its profile is rapidly evolving toward Western European sustainability standards.</description>
   <wiki_intro>Bucharest (Romanian: București) is Romania's capital and largest city. Bucharest has a very interesting mix of old and new: finding a 300-year-old church near a steel-and-glass tower that sits next to a communist-style building is commonplace in Bucharest. Bucharest offers some excellent attractions, and has cultivated a sophisticated, trendy, and modern sensibility that many have come to expect from a European capital.  Bucharest is the primary entry point into Romania, and the most important industrial and commercial centre of the country. With more than 2.1 million inhabitants in its urban area, Bucharest is one of the largest cities in Southeastern Europe. Bucharest is a booming city with many large infrastructure projects changing the old face of the city, which used to be known in the past as "The Little Paris". Bucharest has benefited from an economic boom along with the EU grants that have helped rebuild parts of the city, including the revamped old town. Those who have known Bucharest in the past will be surprised by the changes that are taking place. The largest finished project is the impressive Basarab overpass, which is Europe's widest cable bridge. Bucharest, like most of Romania, has a temperate-continental climate with hot summers and cold winters. This region of Romania gets all four seasons, although spring is brief and falls mainly in April. The average high daily temperature in summer is about 29&amp;amp;nbsp;°C and in winter about 2&amp;amp;nbsp;°C. It can get...</wiki_intro>
   <landmark_image>assets/images/bucharest.jpg</landmark_image>
+  <nightlife>
+    <venue lat="44.4421391" lon="26.0944235">
+      <name>112 Bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="44.4307357" lon="26.1018712">
+      <name>1974 Niște Domni și Fiii</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="44.4449566" lon="26.0962978">
+      <name>1UP Gamers Pub</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="44.4300616" lon="26.0973551">
+      <name>Abel's Wine Bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="44.4306672" lon="26.1013188">
+      <name>Agartha Club</name>
+      <category>nightclub</category>
+    </venue>
+    <venue lat="44.4476748" lon="26.1060993">
+      <name>Alan Dala</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="44.4130209" lon="26.1688469">
+      <name>Alexa</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="44.4312812" lon="26.0999145">
+      <name>Altfel</name>
+      <category>bar</category>
+    </venue>
+  </nightlife>
 </city_report>

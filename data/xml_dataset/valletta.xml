@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="44.8">
   <metadata>
     <title>Valletta</title>
@@ -79,7 +79,41 @@
       <description>Quiet gardens on top of the St. John's Bastion.</description>
     </attraction>
   </highlights>
-  <description>Fortezza barocca nel cuore del Mediterraneo, La Valletta è un museo a cielo aperto dalla sicurezza impeccabile. Le sue dimensioni ridotte nascondono un'energia culturale vibrante e un clima mite tutto l'anno.</description>
+  <description>Baroque fortress in the heart of the Mediterranean, Valletta is an open-air museum with impeccable safety. Its small size hides vibrant cultural energy and a mild climate year-round.</description>
   <wiki_intro>Valletta or Il-Belt is the capital of Malta. Historically built as harbour city to first capital, Valletta preserves much of its 16th-century architectural heritage built under the Hospitallers. Valletta was one of the earliest sites inscribed on the UNESCO World Heritage List. Referred to colloquially as Il-Belt ("The City") in Maltese, it takes its name from its founder, Grandmaster Jean Parisot de Valette. With a population of less than 5,200 in 2021, it is the least populated national capital in the European Union. The population of the urban area is 480,000 (2020), so Valletta doesn't feel like a small town. It is also the southernmost capital in the union, and one of only two without rail-based public transit (the other being Nicosia in Cyprus). Valletta was a "European Capital of Culture" for 2018, an honour it shared with Leeuwarden. Being the southernmost European capital except for Nicosia and sitting next to the Mediterranean, Valletta is amongst the places in Europe that have mild and warm weather in most seasons. Nighttime lows are around 9/10°C in the winter, however at that time of the year, it's comparatively rainy. During the summer, expect sunny, hot weather. Most bus routes and many arterial roads converge on Valletta. However, inside the city, there are many one-way streets and some pedestrian zones. Parking can be difficult. There is a large multi-storey car park in Floriana, about half a kilometre from the City Gate entrance to Valletta. In front of the...</wiki_intro>
   <landmark_image>assets/images/valletta.jpg</landmark_image>
+  <nightlife>
+    <venue lat="35.8999391" lon="14.5088802">
+      <name>222 Wine Bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="35.9244566" lon="14.488431">
+      <name>Bar Native</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="35.9222347" lon="14.4910566">
+      <name>Bellini</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="35.9081685" lon="14.5006288">
+      <name>Black Gold Saloon Malta</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="35.8951718" lon="14.4656418">
+      <name>Butterfly Bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="35.9080856" lon="14.5004518">
+      <name>Chequers</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="35.9158518" lon="14.4933316">
+      <name>City of London</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="35.9221301" lon="14.4923768">
+      <name>Club 22</name>
+      <category>nightclub</category>
+    </venue>
+  </nightlife>
 </city_report>

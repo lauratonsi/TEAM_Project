@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="62.9">
   <metadata>
     <title>Luxembourg</title>
@@ -80,7 +80,7 @@
       <description>Quartiere verde e borghese, con l'università e negozi di qualità.</description>
     </district>
   </districts>
-  <description>Centro finanziario d'élite, il Lussemburgo offre trasporti pubblici gratuiti e uno dei livelli di sicurezza più alti al mondo. È il paradigma della capitale ricca che investe massicciamente nel benessere dei suoi residenti.</description>
+  <description>Elite financial center, Luxembourg offers free public transport and one of the highest safety levels in the world. It is the paradigm of the wealthy capital that invests massively in its residents' well-being.</description>
   <wiki_intro>The Moselle Valley is one of five regions of Luxembourg, located along the eastern border with Germany. * — capital of the region.
 * — An old spa town and the only larger destination not located along the Moselle river.
 * — Former Roman settlement that over time turned into the town it is today.
@@ -88,4 +88,38 @@
 * — City on the merging point of the Sûre (Sauer) into the Moselle.
 *  The Moselle Valley is the most eastern territory of Luxembourg, bordering Germany on the other side of the Moselle river. The region lends itself to the cultivation of wines, which is why the hills will be filled with vineyards. The N10 road runs along the Moselle and Sauer rivers, and connects nearly all of the cities along the eastern Luxembourgian border together. When travelling from Thionville or Metz, the road is marked as the D654, which connects to the A31/E25 at Illange. North of the Moselle Valley the N10 connects to the Mullerthal after following the same road as the N1 between Grevenmacher and Wasserbillig. The N10 passes straight through Echternach, then passes by Vianden, only to end near Clervaux. Other routes through the region are the A1, which connects Luxembourg City with Trier via Grevenmacher, and the A13, which connects Esch-sur-Alzette with Merzig and Saarbrücken via Mondorf-les-Bains and Schengen. While none of the cities have a proper train station themselves, on the German side of the Moselle, a train link exists, connecting Perl (Schengen),...</wiki_intro>
   <landmark_image>assets/images/luxembourg.jpg</landmark_image>
+  <nightlife>
+    <venue lat="49.6017703" lon="6.1365904">
+      <name>:buvette</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="49.5977436" lon="6.1348685">
+      <name>Albicastrense</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="49.6038566" lon="6.1298819">
+      <name>Alison café</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="49.594574" lon="6.1407228">
+      <name>Am klenge Bistro BTwo</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="49.6113179" lon="6.1337032">
+      <name>Art Scène</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="49.595316" lon="6.1374921">
+      <name>Au Bon Vivant</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="49.6238045" lon="6.1054447">
+      <name>Bar Liberty</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="49.6008067" lon="6.130821">
+      <name>Barbarella</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

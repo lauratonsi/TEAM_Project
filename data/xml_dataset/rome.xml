@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="48.4">
   <metadata>
     <title>Rome</title>
@@ -149,7 +149,7 @@ Testaccio is an area to the southwest of Aventino along the bank of the Tiber an
 *  *</description>
     </district>
   </districts>
-  <description>Città eterna dalla bellezza stratificata, Roma sta affrontando la sfida della modernizzazione nel rispetto dei suoi vincoli archeologici. Il suo fascino monumentale resta un asset insostituibile nel panorama mondiale.</description>
+  <description>Eternal city of layered beauty, Rome is facing the challenge of modernization while respecting its archaeological constraints. Its monumental charm remains an indispensable asset on the global stage.</description>
   <wiki_intro>North Central Rome is a district that covers the areas around Piazza di Spagna, Piazza del Popolo and Parioli, as well as the magnificent Villa Borghese and its gardens. Further out the area is bordered by Via Nomentana and the River Tiber and includes the area of Salario. Spagna lies in the northern part of the central city, to the west of the park of the Villa Borghese. It includes the Piazza di Spagna and the famous Spanish Steps. It is one of the most fashionable and well-heeled districts of the Italian capital. Parioli is a quiet, affluent and elegant Rome neighborhood close to Villa Borghese. The name originates from a gigantic wall called "parietone". Salario, just to the northwest of the Modern Center and the Villa Borghese, is another elegant, upscale neighborhood, home to a large and beautiful park, Villa Ada. Trieste is also a quiet affluent and elegant neighborhood, close to the Parioli and Villa Ada. It is full of Fascist architecture and early Christian churches such as Sant’Agnese Fuori Le Mura. This is still the centre of Rome. It is served by the metro stations (Piazza di Spagna: Spanish Steps and Borghese Gardens) and . Piazza di San Silvestro, which is a short walk from the Spanish Steps, is a terminal for many bus lines. *
 *  * * 
 *  * *  * 
@@ -171,4 +171,38 @@ Testaccio is an area to the southwest of Aventino along the bank of the Tiber an
 *  * Rent a boat and take a row on the lake in the Borghese Gardens.
 * The streets to the west of the Spanish Steps, such as Via dei Condotti, house...</wiki_intro>
   <landmark_image>assets/images/rome.jpg</landmark_image>
+  <nightlife>
+    <venue lat="41.8876051" lon="12.4771625">
+      <name>404 Name Not Found</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="41.9622761" lon="12.5186845">
+      <name>ABC</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="41.9090849" lon="12.4536435">
+      <name>Alexanderplatz</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="41.889666" lon="12.4690788">
+      <name>Art Two</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="41.871175" lon="12.4790787">
+      <name>Bar Cornetteria</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="41.8627773" lon="12.4899263">
+      <name>Bar dei Cesaroni</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="41.8890547" lon="12.4707375">
+      <name>Bar San Calisto</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="41.89224" lon="12.5661173">
+      <name>Baraka Bistrot</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

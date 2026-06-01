@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="50.9">
   <metadata>
     <title>Nicosia</title>
@@ -79,7 +79,41 @@
       <description>Observatory offering views of the whole city.</description>
     </attraction>
   </highlights>
-  <description>Cerniera tra Europa e Medio Oriente, Nicosia offre un clima privilegiato e un costo della vita molto competitivo. Il suo piano di sviluppo mira a integrare modernità architettonica e conservazione delle mura storiche.</description>
+  <description>Bridge between Europe and the Middle East, Nicosia offers a privileged climate and a very competitive cost of living. Its development plan aims to integrate architectural modernity with the preservation of historic walls.</description>
   <wiki_intro>Nicosia (Greek: Λευκωσία; Turkish: Lefkoşa) is the capital of Cyprus and is the largest city by far. While it may not boast the same abundance of archaeological sites and lively beaches as other parts of Cyprus, the city's Old Town, with its museums and churches, is still a pleasant place to explore. What's more, with fewer tourists than the resorts on the southern coast, Nicosia maintains a more authentically Cypriot atmosphere.  Take a stroll through the city's charming streets, where you'll find delightful cafes serving traditional Cypriot coffee, as well as woodworking shops tucked away in unexpected corners. And don't miss the opportunity to visit the Green Line, the boundary that divides North from South. As the financial and administrative center of the island, Nicosia is a haven for shopping enthusiasts. Nicosia is one of the very few divided capitals in the world. The barbed wire and guardtowers of the Green Line cuts the town in two, with the northern side being the capital of the self-proclaimed Northern Cyprus and the southern half being the capital of the Republic of Cyprus. The municipality of Nicosia governs only the central portion, but the city now sprawls for several kilometers and has engulfed surrounding villages and settlements. The population of the Greek part hovers around 245,000 in 2020 (a third of the total population of Cyprus), but the city has a feel of one much larger. It is the administrative and financial hub of the island as well as home to...</wiki_intro>
   <landmark_image>assets/images/nicosia.jpg</landmark_image>
+  <nightlife>
+    <venue lat="35.1596682" lon="33.3561106">
+      <name>Abbey Garden</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="35.1636055" lon="33.3584549">
+      <name>Allou</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="35.1630446" lon="33.3551565">
+      <name>Babylon</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="35.1630898" lon="33.3585924">
+      <name>BARaki Live</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="35.1646859" lon="33.3605366">
+      <name>Blurry Lights</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="35.1737286" lon="33.3612322">
+      <name>Brewfellas</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="35.168404" lon="33.3592474">
+      <name>Caprice</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="35.1626192" lon="33.3541143">
+      <name>Carry Pride</name>
+      <category>bar</category>
+    </venue>
+  </nightlife>
 </city_report>

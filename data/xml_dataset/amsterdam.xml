@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="63.2">
   <metadata>
     <title>Amsterdam</title>
@@ -111,7 +111,41 @@
 The north lies fairly isolated from the rest of Amsterdam, but there is a free GVB ferry from Centraal Station in the Binnenstad. Instead of just being a way to get in, the ferry ride is an attraction in itself. It gives a great view over the urban harbour-front, and shows the diversity of the north's residents. Large signs show when the next boat is departing, and when it does, expect masses of locals to get on with their bicycles. Getting on just before the boat leaves seems to have turned into a sport here. You...</description>
     </district>
   </districts>
-  <description>Hub globale dell'innovazione sostenibile, Amsterdam eccelle nella mobilità ciclistica e nella gestione creativa degli spazi acquatici. Unisce un dinamismo economico unico a una rete di sicurezza sociale e urbana di primo livello.</description>
+  <description>Global hub of sustainable innovation, Amsterdam excels in bicycle mobility and creative water-space management. It combines unique economic dynamism with a top-tier social and urban safety network.</description>
   <wiki_intro>The Binnenstad is the medieval heart of Amsterdam. It is where most foreign visitors arrive and leave, and has a lot of the city's prime attractions. Most visitors arrive in Amsterdam at the Centraal Station, and then walk south over the Damrak and Rokin. In medieval times, both roads actually were the final stretch of the Amstel River that used to cut Amsterdam in half. East of the Damrak-Rokin-axis was the Oudezijde ("Old Side") of Amsterdam, the oldest part of the city dating from the 13th century. West of the Damrak-Rokin-axis was the Nieuwezijde ("New Side"), which was constructed later, but still dates from the late Middle Ages. Damrak used to be a busy harbour where loads of ships docked, bringing valuable spices with them from the Dutch East Indies. Nowadays, together with Rokin, it's the glue that holds both sides of the city together, and the endless line of tacky souvenir shops won't give a hint about the street's history as a trading quarter. The division between the Oudezijde and the Nieuwezijde never completely faded, and both have a lot to offer for visitors. The Oudezijde is led by the Warmoesstraat, the oldest street of Amsterdam. It started out as a residential street for the wealthy, but they moved to the Canal District in the 17th century and commerce has been its driving force since. The Red Light District is in the same area, at the Oudezijds Achterburgwal, and dates back to the 14th century. Lustful sailors have been replaced by hordes of curious...</wiki_intro>
   <landmark_image>assets/images/amsterdam.jpg</landmark_image>
+  <nightlife>
+    <venue lat="52.3760606" lon="4.9001777">
+      <name>'Skek</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.3912178" lon="4.9382277">
+      <name>'t Sluisje</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.3566879" lon="4.8904823">
+      <name>Arie Op De Hoek</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.3634486" lon="4.9303273">
+      <name>Bar Botanique Cafe Tropique</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.3656085" lon="4.8679756">
+      <name>Bax</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.3724859" lon="4.9009348">
+      <name>Bern</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.3666977" lon="4.9263471">
+      <name>Brouwerij 't IJ</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="52.3526052" lon="4.8908646">
+      <name>Cafe 't Podium</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

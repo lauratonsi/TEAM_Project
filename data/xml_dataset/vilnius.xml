@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="69.3">
   <metadata>
     <title>Vilnius</title>
@@ -79,7 +79,41 @@
       <description>Former KGB headquarters now a museum.</description>
     </attraction>
   </highlights>
-  <description>Capitale verdeggiante e accogliente, Vilnius si distingue per un centro storico barocco e una politica di incentivi alle startup. Offre una qualità della vita elevata con costi decisamente contenuti.</description>
+  <description>Green and welcoming capital, Vilnius stands out for a baroque historic center and a startup incentive policy. It offers a high quality of life at decidedly low costs.</description>
   <wiki_intro>Vilnius is the capital and largest city of Lithuania. It has a beautiful baroque Old Town, listed as a , and excellent tourist facilities in all price ranges. It stands on the River Neris in the southeast pocket of the country, the Dzūkija region, and in 2023 had a population of 629,000. Vilnius has been central to the country's life for as long as there has been Lithuania, but that has often been a tragic tale. Its Neolithic people traded in Baltic amber. In the early Middle Ages five petty kingdoms combined into two then one, when Mindaugas in 1253 became Lithuania's first king and noble Christian convert. The country splintered after his assassination but was re-united under Gediminas, who established Vilnius castle — in legend on the site where a wolf in a dream told him to build. But the real wolves were his neighbouring countries, and finding a powerful ally meant adopting their religion. Poland was the best bet and a dynastic marriage in 1486 united the crowns, later the nations, and Lithuania became Roman Catholic. Vilnius Old Town was largely built in the following 150 years.  This united Polish–Lithuanian Commonwealth grew almost to the Black Sea, but all the power and money shifted to Poland. Like Hungary in the Austro-Hungarian Empire or Ireland within Britain, Lithuania was the poor country cousin. And then Poland fell, with its territory carved up between Prussia, Austria and Russia, and others snatching what they could. Lithuania became a territory of the...</wiki_intro>
   <landmark_image>assets/images/vilnius.jpg</landmark_image>
+  <nightlife>
+    <venue lat="54.6840708" lon="25.2903339">
+      <name>13 statinių</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="54.6888598" lon="25.2757378">
+      <name>Akivarai</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="54.6797935" lon="25.277749">
+      <name>Akvariumas</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="54.6799771" lon="25.2787171">
+      <name>Alaus biblioteka</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="54.6936373" lon="25.2689725">
+      <name>Alaus namai</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="54.7079381" lon="25.2956792">
+      <name>Alaus studija</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="54.679263" lon="25.287105">
+      <name>Amatininkai</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="54.6764695" lon="25.2895043">
+      <name>Apuokas</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>

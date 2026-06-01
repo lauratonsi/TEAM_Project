@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="49.2">
   <metadata>
     <title>London</title>
@@ -80,7 +80,41 @@
       <description>Quartiere di Londra.</description>
     </district>
   </districts>
-  <description>Metropoli globale dal potere economico inesauribile, Londra gestisce flussi turistici immensi con sistemi di sicurezza d'avanguardia. Nonostante i costi elevati, resta il baricentro dell'innovazione e della diversità culturale europea.</description>
+  <description>Global metropolis with inexhaustible economic power, London handles immense tourist flows with cutting-edge security systems. Despite high costs, it remains the hub of innovation and European cultural diversity.</description>
   <wiki_intro>Vibrant and truly multicultural, London is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South-East England. Greater London has a population of a little over 9 million. Considered one of the world's leading "global cities", London remains an international capital of culture, music, education, fashion, politics, finance and trade.  For the visitor, there is a seemingly endless choice of historical sites, shopping, museums, food, art galleries, nightlife, and activities. Once a Celtic settlement, London is a bustling city, where visitors come to experience the urban heritage and see its specific royal-themed attractions. The name "London" used to refer only to the once-walled "Square Mile" of the original Roman and later medieval city; this is now confusingly called the "City of London" or just "The City". Today, London has taken on a much larger meaning to include all of the vast central parts of the modern metropolis, with the city having absorbed numerous surrounding towns and villages over the centuries, including large portions of the surrounding "home counties", one of which - Middlesex - being completely consumed by the growing metropolis. The term Greater London embraces Central London together with all the outlying suburbs that lie in one continuous urban sprawl within the lower Thames Valley. Though densely populated, London retains large swathes of green parkland and open space,...</wiki_intro>
   <landmark_image>assets/images/london.jpg</landmark_image>
+  <nightlife>
+    <venue lat="51.5167141" lon="-0.1103638">
+      <name>26 Furnival Street</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="51.5566538" lon="-0.1383959">
+      <name>Aces and Eights Saloon Bar</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="51.5163376" lon="-0.119321">
+      <name>All Bar One</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="51.4695231" lon="-0.0698846">
+      <name>Bar Story</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="51.5411992" lon="-0.1458705">
+      <name>Canalside Bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="51.4994616" lon="-0.1139642">
+      <name>Crown &amp;amp; Cushion</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="51.5614305" lon="-0.1504467">
+      <name>Duke of St. Albans</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="51.536675" lon="-0.1031148">
+      <name>Fox on the Green</name>
+      <category>bar</category>
+    </venue>
+  </nightlife>
 </city_report>

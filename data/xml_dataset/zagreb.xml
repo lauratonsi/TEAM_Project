@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "city_report.dtd">
+<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
 <city_report appeal_score="67.9">
   <metadata>
     <title>Zagreb</title>
@@ -79,9 +79,43 @@
       <description>Art museum housing the collection of Wiltrud and Ante Mimara.</description>
     </attraction>
   </highlights>
-  <description>Città dalla doppia anima, mitteleuropea e mediterranea, Zagabria offre una vivibilità rilassata e sicura. I suoi parchi a forma di ferro di cavallo e la vita dei caffè la rendono accogliente e vivace.</description>
+  <description>A city with a dual character, Central European and Mediterranean, Zagreb offers relaxed and safe livability. Its horseshoe-shaped parks and café life make it welcoming and lively.</description>
   <wiki_intro>Zagreb is a city in Central Croatia and the capital of Croatia. The city has a charming medieval 'old city' with architecture and cobbled streets reminiscent of Vienna, Budapest, Prague and other Central European capitals. Zagreb is a vibrant city of around 770,000 people (2021, metropolitan area: 1,100,000). In 2017 it was visited by over a million tourists, mainly from Austria, Germany and Italy. Zagreb is also well known for its Advent festival, which occurs from December to early January, boasting vibrant nightlife and additional cultural and gastronomic activities. *  Other information points are located at the airport, bus station, railway station and at the Lotrščak Tower. Getting there: * Buses leave from the airport at 07:00 and every 30 minutes between 08:00 and 20:00. Beyond these hours, there are buses leaving to the main bus station every time a Croatia Airlines plane lands. When traveling to the airport from the main Zagreb bus station, the buses are scheduled between 04:30 and 20:30. A journey takes about 30 min. The price of the single ticket is . Online timetable can be checked at the Pleso prijevoz website. Airport buses leave from the main bus station which is in the wider city center; they leave from its northeast wing (toward the city)—look for "Croatia Airlines" and "Eurolines" banners on the building.
 * A cheaper local ZET bus 290 also goes to the city center (and back to the airport) from the main road outside the terminal. 
 * You can also order a...</wiki_intro>
   <landmark_image>assets/images/zagreb.jpg</landmark_image>
+  <nightlife>
+    <venue lat="45.8074304" lon="15.9841948">
+      <name>&amp;amp; More by Sheraton bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="45.8007542" lon="15.9723829">
+      <name>808 bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="45.7872642" lon="15.9529793">
+      <name>A most unusual garden</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="45.7859116" lon="15.9528122">
+      <name>Absolut bar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="45.7957109" lon="15.9000845">
+      <name>After Eight</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="45.8088727" lon="15.9973586">
+      <name>Akunbar</name>
+      <category>bar</category>
+    </venue>
+    <venue lat="45.8077358" lon="15.9965759">
+      <name>Ambasada</name>
+      <category>pub</category>
+    </venue>
+    <venue lat="45.7961008" lon="15.9697694">
+      <name>Anera</name>
+      <category>pub</category>
+    </venue>
+  </nightlife>
 </city_report>
