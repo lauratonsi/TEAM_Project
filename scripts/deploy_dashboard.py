@@ -362,6 +362,11 @@ def _pct(val, maxv=100):
     try: return round(min(100, max(0, float(val or 0) / maxv * 100)))
     except: return 0
 
+def _price(val):
+    """Formatta prezzo: 157.25 → '157' (arrotondato all'euro intero)."""
+    try: return str(round(float(val or 0)))
+    except: return str(val)
+
 
 def deploy():
     print("🚀 Generazione Dashboard: Reintegro Attrazioni + Griglia 3x2...")
@@ -427,17 +432,17 @@ def deploy():
                 <div class="city-card-body">
                     <div class="stats-box">
                         <div class="stat-item">
-                            <span class="stat-label">Budget</span>
-                            <span class="stat-val">{city_obj['price']}€</span>
+                            <span class="stat-label">Budget/notte</span>
+                            <span class="stat-val">{_price(city_obj['price'])}€</span>
                             <div class="score-bar-wrap"><div class="score-bar-fill amber" style="width:{p_pct}%"></div></div>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">Safety</span>
+                            <span class="stat-label">Sicurezza</span>
                             <span class="stat-val">{city_obj['safety']}</span>
                             <div class="score-bar-wrap"><div class="score-bar-fill green" style="width:{s_pct}%"></div></div>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">Green</span>
+                            <span class="stat-label">Verde</span>
                             <span class="stat-val" style="color:var(--green-500)">{city_obj['green']}</span>
                             <div class="score-bar-wrap"><div class="score-bar-fill green" style="width:{g_pct}%"></div></div>
                         </div>
@@ -446,7 +451,7 @@ def deploy():
                             <span class="stat-val" style="color:var(--blue-500)">{city_obj['hotel_count']}</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-label">Accesso</span>
+                            <span class="stat-label">P. acquisto</span>
                             <span class="stat-val">{city_obj['economy']}</span>
                             <div class="score-bar-wrap"><div class="score-bar-fill blue" style="width:{e_pct}%"></div></div>
                         </div>
@@ -537,7 +542,7 @@ def deploy():
         <button class="filter-btn active" data-filter="all">🌍 Tutte</button>
         <button class="filter-btn" data-filter="safety">🛡️ Top Safety ≥ 70</button>
         <button class="filter-btn" data-filter="green">🌱 Top Green ≥ 70</button>
-        <button class="filter-btn" data-filter="budget">💰 Budget ≤ 100€</button>
+        <button class="filter-btn" data-filter="budget">💰 Budget ≤ 120€</button>
     </div>
     <main class="container" id="city-grid">{cards_html}</main>
     <button id="back-to-top" title="Torna in cima">↑</button>
@@ -591,7 +596,7 @@ def deploy():
                 let show = true;
                 if (f === 'safety') show = s >= 70;
                 if (f === 'green')  show = g >= 70;
-                if (f === 'budget') show = p <= 100;
+                if (f === 'budget') show = p <= 120;
                 card.style.display = show ? '' : 'none';
             }});
         }});
@@ -604,6 +609,11 @@ def deploy():
     }}, {{rootMargin: '0px 0px -50px 0px'}});
     document.querySelectorAll('.city-card').forEach(c => observer.observe(c));
     </script>
+<footer style="text-align:center; padding:40px 20px; color:var(--slate-500); font-size:0.82rem; border-top:1px solid var(--slate-200); margin-top:20px;">
+    Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
+    Università di Bologna — A.A. 2024/2025 ·
+    <a href="pages/report.html" style="color:var(--accent); text-decoration:none; font-weight:700;">Report &amp; Documentazione</a>
+</footer>
 </body></html>"""
 
     with open(OUTPUT_HTML, 'w', encoding='utf-8') as f:
@@ -1338,19 +1348,17 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
     Università di Bologna, A.A. 2024/2025.</p>
   <div class="team-grid">
     <article class="team-card">
-      <img src="https://github.com/lauratonsi.png" alt="Laura Tonsi" class="team-avatar">
+      <div class="team-initials" style="background:linear-gradient(135deg,#E74C3C,#C0392B)">LT</div>
       <div>
         <p class="team-name">Laura Tonsi</p>
-        <p style="color:var(--slate-500);font-size:0.88rem;margin:0 0 4px">Architettura ETL, RAG pipeline, frontend</p>
         <a href="https://github.com/lauratonsi" target="_blank" class="team-github">
           ⬡ github.com/lauratonsi</a>
       </div>
     </article>
     <article class="team-card">
-      <img src="https://github.com/SusannaCioni.png" alt="Susanna Cioni" class="team-avatar">
+      <div class="team-initials" style="background:linear-gradient(135deg,#3498DB,#2980B9)">SC</div>
       <div>
         <p class="team-name">Susanna Cioni</p>
-        <p style="color:var(--slate-500);font-size:0.88rem;margin:0 0 4px">Analisi dati, XML/DTD, scoring</p>
         <a href="https://github.com/SusannaCioni" target="_blank" class="team-github">
           ⬡ github.com/SusannaCioni</a>
       </div>
