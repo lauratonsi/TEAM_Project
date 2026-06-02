@@ -593,12 +593,12 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
         <div class="analyst-icon">🤖</div>
         <div>
             <p class="analyst-title">Virtual Analyst</p>
-            <p class="analyst-sub">RAG System · BM25 + FAISS · 320 XML chunks</p>
+            <p class="analyst-sub">RAG System · BM25 + FAISS · 350 XML chunks</p>
         </div>
     </div>
     <div class="analyst-input-row">
         <input type="text" id="chat-input" class="analyst-input"
-               placeholder="e.g. safety in Vienna, hotels Amsterdam, transport Rome…">
+               placeholder="e.g. transport Rome, bars Dublin, museums Athens, districts Prague…">
         <button id="chat-btn" class="analyst-btn">Ask</button>
     </div>
     <div id="chat-output" class="analyst-output">
@@ -606,12 +606,12 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
     </div>
     <div class="analyst-chips">
         <button class="chip" data-q="transport Rome">🚇 transport Rome</button>
-        <button class="chip" data-q="hotel Amsterdam">🏨 hotels Amsterdam</button>
-        <button class="chip" data-q="what to see in Paris">🗺️ Paris sights</button>
+        <button class="chip" data-q="hotels Amsterdam">🏨 hotels Amsterdam</button>
+        <button class="chip" data-q="museums Athens">🏛️ museums Athens</button>
         <button class="chip" data-q="safety Berlin">🛡️ safety Berlin</button>
+        <button class="chip" data-q="bars in Dublin">🍺 bars Dublin</button>
         <button class="chip" data-q="districts Prague">🏘️ districts Prague</button>
-        <button class="chip" data-q="greenest city">🌱 greenest city</button>
-        <button class="chip" data-q="compare Rome and Paris">⚖️ Rome vs Paris</button>
+        <button class="chip" data-q="airport Stockholm">✈️ airport Stockholm</button>
     </div>
     <details class="analyst-details">
         <summary>How does it work? — RAG architecture</summary>
