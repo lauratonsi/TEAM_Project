@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
   <siteinfo>
     <sitename>Wikivoyage</sitename>
@@ -8,7 +9,7 @@
     <namespaces>
       <namespace key="-2" case="first-letter">Media</namespace>
       <namespace key="-1" case="first-letter">Special</namespace>
-      <namespace key="0" case="first-letter" />
+      <namespace key="0" case="first-letter"/>
       <namespace key="1" case="first-letter">Talk</namespace>
       <namespace key="2" case="first-letter">User</namespace>
       <namespace key="3" case="first-letter">User talk</namespace>
@@ -4054,6 +4055,967 @@ Parking is free for 2 weeks if you rent a room for at least one night. This serv
 {{geo|50.9014|4.48444}}
 {{usableairport}}</text>
       <sha1>a7hez5euybrhi4i5avh3672q4pjqfon</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Brussels</title>
+    <ns>0</ns>
+    <id>0</id>
+    <revision>
+      <text>{{pagebanner | Brussels banner.jpg|unesco_whs=yes}}
+&lt;!--{{Districts discussion}}--&gt;
+{{printDistricts}}
+[[File:Brussels skyline gp.jpg|thumb|right|Skyline of Brussels]]
+
+'''Brussels''' ([[French phrasebook|French]]: ''Bruxelles'', [[Dutch phrasebook|Dutch]]: ''Brussel'') is the capital of [[Belgium]] and one of the three administrative regions within the country, together with [[Flanders]] and [[Wallonia]]. Apart from its role within its country, it is also an internationally important city, hosting numerous international institutions, and in particular the headquarters of NATO and the core institutions of the [[European Union]]. Due to that, it is sometimes referred to informally as the capital of the EU, and even used as a metonym for the EU institutions.
+
+Brussels blends the heritage of a medieval Flemish town with the grandiose projects initiated after it became the capital of what was then a French-speaking country, as well as some impressive modern architecture erected in a large part to house the international institutions. Brussels is now bilingual, hosting and officially recognizing the Dutch- and French-speaking communities of Belgium, and has become increasingly international with the influx of people of various origin who came there to work, many of them for the European Union. This all makes Brussels a rather unique blend, sprinkled with a number of Belgian peculiarities, and for the inquisitive tourist a large treasure chest to discover.
+
+==Districts==
+&lt;!--{{Mapframe|50.8457|4.3513|zoom=12|show=other,mask,go,vicinity,city,around}}--&gt;
+{{Mapframe|50.83872|4.36138|width=650|height=700|zoom=12|show=mask,see,do,buy,drink,sleep,eat,go,vicinity,city,around|name=Map of Brussels and public transport - S-train makes up the thin lines, the metro and premetro makes up the thick ones}}
+{{mapshape|type=page|wikicommons=Brussels_Districts.map}}
+{{mapshapes|Q506298}}&lt;!--metro--&gt;
+{{Mapshapes|Q117965|stroke-width=2}} &lt;!-- Brussels S-train --&gt;
+
+{{Regionlist|
+region1name=[[Brussels/Centre|Centre]] |
+region1color=#00ff00|
+region1items= |
+region1description=The small medieval centre of Brussels, with the Grand-Place/Grote Markt, a beautiful square and {{UNESCO}}, at its heart. The centre is a pedestrian-only area with small streets and dotted with attractions. You'll find ample opportunities to try waffles, Belgian beer or fries here.|
+
+region2name=[[Brussels/Pentagon|Pentagon]]  |
+region2color=#96531c|
+region2items= |
+region2description=Following the outline of the second city walls, the Pentagon encloses the core city with its numerous restaurants, bars, museums, and other fascinating secrets to discover. It is small enough to be explored on foot, and doing so is highly recommended. |
+
+region3name=[[Brussels/European Quarter|European Quarter]] |
+region3color=#ffff00|
+region3items= |
+region3description=The heart of [[Flanders|Flemish]], [[Belgium|Belgian]], and [[Europe|European]] politics, home to the European Parliament and Commission, and numerous other EU institutions. The Cinquantenaire Park on its eastern side is the background of museums well worth visiting. |
+
+region4name=[[Brussels/Heysel|Heysel]] (Heizel)|
+region4color=#800080|
+region4items=''Laeken/Laken, Neder-Over-Heembeek'' |
+region4description=Heights to the north of the city with remnants of the 1935 and 1958 [[World's Fair]]s scattered around, the most famous of which is the Atomium. In the Atomium's shadow, ''Mini Europe'' and the ''Kinepolis'' cinema complex gave the Heysel its reputation as Brussels' leisure district.  |
+
+region5name=[[Brussels/Business District|Business District]]  |
+region5color=#0000ff|
+region5items= |
+region5description=Brussels' high rise district to the north of the [[Brussels/Pentagon|Pentagon]], with modern skyscrapers, generic shopping opportunities, ethnic restaurants, the Tour et Taxis/Thurn en Taxis, an old industrial site converted to multiuse including a food market, and overpriced veggie bars. The district has little of tourist interest aside from the North Station, with its impressive Art Deco architecture. |
+
+region6name=[[Brussels/Woluwe|Woluwe]] |
+region6color=#808080|
+region6items= ''Woluwé-Saint-Lambert/Sint-Lambrechts-Woluwe, Woluwé-Saint-Pierre/Sint-Pieters-Woluwe, Auderghem/Oudergem, Etterbeek, Watermael-Boitsfort/Watermaal-Bosvoorde, Ixelles/Elsene''|
+region6description=A laid-back residential area on the east side of the city, bordering [[Kraainem]] to the east and [[Tervuren]] to the south. It boasts a variety of architectural styles to explore, most notably houses by famous Art Nouveau architect Victor Horta, which are listed as {{UNESCO}}s. |
+
+region7name=[[Brussels/Matonge|Matongé]] |
+region7color=#ff8888|
+region7items= |
+region7description=Home to much of Brussels' [[Congo|Congolese]] population. Worth a visit for the distinct African vibe, the colourful outfits that go with it, and the many African specialities that can be purchased in this neighbourhood.  |
+
+region8name=[[Brussels/North-East|North-East]] |
+region8color=#8080FF|
+region8items= ''Evere, Haren'' |
+region8description=A residential and commercial district bordering Schaarbeek to the south-west and Woluwe to the south. Aside from the Cemetery of Brussels, this off-the-beaten-track district has a few interesting museums to offer. Unless you're visiting NATO headquarters, this area is of relatively little interest to the average traveller, save some nice parks. |
+
+region9name=[[Brussels/South|South]] |
+region9color=#228279|
+region9items=''Uccle/Ukkel, Forest/Vorst'' |
+region9description=An upscale residential district bordering the [[Brussels/Sonian Forest|Sonian Forest]] to the south. Home of the Avenue Louise/Louizalaan, widely regarded as Brussels' fanciest avenue. |
+
+region10name=[[Brussels/West|West]] |
+region10color=#FF8200|
+region10items=''Anderlecht, Berchem-Sainte-Agathe/Sint-Agatha-Berchem, Jette, Ganshoren, Koekelberg'' |
+region10description=Mainly a residential and commercial district. Towards the border with [[Flanders]], it's fairly rural, with forests, agriculture, and the restored ''Luizen'' windmill. The Koekelberg Basilica, one of the largest churches in the world, can be seen from almost everywhere, and is absolutely worth a visit. |
+
+region11name=[[Brussels/Sonian Forest|Sonian Forest]] |
+region11color=#54ff9f|
+region11items= |
+region11description=The Sonian Forest is the largest natural area in Brussels, although only a small part of it is geographically within the boundaries of the Brussels-Capital Region. Its endless beech trees covering rolling hills offer opportunities for jogging and cycling. If you get up early enough, you have a good chance of spotting deer and other wildlife! The Bois de la Cambre/Ter Kamerenbos to the north is a popular leisure destination for locals. The Sonian Forest is inscribed as a {{UNESCO}}. |
+
+region12name=[[Brussels/Molenbeek and surroundings|Molenbeek and surroundings]] |
+region12color=#250057|
+region12items=''Molenbeek-Saint-Jean/Sint-Jans-Molenbeek, Anderlecht, Saint-Gilles/Sint-Gillis, Forest/Vorst'' |
+region12description=A residential area in the south of Brussels with a high immigrant population. The district has in the past played an important commercial role in the city. |&lt;!--this discription needs updating--&gt;
+
+region13name=[[Brussels/Schaarbeek|Schaarbeek]] |
+region13color=#7c187c|
+region13items=''Schaerbeek/Schaarbeek, Saint-Josse-ten-Node/Sint-Joost-ten-Noode'' |
+region13description=A mixed residential and commercial district to the north-east of the Pentagon. There are a few nice neighbourhoods, but in most of the district the conditions are deteriorating. While things have slowly begun to improve, it should still be visited with caution. The Saint-Josse/Sint-Joost suburb in particular is the poorest neighbourhood in Belgium, and its main attraction is the Brussels red light district.|
+
+region14name=Industrial District |
+region14color=#251f56|
+region14items= |
+region14description=A thin strip of commercial and industrial zones following the harbour from the [[Brussels/Business District|Business District]] to [[Vilvoorde]] north of Brussels, and hosting the largest railway hub in Belgium. With little to see and do, deserted at night, and an unpleasant atmosphere of industrial decay after sunset, it is recommended to avoid this district.
+}}
+&lt;!--
+==Districts==
+Brussels is a large city. Wikivoyage has several articles on its districts:
+*'''[[Brussels/East]]'''
+*'''[[Brussels/European Quarter]]'''
+*'''[[Brussels/North]]'''
+*'''[[Brussels/Pentagon]]'''
+*'''[[Brussels/South]]'''
+*'''[[Brussels/Southeast]]'''
+*'''[[Brussels/West]]'''
+--&gt;
+
+==Understand==
+[[File:Grote Markt (9379072012).jpg|thumb|right|Grand-Place/Grote Markt]]
+
+{{infobox|Autonomy of Brussels|Within the [[Belgium|Belgian]] federation, Brussels enjoys a large degree of autonomy. Although dependent on Belgium for matters such as defense and foreign policy, Brussels has its own government in charge of interior affairs, environmental policies, health care, economy, transport, tourism and education, and its own laws regarding these matters. The city has control over its own administrative region (the Brussels-Capital Region), which is on the same level as [[Flanders]] and [[Wallonia]] in Belgium. This status of a city state within a host country is somewhat comparable to [[Vatican City]] and [[Hong Kong]]. The political autonomy of Brussels has drawn international interest as the host for politically independent entities such as the [[European Union|European Institutions]] (the European Commission and European Parliament), and the NATO headquarters. Brussels is a strongly internationally oriented metropolis, and despite shared languages, inhabitants identify as ''Brusseleirs'' rather than Flemes or Walloons.
+}}
+
+When Brussels became the capital city of a new country in the 19th century, large parts of the old town were destroyed to make way for brand new ministries, palaces, schools, army barracks and office blocks constructed between 1880 and 1980. The medieval city walls that once defended and surrounded the city were demolished. Only a small historic centre (one square and four adjacent streets) was preserved. The historic Flemish town centres are better preserved in cities like [[Antwerp]], [[Bruges]], [[Ghent]], [[Leuven]], and [[Mechelen]]. This thoughtless treatment of historic buildings has earned past city planners near-universal scorn and even given rise to the term "Brusselization" for cities that similarly tear down old buildings, replacing them with faceless concrete monstrosities.
+
+===Climate===
+{{climate chart
+|Brussels
+|1.4 |6.1 |75.5
+|1.5 |7.1 |65.1
+|3.5 |10.9 |59.3
+|6.0 |15.0 |46.7
+|9.2 |18.4 |59.7
+|12.0 |21.2 |70.8
+|14.1 |23.2 |76.9
+|13.9 |23.0 |86.5
+|11.3 |19.5 |65.3
+|8.1 |14.9 |67.8
+|4.6 |9.9 |76.2
+|2.1 |6.6 |87.4
+
+|float=right
+|clear=right
+|source=[[:w:Brussels]]
+| description = See the Brussels forecast at [http://www.worldweather.org/053/c00191.htm World Meteorological Organization]
+}}
+
+Brussels has an oceanic climate. Although Brussels' weather has historically been famous for being awful and damp, the city has become warmer in the last decades. It features moderately cold, wet winters and warm, variable summers. Rainfall is equally distributed throughout the year, with a slight peak in the period from November to January and May to June.
+
+Day temperatures in winter revolve around 6°C and normally do not surpass 10°C. Sunshine hours are generally low, but higher than in many other Northern European locations. Snowfall is possible, although heavy snowfalls with significant accumulation are not frequent and only occur periodically. In March and April the weather generally turns milder, alternating sometimes warm, sunny days with cooler, overcast days. May is often the locals’ favourite month, as it features frequent sunny days accompanied by the first periods of truly warm weather. June shares similar characteristics, but day temperatures by then surpass 20°C almost every day, with the exception of periods of rainy weather in which they can revolve around 17-19°C. July and August are warm, and heat waves have become more and more frequent, with temperatures over 35°C being surpassed virtually every year. It is advisable to check the weather before your visit, as you are equally as likely to encounter a sunny week with day temperatures over 30°C every day as a more variable week with frequent rain and day temperatures below 24°C every day. September can either feature Indian summer conditions with warm, sunny days, or entire rainy periods with mildly cool weather. October is mild, although temperatures drop off quite quickly and sunny days start becoming rarer after October. In December 2017, Brussels shattered the European record for the least amount of sunshine in any given month.
+
+====Preparing your visit====
+Brussels has as many indoor as outdoor activities to offer, so even if it turns out to rain every day of your visit, you'll find more than enough to do to make the visit worthwhile. The [https://www.buienradar.be/weer/brussels/be/2800866 Buienradar] (literally ''Shower Radar'') shows the real time location of rain clouds and calculates predictions of their movements. The radar can tell when it will start to rain at your position with a 10-minute accuracy, and is a great tool for planning out your day.
+
+Although Brussels is best explored by foot or by bike, the public transport network is the best option when it's raining. Museums and other attractions are rarely more than 10 minutes walking away from a metro station, so a map of the metro network in combination with the ''Buienradar'' can keep you dry through adequate planning. If you're caught by surprise, metro stations are excellent places to seek shelter from the rain, and the larger stations have facilities where you can purchase a hot beverage while waiting ({{station|De Brouckere}}, {{station|Central Station}}, {{station|Montgomery}}, and so on). Chains like ''Starbucks'', ''Panos'', ''McDonalds'' and the likes don't care if you occupy a table without making a purchase, so these are good options to sit out longer showers.
+
+===Boroughs===
+
+Brussels is split into 19 ''communes'' or ''gemeenten'' (municipalities/boroughs):
+* '''Anderlecht''' - A large municipality at the western end of the city. It is often best known for its association football team R.S.C. Anderlecht.
+* '''City of Brussels''' - Brussels offers many charming and beautiful attractions, with deeply ornate buildings on the Grand-Place/Grote Markt, and a fish-and-crustacean overdose of St. Catherine's Square (Place Sainte-Catherine/Sint-Katelijneplein). Stroll along, (and stop in for a drink) at one of the many bars on Place Saint-Géry/Sint-Goriksplein, or max out your credit card on the trendy Rue Antoine Dansaert/Antoine Dansaertstraat.
+** '''Marolles/Marollen''' - A neighbourhood of Brussels close to the city's heart, one of the few places where the Brussels dialect of Dutch (Flemish) could still be heard. The area is best known for the flea market held daily on the Place du Jeu de Balle/Vossenplein and for a plethora of shops selling everything from old radios and bent wipers to fine china and expensive Art Nouveau trinkets. Visit on Saturdays or Sundays.
+* '''Forest/Vorst''' - A southern municipality, home to the Wiels Contemporary Art Centre, several car factories, and Forest National/Vorst Nationaal, one of the most popular concert halls in Belgium.
+* '''Ixelles/Elsene ''' - A vibrant part of town with a high concentration of restaurants, bars and other services to satisfy the good-looking or the heavy-spending. Some wandering around will reveal small bookshops, affordable ethnic restaurants or independent record shops tucked away in side streets. The Matongé district just off Chaussée d'Ixelles/Elsenesteenweg is the city's main African neighbourhood. It is a large district in the South of Brussels spreading from newly gentrified immigrant neighbourhoods off the Chaussée d'Ixelles/Elsenesteenweg near the town centre to leafy suburbs close to the Bois de la Cambre/Ter Kamerenbos. The district is split in two by Avenue Louise/Louizalaan, which is part of the City of Brussels district.
+* '''Molenbeek-Saint-Jean/Sint-Jans-Molenbeek''' - Commonly known as Molenbeek, it is a mostly residential municipality consisting of several historically and architecturally distinct districts. The population has been described as "mainly Muslim" in the media; however, actual figures range between 25% and 40%, depending on the catchment area. As of 2016, there is one main minority group in Molenbeek, Belgian Moroccans.
+* '''Saint-Gilles/Sint-Gillis''' - The city's bohemian epicentre with thriving French, Portuguese, Spanish, Maghrebi and Polish communities. The area around the Parvis de Saint-Gilles/Sint-Gillisvoorplein is the arty part, with the area around the Chatelain/Kastelein and the Church of the Holy Trinity being decidedly more yuppified. Like Schaerbeek, Saint-Gilles boasts several Art Nouveau and Haussmann-style buildings. It is also home to the major railway station Gare du Midi/Zuidstation (Eurostar terminal).
+* '''Saint-Josse-ten-Noode/Sint-Joost-ten-Noode''' - The smallest and poorest municipality not only of Brussels, but of all Belgium, this municipality might not always be too pleasing on the eye but does have a few small, welcoming streets. The mid-part of the Chaussée de Louvain/Leuvensesteenweg is also home to a relatively small Indo-Pakistani community, so this is the place to head to for a tikka masala. The Turkish community which was the largest community only a few years ago has declined rapidly, as they moved to relatively wealthier municipalities by Saint-Josse/Sint-Joost standards.
+* '''Uccle/Ukkel''' - Brussels' southernmost municipality. Green, bourgeois and starched like all posh municipalities should be, Uccle has retained many of its charming medieval cul-de-sacs, tiny squares and small townhouses as has nearby Watermael-Boitsfort/Watermaal-Bosvoorde.
+* '''Woluwé-Saint-Pierre/Sint-Pieters-Woluwe''' and '''Woluwé-Saint-Lambert/Sint-Lambrechts-Woluwe''' - Two eastern municipalities, mainly residential, with a mixture of housing blocks, quaint neighbourhoods and green areas. These places are well-loved by Eurocrats and other professional types. The enormous Wolubilis cultural complex is well worth a visit.
+
+===Tourist information===
+* {{listing
+| name=Visit Brussels | alt= | url= https://www.visit.brussels/en/visitors  | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=
+| lastedit=2024-01-30
+| content=Tourist information website.
+}}
+* {{listing
+| name=Brussels International | alt=Brussels Info Place | url=http://www.brusselsinternational.be | email=tourism@brusselsinternational.be
+| address=Rue Royale/Koningsstraat 2 | lat= | long= | directions=
+| phone=+32 2 513-89-40 | tollfree= | fax=
+| hours=10:00-18:00 | price=
+| content=
+}}
+* {{listing
+| name=Brussels International | alt=Tourism and Congress | url=http://www.brusselsinternational.be | email=tourism@brusselsinternational.be
+| address=Town Hall Grand-Place | lat= | long= | directions=
+| phone=+32 2 513-89-40 | tollfree= | fax=+32 2 513-83-20
+| hours=09:00-18:00; Sundays: winter 10:00-14:00, Jan 1-Easter closed | price=
+| content=It's inside the town hall and usually crammed. Sells a couple of discount booklets or cards, such as the Brussels Card and public transport one-day passes
+}}
+* {{listing
+| name=Brussels International | alt=Midi/Zuid station | url= | email=
+| address= | lat= | long= | directions=Central concourse
+| phone= | tollfree= | fax=
+| hours=Winter: M-Th 08:00-17:00, F 08:00-20:00, Sa 09:00-18:00, Su &amp; holidays 09:00-14:90; Summer: Sa-Th 08:00-20:00, F 08:00-20:00 | price=
+| content=
+}}
+* {{listing
+| name=Brussels International | alt=Brussels Airport | url= | email=
+| address=Arrival hall | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours=08:00-21:00 | price=
+| content=
+}}
+
+==Talk ==
+The '''two official languages''' of Brussels are [[French phrasebook|French]] and [[Dutch phrasebook|Dutch]].[[File:Brussels signs.jpg|thumb|Bilingual French and Dutch street signs in Brussels. This street name means "street of mountain".]]
+
+Language in Brussels can be a confusing matter to visitors. The common language is French, with around 90% of the population in Brussels speaking it passably to fluently. You can easily get by with English, especially in the tourist areas. Dutch is also an official language: within Brussels, the population that speaks Dutch passably to fluently is limited to around 20%. 
+
+When it comes to official matters, French and Dutch have equal status in Brussels, with sometimes complicated rules to ensure a balance between the two. Streets, railway stations, bus stops and other places have names in the two languages. The two names don’t always sound or look similar. 
+
+For example, the Brussels-South railway station is ''Bruxelles-Midi'' in French and ''Brussel-Zuid'' in Dutch; ''Hôpital Militaire'' and ''Militair Hospitaal'' (Military Hospital). And for municipalities, many of them have 2 names, like ''Ixelles'' in French and ''Elsene'' in Dutch. If you are confused on using which name, it is suggested to use the French one. 
+
+{{Infobox|Not the same meaning|Watch out when making assumptions based on English: a common mistake is to think Bruxelles-Midi refers to the Brussels-Central railway station, due to midi seeming similar to middle.}}
+
+In many informal texts in Brussels, such as commercial advertisement or menu, only French is written, or you will see the same ad which has 2 versions of languages (this is often seen in ads of government or large companies).
+
+Many stations of bus or metro has 2 names in 2 languages. but usually one will be written in italics (the one in italics is always Dutch): e.g. Roi Baudouin ''Koning Boudewijn'' or Porte de Namur ''Naamsepoort''. The French name is more commonly used on other places like Google Maps. 
+
+Historically Dutch-speaking, Brussels became more and more French-speaking during the 19th and 20th centuries. Today, most inhabitants speak French in daily life. The Brussels dialect, a Brabantian dialect of Dutch, can be heard, especially in the outer districts of Brussels-Capital Region. The French spoken is standard French. Dutch speakers speak standard Dutch but many also speak a different variety when talking to people from their region. 
+
+'''English''' has become a common spoken language because of the international institutions based in Brussels, such as the European Commission, the European Parliament and NATO. It is still relatively rare to find written tourist or general information in English, although the situation is changing. Public announcements in train stations are given in at least French and Dutch, while larger train stations (such as Zuidstation/Gare du Midi) typically include English and German. English is also used on metros, trams and buses, announced last for information such as line transfers and terminal stops. Do not hesitate to ask someone if you do not understand what has been said.
+
+Considering the city's location and that it markets itself as the capital of Europe, spoken English is less prevalent in Belgium than in its Dutch neighbour. However, even if it is not as widely spoken as one may expect, it is nonetheless widely understood. As is often the case elsewhere, success in finding someone who speaks English depends on several factors such as age (14- to 35-year-olds are most likely to speak English), education and previous experience abroad.
+
+'''[[German phrasebook|German]]''' is also an official language in Belgium spoken as a mother tongue by about 70,000 people in the east of the country bordering Germany, but the only German you're likely to hear in Brussels would be overheard on the streets around the European institutions or by German tourists, even if there is a large German population residing there. German can be seen in some signs in major stations or information of products.
+
+In Brussels, large segments of the population have neither French nor Dutch as their mother tongue, and many other languages can be heard on the street, with [[Arabic phrasebook|Arabic]] being particularly common. Other languages that are increasingly heard in Brussels include Arabic (at least 25% of Brussels' population is of Arab descent, chiefly from Morocco), Spanish, Italian, Portuguese, Polish, and Russian.
+
+==Get in==
+
+===By plane===
+
+[[File:World War I at Brussels Airport (14843594408).jpg|thumb|right|[[Brussels Airport]] (BRU) is in Zaventem, immediately to the north-east of Brussels]]
+
+====[[Brussels Airport]]====
+[[File:Winter Operations @ Brussels Airport January 2013 (8387465114).jpg|thumb|right|The airport is the hub for the aptly-named Brussels Airlines, the flag carrier of Belgium]]
+
+{{go
+| name={{rint|air}} Brussels Airport | alt={{IATA|BRU}} also referred to as '''Brussels National''' or '''Zaventem''' after the municipality it is in | url=http://www.brusselsairport.be/en/ | email=
+| address= | lat=50.901389 | long=4.484444 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikipedia=Brussels Airport | image=Brussels Airport Runway 25 R.jpg | wikidata=Q28934
+| lastedit=2022-11-28
+| content=This is Brussels' main airport. It has good train connections with the rest of Belgium, and with many [[Europe]]an capitals and other major cities.
+}}
+
+Belgium's flag carrier '''[http://www.brusselsairlines.com Brussels Airlines]''', which operates an extensive network of flights within Europe, also offers long-haul flights from North America and, quite uniquely for a European airline, many [[Africa|African]] destinations - especially in the former Belgian colony [[DR Congo]]. Major North American carriers also offer flights to Brussels, as do a few Asian ones. Direct connections from [[Asia]] are decent, while those from Latin America are almost non-existent, so you most likely have to change at an intermediate airport, and may want to consider using one of the [[Middle East|Middle Eastern]] carriers (Emirates, Etihad and Qatar all serve Brussels) or change in one of Europe's major hubs like {{rint|air}} [[London Heathrow Airport|London Heathrow]], {{rint|air}} [[Frankfurt Airport|Frankfurt]], {{rint|air}} [[Paris Charles de Gaulle Airport|Paris Charles de Gaulle]] or {{rint|air}} [[Amsterdam Airport Schiphol|Schiphol]]. The latter two have a direct train to Brussels. Turkish Airways (via {{rint|air}} [[Istanbul Airport|Istanbul]]) and Finnair (via [[Helsinki Airport|Helsinki]]) also have particularly developed networks of connections from the [[Far East]], while Madrid is the best option to fly from Latin America.
+
+=====Travel between Brussels Airport and Brussels City =====
+[[File:Brussels Airport Railway Station.jpg|thumb|right|A train station in the airport's terminal provides direct connections to Brussels and to many other cities in Belgium, France and the Netherlands]]
+
+*{{rint|be|rail}} '''[https://www.belgianrail.be/en/ Belgian Rail]''' operates trains (2nd class: Single: {{EUR|11.60}} (May 2026); Weekend single : {{EUR|10.20}}; 1st class: {{EUR|13.40}}; 1st class weekend: {{EUR|11.50}}) every 10-20 min from the airport (Level -1) to Brussels' three main train stations, with most trains continuing to other parts of Belgium (and some to the Netherlands). The journey to the {{rint|rail}} {{rint|be|rail}} and {{rint|metro}} {{rint|brussels|1}}{{rint|brussels|5}} ''Central Station'' takes 15-20 minutes. Tickets can be bought from vending machines (coins or PIN cards only) or the train ticket office (notes accepted) in the airport train station at Level -1. Trains are accessed at Level -2, you need a Brussels Airport Supplement ticket to get in, that is almost always included in your train ticket. The list of exceptions can be found '''[https://www.belgiantrain.be/en/products/supplements/airports/brussels-airport/ on the official website]'''. The trains are clean and well-maintained. To enter or exit the train, push the green button on the door, as the doors are not automatically opened at the stations as they are in other systems. 
+* '''{{rint|bus}} [https://www.stib-mivb.be/home/travel/realtime/lines?line=12&amp;direction=f MIVB/STIB bus 12]''' runs every 10-40 minutes (does not run to or from Brussels Airport from Monday to Friday during Belgian school holidays) via metro station  {{rint|metro}} {{rint|brussels|1}}{{rint|brussels|5}} Schuman to the European district around ''Place du Luxembourg''/''Luxemburgplein'' (on the other side of the park from Gare Central) and to the {{rint|metro}} {{rint|brussels|2}}{{rint|brussels|6}} Trône metro station. The journey takes 30 minutes. When going from the airport to the city center, a special "Go2City" ticket is needed (for the journey to the airport, a regular ticket is valid). The Go2City ticket is valid for a total of 60 minutes on the trains (by SNCB), metro (by STIB), buses (by STIB, De Lijn and TEC) or trams (by STIB) from the moment it is validated. The buses depart from airport level 0. The ticket price is {{EUR|7.90}} when paid by contactless bank card or MOBIB card (that can be purchased for {{EUR|6}} at vending machines), or {{EUR|8.40}} for a paper ticket. Frequent travellers can buy a 10-trip ticket ({{EUR|52}}). When boarding the bus from the city to the airport, make sure that the destination is Brussels Airport, as some buses terminate at either Gare de Bordet or a stop even further from the airport.
+* {{rint|bus}} '''[https://www.delijn.be/en/lijnen/3226/?richtingCode=1 De Lijn bus R26]''' run every 15-30 minutes to Brussels' North Train Station (called ''Noordstation''/''Gare du Nord'' within the city or ''Brussel-Noord''/''Bruxelles-Nord'' in other places), {{km|2}} north of Grand-Place. '''[https://www.delijn.be/en/lijnen/3259/?richtingCode=0 Bus R59]''' runs to the  {{rint|metro}} {{rint|brussels|1}} Roodebeek metro station every 15-30 minutes. '''[https://www.delijn.be/en/lijnen/3620/?richtingCode=1 Night bus N62]''' operates to/from the airport to the {{rint|metro}} {{rint|brussels|2}}{{rint|brussels|4}}{{rint|brussels|6}}{{rint|brussels|10}} Rogier metro and premetro station (30 minute ride), {{km|1}} north-east of Grand-Place. The buses depart from level 0 of the airport. The ticket price is {{EUR|3}} on board, on the ticket machine or by getting an "SMS ticket" [https://www.delijn.be/en/content/vervoerbewijzen/tickets/ticket/#how-do-you-use-a-ticket-via-text by sending a text message] (note: may incur extra charges depending on your mobile carrier). In contrast to the tickets sold by MIVB/STIB, these tickets (sold by [[Flanders|Flemish]] regional bus operator De Lijn) are not valid on other means of public transport within Brussels.
+* Alternatively, Brussels can be reached '''by train''' much more cheaply via Zaventem village (dorp) station, within a {{Km|1}} walk from the airport. At {{EUR|3.80}} (May 2026), the fare is three times cheaper than the ticket from Brussels Airport Station to the city. This is because the Brussels Airport Supplement on airport trains does not apply here. Zaventem Dorp station is served by frequent local trains to all Brussels stations, taking roughly the same amount of time as the airport trains (15-20 minutes to Central Station). 
+* '''Taxis''' to the center cost around {{EUR|60}}. Taxis bleus/blauw (blue): +32 2 268 0000, Taxis Autolux: +32 2 411 4142, Taxis verts/groen (green): +32 2 349 4949, Unitax: +32 2 725 25 25. Beware of "waiting" charges if your flight is delayed and you pre-ordered a cab, some companies charge you parking fees + {{EUR|25-30}}/hour for waiting. Always confirm the final charge with your driver before getting in the car. It is not uncommon for drivers to rip you off and charge {{EUR|120}} to go to the centre, especially if they realise that it is your first time in Brussels and don't know your way around.
+
+=====Left luggage facilities=====
+Brussels Airport has a '''[https://www.brusselsairport.be/en/passengers/at-the-airport/services/overview/luggage-lockers luggage locker service]''' (Level 0) where you can leave luggage for a fixed duration. The lockers say that you will have to retrieve your bags within 72 hours or else they will be removed, but they are actually moved to the room next door and stored until you retrieve them. This is a useful facility for people wanting to stow away big suitcases somewhere safe. The rate is {{EUR|10}} per 24 hours for up to 3 pieces, payments by card only. 
+
+[[File:BrusselsAirports.png|thumb|right|Although the airport in Charleroi (CRL) has been renamed "Brussels South", it is a significant distance away from the city, especially compared to Brussels National Airport.]]
+
+====Brussels South Charleroi Airport====
+[[File:Aéroport de Charleroi, B737 Ryanair - 2011.JPG|thumb|right|CRL is only served by low-fare carriers, such as Ryanair. Ryanair also operates from BRU.]]
+
+{{go
+| name={{rint|air}} Brussels South Charleroi Airport | alt={{IATA|CRL}} | url=http://www.charleroi-airport.com | email=
+| address= | lat=50.4693 | long=4.4704 | directions={{km|42}} south of Brussels
+| phone= | tollfree=
+| hours= | price=
+| wikipedia=Brussels South Charleroi Airport | image=Aeroport de Charleroi Bruxelles Sud.jpg | wikidata=Q1431012
+| lastedit=2026-04-20
+| content=Several budget airlines, including '''[http://www.ryanair.com Ryanair]''' and '''[http://www.wizzair.com/ Wizzair]''' operate service from this airport to cities such as [[Barcelona]], [[Budapest]], [[Copenhagen]], [[Dublin]], [[Edinburgh]], [[Madrid]], [[Manchester]], [[Rome]], [[Sofia]], [[Warsaw]], and nearly everything in between.
+}}
+
+=====To travel between the airport and the city=====
+* {{rint|bus}} '''[https://www.flibco.com/ Flibco, airport shuttle bus service]{{Dead link|date=January 2023 |bot=InternetArchiveBot }}''' operates buses every 20 minutes to {{rint|rail}} {{rint|be|rail}} Brussels Midi/Zuid station, with a journey time of 1 hour (less during weekends). Buying online is cheaper and faster. The bus stops at {{rint|rail}} {{rint|be|rail}} Midi/Zuid station, on the Rue de France/Frankrijkstraat, 156, to the west from the station. The {{rint|metro}} metro and international trains {{rint|express}} (Eurostar) are on the west side of the station, so upon entering the station from the bus stop, head left rather than straight. When travelling to the airport, it would be better to arrive at the Brussels Midi/Zuid stop far in advance of the bus departure time as the queue to board the bus could be very long (there are no ticket machines and people buy tickets on board). Therefore you might miss the bus and wait another 20 minutes. The traffic on the way out of Brussels can be heavy in peak hours, so the journey may take longer than planned.
+* {{rint|bus}} '''TEC-bus A''' ({{EUR|6}} one way) operates service from the airport to the {{rint|rail}} {{rint|be|rail}} Charleroi South (''Charleroi-Sud'') train station, from where you can connect to an intercity train ({{EUR|9.90}} one way) to Brussels. A combined train+bus ticket to or from Brussels can be obtained for {{EUR|15.90}} from the TEC vending machine at the airport. The bus journey takes 20 minutes and the train takes an additional hour. Trains depart every 30-60 minutes.
+* '''Taxis''' from the airport to the city center cost a fixed price of {{EUR|90}}. For the return trip to Charleroi you can book in advance a Charleroi-based taxi ({{EUR|90}}). Taxis operating from Brussels use a higher fare and will take you to the airport for a fixed price of {{EUR|120}} or based on the meter up to {{EUR|170}}.
+
+====Other airports====
+[[High-speed rail]] and the central location of Brussels amid many major European cities make it entirely feasible to fly into several other airports and take the train from there. Depending on your itinerary, this may be both faster and cheaper, as connections may align better.
+* {{rint|air}} [[Paris Charles de Gaulle Airport]] ({{IATA|CDG}}) has a direct high-speed train (Eurostar/TGV) connection to Brussels. TGV trains departing every three hours from CDG arrive at Brussels-Midi within ~1.5&amp;nbsp;hours. Book tickets early for the best prices. Alternatively, it is possible to access Brussels from Paris-CDG with TGV trains from French cities like Nice and Lyon. Most of these trains call at the airport.
+* {{rint|air}} [[Amsterdam Airport Schiphol]] ({{IATA|AMS}}) also has a high-speed train connection to Brussels-Midi, provided by [https://www.eurostar.com/rw-en Eurostar]. Ride time is also around 1.5 hr, but the frequency is hourly and the costs can be lower (even down to {{EUR|30}}) depending on the time of travel and booking. Alternatively, slower (2.5 hr) regular Intercity trains exist as well, sometimes direct, sometimes with a transfer in [[Rotterdam]]. Tickets for these trains start at {{EUR|25}} and have the advantage of being valid for all regular trains on the booked day. To compare prices and departure times for all trains (including Eurostar), see [https://www.nsinternational.com/en NS International]
+* {{rint|air}} [[Cologne#By plane|Cologne-Bonn Airport]] ({{IATA|CGN}}) is a little less than 2 hours by a direct train, departing 3 times a day and costing around {{EUR|50}}
+* {{rint|airfield}} [[Antwerp#By plane|Antwerp Airport]] ({{IATA|ANR}}) is quite close to Brussels, getting from there requires one to take a bus to {{rint|rail}} {{rint|be|rail}} ''Antwerpen-Berchem'' station (takes 10 minutes, buses depart approximately ever 12 minutes), from where a train to Brussels departs every 20 minutes and takes less than 40. A single ride bus ticket in Antwerp is {{EUR|3}} and the train ticket to Brussels can be had for just {{EUR|10}}, making the journey almost as cheap as getting to Brussels from Brussels Airport.
+* {{rint|airfield}} [[Liège#By plane|Liège Airport]] ({{IATA|LGG}}) can be reached by trains between Brussels and [[Liege]] (running every 30 minutes and taking about 1 hour), but you need to take a bus or a taxi between one of Liege's train stations and LGG, which extends the journey to over 1.5 hours.
+
+===By train===
+[[File:Центральный ж-д вокзал Брюсселя (Bruxelles-Central, Brussel-Centraal) - panoramio.jpg|thumb|Brussels-Central station (Bruxelles-Central/Brussel-Centraal) handles mostly domestic traffic]]
+
+Brussels has three main railway stations (French name at the left-hand side and Dutch at right-hand side):
+* {{go
+| name={{rint|be|rail}} Bruxelles-Midi / Brussel-Zuid / Brussels-South | alt=FBMZ, {{IATA|ZYR}} | url=http://hari.b-holding.be/infsta/InfoStation.aspx?stationId=1000220&amp;Lang=2 {{dead link|December 2020}} | email=
+| address= | lat=50.836468 | long=4.334724 | directions=
+| phone= | tollfree=
+| hours= | price=
+| wikidata=Q800587
+| content=This station is where the high-speed trains (including Eurostar) stop. There is a shower room at ''Midi/Zuid'' in the toilet near platforms 19-20 (between Origin'O and Quick).
+}}
+* {{go|name={{rint|be|rail}} Bruxelles-Central / Brussel-Centraal / Brussels-Central |url=https://www.belgiantrain.be/en/station-information/brussel-bruxelles/centraal-central|address=Carrefour de l'Europe 2|lat=50.845548|long=4.357093|wikipedia=Brussels-Central railway station|wikidata=Q800588|lastedit=2026-04-08}}
+* {{go|name={{rint|be|rail}} Bruxelles-Nord / Brussel-Noord / Brussels-North|address=Rue du Progrès 76|lat=50.860496|long=4.361732|wikidata=Q660792|lastedit=2023-02-17}}
+All three major stations in Brussels are very busy and there are trains departing in many directions almost every minute. If you are on the platform, do check if the train you are boarding is the one you want, as it may be the one that departs just a few minutes earlier. Be vigilant for last-minute platform changes. As the announcements for many trains (except for major international services and trains to Brussels Airport) are made in French and Dutch only, it is worthwhile to pay attention to departure displays. Always memorize the name of your destination in both French and Dutch to easily recognize it – the name as you may know it in English might not be used at all. Some trains are short, so at stations with long curved platforms such as at Brussel-Centraal (Bruxelles-Central) you may not be able to see the train if you’re standing on the opposite end of the platform.
+
+Apart from the three above, there are also stations of Brussels-Schuman, Brussels-Luxembourg, Brussels-Congress, Brussels-Chapel and Brussels-West, as well as stations in municipalities of the Brussels region that do not have "Brussels" in their name (e.g. Schaerbeek, Evere) which only see limited local service by RER trains.
+
+[[File:Brussel station Zuid B.jpg|thumb|right|High-speed trains like the Eurostar stop at Brussels-South station (Bruxelles-Midi/Brussel-Zuid)]]
+
+International train services to Belgium include:
+* {{listing
+| name={{rint|express}} Intercity from Luxembourg | alt= | url=http://www.b-europe.com/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+|lastedit=2023-04-19| content=An hourly Intercity train from [[Luxembourg]] (2.5-3hr, via [[Arlon]], [[Libramont]], [[Namur]]) connects to ''Midi/Zuid'', ''Central'', ''Nord/Noord'', ''Schuman'' and ''Luxembourg/Luxemburg'' stations. Reservations are not always needed, but it is wise to have a ticket, as train employees frequently check them. A weekend return ticket costs {{EUR|41.60}}.
+}}
+* {{listing
+   | name = {{rint|express}} {{rint|nl|Eurostar}} Eurostar
+   | alt = 
+   | url = http://www.eurostar.com/
+   | email = 
+   | address = 
+   | lat = 
+   | long = 
+   | directions = 
+   | phone = +32 2 528-28-28
+   | tollfree = 
+   | fax = 
+   | hours = 
+   | price = 
+   | wikipedia = 
+   | wikidata = 
+   | image = 
+   | lastedit = 2025-07-28
+   | content = Eurostar high-speed trains link [[Amsterdam]] Centraal (2 hr), [[Cologne]] Hauptbahnhof (1 hr 52 min), [[Lille]] Europe (39 min), [[London]] St. Pancras (1 hr 51 min), [[Paris]] Nord, and Rotterdam Centraal (1 hr 8 min) with ''Midi/Zuid''. It is much cheaper to book further in advance. With your Eurostar ticket you can also take a local train to or from ''Central-Centraal'', ''Nord-Noord'', ''Schuman'' and ''Luxembourg/Luxemburg'' stations.  When travelling from the United Kingdom, you should allow 90 minutes before your timetabled departure to clear the extra border controls (60 min when returning to the UK).
+}}
+* {{listing
+   | name = {{rint|express}} {{rint|nl|ice}} ICE
+   | alt = 
+   | url = http://www.bahn.de
+   | email = 
+   | address = 
+   | lat = 
+   | long = 
+   | directions = 
+   | phone = 
+   | tollfree = 
+   | hours = 
+   | price = 
+   | lastedit = 2026-01-22
+   | content = German ICE trains connect Brussels seven times a day to [[Cologne]] (2 hr) and [[Frankfurt]] (3 hr). Regular (flexible) prices are about {{EUR|80}} one way to Cologne, {{EUR|150}} to Frankfurt, but if booked in advance, non-flexible saver fares starting from {{EUR|29}} can often be found.
+}}
+* {{listing
+| name={{rint|express}} {{rint|fr|tgv}} TGV | url=http://www.tgv-europe.com/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+|lastedit=2023-04-19| content=Connects [[Lyon]], [[Marseille]], [[Avignon]], [[Bordeaux]], [[Montpellier]], [[Nantes]] and many other French destinations to ''Midi/Zuid''.
+}}
+* '''[https://www.nightjet.com/en/ Nightjet]''' – OBB's (Austrian rail carrier) [[sleeper train]], runs three times a week from ''Midi/Zuid'' to [[Vienna]] (via [[Munich]]) and [[Berlin]]. It calls at Brussels-North, Liège, Aachen, Cologne, Bonn, Koblenz, Mainz and Mannheim, where the train divides and combines with carriages from [[Paris]]: one portion runs via Munich, Salzburg and Linz to Vienna, the other via Erfurt and Halle to Berlin.
+[[File:Brussels North station (DSCF7427).jpg|thumb|Brussels-North station (Bruxelles-Nord/Brussel-Noord) has an impressive Art Deco terminal building with a modern expansion]]
+
+===== Trains from Belgium =====
+Belgium has one of the most dense and best developed railway networks in Europe. Domestic trains are operated by the national railway operator {{rint|be|rail}} [https://www.belgiantrain.be NMBS/SNCB]{{Dead link|date=December 2023 |bot=InternetArchiveBot }} (hotline: +32 2 528-2828). Besides simple one-way tickets there is a bewildering variety of tickets available depending on the exact route (returns are cheaper, there are also "all Belgium" tickets), frequency, your age and occupation (students get discounts) and departure time (travel after 09:00 and on weekends is usually cheaper).
+
+Frequencies and approximate travel times from Brussels-Central station to selected cities in Belgium:
+* [[Antwerp]] - 6x/hour, 40 min-1 hr 15 min
+* [[Arlon]] - 1xhour, 2bhr 50 min
+* [[Bruges]] - 2x/hour, below 1 hr 10 min (the service to Kortrijk also continues to Bruges, but it takes twice as much time)
+* [[Charleroi]] - 2x/hour, 1 hour
+* [[Dinant]] - 1x/hour from Brussels-Schuman (''not'' Central), 1.5 hours (you can also go from Central to Namur and change to Dinant there, travel time is longer by 15 minutes that way)
+* [[Gent]] - 6x/hour, 40 min-1 hr 10 min
+* [[Kortrijk]] - 3x/hour 1 hr 20 min-1 hr 45 min (plus one extra connection per hour with a change Gent, 1hr 20min)
+* [[Leuven]] - 5x/hour, 25 min
+* [[Liege]] - 2x/hour, 1 hr -1 hr 30 min
+* [[Mechelen]] - 7x/hour, 25-30 min
+* [[Namur]] - 2x/hour, 1 hr 10 min (+1/hour from Brussels-Schuman, same travel time)
+* [[Ostend]] - 2x/hour, 1 hr 20 min (or with a change in Gent - 2x/hour, 1 hr 40 min)
+* [[Waterloo]] - 2x/hour direct local train, 30min (or via [[Braine-L'Alleud]], with a change from Intercity to local train - 2x/hour, total travel time below 40 min)
+
+There is also a fairly new suburban rail system (Brussels Regional Express Network, in French ''Réseau express régional'' (RER) and in Dutch ''Gewestelijk ExpresNet'' (GEN), or S train) that is like an S-Bahn, which serves nearby communities. Depending on the station, it can be faster or slower than an Intercity (IC) train, but as it is run by the national rail operator the price will be the same (fares are charged on the basis of distance for the most part). It will show up with the other trains when looking for tickets on the website, so you can see is it is a good fit for your journey or not.
+
+===By bus===
+Several bus companies offer long-distance connections to Brussels. The stations are mainly at the North or South station.
+
+* {{listing
+   | name = Flixbus
+   | alt = 
+   | url = http://www.flixbus.com
+   | email = 
+   | address = 
+   | lat = 
+   | long = 
+   | directions = 
+   | phone = 
+   | tollfree = 
+   | hours = 
+   | price = 
+   | lastedit = 2026-04-05
+   | content = A [[Intercity buses in Germany|German]] company with a network throughout most of Europe. Stops at South and North station.
+}}
+
+* {{listing
+| name=De Lijn | alt= | url=http://www.delijn.be/ | email=
+| address= | lat= | long= | directions=
+| phone=+32 70 220-200 | tollfree=
+| hours= | price=
+| lastedit=2025-11-12
+| content=The Flemish region (Dutch speaking) public bus service, connecting Brussels to Flanders. There are specific "snelbuses" (fast buses), e.g. Brussels-North (Bruxelles-Nord/Brussel-Noord) to Ninove (snelbus 728).
+}}
+* {{listing
+| name=TEC | url=http://www.infotec.be/ | email=
+| address= | lat= | long= | directions=
+| phone=+32 10 23-5353 | tollfree= | fax=
+| hours= | price=
+| content=The Walloon region (French speaking) public bus company.&lt;!-- Where from can you get to Brussels with them? --&gt;
+}}
+* {{listing
+| name=RegioJet | alt=Student Agency | url=https://www.regiojet.com/ | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| wikipedia=RegioJet | wikidata=Q221186
+| content=A Czech company offering coach services from [[Czech Republic]] and [[Slovakia]] to a number of destinations around Europe. Their service from [[Prague]] to [[London]] stops each morning at '''Gare du Midi''' and each evening on the way back. The company also offers combined bus + train tickets to/from destinations not served by buses directly, which may be cheaper than getting a split ticket.
+}}
+* {{Listing
+   | type = go
+   | name = Twiliner
+   | url = https://www.twiliner.com/en/
+   | address = 
+   | email = goodmorning@twiliner.ch
+   | content = Twiliner buses take 9 hours from Zurich via [[Basel]] and Luxembourg, heading for Amsterdam. Their seats fold flat into a bunk: there's some disturbance from bumps in the road and noise at intermediate stops, but no worse than in a railway sleeping car, for similar comfort and half the price.
+   | lastedit = 2026-04-08
+}}
+
+===By tram===
+Brussels is connected to [[Tervuren]] by tram {{rint|brussels|44}}, following the trajectory of the Tervuren Avenue (''Tervurenlaan'') between {{marker |type=go |name={{station|Tervuren station|44}} |lat=50.8297 |long=4.5131}} and {{marker |type=go |name={{station|Montgomery|1|7|25|27|39|44|61|80|81|n06}} metro station |lat=50.83783 |long=4.40754 |wikidata=Q2169736}}. The scenic {{km|10}} long journey through the [[Brussels/Sonian Forest|Sonian Forest]] takes about 20 minutes, with a frequency of 5 trams per hour. A single ticket is {{EUR|2.10}}, and allows you to get off at any station along the way and back on the next tram within the ticket validity of an hour. Tickets can be purchased in Tervuren station or from the tram driver at an additional fee.
+
+Brussels can also be reached from [[Kraainem]] by tram {{rint|brussels|39}}, which connects [[#Q2169736|{{station|Montgomery}} metro station]] to the {{marker |type=go |name={{station|Ban-Eik|39}} station |lat=50.8422 |long=4.5025}} and traverses Kraainem halfway. Get on at stop {{marker |type=go |name={{station|Wilderozenweg|39}} |lat=50.8447 |long=4.4668}}, on a walking distance of Kraainem's tourist attractions, and take tram {{rint|brussels|39}} direction {{station|Montgomery}}. Travel time is approx. 15 minutes. As with tram {{rint|brussels|44}}, a ticket costs {{EUR|2.10}}, can be purchased in advance or from the tram driver at an additional fee, and remains valid for an hour.
+
+===By metro===
+Brussels metro line {{rint|brussels|1}} extends to {{marker |type=go |name={{station|[[Kraainem]]|1|76|77|79|n05}} metro station |lat=50.8488 |long=4.4586}}, and to {{marker |type=go |name={{station|Stockel / Stokkel|1|39}} metro station |lat=50.8420 |long=4.4641}}. Travel time to the Grand-Place from Kraainem station is about 25 minutes. A single ticket ''Jump'' costs {{EUR|2.10}}. Tickets can be paid for by card or be purchased from a GO vending machine in either Kraainem or Stokkel metro station, and can only be paid with euro coins or Maestro compatible cards. Bills are not accepted.
+
+===By bicycle===
+Brussels is the third capital on [[Eurovelo]] Route 5, which starts in [[London]], through Brussels and [[Switzerland]] and ends in southern [[Italy]]. A number of other international and national [[cycling|cycle]] routes converge on Brussels, see [https://fietssnelwegen.be/en/bicycle-highways this overview].
+
+==Get around==
+&lt;!--{{Mapframe|50.8469|4.3515|zoom=14|height=540|width=520}}--&gt;
+
+=== By car ===
+In short: try to use your car as little as possible. As with most European capitals, Brussels has taken great strides in eliminating cars, and with mostly good measures. Until the mid-2000s, Brussels had some of the worst (if not the worst) traffic jams in the western world, even rivalling cities like Los Angeles and New York City. Though Brussels is still lagging behind places like Amsterdam, the city's (overwhelmingly) left-wing government has installed bike lanes, pedestrianised streets, and somewhat invested in public transportation projects at a rate seldom seen in Europe. Though locals mostly approve of those measures, out-of-towners and people working in certain sectors have been more critical of the measures.
+
+Broadly speaking, it is strongly suggested not to drive near or within the R0. Most streets near the Grand-Place have been pedestrianised, and only taxi and delivery drivers can access that area. However, the outskirts of Brussels (especially the southern region like Ukkel) are not always served by buses or trams, so having a car might be useful there.
+
+=== On foot ===
+Most sights in Brussels are fairly close together, within reasonable walking distance of each other. The oldest part of town can have uneven cobblestone roads, but the rest of the city is fairly easy to walk. A zone of {{ha|50}} in the city centre is reserved for pedestrians, the second largest in Europe after Venice. Brussels has many wet days, and in winter small amounts of snow can make the ground slushy, so water-resistant footwear is a must if you will be out walking all day. Most of the old town is a pedestrian-only zone. Be sure to wear sturdy shoes suitable for uneven cobblestone paths
+
+===By bicycle===
+Bicycles are an excellent way to get from the city center to attractions outside the 'pentagone'.  Although the Brussels weather isn't always equally favorable for cycling, bikes are often faster than public transport, particularly for short distances. The cycling infrastructure is fairly poorly developed in comparison to cities of similar size like [[Amsterdam]] and [[Bristol]], and the elevation of Brussels might be challenging to inexperienced cyclists. Brussels' most valuable transport asset is, arguably, the '''Villo''' bicycle-sharing system.
+
+[[File:Brussels_cyclist_privilege.jpg|thumb|right|Road sign unique to Brussels: cyclists may ignore red traffic lights if they turn right!]]
+To encourage cycling through the city, cyclists are granted some privileges in Brussels traffic. Most notably, cyclists are allowed to drive either way in one-way streets. They are allowed to drive through the car-free zone in the city center, the largest in Europe after [[Venice]]. At intersections marked with a triangular sign with a cycle icon and a right arrow, cyclists are allowed to turn right at any time, ignoring red traffic lights.
+
+====Villo====
+[[File:VilloStationAlmostFull.jpg|thumb|right|Bicycles waiting to be rented out in a Villo station]]
+
+'''[http://www.villo.be Villo]''' (a portmanteau of the French words ''ville'' - city - and ''vélo'' - bike) is Brussels' public bicycle sharing system. It consists of 5000 bicycles in the Brussels-Capital Region, making it one of the largest in the world, with an infrastructure of 360 stations. Cycles can be rented out in any station and returned to the same or any other station, making it a convenient solution for point-to-point travel (as opposed to the {{rint|be|rail}} NMBS ''BlueBike'' scheme which requires return to the same station, making it only suitable for round trip journeys).
+
+Villo bicycles are well equipped to deal with the poor Belgian roads: they have puncture-resistant tires, a covered chain drive, and are also equipped with a basket for cargo transport and automatic lights. Each bike has 7 gears and dual disc brakes to tackle hills around the city and reach destinations with higher elevation. The frame is rather heavy, though, weighing 22 kg. A decent level of fitness is recommended!
+
+=====Subscriptions=====
+You can create an account online to sign up for a Villo subscription. They cost {{EUR|1}} per day or {{EUR|3}} per month for unlimited 30-minute rides. Villo subscriptions cost {{EUR|4}} per month (as of Sep 2022) and give you the option to get a battery pack that you plug into the Villo bikes and take with you when they're done. The batteries have a 10-km range and can be picked up from the Villo office immediately after subscribing. To checkout bikes with a subscription you can use the Villo app, link your mobib vard, or get a Villo card.
+
+=====Non-subscription=====
+As of September 2022, not clear if this information is still up to date. To rent a Villo, a ticket can be purchased at a station. Not all stations issue tickets, which can be confusing. Tickets are available for 1 or 3 days, and permit an unlimited number of rides. With a cost of {{EUR|1.60}} per day, this makes Villo the cheapest method of transportation after walking. Week passes are also available at {{EUR|7.65}}. As Villo is intended for short trips, you will be billed {{EUR|0.50}} per half hour after the first half hour (the first half hour being free). This is of course easily avoided by returning your bike to a station before the first half hour expires, and immediately renting another bike from the same station, resetting the counter.
+
+[[File:Villo_Day_Ticket.jpg|thumb|right|Example of a Villo day ticket, showing the 6 digit subscription number in bold font on top]]
+
+Purchasing a ticket goes as follows:
+* Find a station that issues tickets, press the 5 button to change the language to English.
+* Initiate the procedure to buy a ticket, and press 0 to get to the end of the EULA text. The response time is long, so give it a few seconds between every button push.
+* Choose a 4-digit PIN code and repeat it. This will be your 'password'.
+* A {{EUR|150}} deposit fee must be paid by card. You can only buy one ticket per card, and only if you have at least {{EUR|150}} available on the account.
+* The ticket will be issued, after which you can rent a bike directly.
+When choosing a bike, look at the orientation of the saddles. The convention among users is that, if a bike is defective, the saddle is lowered and its direction reversed. So don't try to rent out bikes with a reversed saddle. Likewise, if you notice your bike has a defect, then return it to the station and reverse its saddle to notify other users. Unless there is obvious evidence of vandalism, minor damage (flat tires, broken chains, etc.) will not be billed to your account.
+
+[[File:VilloTerminalAndMap.jpg|thumb|right|A Villo kiosk without payment terminal — you can't buy a ticket at these.]]
+
+When returning your bike to a station, always wait for the double beep and green light on the post you returned the bike to. Long beeps indicate that the bike is not placed incorrectly. After the double beep, the bike should be locked again. If you don't return it correctly and the bike is stolen, '''{{EUR|150}}''' will be billed to your account!
+
+After purchasing a ticket, bikes can be rented out from any station by typing the 6-digit subscriber number on the ticket into the station's kiosk, followed by the 4-digit 'password'.
+
+====Blue Bike====
+Bikes that are complementary to Villo. Cost {{EUR|12}}/year for a membership. Then {{EUR|3.5}} to checkout the bike for a day. You can have the bike for up to 24 hours for that cost. You can link [https://www.blue-bike.be Blue Bike] with your MOBIB card or get a separate Blue Bike card.
+
+====Billy Bike====
+[https://www.billy.bike/en/ Billy Bike]{{Dead link|date=March 2026 |bot=InternetArchiveBot }} is an electric bike option with an unlock fee of {{EUR|1}} and {{EUR|0.17}}/min. They have several subscription plans for frequent users.
+
+====Swapfiets====
+Rent bikes from [https://swapfiets.be/en-BE/brussels Swapfiets] for {{EUR|20}}/month. They'll repair the bikes if they get broken.
+
+==== Uber JUMP ====
+Uber has a fleet of free floating electric bikes in Brussels. The operating area is mostly limited to the eastern part of the city. The rates are €1 to unlock and €0.15/minute.
+
+===By metro, tram, or bus===
+The dominant operator is the Brussels regional public transport operator '''[https://www.stib-mivb.be/index.htm?l=en STIB/MIVB]'''.[[File:Brussels Metro map.svg|400px|thumb|Map of Brussels Metro (with the under construction line 3)]]
+Public transport in Brussels can be confusing because different transport companies are active in the city.  Some buses from [[Flanders|Flemish]] regional transport operator ''De Lijn'' connect Brussels to surrounding Flemish cities, but their tickets are ''not'' compatible with MIVB tickets. Occasionally even buses from the [[Wallonia|Walloon]] regional operator ''TEC'' venture into the city, and again, their tickets are incompatible. However, there are Brupass tickets that can be used for all the operators (MIVB, TEC, De Lijn and NMBS (2nd class)) inside the [https://www.stib-mivb.be/buy/metro-tram-bus-and-train-travel-in-the-brussels-capital-region-with-br Brupass validity area]. When using a Brupass ticket on a NMBS train, it needs to be validated at a vending machine.
+
+As long as you stay on the MIVB network — which roughly spans the entire Brussels-Capital Region — a single ticket gives you access to all metro, tram and bus lines for the duration of ''1 hour'' with as many transfers as needed to reach your destination. Since Brussels is a fairly small city, in practice, you can get anywhere in under an hour so the time limit will rarely be an issue.
+
+You can board any MIVB metro, tram or bus by tapping a '''contactless''' credit/debit card, including through Apple Pay/Google Pay. You are charged  {{Currency|EUR|2.40}} per journey, capped at a maximum of {{Currency|EUR|8.50}} per day. See [https://www.stib-mivb.be/buy/your-bank-card-is-your-ticket STIB-MIVB] for details.
+
+Tickets are also available via the '''MoBIB smart card'''. Should you stay longer than a few days in Belgium, it may be worth investing in a MoBIB card. The card costs {{EUR|6}}, is available for purchase at major metro stations and the 3 axis {{rint|be|rail}} NMBS railway stations (Brussels-North, Central, and South), and can also be used in other Belgian cities. The card can then be loaded with fares at GO vending machines in all metro stations and at many tram and bus stops. A 1 trip Brupass ticket with the MoBIB card costs {{EUR|2.70}} and a 1 day Brupass ticket costs {{EUR|9.50}}. A MoBIB card is required to purchase 10 journey Brupass tickets ({{EUR|18.90}}).
+
+Alternatively, paper MIVB-only tickets can also be purchased from GO vending machines and are available for a single journey ({{EUR|2.90}}) or a day pass with unlimited journeys ({{EUR|9}}). Since 2020, it is no longer possible to purchase tickets directly from drivers, so do purchase your tickets in advance at a GO machine. Blue GO machines only accept debit and credit cards, and coins, but no paper currency. Red GO machines accept cash up to € 40. The interface is available in English, Dutch, French and German.
+
+To '''validate''' either a MoBIB card or paper ticket, touch it against the red card readers until it beeps, and the screen lights up green. You must validate your ticket on the first vehicle you enter and at each transfer afterwards. On buses and trams, the card readers are in the vehicles, whereas metro and premetro (underground tram) stations have card readers with electronic gates at their entrances. If the card reader lights up red, it means there is no valid ticket on your card, possibly because the 1-hour time window has expired. At some stations you need to validate again to leave. Groups of travelers can share a single MoBIB card if it has multiple tickets available, like 5- or 10-journey tickets. If you're with a group of 3, for example, simply touch the MoBIB card against the card reader 3 times to validate 3 journeys at once. At each transfer, you must again validate it 3 times. Groups must stay together during travel, since ticket checks are carried out routinely, and you must be able to present a validated ticket at any time. Failure to do so will result in a ''fine of {{EUR|100}}''.
+
+Since buses and trams tend to get stuck in traffic, metro and premetro (underground tram) lines are the fastest form of public transport. Most attractions can be reached by metro and a short walk. Metro entrances are marked by big {{rint|brussels|metro}} signs with the station name underneath. All announcements are made in Dutch, French and English. There are 4 metro lines, {{rint|brussels|1}} and {{rint|brussels|5}} running roughly east-west, and connecting the inner city with the European Quarter, Woluwe, and at the end of line {{rint|brussels|1}}, [[Kraainem]]. Metro line {{rint|brussels|6}} connects the inner city to the Heizel, and is the most convenient way to reach the Atomium. Ring line {{rint|brussels|2}} shares its trajectory with line {{rint|brussels|6}} until {{station|Simonis}} station, and can be taken in both directions with a possible transfer at {{station|Simonis / Elisabeth}} being necessary to complete your journey.
+[[File:Metro Brussels.svg|thumb|325x325px|Map of Brussels metro and premetro lines]]
+In addition to the 4 metro lines there are also 4 premetro lines. Lines {{rint|brussels|4}} and {{rint|brussels|10}} roughly running north-south, and connecting the North and South railway stations with the Grand-Place and most of the city center attractions, while lines  {{rint|brussels|7}} and {{rint|brussels|25}} go on the Greater Ring.
+
+Metro and premetro stations are often a warm and dry refuge from the wet and cold weather in Brussels, and typically offer small convenience shops or coffee shops like Starbucks and the likes to sit out heavy showers. On the flip side, the metro in Brussels's cleanliness and safety are quite hit-and-miss compared to most metro systems; some stations are squeaky clean and modern, while others are dirty and in need of repair.
+
+You may be able to get a paper-made folding map (title: plan de réseau / netplan) with red cover when you buy a ticket from a staff. The official [http://www.stib-mivb.be/irj/go/km/docs/resource/Dynmaplan/index.html#en dynamic STIB/MIVB network plan] includes construction sites and replacement service ([http://www.stib-mivb.be/article.html?l=en&amp;_guid=00266bf9-0883-3410-bc80-cd51a4d340c3 more network plans are also available]).
+
+The whole rules of passengers taking STIB/MIVB is written [https://www.stib-mivb.be/transport-rules there].
+
+===By train===
+The S-train can also be used for travel in the city. It is best for taking journeys from the center or a major train station to the outer edges, or the other way around. Some areas, especially in the north east, are easier to get to this way.
+
+Eurail/Interrail passes can also be used on the S-train. However, if you do not have a continuous pass, it is often not worth using up a travel day just for the S-train (unless it's in conjunction with a longer journey somewhere).
+
+===By scooter===
+If you have a driver's license, then scooters may be a less physically exhausting alternative to bicycles to get around the city. {{marker |type=around | name=Scooty | alt= | url=https://scootysharing.be/ | address= | lat=50.83884 | long=4.38619}} is a network of electric scooters available for rental throughout the city. Following a free roaming model, scooters can be found on public places in the city, and unlocked remotely by subscribers. After use, the scooter may be left at any public place. Although convenient considering Brussels' elevation, scooter rental is more expensive than ''Villo'' at {{EUR|0.26}}/minute. Registration is €2.99.
+
+==See==
+{{SeeDistricts}}
+
+Brussels' rich history left it dotted with countless landmarks, some of architectural beauty, others of monumental proportions. In the [[Brussels/Centre|medieval centre]], nearly every building has its own story worth exploring! The surrounding [[Brussels/Pentagon|Pentagon]], roughly corresponding to the outline of Brussels in the Renaissance, adds many more attractions to the list of must-see attractions. When the weather gets unpredictable, over 80 museums in the Brussels-Capital Region offer indoor excitement when rain prevents outdoor activities.
+
+[[File:Brussels, townhall oeg2043-00090 foto3 2015-06-07 08.38.jpg|thumb|right|The [[Brussels/Centre#Q1255327|city hall]] at the [[Brussels/Centre#Q215429|Grand-Place]], a {{UNESCO}}]]
+
+The most iconic sight in Brussels is its central square, the {{marker|type=see|name=[[Brussels/Centre#Q215429|Grand-Place]]|wikidata=Q215429}}, widely regarded as the most beautiful square in the world, and Brussels' most famous {{UNESCO}}. The Grand-Place and its surrounding streets are the last remains of medieval Brussels, and offer a unique insight into the look and feel of the city a millennium ago. The [[Brussels/Centre#Q1255327|city hall]] and its tower, seen on many post cards, is a landmark and orientation point from most of the [[Brussels/Centre|centre]]. [[Brussels/Centre#Q152072|Manneken Pis]], Brussels most famous statue, can be encountered in one of the side streets. As one of the most overrated attractions in Belgium, this insignificant statue is easily overlooked!  The [[Brussels/Centre#Q2957320|Mary Magdalene Chapel]] and [[Brussels/Centre#Q2762071|St. Nicholas Church]] are among the oldest churches in Belgium, and attraction poles for enthusiasts of religious architecture. A free tour starts in front of the city hall on the Grand-Place every day at 10:00, 11:00, 13:30 and 14:00, and guides visitors along the most important sights in the centre.
+
+[[File:Bruxelles - Basilique Nationale du Sacré-Cœur à Koekelberg (5).jpg|thumb|left|The [[Brussels/West#Q846006|Basilica of the Sacred Heart]], among the largest churches in the world]]
+
+Over time, a flourishing commerce developed outside the first city walls, of which the [[Brussels/Pentagon#Q3533138|Black Tower]] is one of the last remnants. The former docks around the [[Brussels/Pentagon#Q1903443|Church of St. Catherine]] have been converted into fountains, but have kept their reputation for best fish restaurants in the city. The nearby [[Brussels/Pentagon#Q535244|Beguinage]] and its church tell the story of the development of the city up to [[France|French]] occupation at the end of the 18th century. The {{marker |type=see|name=[[Brussels/Pentagon#Q269654|cathedral]]|wikidata=Q269654}} dates from the same period, and as a nearly exact copy of the [[Paris/4th arrondissement#Q2981|Notre-Dame]] of [[Paris]], it is well worth a visit because, unlike its more famous Parisian counterpart, entrance here is free, and there are usually no waiting lines! The [[Brussels/Pentagon#Q1131821|Coudenberg Museum]] and [[Brussels/Pentagon#Q1937507|Bruxella 1238]] take visitors underground to explore the archaeological remains of Brussels history, for those fascinated by Brussels early history. The [[Brussels/Pentagon#Q2988142|Halle Gate]], now a museum, is the last surviving gate of Brussels second city walls.
+
+[[File:Palais de Justice from Hilton.jpg|thumb|right|The [[Brussels/Pentagon#Q635307|Palace of Justice]], monumental architecture by Joseph Poelaert]]
+
+From [[Belgium|Belgian]] independence in 1830 onward, Brussels quickly transformed into the modern capital it was envisioned to be. Under supervision of kings Leopold I and his son Leopold II, Brussels architect Joseph Poelaert initiated several monumental construction projects, most of which still stand today. Examples are the {{marker |type=see |name=[[Brussels/Pentagon#Q635307|Palace of Justice]] |wikidata=Q635307}}, the largest building in the world at the time of construction, overlooking the old city from [[Brussels/Pentagon#Q2783500|Poelaert Square]]. The [[Brussels/Heysel#Q1547264|Church of Our Lady of Laeken]] to the north of the [[Brussels/Pentagon|Pentagon]] and the [[Brussels/Centre#Q600633|Congress Column]] are also among his most famous work. The [[Brussels/Pentagon#Q635307|Royal Palace]] is just a short climb away and also dates from this period of architectural magnificence. The {{marker|type=see|name=[[Brussels/West#Q846006|Basilica of the Sacred Heart]]|wikidata=Q846006}} is one of the largest churches in the world, and a corner stone in Art Deco architecture.
+
+[[File:Atomium Belgium 1.jpg|thumb|left|The [[Brussels/Heysel#Q180901|Atomium]], a masterpiece of contemporary architecture]]
+
+The {{marker|type=see|name=[[Brussels/Heysel#Q180901|Atomium]]|wikidata=Q180901}}, a 102-m-tall sculpture of a 165 billion times magnified iron crystal, dominates the skyline of [[Brussels/Heysel|northern Brussels]]. It is the best known relic of the 1958 [[World's Fair]], along with the [[Brussels/Heysel#Q155285|Centenary Palace]]. Although only a few of the spheres are open to the public, the restaurant at the top offers an amazing view over Brussels. If you're lucky enough that the {{marker|type=see|name=[[Brussels/Heysel#Q1644661|Royal Greenhouses]]|wikidata=Q1644661}} are open to the public, then don't hesitate to visit them.
+[[File:Laeken,_Brussels,_Belgium_-_panoramio_(38).jpg|thumb|right|Tropical forest in the [[Brussels/Heysel#Q1644661|Royal Greenhouses]]]]
+
+[[File:Brussels_Cinquantenaire_R02.jpg|thumb|left|The [[Brussels/European Quarter#Q1101790|Cinquantenaire Arc]], with behind it the aviary hall of the [[Brussels/European Quarter#Q1395176|Museum of Military History]]]]
+
+To the east of the [[Brussels/Pentagon|Pentagon]] is the [[Brussels/European Quarter|European Quarter]], the centre of political power in the [[European Union]]. Serving as the unofficial capital of the European Union, the second largest democracy in the world (after [[India]]), much of the legislation making processes take place in the {{marker|type=see|name=[[Brussels/European Quarter#Q8889|European Parliament]]|wikidata=Q8889}} and [[Brussels/European Quarter#Q8880|European Commission]]. Both can be visited, although tours tend to be rather formal. For a lighter experience, the [[Brussels/European Quarter#Q8062880|Parlamentarium]] or [[Brussels/European Quarter#Q46012|House of European History]] are likely better tuned to younger audiences. The nearby {{marker|type=see|name=[[Brussels/European Quarter#Q1101790|Cinquantenaire Park]]|wikidata=Q1101790}} is worth a detour for its monumental arc, but also when the weather doesn't allow outdoor activities, the district has a lot to offer. The [[Brussels/European Quarter#Q222297|Museum for Natural Sciences]] hosts a complete herd of iguanodon skeletons, and is a must-see for adults and children alike, whereas the aviary hall of the [[Brussels/European Quarter#Q1395176|Museum of Military History]] in the shadow of the Cinquantenaire Arc has original aircraft on display, ranging from civilian planes to jet fighters.
+
+To keep balance with political powers, Brussels also hosts the [[Brussels/North-East#Q12800833|NATO headquarters]], the most powerful military alliance in the world, in the [[Brussels/North-East|north-east]] district of the city. The nearby [[Brussels/North-East#Q579666|cemetery]] is home to many silent witnesses of the so called ''military victories''. The railway museum [[Brussels/North-East#Q14931504|Train World]] and nearby [[Brussels/Woluwe#Q609692|Tram Museum]] in the [[Brussels/Woluwe|Woluwe]] district are top attractions for rail enthusiasts. Woluwe also has a lot to offer to architecture lovers, with the {{marker |type=see |name=[[Brussels/Woluwe#Q239028|Stoclet Palace]] |wikidata=Q239028}} and [[Brussels/Woluwe#Q2671145|Solvay Residence]] recognized as {{UNESCO}}s.
+
+When strolling along architectural sights and museum display cases feels overwhelming, the [[Brussels/Sonian Forest|Sonian Forest]] to the south of the city will offer a welcomed change of scenery. This vast section of nature, with lakes and century old beech trees, is protected as {{UNESCO}} and a true heaven for fans of outdoor activities.
+
+If you're planning on visiting many attractions and museums, consider the advance purchase of a ''[http://www.brusselscard.be Brussels Card]{{Dead link|date=July 2024 |bot=InternetArchiveBot }}'', which offers discounts at many attractions and free entrance to 40 of the most popular museums. It is available in 24&amp;nbsp;hr ({{EUR|24}}), 48&amp;nbsp;hr ({{EUR|36}}) and 72&amp;nbsp;hr ({{EUR|42}}) versions, includes a free guidebook, free use of public transit (metro, bus, tram), and discounts at various shops and restaurants. It may not be worth it to those who already receive discounts (children, students, etc.). The card can be purchased on-line in advance for a discount, at the major tourist offices, and in some museums. Keep in mind however that many attractions have severely limited opening hours (usually from 09:00 until 17:00) when planning your visit, although sights like the Grand-Place or Atomium can be enjoyed around the clock.
+
+==Do==
+{{SeeDistricts}}
+
+[[File:ForetDeSoignesSunset.jpg|thumb|right|A sunset in the [[Brussels/Sonian Forest|Sonian Forest]], a {{UNESCO}}]]
+
+Brussels has a large variety of activities to offer, regardless of the weather. Strolling through the [[Brussels/Centre|medieval centre]] and enjoying waffles or fries on the go is a favorite for locals and tourists. When passing the {{marker |type=do |name=[[Brussels/Centre#Q1146518|Stock Exchange]] |wikidata=Q1146518 |lat=50.84795 |long=4.35041}}, sit down on the stairs along with the locals and have a chat. Keep an eye out for [[Brussels/Centre#Q3364879|comic book murals]], of which there are 43 different ones to discover around the city! Those fascinated by comic books may consider visiting the [[Brussels/Centre#Q3328436|Museum of Figurines]] or the [[Brussels/Centre#Q1846894|Marc Sleen Museum]]. Brussels can also be explored from underground through the {{marker |type=do |name=[[Brussels/Centre#Q23893729|Sewer Museum]] |wikidata=Q23893729}}, learning the history of the city while walking underneath its busy traffic.
+
+[[File:Brussels_Mini_Europe.jpg|thumb|left|Scale replica of the [[Brussels/Centre#Q1255327|city hall]] in [[Brussels/Heysel#Q1067006|Mini Europe]]]]
+
+When weather permits, a walk through the {{marker |type=do |name=[[Brussels/Sonian Forest#Q833646|Ter Kameren Park]] |wikidata=Q833646}} or even the [[Brussels/Sonian Forest|Sonian Forest]], a {{UNESCO}}, is highly recommended. The {{marker |type=do |name=[[Brussels/European Quarter#Q1101790|Centenary Park]] |wikidata=Q1101790}} is closer to the city centre, and climbing the countless steps towards the top of its arc (entrance through the [[Brussels/European Quarter#Q1395176|Museum of Military History]]) is worth the effort for a fantastic view over the [[Brussels/European Quarter|European Quarter]] of the city. A less physically intense alternative to exploring the monuments of Brussels is a visit to {{marker |type=do |name=[[Brussels/Heysel#Q1067006|Mini Europe]] |wikidata=Q1067006}} on the [[Brussels/Heysel|Heysel plateau]] to the north, a park with scale models of numerous iconic [[Europe]]an buildings and features. In summer, a zip line ride down from the top of the [[Brussels/Heysel#Q180901|Atomium]] is an unforgettable experience for die hard thrill seekers!
+
+A confrontation with rain in Brussels humid climate is no reason for despair. If none of the 80 museums would be of interest then a visit to the {{marker |type=do |name=[[Brussels/Heysel#Q3391652|Planetarium]] |wikidata=Q3391652}} or watching an action movie in 4D in the mega cinema complex {{marker |type=do |name=[[Brussels/Heysel#Q37994127|Kinepolis]] |wikidata=Q37994127}} can be indoor alternatives. For more adventurous water fans, [[Brussels/South#Q128191|Nemo 33]] offers a diving challenge in the second deepest heated indoor swimming pool in the world at 34.5 metres (113&amp;nbsp;ft) and 30°C (86°F)
+
+If you prefer to get submerged into local culture, try one of the Brussels themed room escape games of {{marker |type=do |name=[[Brussels/Centre#Q56023559|Enygma]] |wikidata=Q56023559}} near the city centre, and puzzle your way out within the hour. For fans of Brussels many culinary delicacies, following a [[Brussels/Centre#Q56023603|beer brewing]] or [[Brussels/Centre#Q56023627|waffle baking]] workshop are tasty activities for an afternoon, alone or in a group. To keep up to date with what's going on, pick up a copy of local free city newspaper ''Zone 02''. Another good free listings paper is ''Agenda'', which is distributed together with the Dutch-language weekly ''Brussel Deze Week'' and has the notable advantage of being published in three languages (English, Dutch, French). You can find them in many cafés and restaurants around the city.
+
+'''Football:''' the men's national soccer team play at King Baudouin Stadium in Heysel. Three Brussels clubs play in First Division A, the top tier: RSC Anderlecht in Anderlecht district, Union SG in Forest, and R.W.D. Molenbeek in Molenbeek-Saint-Jean.
+
+==Buy==
+[[File:Galeries Royales Saint-Hubert.jpg|thumb|Royal Saint-Hubert Galleries]]
+[[File:Chocolate Boutique.JPG|thumb|Chocolate!]]
+
+{{SeeDistricts}}
+
+Very few shops in Brussels open before 10:00, and most open 10:30–11:00. Many shops are closed on Sunday and Monday.
+
+===Belgian specialities===
+
+====Beer====
+* {{buy
+| name=Beer Mania | url=http://www.beermania.be | email=
+| address=174-176 Chausse de Wavre-Waversesteenweg, Ixelles/Elsene | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Claims to have a stock of over 400 beers, but has been overrun by beer tourists. The stock is extensive, but quite pricey in comparison to Delhaize, or Carrefour. Beer Mania is a great place to find out of the ordinary beers.
+}}
+* {{buy
+| name=Carrefour | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Branches around the city carry a wide variety of beers, including almost all Trappist beer. Selection varies by store. The Carrefour near the Grand-Place has a large selection and offers prices that are approximately a third of the prices in tourist shops.
+}}
+* {{buy
+| name=Delhaize | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Similar to Carrefour, but a tad more expensive.
+}}
+* {{buy
+| name=Match | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Another store similar to Carrefour, but has more of the unusual Belgian beers including Delirium.
+}}
+
+====Chocolate====
+* {{buy
+| name=Leonidas | url=http://www.leonidas.com | email=
+| address= | lat= | long= | directions=branches across the city
+| phone= | tollfree= | fax=
+| hours= | price=Inexpensive and good quality, at {{EUR|6.95}} for {{g|250}}
+| content=very popular with the locals.
+}}
+* {{buy
+| name=Neuhaus | url=http://www.neuhaus.be | email=
+| address= | lat= | long= | directions=branches across the city
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=A bit more expensive than Leonidas and a bit higher quality. Very popular with the locals as well. It is also possible to get good discounts by buying directly at the shop outlet outside of the factory (Postweg 2, 1602 Vlezenbeek, tel: +32 2 568-23-10) which is just on the outer limits of Brussels, just a short walk away from the Erasme/ Erasmus metro station. Prices can go as low as {{EUR|10}} per kilo, however only the products that are specifically marked as having reduced prices are worth the trip, other products have the exact same price as in local shops.
+}}
+* {{buy
+| name=Mary | url=http://www.mary.be/ | email=
+| address= | lat= | long= | directions=branches across the city
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Excellent handmade chocolates, with this store originating from 1919.
+}}
+* {{buy
+| name=Passion Chocolat | url=http://www.passionchocolat.be/ | email=
+| address=2/4 Rue Bodenbroek, also 20 Avenue Louis Gribaumont | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Delicious chocolates, and they often offer free samples of 1-2 chocolates from their collection.
+}}
+* {{buy
+| name=Marcolini | url=http://www.marcolini.be/ | email=
+| address=39 Place du Grand Sablon-Grote Zavel Plein | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Arguably the best Belgian chocolates and priced accordingly. The country-specific products are difficult to find and quite worth the price.
+}}
+* {{buy
+| name=Wittamer | url= | email=
+| address=6-12-13 Place du Grand Sablon-Grote Zavel Plein | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Another excellent chocolate maker, with also a selection of macarons and cakes. They may however insist on a minimum 100g purchase for the chocolates.
+}}
+* {{buy
+| name=Chocopolis | url= | email=
+| address=81 Rue du Marché aux Herbes-Grasmarkt | lat= | long= | directions=Between Grand-Place and Central Station
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Pick and choose your favorite type of chocolates, all at reasonable prices.
+}}
+* {{buy
+| name=Maison Renardy | url= | email=
+| address=17 Rue de Dublinstraat | lat= | long= | directions=
+| phone=+32 2 514-30-17 | tollfree= | fax=
+| hours= | price=
+| content=A great boutique shop with delicious chocolate and friendly service. Stop by for a cup of tea or coffee, and get one of their chocolates free with your tea. Still peckish? You're able to bring a whole box home.
+}}
+* {{buy
+| name=Godiva | url= | email=
+| address= | lat= | long= | directions=branches around the city
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Not very popular and quite pricey.
+}}
+* {{buy
+| name=Chocolate bars | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=For the frugal, you can buy 100-200 gram gourmet bars of chocolate in grocery stores for about {{EUR|1}} each. Good brands to buy are Côte-d'Or and Jacques, both are Belgian.
+}}
+
+====Lace====
+* {{buy
+| name=Belgian Lace | url= | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree= | fax=
+| hours= | price=
+| content=Among the best in the world. Several shops are at the Grand' Place-Grote Markt. Beware of some shops that sell Belgian lace even though production was outsourced abroad. Ask for a country of origin if purchasing around Grand-Place.
+}}
+
+==Eat==
+{{SeeDistricts}}
+
+{{infobox|Chocolate until you drop|Brussels is chock full of chocolates, but the ultimate indulgence for the chocoholic is Place du Grand Sablon-Grote Zavel Plein, where you will find three shops selling some of the best chocolate in the world:  '''Neuhaus''', '''Pierre Marcolini''' and '''Wittamer'''.  Each store has its own specialties: Pierre Marcolini's take-away cakes and ice cream are reasons to be tempted, while Wittamer is the only one with a cafe on premises and also sells the ultimate hot chocolate. '''Passion Chocolat''' (20 Rue Vanderlindenstraat) is a bit out of the way but its artisan chocolate is worth a visit, and you can taste lots of it for free at the entrance.
+}}
+
+There is plenty of good eating to be had in Brussels. Most people concentrate on the three classics: '''mussels''' (''moules'' in French and ''mosselen'' in Dutch), '''fries''' (''frites'' in French and ''frieten'' in Dutch) and '''[[chocolate]]'''.  A few more adventurous ''Bruxellois/Brusselse'' dishes include ''anguilles au vert/paling in 't groen'' (river eels in green sauce), meat balls in tomato sauce, ''stoemp'' (mashed vegetables and potatoes) and ''turbot waterzooi'' (turbot fish in cream and egg sauce). For dessert, try a Belgian '''waffle''' (''wafel'' in Dutch and ''gauffre'' in French), also available in a square Brussels version dusted with powdered sugar, and choices of bananas, whipped cream and many other toppings. Although many prefer the round, caramelized version from [[Liège]]. Many tourist shops will sell the Liège waffle (traditionally eaten plain, as it already contains pearl sugar in the dough) with toppings. Only the Brussels waffle (which has a lighter/airier dough) will have toppings such as whipped cream, fruits, etc.
+
+The matter over which establishment serves up the best '''frites''' (locally known as ''fritkots'' in Dutch and "friterie" in French) remains a matter of heated debate. Some argue that the best frites in Brussels are served at the fritkot near the Barriere de Saint-Gilles, while others defend St-Josse's Martin (Place Saint-Josse/Sint-Joostplein) as the prime purveyor of the authentic Brussels frite just as others claim Antoine (Place Jourdan/Jourdanplein) remains the king of the local french fry. No matter which fritkot you're at, try to be adventurous and have something other than ketchup or mayonnaise on your fries. Of the selection of bizarre sauces you've never seen before, "andalouse" is probably the most popular with the locals.
+
+'''Vegetarians''' can find at least one menu item at many, though not all, regular restaurants. '''Vegans''' will have a harder time, while the [http://www.veganizerbxl.com Veganizer BXL initiative]{{Dead link|date=January 2023 |bot=InternetArchiveBot }} is looking to widen their options, it’s best to head for the vegetarian-vegan restaurants.
+
+Also beware of the 'Italian Restaurant Streets' in the tourist and shopping districts.  These streets are lined with small Italian restaurants, some offering "3-course meals" for {{EUR|12}} or {{EUR|13}}.  They are all run by just a few shop owners and serve unappetizing store purchased food.  They will not 'include service' as most all restaurants in Brussels do, and many tourists have reported getting ''scammed'' here, especially when not paying with exact change. A common practice is to present you a menu where prices aren't anything near the ones advertised in the windows. Be sure you ask why there is such a price difference before ordering and do not hesitate to leave if you do not agree with the price. If you were offered a drink and already sipped from your glass before receiving the menu (as is often the case) then just pay for the drink and leave.
+
+[[File:RueDesBouchers.JPG|thumb|Rue des Bouchers/Beenhouwerstraat, bustling on a Saturday night]]
+
+Brussels' tourist restaurant gauntlet can be found in Rue des Bouchers/Beenhouwerstraat, just to the north of Grand-Place. The place has a bad reputation for waiters imposing themselves on passers-by, trying to lure customers into their restaurant. The authorities are aware of this, and are trying to take measures. Some restaurants may also tempt you with cheap prices for the menus, but when seated, the item on the menu happens to be unavailable, and you're forced to accept another, noticeably more expensive dish. Often, the exaggerated price of the wines will also compensate for the attractive menu. Knowing this however, you may be able to negotiate a better deal before entering.
+
+==Drink==
+[[File:Cantillon tasting.jpg|thumb|Gueuze tasting at Cantillon brewery]]
+
+{{SeeDistricts}}
+
+Belgium is to beer what France is to wine: it is home to one of the greatest beer traditions in the world, and Brussels is a great place to sample some of the vast variety on offer. Typical beers of Brussels are ''gueuze'' (rather sour) and ''kriek'' (rather sweet, cherry based).
+
+Smoking is prohibited in all bars. It is allowed to smoke on the outdoor parts that many bars install on the street during the warmer months.
+
+A special drink only found in Brussels is the "half-en-half" ("half and half"). It's a mixture of white wine and champagne.
+
+==Sleep==
+{{SeeDistricts}}
+
+Hotel rates in Brussels can vary widely (especially at the upper end) depending on how many EU bigwigs happen to be in town. Good deals are often available on weekends and during the summer when the bureaucrats flee on vacation.
+[[File:Hostel Generation Europe.jpg|thumb|Auberge de Jeunesse Génération Europe - Youth Hostel]]
+
+==Stay safe==
+[[File:Comic Mural Tintin, Hergé, Brussels.jpg|thumb|The chances of being involved in an espionage thriller are slim.]]
+
+This might come as a shock to the uninitiated, but Brussels is increasingly dealing with the reputation of being a rather unsafe or uneasy city, at least by Western European standards. Though one can argue that it is partially bloated by the media and "word-of-mouth", Brussels has its share of safety issues. Violent crime is rather rare, however pickpocketing, vandalism and petty theft are common. Homeless encampments and drug abusers are a common sight in all of the major train and metro stations. It is safest to avoid any interaction. The universal emergency number is 112, which works from any mobile phone even without a SIM card.
+
+===Areas to watch out for===
+Generally speaking, tourists are unlikely to encounter many safety issues in Brussels' East (Etterbeek, Evere, most of Ixelles), South (Watermael-Boisfort, Woluwe-Saint-Lambert), and Northwest (Jette). Similarly, much of the city center is safe during the day, so long as the basic precautions are taken. 
+
+On the other hand, many neighbourhoods have a reputation for crime and decay, especially at night; this is especially relevant for areas such as Saint-Gilles (especially near the Brussel-Zuid/Bruxelles-Midi station), Matongé, Anneessens (around Place Fontainas), Molenbeek (mostly areas next to the canal), Schaerbeek (the western areas within close proximity of the Brussels-North station), and the Marolles. Though most travellers are unlikely to visit them, one should always be on their guard, especially since an area's (subjective) safety can change incredibly fast in Brussels, so know where you're going when doing so. Ask a local for advice if possible. [https://www.eupedia.com/belgium/map_disadvantaged_neighbourhoods_brussels.shtml This map] gives an indication of the less attractive and inviting areas (in red), although the attractiveness and subjective safety of an area can change quickly street by street. A seemingly safe street might sit right next to a rough area, and vice versa.
+
+Do keep in mind that the topic of crime in Brussels might bear racial undertones, and some locals will get feisty if you mention anything regarding the origins of people in these neighbourhoods.
+
+===Pickpocketing===
+Pickpocketing is by far the most likely issue you will come across in Brussels, with the city frequently ranking high by European standards. Pickpocketing has been reported in nearly every neighborhood in Brussels. This activity is mainly carried out by teams in crowded tourist areas, train and metro stations, major events, and parks (even during the daytime). Those who commit these petty crimes are really professional. Therefore, as usual, it's better not to unnecessarily show valuables publicly, especially when looking as a tourist. Some areas with particularly high risks of pickpocketing include the European Quarter, Bourse/Beurs, Forest National, and the major train stations (Zuid/Midi in particular).
+
+Police in Brussels is approachable, courteous and professional, but seriously suffers from being understaffed and overcharged. The justice system is even more clogged. It is always good to report theft, if only for the statistics, but do not expect much follow-up. Non-violent crimes such as pickpocketing and petty theft are low-priority for the prosecutors office, and it is likely no effort will be put towards catching the thieves if the stolen goods aren't worth more than a couple of laptop computers.
+
+===Parks===
+As with most major cities, parks in Brussels are safe during the day, but best avoided at night. Most big parks don't have any (sufficient) lighting. Examples are those around the Atomium (Laeken and Osseghem parks) and the Bois de La Cambre/Ter Kamerenbos. Although they are mostly deserted at night, it's always better to be careful; Laeken and Osseghem are near sketchy areas, whereas the Bois de la Cambre has a history of aggravated assaults. Gangs often take over smaller parks scattered throughout the city at night.
+
+In and around the ''Parc de Bruxelles/Warandepark'', between the Royal Palace and the Belgian Parliament, criminals have been known to threaten their victims with violence. If you are robbed, there is a police station right next to the gate in front of the Belgian Parliament (on the right side when leaving the park, hidden in the bushes) where experienced policemen will help you. Most of them speak French, Dutch and English well.
+
+The Parc du Cinquantenaire has developed a reputation for assaults against women at night.
+
+The Parc Maximilien/Maximiliaanpark (just west of North Station) near the Immigration Office is often used by migrants to spend the night while waiting to apply for asylum, moving to another country or for various reasons. You probably won't wander there by chance, but it's still better avoided.
+
+===Train, tramway, and metro stations===
+
+* The areas immediately surrounding the Bruxelles Midi/Brussel Zuid train station are among the poorest in the city; it is not advised to wander there alone at night. The station itself is among the biggest pickpocketing hotspots in Europe, despite an ample police presence.
+* The same applies to the Nord-Noord train station in the Brussels-North Business District; do not venture too far away from the Roi Albert II Boulevard (basically the business district's main road) at night. Be especially cautious around the International Bus (e.g. Flixbus) stops.
+* Brussels Central-Centraal station is another known pickpocketing hotspot. There are many homeless people begging around the station as well, but rarely in an aggressive way.
+* It is very common for criminals to try to force their way through the metro gates for free, grabbing a paying customer at the shoulders or the hips, to get through the gates at the same time. You can spot these "passengers" because they tend to stay lingering at metro exits without good reason. When you feel like you're being followed and this could happen to you, the safest course of action is to play like you've chosen the wrong exit or entry, and turn around and take another exit/entry.
+* Brussels' homeless population tend to seek shelter in certain stations, like Schuman, Porte de Namur-Naamsesport, and Rogier at night. They typically ignore passers-by, but some can get aggressive.
+* Besides those, taking public transportation in Brussels is not an issue if you are vigilant of your surroundings.
+
+=== Miscellaneous ===
+* People of the Jewish faith wearing identifiable symbols may face hassles or worse.
+* Being a very international city, Brussels houses people from all walks of life. Whilst most people are welcoming and open-minded, some have not gotten used to the "internationalisation" of Brussels. As such, random acts of racism may happen.
+* Belgians are usually a kind and gregarious bunch that can socialise with anyone. However, people in Brussels are much less welcoming at first, and they value their private space a lot more. Unless you are friends with them, respect their personal boundaries.
+* Though not as frequent as pick-pocketing, muggings and assaults have been known to occur in certain parts of Brussels.
+* Not unlike drivers, bike riders and especially step riders in Brussels tend to be anarchic, often ignoring traffic rules and being aggressive to cars and even pedestrians. Whenever you see someone cycle or stepping, stop, let them pass, and do not argue under any circumstance.
+* Once virtually unheard of, strikes and riots have become a regular occurrence in Brussels. They are usually peaceful, but watch out if things start heating up.
+* Belgium is the land of beers and is quite lax towards alcohol consumption. Although the police is actively controlling on drunk driver, dangerous driving is still possible, especially when football games are on, during weekends, and on certain holidays (National Holiday, etc.). Just keep an eye out, and you should be fine.
+* The Avenue Louise, one of the most famous roads in Brussels, is a major prostitution hot spot at night.
+
+==Stay healthy==
+There are few health hazards to worry about in Brussels. Tap water in Brussels, and most of the rest of the country, is drinkable, and as healthy as bottled mineral water. Fountains and wells on the other hand are ''not'' suitable for human consumption. In summer, '''ticks''' are routinely encountered in parks, and are known to carry Lyme disease, which can be deadly if left untreated.
+If you spot pink or red circles on your skin after a walk in the forests or parks, you may be infected, and should seek medical help immediately.
+
+==Cope==
+The most widely read English magazine is ''The Bulletin'' which, apart from covering Belgian and EU news, also offers arts and lifestyle stories, as well as in-depth events listings and a TV guide.
+
+===Work out===
+* {{listing
+| name=Fitness Palace | url=http://www.fitnesspalace.be/ | email=info@fitnesspalace.be
+| address=Rogier van der Weydenstraat 3 | lat= | long= | directions=Zuidpaleis (Palais du Midi)
+| phone=+32 2 5132616 | tollfree= | fax=
+| hours=10:30-22:00 | price={{EUR|8}} daypass, {{EUR|6}} offpeak
+| content=
+}}
+
+*{{listing
+| name=David Lloyd | alt= | url=https://www.davidlloyd.be/en | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| lastedit=2025-11-12
+| content=Upmarket gym, operating in Uccle and Sterrebeek.
+}}
+
+*{{listing
+| name=Basic Fit | alt= | url=https://www.basic-fit.com/en-be/gyms/brussels | email=
+| address= | lat= | long= | directions=
+| phone= | tollfree=
+| hours= | price=
+| lastedit=2023-09-14
+| content=Basic fits operates 19 gyms in the Brussels region.
+}}
+
+===Embassies===
+Although Belgium is a small country, being frequently called the "capital" of the [[European Union]], Brussels is home to more diplomatic missions than any other city in the world, most of which are simultaneously accredited to Belgium and the European Union. Foreign affairs keeps an [https://diplomatie.belgium.be/en/embassies-and-consulates updated list of foreign representations].
+&lt;!-- Don't add a street and place name in one language only. To prevent confusion, street and place names must be added in both French and Dutch, as they do often differ completely. --&gt;
+
+* {{flag|Andorra}} {{listing
+| name=Andorra | url=http://www.andorra.be | email=ambassade@andorre.be
+| address=Rue de la Montagne/Bergstraat 10 | lat=50.846918 | long=4.354797 | directions=
+| phone=+32 2 513-28-06 | tollfree= | fax=+32 2 513-07-41
+| hours= | price=
+| content=
+}}
+* {{flag|Armenia}} {{listing
+| name=Armenia | alt= | url=http://belgium.mfa.am/en/ | email=ambassade@andorre.be
+| address=Rue Montoyer/Montoyerstraat 28 | lat=50.841250 | long=4.370358 | directions=
+| phone=+32 2 348 44 00 | tollfree= | fax=+32 2 348 44 01
+| hours= | price=
+| content=
+}}
+* {{flag|Austria}} {{listing
+| name=Austria | url=http://aussenministerium.at/bruessel | email=bruessel-ob@bmeia.gv.at
+| address=Place du Champ de Mars/Marsveldplein 5 | lat=50.838305 | long=4.362957 | directions=
+| phone=+32 2 2890-700 | tollfree= | fax=+32 2 5136641
+| hours=M–F 10:00–12:30 | price=
+| content=
+}}
+* {{flag|Canada}} {{listing
+| name=Canada | url=https://www.international.gc.ca/country-pays/belgium-belgique/brussels-bruxelles.aspx?lang=eng| email=bru@international.gc.ca
+| address=Avenue des Arts 58 | lat=50.840750 | long=4.366412 | directions=
+| phone=+32 2 741-0611 | tollfree= | fax=+32 2 741-0643
+| hours=M-F 09:00-12:00, 13:30-17:00 | price=
+| content=
+}}
+* {{flag|China}} {{listing
+| name=China | url=http://be.china-embassy.gov.cn/eng/ | email=chinaemb_bel@mfa.gov.cn
+| address=Avenue de Tervuren/Tervurenlaan 443-445, 1150 Woluwe-Saint-Pierre/Sint-Pieters-Woluwe | lat= | long= | directions=
+| phone=+32 2 771 2038 | tollfree= | fax=+32 2 779 2895
+| hours=M-F 09:00-15:00 (may close at 16:00 in some days) | price=
+| lastedit=2024-02-08
+| content=For visa applications consult [https://www.visaforchina.cn/BRU2_EN/ CVASC] (at Rue Neerveld/Neerveldstraat 109, 1200 Woluwe-Saint-Lambert/Sint-Lambert-Woluwe, tel:+32-2-775-0888, [mailto:brusselscenter@visaforchina.org E-mail])
+}}
+* {{flag|Georgia}} {{listing
+| name=Georgia | url=http://belgium.mfa.gov.ge | email=geomission.eu@mfa.gov.ge
+| address=Rue Père Eudore Devroye/Pater Eudore Devroyestraat 245, 1150 Woluwe-Saint-Pierre | lat=50.832362 | long=4.412407 | directions=
+| phone=+32 2 7611190 | tollfree= | fax=+32 2 7611199
+| hours= | price=
+| content=
+}}
+* {{flag|Greece}} {{listing
+| name=Greece | url= | email=ambagre@skynet.be
+| address=Rue des Petits Carmes/Karmelietenstraat 10 | lat=50.840221 | long=4.359080 | directions=
+| phone=+32 2 545-5500, +32 2 545-5501 (Emergencies) | tollfree= | fax=+32 2 545-5585
+| hours= | price=
+| content=
+}}
+* {{flag|Japan}} {{listing
+| name=Japan | url=http://www.be.emb-japan.go.jp/english/index.html | email=
+| address=Avenue des Arts/Kunstlaan 58 | lat=50.840736 | long=4.378162 | directions=
+| phone=+32 2 513-2340, +32 2 500-0580 (Consul) | tollfree= | fax=+32 2 513-1556
+| hours= | price=
+| content=
+}}
+* {{flag|Macedonia}} {{listing
+| name=North Macedonia | url= | email=brussels@mfa.gov.mk
+| address=Rue Vilain XIII/Vilain XIII-straat 20 | lat=50.845340 | long=4.370444 | directions=
+| phone=+32 2 734-5687 | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+* {{flag|Norway}} {{listing
+| name=Norway | alt= | url=https://www.norway.no/en/belgium/norway/about-embassy/ | email=
+| address=Rue Archimède/Archimedesstraat 17 | lat=50.843606 | long=4.384027 | directions=
+| phone=+32 2 238-7300 | tollfree=
+| hours= | price=
+| content=
+}}
+* {{flag|Philippines}} {{listing
+| name=Philippines | url=http://philembassy.be | email=
+| address=Avenue Molière/Molièrelaan 297 | lat= | long= | directions=
+| phone=+32 2 340-3377, +32 2 340 3378 | tollfree= | fax=+32 2 345-6425
+| hours= | price=
+| content=
+}}
+* {{flag|Romania}} {{listing
+| name=Romania | alt= | url=http://bruxelles.mae.ro/en | email=bruxelles@mae.ro
+| address=Rue Gabrielle/Gabriellastraat 105 | lat= | long= | directions=
+| phone=+32 2 345 2680 | tollfree= | fax=+32 2 346 2345
+| hours= | price=
+| lastedit=2021-12-03
+| content=
+}}
+* {{flag|Turkey}} {{listing
+| name=Turkey | url=http://bruksel.be.mfa.gov.tr | email=embassy.brussels@mfa.gov.tr
+| address=Rue Montoyer/Montoyerstraat 4 | lat=50.841737 | long=4.367706 | directions=
+| phone=+32 2 5134095, +32 2 5061120 | tollfree= | fax=+32 2 5112550, +32 2 5140748
+| hours=M–F 09:00–13:00 14:00–18:00 | price=
+| content=
+}}
+* {{flag|United Kingdom}} {{listing
+| name=United Kingdom | url=http://ukinbelgium.fco.gov.uk/en/ | email=
+| address=Avenue d'Auderghem/Oudergemlaan 10 | lat= | long= | directions=
+| phone=+32 2 287-6248 | tollfree= | fax=
+| hours= | price=
+| content=
+}}
+* {{flag|United States}} {{listing
+| name=United States | alt= | url=https://be.usembassy.gov/ | email=
+| address=Boulevard du Régent/Regentlaan 27 | lat=50.844509 | long=4.367334 | directions=
+| phone=+32 2 508-2111 | tollfree= | fax=+32 2 508-2049
+| hours= | price=
+| content=
+}}
+
+==Go next==
+
+Visit the following Belgian towns and cities, all within a two-hour drive from Brussels.
+
+* [[Kraainem]] - Bordering Brussels to the east. Architecture from the 16th to 18th centuries, primarily interesting for history and architecture enthusiasts.
+* [[Tervuren]] - South-east of Brussels, on the outskirts of the [[Brussels/Sonian Forest|Sonian Forest]], a {{UNESCO}}.
+* [[Waterloo]] - About {{convert|15|km|abbr=on|0}} south of Brussels.  Visit where Wellington and Bluecher faced Napoleon for an ultimate battle that changed Europe's face forever. Further south, don't miss the Abbey of Villers-la-Ville.
+* [[Sint-Pieters-Leeuw]] - About {{km|10}} south of Brussels.  Visit the nature reserve with Galloway cattle (not in winter) so near to Brussels
+Belgian cities, well connected with the capital:
+* [[Mechelen]] - About {{km|35}} NE of Brussels.
+* [[Leuven]] - About {{km|30}} east of Brussels.
+* [[Antwerp]] - About {{km|55}} north of Brussels.
+*[[Sint-Niklaas]] - About {{km|45}} NW of Brussels.
+* [[Bruges]] - About {{km|100}} NW of Brussels.
+* [[Charleroi]] - About {{km|60}} south of Brussels.
+* [[Ghent]] - About {{km|60}} NW of Brussels.
+* [[Namur]] - About {{km|60}} SE of Brussels.
+* [[Tournai]] - About {{km|90}} west of Brussels.
+* [[Mons]] - About {{km|70}} south of Brussels.
+
+You can also get to any of the following 'foreign' cities from Brussels within a few hours without the use of a plane:
+*[[Amsterdam]]/[[Rotterdam]]/[[The Hague]]/[[Utrecht]] (train or car), 
+*[[Luxembourg]] (car or train), 
+*[[Paris]] (train¨from Brussels-South or Lille - longer by car), 
+*[[London]] (by train), [[Aachen]] (train or car), 
+*[[Maastricht]] (one hour by train) 
+*[[Lille]] (less than an hour by train or car - longer by train), 
+*[[Cologne]]/[[Bonn]] (train or car), 
+*[[Frankfurt]] (train - longer by car)
+
+{{isPartOf|Belgium}}
+{{usablecity}}
+{{geo|50.84643|4.35170|zoom=15}}</text>
     </revision>
   </page>
 </mediawiki>
