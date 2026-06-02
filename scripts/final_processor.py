@@ -154,8 +154,8 @@ def advanced_wiki_cleaner(raw_text):
     text = text.strip()
     text = clean_xml_text(text)
 
-    if len(text) > 1500:
-        truncated = text[:1500]
+    if len(text) > 3000:
+        truncated = text[:3000]
         last_space = truncated.rfind(' ')
         text = (truncated[:last_space] + "...") if last_space > 0 else (truncated + "...")
     return text if len(text) > 10 else ""
@@ -195,13 +195,13 @@ def _get_pages(orig_file):
 
 def get_city_main_text(orig_file, city_name):
     """
-    Find the most relevant intro text for a city from its Wikivoyage dump.
+    Find city-level intro text from its Wikivoyage dump.
 
     Priority:
-      1. Page whose title matches the city name (accent-insensitive)
-      2. First page whose title starts with "CityName/"
-      3. First page whose title contains the city name
-      4. Empty string (no usable page found)
+      1. Page whose title matches the city name exactly (accent-insensitive)
+      2. "CityName/Understand" sub-page (city-wide intro section)
+      3. Empty string — cities with only district sub-pages return nothing
+         (showing a district page as a city intro is misleading)
     """
     if not os.path.exists(orig_file):
         return ""
@@ -213,22 +213,9 @@ def get_city_main_text(orig_file, city_name):
         if _ascii_lower(title) == city_ascii:
             return text
 
-    # Priority 2a: "CityName/Understand" — Wikivoyage intro section
+    # Priority 2: "CityName/Understand" — Wikivoyage intro section
     for title, text in pages:
         if _ascii_lower(title) == city_ascii + "/understand":
-            return text
-
-    # Priority 2b: sub-page with most content (avoids picking a small peripheral district)
-    subpages = [
-        (title, text) for title, text in pages
-        if _ascii_lower(title).startswith(city_ascii + "/")
-    ]
-    if subpages:
-        return max(subpages, key=lambda t: len(t[1]))[1]
-
-    # Priority 3: title contains the city name but is not a Category page
-    for title, text in pages:
-        if city_ascii in _ascii_lower(title) and not title.startswith("Category:"):
             return text
 
     return ""
