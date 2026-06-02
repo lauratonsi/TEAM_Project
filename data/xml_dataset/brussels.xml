@@ -14,7 +14,7 @@
     <cost_index value="77.5"/>
     <economic_accessibility score="22.5"/>
   </indicators>
-  <transport>I tram sono il mezzo più rapido per spostarsi da un punto all'altro della città. È possibile utilizzare autobus e tram con lo stesso biglietto entro un'ora.</transport>
+  <transport>Trams are the fastest way to move around the city. Buses and trams share the same ticket system and connections are valid for one hour. (Source: AI-generated — transport data absent from Wikivoyage dump.)</transport>
   <accommodation>
     <hotel>
       <name>2Go4 Hostel</name>

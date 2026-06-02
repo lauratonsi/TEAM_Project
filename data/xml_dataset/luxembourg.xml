@@ -14,7 +14,7 @@
     <cost_index value="86.4"/>
     <economic_accessibility score="13.6"/>
   </indicators>
-  <transport>Il modo migliore per muoversi è attraverso la rete di autobus interurbani e la fitta rete stradale. I treni collegano direttamente il centro con i distretti principali.</transport>
+  <transport>The best way to get around is via the intercity bus network and the dense road system. Trains directly connect the city centre to all major districts. (Source: AI-generated — transport data absent from Wikivoyage dump.)</transport>
   <accommodation/>
   <highlights>
     <attraction lat="49.6117" lon="6.1342">
@@ -61,23 +61,23 @@
   <districts>
     <district>
       <name>Ville-Haute</name>
-      <description>Il centro storico e politico della città, sede del Palazzo Granducale.</description>
+      <description>The historic and political centre of the city, home to the Grand Ducal Palace.</description>
     </district>
     <district>
       <name>Grund</name>
-      <description>Il pittoresco quartiere medievale sul fiume Alzette, noto per i suoi bistrot.</description>
+      <description>A picturesque medieval district along the Alzette river, known for its bistros.</description>
     </district>
     <district>
       <name>Kirchberg</name>
-      <description>Il quartiere europeo, sede delle istituzioni UE e del museo MUDAM.</description>
+      <description>The European quarter, seat of EU institutions and the MUDAM museum.</description>
     </district>
     <district>
       <name>Clausen</name>
-      <description>Quartiere residenziale lungo l'Alzette, famoso per le sue birrerie.</description>
+      <description>A residential district along the Alzette, famous for its breweries.</description>
     </district>
     <district>
       <name>Limpertsberg</name>
-      <description>Quartiere verde e borghese, con l'università e negozi di qualità.</description>
+      <description>A leafy, upscale neighbourhood with the university and quality shops.</description>
     </district>
   </districts>
   <description>Elite financial center, Luxembourg offers free public transport and one of the highest safety levels in the world. It is the paradigm of the wealthy capital that invests massively in its residents' well-being.</description>

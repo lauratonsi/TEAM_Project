@@ -74,8 +74,19 @@ LANDMARK_IMAGES = {
 # Patch transport for cities where CSV extraction failed
 TRANSPORT_PATCH = {
     "Paris": (
-        "Dall'aeroporto CDG: RER B fino a Gare du Nord (35 min) o RoissyBus fino a Opéra (75 min). "
-        "In città: metro (16 linee), bus e RER coprono tutta l'area metropolitana."
+        "From CDG Airport: RER B to Gare du Nord (35 min) or RoissyBus to Opéra (75 min). "
+        "Within the city: metro (16 lines), buses and RER cover the entire metropolitan area. "
+        "(Source: AI-generated — transport data absent from Wikivoyage dump.)"
+    ),
+    "Brussels": (
+        "Trams are the fastest way to move around the city. "
+        "Buses and trams share the same ticket system and connections are valid for one hour. "
+        "(Source: AI-generated — transport data absent from Wikivoyage dump.)"
+    ),
+    "Luxembourg": (
+        "The best way to get around is via the intercity bus network and the dense road system. "
+        "Trains directly connect the city centre to all major districts. "
+        "(Source: AI-generated — transport data absent from Wikivoyage dump.)"
     ),
 }
 
@@ -96,19 +107,19 @@ _NOISE_DISTRICTS = {
 _DISTRICT_OVERRIDES = {
     # Luxembourg City actual quarters
     "Luxembourg": [
-        ("Ville-Haute", "Il centro storico e politico della città, sede del Palazzo Granducale."),
-        ("Grund", "Il pittoresco quartiere medievale sul fiume Alzette, noto per i suoi bistrot."),
-        ("Kirchberg", "Il quartiere europeo, sede delle istituzioni UE e del museo MUDAM."),
-        ("Clausen", "Quartiere residenziale lungo l'Alzette, famoso per le sue birrerie."),
-        ("Limpertsberg", "Quartiere verde e borghese, con l'università e negozi di qualità."),
+        ("Ville-Haute", "The historic and political centre of the city, home to the Grand Ducal Palace."),
+        ("Grund", "A picturesque medieval district along the Alzette river, known for its bistros."),
+        ("Kirchberg", "The European quarter, seat of EU institutions and the MUDAM museum."),
+        ("Clausen", "A residential district along the Alzette, famous for its breweries."),
+        ("Limpertsberg", "A leafy, upscale neighbourhood with the university and quality shops."),
     ],
     # Stockholm city districts (instead of county municipalities)
     "Stockholm": [
-        ("Gamla Stan", "La città vecchia medievale sull'isolotto, cuore storico di Stoccolma."),
-        ("Södermalm", "Il quartiere hipster e creativo con caffè, mercati e viste panoramiche."),
-        ("Östermalm", "Il quartiere elegante con il Mercato Östermalm e ambasciate."),
-        ("Norrmalm", "Il centro commerciale e culturale, sede della stazione centrale."),
-        ("Kungsholmen", "Isola con il Municipio (Stadshuset) e zone residenziali tranquille."),
+        ("Gamla Stan", "The medieval old town on its own island, the historic heart of Stockholm."),
+        ("Södermalm", "The hip and creative district with cafés, markets and panoramic views."),
+        ("Östermalm", "The elegant neighbourhood with the Östermalm Market Hall and embassies."),
+        ("Norrmalm", "The commercial and cultural hub, home to the central railway station."),
+        ("Kungsholmen", "An island district featuring City Hall (Stadshuset) and quiet residential areas."),
     ],
 }
 
@@ -383,13 +394,13 @@ def run_pipeline():
         etree.SubElement(ind, "cost_index", value=str(city_idx['cost_of_living']))
         etree.SubElement(ind, "economic_accessibility", score=str(round(100 - city_idx['cost_of_living'], 1)))
 
-        # --- transport (with patch fallback for missing entries) ---
-        transport_text = str(_row_get(wiki_row, 'Transport_Text', ''))
-        if not transport_text or transport_text.lower() == 'nan':
-            transport_text = TRANSPORT_PATCH.get(
-                name,
-                "Informazioni sul trasporto pubblico in aggiornamento."
-            )
+        # --- transport (patch takes priority for cities with missing/Italian CSV data) ---
+        if name in TRANSPORT_PATCH:
+            transport_text = TRANSPORT_PATCH[name]
+        else:
+            transport_text = str(_row_get(wiki_row, 'Transport_Text', ''))
+            if not transport_text or transport_text.lower() == 'nan':
+                transport_text = "Public transport information unavailable."
         etree.SubElement(root, "transport").text = clean_xml_text(transport_text)
 
         # --- accommodation ---

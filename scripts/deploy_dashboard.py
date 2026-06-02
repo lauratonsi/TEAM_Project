@@ -424,8 +424,8 @@ def deploy():
                 'green': root.xpath("string(.//environment/@green_score)") or "0",
                 'hotel_count': root.findtext(".//hotel_count", "0"),
                 'economy': root.xpath("string(.//economic_accessibility/@score)") or "0",
-                'transport': root.findtext("transport") or "Dati mobilità in aggiornamento.",
-                'story_it': root.findtext("description") or "Analisi strategica non disponibile.",
+                'transport': root.findtext("transport") or "Transport data unavailable.",
+                'story_it': root.findtext("description") or "Strategic summary unavailable.",
                 'wiki_intro': root.findtext("wiki_intro") or "",
                 'hotels': [{'n': h.findtext("name"), 'p': h.findtext("price")} for h in root.xpath(".//hotel")],
                 'attractions': [{'n': a.findtext("name"), 'd': a.findtext("description"), 'lat': a.get("lat"), 'lon': a.get("lon")} for a in root.xpath(".//attraction")],
@@ -1021,14 +1021,14 @@ def generate_report(city_data):
             dtd_content = f.read().replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
     summary_cards = (
-        stat_card("Capitali analizzate", total_cities)
-        + stat_card("Strutture ricettive", total_hotels, "var(--blue-500)")
-        + stat_card("Attrazioni catalogate", total_attractions, "var(--green-500)")
-        + stat_card("Città con distretti", f"{cities_with_dist}/{total_cities}", "#8b5cf6")
-        + stat_card("Appeal medio", avg_appeal, "var(--accent)")
-        + stat_card("Safety medio", avg_safety, "var(--blue-500)")
-        + stat_card("Green medio", avg_green, "var(--green-500)")
-        + stat_card("File XML validati", total_cities, "#f59e0b")
+        stat_card("Capitals Analysed", total_cities)
+        + stat_card("Accommodation Venues", total_hotels, "var(--blue-500)")
+        + stat_card("Attractions Catalogued", total_attractions, "var(--green-500)")
+        + stat_card("Cities with Districts", f"{cities_with_dist}/{total_cities}", "#8b5cf6")
+        + stat_card("Avg Appeal", avg_appeal, "var(--accent)")
+        + stat_card("Avg Safety", avg_safety, "var(--blue-500)")
+        + stat_card("Avg Green Score", avg_green, "var(--green-500)")
+        + stat_card("Validated XML Files", total_cities, "#f59e0b")
     )
 
     html = f"""<!DOCTYPE html>
@@ -1150,7 +1150,7 @@ def generate_report(city_data):
     <nav class="topbar-nav">
       <a href="../index.html">🏠 Home</a>
       <a href="report.html" class="active">📊 Report</a>
-      <a href="mappa_attrazioni.html">🗺️ Mappa</a>
+      <a href="mappa_attrazioni.html">🗺️ Map</a>
     </nav>
   </div>
 </header>
@@ -1202,7 +1202,7 @@ def generate_report(city_data):
     </div>
     <div class="rank-block">
       <h3>Più Accessibili Economicamente</h3>
-      <table class="rank-table"><tbody>{ranking_rows(by_cost, 'price', '€/notte')}</tbody></table>
+      <table class="rank-table"><tbody>{ranking_rows(by_cost, 'price', '€/night')}</tbody></table>
     </div>
   </div>
 </section>
@@ -1277,6 +1277,55 @@ def generate_report(city_data):
       </div>
     </div>
   </div>
+</section>
+
+<!-- ===== DATI AI PATCH ===== -->
+<section class="report-section" id="ai-patch">
+  <h2>⚠️ Dati Non Reperibili da Wikivoyage — Integrazione AI</h2>
+  <p>
+    Le seguenti informazioni non erano presenti nei dump Wikivoyage scaricati e sono state
+    integrate con testo sintetico generato da AI (Gemini), chiaramente identificato nel dataset:
+  </p>
+  <table style="width:100%;border-collapse:collapse;font-size:0.88rem;margin-top:12px">
+    <thead>
+      <tr style="background:var(--slate-50);text-align:left">
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Città</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Sezione</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Motivo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><b>Parigi</b></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Trasporti urbani</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">Campo <code>Transport_Text</code> assente nel CSV estratto da Wikivoyage</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><b>Bruxelles</b></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Trasporti urbani</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">Testo estratto dal CSV era in italiano (non dalla pagina principale Wikivoyage)</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><b>Lussemburgo</b></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Trasporti urbani</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">Testo estratto dal CSV era in italiano (non dalla pagina principale Wikivoyage)</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><b>Lussemburgo, Stoccolma</b></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Descrizioni distretti</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">Il CSV conteneva dati errati: siti naturali (Mullerthal) per Lussemburgo, comuni della contea per Stoccolma. Override manuali applicati.</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px"><b>Tutte le 30 città</b></td>
+        <td style="padding:8px 12px">Strategic Summary</td>
+        <td style="padding:8px 12px;color:var(--slate-500)">Sintesi strategiche generate con AI (Gemini) tramite prompt strutturati; non estratte da Wikivoyage</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="background:#FEF3C7;border-left:4px solid #F59E0B;padding:12px 16px;border-radius:8px;font-size:0.85rem;margin-top:16px">
+    ⚠️ Tutti i testi generati da AI sono identificabili nel dataset dalla presenza della stringa
+    <code>(Source: AI-generated — ...)</code> nel campo <code>&lt;transport&gt;</code> del file XML.
+  </p>
 </section>
 
 <!-- ===== SCHEMA DTD ===== -->

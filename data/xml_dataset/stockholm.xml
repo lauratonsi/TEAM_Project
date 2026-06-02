@@ -61,23 +61,23 @@
   <districts>
     <district>
       <name>Gamla Stan</name>
-      <description>La città vecchia medievale sull'isolotto, cuore storico di Stoccolma.</description>
+      <description>The medieval old town on its own island, the historic heart of Stockholm.</description>
     </district>
     <district>
       <name>Södermalm</name>
-      <description>Il quartiere hipster e creativo con caffè, mercati e viste panoramiche.</description>
+      <description>The hip and creative district with cafés, markets and panoramic views.</description>
     </district>
     <district>
       <name>Östermalm</name>
-      <description>Il quartiere elegante con il Mercato Östermalm e ambasciate.</description>
+      <description>The elegant neighbourhood with the Östermalm Market Hall and embassies.</description>
     </district>
     <district>
       <name>Norrmalm</name>
-      <description>Il centro commerciale e culturale, sede della stazione centrale.</description>
+      <description>The commercial and cultural hub, home to the central railway station.</description>
     </district>
     <district>
       <name>Kungsholmen</name>
-      <description>Isola con il Municipio (Stadshuset) e zone residenziali tranquille.</description>
+      <description>An island district featuring City Hall (Stadshuset) and quiet residential areas.</description>
     </district>
   </districts>
   <description>Spread across fourteen islands, Stockholm embodies Scandinavian elegance and functional design. Its dedication to water cleanliness and urban safety makes it a model of social efficiency.</description>
