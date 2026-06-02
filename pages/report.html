@@ -551,16 +551,73 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
     </tbody>
   </table>
 
-  <p style="margin-top:20px;">
-    I file XML sorgente provengono da <b>Wikivoyage</b> (licenza CC-BY-SA), scaricati
-    manualmente dal sito Wikivoyage in formato dump MediaWiki XML. Le immagini landmark
-    provengono da <b>Wikimedia Commons</b> (licenza libera) tramite Wikipedia pageimages API.
-  </p>
   <p style="background:#FEF3C7;border-left:4px solid #F59E0B;padding:12px 16px;border-radius:8px;font-size:0.85rem;margin-top:12px">
     ⚠️ <b>Avvertenza accademica:</b> i valori numerici in <code>city_indices.json</code>
     sono stime rielaborate con AI a partire da fonti pubbliche. Non sostituiscono
     la consultazione diretta dei dataset originali Numbeo o EEA per usi di ricerca.
   </p>
+
+  <h3 style="margin-top:32px;">Elenco Completo dei File e Fonti</h3>
+  <table style="width:100%;border-collapse:collapse;font-size:0.87rem;margin-top:12px">
+    <thead>
+      <tr style="background:var(--slate-50);text-align:left">
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">File</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Contenuto</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Fonte</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Licenza</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/original_source/*.xml</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Dump MediaWiki delle 30 capitali (testi, trasporti, hotel, distretti)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://en.wikivoyage.org" target="_blank">Wikivoyage</a> — download manuale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA 3.0</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/wiki_text_pulito.csv</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Trasporti, hotel e distretti estratti dai dump tramite <code>extract_wiki_info.py</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Derivato da Wikivoyage</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA 3.0</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/attrazione_descrizione_fixed.csv</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">300 attrazioni con nome, descrizione e coordinate geografiche</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Derivato da Wikivoyage + curato manualmente</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA 3.0</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/city_indices.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Safety Index, Cost of Living, Green Score per 30 città</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Numbeo 2024, EU Green Capital Award, EEA — rielaborati con AI (Gemini)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Stima — non ufficiale</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/city_descriptions.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Sintesi strategiche in inglese per 30 città (campo <i>Strategic Summary</i>)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Generato con AI (Gemini) — testo originale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testo didattico</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/nightlife.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">240 locali notturni (bar, pub, nightclub) con coordinate geografiche</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a> via Overpass API</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">ODbL (Open Database Licence)</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/xml_dataset/*.xml</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">30 file XML output, validati DTD, uno per capitale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Generato dalla pipeline — derivato dalle fonti sopra</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px"><code>data/city_report.dtd</code></td>
+        <td style="padding:8px 12px">Schema DTD per la validazione dei file XML</td>
+        <td style="padding:8px 12px">Creato originalmente per il progetto</td>
+        <td style="padding:8px 12px">—</td>
+      </tr>
+    </tbody>
+  </table>
 </section>
 
 <section class="report-section" id="team">
