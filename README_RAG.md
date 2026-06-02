@@ -7,7 +7,7 @@ Sistema RAG (Retrieval-Augmented Generation) interno per query in linguaggio nat
 ```
 data/xml_dataset/*.xml  →  rag/ingest.py  →  rag_index/
                                                   ├── index.faiss   (384-dim, IndexFlatIP)
-                                                  └── docs.json     (320 chunk con metadati)
+                                                  └── docs.json     (442 chunk con metadati)
                                                        ↓
                                               rag/vectorstore.py    (FAISS + BM25Okapi, RRF)
                                                        ↓
@@ -25,17 +25,18 @@ Ogni città produce chunk tematici separati per sezione:
 | `hotels` | Lista strutture ricettive con prezzi |
 | `districts` | Un chunk per quartiere con descrizione |
 | `description` | Sintesi strategica in italiano |
-| `wiki_intro` | Panoramica da Wikivoyage |
+| `wiki_intro` | Panoramica da Wikivoyage (22/30 città; assente per città con solo sub-pagine distrettuali) |
 | `attractions` | Lista attrazioni con coordinate |
+| `nightlife` | Locali notturni (bar, pub, nightclub) da Overpass API |
 
-**320 chunk totali** (30 città × ~10 chunk medi), prefissati con `[CITY]`.
+**442 chunk totali** (30 città × ~15 chunk medi), prefissati con `[CITY]`.
 
 ## Retrieval ibrido
 
 1. **FAISS** (cosine similarity, `all-MiniLM-L6-v2`, 384 dim) → top-k candidati
 2. **BM25Okapi** → top-k candidati per keyword match
 3. **Reciprocal Rank Fusion** (α=0.5, k=60) → score fuso
-4. **Rilevamento intento** (transport / hotel / attractions / safety / general) → boost +8 ai chunk della sezione corrispondente
+4. **Rilevamento intento** (transport / hotel / attractions / safety / districts / nightlife / general) → boost +8 ai chunk della sezione corrispondente
 
 ## Avvio
 
@@ -61,5 +62,6 @@ uvicorn rag.api:app --host 127.0.0.1 --port 8000
 ## Limiti noti
 
 - Alcune città mancano di dati hotel (Budapest, Londra, Parigi, Oslo, Madrid…) perché assenti nelle sorgenti Wikivoyage
-- La sintesi delle risposte è euristica (estrazione frasi), non generativa
-- Non conosce eventi o dati successivi al dump Wikivoyage utilizzato
+- La sezione `wiki_intro` è assente per città con solo sub-pagine distrettuali (Amsterdam, Berlino, Bruxelles, Copenaghen, Helsinki, Lisbona, Parigi, Roma)
+- La sintesi delle risposte è euristica (estrazione frasi), non generativa; se Ollama/OpenAI non è in esecuzione viene usata la modalità `simulated_rag`
+- Non conosce eventi o dati successivi ai dump Wikivoyage scaricati manualmente

@@ -9,7 +9,7 @@ Università di Bologna — Docente: Angelo Di Iorio — A.A. 2024/2025
 ## Descrizione del Progetto
 
 EuroCity è una pipeline ETL (Extract, Transform, Load) che analizza **30 capitali europee**
-estraendo, pulendo e trasformando dati da dump MediaWiki (Wikivoyage) in formato XML.
+estraendo, pulendo e trasformando dati da dump Wikivoyage (scaricati manualmente) in formato XML.
 L'output finale è una dashboard HTML navigabile con statistiche comparative, mappa interattiva
 e documentazione integrata del processo.
 
@@ -22,7 +22,7 @@ e documentazione integrata del processo.
 
 ```
 ELABORAZIONE/
-├── original_source/          # Dump Wikivoyage (MediaWiki XML) per 30 capitali
+├── original_source/          # Dump Wikivoyage (MediaWiki XML) scaricati manualmente
 ├── xml_dataset/              # Output: 30 file XML validati rispetto al DTD
 ├── city_report.dtd           # DTD per la validazione dei file XML
 ├── city_indices.json         # Indici: safety, green score, costo della vita
@@ -68,7 +68,7 @@ python deploy_dashboard.py
 
 | Fonte | File | Contenuto |
 |-------|------|-----------|
-| Wikivoyage (MediaWiki XML) | `original_source/*.xml` | Testi, trasporti, hotel, distretti |
+| Wikivoyage (MediaWiki XML, download manuale) | `original_source/*.xml` | Testi, trasporti, hotel, distretti |
 | Dataset pubblici (Numbeo, EIU) | `city_indices.json` | Safety, green score, costo della vita |
 | Wikimedia Commons | `landmark_image` in XML | Immagini simbolo (URL stabili via Special:FilePath) |
 | Generato con AI | `city_descriptions.json` | Sintesi strategiche in italiano |
@@ -81,7 +81,8 @@ I file in `original_source/` sono dump MediaWiki XML con namespace
 - le pagine dei distretti (es. `<title>Amsterdam/Canal District</title>`)
 
 Per le città più grandi (Amsterdam, Berlino, Roma, Parigi) la pagina principale
-non esiste nel dump: la pipeline usa la prima sotto-pagina disponibile.
+non esiste nel dump: in questi casi la sezione Wiki Archive viene omessa (mostrare
+testo di un distretto come intro della città sarebbe fuorviante).
 
 ---
 
@@ -90,7 +91,7 @@ non esiste nel dump: la pipeline usa la prima sotto-pagina disponibile.
 ```xml
 <!ELEMENT city_report (metadata, indicators, transport, accommodation,
                         highlights, districts?, description,
-                        wiki_intro?, landmark_image?)>
+                        wiki_intro?, landmark_image?, nightlife?)>
 <!ATTLIST city_report appeal_score CDATA #REQUIRED>
 
 <!ELEMENT metadata (title, name_it, flag)>
@@ -107,6 +108,10 @@ non esiste nel dump: la pipeline usa la prima sotto-pagina disponibile.
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT wiki_intro (#PCDATA)>
 <!ELEMENT landmark_image (#PCDATA)>
+<!ELEMENT nightlife (venue*)>
+<!ELEMENT venue (name, category)>
+<!ATTLIST venue lat CDATA #IMPLIED lon CDATA #IMPLIED>
+<!ELEMENT category (#PCDATA)>
 ```
 
 Tutti i 30 file XML superano la validazione DTD eseguita a runtime
@@ -127,8 +132,8 @@ pages = tree.findall('.//mw:page', ns)
 ### 2. Selezione della Pagina Principale
 Algoritmo a priorità decrescente per trovare il testo intro corretto:
 1. Pagina con titolo esatto uguale al nome della città
-2. Prima pagina con titolo `Città/XYZ` (sotto-distretto)
-3. Prima pagina contenente il nome della città
+2. Pagina `Città/Understand` (sezione intro Wikivoyage)
+3. Se nessuna delle due esiste (città suddivise solo in distretti), wiki_intro rimane vuoto
 
 La comparazione è **accent-insensitive** tramite:
 ```python
@@ -202,7 +207,8 @@ Le sintesi strategiche in `city_descriptions.json` sono state generate con Claud
 | `index.html` | Dashboard navigabile con griglia di card, mappa e Virtual Analyst |
 | `report.html` | Statistiche estratte + documentazione pipeline |
 | `style.css` | Foglio di stile applicato a tutti i documenti HTML |
-| `mappa_attrazioni.html` | Mappa Leaflet con 300 attrazioni geolocalizzate |
+| `pages/mappa_attrazioni.html` | Mappa Leaflet con attrazioni e locali notturni geolocalizzati |
+| `data/nightlife.json` | 240 venue (8 per città) da Overpass API (OpenStreetMap) |
 
 ---
 
