@@ -354,7 +354,7 @@ def generate_map(city_data):
     """Genera pages/mappa_attrazioni.html: Leaflet con marker colorati per città, capitali e popup."""
     map_js = _map_js_block(city_data, 'map', 'cities/')
     map_html = (
-        "<!DOCTYPE html>\n<html lang='it'><head>\n"
+        "<!DOCTYPE html>\n<html lang='en'><head>\n"
         "<meta charset='UTF-8'>\n"
         "<meta name='viewport' content='width=device-width,initial-scale=1'>\n"
         "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css'>\n"
@@ -452,7 +452,7 @@ def deploy():
             cards_html += f"""
             <article class="city-card" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" itemscope itemtype="https://schema.org/City">
                 <div class="landmark-img-wrap">
-                    <img src="{img_src}" alt="Landmark di {city_obj['name_it']}" class="landmark-img" loading="lazy">
+                    <img src="{img_src}" alt="{city_obj['name_it']} Landmark" class="landmark-img" loading="lazy">
                     <div class="city-card-overlay">
                         <h2 class="city-title-overlay">
                             <span>{city_obj['flag']}</span>
@@ -544,7 +544,7 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
 
     # Template finale HTML
     full_html = f"""<!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -791,7 +791,7 @@ def generate_city_pages(city_data):
                 img_url = '../../' + img_url.lstrip('/')
             lm_html = (
                 f"<div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'>"
-                f"<img itemprop='image' src='{img_url}' alt='Landmark di {city['name_it']}' "
+                f"<img itemprop='image' src='{img_url}' alt='{city['name_it']} Landmark' "
                 f"style='width:100%; height:100%; object-fit:cover;'></div>"
             )
 
@@ -839,11 +839,13 @@ def generate_city_pages(city_data):
             f"<ul style='margin:0; padding-left:15px;'>{hotel_li}</ul></div>"
         ) if hotel_li else ""
 
-        # --- Transport ---
+        # --- Transport (strip inline AI-source marker before display) ---
+        import re as _re
+        transport_display = _re.sub(r'\s*\(Source: AI-generated[^)]*\)', '', city['transport']).strip()
         transport_html = (
             f"<div class='info-block transport-block'>"
             f"<span class='block-title'>🚇 Urban Transport</span>"
-            f"<p style='margin:0;'>{city['transport']}</p></div>"
+            f"<p style='margin:0;'>{transport_display}</p></div>"
         )
 
         # --- Districts ---
@@ -902,12 +904,25 @@ def generate_city_pages(city_data):
             "</table></div>"
         )
 
+        # --- City map data ---
+        import json as _json
+        city_lat, city_lon = CAPITAL_COORDS.get(cl, (48.8566, 2.3522))
+        map_attrs_js = _json.dumps([
+            {'lat': float(a['lat']), 'lon': float(a['lon']), 'n': a['n']}
+            for a in city['attractions'] if a.get('lat') and a.get('lon')
+        ])
+        map_venues_js = _json.dumps([
+            {'lat': float(v['lat']), 'lon': float(v['lon']), 'n': v['n'], 'cat': v.get('cat', 'bar')}
+            for v in city['nightlife'] if v.get('lat') and v.get('lon')
+        ])
+
         page_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>{city['name_it']} — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -939,6 +954,10 @@ def generate_city_pages(city_data):
     {nightlife_html}
     {desc_html}
     {attractions_html}
+    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
+        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
+        <div id="city-map" style="height:380px;width:100%;"></div>
+    </div>
     <div class="download-block">
         <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
         <a href="../../data/xml_dataset/{cl}.xml" download class="download-link">📥 Download XML source</a>
@@ -949,7 +968,24 @@ def generate_city_pages(city_data):
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+(function(){{
+  var map = L.map('city-map').setView([{city_lat},{city_lon}],13);
+  L.tileLayer('https://{{s}}.basemaps.cartocdn.com/rastertiles/voyager/{{z}}/{{x}}/{{y}}{{r}}.png',
+    {{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}}).addTo(map);
+  var mkIcon=function(e){{return L.divIcon({{className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]}});}};
+  var venueIco={{bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'}};
+  var attrs={map_attrs_js};
+  var venues={map_venues_js};
+  attrs.forEach(function(a){{
+    L.marker([a.lat,a.lon],{{icon:mkIcon('📍')}}).addTo(map).bindTooltip(a.n);
+  }});
+  venues.forEach(function(v){{
+    var ico=venueIco[v.cat]||'🍺';
+    L.marker([v.lat,v.lon],{{icon:mkIcon(ico)}}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+  }});
+}})();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {{
     btt.classList.toggle('visible', window.scrollY > 400);
@@ -1032,11 +1068,11 @@ def generate_report(city_data):
     )
 
     html = f"""<!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../style.css">
-  <title>Report &amp; Documentazione — EuroCity</title>
+  <title>Report &amp; Documentation — EuroCity</title>
   <style>
     .report-nav {{
       max-width: 950px; margin: 0 auto 0; padding: 18px 20px;
@@ -1157,18 +1193,18 @@ def generate_report(city_data):
 <div style="background:linear-gradient(135deg,#0F172A 0%,#1a2e4a 60%,#1e3a58 100%);
             color:white; padding:40px 24px 50px; text-align:center; border-bottom:4px solid var(--accent);">
   <h1 style="font-size:clamp(1.5rem,3vw,2.4rem);font-weight:800;margin:0 0 8px;letter-spacing:-0.03em;">
-    Report &amp; Documentazione</h1>
+    Report &amp; Documentation</h1>
   <p style="opacity:0.7;font-size:1rem;margin:0;">
-    Statistiche estratte algoritmicamente · Pipeline TEAM · UniBo A.A. 2024/2025</p>
+    Statistics extracted algorithmically · TEAM Pipeline · UniBo A.Y. 2024/2025</p>
 </div>
 
 <nav class="report-nav">
-  <a href="#statistiche">📊 Statistiche</a>
-  <a href="#ranking">🏆 Classifiche</a>
-  <a href="#architettura">⚙️ Architettura</a>
-  <a href="#dtd">📄 Schema DTD</a>
-  <a href="#parsing">🔬 Tecniche di Parsing</a>
-  <a href="#ai">🤖 Utilizzo AI</a>
+  <a href="#statistiche">📊 Statistics</a>
+  <a href="#ranking">🏆 Rankings</a>
+  <a href="#architettura">⚙️ Architecture</a>
+  <a href="#dtd">📄 DTD Schema</a>
+  <a href="#parsing">🔬 Parsing Techniques</a>
+  <a href="#ai">🤖 AI Usage</a>
   <a href="#team">👥 Team</a>
 </nav>
 
