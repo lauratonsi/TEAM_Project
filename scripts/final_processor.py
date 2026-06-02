@@ -156,8 +156,13 @@ def advanced_wiki_cleaner(raw_text):
 
     if len(text) > 3000:
         truncated = text[:3000]
-        last_space = truncated.rfind(' ')
-        text = (truncated[:last_space] + "...") if last_space > 0 else (truncated + "...")
+        # prefer cutting at a sentence boundary
+        last_dot = max(truncated.rfind('. '), truncated.rfind('! '), truncated.rfind('? '))
+        if last_dot > 2000:
+            text = truncated[:last_dot + 1]
+        else:
+            last_space = truncated.rfind(' ')
+            text = (truncated[:last_space] + "...") if last_space > 0 else (truncated + "...")
     return text if len(text) > 10 else ""
 
 
