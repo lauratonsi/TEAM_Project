@@ -14,21 +14,22 @@ INPUT_CSV_WIKI = str(ROOT / 'data' / 'wiki_text_pulito.csv')
 INPUT_CSV_ATTR = str(ROOT / 'data' / 'attrazione_descrizione_fixed.csv')
 INPUT_JSON_DESC = str(ROOT / 'data' / 'city_descriptions.json')
 INPUT_JSON_NIGHTLIFE = str(ROOT / 'data' / 'nightlife.json')
+INPUT_JSON_TRANSPORT_PATCHES = str(ROOT / 'data' / 'transport_patches.json')
 DTD_FILE = str(ROOT / 'data' / 'city_report.dtd')
 OUTPUT_DIR = str(ROOT / 'data' / 'xml_dataset')
 
 MW_NS = 'http://www.mediawiki.org/xml/export-0.11/'
 
 CITY_MAP = {
-    "London": {"it": "Londra", "flag": "🇬🇧"}, "Prague": {"it": "Praga", "flag": "🇨🇿"},
-    "Copenhagen": {"it": "Copenaghen", "flag": "🇩🇰"}, "Warsaw": {"it": "Varsavia", "flag": "🇵🇱"},
-    "Bucharest": {"it": "Bucarest", "flag": "🇷🇴"}, "Stockholm": {"it": "Stoccolma", "flag": "🇸🇪"},
-    "Athens": {"it": "Atene", "flag": "🇬🇷"}, "Berlin": {"it": "Berlino", "flag": "🇩🇪"},
-    "Brussels": {"it": "Bruxelles", "flag": "🇧🇪"}, "Dublin": {"it": "Dublino", "flag": "🇮🇪"},
-    "Lisbon": {"it": "Lisbona", "flag": "🇵🇹"}, "Ljubljana": {"it": "Lubiana", "flag": "🇸🇮"},
-    "Luxembourg": {"it": "Lussemburgo", "flag": "🇱🇺"}, "Paris": {"it": "Parigi", "flag": "🇫🇷"},
-    "Rome": {"it": "Roma", "flag": "🇮🇹"}, "Valletta": {"it": "La Valletta", "flag": "🇲🇹"},
-    "Zagreb": {"it": "Zagabria", "flag": "🇭🇷"}, "Amsterdam": {"it": "Amsterdam", "flag": "🇳🇱"},
+    "London": {"it": "London", "flag": "🇬🇧"}, "Prague": {"it": "Prague", "flag": "🇨🇿"},
+    "Copenhagen": {"it": "Copenhagen", "flag": "🇩🇰"}, "Warsaw": {"it": "Warsaw", "flag": "🇵🇱"},
+    "Bucharest": {"it": "Bucharest", "flag": "🇷🇴"}, "Stockholm": {"it": "Stockholm", "flag": "🇸🇪"},
+    "Athens": {"it": "Athens", "flag": "🇬🇷"}, "Berlin": {"it": "Berlin", "flag": "🇩🇪"},
+    "Brussels": {"it": "Brussels", "flag": "🇧🇪"}, "Dublin": {"it": "Dublin", "flag": "🇮🇪"},
+    "Lisbon": {"it": "Lisbon", "flag": "🇵🇹"}, "Ljubljana": {"it": "Ljubljana", "flag": "🇸🇮"},
+    "Luxembourg": {"it": "Luxembourg", "flag": "🇱🇺"}, "Paris": {"it": "Paris", "flag": "🇫🇷"},
+    "Rome": {"it": "Rome", "flag": "🇮🇹"}, "Valletta": {"it": "Valletta", "flag": "🇲🇹"},
+    "Zagreb": {"it": "Zagreb", "flag": "🇭🇷"}, "Amsterdam": {"it": "Amsterdam", "flag": "🇳🇱"},
     "Vienna": {"it": "Vienna", "flag": "🇦🇹"}, "Madrid": {"it": "Madrid", "flag": "🇪🇸"},
     "Helsinki": {"it": "Helsinki", "flag": "🇫🇮"}, "Oslo": {"it": "Oslo", "flag": "🇳🇴"},
     "Bratislava": {"it": "Bratislava", "flag": "🇸🇰"}, "Budapest": {"it": "Budapest", "flag": "🇭🇺"},
@@ -72,23 +73,8 @@ LANDMARK_IMAGES = {
 }
 
 # Patch transport for cities where CSV extraction failed
-TRANSPORT_PATCH = {
-    "Paris": (
-        "From CDG Airport: RER B to Gare du Nord (35 min) or RoissyBus to Opéra (75 min). "
-        "Within the city: metro (16 lines), buses and RER cover the entire metropolitan area. "
-        "(Source: AI-generated — transport data absent from Wikivoyage dump.)"
-    ),
-    "Brussels": (
-        "Trams are the fastest way to move around the city. "
-        "Buses and trams share the same ticket system and connections are valid for one hour. "
-        "(Source: AI-generated — transport data absent from Wikivoyage dump.)"
-    ),
-    "Luxembourg": (
-        "The best way to get around is via the intercity bus network and the dense road system. "
-        "Trains directly connect the city centre to all major districts. "
-        "(Source: AI-generated — transport data absent from Wikivoyage dump.)"
-    ),
-}
+with open(INPUT_JSON_TRANSPORT_PATCHES, encoding='utf-8') as _f:
+    TRANSPORT_PATCH = json.load(_f)
 
 # District names that are clearly noise (not real city districts)
 _NOISE_DISTRICTS = {

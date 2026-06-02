@@ -3,7 +3,7 @@
 <city_report appeal_score="69.3">
   <metadata>
     <title>Warsaw</title>
-    <name_it>Varsavia</name_it>
+    <name_it>Warsaw</name_it>
     <flag>🇵🇱</flag>
   </metadata>
   <indicators>
@@ -61,23 +61,23 @@
   <districts>
     <district>
       <name>Old and New Town</name>
-      <description>Quartiere di Varsavia.</description>
+      <description>Quartiere di Warsaw.</description>
     </district>
     <district>
       <name>Śródmieście</name>
-      <description>Quartiere di Varsavia.</description>
+      <description>Quartiere di Warsaw.</description>
     </district>
     <district>
       <name>Western Centre</name>
-      <description>Quartiere di Varsavia.</description>
+      <description>Quartiere di Warsaw.</description>
     </district>
     <district>
       <name>Praga</name>
-      <description>Quartiere di Varsavia.</description>
+      <description>Quartiere di Warsaw.</description>
     </district>
     <district>
       <name>South</name>
-      <description>Quartiere di Varsavia.</description>
+      <description>Quartiere di Warsaw.</description>
     </district>
   </districts>
   <description>An extraordinary example of reconstruction and resilience, Warsaw is now a vertical and dynamic metropolis. It combines a growing financial sector with large green spaces and improved urban safety.</description>

@@ -1596,6 +1596,12 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
       </tr>
       <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/transport_patches.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testi trasporto AI per 5 città (Paris, Brussels, Luxembourg, Lisbon, Nicosia)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Generato con AI (Gemini) — testo originale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testo didattico</td>
+      </tr>
+      <tr>
         <td style="padding:8px 12px"><code>data/city_report.dtd</code></td>
         <td style="padding:8px 12px">Schema DTD per la validazione dei file XML</td>
         <td style="padding:8px 12px">Creato originalmente per il progetto</td>

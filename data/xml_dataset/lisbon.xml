@@ -3,7 +3,7 @@
 <city_report appeal_score="63.2">
   <metadata>
     <title>Lisbon</title>
-    <name_it>Lisbona</name_it>
+    <name_it>Lisbon</name_it>
     <flag>🇵🇹</flag>
   </metadata>
   <indicators>
@@ -14,7 +14,7 @@
     <cost_index value="60.5"/>
     <economic_accessibility score="39.5"/>
   </indicators>
-  <transport>La città vanta un trasporto pubblico efficiente: la metropolitana per le lunghe distanze, e i caratteristici tram, essenziali per muoversi tra i ripidi quartieri storici.</transport>
+  <transport>Lisbon has an efficient public transport network: the metro for longer distances, and the iconic trams essential for navigating the hilly districts. Bus lines and the suburban Carris network complete the coverage. (Source: AI-generated — original CSV text was in Italian.)</transport>
   <accommodation>
     <hotel>
       <name>Beira Minho</name>

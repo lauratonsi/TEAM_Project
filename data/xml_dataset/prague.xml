@@ -3,7 +3,7 @@
 <city_report appeal_score="70.0">
   <metadata>
     <title>Prague</title>
-    <name_it>Praga</name_it>
+    <name_it>Prague</name_it>
     <flag>🇨🇿</flag>
   </metadata>
   <indicators>
@@ -61,23 +61,23 @@
   <districts>
     <district>
       <name>Old Town and Josefov</name>
-      <description>Quartiere di Praga.</description>
+      <description>Quartiere di Prague.</description>
     </district>
     <district>
       <name>Castle and Lesser Town</name>
-      <description>Quartiere di Praga.</description>
+      <description>Quartiere di Prague.</description>
     </district>
     <district>
       <name>New Town and Vysehrad</name>
-      <description>Quartiere di Praga.</description>
+      <description>Quartiere di Prague.</description>
     </district>
     <district>
       <name>East bank of Vltava</name>
-      <description>Quartiere di Praga.</description>
+      <description>Quartiere di Prague.</description>
     </district>
     <district>
       <name>West bank of Vltava</name>
-      <description>Quartiere di Praga.</description>
+      <description>Quartiere di Prague.</description>
     </district>
   </districts>
   <description>Keeper of an intact UNESCO heritage, Prague is one of the safest and most accessible cities on the continent. Its public transport system is among the most efficient in Europe, enabling stress-free livability.</description>

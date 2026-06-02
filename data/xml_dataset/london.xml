@@ -3,7 +3,7 @@
 <city_report appeal_score="49.2">
   <metadata>
     <title>London</title>
-    <name_it>Londra</name_it>
+    <name_it>London</name_it>
     <flag>🇬🇧</flag>
   </metadata>
   <indicators>
@@ -65,19 +65,19 @@
     </district>
     <district>
       <name>Westminster</name>
-      <description>Quartiere di Londra.</description>
+      <description>Quartiere di London.</description>
     </district>
     <district>
       <name>Camden</name>
-      <description>Quartiere di Londra.</description>
+      <description>Quartiere di London.</description>
     </district>
     <district>
       <name>Wandsworth</name>
-      <description>Quartiere di Londra.</description>
+      <description>Quartiere di London.</description>
     </district>
     <district>
       <name>Southwark-Lewisham</name>
-      <description>Quartiere di Londra.</description>
+      <description>Quartiere di London.</description>
     </district>
   </districts>
   <description>Global metropolis with inexhaustible economic power, London handles immense tourist flows with cutting-edge security systems. Despite high costs, it remains the hub of innovation and European cultural diversity.</description>
