@@ -126,37 +126,29 @@
 * South <b>Athens</b> - The location of most beaches accessible by public transport. According to mythology, the Greek Gods Poseidon and Athena wanted to claim the city for their own. To persuade the people to accept them, they granted gifts. Poseidon struck his spear into the ground and produced running water. Athena gave the city olive trees, which provide food and economic prosperity through trade. The people were then asked to vote for the Gods, and Athena won by a single vote, resulting in the city bearing her name. The first pre-historic settlements were constructed in 3000 BCE around the hill of Acropolis. According to legend the King of <b>Athens</b>, Theseus, unified the ten tribes of early <b>Athens</b> into one kingdom in around 1230 BCE. This process of synoikismos () – bringing together in one home – created the largest and wealthiest state on the Greek mainland, but it also created a larger class of people excluded from political life by the nobility. By the 7th century BCE, social unrest had become widespread, and the Areopagus appointed Draco to draft a strict new law code (hence "draconian"). Still, the Draconian laws were a big advancement, as they codified crime and punishment unlike the previous arbitrary judgments of the rulers. When Draco's system failed, they appointed Solon, with a mandate to create a new constitution (594 BCE). This was the great beginning of a new social revolution, which was the result of the democracy under Cleisthenes (508 BCE). When Roman historians wrote the history of their own republic, they fudged the date so that their republic would be older than Athenian democracy, but today's scholarly consensus is that Rome "got inspiration" from the Greeks. In the 5th century BCE, <b>Athens</b> reached the peak of its fame.</wiki_intro>
   <landmark_image>assets/images/athens.jpg</landmark_image>
   <nightlife>
-    <venue lat="37.9769161" lon="23.732861">
+    <venue lat="37.9769161" lon="23.732861" category="bar">
       <name>7 Jokers</name>
-      <category>bar</category>
     </venue>
-    <venue lat="37.975977" lon="23.7161799">
+    <venue lat="37.975977" lon="23.7161799" category="bar">
       <name>ACRO bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="37.9831211" lon="23.7366482">
+    <venue lat="37.9831211" lon="23.7366482" category="bar">
       <name>After Dark</name>
-      <category>bar</category>
     </venue>
-    <venue lat="37.9818864" lon="23.7166125">
+    <venue lat="37.9818864" lon="23.7166125" category="bar">
       <name>Alphaville</name>
-      <category>bar</category>
     </venue>
-    <venue lat="37.9969291" lon="23.723771">
+    <venue lat="37.9969291" lon="23.723771" category="bar">
       <name>Amora</name>
-      <category>bar</category>
     </venue>
-    <venue lat="37.9711118" lon="23.7045141">
+    <venue lat="37.9711118" lon="23.7045141" category="nightclub">
       <name>Anodos</name>
-      <category>nightclub</category>
     </venue>
-    <venue lat="37.9742911" lon="23.7316857">
+    <venue lat="37.9742911" lon="23.7316857" category="bar">
       <name>Blue Bird</name>
-      <category>bar</category>
     </venue>
-    <venue lat="37.984424" lon="23.7345382">
+    <venue lat="37.984424" lon="23.7345382" category="bar">
       <name>Box</name>
-      <category>bar</category>
     </venue>
   </nightlife>
 </city_report>

@@ -159,14 +159,54 @@ testo di un distretto come intro della città sarebbe fuorviante).
 <!ELEMENT link (#PCDATA)>
 <!ATTLIST link href CDATA #REQUIRED>
 <!ELEMENT nightlife (venue*)>
-<!ELEMENT venue (name, category)>
-<!ATTLIST venue lat CDATA #IMPLIED lon CDATA #IMPLIED>
-<!ELEMENT category (#PCDATA)>
+<!ELEMENT venue (name)>
+<!ATTLIST venue lat CDATA #REQUIRED lon CDATA #REQUIRED
+                category (bar | pub | nightclub) #REQUIRED>   <!-- attributo enumerato -->
 ```
+
+### Riepilogo degli elementi
+
+| Elemento | Content model | Attributi | Cardinalità / Note |
+|----------|---------------|-----------|--------------------|
+| `city_report` | `metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?` | `appeal_score` *(REQ)* | **radice** |
+| `metadata` | `title, name_it, flag, source_url` | — | 1 |
+| `title` / `name_it` / `flag` | `#PCDATA` | — | nome EN / nome IT / emoji bandiera |
+| `source_url` | `#PCDATA` | — | URI canonico → `itemid` microdata |
+| `indicators` | `hotel_count, hotel_price, safety, environment, cost_index, economic_accessibility` | — | 1 |
+| `hotel_count` / `hotel_price` | `#PCDATA` | — | numerici (testo) |
+| `safety` | `EMPTY` | `index_score` *(REQ)* | indice 0–100 |
+| `environment` | `EMPTY` | `green_score` *(REQ)* | indice 0–100 |
+| `cost_index` | `EMPTY` | `value` *(REQ)* | costo della vita |
+| `economic_accessibility` | `EMPTY` | `score` *(REQ)* | 100 − costo |
+| `transport` | `(#PCDATA \| b \| i \| link)*` | — | **content-model misto** |
+| `accommodation` | `hotel*` | — | può essere vuoto (12 città senza hotel) |
+| `hotel` | `name, price` | — | 0+ |
+| `price` | `#PCDATA` | — | €/notte |
+| `highlights` | `attraction*` | — | — |
+| `attraction` | `name, description` | `lat` *(REQ)*, `lon` *(REQ)* | geolocalizzata su mappa |
+| `districts` | `district*` | — | **opzionale** (19/30) |
+| `district` | `name, description` | — | 0+ |
+| `name` | `#PCDATA` | — | condiviso (hotel/attraction/district/venue) |
+| `description` | `(#PCDATA \| b \| i \| link)*` | — | **misto**; condiviso (città/attraction/district) |
+| `wiki_intro` | `(#PCDATA \| b \| i \| link)*` | — | **opzionale**, misto (29/30) |
+| `landmark_image` | `#PCDATA` | — | opzionale, URL immagine |
+| `b` / `i` | `#PCDATA` | — | inline (grassetto / corsivo) |
+| `link` | `#PCDATA` | `href` *(REQ)* | inline (collegamento) |
+| `nightlife` | `venue*` | — | **opzionale** |
+| `venue` | `name` | `lat` *(REQ)*, `lon` *(REQ)*, `category` *(REQ)* | geolocalizzata; `category` **enumerato** `(bar \| pub \| nightclub)` |
+
+*(REQ) = `#REQUIRED`; `?` = opzionale; `*` = zero o più; gli elementi `EMPTY` portano il dato in un attributo.*
 
 **Content-model misto.** I campi `transport`, `description` e `wiki_intro` non sono solo
 testo: contengono markup inline (`<b>`, `<i>`, `<link href>`) interlacciato al testo —
 il content-model misto richiesto dal progetto (es. `<b>Roma</b> ... (<i>Trastevere</i>)`).
+
+**Scelte di obbligatorietà.** Gli attributi geografici di `attraction` e `venue` sono
+`#REQUIRED` perché entrambi gli elementi sono posizionati sulla mappa (senza coordinate non
+sarebbero collocabili); `hotel`, che compare solo in elenco, non ha coordinate. Gli elementi
+`districts?`, `wiki_intro?`, `landmark_image?` e `nightlife?` sono opzionali perché il dato
+non è sempre disponibile nelle fonti; `accommodation` è invece sempre presente ma con
+`hotel*` (zero o più), così le città senza hotel restano valide.
 
 **Validazione.** Tutti i 30 file XML superano la validazione DTD, eseguita con
 `lxml.etree.DTD` in **tre punti**: in scrittura (`final_processor.py`), in lettura

@@ -98,37 +98,29 @@
   <wiki_intro><b>Tallinn</b> is Estonia's capital and largest city. <b>Tallinn</b> is an important port of the Baltic Sea, with the busy passenger section of the port reaching the foothill of the picturesque medieval Old Town, which has been astonishingly well preserved and is a since 1997.  On the shore of the Gulf of Finland, it is a city of over 450,000 inhabitants (2023). It is home to a third of the country's population, and is also the capital of Harju County in Northern Estonia. In a striking contrast to its Old Town, its immediate outskirts are filled with a cluster of modern office towers, with intermittent architectural monuments to the Soviet era. Further out, you will find a bewildering variety of historic and modern neighbourhoods, religious, civic, industrial and maritime heritage. This all provides for the city seeing very sizeable tourist traffic given its size, which in turn means the infrastructure is robust and extensive. <b>Tallinn</b> is a historic city dating back to medieval times. The first fortress on Toompea was built around 1050 and <b>Tallinn</b> was possibly first recorded on a world map in 1154. In 1219, the city was conquered by Valdemar II of Denmark and it became a member of the Hanseatic League in 1285. The city, known as Reval at the time, prospered as a trading town in the 14th century, and much of <b>Tallinn</b>'s historic centre was built at this time. <b>Tallinn</b> then became a pawn in the geopolitical games of its big neighbours, passing into Swedish hands in 1561 and then to the Russian Empire under Peter the Great in 1710. By World War I and the ensuing brief Estonian independence (starting 1918) <b>Tallinn</b>'s population had reached 150,000. Estonia was occupied by the Soviet Union in 1940, conquered by Nazi Germany (1941–44), and then retaken by the Soviets. In World War II, the city was quite extensively bombed by the Soviets, although luckily the medieval town survived. The Soviet Union undertook a program of massive East Slavic migration, and just over 40% of <b>Tallinn</b>'s current inhabitants are Slavic (compared to an average of 28% for the entire country). On 20 August 1991, Estonia declared independence and <b>Tallinn</b> became its capital once again. Today <b>Tallinn</b> is a bustling, gleaming city. However, among the tall glassy buildings and corporate headquarters, <b>Tallinn</b> retains an inner charm seldom found elsewhere.</wiki_intro>
   <landmark_image>assets/images/tallinn.jpg</landmark_image>
   <nightlife>
-    <venue lat="59.4358937" lon="24.747503">
+    <venue lat="59.4358937" lon="24.747503" category="bar">
       <name>Baila</name>
-      <category>bar</category>
     </venue>
-    <venue lat="59.408641" lon="24.6746628">
+    <venue lat="59.408641" lon="24.6746628" category="bar">
       <name>Black Mount Pubi</name>
-      <category>bar</category>
     </venue>
-    <venue lat="59.4388359" lon="24.7439968">
+    <venue lat="59.4388359" lon="24.7439968" category="bar">
       <name>Borsi</name>
-      <category>bar</category>
     </venue>
-    <venue lat="59.4376116" lon="24.7518225">
+    <venue lat="59.4376116" lon="24.7518225" category="bar">
       <name>Butterfly Lounge</name>
-      <category>bar</category>
     </venue>
-    <venue lat="59.4351515" lon="24.7455099">
+    <venue lat="59.4351515" lon="24.7455099" category="nightclub">
       <name>Club Hollywood</name>
-      <category>nightclub</category>
     </venue>
-    <venue lat="59.4354098" lon="24.7474924">
+    <venue lat="59.4354098" lon="24.7474924" category="nightclub">
       <name>Club Münt</name>
-      <category>nightclub</category>
     </venue>
-    <venue lat="59.4352764" lon="24.7323042">
+    <venue lat="59.4352764" lon="24.7323042" category="bar">
       <name>Cubano Baar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="59.4375887" lon="24.744038">
+    <venue lat="59.4375887" lon="24.744038" category="pub">
       <name>DM Baar</name>
-      <category>pub</category>
     </venue>
   </nightlife>
 </city_report>

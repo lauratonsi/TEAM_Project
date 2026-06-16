@@ -87,37 +87,29 @@
 * *  Over 20 airlines operate service to/from <b>Sofia</b>, with direct flights to/from Athens, Paris, Vienna, London, Rome, Amsterdam, Munich, Warsaw and other European cities. There are also domestic flights from Varna and Burgas. Along with traditional carriers, some low-cost companies serving Bulgaria are EasyJet (to/from London-Gatwick, Madrid, Manchester) and Wizz Air (to/from Paris-Beauvais, Barcelona, Brussels-Charleroi, Dortmund, Eindhoven, London-Luton, Milan-Bergamo, Rome-Fiumicino, Valencia) and RyanAir.</wiki_intro>
   <landmark_image>assets/images/sofia.jpg</landmark_image>
   <nightlife>
-    <venue lat="42.647392" lon="23.3725373">
+    <venue lat="42.647392" lon="23.3725373" category="bar">
       <name>120ска</name>
-      <category>bar</category>
     </venue>
-    <venue lat="42.6862595" lon="23.3220992">
+    <venue lat="42.6862595" lon="23.3220992" category="bar">
       <name>3 oz. bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="42.6900767" lon="23.3204954">
+    <venue lat="42.6900767" lon="23.3204954" category="pub">
       <name>Ale House</name>
-      <category>pub</category>
     </venue>
-    <venue lat="42.6902288" lon="23.3393279">
+    <venue lat="42.6902288" lon="23.3393279" category="bar">
       <name>Art Club</name>
-      <category>bar</category>
     </venue>
-    <venue lat="42.6940747" lon="23.3186521">
+    <venue lat="42.6940747" lon="23.3186521" category="bar">
       <name>Baskerville</name>
-      <category>bar</category>
     </venue>
-    <venue lat="42.6913226" lon="23.3205792">
+    <venue lat="42.6913226" lon="23.3205792" category="bar">
       <name>Caligo</name>
-      <category>bar</category>
     </venue>
-    <venue lat="42.6869936" lon="23.2395698">
+    <venue lat="42.6869936" lon="23.2395698" category="bar">
       <name>Club 303</name>
-      <category>bar</category>
     </venue>
-    <venue lat="42.6946385" lon="23.3190705">
+    <venue lat="42.6946385" lon="23.3190705" category="bar">
       <name>Coda</name>
-      <category>bar</category>
     </venue>
   </nightlife>
 </city_report>

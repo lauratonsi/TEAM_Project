@@ -86,37 +86,29 @@
 * You can also order a taxi, Bolt or Uber. A ride from the airport to the city center can cost from . Five trains a day run from Ljubljana, taking 2 hr 30 min via Zidani Most and the border at Dobova. Two of these start from Villach (4-5 hr). Tickets cannot be purchased online; they can only be purchased at the station. Second-class tickets are for €9, but first-class is also available. From Zurich, Munich or Vienna change at Villach. From Budapest change at Graz and Zidani Most.  Domestic trains are slow. Two per day are from Rijeka (one direct, one with a change), taking 5 hours via just about every intervening village with a j or v in its name. One train a day from Split takes 8 hours. Three per day run from Hrvatska Kostajnica, taking 1 hr 40 min. Local trains fan out to Harmica, Ivanić-Grad, Koprivnica, Novoselec, Ogulin, Savski Marof, Sisak Caprag, Vinkovci, Virovitica and Zabok.  See Croatia Railways for timetables and tickets. Trains no longer cross the border to Sarajevo in Bosnia. The work-around rail route is to take the train from <b>Zagreb</b> main station at 09:00 to Hrvatska Kostajnica, arriving by 10:45. This is 3 km from the Bosnian border crossing, either take a taxi, or walk south into town then east and cross the river by the first bridge. Once you've entered Bosnia, find a taxi to Banja Luka, 100 km southeast and taking 90 min. You'll reach Banja Luka in time for the 15:45 local train to Sarajevo via Zenica, arriving by 20:40. Or take the direct bus from <b>Zagreb</b> to Banja Luka.</wiki_intro>
   <landmark_image>assets/images/zagreb.jpg</landmark_image>
   <nightlife>
-    <venue lat="45.8074304" lon="15.9841948">
+    <venue lat="45.8074304" lon="15.9841948" category="bar">
       <name>&amp;amp; More by Sheraton bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="45.8007542" lon="15.9723829">
+    <venue lat="45.8007542" lon="15.9723829" category="bar">
       <name>808 bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="45.7872642" lon="15.9529793">
+    <venue lat="45.7872642" lon="15.9529793" category="bar">
       <name>A most unusual garden</name>
-      <category>bar</category>
     </venue>
-    <venue lat="45.7859116" lon="15.9528122">
+    <venue lat="45.7859116" lon="15.9528122" category="bar">
       <name>Absolut bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="45.7957109" lon="15.9000845">
+    <venue lat="45.7957109" lon="15.9000845" category="bar">
       <name>After Eight</name>
-      <category>bar</category>
     </venue>
-    <venue lat="45.8088727" lon="15.9973586">
+    <venue lat="45.8088727" lon="15.9973586" category="bar">
       <name>Akunbar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="45.8077358" lon="15.9965759">
+    <venue lat="45.8077358" lon="15.9965759" category="pub">
       <name>Ambasada</name>
-      <category>pub</category>
     </venue>
-    <venue lat="45.7961008" lon="15.9697694">
+    <venue lat="45.7961008" lon="15.9697694" category="pub">
       <name>Anera</name>
-      <category>pub</category>
     </venue>
   </nightlife>
 </city_report>

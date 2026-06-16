@@ -52,7 +52,9 @@
 <!ATTLIST link href CDATA #REQUIRED>
 
 <!ELEMENT nightlife (venue*)>
-<!ELEMENT venue (name, category)>
-<!ATTLIST venue lat CDATA #IMPLIED
-               lon CDATA #IMPLIED>
-<!ELEMENT category (#PCDATA)>
+<!ELEMENT venue (name)>
+<!-- lat/lon obbligatorie: ogni venue è geolocalizzata sulla mappa.
+     category è un attributo ENUMERATO: solo questi tre valori sono ammessi. -->
+<!ATTLIST venue lat CDATA #REQUIRED
+               lon CDATA #REQUIRED
+               category (bar | pub | nightclub) #REQUIRED>

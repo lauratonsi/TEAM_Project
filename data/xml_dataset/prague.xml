@@ -85,37 +85,29 @@
   <wiki_intro><b>Prague</b> (Czech: Praha) is the capital and largest city of the Czech Republic. The city's historic buildings and narrow, winding streets are testament to its centuries-old role as capital of the historic region of Bohemia. <b>Prague</b> lies on the banks of the beautiful, meandering Vltava River that reflects the city's golden spires and 9th century castle that dominates the skyline. This historic atmosphere is combined with a certain quirkiness that embraces the entire city. From the Museum of Czech Cubism to the technicolour Jubilee Synagogue; the castle to the river, <b>Prague</b> is a Bohemian capital in every sense. Several incompatible district systems dating from different historical periods are used in <b>Prague</b>, for various purposes – at least three schemes. Making things worse, a given district name can be used in all the systems, but with different meanings. In this guide, a simplified version of the "old" district system is used. Under this system, <b>Prague</b> is divided into ten numbered districts (Praha 1 through Praha 10). Its advantage is that it is used on street signs and house numbers throughout the city, so you can always easily determine which "old" district you are in. If you encounter a district number higher than 10, a different system is being used. For example, Praha 13 is part of the "old" Praha 5 district.  Praha 1 is the oldest part of the city, the original 'Town of <b>Prague</b>', and has by far the largest number of attractions. Praha 2 also contains important historic areas. In this central area, the "old" district system (or any of the newer systems) is too crude to be practical, and a finer division is needed. Traditional city "quarters" provide such a division. Their disadvantage is that they are somewhat incompatible with the modern district systems – although "quarters" are smaller than the "old" system districts, a single quarter can belong to two or even more districts. The advantage is that these central quarters are well known and widely used and identical to the homonymous cadastral areas shown on the street and house number signs along with the "old" district designation, allowing easy orientation. Buildings in bigger cities in the Czech Republic are marked with two numbers, one blue and one red. The blue ones are the orientation numbers – it is the ordinal number of the building on its street. Historically these numbers always started from the end of the street which is closer to a river. The red numbers are related to the house register of the entire district (for example, Staré Město), and thus usually correspond to the order in which the buildings in that district were constructed. Most people do not remember them; if somebody refers to "Dlouhá street, number 8", they will usually mean the blue number. Red numbers usually have 3 or more digits. This city of bridges, cathedrals, gold-tipped towers and church domes, has mirrored on the surface of the swan-filled Vltava river for more than ten centuries.</wiki_intro>
   <landmark_image>assets/images/prague.jpg</landmark_image>
   <nightlife>
-    <venue lat="50.0874351" lon="14.4193478">
+    <venue lat="50.0874351" lon="14.4193478" category="bar">
       <name>Absintherie Franz Kafka</name>
-      <category>bar</category>
     </venue>
-    <venue lat="50.0824881" lon="14.444303">
+    <venue lat="50.0824881" lon="14.444303" category="pub">
       <name>Belzepub</name>
-      <category>pub</category>
     </venue>
-    <venue lat="50.0747455" lon="14.431049">
+    <venue lat="50.0747455" lon="14.431049" category="bar">
       <name>Ber.lin Bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="50.0842199" lon="14.4142283">
+    <venue lat="50.0842199" lon="14.4142283" category="bar">
       <name>Café-Bar Duende</name>
-      <category>bar</category>
     </venue>
-    <venue lat="50.0999349" lon="14.4879307">
+    <venue lat="50.0999349" lon="14.4879307" category="pub">
       <name>Club Montana</name>
-      <category>pub</category>
     </venue>
-    <venue lat="50.0804853" lon="14.405884">
+    <venue lat="50.0804853" lon="14.405884" category="bar">
       <name>Craft Beer Spot</name>
-      <category>bar</category>
     </venue>
-    <venue lat="50.0862561" lon="14.4416022">
+    <venue lat="50.0862561" lon="14.4416022" category="bar">
       <name>District 3 Bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="50.086847" lon="14.3760312">
+    <venue lat="50.086847" lon="14.3760312" category="pub">
       <name>Hostinec "u Anduly"</name>
-      <category>pub</category>
     </venue>
   </nightlife>
 </city_report>

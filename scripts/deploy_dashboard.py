@@ -501,7 +501,7 @@ def deploy():
                     for d in root.xpath(".//district")
                 ],
                 'nightlife': [
-                    {'n': v.findtext('name', ''), 'cat': v.findtext('category', 'bar'), 'lat': v.get('lat', ''), 'lon': v.get('lon', '')}
+                    {'n': v.findtext('name', ''), 'cat': v.get('category', 'bar'), 'lat': v.get('lat', ''), 'lon': v.get('lon', '')}
                     for v in root.xpath(".//venue")
                 ],
                 'landmark_image': root.findtext("landmark_image") or "",

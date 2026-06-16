@@ -518,17 +518,24 @@ def run_pipeline():
             etree.SubElement(root, "landmark_image").text = landmark
 
         # --- nightlife (from Overpass API, optional) ---
-        venues = nightlife_data.get(name, [])
+        # Only geolocated venues are kept: lat/lon are #REQUIRED in the DTD because
+        # every venue is plotted on the map (no coordinates → not placeable).
+        venues = [
+            v for v in nightlife_data.get(name, [])
+            if str(v.get("lat", "")).strip() and str(v.get("lon", "")).strip()
+        ]
         if venues:
             nl_el = etree.SubElement(root, "nightlife")
             for v in venues:
+                # category è un attributo enumerato nel DTD: vincola ai valori ammessi
+                cat = v["category"] if v["category"] in ("bar", "pub", "nightclub") else "bar"
                 venue_el = etree.SubElement(
                     nl_el, "venue",
-                    lat=str(v.get("lat", "")),
-                    lon=str(v.get("lon", ""))
+                    lat=str(v["lat"]),
+                    lon=str(v["lon"]),
+                    category=cat
                 )
                 etree.SubElement(venue_el, "name").text = clean_xml_text(v["name"])
-                etree.SubElement(venue_el, "category").text = clean_xml_text(v["category"])
 
         # --- DTD validation and output ---
         if dtd.validate(root):

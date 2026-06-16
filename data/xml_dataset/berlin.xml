@@ -106,37 +106,29 @@
   <wiki_intro><b>Berlin</b> is Germany's capital and largest city. Within the city limits, <b>Berlin</b> in 2022 had a population of 3.7 million. <b>Berlin</b> is coming into its own again as a cosmopolitan capital of one of Europe's wealthiest nations. "Arm aber sexy" (poor but sexy), as a former mayor would have it, <b>Berlin</b> attracts young people, students, and a creative bohème like few other cities in the world. With architectural heritage from Prussian monarchism, Nazism, East German communism and Potsdamer Platz, filled with 1990s- and 2000s-style glass palaces after having been a "blank canvas" due to the wall, <b>Berlin</b>'s architecture is as varied as its neighbourhoods and its people. And due to its long history as a cosmopolitan capital, it has attracted immigrants from all over the world for more than 300 years now, who continue to leave their own marks on the city. <b>Berlin</b> is home to world-renowned universities, orchestras, museums, and entertainment venues. It hosts many sporting events. Its Zoological Garden is the most visited zoo in Europe and one of the most popular worldwide. The city is well known for its festivals, nightlife, contemporary arts, and a very high quality of living. <b>Berlin</b> can be seen as a cluster of centres. While Mitte might be thought of as the core of the city, it's often not where local's lives revolve around. <b>Berlin</b> has many boroughs (<i>Bezirke</i>), and each borough is composed of several localities (Kiez or Viertel) &amp;amp;mdash; each of these boroughs and localities has a unique style. Some boroughs of <b>Berlin</b> are more worthy of a visitor's attention than others. Almost all of them have everything that you might need for daily life a short walk from your lodging, and easy access to a metro station. <b>Berlin</b> used to be divided into 23 boroughs, and these boroughs are used in Wikivoyage as they remain foremost in popular conceptions of the city and are useful for visitors to know. In 2001, the number of boroughs was reduced from 23 to 12 for administrative purposes—mostly by merging old boroughs—sometimes across what was the inner-<b>Berlin</b> border. The boroughs can roughly be grouped into eight districts: The city of <b>Berlin</b> is co-extensive with the Land of <b>Berlin</b>, one of the 16 federal states that make up the Federal Republic of Germany. It has a population of 3.8 million (2019) (and a million more in suburbs like Potsdam across the state line in Brandenburg). <b>Berlin</b> is and has been far less dominant as the capital of Germany than London, Paris or Madrid are in their respective countries, because of the federal nature of Germany and because the havoc war and partition wreaked on the city. In many ways, West <b>Berlin</b> was in some ways forgotten by West Germany, given that it was located as an enclave inside of the DDR, and would be immediately lost if hostilities were to break out between NATO and the Warsaw Pact.</wiki_intro>
   <landmark_image>assets/images/berlin.jpg</landmark_image>
   <nightlife>
-    <venue lat="52.56382" lon="13.328849">
+    <venue lat="52.56382" lon="13.328849" category="bar">
       <name>Albert's</name>
-      <category>bar</category>
     </venue>
-    <venue lat="52.5232268" lon="13.4164254">
+    <venue lat="52.5232268" lon="13.4164254" category="nightclub">
       <name>ASeven Club</name>
-      <category>nightclub</category>
     </venue>
-    <venue lat="52.547659" lon="13.4887104">
+    <venue lat="52.547659" lon="13.4887104" category="bar">
       <name>Bar im Wasserturm</name>
-      <category>bar</category>
     </venue>
-    <venue lat="52.4927208" lon="13.4217007">
+    <venue lat="52.4927208" lon="13.4217007" category="pub">
       <name>Bei Schlawinchen</name>
-      <category>pub</category>
     </venue>
-    <venue lat="52.512055" lon="13.3918753">
+    <venue lat="52.512055" lon="13.3918753" category="bar">
       <name>Bellboy Berlin</name>
-      <category>bar</category>
     </venue>
-    <venue lat="52.5511652" lon="13.4043646">
+    <venue lat="52.5511652" lon="13.4043646" category="pub">
       <name>Blaumilchkanal</name>
-      <category>pub</category>
     </venue>
-    <venue lat="52.5127422" lon="13.458706">
+    <venue lat="52.5127422" lon="13.458706" category="bar">
       <name>booze bar berlin</name>
-      <category>bar</category>
     </venue>
-    <venue lat="52.5700374" lon="13.3221149">
+    <venue lat="52.5700374" lon="13.3221149" category="pub">
       <name>Bären-Eck</name>
-      <category>pub</category>
     </venue>
   </nightlife>
 </city_report>

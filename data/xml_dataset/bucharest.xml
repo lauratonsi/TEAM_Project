@@ -87,37 +87,29 @@
 * By bus – The Express Bus is usually the best option, as it is inexpensive (50–90 minutes ride) and runs frequently. However, it can get crowded (and it lacks space for luggage) and can get snarled in traffic. The airport bus stop is straight outside Arrivals on the ground floor.</wiki_intro>
   <landmark_image>assets/images/bucharest.jpg</landmark_image>
   <nightlife>
-    <venue lat="44.4421391" lon="26.0944235">
+    <venue lat="44.4421391" lon="26.0944235" category="bar">
       <name>112 Bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="44.4307357" lon="26.1018712">
+    <venue lat="44.4307357" lon="26.1018712" category="bar">
       <name>1974 Niște Domni și Fiii</name>
-      <category>bar</category>
     </venue>
-    <venue lat="44.4449566" lon="26.0962978">
+    <venue lat="44.4449566" lon="26.0962978" category="pub">
       <name>1UP Gamers Pub</name>
-      <category>pub</category>
     </venue>
-    <venue lat="44.4300616" lon="26.0973551">
+    <venue lat="44.4300616" lon="26.0973551" category="bar">
       <name>Abel's Wine Bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="44.4306672" lon="26.1013188">
+    <venue lat="44.4306672" lon="26.1013188" category="nightclub">
       <name>Agartha Club</name>
-      <category>nightclub</category>
     </venue>
-    <venue lat="44.4476748" lon="26.1060993">
+    <venue lat="44.4476748" lon="26.1060993" category="bar">
       <name>Alan Dala</name>
-      <category>bar</category>
     </venue>
-    <venue lat="44.4130209" lon="26.1688469">
+    <venue lat="44.4130209" lon="26.1688469" category="bar">
       <name>Alexa</name>
-      <category>bar</category>
     </venue>
-    <venue lat="44.4312812" lon="26.0999145">
+    <venue lat="44.4312812" lon="26.0999145" category="bar">
       <name>Altfel</name>
-      <category>bar</category>
     </venue>
   </nightlife>
 </city_report>

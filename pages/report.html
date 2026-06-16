@@ -441,10 +441,12 @@ for filename in files:                                  # scorre la directory XM
 &lt;!ATTLIST link href CDATA #REQUIRED&gt;
 
 &lt;!ELEMENT nightlife (venue*)&gt;
-&lt;!ELEMENT venue (name, category)&gt;
-&lt;!ATTLIST venue lat CDATA #IMPLIED
-               lon CDATA #IMPLIED&gt;
-&lt;!ELEMENT category (#PCDATA)&gt;</pre>
+&lt;!ELEMENT venue (name)&gt;
+&lt;!-- lat/lon obbligatorie: ogni venue è geolocalizzata sulla mappa.
+     category è un attributo ENUMERATO: solo questi tre valori sono ammessi. --&gt;
+&lt;!ATTLIST venue lat CDATA #REQUIRED
+               lon CDATA #REQUIRED
+               category (bar | pub | nightclub) #REQUIRED&gt;</pre>
 </section>
 
 <!-- ===== PARSING ===== -->

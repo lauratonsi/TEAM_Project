@@ -85,37 +85,29 @@
   <wiki_intro><b>Madrid</b> is Spain's capital and largest city. A city that has been marked by Spain's varied and tumultuous history, <b>Madrid</b> has some of Europe's most impressive cultural and architectural heritage, which includes grand avenues, plazas, buildings and monuments, world-class art galleries and museums, highly popular football teams, and cultural events of international fame for everyone. <b>Madrid</b> is also renowned for gastronomic delights and a nightlife lasting up until dawn. <b>Madrid</b> is more often than not disregarded by tourists who gravitate to other parts of the country. But though it may appear to lack some of the breathtaking architecture of Barcelona, the frenetic energy of London and Berlin, or the flair of Paris and Rome, <b>Madrid</b> is a massive treasure chest that has something for those who are willing to get off the beaten tourist tracks. It might not be the most sought-after city, but those who seek out what <b>Madrid</b> has to offer will discover a city of unexpected beauty.  <b>Madrid</b> has over 3.4 million residents within the city limits and 7 million people live in the autonomous Community of <b>Madrid</b> region (as of 2025). <b>Madrid</b> is just northeast of the geographical centre of the Iberian Peninsula, in the middle of the Spanish central Castillian plateau (Meseta central), at an average altitude of . Nearly all of the most famous tourist areas are in the centre of the city including Puerta del Sol, Plaza Mayor, Palacio Real, and Plaza de Colón. The major streets in <b>Madrid</b> include the Gran Via, Alcalá Street, and Paseo de la Castellana. The climate of <b>Madrid</b> is continental, mainly dry and quite extreme at times. <b>Madrid</b> experiences a characteristically hot and dry summer, along with a fairly cold winter with frequent frosts during the night and occasional snowfalls. Spring and autumn are generally mild with the most rainfall concentrated in these seasons. Spring and autumn are definitely the best times to visit, especially the months of April, May, June, September and October. There is very little rainfall during summer and also less rainfall during winter. During winter, snow occurs sporadically; however, snow usually lasts only for a few days, but there is abundant snowfall in the adjacent mountain ranges nearby. <b>Madrid</b> is a city that goes back to the Spanish Muslims, but virtually nothing of <b>Madrid</b> before the Reconquista is left. A few historic city walls have been archeologically preserved but <b>Madrid</b> was by far overshadowed by Toledo (Roman Toletum) until the early modern era. To give just one example, construction on <b>Madrid</b> Cathedral did not start until the late 19th century, and only finished in the 1990s, as the archbishop of Toledo did not want to relinquish episcopal power, and the monarchs had moved the capital in part precisely to escape the power of Toledo's archbishop. The culture of <b>Madrid</b> was dominated by its royal history, centre of the Spanish Empire.</wiki_intro>
   <landmark_image>assets/images/madrid.jpg</landmark_image>
   <nightlife>
-    <venue lat="40.4130638" lon="-3.7129344">
+    <venue lat="40.4130638" lon="-3.7129344" category="bar">
       <name>Bar Barocco</name>
-      <category>bar</category>
     </venue>
-    <venue lat="40.4039506" lon="-3.7014278">
+    <venue lat="40.4039506" lon="-3.7014278" category="pub">
       <name>Bar Díaz</name>
-      <category>pub</category>
     </venue>
-    <venue lat="40.4048223" lon="-3.6960055">
+    <venue lat="40.4048223" lon="-3.6960055" category="pub">
       <name>Bar la familia</name>
-      <category>pub</category>
     </venue>
-    <venue lat="40.4041585" lon="-3.6959215">
+    <venue lat="40.4041585" lon="-3.6959215" category="pub">
       <name>Bar Teide</name>
-      <category>pub</category>
     </venue>
-    <venue lat="40.4097328" lon="-3.7010866">
+    <venue lat="40.4097328" lon="-3.7010866" category="pub">
       <name>Café Melo's</name>
-      <category>pub</category>
     </venue>
-    <venue lat="40.4108575" lon="-3.6957127">
+    <venue lat="40.4108575" lon="-3.6957127" category="pub">
       <name>Casablanca</name>
-      <category>pub</category>
     </venue>
-    <venue lat="40.4118925" lon="-3.7109337">
+    <venue lat="40.4118925" lon="-3.7109337" category="pub">
       <name>Cervecería San Andrés</name>
-      <category>pub</category>
     </venue>
-    <venue lat="40.4192413" lon="-3.7074836">
+    <venue lat="40.4192413" lon="-3.7074836" category="pub">
       <name>Cervercería Erte</name>
-      <category>pub</category>
     </venue>
   </nightlife>
 </city_report>

@@ -84,37 +84,29 @@
   <description>Elite financial center, <b>Luxembourg</b> offers free public transport and one of the highest safety levels in the world. It is the paradigm of the wealthy capital that invests massively in its residents' well-being.</description>
   <landmark_image>assets/images/luxembourg.jpg</landmark_image>
   <nightlife>
-    <venue lat="49.6017703" lon="6.1365904">
+    <venue lat="49.6017703" lon="6.1365904" category="bar">
       <name>:buvette</name>
-      <category>bar</category>
     </venue>
-    <venue lat="49.5977436" lon="6.1348685">
+    <venue lat="49.5977436" lon="6.1348685" category="pub">
       <name>Albicastrense</name>
-      <category>pub</category>
     </venue>
-    <venue lat="49.6038566" lon="6.1298819">
+    <venue lat="49.6038566" lon="6.1298819" category="pub">
       <name>Alison café</name>
-      <category>pub</category>
     </venue>
-    <venue lat="49.594574" lon="6.1407228">
+    <venue lat="49.594574" lon="6.1407228" category="pub">
       <name>Am klenge Bistro BTwo</name>
-      <category>pub</category>
     </venue>
-    <venue lat="49.6113179" lon="6.1337032">
+    <venue lat="49.6113179" lon="6.1337032" category="pub">
       <name>Art Scène</name>
-      <category>pub</category>
     </venue>
-    <venue lat="49.595316" lon="6.1374921">
+    <venue lat="49.595316" lon="6.1374921" category="pub">
       <name>Au Bon Vivant</name>
-      <category>pub</category>
     </venue>
-    <venue lat="49.6238045" lon="6.1054447">
+    <venue lat="49.6238045" lon="6.1054447" category="pub">
       <name>Bar Liberty</name>
-      <category>pub</category>
     </venue>
-    <venue lat="49.6008067" lon="6.130821">
+    <venue lat="49.6008067" lon="6.130821" category="pub">
       <name>Barbarella</name>
-      <category>pub</category>
     </venue>
   </nightlife>
 </city_report>

@@ -85,37 +85,29 @@
   <wiki_intro>Vibrant and truly multicultural, <b>London</b> is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South-East England. Greater <b>London</b> has a population of a little over 9 million. Considered one of the world's leading "global cities", <b>London</b> remains an international capital of culture, music, education, fashion, politics, finance and trade.  For the visitor, there is a seemingly endless choice of historical sites, shopping, museums, food, art galleries, nightlife, and activities. Once a Celtic settlement, <b>London</b> is a bustling city, where visitors come to experience the urban heritage and see its specific royal-themed attractions. The name "<b>London</b>" used to refer only to the once-walled "Square Mile" of the original Roman and later medieval city; this is now confusingly called the "City of <b>London</b>" or just "The City". Today, <b>London</b> has taken on a much larger meaning to include all of the vast central parts of the modern metropolis, with the city having absorbed numerous surrounding towns and villages over the centuries, including large portions of the surrounding "home counties", one of which - Middlesex - being completely consumed by the growing metropolis. The term Greater <b>London</b> embraces Central <b>London</b> together with all the outlying suburbs that lie in one continuous urban sprawl within the lower Thames Valley. Though densely populated, <b>London</b> retains large swathes of green parkland and open space, even within the city centre. Greater <b>London</b> is most of the area surrounded by the M25 orbital motorway, and consists of 32 <b>London</b> Boroughs and the City of <b>London</b> that, together with the office of the Mayor of <b>London</b>, form the basis for <b>London</b>'s local government. The Mayor of <b>London</b> is elected by <b>London</b> residents and should not be confused with the Lord Mayor of the City of <b>London</b>. The names of several boroughs, such as Westminster and Camden, are well-known, others less so, such as Wandsworth and Lewisham. This traveller's guide to <b>London</b> recognises cultural, functional and social districts of varying type and size: Settlements have existed on the site of <b>London</b> since well before Roman times, with evidence of Bronze Age and Celtic inhabitants. The Roman city of Londinium, established just after the Roman conquest of Britannia in the year 43, formed the basis for the modern city (some isolated Roman period remains are still to be seen within the City). After the end of Roman rule in 410 and a short-lived decline, <b>London</b> experienced a gradual revival under the Anglo-Saxons, as well as the Norsemen, and emerged as a great medieval trading city, eventually replacing Winchester as the royal capital of England. This paramount status for <b>London</b> was confirmed when William the Conqueror, a Norman, built the Tower of <b>London</b> after the conquest in 1066 and was crowned King of England in Westminster.</wiki_intro>
   <landmark_image>assets/images/london.jpg</landmark_image>
   <nightlife>
-    <venue lat="51.5167141" lon="-0.1103638">
+    <venue lat="51.5167141" lon="-0.1103638" category="pub">
       <name>26 Furnival Street</name>
-      <category>pub</category>
     </venue>
-    <venue lat="51.5566538" lon="-0.1383959">
+    <venue lat="51.5566538" lon="-0.1383959" category="pub">
       <name>Aces and Eights Saloon Bar</name>
-      <category>pub</category>
     </venue>
-    <venue lat="51.5163376" lon="-0.119321">
+    <venue lat="51.5163376" lon="-0.119321" category="bar">
       <name>All Bar One</name>
-      <category>bar</category>
     </venue>
-    <venue lat="51.4695231" lon="-0.0698846">
+    <venue lat="51.4695231" lon="-0.0698846" category="bar">
       <name>Bar Story</name>
-      <category>bar</category>
     </venue>
-    <venue lat="51.5411992" lon="-0.1458705">
+    <venue lat="51.5411992" lon="-0.1458705" category="bar">
       <name>Canalside Bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="51.4994616" lon="-0.1139642">
+    <venue lat="51.4994616" lon="-0.1139642" category="pub">
       <name>Crown &amp;amp; Cushion</name>
-      <category>pub</category>
     </venue>
-    <venue lat="51.5614305" lon="-0.1504467">
+    <venue lat="51.5614305" lon="-0.1504467" category="pub">
       <name>Duke of St. Albans</name>
-      <category>pub</category>
     </venue>
-    <venue lat="51.536675" lon="-0.1031148">
+    <venue lat="51.536675" lon="-0.1031148" category="bar">
       <name>Fox on the Green</name>
-      <category>bar</category>
     </venue>
   </nightlife>
 </city_report>

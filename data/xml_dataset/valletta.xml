@@ -86,37 +86,29 @@
 *The X4 bus runs from the airport to <b>Valletta</b>, with generally two buses per hour taking about 20 minutes, costing €2.50 in cash or with contant-less bank card on the bus. The <b>Valletta</b> peninsula is only a couple of kilometres in length and so the ideal way is to do everything on foot, which enables you to take many shortcuts via stairs. However, the city is built on a ridge and is steep in parts (requiring walking up and down stairs in some places), which can be tiring.</wiki_intro>
   <landmark_image>assets/images/valletta.jpg</landmark_image>
   <nightlife>
-    <venue lat="35.8999391" lon="14.5088802">
+    <venue lat="35.8999391" lon="14.5088802" category="bar">
       <name>222 Wine Bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="35.9244566" lon="14.488431">
+    <venue lat="35.9244566" lon="14.488431" category="bar">
       <name>Bar Native</name>
-      <category>bar</category>
     </venue>
-    <venue lat="35.9222347" lon="14.4910566">
+    <venue lat="35.9222347" lon="14.4910566" category="bar">
       <name>Bellini</name>
-      <category>bar</category>
     </venue>
-    <venue lat="35.9081685" lon="14.5006288">
+    <venue lat="35.9081685" lon="14.5006288" category="bar">
       <name>Black Gold Saloon Malta</name>
-      <category>bar</category>
     </venue>
-    <venue lat="35.8951718" lon="14.4656418">
+    <venue lat="35.8951718" lon="14.4656418" category="bar">
       <name>Butterfly Bar</name>
-      <category>bar</category>
     </venue>
-    <venue lat="35.9080856" lon="14.5004518">
+    <venue lat="35.9080856" lon="14.5004518" category="bar">
       <name>Chequers</name>
-      <category>bar</category>
     </venue>
-    <venue lat="35.9158518" lon="14.4933316">
+    <venue lat="35.9158518" lon="14.4933316" category="pub">
       <name>City of London</name>
-      <category>pub</category>
     </venue>
-    <venue lat="35.9221301" lon="14.4923768">
+    <venue lat="35.9221301" lon="14.4923768" category="nightclub">
       <name>Club 22</name>
-      <category>nightclub</category>
     </venue>
   </nightlife>
 </city_report>
