@@ -10,13 +10,14 @@
     <title>EuroCity Strategic Intelligence</title>
 </head>
 <body>
+<a href="#city-grid" class="skip-link">Salta al contenuto</a>
 
 <!-- ═══ TOPBAR STICKY ══════════════════════════════════════════════════ -->
 <header class="topbar">
     <div class="topbar-inner">
         <span class="topbar-logo">EuroCity <b>SI</b></span>
-        <nav class="topbar-nav">
-            <a href="#" class="active">🏠 Home</a>
+        <nav class="topbar-nav" aria-label="Navigazione principale">
+            <a href="#" class="active" aria-current="page">🏠 Home</a>
             <a href="pages/report.html">📊 Report</a>
             <a href="pages/mappa_attrazioni.html">🗺️ Map</a>
         </nav>
@@ -97,7 +98,7 @@
     <button class="filter-btn" data-filter="green">🌱 Green ≥ 70</button>
     <button class="filter-btn" data-filter="budget">💰 Budget ≤ €120/night</button>
 </div>
-<main class="container" id="city-grid">
+<main class="container" id="city-grid" aria-label="Griglia delle capitali">
             <article class="city-card" data-safety="72.5" data-green="78" data-price="157.25" itemscope itemtype="https://schema.org/City" itemid="https://en.wikipedia.org/wiki/Amsterdam">
                 <div class="landmark-img-wrap">
                     <img src="assets/images/amsterdam.jpg" alt="Amsterdam Landmark" class="landmark-img" loading="lazy">

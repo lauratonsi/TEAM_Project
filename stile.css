@@ -1,6 +1,32 @@
 /* 1. VARIABILI E FONT */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
+/* 0. ACCESSIBILITÀ — skip link e link al documento sorgente */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 2000;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 0 0 10px 0;
+    font-weight: 700;
+    text-decoration: none;
+}
+.skip-link:focus {
+    left: 0;   /* diventa visibile solo quando riceve il focus da tastiera */
+}
+.source-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--blue-500);
+    text-decoration: none;
+    word-break: break-all;
+}
+.source-link:hover { text-decoration: underline; }
+
 :root {
     --accent: #E74C3C;
     --accent-dark: #C0392B;

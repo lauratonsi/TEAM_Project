@@ -301,6 +301,56 @@ esattamente** a quelli nei documenti, come nell'esempio dei castelli del corso
 
 ---
 
+## HTML Semantico e Accessibilità
+
+> *Teoria (slide del corso):* «HTML è il linguaggio base del Web. Deve essere usato in modo
+> **semantico**, evitando tag procedurali deprecati come `<font>` e preferendo una chiara
+> organizzazione logica. Gli elementi si dividono in quelli **di blocco** (che vanno a capo) e
+> **inline** (come `<em>`, `<strong>` o il generico `<span>`), che si inseriscono nel flusso
+> del testo senza spezzarlo.»
+
+Tutto l'HTML prodotto applica questo principio.
+
+**1. Niente tag procedurali deprecati.** Sulle 33 pagine: zero `<font>`/`<center>`/`<strike>`
+e zero attributi presentazionali (`align`, `bgcolor`…). La presentazione è interamente in
+`stile.css`.
+
+**2. Organizzazione logica con elementi di blocco semantici** — non `<div>` generici:
+`<header>`, `<nav>`, `<main>` (uno per pagina), `<section>`/`<article>`, `<footer>`, con
+gerarchia `h1→h2→h3`.
+
+**3. Inline semantici.** Il vocabolario inline del content-model misto (`b`/`i`/`link` nel XML)
+è mappato da `inline_to_html()` ai tag **semantici** `b→<strong>`, `i→<em>`, `link→<a>` (l'enfasi
+porta significato: nome città, termine straniero); `<span>` per i frammenti senza semantica. I
+`<b>` residui sono enfasi puramente visiva — in HTML5 `<b>` non è deprecato ma ridefinito come
+"testo stilisticamente distinto senza importanza".
+
+**4. La "traduzione" del semantico: l'accessibilità.** L'HTML semantico è invisibile all'occhio
+ma si traduce nell'**albero di accessibilità**: gli elementi semantici generano i **landmark
+ARIA** (`<header>`→banner, `<nav>`→navigation, `<main>`→main, `<footer>`→contentinfo) tra cui uno
+screen reader può saltare. Per renderli usabili sono stati aggiunti:
+- **skip link** "Salta al contenuto" (visibile solo al focus da tastiera);
+- **`aria-label`** sulle `<nav>` duplicate (Principale / Tra le città / Sezioni del report);
+- **`aria-current="page"`** sul link attivo; `lang` sul documento e `alt` su tutte le 60 immagini.
+
+Verifica: DevTools → scheda *Accessibility* (mostra i landmark etichettati), o la navigazione
+per landmark di uno screen reader.
+
+**5. Il sito come riflesso diretto dei documenti.** Ogni dato del XML è reso **visibile** nella
+pagina, non solo scaricabile. L'URI canonico (`<source_url>`) è un **link cliccabile** su ogni
+pagina città e coincide con l'`itemid` dei microdata: lo stesso identificatore vive nel
+documento, nel link visibile e nell'annotazione machine-readable. Il download del file XML è
+un'aggiunta, non l'unico accesso ai dati.
+
+| Principio (slide) | Costrutto HTML | Effetto reale |
+|-------------------|----------------|---------------|
+| No tag procedurali | 0 `<font>`; stile in CSS | separazione contenuto/presentazione |
+| Organizzazione logica (blocco) | `header/nav/main/section/footer` | landmark ARIA + document outline |
+| Inline semantico (em/strong) | `<strong>/<em>/<span>` | enfasi pronunciata dagli screen reader |
+| Web come grafo di risorse | `<a itemprop="url" href=URI>` | URI documento = link = itemid microdata |
+
+---
+
 ## Uso di XPath
 
 La fase di **lettura/estrazione** dei documenti si basa su XPath, a due livelli.

@@ -423,7 +423,7 @@ def generate_map(city_data):
         ".pl:hover{text-decoration:underline}\n"
         "</style>\n"
         "</head><body>\n"
-        "<div id='map'></div>\n"
+        "<main id='map' aria-label='Mappa interattiva delle attrazioni e dei locali'></main>\n"
         "<script src='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js'></script>\n"
         "<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js'></script>\n"
         + map_js + "\n</body></html>"
@@ -634,13 +634,14 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
     <title>EuroCity Strategic Intelligence</title>
 </head>
 <body>
+<a href="#city-grid" class="skip-link">Salta al contenuto</a>
 
 <!-- ═══ TOPBAR STICKY ══════════════════════════════════════════════════ -->
 <header class="topbar">
     <div class="topbar-inner">
         <span class="topbar-logo">EuroCity <b>SI</b></span>
-        <nav class="topbar-nav">
-            <a href="#" class="active">🏠 Home</a>
+        <nav class="topbar-nav" aria-label="Navigazione principale">
+            <a href="#" class="active" aria-current="page">🏠 Home</a>
             <a href="pages/report.html">📊 Report</a>
             <a href="pages/mappa_attrazioni.html">🗺️ Map</a>
         </nav>
@@ -721,7 +722,7 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
     <button class="filter-btn" data-filter="green">🌱 Green ≥ 70</button>
     <button class="filter-btn" data-filter="budget">💰 Budget ≤ €120/night</button>
 </div>
-<main class="container" id="city-grid">{cards_html}</main>
+<main class="container" id="city-grid" aria-label="Griglia delle capitali">{cards_html}</main>
 
 <button id="back-to-top" title="Back to top">↑</button>
 
@@ -1023,24 +1024,24 @@ def generate_city_pages(city_data):
     <title>{city['name_it']} — EuroCity Strategic Intelligence</title>
 </head>
 <body>
+<a href="#main" class="skip-link">Salta al contenuto</a>
 <header class="topbar">
     <div class="topbar-inner">
         <a href="../../index.html" class="topbar-logo">EuroCity <b>SI</b></a>
-        <nav class="topbar-nav">
+        <nav class="topbar-nav" aria-label="Navigazione principale">
             <a href="../../index.html">🏠 Home</a>
             <a href="../../pages/report.html">📊 Report</a>
             <a href="../../pages/mappa_attrazioni.html">🗺️ Map</a>
         </nav>
     </div>
 </header>
-<nav class="city-nav">
+<nav class="city-nav" aria-label="Navigazione tra le città">
     <a href="{prev_city['city_lower']}.html">← {prev_city['flag']} {prev_city['name_it']}</a>
     <span class="city-nav-title">{city['flag']} {city['name_it']}</span>
     <a href="{next_city['city_lower']}.html">{next_city['flag']} {next_city['name_it']} →</a>
 </nav>
-<main class="city-detail" itemscope itemtype="https://schema.org/City" itemid="{city['uri']}">
+<main id="main" class="city-detail" itemscope itemtype="https://schema.org/City" itemid="{city['uri']}">
     <meta itemprop="name" content="{city['name_it']}">
-    <link itemprop="url" href="{city['uri']}">
     {geo_html}
     {lm_html}
     <h1 class="city-title" style="margin-bottom:25px;">{city['flag']} {city['name_it']}</h1>
@@ -1058,6 +1059,8 @@ def generate_city_pages(city_data):
     <div class="download-block">
         <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
         <a href="../../data/xml_dataset/{cl}.xml" download class="download-link">📥 Download XML source</a>
+        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+        <a href="{city['uri']}" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 {city['uri'].replace('https://', '').replace('http://', '')}</a>
     </div>
 </main>
 <footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
@@ -1305,12 +1308,13 @@ def generate_report(city_data, validation):
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Salta al contenuto</a>
 <header class="topbar">
   <div class="topbar-inner">
     <a href="../index.html" class="topbar-logo">EuroCity <b>SI</b></a>
-    <nav class="topbar-nav">
+    <nav class="topbar-nav" aria-label="Navigazione principale">
       <a href="../index.html">🏠 Home</a>
-      <a href="report.html" class="active">📊 Report</a>
+      <a href="report.html" class="active" aria-current="page">📊 Report</a>
       <a href="mappa_attrazioni.html">🗺️ Map</a>
     </nav>
   </div>
@@ -1323,7 +1327,7 @@ def generate_report(city_data, validation):
     Statistics extracted algorithmically · TEAM Pipeline · UniBo A.Y. 2024/2025</p>
 </div>
 
-<nav class="report-nav">
+<nav class="report-nav" aria-label="Sezioni del report">
   <a href="#statistiche">📊 Statistics</a>
   <a href="#ranking">🏆 Rankings</a>
   <a href="#architettura">⚙️ Architecture</a>
@@ -1331,10 +1335,12 @@ def generate_report(city_data, validation):
   <a href="#parsing">🔬 Parsing Techniques</a>
   <a href="#xpath">🧭 XPath</a>
   <a href="#microdata">🏷️ Microdata</a>
+  <a href="#semantica">♿ HTML &amp; Accessibilità</a>
   <a href="#ai">🤖 AI Usage</a>
   <a href="#team">👥 Team</a>
 </nav>
 
+<main id="main" aria-label="Contenuto del report">
 <!-- ===== STATISTICHE ===== -->
 <section class="report-section" id="statistiche">
   <h2>📊 Statistiche Comparative — Dati Estratti dai File XML</h2>
@@ -1812,6 +1818,117 @@ for filename in files:                                  # scorre la directory XM
   </p>
 </section>
 
+<!-- ===== HTML SEMANTICO E ACCESSIBILITA ===== -->
+<section class="report-section" id="semantica">
+  <h2>♿ HTML Semantico e Accessibilità</h2>
+
+  <p style="background:var(--slate-50);border-left:4px solid var(--accent);padding:14px 18px;border-radius:8px;font-size:0.9rem;font-style:italic;color:var(--slate-800)">
+    «HTML è il linguaggio base del Web. Deve essere usato in modo <b>semantico</b>, evitando
+    tag procedurali deprecati come <code>&lt;font&gt;</code> e preferendo una chiara
+    organizzazione logica. Gli elementi si dividono in quelli <b>di blocco</b> (che vanno a
+    capo) e <b>inline</b> (come <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code> o il
+    generico <code>&lt;span&gt;</code>), che si inseriscono nel flusso del testo senza
+    spezzarlo.» — <span style="font-style:normal;color:var(--slate-500)">slide del corso</span>
+  </p>
+  <p>
+    Tutto l'HTML prodotto da <code>deploy_dashboard.py</code> applica questo principio. Di
+    seguito come la teoria si traduce nel codice generato e, soprattutto, in un effetto reale.
+  </p>
+
+  <h3>1. Niente tag procedurali deprecati</h3>
+  <p style="font-size:0.9rem">
+    Sulle 33 pagine generate: <b>zero</b> <code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>,
+    <code>&lt;marquee&gt;</code>, <code>&lt;strike&gt;</code> e <b>zero</b> attributi
+    presentazionali (<code>align</code>, <code>bgcolor</code>, <code>valign</code>…). La
+    presentazione è interamente delegata al foglio di stile <code>stile.css</code>.
+  </p>
+
+  <h3>2. Organizzazione logica con elementi di blocco</h3>
+  <p style="font-size:0.9rem">
+    Ogni pagina è strutturata con elementi di blocco <b>semantici</b> — non <code>&lt;div&gt;</code>
+    generici — che descrivono il ruolo del contenuto: <code>&lt;header&gt;</code> (testata),
+    <code>&lt;nav&gt;</code> (navigazione), <code>&lt;main&gt;</code> (contenuto principale, uno
+    per pagina), <code>&lt;section&gt;</code> / <code>&lt;article&gt;</code> (blocchi tematici),
+    <code>&lt;footer&gt;</code> (piè di pagina), con una gerarchia coerente di heading
+    <code>h1&rarr;h2&rarr;h3</code>.
+  </p>
+
+  <h3>3. Inline semantici (<code>strong</code> / <code>em</code> / <code>span</code>)</h3>
+  <p style="font-size:0.9rem">
+    Il vocabolario inline del content-model misto nel XML (<code>b</code>, <code>i</code>,
+    <code>link</code>) viene mappato dalla funzione <code>inline_to_html()</code> ai tag
+    <b>semantici</b> dell'HTML — <code>b&rarr;&lt;strong&gt;</code>, <code>i&rarr;&lt;em&gt;</code>,
+    <code>link&rarr;&lt;a&gt;</code> — perché in quei punti l'enfasi porta <i>significato</i>
+    (nome città, termine straniero). Il generico <code>&lt;span&gt;</code> è usato per i
+    frammenti senza semantica propria (es. valori delle statistiche). I rari <code>&lt;b&gt;</code>
+    residui sono enfasi puramente visiva: in HTML5 <code>&lt;b&gt;</code> non è deprecato ma
+    ridefinito come «testo stilisticamente distinto senza importanza semantica».
+  </p>
+
+  <h3>4. La «traduzione» del semantico: l'accessibilità</h3>
+  <p style="font-size:0.9rem">
+    L'HTML semantico è volutamente <b>invisibile</b> all'occhio (<code>&lt;strong&gt;</code> si
+    vede come un grassetto), ma si <b>traduce</b> in significato leggibile dalle macchine. Il
+    canale principale è l'<b>albero di accessibilità</b>: gli elementi semantici generano
+    automaticamente dei <b>landmark ARIA</b> — <code>&lt;header&gt;</code>&rarr;<code>banner</code>,
+    <code>&lt;nav&gt;</code>&rarr;<code>navigation</code>, <code>&lt;main&gt;</code>&rarr;<code>main</code>,
+    <code>&lt;footer&gt;</code>&rarr;<code>contentinfo</code> — tra i quali uno screen reader può
+    saltare. Per rendere questa struttura realmente usabile abbiamo aggiunto:
+  </p>
+  <ul style="font-size:0.9rem; color:var(--slate-500); line-height:1.8;">
+    <li><b>Skip link</b> «Salta al contenuto» come primo elemento (visibile solo al focus da tastiera), per bypassare la navigazione;</li>
+    <li><b>aria-label</b> sulle <code>&lt;nav&gt;</code> duplicate (Principale / Tra le città / Sezioni del report) così lo screen reader le distingue;</li>
+    <li><b>aria-current="page"</b> sul link attivo; <b>lang</b> sul documento e <b>alt</b> su tutte le immagini.</li>
+  </ul>
+  <p style="font-size:0.86rem;color:var(--slate-500)">
+    Verifica: DevTools del browser &rarr; scheda <i>Accessibility</i> (mostra i landmark
+    etichettati), oppure la navigazione per landmark di uno screen reader (VoiceOver / NVDA).
+  </p>
+
+  <h3>5. Il sito come riflesso diretto dei documenti</h3>
+  <p style="font-size:0.9rem">
+    Coerentemente con la semantica, ogni dato del documento XML è reso <b>visibile</b> nella
+    pagina, non solo scaricabile. In particolare l'URI canonico del documento (elemento
+    <code>&lt;source_url&gt;</code>) è ora un <b>link cliccabile</b> in ogni pagina città, e
+    coincide con l'<code>itemid</code> dei microdata: <b>lo stesso identificatore</b> vive nel
+    documento, nel link visibile e nell'annotazione machine-readable. Il download del file XML
+    resta un'aggiunta, non l'unico modo di accedere ai dati.
+  </p>
+
+  <h3>Sintesi: principio &rarr; costrutto &rarr; effetto</h3>
+  <table style="width:100%;border-collapse:collapse;font-size:0.86rem;margin-top:8px">
+    <thead>
+      <tr style="background:var(--slate-50);text-align:left">
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Principio (slide)</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Costrutto HTML</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Effetto reale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">No tag procedurali</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">0 <code>&lt;font&gt;</code>; stile in CSS</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">separazione contenuto/presentazione</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Organizzazione logica (blocco)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>header/nav/main/section/footer</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">landmark ARIA + document outline</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Inline semantico (em/strong)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>&lt;strong&gt;/&lt;em&gt;/&lt;span&gt;</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">enfasi pronunciata dagli screen reader</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px">Web come grafo di risorse</td>
+        <td style="padding:8px 12px"><code>&lt;a itemprop="url" href=URI&gt;</code></td>
+        <td style="padding:8px 12px;color:var(--slate-500)">URI documento = link = itemid microdata</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 <!-- ===== AI ===== -->
 <section class="report-section" id="ai">
   <h2>🤖 Dichiarazione Utilizzo Strumenti AI</h2>
@@ -1986,6 +2103,7 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
     </article>
   </div>
 </section>
+</main>
 
 <footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
   Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
