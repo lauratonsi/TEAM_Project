@@ -1,8 +1,33 @@
-import os, json, re
+import os, json, re, html
 from pathlib import Path
 from lxml import etree
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def inline_to_html(el):
+    """Serialise an element's *mixed content* into an HTML fragment, mapping the
+    DTD inline vocabulary (b / i / link) to HTML (b / i / a). Plain text and tails
+    are HTML-escaped; the generated tags are literal. Returns '' if `el` is None.
+
+    Needed because findtext() drops child-element text: once description/wiki_intro/
+    transport carry inline markup, we must walk the node to keep the full text."""
+    if el is None:
+        return ""
+    parts = [html.escape(el.text)] if el.text else []
+    for child in el:
+        tag = etree.QName(child).localname
+        inner = html.escape(child.text or "")
+        if tag == "link":
+            href = html.escape(child.get("href", ""), quote=True)
+            parts.append(f'<a href="{href}" target="_blank" rel="noopener">{inner}</a>')
+        elif tag in ("b", "i"):
+            parts.append(f"<{tag}>{inner}</{tag}>")
+        else:
+            parts.append(inner)
+        if child.tail:
+            parts.append(html.escape(child.tail))
+    return "".join(parts)
 
 
 # ---------------------------------------------------------------------------
@@ -406,12 +431,27 @@ def deploy():
         print(f"Errore: Cartella {XML_DIR} non trovata.")
         return
 
+    # Carica il DTD una sola volta per validare la directory di input (cfr.
+    # lab_castles_files: parse -> well-formed, dtd.validate -> valid).
+    dtd = etree.DTD(open(DTD_FILE, 'rb'))
+    validation = {'valid': 0, 'invalid': 0, 'malformed': 0, 'errors': []}
+
     files = sorted([f for f in os.listdir(XML_DIR) if f.endswith('.xml')])
     for filename in files:
         try:
             city_lower = filename.replace('.xml', '')
+            # etree.parse solleva un'eccezione se il documento NON è ben formato
             tree = etree.parse(os.path.join(XML_DIR, filename))
             root = tree.getroot()
+
+            # Validazione rispetto al DTD (validità, non solo buona forma)
+            if dtd.validate(tree):
+                validation['valid'] += 1
+            else:
+                validation['invalid'] += 1
+                err = dtd.error_log.filter_from_errors()
+                validation['errors'].append(f"{filename}: {err}")
+                print(f"⚠️  {filename}: NON valido rispetto al DTD → {err}")
 
             # 1. Estrazione dati strutturati
             city_obj = {
@@ -424,9 +464,10 @@ def deploy():
                 'green': root.xpath("string(.//environment/@green_score)") or "0",
                 'hotel_count': root.findtext(".//hotel_count", "0"),
                 'economy': root.xpath("string(.//economic_accessibility/@score)") or "0",
-                'transport': root.findtext("transport") or "Transport data unavailable.",
-                'story_it': root.findtext("description") or "Strategic summary unavailable.",
-                'wiki_intro': root.findtext("wiki_intro") or "",
+                # Mixed-content fields: serialise inline markup (b/i/link) to HTML
+                'transport': inline_to_html(root.find("transport")) or "Transport data unavailable.",
+                'story_it': inline_to_html(root.find("description")) or "Strategic summary unavailable.",
+                'wiki_intro': inline_to_html(root.find("wiki_intro")),
                 'hotels': [{'n': h.findtext("name"), 'p': h.findtext("price")} for h in root.xpath(".//hotel")],
                 'attractions': [{'n': a.findtext("name"), 'd': a.findtext("description"), 'lat': a.get("lat"), 'lon': a.get("lon")} for a in root.xpath(".//attraction")],
                 'districts': [
@@ -450,7 +491,7 @@ def deploy():
             p_pct = _pct(city_obj['price'], 2.5)   # max €250
             e_pct = _pct(city_obj['economy'])
             cards_html += f"""
-            <article class="city-card" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" itemscope itemtype="https://schema.org/City">
+            <article class="city-card" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" itemscope itemtype="https://schema.org/City" itemid="https://en.wikipedia.org/wiki/{city_obj['name_en']}">
                 <div class="landmark-img-wrap">
                     <img src="{img_src}" alt="{city_obj['name_it']} Landmark" class="landmark-img" loading="lazy">
                     <div class="city-card-overlay">
@@ -495,8 +536,17 @@ def deploy():
                     <a href="pages/cities/{city_lower}.html" class="card-cta">Explore {city_obj['name_it']} →</a>
                 </div>
             </article>"""
+        except etree.XMLSyntaxError as e:
+            # Documento mal formato: scartato dalla pipeline (cfr. "BAD FORM")
+            validation['malformed'] += 1
+            validation['errors'].append(f"{filename}: malformato — {e}")
+            print(f"❌ {filename}: documento MAL FORMATO → {e}")
         except Exception as e:
             print(f"⚠️ Errore su {filename}: {e}")
+
+    print(f"📋 Validazione DTD: {validation['valid']} validi, "
+          f"{validation['invalid']} non validi, {validation['malformed']} malformati "
+          f"(su {len(files)} file)")
 
     # Mappa inline: pre-calcolata fuori dall'f-string per evitare conflitti {}
     inline_map_js = _map_js_block(city_data, 'map-inline', 'pages/cities/')
@@ -548,7 +598,7 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">
@@ -582,7 +632,10 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
             <div class="hero-stat"><span class="hs-num">{len(city_data)}</span><span class="hs-lbl">capitals</span></div>
             <div class="hero-stat"><span class="hs-num">{n_attractions}</span><span class="hs-lbl">attractions</span></div>
             <div class="hero-stat"><span class="hs-num">{n_hotels}</span><span class="hs-lbl">venues</span></div>
-            <div class="hero-stat"><span class="hs-num">30</span><span class="hs-lbl">XML files</span></div>
+            <div class="hero-stat" title="File XML validati rispetto a city_report.dtd (lxml.etree.DTD)">
+                <span class="hs-num">{validation['valid']}/{len(files)}</span>
+                <span class="hs-lbl">✅ DTD-valid XML</span>
+            </div>
         </div>
     </div>
 </section>
@@ -936,7 +989,7 @@ def generate_city_pages(city_data):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../stile.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>{city['name_it']} — EuroCity Strategic Intelligence</title>
 </head>
@@ -956,7 +1009,7 @@ def generate_city_pages(city_data):
     <span class="city-nav-title">{city['flag']} {city['name_it']}</span>
     <a href="{next_city['city_lower']}.html">{next_city['flag']} {next_city['name_it']} →</a>
 </nav>
-<main class="city-detail" itemscope itemtype="https://schema.org/City">
+<main class="city-detail" itemscope itemtype="https://schema.org/City" itemid="https://en.wikipedia.org/wiki/{city['name_en']}">
     <meta itemprop="name" content="{city['name_it']}">
     <link itemprop="url" href="https://en.wikipedia.org/wiki/{city['name_en']}">
     {geo_html}
@@ -1100,7 +1153,7 @@ def generate_report(city_data):
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../stile.css">
   <title>Report &amp; Documentation — EuroCity</title>
   <style>
     .report-nav {{

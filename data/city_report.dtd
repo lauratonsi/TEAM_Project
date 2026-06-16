@@ -23,7 +23,7 @@
 <!ELEMENT economic_accessibility EMPTY>
 <!ATTLIST economic_accessibility score CDATA #REQUIRED>
 
-<!ELEMENT transport (#PCDATA)>
+<!ELEMENT transport (#PCDATA | b | i | link)*>
 <!ELEMENT accommodation (hotel*)>
 <!ELEMENT hotel (name, price)>
 <!ELEMENT price (#PCDATA)>
@@ -38,9 +38,15 @@
 <!ELEMENT district (name, description)>
 
 <!ELEMENT name (#PCDATA)>
-<!ELEMENT description (#PCDATA)>
-<!ELEMENT wiki_intro (#PCDATA)>
+<!ELEMENT description (#PCDATA | b | i | link)*>
+<!ELEMENT wiki_intro (#PCDATA | b | i | link)*>
 <!ELEMENT landmark_image (#PCDATA)>
+
+<!-- Inline elements for mixed content (content-model misto) -->
+<!ELEMENT b (#PCDATA)>
+<!ELEMENT i (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link href CDATA #REQUIRED>
 
 <!ELEMENT nightlife (venue*)>
 <!ELEMENT venue (name, category)>

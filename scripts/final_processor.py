@@ -116,6 +116,68 @@ def clean_xml_text(text):
     return str(text).strip().replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 
+def _plain(text):
+    """Raw text (stripped, nan-safe) WITHOUT entity escaping: lxml escapes by itself."""
+    if not text or str(text).lower() == 'nan':
+        return ""
+    return str(text).strip()
+
+
+def _append_text(parent, last_child, text):
+    """Append plain text to parent.text (no children yet) or to last_child.tail."""
+    if not text:
+        return
+    if last_child is None:
+        parent.text = (parent.text or "") + text
+    else:
+        last_child.tail = (last_child.tail or "") + text
+
+
+def build_mixed_content(parent, raw_text, bold_terms=None):
+    """Populate `parent` with mixed content: plain text interleaved with inline
+    <b>/<i>/<link> children. Realises the *content-model misto* taught in the course
+    (cfr. notebook 01.xmljson: <p><b>Bologna</b> ... <a href>...</a>).
+
+    Rules (deterministic):
+      - http(s) URL          -> <link href="URL">URL</link>
+      - occurrence of a city name (bold_terms) -> <b>...</b>
+      - parenthesised native proper name, e.g. (Stadshuset) -> (<i>Stadshuset</i>)
+    `raw_text` must be UNescaped: lxml handles escaping on serialization.
+    """
+    raw_text = _plain(raw_text)
+    if not raw_text:
+        return
+    bold_terms = [t for t in (bold_terms or []) if t]
+
+    alternatives = [r'(?P<url>https?://[^\s<>"\)]+)']
+    if bold_terms:
+        alt = "|".join(re.escape(t) for t in sorted(set(bold_terms), key=len, reverse=True))
+        alternatives.append(r'(?P<bold>\b(?:' + alt + r')\b)')
+    alternatives.append(r'\((?P<ital>[A-ZÅÄÖØ][\wÅÄÖØåäöø-]+)\)')
+    pattern = re.compile("|".join(alternatives))
+
+    last_child = None
+    pos = 0
+    for m in pattern.finditer(raw_text):
+        _append_text(parent, last_child, raw_text[pos:m.start()])
+        kind = m.lastgroup
+        if kind == 'url':
+            child = etree.SubElement(parent, "link")
+            child.set("href", m.group('url'))
+            child.text = m.group('url')
+        elif kind == 'bold':
+            child = etree.SubElement(parent, "b")
+            child.text = m.group('bold')
+        else:  # parenthesised native name -> keep parens, italicise inside
+            _append_text(parent, last_child, "(")
+            child = etree.SubElement(parent, "i")
+            child.text = m.group('ital')
+            child.tail = ")"
+        last_child = child
+        pos = m.end()
+    _append_text(parent, last_child, raw_text[pos:])
+
+
 def advanced_wiki_cleaner(raw_text):
     """Clean Wikivoyage/Wikipedia wikitext into plain prose."""
     if not raw_text or str(raw_text).lower() == 'nan':
@@ -387,7 +449,11 @@ def run_pipeline():
             transport_text = str(_row_get(wiki_row, 'Transport_Text', ''))
             if not transport_text or transport_text.lower() == 'nan':
                 transport_text = "Public transport information unavailable."
-        etree.SubElement(root, "transport").text = clean_xml_text(transport_text)
+        city_it = CITY_MAP.get(name, {}).get("it", name)
+        build_mixed_content(
+            etree.SubElement(root, "transport"), transport_text,
+            bold_terms=[name, city_it],
+        )
 
         # --- accommodation ---
         acc_node = etree.SubElement(root, "accommodation")
@@ -427,15 +493,20 @@ def run_pipeline():
                         desc = clean_xml_text(f"Quartiere di {city_it}.")
                     etree.SubElement(d_node, "description").text = desc
 
-        # --- strategic description (Italian narrative) ---
-        etree.SubElement(root, "description").text = clean_xml_text(
-            narratives.get(name, f"Analisi di {name}.")
+        # --- strategic description (Italian narrative, mixed content) ---
+        build_mixed_content(
+            etree.SubElement(root, "description"),
+            narratives.get(name, f"Analisi di {name}."),
+            bold_terms=[name, city_it],
         )
 
-        # --- wiki intro from the correct main page ---
+        # --- wiki intro from the correct main page (mixed content) ---
         wiki_intro_text = advanced_wiki_cleaner(full_text)
         if wiki_intro_text:
-            etree.SubElement(root, "wiki_intro").text = wiki_intro_text
+            build_mixed_content(
+                etree.SubElement(root, "wiki_intro"), wiki_intro_text,
+                bold_terms=[name, city_it],
+            )
 
         # --- landmark image ---
         landmark = LANDMARK_IMAGES.get(name, "")
@@ -461,7 +532,7 @@ def run_pipeline():
             tree.write(
                 os.path.join(OUTPUT_DIR, f"{name.lower()}.xml"),
                 xml_declaration=True, encoding='UTF-8', pretty_print=True,
-                doctype=f'<!DOCTYPE city_report SYSTEM "{DTD_FILE}">'
+                doctype='<!DOCTYPE city_report SYSTEM "../city_report.dtd">'
             )
             print(f"✅ {name} generato correttamente.")
         else:

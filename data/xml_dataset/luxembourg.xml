@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE city_report SYSTEM "/Users/lauratonsi/ELABORAZIONE/data/city_report.dtd">
+<!DOCTYPE city_report SYSTEM "../city_report.dtd">
 <city_report appeal_score="62.9">
   <metadata>
     <title>Luxembourg</title>
@@ -80,7 +80,7 @@
       <description>A leafy, upscale neighbourhood with the university and quality shops.</description>
     </district>
   </districts>
-  <description>Elite financial center, Luxembourg offers free public transport and one of the highest safety levels in the world. It is the paradigm of the wealthy capital that invests massively in its residents' well-being.</description>
+  <description>Elite financial center, <b>Luxembourg</b> offers free public transport and one of the highest safety levels in the world. It is the paradigm of the wealthy capital that invests massively in its residents' well-being.</description>
   <landmark_image>assets/images/luxembourg.jpg</landmark_image>
   <nightlife>
     <venue lat="49.6017703" lon="6.1365904">
