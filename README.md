@@ -301,6 +301,35 @@ esattamente** a quelli nei documenti, come nell'esempio dei castelli del corso
 
 ---
 
+## Uso di XPath
+
+La fase di **lettura/estrazione** dei documenti si basa su XPath, a due livelli.
+
+### 1. XPath completo — metodo `.xpath()` (motore XPath di lxml)
+
+| File | Espressione | Costrutto XPath |
+|------|-------------|-----------------|
+| `deploy_dashboard.py` | `root.xpath("string(.//safety/@index_score)")` | funzione `string()` + **asse attributo** `@` |
+| `deploy_dashboard.py` | `root.xpath(".//hotel")`, `.//attraction`, `.//district`, `.//venue` | asse discendente `//` |
+| `extract_wiki_info.py` | `xpath("//mw:page", namespaces=ns)`, `xpath("string(.//mw:text)")` | `//` + **namespace** + `string()` |
+| `built_dataset.py` | `xpath("string(//*[local-name()='text'])")` | **predicato** `[local-name()=…]` |
+| `rag/ingest.py` | `.//accommodation/hotel`, `.//highlights/attraction`, `.//nightlife/venue` | path relativi |
+
+L'esempio più completo è `string(.//safety/@index_score)`: combina **path discendente**,
+**asse attributo** e **funzione XPath** in un'unica espressione.
+
+### 2. ElementPath — `.find()` / `.findall()` / `.findtext()`
+
+Sottoinsieme di XPath di ElementTree/lxml, usato pervasivamente per navigare il DOM
+(es. `final_processor.py`: `tree.findall('.//mw:page', ns)`; `validate.py`:
+`root.findall('.//attraction')`; `deploy_dashboard.py`: `root.findtext(".//title")`).
+
+> **Nota sui due tipi di accesso agli attributi.** Gli attributi enumerati/obbligatori
+> (`@index_score`, `@category`, `@lat`/`@lon`) si leggono con l'asse attributo XPath
+> (`string(.../@attr)`) o con `element.get('attr')`; gli elementi figli con `findtext()`.
+
+---
+
 ## Utilizzo di Strumenti AI
 
 L'utilizzo di AI è dichiarato come richiesto dalle linee guida del progetto.

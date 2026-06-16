@@ -46,7 +46,10 @@ def inline_to_html(el):
             href = html.escape(child.get("href", ""), quote=True)
             parts.append(f'<a href="{href}" target="_blank" rel="noopener">{inner}</a>')
         elif tag in ("b", "i"):
-            parts.append(f"<{tag}>{inner}</{tag}>")
+            # Map the XML inline vocabulary to *semantic* HTML inline tags
+            # (slide del corso: preferire <strong>/<em> ai presentazionali <b>/<i>).
+            html_tag = {"b": "strong", "i": "em"}[tag]
+            parts.append(f"<{html_tag}>{inner}</{html_tag}>")
         else:
             parts.append(inner)
         if child.tail:
@@ -1326,6 +1329,7 @@ def generate_report(city_data, validation):
   <a href="#architettura">⚙️ Architecture</a>
   <a href="#dtd">📄 DTD Schema</a>
   <a href="#parsing">🔬 Parsing Techniques</a>
+  <a href="#xpath">🧭 XPath</a>
   <a href="#microdata">🏷️ Microdata</a>
   <a href="#ai">🤖 AI Usage</a>
   <a href="#team">👥 Team</a>
@@ -1667,6 +1671,25 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
+      <h4>HTML semantico nell'output</h4>
+      <p>
+        L'HTML prodotto segue il principio dell'<b>HTML semantico</b>: nessun tag procedurale
+        deprecato (<code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>) né attributi
+        presentazionali (<code>align</code>, <code>bgcolor</code>), e una struttura logica con
+        elementi <b>di blocco</b> (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+        <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>,
+        <code>&lt;footer&gt;</code>).
+        Per gli elementi <b>inline</b>, il vocabolario del content-model misto (<code>b</code>,
+        <code>i</code>, <code>link</code> nel file XML) viene mappato dalla funzione
+        <code>inline_to_html()</code> ai tag <b>semantici</b> dell'HTML — <code>b&rarr;&lt;strong&gt;</code>,
+        <code>i&rarr;&lt;em&gt;</code>, <code>link&rarr;&lt;a&gt;</code> — e non ai presentazionali
+        <code>&lt;b&gt;/&lt;i&gt;</code>, perché in quei punti l'enfasi porta <i>significato</i>
+        (nome della città, termine straniero). I rari <code>&lt;b&gt;</code> residui nei template
+        sono enfasi puramente visiva (in HTML5 <code>&lt;b&gt;</code> non è deprecato: indica testo
+        stilisticamente distinto senza valore semantico).
+      </p>
+    </div>
+    <div class="technique-card">
       <h4>Gestione delle Eccezioni</h4>
       <p>
         Ogni città è elaborata in un blocco <code>try/except</code> indipendente:
@@ -1687,6 +1710,65 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
   </div>
+</section>
+
+<!-- ===== XPATH ===== -->
+<section class="report-section" id="xpath">
+  <h2>🧭 Uso di XPath</h2>
+  <p>
+    La fase di <b>lettura ed estrazione</b> dei documenti XML si basa su <b>XPath</b>, a due
+    livelli: il motore XPath completo di lxml (metodo <code>.xpath()</code>) e il suo
+    sottoinsieme <i>ElementPath</i> (<code>.find()</code> / <code>.findall()</code> /
+    <code>.findtext()</code>).
+  </p>
+
+  <h3>1. XPath completo — <code>.xpath()</code></h3>
+  <table style="width:100%;border-collapse:collapse;font-size:0.86rem;margin-top:8px">
+    <thead>
+      <tr style="background:var(--slate-50);text-align:left">
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Script</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Espressione XPath</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Costrutto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>deploy_dashboard.py</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>string(.//safety/@index_score)</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">funzione <code>string()</code> + <b>asse attributo</b> <code>@</code></td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>deploy_dashboard.py</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>.//hotel</code> · <code>.//attraction</code> · <code>.//venue</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">asse discendente <code>//</code></td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>extract_wiki_info.py</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>//mw:page</code> · <code>string(.//mw:text)</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)"><code>//</code> + <b>namespace</b> + <code>string()</code></td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px"><code>built_dataset.py</code></td>
+        <td style="padding:8px 12px"><code>string(//*[local-name()='text'])</code></td>
+        <td style="padding:8px 12px;color:var(--slate-500)"><b>predicato</b> <code>[local-name()=…]</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.86rem;margin-top:12px">
+    L'esempio più completo è <code>string(.//safety/@index_score)</code>: combina <b>path
+    discendente</b>, <b>asse attributo</b> e <b>funzione XPath</b> in un'unica espressione,
+    usato per leggere gli indici memorizzati come attributi di elementi <code>EMPTY</code>.
+  </p>
+
+  <h3>2. ElementPath — <code>find()</code> / <code>findall()</code> / <code>findtext()</code></h3>
+  <p style="font-size:0.9rem">
+    Sottoinsieme di XPath di ElementTree/lxml, usato pervasivamente per navigare il DOM —
+    es. <code>tree.findall('.//mw:page', ns)</code> (<code>final_processor.py</code>),
+    <code>root.findall('.//attraction')</code> (<code>validate.py</code>),
+    <code>root.findtext(".//title")</code> (<code>deploy_dashboard.py</code>). Gli attributi
+    (es. <code>@category</code>, <code>@lat</code>) si leggono invece con
+    <code>element.get('attr')</code>.
+  </p>
 </section>
 
 <!-- ===== MICRODATA ===== -->

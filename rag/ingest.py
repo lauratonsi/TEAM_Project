@@ -115,7 +115,7 @@ def build_embeddings_and_index(model_name='all-MiniLM-L6-v2'):
         venues = root.xpath('.//nightlife/venue')
         if venues:
             venue_parts = [
-                f"{v.findtext('name')} ({v.findtext('category') or 'bar'})"
+                f"{v.findtext('name')} ({v.get('category') or 'bar'})"
                 for v in venues if v.findtext('name')
             ]
             if venue_parts:
