@@ -29,10 +29,12 @@
     <div class="hero-content">
         <h1 class="hero-title">30 European capitals,<br>one intelligence.</h1>
         <p class="hero-sub">
-            EuroCity collects, structures and analyses data on safety, sustainability
-            and accessibility of EU capitals — algorithmically extracted from Wikivoyage
-            and enriched with international indices. Each city has its own DTD-validated
-            XML file and a browsable page with an interactive map.
+            EuroCity turns free-text travel guides into structured, queryable data. For each EU
+            capital, the pipeline <b>extracts</b> transport, attractions, districts and venues from
+            the <b>Wikivoyage</b> dumps, <b>combines</b> them with international indices for safety,
+            sustainability and cost, and <b>writes one DTD-validated XML file</b> per city. Every
+            page, ranking and map you see below is rendered straight from those XML documents — the
+            site is a <b>direct reflection</b> of the data, not a hand-written brochure.
         </p>
         <div class="hero-stats">
             <div class="hero-stat"><span class="hs-num">30</span><span class="hs-lbl">capitals</span></div>
@@ -43,6 +45,46 @@
                 <span class="hs-lbl">✅ DTD-valid XML</span>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- ═══ DATA PROVENANCE — how the numbers are built ════════════════════ -->
+<section class="provenance-band" aria-label="How the data is built">
+    <h2 class="prov-heading">How the data is built</h2>
+    <div class="prov-flow">
+        <div class="prov-node">
+            <span class="prov-ico">📂</span>
+            <b>Wikivoyage</b>
+            <small>MediaWiki dumps parsed into clean text (transport, attractions, districts, venues)</small>
+        </div>
+        <span class="prov-arrow" aria-hidden="true">→</span>
+        <div class="prov-node">
+            <span class="prov-ico">📄</span>
+            <b>XML + DTD</b>
+            <small>one validated file per city — mixed content, geo-coordinates, Schema.org microdata</small>
+        </div>
+        <span class="prov-arrow" aria-hidden="true">→</span>
+        <div class="prov-node">
+            <span class="prov-ico">📊</span>
+            <b>Indices</b>
+            <small>Safety · Green · Cost of living merged in from international sources</small>
+        </div>
+        <span class="prov-arrow" aria-hidden="true">→</span>
+        <div class="prov-node">
+            <span class="prov-ico">🌐</span>
+            <b>This site</b>
+            <small>pages, rankings and map generated directly from the XML</small>
+        </div>
+    </div>
+    <div class="prov-formula" role="img"
+         aria-label="Appeal Score equals 40% safety, 40% green, 20% affordability">
+        <span class="prov-formula-lbl">Appeal&nbsp;Score =</span>
+        <span class="prov-seg prov-safety">Safety ×0.4</span>
+        <span class="prov-plus">+</span>
+        <span class="prov-seg prov-green">Green ×0.4</span>
+        <span class="prov-plus">+</span>
+        <span class="prov-seg prov-cost">Affordability ×0.2</span>
+        <a class="prov-formula-link" href="pages/report.html#statistiche">see how →</a>
     </div>
 </section>
 

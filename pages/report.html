@@ -103,10 +103,46 @@
       padding: 3px 10px; font-size: 0.78rem; font-weight: 700;
       margin-bottom: 8px;
     }
+    /* --- Provenienza degli indicatori --- */
+    .prov-table {
+      width: 100%; border-collapse: collapse; font-size: 0.86rem;
+      margin: 0 0 10px; background: var(--slate-50);
+      border: 1px solid var(--slate-100); border-radius: 12px; overflow: hidden;
+    }
+    .prov-table th {
+      text-align: left; padding: 10px 12px; background: var(--slate-100);
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--slate-500);
+    }
+    .prov-table td {
+      padding: 10px 12px; vertical-align: top; border-top: 1px solid var(--slate-100);
+    }
+    .prov-table td:first-child { font-weight: 700; white-space: nowrap; }
+    .prov-src {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      border-radius: 6px; padding: 2px 8px; white-space: nowrap;
+    }
+    .src-derived { background: #fef3c7; color: #92400e; }
+    .src-indices { background: #dbeafe; color: #1e40af; }
+    .src-wiki    { background: #dcfce7; color: #166534; }
+    /* --- Formula Appeal Score --- */
+    .appeal-formula {
+      display: flex; border-radius: 10px; overflow: hidden;
+      font-size: 0.82rem; font-weight: 700; color: white; margin: 10px 0 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+    .appeal-seg {
+      padding: 14px 10px; text-align: center; line-height: 1.3;
+    }
+    .appeal-seg small { display: block; font-weight: 500; opacity: 0.85; font-size: 0.72rem; }
+    .seg-safety { background: var(--accent);     flex: 40; }
+    .seg-green  { background: var(--green-500);   flex: 40; }
+    .seg-cost   { background: #f59e0b;            flex: 20; }
     @media (max-width: 768px) {
       .rstat-grid { grid-template-columns: 1fr 1fr; }
       .rank-grid, .technique-grid { grid-template-columns: 1fr; }
       .report-section { padding: 24px 20px; }
+      .prov-table { font-size: 0.78rem; }
     }
   </style>
 </head>
@@ -147,12 +183,102 @@
 <!-- ===== STATISTICHE ===== -->
 <section class="report-section" id="statistiche">
   <h2>📊 Statistiche Comparative — Dati Estratti dai File XML</h2>
+  <p style="margin-top:0; color:var(--slate-500); font-size:0.92rem;">
+    Nessun numero in questa pagina è scritto a mano: ognuno è <b>calcolato a runtime</b> rileggendo
+    i 30 file <code>data/xml_dataset/*.xml</code> già validati contro il DTD. Il report
+    è quindi il <b>riflesso diretto</b> dei documenti — se cambia un XML, cambia la statistica.
+  </p>
   <div class="rstat-grid">
     <div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>30</span><span class='rstat-label'>Capitals Analysed</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>370</span><span class='rstat-label'>Accommodation Venues</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>300</span><span class='rstat-label'>Attractions Catalogued</span></div><div class='rstat-card'><span class='rstat-val' style='color:#8b5cf6'>19/30</span><span class='rstat-label'>Cities with Districts</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>61.3</span><span class='rstat-label'>Avg Appeal</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>66.0</span><span class='rstat-label'>Avg Safety</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>71.8</span><span class='rstat-label'>Avg Green Score</span></div><div class='rstat-card'><span class='rstat-val' style='color:#f59e0b'>30</span><span class='rstat-label'>Validated XML Files</span></div>
   </div>
-  <p style="font-size:0.85rem; color:var(--slate-500); margin:0;">
-    Tutti i valori sono calcolati a runtime leggendo i 30 file XML nella cartella
-    <code>xml_dataset/</code>. Formula <b>Appeal Score</b> = Safety×0.4 + Green×0.4 + (100−Costo)×0.2.
+
+  <h3 style="margin:6px 0 6px;">🔍 Da dove viene ogni numero — provenienza degli indicatori</h3>
+  <p style="font-size:0.9rem; color:var(--slate-500); margin:0 0 14px;">
+    In ogni XML confluiscono due famiglie di dati: i <b>contenuti testuali</b> estratti
+    algoritmicamente dai dump <b>Wikivoyage</b> (trasporti, attrazioni, distretti, locali) e gli
+    <b>indici numerici</b> presi da <code>city_indices.json</code> (fonti internazionali). L'unico
+    valore <i>derivato</i> dalla pipeline è l'<b>Appeal Score</b>, ricalcolato dai tre indici.
+  </p>
+  <table class="prov-table">
+    <thead>
+      <tr><th>Indicatore</th><th>Fonte</th><th>Come si ottiene</th><th style="text-align:right">Scala</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Appeal Score</td>
+        <td><span class="prov-src src-derived">🧮 Derivato</span></td>
+        <td>Ricalcolato: <code>Safety×0.4 + Green×0.4 + (100−Costo)×0.2</code>; salvato come attributo <code>appeal_score</code> di <code>&lt;city_report&gt;</code>.</td>
+        <td style="text-align:right">0–100</td>
+      </tr>
+      <tr>
+        <td>Indice di Sicurezza</td>
+        <td><span class="prov-src src-indices">📊 city_indices.json</span></td>
+        <td>Numbeo Safety Index 2024; letto da <code>&lt;safety index_score="…"&gt;</code>.</td>
+        <td style="text-align:right">0–100</td>
+      </tr>
+      <tr>
+        <td>Green Score</td>
+        <td><span class="prov-src src-indices">📊 city_indices.json</span></td>
+        <td>EU Green Capital Award / EEA; letto da <code>&lt;environment green_score="…"&gt;</code>.</td>
+        <td style="text-align:right">0–100</td>
+      </tr>
+      <tr>
+        <td>Accessibilità economica</td>
+        <td><span class="prov-src src-indices">📊 city_indices.json</span></td>
+        <td>Numbeo Cost of Living 2024; letto da <code>&lt;economic_accessibility score="…"&gt;</code>.</td>
+        <td style="text-align:right">0–100</td>
+      </tr>
+      <tr>
+        <td>Prezzo alloggio</td>
+        <td><span class="prov-src src-wiki">📂 Wikivoyage</span></td>
+        <td>Estratto dalle voci alloggio nel Wikitext; mediato in <code>&lt;hotel_price&gt;</code>.</td>
+        <td style="text-align:right">€/notte</td>
+      </tr>
+      <tr>
+        <td>Attrazioni · Locali · Distretti</td>
+        <td><span class="prov-src src-wiki">📂 Wikivoyage</span></td>
+        <td>Conteggio diretto degli elementi <code>&lt;attraction&gt;</code> / <code>&lt;venue&gt;</code> / <code>&lt;district&gt;</code> nei documenti.</td>
+        <td style="text-align:right">n</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.82rem; color:var(--slate-500); margin:0 0 4px;">
+    Le fonti complete con i link a Numbeo, EEA e l'avvertenza accademica sono nella sezione
+    <a href="#ai">AI Usage → Fonti degli Indici Numerici</a>.
+  </p>
+
+  <h3 style="margin:28px 0 4px;">🧮 Come si calcola l'Appeal Score</h3>
+  <p style="font-size:0.9rem; color:var(--slate-500); margin:0 0 6px;">
+    È l'unico indice composito: pesa la <b>sicurezza</b> e la <b>sostenibilità</b> al 40% ciascuna e
+    l'<b>accessibilità economica</b> al 20% (il costo viene invertito con <code>100−Costo</code>, così
+    «più economico = punteggio più alto»). Determina il ranking <a href="#ranking">qui sotto</a>.
+  </p>
+  <div class="appeal-formula" role="img"
+       aria-label="Appeal Score: 40% sicurezza, 40% green, 20% accessibilità economica">
+    <div class="appeal-seg seg-safety">Safety<small>peso ×0.4</small></div>
+    <div class="appeal-seg seg-green">Green<small>peso ×0.4</small></div>
+    <div class="appeal-seg seg-cost">Affordability<small>×0.2 · 100−Costo</small></div>
+  </div>
+  <p style="font-size:0.82rem; color:var(--slate-500); margin:6px 0 0;">
+    Media del dataset: Appeal <b>61.3</b> · Safety <b>66.0</b> · Green <b>71.8</b>
+    (calcolate sui 30 file).
+  </p>
+
+  <h3 style="margin:28px 0 4px;">🍺 Locali notturni per categoria — estratti con un predicato XPath</h3>
+  <p style="font-size:0.9rem; color:var(--slate-500); margin:0 0 8px;">
+    Questi conteggi non scorrono l'intera lista filtrando in Python: usano direttamente un
+    <b>predicato per valore d'attributo</b>, <code>//venue[@category="…"]</code>, che lascia
+    selezionare al motore XPath i soli elementi desiderati (l'attributo <code>category</code> è
+    enumerato nel DTD: <code>bar | pub | nightclub</code>).
+  </p>
+  <div class="rstat-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:8px">
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>240</span><span class='rstat-label'>Locali totali (&lt;venue&gt;)</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>98</span><span class='rstat-label'>category="bar"</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:#8b5cf6'>129</span><span class='rstat-label'>category="pub"</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>13</span><span class='rstat-label'>category="nightclub"</span></div>
+  </div>
+  <p style="font-size:0.82rem; color:var(--slate-500); margin:0;">
+    Dettaglio tecnico del costrutto nella sezione <a href="#xpath">Uso di XPath</a>.
   </p>
 </section>
 
@@ -616,16 +742,37 @@ for filename in files:                                  # scorre la directory XM
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)"><code>//</code> + <b>namespace</b> + <code>string()</code></td>
       </tr>
       <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>deploy_dashboard.py</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>.//venue[@category="pub"]</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)"><b>predicato per valore d'attributo</b> — filtro di precisione</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>deploy_dashboard.py</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>string(/city_report/@appeal_score)</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100);color:var(--slate-500)">path <b>assoluto</b> + <b>asse attributo</b> sull'attributo obbligatorio del root</td>
+      </tr>
+      <tr>
         <td style="padding:8px 12px"><code>built_dataset.py</code></td>
         <td style="padding:8px 12px"><code>string(//*[local-name()='text'])</code></td>
-        <td style="padding:8px 12px;color:var(--slate-500)"><b>predicato</b> <code>[local-name()=…]</code></td>
+        <td style="padding:8px 12px;color:var(--slate-500)"><b>predicato con funzione</b> <code>[local-name()=…]</code></td>
       </tr>
     </tbody>
   </table>
   <p style="font-size:0.86rem;margin-top:12px">
-    L'esempio più completo è <code>string(.//safety/@index_score)</code>: combina <b>path
-    discendente</b>, <b>asse attributo</b> e <b>funzione XPath</b> in un'unica espressione,
-    usato per leggere gli indici memorizzati come attributi di elementi <code>EMPTY</code>.
+    Due esempi mostrano l'intera gamma dei costrutti. <code>string(.//safety/@index_score)</code>
+    combina <b>path discendente</b>, <b>asse attributo</b> e <b>funzione XPath</b> per leggere gli
+    indici memorizzati come attributi di elementi <code>EMPTY</code>. <code>.//venue[@category="pub"]</code>
+    usa invece un <b>predicato</b> (<code>[…]</code>): il filtro per valore d'attributo che lascia
+    selezionare al motore XPath i soli locali desiderati — più robusto del filtraggio manuale in
+    Python e <b>immune all'ordine</b> degli elementi. Entrambe le espressioni alimentano numeri
+    reali nella sezione <a href="#statistiche">Statistiche</a>.
+  </p>
+  <p style="font-size:0.86rem;margin-top:8px">
+    <b>Resilienza nel casting.</b> I valori estratti sono sempre stringhe: la conversione a numero
+    (medie di Appeal, Safety, prezzi) passa per una funzione <code>fv()</code> che applica
+    <code>float(str(x).strip())</code> dentro un <code>try/except</code>. Così un eventuale valore
+    corrotto (es. <code>"dieci"</code>) non manda in crash la pipeline ma viene neutralizzato,
+    permettendo di proseguire con gli altri documenti.
   </p>
 
   <h3>2. ElementPath — <code>find()</code> / <code>findall()</code> / <code>findtext()</code></h3>
@@ -650,33 +797,62 @@ for filename in files:                                  # scorre la directory XM
     valori statici.
   </p>
   <div class="rstat-grid">
-    <div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>690</span><span class='rstat-label'>Item tipizzati (itemscope)</span></div>
-    <div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>2040</span><span class='rstat-label'>Proprietà (itemprop)</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>1378</span><span class='rstat-label'>Item tipizzati (itemscope)</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>3924</span><span class='rstat-label'>Proprietà (itemprop)</span></div>
     <div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>60</span><span class='rstat-label'>Identificatori (itemid)</span></div>
-    <div class='rstat-card'><span class='rstat-val' style='color:#8b5cf6'>3480</span><span class='rstat-label'>Attributi microdata totali</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:#8b5cf6'>6740</span><span class='rstat-label'>Attributi microdata totali</span></div>
   </div>
 
   <h3>Item per tipo Schema.org</h3>
   <table class="rank-table" style="max-width:420px">
-    <tbody><tr><td style='padding:6px 10px'><code>schema.org/GeoCoordinates</code></td><td style='padding:6px 10px;text-align:right'><b>330</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/TouristAttraction</code></td><td style='padding:6px 10px;text-align:right'><b>300</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/City</code></td><td style='padding:6px 10px;text-align:right'><b>60</b></td></tr></tbody>
+    <tbody><tr><td style='padding:6px 10px'><code>schema.org/GeoCoordinates</code></td><td style='padding:6px 10px;text-align:right'><b>570</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/TouristAttraction</code></td><td style='padding:6px 10px;text-align:right'><b>300</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/BarOrPub</code></td><td style='padding:6px 10px;text-align:right'><b>227</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/PropertyValue</code></td><td style='padding:6px 10px;text-align:right'><b>90</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/Hotel</code></td><td style='padding:6px 10px;text-align:right'><b>88</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/City</code></td><td style='padding:6px 10px;text-align:right'><b>60</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/AggregateRating</code></td><td style='padding:6px 10px;text-align:right'><b>30</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/NightClub</code></td><td style='padding:6px 10px;text-align:right'><b>13</b></td></tr></tbody>
   </table>
 
   <h3>Proprietà annotate (itemprop)</h3>
-  <p style="font-size:0.86rem;color:var(--slate-500);line-height:2"><code>name</code>&nbsp;360 · <code>geo</code>&nbsp;330 · <code>latitude</code>&nbsp;330 · <code>longitude</code>&nbsp;330 · <code>description</code>&nbsp;330 · <code>containsPlace</code>&nbsp;300 · <code>image</code>&nbsp;30 · <code>url</code>&nbsp;30</p>
+  <p style="font-size:0.86rem;color:var(--slate-500);line-height:2"><code>name</code>&nbsp;778 · <code>containsPlace</code>&nbsp;628 · <code>geo</code>&nbsp;570 · <code>latitude</code>&nbsp;570 · <code>longitude</code>&nbsp;570 · <code>description</code>&nbsp;330 · <code>additionalProperty</code>&nbsp;90 · <code>value</code>&nbsp;90 · <code>priceRange</code>&nbsp;88 · <code>aggregateRating</code>&nbsp;30 · <code>ratingValue</code>&nbsp;30 · <code>bestRating</code>&nbsp;30 · <code>worstRating</code>&nbsp;30 · <code>ratingCount</code>&nbsp;30 · <code>image</code>&nbsp;30 · <code>url</code>&nbsp;30</p>
 
   <h3>Struttura annidata e identità (itemid ↔ documento)</h3>
   <p style="font-size:0.9rem">
     La gerarchia rispecchia il pattern multi-livello visto a lezione
-    (<code>lab_microdata.py</code>): <code>City&nbsp;&gt;&nbsp;containsPlace/TouristAttraction&nbsp;&gt;&nbsp;geo/GeoCoordinates</code>.
+    (<code>lab_microdata.py</code>): ogni <code>&lt;city&nbsp;report&gt;</code> diventa una
+    <code>City</code> che <b>contiene</b> (<code>containsPlace</code>) le entità annidate del
+    documento —
+    <code>TouristAttraction</code>, <code>Hotel</code> e i locali notturni — ognuna con il proprio
+    blocco <code>geo/GeoCoordinates</code> (<code>latitude</code>/<code>longitude</code>):
+  </p>
+  <pre style="font-size:0.8rem">City [itemid = source_url]
+ ├─ aggregateRating → AggregateRating   (ratingValue = appeal_score, best/worst 100/0)
+ ├─ additionalProperty → PropertyValue  (Safety Index · Green Score · Economic Accessibility)
+ ├─ containsPlace → TouristAttraction   (name, description, geo → GeoCoordinates)
+ ├─ containsPlace → Hotel               (name, priceRange)
+ └─ containsPlace → BarOrPub | NightClub (name, geo → GeoCoordinates)</pre>
+  <p style="font-size:0.86rem;color:var(--slate-500)">
+    Due scelte semantiche degne di nota: <b>(1)</b> l'attributo XML <b>enumerato</b>
+    <code>category</code> (<code>bar | pub | nightclub</code>) viene mappato sulla classe
+    Schema.org più specifica — <code>NightClub</code> per le discoteche, <code>BarOrPub</code>
+    altrimenti; <b>(2)</b> gli <b>indicatori</b> numerici sono modellati correttamente: l'Appeal
+    Score (composito) come <code>AggregateRating</code> — l'unico <code>aggregateRating</code>
+    ammesso su un <code>Place</code> — e i tre sotto-indici come <code>PropertyValue</code> via
+    <code>additionalProperty</code>, evitando di forzare più <i>rating</i> distinti su una sola
+    proprietà.
+  </p>
+  <p style="font-size:0.9rem">
     Ogni <code>itemid</code> è l'<b>URI canonico letto dal documento XML</b>
     (elemento <code>&lt;source_url&gt;</code>): gli identificatori nel sito
     <b>corrispondono esattamente</b> a quelli nei documenti, come nell'esempio dei castelli
     del corso (<code>itemid</code> ↔ <code>id</code> del file XML).
   </p>
   <p style="font-size:0.86rem;color:var(--slate-500)">
-    Verifica round-trip: i microdata sono ri-estratti dalle pagine con la libreria
-    <code>microdata</code> (<code>microdata.get_items()</code>), la stessa usata nel
-    laboratorio del corso.
+    <b>Verifica round-trip.</b> Lo script standalone <code>scripts/check_microdata.py</code>
+    <b>ri-estrae</b> i microdata dalle pagine con la libreria <code>microdata</code>
+    (<code>microdata.get_items()</code>, la stessa del laboratorio <code>lab_microdata.py</code>) e
+    controlla che: ogni pagina esponga una <code>City</code> top-level; l'<code>itemid</code>
+    ri-letto dall'HTML coincida con il <code>&lt;source_url&gt;</code> del relativo XML; gli oggetti
+    annidati (<code>TouristAttraction</code>/<code>Hotel</code>/<code>BarOrPub</code>) portino
+    <code>GeoCoordinates</code> e l'<code>AggregateRating</code> il suo <code>ratingValue</code>.
+    Esito: <b>round-trip coerente su 30/30 pagine</b>, con conteggi per tipo <b>identici</b> a
+    quelli del contatore qui sopra — due metodi indipendenti (regex di scrittura ↔ parser di
+    rilettura) che concordano.
   </p>
 </section>
 
