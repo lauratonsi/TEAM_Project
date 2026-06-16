@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Stockholm — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 59.3281, "lon": 18.0914, "n": "Vasa Museum", "d": "Maritime museum with a salvaged 17th-century ship."}, {"lat": 59.3251, "lon": 18.0708, "n": "Gamla Stan", "d": "The well-preserved medieval old town."}, {"lat": 59.3275, "lon": 18.0544, "n": "City Hall", "d": "Building with a tower hosting the Nobel Banquet."}, {"lat": 59.3253, "lon": 18.1039, "n": "Skansen", "d": "The world's oldest open-air museum and zoo."}, {"lat": 59.3249, "lon": 18.0965, "n": "ABBA Museum", "d": "Interactive museum dedicated to the pop group."}, {"lat": 59.3268, "lon": 18.0717, "n": "Royal Palace", "d": "The official residence of the Swedish monarch."}, {"lat": 59.3261, "lon": 18.0847, "n": "Moderna Museet", "d": "State museum for modern and contemporary art."}, {"lat": 59.3217, "lon": 17.8869, "n": "Drottningholm", "d": "The private residence of the Swedish royal family."}, {"lat": 59.3178, "lon": 18.0858, "n": "Fotografiska", "d": "Major center for contemporary photography."}, {"lat": 59.3233, "lon": 18.0964, "n": "Gr\u00f6na Lund", "d": "Historic amusement park on the island of Djurg\u00e5rden."}];
   var venues=[{"lat": 59.3198089, "lon": 18.0688539, "n": "Akkurat", "cat": "pub"}, {"lat": 59.3403556, "lon": 18.0311352, "n": "Bagpipers's Inn", "cat": "pub"}, {"lat": 59.3340492, "lon": 18.0565703, "n": "Bar City Central", "cat": "pub"}, {"lat": 59.3327653, "lon": 18.0581755, "n": "Belgobaren", "cat": "pub"}, {"lat": 59.3321771, "lon": 18.0738967, "n": "Berns", "cat": "nightclub"}, {"lat": 59.3098213, "lon": 18.0758442, "n": "Brother Tuck", "cat": "pub"}, {"lat": 59.3333991, "lon": 18.0557611, "n": "Fasching", "cat": "nightclub"}, {"lat": 59.333999, "lon": 18.037233, "n": "Flying Scotsman Inn", "cat": "pub"}];

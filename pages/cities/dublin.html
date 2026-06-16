@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Dublin — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 53.3419, "lon": -6.2867, "n": "Guinness Storehouse", "d": "Brewery experience telling the story of Ireland's famous stout."}, {"lat": 53.3444, "lon": -6.2577, "n": "Trinity College", "d": "Oldest university in Ireland, home to the Book of Kells."}, {"lat": 53.3455, "lon": -6.2644, "n": "Temple Bar", "d": "Vibrant cultural quarter and nightlife hub."}, {"lat": 53.3429, "lon": -6.2674, "n": "Dublin Castle", "d": "Major government complex and former seat of British rule."}, {"lat": 53.36, "lon": -6.325, "n": "Phoenix Park", "d": "One of the largest enclosed recreational spaces in Europe."}, {"lat": 53.3395, "lon": -6.2715, "n": "St. Patrick's Cathedral", "d": "National Cathedral of the Church of Ireland."}, {"lat": 53.3418, "lon": -6.3098, "n": "Kilmainham Gaol", "d": "Former prison now a museum on Irish independence history."}, {"lat": 53.3463, "lon": -6.2631, "n": "Ha'penny Bridge", "d": "Iconic pedestrian bridge over the River Liffey."}, {"lat": 53.3381, "lon": -6.2591, "n": "Stephen's Green", "d": "Victorian public park in the city center."}, {"lat": 53.3409, "lon": -6.2525, "n": "National Gallery", "d": "Museum housing the national collection of Irish and European art."}];
   var venues=[{"lat": 53.3353226, "lon": -6.264995, "n": "Anseo", "cat": "pub"}, {"lat": 53.3472522, "lon": -6.2609325, "n": "Arlington Bar &amp; Restaurant", "cat": "pub"}, {"lat": 53.3676758, "lon": -6.2512678, "n": "Bar@Tolka", "cat": "bar"}, {"lat": 53.3098046, "lon": -6.2841368, "n": "Brady\u2019s", "cat": "pub"}, {"lat": 53.3448128, "lon": -6.2623304, "n": "Club M", "cat": "nightclub"}, {"lat": 53.312007, "lon": -6.2748056, "n": "Coman's", "cat": "pub"}, {"lat": 53.3291081, "lon": -6.2305605, "n": "Crowe\u2019s", "cat": "pub"}, {"lat": 53.3389839, "lon": -6.2733761, "n": "Fallon\u2019s", "cat": "pub"}];

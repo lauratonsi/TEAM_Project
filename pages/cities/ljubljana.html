@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Ljubljana — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 46.0492, "lon": 14.5083, "n": "Ljubljana Castle", "d": "Medieval castle offering panoramic views of the city."}, {"lat": 46.0514, "lon": 14.5061, "n": "Triple Bridge", "d": "Group of three bridges designed by Jo\u017ee Ple\u010dnik."}, {"lat": 46.0539, "lon": 14.4981, "n": "Tivoli Park", "d": "The largest and most beautiful park in Ljubljana."}, {"lat": 46.052, "lon": 14.5103, "n": "Dragon Bridge", "d": "Art Nouveau bridge decorated with dragon statues."}, {"lat": 46.0514, "lon": 14.5058, "n": "Preseren Square", "d": "The central square and heart of the city."}, {"lat": 46.0567, "lon": 14.5167, "n": "Metelkova Mesto", "d": "Autonomous social centre in former military barracks."}, {"lat": 46.0508, "lon": 14.5081, "n": "Cathedral of St. Nicholas", "d": "Baroque cathedral with iconic green dome and twin towers."}, {"lat": 46.0536, "lon": 14.5006, "n": "National Gallery", "d": "Slovenia's main museum of historical art."}, {"lat": 46.0503, "lon": 14.5069, "n": "Robba Fountain", "d": "Baroque fountain representing the three rivers of Carniola."}, {"lat": 46.0528, "lon": 14.5033, "n": "Skyscraper (Neboti\u010dnik)", "d": "Iconic modernist building with a terrace cafe."}];
   var venues=[{"lat": 46.0503648, "lon": 14.5053083, "n": "...In En Pelin", "cat": "bar"}, {"lat": 46.0557953, "lon": 14.5080434, "n": "10ka, klub smeha", "cat": "pub"}, {"lat": 46.0431596, "lon": 14.5032606, "n": "Apotheka", "cat": "bar"}, {"lat": 46.0450094, "lon": 14.5067236, "n": "Arhiv", "cat": "pub"}, {"lat": 46.0547833, "lon": 14.5087356, "n": "Banglade\u0161", "cat": "pub"}, {"lat": 46.0375051, "lon": 14.4584658, "n": "Bar", "cat": "bar"}, {"lat": 46.0514114, "lon": 14.5083244, "n": "Bar \"Shakira\"", "cat": "bar"}, {"lat": 46.066765, "lon": 14.491929, "n": "Bar 99", "cat": "bar"}];

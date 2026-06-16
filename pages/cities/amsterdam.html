@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Amsterdam — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 52.36, "lon": 4.8852, "n": "Rijksmuseum", "d": "National museum dedicated to Dutch arts and history."}, {"lat": 52.3752, "lon": 4.884, "n": "Anne Frank House", "d": "Historic house where Anne Frank hid during WWII."}, {"lat": 52.3584, "lon": 4.8811, "n": "Van Gogh Museum", "d": "World's largest collection of artworks by Vincent van Gogh."}, {"lat": 52.358, "lon": 4.8686, "n": "Vondelpark", "d": "The city's most famous and largest public park."}, {"lat": 52.3731, "lon": 4.8926, "n": "Dam Square", "d": "The historic center of Amsterdam and site of the Royal Palace."}, {"lat": 52.3578, "lon": 4.8917, "n": "Heineken Experience", "d": "Interactive museum in the former brewery of the pilsner brand."}, {"lat": 52.358, "lon": 4.8797, "n": "Stedelijk Museum", "d": "Major museum for modern and contemporary art and design."}, {"lat": 52.3693, "lon": 4.9013, "n": "Rembrandt House", "d": "The former home and workshop of the painter Rembrandt."}, {"lat": 52.3842, "lon": 4.9023, "n": "A'DAM Lookout", "d": "Observation deck with a 360-degree view of the city."}, {"lat": 52.3725, "lon": 4.8792, "n": "Jordaan District", "d": "Charming neighborhood known for its narrow canals and boutiques."}];
   var venues=[{"lat": 52.3760606, "lon": 4.9001777, "n": "'Skek", "cat": "pub"}, {"lat": 52.3912178, "lon": 4.9382277, "n": "'t Sluisje", "cat": "pub"}, {"lat": 52.3566879, "lon": 4.8904823, "n": "Arie Op De Hoek", "cat": "pub"}, {"lat": 52.3634486, "lon": 4.9303273, "n": "Bar Botanique Cafe Tropique", "cat": "pub"}, {"lat": 52.3656085, "lon": 4.8679756, "n": "Bax", "cat": "pub"}, {"lat": 52.3724859, "lon": 4.9009348, "n": "Bern", "cat": "pub"}, {"lat": 52.3666977, "lon": 4.9263471, "n": "Brouwerij 't IJ", "cat": "pub"}, {"lat": 52.3526052, "lon": 4.8908646, "n": "Cafe 't Podium", "cat": "pub"}];

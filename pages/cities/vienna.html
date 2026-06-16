@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Vienna — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 48.1845, "lon": 16.3122, "n": "Sch\u00f6nbrunn Palace", "d": "Grand Baroque palace and former summer residence."}, {"lat": 48.2084, "lon": 16.3731, "n": "St. Stephen's", "d": "Iconic Gothic cathedral in the city center."}, {"lat": 48.1915, "lon": 16.3808, "n": "Belvedere", "d": "Historic complex with two Baroque palaces and art."}, {"lat": 48.2166, "lon": 16.3958, "n": "Prater", "d": "Large public park with a giant Ferris wheel."}, {"lat": 48.2065, "lon": 16.3653, "n": "Hofburg", "d": "Former imperial palace of the Habsburgs."}, {"lat": 48.203, "lon": 16.3691, "n": "State Opera", "d": "One of the leading opera houses in the world."}, {"lat": 48.1973, "lon": 16.361, "n": "Naschmarkt", "d": "Famous open-air market for food and goods."}, {"lat": 48.2047, "lon": 16.3681, "n": "Albertina", "d": "Art museum with one of the world's largest print rooms."}, {"lat": 48.2037, "lon": 16.3617, "n": "Kunsthistorisches", "d": "Imperial museum of art and artifacts."}, {"lat": 48.2109, "lon": 16.3575, "n": "Rathaus", "d": "Neogothic city hall building and event square."}];
   var venues=[{"lat": 48.2177686, "lon": 16.3374533, "n": "'s Beisl am Eck", "cat": "pub"}, {"lat": 48.2060233, "lon": 16.3865177, "n": "'s Stammbeisl", "cat": "pub"}, {"lat": 48.2171591, "lon": 16.3774265, "n": "6er Haus", "cat": "pub"}, {"lat": 48.2290642, "lon": 16.3437056, "n": "Anton Frank - cafe bar", "cat": "pub"}, {"lat": 48.2044132, "lon": 16.3432618, "n": "BackBone Irish Pub", "cat": "pub"}, {"lat": 48.2098841, "lon": 16.3677, "n": "Bockshorn Irish Pub", "cat": "pub"}, {"lat": 48.2160352, "lon": 16.3784001, "n": "Brendl", "cat": "pub"}, {"lat": 48.218708, "lon": 16.3810931, "n": "Bricks", "cat": "nightclub"}];

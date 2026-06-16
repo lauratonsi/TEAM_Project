@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Bucharest — EuroCity Strategic Intelligence</title>
 </head>
@@ -101,7 +101,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 44.4275, "lon": 26.0872, "n": "Palace of Parliament", "d": "The world's second-largest administrative building."}, {"lat": 44.4414, "lon": 26.0972, "n": "Romanian Athenaeum", "d": "Iconic concert hall and symbol of Romanian culture."}, {"lat": 44.4715, "lon": 26.0762, "n": "Village Museum", "d": "Open-air museum showcasing traditional Romanian life."}, {"lat": 44.4714, "lon": 26.0825, "n": "Herastrau Park", "d": "Large park surrounding a lake in northern Bucharest."}, {"lat": 44.4672, "lon": 26.0784, "n": "Arcul de Triumf", "d": "Triumphal arch dedicated to Romania's WWI victory."}, {"lat": 44.431, "lon": 26.101, "n": "Old Town (Lipscani)", "d": "Historical center with vibrant nightlife and architecture."}, {"lat": 44.4314, "lon": 26.0997, "n": "Stavropoleos Monastery", "d": "Small Orthodox monastery known for its Brancovan style."}, {"lat": 44.4394, "lon": 26.0975, "n": "Revolution Square", "d": "The site of major events during the 1989 revolution."}, {"lat": 44.4397, "lon": 26.0958, "n": "National Art Museum", "d": "Art museum located in the former Royal Palace."}, {"lat": 44.4318, "lon": 26.1017, "n": "Carturesti Carusel", "d": "Beautiful bookstore located in a restored 19th-century building."}];
   var venues=[{"lat": 44.4421391, "lon": 26.0944235, "n": "112 Bar", "cat": "bar"}, {"lat": 44.4307357, "lon": 26.1018712, "n": "1974 Ni\u0219te Domni \u0219i Fiii", "cat": "bar"}, {"lat": 44.4449566, "lon": 26.0962978, "n": "1UP Gamers Pub", "cat": "pub"}, {"lat": 44.4300616, "lon": 26.0973551, "n": "Abel's Wine Bar", "cat": "bar"}, {"lat": 44.4306672, "lon": 26.1013188, "n": "Agartha Club", "cat": "nightclub"}, {"lat": 44.4476748, "lon": 26.1060993, "n": "Alan Dala", "cat": "bar"}, {"lat": 44.4130209, "lon": 26.1688469, "n": "Alexa", "cat": "bar"}, {"lat": 44.4312812, "lon": 26.0999145, "n": "Altfel", "cat": "bar"}];

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Vilnius — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 54.6867, "lon": 25.2908, "n": "Gediminas Tower", "d": "The only remaining tower of the Upper Castle."}, {"lat": 54.6831, "lon": 25.2931, "n": "St. Anne's Church", "d": "Masterpiece of Flamboyant Gothic architecture."}, {"lat": 54.6806, "lon": 25.2953, "n": "Uzupis", "d": "Bohemian district that declared its own republic."}, {"lat": 54.6858, "lon": 25.2878, "n": "Vilnius Cathedral", "d": "Main Roman Catholic cathedral of Lithuania."}, {"lat": 54.6744, "lon": 25.2894, "n": "Gates of Dawn", "d": "The only surviving gate of the city's original walls."}, {"lat": 54.6858, "lon": 25.2892, "n": "Grand Dukes Palace", "d": "Reconstructed palace of the Lithuanian rulers."}, {"lat": 54.6842, "lon": 25.2953, "n": "Bernadine Garden", "d": "Main park in the heart of the old town."}, {"lat": 54.6939, "lon": 25.3058, "n": "Church of St. Peter", "d": "Baroque church known for its white plaster carvings."}, {"lat": 54.6869, "lon": 25.2975, "n": "Three Crosses", "d": "Monument on the hill offering panoramic views."}, {"lat": 54.6878, "lon": 25.2722, "n": "Museum of Occupations", "d": "Former KGB headquarters now a museum."}];
   var venues=[{"lat": 54.6840708, "lon": 25.2903339, "n": "13 statini\u0173", "cat": "bar"}, {"lat": 54.6888598, "lon": 25.2757378, "n": "Akivarai", "cat": "pub"}, {"lat": 54.6797935, "lon": 25.277749, "n": "Akvariumas", "cat": "pub"}, {"lat": 54.6799771, "lon": 25.2787171, "n": "Alaus biblioteka", "cat": "pub"}, {"lat": 54.6936373, "lon": 25.2689725, "n": "Alaus namai", "cat": "pub"}, {"lat": 54.7079381, "lon": 25.2956792, "n": "Alaus studija", "cat": "pub"}, {"lat": 54.679263, "lon": 25.287105, "n": "Amatininkai", "cat": "pub"}, {"lat": 54.6764695, "lon": 25.2895043, "n": "Apuokas", "cat": "pub"}];

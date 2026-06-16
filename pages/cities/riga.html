@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Riga — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 56.9491, "lon": 24.1053, "n": "Old Town", "d": "Historical heart of Riga with cobblestone streets."}, {"lat": 56.9472, "lon": 24.1069, "n": "House of Blackheads", "d": "Historic building reconstructed after WWII."}, {"lat": 56.9514, "lon": 24.1131, "n": "Freedom Monument", "d": "Memorial honoring soldiers killed in the War of Independence."}, {"lat": 56.9475, "lon": 24.1094, "n": "St. Peter's Church", "d": "Gothic church with an observation tower."}, {"lat": 56.9439, "lon": 24.1158, "n": "Central Market", "d": "Large market in former Zeppelin hangars."}, {"lat": 56.9592, "lon": 24.1089, "n": "Art Nouveau District", "d": "Area with the highest concentration of Art Nouveau architecture."}, {"lat": 56.9539, "lon": 24.1158, "n": "Nativity Cathedral", "d": "The largest Orthodox cathedral in the city."}, {"lat": 56.9556, "lon": 24.1131, "n": "Latvian National Museum", "d": "Art museum in a magnificent historicist building."}, {"lat": 56.9511, "lon": 24.1064, "n": "Swedish Gate", "d": "The only remaining gate from the old city walls."}, {"lat": 56.9714, "lon": 24.2272, "n": "Motor Museum", "d": "Museum with a large collection of antique vehicles."}];
   var venues=[{"lat": 56.9492836, "lon": 24.105903, "n": "13 kr\u0113sli", "cat": "pub"}, {"lat": 56.9469015, "lon": 24.1127752, "n": "Aka Latvie\u0161u virtuve", "cat": "bar"}, {"lat": 56.9553822, "lon": 24.1743201, "n": "Alus D\u0101rzs", "cat": "bar"}, {"lat": 56.9263963, "lon": 24.1701644, "n": "Black dragon", "cat": "bar"}, {"lat": 56.9560192, "lon": 24.1093673, "n": "Blues House", "cat": "bar"}, {"lat": 56.9466142, "lon": 24.1103808, "n": "Bon-Vivant", "cat": "pub"}, {"lat": 56.9535179, "lon": 24.127078, "n": "Bruklinas krogs un viskija b\u0101rs", "cat": "pub"}, {"lat": 57.0045916, "lon": 24.1767692, "n": "Cabo cafe", "cat": "bar"}];

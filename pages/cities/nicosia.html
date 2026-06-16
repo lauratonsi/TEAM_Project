@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Nicosia — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 35.1764, "lon": 33.3644, "n": "Selimiye Mosque", "d": "Former cathedral converted into a mosque."}, {"lat": 35.174, "lon": 33.3614, "n": "Ledra Street", "d": "Main shopping street and crossing point to the north."}, {"lat": 35.1717, "lon": 33.3556, "n": "Cyprus Museum", "d": "Oldest and largest archaeological museum in Cyprus."}, {"lat": 35.1814, "lon": 33.3614, "n": "Kyrenia Gate", "d": "One of the three gates in the Venetian walls."}, {"lat": 35.1719, "lon": 33.3667, "n": "Venetian Walls", "d": "Circular fortifications surrounding the old city."}, {"lat": 35.1761, "lon": 33.3625, "n": "Buyuk Han", "d": "Largest caravanserai on the island of Cyprus."}, {"lat": 35.1731, "lon": 33.3678, "n": "St John's Cathedral", "d": "Main church of the Church of Cyprus."}, {"lat": 35.1706, "lon": 33.3611, "n": "Leventis Museum", "d": "Museum dedicated to the history of Nicosia."}, {"lat": 35.1736, "lon": 33.3711, "n": "Liberty Monument", "d": "Sculpture commemorating EOKA's fight for independence."}, {"lat": 35.1711, "lon": 33.3617, "n": "Shacolas Tower", "d": "Observatory offering views of the whole city."}];
   var venues=[{"lat": 35.1596682, "lon": 33.3561106, "n": "Abbey Garden", "cat": "pub"}, {"lat": 35.1636055, "lon": 33.3584549, "n": "Allou", "cat": "pub"}, {"lat": 35.1630446, "lon": 33.3551565, "n": "Babylon", "cat": "pub"}, {"lat": 35.1630898, "lon": 33.3585924, "n": "BARaki Live", "cat": "bar"}, {"lat": 35.1646859, "lon": 33.3605366, "n": "Blurry Lights", "cat": "bar"}, {"lat": 35.1737286, "lon": 33.3612322, "n": "Brewfellas", "cat": "bar"}, {"lat": 35.168404, "lon": 33.3592474, "n": "Caprice", "cat": "pub"}, {"lat": 35.1626192, "lon": 33.3541143, "n": "Carry Pride", "cat": "bar"}];

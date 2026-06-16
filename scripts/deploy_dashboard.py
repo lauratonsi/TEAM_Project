@@ -187,11 +187,13 @@ def _map_js_block(city_data, div_id, city_link_prefix='', with_layer_control=Fal
         "{attribution:'\\u00a9 OpenStreetMap \\u00a9 CARTO',maxZoom:19}).addTo(map_VID);\n"
         "var attr_VID=L.markerClusterGroup({chunkedLoading:true});\n"
         "var venue_VID=L.markerClusterGroup({chunkedLoading:true});\n"
-        "var cap_VID=L.layerGroup();\n"
+        # capitali: clustering anche per loro → niente marker sovrapposti a zoom basso
+        # (tap-target a11y). A zoom 6+ i cluster si aprono e ogni pillola torna cliccabile.
+        "var cap_VID=L.markerClusterGroup({maxClusterRadius:55,showCoverageOnHover:false,spiderfyOnMaxZoom:true,disableClusteringAtZoom:6});\n"
         "var mapData_VID=DATA_JSON;\n"
         "mapData_VID.forEach(function(c){\n"
         "  c.attrs.forEach(function(a){\n"
-        "    L.circleMarker([a.lat,a.lon],{radius:7,color:c.color,fillColor:c.color,fillOpacity:0.85,weight:2})\n"
+        "    L.circleMarker([a.lat,a.lon],{radius:9,color:c.color,fillColor:c.color,fillOpacity:0.85,weight:2})\n"
         "    .addTo(attr_VID)\n"
         "    .bindPopup('<div class=\"mp\"><h4 style=\"color:'+c.color+';margin:0 0 3px\">'+a.n+'</h4>'\n"
         "      +'<small style=\"color:#888\">'+c.flag+' '+c.name+'</small>'\n"
@@ -205,7 +207,7 @@ def _map_js_block(city_data, div_id, city_link_prefix='', with_layer_control=Fal
         "    L.marker([v.lat,v.lon],{icon:L.divIcon({\n"
         "      className:'',\n"
         "      html:'<div class=\"venue-mk\">'+ico+'</div>',\n"
-        "      iconSize:[28,28],iconAnchor:[14,14]\n"
+        "      iconSize:[32,32],iconAnchor:[16,16]\n"
         "    })})\n"
         "    .addTo(venue_VID)\n"
         "    .bindPopup('<div class=\"mp\"><h4 style=\"margin:0 0 3px\">'+ico+' '+v.n+'</h4>'\n"
@@ -258,7 +260,7 @@ def generate_map(city_data):
         "#map{position:absolute;inset:0}\n"
         ".cap-mk{display:flex;align-items:center;gap:4px;padding:4px 9px;border-radius:20px;"
         "font-weight:800;font-size:.72rem;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.35);white-space:nowrap}\n"
-        ".venue-mk{font-size:18px;line-height:28px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.35))}\n"
+        ".venue-mk{font-size:20px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.35))}\n"
         ".mp{min-width:190px;max-width:260px}\n"
         ".mp h4{font-size:.9rem;margin:0 0 2px}\n"
         ".pl{display:inline-block;margin-top:7px;color:#E74C3C;font-weight:700;font-size:.78rem;text-decoration:none}\n"
@@ -1111,7 +1113,7 @@ def generate_city_pages(city_data):
   var map = L.map('city-map');
   L.tileLayer('https://{{s}}.basemaps.cartocdn.com/rastertiles/voyager/{{z}}/{{x}}/{{y}}{{r}}.png',
     {{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}}).addTo(map);
-  var mkIcon=function(e){{return L.divIcon({{className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]}});}};
+  var mkIcon=function(e){{return L.divIcon({{className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]}});}};
   var venueIco={{bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'}};
   var attrs={map_attrs_js};
   var venues={map_venues_js};
@@ -2210,6 +2212,42 @@ for filename in files:                                  # scorre la directory XM
       </tr>
     </tbody>
   </table>
+
+  <h3>6. Target tattili (tap-target) sulla mappa</h3>
+  <p style="font-size:0.9rem">
+    Un audit <b>Lighthouse</b> (accessibilità <b>96/100</b>) ha segnalato che alcuni marker Leaflet
+    della mappa (es. Stoccolma, Oslo, Roma) avevano un'area tattile inferiore a <b>24&times;24&nbsp;px</b>
+    o parzialmente sovrapposta — un problema per chi naviga da touch o ha difficoltà motorie.
+    Interventi correttivi:
+  </p>
+  <ul style="font-size:0.9rem; color:var(--slate-500); line-height:1.8;">
+    <li>marker dei <b>locali</b> e delle <b>attrazioni</b> (pagine città) portati a <b>32&times;32&nbsp;px</b>, ben oltre la soglia di 24;</li>
+    <li>i marker delle <b>capitali</b>, che a zoom basso si sovrapponevano, sono ora <b>raggruppati</b> con <code>L.markerClusterGroup</code>: gli overlap si fondono in un unico bersaglio cliccabile e si riaprono allo zoom (≥ 6);</li>
+    <li>raggio dei punti-attrazione aumentato per un'area di tocco più comoda.</li>
+  </ul>
+
+  <h3>7. Albero di accessibilità — <code>index.html</code></h3>
+  <p style="font-size:0.9rem">
+    È la struttura che uno screen reader «vede»: solo <b>ruoli</b> e <b>nomi accessibili</b>, non lo
+    stile. I landmark (<code>banner / navigation / main / contentinfo</code>) e i heading
+    <code>h1&rarr;h2</code> offrono una mappa navigabile della pagina; il widget chat flottante è
+    esposto come <code>dialog</code>. Questa è una copia dell'albero reale della home:
+  </p>
+  <pre style="font-size:0.8rem; background:var(--slate-50); border:1px solid var(--slate-200); border-radius:8px; padding:14px; overflow:auto; line-height:1.5;">document  "EuroCity Strategic Intelligence"            [lang="en"]
+&#9500;&#9472; link        "Salta al contenuto"                    (skip-link, visibile al focus)
+&#9500;&#9472; banner                                              &lt;header&gt;
+&#9474;  &#9492;&#9472; navigation  "Navigazione principale"             &lt;nav&gt;  &rarr; Home &middot; Report &middot; Map
+&#9500;&#9472; heading h1  "30 European capitals, one intelligence."
+&#9500;&#9472; region      "How the data is built"                 &lt;section aria-label&gt;
+&#9474;  &#9492;&#9472; heading h2  "How the data is built"
+&#9500;&#9472; main        "Griglia delle capitali"                &lt;main id="city-grid"&gt;
+&#9474;  &#9500;&#9472; article &rarr; heading h2 "Amsterdam"  + link
+&#9474;  &#9500;&#9472; article &rarr; heading h2 "Athens"     + link
+&#9474;  &#9492;&#9472; &hellip;  (30 article, una card per capitale)
+&#9500;&#9472; contentinfo                                         &lt;footer&gt;  &rarr; link "Report &amp; Documentation"
+&#9500;&#9472; button      "Back to top"
+&#9492;&#9472; dialog      "Virtual Analyst"                       &lt;div role="dialog"&gt;  &larr; widget flottante
+     button "Ask the analyst" &middot; textbox &middot; button "Ask" &middot; button "Close the analyst"</pre>
 </section>
 
 <!-- ===== AI ===== -->

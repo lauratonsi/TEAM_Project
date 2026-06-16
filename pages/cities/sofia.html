@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Sofia — EuroCity Strategic Intelligence</title>
 </head>
@@ -101,7 +101,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 42.6958, "lon": 23.3328, "n": "Nevsky Cathedral", "d": "One of the largest Orthodox cathedrals in the world."}, {"lat": 42.6911, "lon": 23.3203, "n": "Vitosha Boulevard", "d": "Main commercial street with views of Vitosha Mountain."}, {"lat": 42.6447, "lon": 23.2661, "n": "Boyana Church", "d": "Medieval church with world-famous frescoes."}, {"lat": 42.6978, "lon": 23.3225, "n": "Serdica Ruins", "d": "Ancient Roman ruins in the center of Sofia."}, {"lat": 42.6936, "lon": 23.3267, "n": "National Theater", "d": "Beautiful Neoclassical theater building."}, {"lat": 42.6969, "lon": 23.3228, "n": "St. George Rotunda", "d": "The oldest building in Sofia, a 4th-century church."}, {"lat": 42.6994, "lon": 23.3225, "n": "Banya Bashi Mosque", "d": "16th-century mosque built over natural thermal spas."}, {"lat": 42.655, "lon": 23.2708, "n": "National History Museum", "d": "Largest museum in Bulgaria with the Thracian treasures."}, {"lat": 42.6967, "lon": 23.3214, "n": "Sveta Nedelya", "d": "Medieval Orthodox cathedral in the heart of the city."}, {"lat": 42.6975, "lon": 23.3222, "n": "Largo", "d": "Architectural ensemble of Socialist Classicism."}];
   var venues=[{"lat": 42.647392, "lon": 23.3725373, "n": "120\u0441\u043a\u0430", "cat": "bar"}, {"lat": 42.6862595, "lon": 23.3220992, "n": "3 oz. bar", "cat": "bar"}, {"lat": 42.6900767, "lon": 23.3204954, "n": "Ale House", "cat": "pub"}, {"lat": 42.6902288, "lon": 23.3393279, "n": "Art Club", "cat": "bar"}, {"lat": 42.6940747, "lon": 23.3186521, "n": "Baskerville", "cat": "bar"}, {"lat": 42.6913226, "lon": 23.3205792, "n": "Caligo", "cat": "bar"}, {"lat": 42.6869936, "lon": 23.2395698, "n": "Club 303", "cat": "bar"}, {"lat": 42.6946385, "lon": 23.3190705, "n": "Coda", "cat": "bar"}];

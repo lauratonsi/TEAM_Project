@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Paris — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 48.8584, "lon": 2.2945, "n": "Eiffel Tower", "d": "Global icon of France and landmark of Paris."}, {"lat": 48.8606, "lon": 2.3376, "n": "Louvre Museum", "d": "The world's largest art museum."}, {"lat": 48.853, "lon": 2.3499, "n": "Notre-Dame", "d": "Iconic Gothic cathedral on the \u00eele de la Cit\u00e9."}, {"lat": 48.8738, "lon": 2.295, "n": "Arc de Triomphe", "d": "Monument honoring those who fought for France."}, {"lat": 48.8867, "lon": 2.3431, "n": "Sacre-Coeur", "d": "White basilica on the summit of Montmartre."}, {"lat": 48.8599, "lon": 2.3265, "n": "Mus\u00e9e d'Orsay", "d": "Museum in a former station with Impressionist art."}, {"lat": 48.8462, "lon": 2.3449, "n": "Panth\u00e9on", "d": "Secular mausoleum for distinguished French citizens."}, {"lat": 48.8606, "lon": 2.3522, "n": "Centre Pompidou", "d": "High-tech building housing a major modern art museum."}, {"lat": 48.8554, "lon": 2.345, "n": "Sainte-Chapelle", "d": "Gothic chapel with spectacular stained glass."}, {"lat": 48.8633, "lon": 2.3272, "n": "Tuileries Garden", "d": "Public garden between the Louvre and Place de la Concorde."}];
   var venues=[{"lat": 48.883838, "lon": 2.3707362, "n": "25\u00b0 Est", "cat": "bar"}, {"lat": 48.8632455, "lon": 2.3860891, "n": "Atelier 103", "cat": "pub"}, {"lat": 48.8687856, "lon": 2.3275106, "n": "Bar Hemingway", "cat": "bar"}, {"lat": 48.861504, "lon": 2.3575623, "n": "Bar nouveau", "cat": "pub"}, {"lat": 48.8658567, "lon": 2.3778299, "n": "Caf\u00e9 Charbon", "cat": "bar"}, {"lat": 48.874105, "lon": 2.3752878, "n": "Caf\u00e9 Ch\u00e9ri(e)", "cat": "bar"}, {"lat": 48.8474549, "lon": 2.3471635, "n": "Ces ann\u00e9es l\u00e0", "cat": "bar"}, {"lat": 48.8429884, "lon": 2.3495493, "n": "Drunken Bunny", "cat": "pub"}];

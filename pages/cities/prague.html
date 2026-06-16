@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Prague — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 50.0865, "lon": 14.4114, "n": "Charles Bridge", "d": "Historic 14th-century bridge with 30 statues."}, {"lat": 50.0911, "lon": 14.4016, "n": "Prague Castle", "d": "Largest ancient castle complex in the world."}, {"lat": 50.0875, "lon": 14.4214, "n": "Old Town Square", "d": "Central square with the Astronomical Clock."}, {"lat": 50.0908, "lon": 14.4005, "n": "St. Vitus Cathedral", "d": "Gothic masterpiece located within the castle walls."}, {"lat": 50.087, "lon": 14.4207, "n": "Astronomical Clock", "d": "15th-century medieval clock on the Town Hall."}, {"lat": 50.0894, "lon": 14.4181, "n": "Josefov", "d": "The Jewish Quarter with historic synagogues and cemetery."}, {"lat": 50.0817, "lon": 14.4278, "n": "Wenceslas Square", "d": "Major city square and center of business and culture."}, {"lat": 50.0755, "lon": 14.4142, "n": "Dancing House", "d": "Modern architectural landmark designed by Gehry."}, {"lat": 50.0862, "lon": 14.4069, "n": "Lennon Wall", "d": "Wall filled with John Lennon-inspired graffiti and lyrics."}, {"lat": 50.0835, "lon": 14.3951, "n": "Petrin Lookout", "d": "Steel tower on a hill resembling the Eiffel Tower."}];
   var venues=[{"lat": 50.0874351, "lon": 14.4193478, "n": "Absintherie Franz Kafka", "cat": "bar"}, {"lat": 50.0824881, "lon": 14.444303, "n": "Belzepub", "cat": "pub"}, {"lat": 50.0747455, "lon": 14.431049, "n": "Ber.lin Bar", "cat": "bar"}, {"lat": 50.0842199, "lon": 14.4142283, "n": "Caf\u00e9-Bar Duende", "cat": "bar"}, {"lat": 50.0999349, "lon": 14.4879307, "n": "Club Montana", "cat": "pub"}, {"lat": 50.0804853, "lon": 14.405884, "n": "Craft Beer Spot", "cat": "bar"}, {"lat": 50.0862561, "lon": 14.4416022, "n": "District 3 Bar", "cat": "bar"}, {"lat": 50.086847, "lon": 14.3760312, "n": "Hostinec \"u Anduly\"", "cat": "pub"}];

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Oslo — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 59.9271, "lon": 10.7008, "n": "Vigeland Park", "d": "Large park with sculptures by Gustav Vigeland."}, {"lat": 59.9075, "lon": 10.7533, "n": "Opera House", "d": "Modern architectural landmark with a walkable roof."}, {"lat": 59.9064, "lon": 10.7361, "n": "Akershus Fortress", "d": "Medieval castle built to protect and provide a royal residence."}, {"lat": 59.9036, "lon": 10.6994, "n": "Fram Museum", "d": "Museum dedicated to Norwegian polar exploration."}, {"lat": 59.9641, "lon": 10.6675, "n": "Holmenkollen", "d": "Ski jumping hill and museum."}, {"lat": 59.9044, "lon": 10.7553, "n": "Munch Museum", "d": "Museum dedicated to the life and works of Edvard Munch."}, {"lat": 59.9036, "lon": 10.6983, "n": "Kon-Tiki Museum", "d": "Museum housing vessels from Thor Heyerdahl's expeditions."}, {"lat": 59.9161, "lon": 10.7375, "n": "National Gallery", "d": "Home to Norway's largest collection of art (The Scream)."}, {"lat": 59.9122, "lon": 10.7336, "n": "City Hall", "d": "Iconic building hosting the Nobel Peace Prize ceremony."}, {"lat": 59.9136, "lon": 10.7397, "n": "Karl Johans Gate", "d": "The main street of Oslo connecting the station and palace."}];
   var venues=[{"lat": 59.9274649, "lon": 10.7510975, "n": "Alf nabolagsbar", "cat": "bar"}, {"lat": 59.9236161, "lon": 10.7573918, "n": "Bar Bellini", "cat": "bar"}, {"lat": 59.9252056, "lon": 10.7593699, "n": "Bar Boca", "cat": "bar"}, {"lat": 59.9105204, "lon": 10.7261726, "n": "Beer Palace", "cat": "pub"}, {"lat": 59.9141, "lon": 10.738227, "n": "Br\u00f8drene Bergh", "cat": "bar"}, {"lat": 59.9297631, "lon": 10.7803576, "n": "Buen Bar", "cat": "bar"}, {"lat": 59.9127213, "lon": 10.7734065, "n": "Bydelskroa", "cat": "pub"}, {"lat": 59.9168848, "lon": 10.7532829, "n": "Cacadou", "cat": "pub"}];

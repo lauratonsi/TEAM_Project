@@ -238,6 +238,16 @@ il contatore `30/30 DTD-valid` nell'`index.html`) e tramite lo **script standalo
 [`validate.py`](scripts/validate.py) (vedi sopra), che costruisce il DOM e lo valida
 in modo isolato dal resto della pipeline.
 
+**Analisi critica della validazione.** Nel rispetto delle linee guida del Progetto TEAM la
+validazione strutturale è affidata a un **DTD**, scelta ottima per il **content-model misto**
+delle sezioni narrative (trasporti, introduzioni). Tuttavia, data l'abbondanza di dati puramente
+strutturati e numerici nel dataset (coordinate `lat`/`lon`, indici di sicurezza, green score,
+prezzi), il DTD mostra limiti di **espressività**: può validarli solo come stringhe generiche
+(`CDATA` / `#PCDATA`). In uno scenario di produzione, per garantire la robustezza dei *tipi di
+dato* prima ancora del parsing in Python, sarebbe tecnicamente più appropriato affiancare o
+sostituire il DTD con **Relax NG** o **XML Schema**, che offrono meccanismi di verifica molto più
+raffinati per i dati strutturati.
+
 ---
 
 ## Tecniche di Parsing Adottate
@@ -365,6 +375,33 @@ screen reader può saltare. Per renderli usabili sono stati aggiunti:
 
 Verifica: DevTools → scheda *Accessibility* (mostra i landmark etichettati), o la navigazione
 per landmark di uno screen reader.
+
+**Target tattili (tap-target).** Un audit **Lighthouse** (accessibilità **96/100**) ha segnalato
+marker Leaflet con area cliccabile inferiore a **24×24 px** o sovrapposti (es. Stoccolma, Oslo,
+Roma). Correzioni: marker di locali/attrazioni portati a **32×32 px** e marker delle capitali
+**raggruppati** con `L.markerClusterGroup`, così gli overlap a zoom basso si fondono in un unico
+bersaglio cliccabile (e si riaprono allo zoom).
+
+**Albero di accessibilità (`index.html`).** È la struttura che uno screen reader «vede» — solo
+ruoli e nomi accessibili, non lo stile:
+
+```
+document  "EuroCity Strategic Intelligence"            [lang="en"]
+├─ link        "Salta al contenuto"                    (skip-link, visibile al focus)
+├─ banner                                              ‹header›
+│  └─ navigation  "Navigazione principale"             ‹nav›  → Home · Report · Map
+├─ heading h1  "30 European capitals, one intelligence."
+├─ region      "How the data is built"                 ‹section[aria-label]›
+│  └─ heading h2  "How the data is built"
+├─ main        "Griglia delle capitali"                ‹main#city-grid›
+│  ├─ article → heading h2 "Amsterdam"  + link
+│  ├─ article → heading h2 "Athens"     + link
+│  └─ …  (30 article, una card per capitale)
+├─ contentinfo                                         ‹footer›  → link "Report & Documentation"
+├─ button      "Back to top"
+└─ dialog      "Virtual Analyst"                       ‹div[role="dialog"]›  ← widget flottante
+     button "Ask the analyst" · textbox · button "Ask" · button "Close the analyst"
+```
 
 **5. Il sito come riflesso diretto dei documenti.** Ogni dato del XML è reso **visibile** nella
 pagina, non solo scaricabile. L'URI canonico (`<source_url>`) è un **link cliccabile** su ogni

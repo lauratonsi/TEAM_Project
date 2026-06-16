@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Valletta — EuroCity Strategic Intelligence</title>
 </head>
@@ -100,7 +100,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 35.8949, "lon": 14.5123, "n": "Upper Barrakka", "d": "Public gardens with panoramic views of the harbor."}, {"lat": 35.8977, "lon": 14.5126, "n": "St. John's Cathedral", "d": "Highly decorated Baroque church with Caravaggio art."}, {"lat": 35.8944, "lon": 14.5186, "n": "Grand Harbour", "d": "The historic natural harbor of Malta."}, {"lat": 35.9019, "lon": 14.5186, "n": "Fort St. Elmo", "d": "Star-shaped fort and National War Museum."}, {"lat": 35.8986, "lon": 14.5136, "n": "Grandmaster's Palace", "d": "The historic center of government in Malta."}, {"lat": 35.8983, "lon": 14.5128, "n": "Republic Street", "d": "The main shopping and commercial street."}, {"lat": 35.8979, "lon": 14.5113, "n": "National Archaeology", "d": "Museum housing prehistoric artifacts from the islands."}, {"lat": 35.8997, "lon": 14.5139, "n": "Casa Rocca Piccola", "d": "16th-century palace belonging to a noble family."}, {"lat": 35.8997, "lon": 14.5125, "n": "Teatru Manoel", "d": "One of the oldest working theaters in Europe."}, {"lat": 35.8989, "lon": 14.5086, "n": "Hastings Gardens", "d": "Quiet gardens on top of the St. John's Bastion."}];
   var venues=[{"lat": 35.8999391, "lon": 14.5088802, "n": "222 Wine Bar", "cat": "bar"}, {"lat": 35.9244566, "lon": 14.488431, "n": "Bar Native", "cat": "bar"}, {"lat": 35.9222347, "lon": 14.4910566, "n": "Bellini", "cat": "bar"}, {"lat": 35.9081685, "lon": 14.5006288, "n": "Black Gold Saloon Malta", "cat": "bar"}, {"lat": 35.8951718, "lon": 14.4656418, "n": "Butterfly Bar", "cat": "bar"}, {"lat": 35.9080856, "lon": 14.5004518, "n": "Chequers", "cat": "bar"}, {"lat": 35.9158518, "lon": 14.4933316, "n": "City of London", "cat": "pub"}, {"lat": 35.9221301, "lon": 14.4923768, "n": "Club 22", "cat": "nightclub"}];

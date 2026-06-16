@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Lisbon — EuroCity Strategic Intelligence</title>
 </head>
@@ -108,7 +108,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 38.6916, "lon": -9.2159, "n": "Belem Tower", "d": "Fortified tower symbolizing the Age of Discovery."}, {"lat": 38.6979, "lon": -9.2067, "n": "Jeronimos Monastery", "d": "Former monastery of the Order of Saint Jerome."}, {"lat": 38.7121, "lon": -9.1303, "n": "Alfama District", "d": "Oldest district with narrow streets and Fado houses."}, {"lat": 38.7139, "lon": -9.1334, "n": "Sao Jorge Castle", "d": "Moorish castle overlooking the historic center."}, {"lat": 38.7075, "lon": -9.1364, "n": "Praca do Comercio", "d": "Large harbor-side square, one of Lisbon's main landmarks."}, {"lat": 38.7121, "lon": -9.1394, "n": "Santa Justa Lift", "d": "Neo-Gothic vertical elevator connecting city levels."}, {"lat": 38.7635, "lon": -9.0937, "n": "Oceanarium", "d": "Major aquarium located in the Parque das Na\u00e7\u00f5es."}, {"lat": 38.713, "lon": -9.144, "n": "Bairro Alto", "d": "Central district known for shopping and vibrant nightlife."}, {"lat": 38.7032, "lon": -9.1795, "n": "LX Factory", "d": "Creative hub in a former industrial complex."}, {"lat": 38.6936, "lon": -9.2057, "n": "Padr\u00e3o dos Descobrimenti", "d": "Monument celebrating the Portuguese Age of Discovery."}];
   var venues=[{"lat": 38.7043089, "lon": -9.1749231, "n": "3D", "cat": "bar"}, {"lat": 38.7116311, "lon": -9.144132, "n": "A Tasca do Chico", "cat": "pub"}, {"lat": 38.6809443, "lon": -9.1539133, "n": "A Tentadora", "cat": "pub"}, {"lat": 38.7105866, "lon": -9.1401197, "n": "Appraz\u00edvel", "cat": "bar"}, {"lat": 38.7054835, "lon": -9.1473475, "n": "B'leza", "cat": "nightclub"}, {"lat": 38.7128224, "lon": -9.1437112, "n": "Bar Arch\u00e9 Cohiba", "cat": "pub"}, {"lat": 38.7352581, "lon": -9.1555128, "n": "Bar Charh", "cat": "bar"}, {"lat": 38.7100003, "lon": -9.1451806, "n": "Bicaense", "cat": "bar"}];

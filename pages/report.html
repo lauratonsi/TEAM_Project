@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../stile.css?v=e4602a9f">
+  <link rel="stylesheet" href="../stile.css?v=6d07c052">
   <title>Report &amp; Documentation — EuroCity</title>
   <style>
     .report-nav {
@@ -1014,6 +1014,42 @@ for filename in files:                                  # scorre la directory XM
       </tr>
     </tbody>
   </table>
+
+  <h3>6. Target tattili (tap-target) sulla mappa</h3>
+  <p style="font-size:0.9rem">
+    Un audit <b>Lighthouse</b> (accessibilità <b>96/100</b>) ha segnalato che alcuni marker Leaflet
+    della mappa (es. Stoccolma, Oslo, Roma) avevano un'area tattile inferiore a <b>24&times;24&nbsp;px</b>
+    o parzialmente sovrapposta — un problema per chi naviga da touch o ha difficoltà motorie.
+    Interventi correttivi:
+  </p>
+  <ul style="font-size:0.9rem; color:var(--slate-500); line-height:1.8;">
+    <li>marker dei <b>locali</b> e delle <b>attrazioni</b> (pagine città) portati a <b>32&times;32&nbsp;px</b>, ben oltre la soglia di 24;</li>
+    <li>i marker delle <b>capitali</b>, che a zoom basso si sovrapponevano, sono ora <b>raggruppati</b> con <code>L.markerClusterGroup</code>: gli overlap si fondono in un unico bersaglio cliccabile e si riaprono allo zoom (≥ 6);</li>
+    <li>raggio dei punti-attrazione aumentato per un'area di tocco più comoda.</li>
+  </ul>
+
+  <h3>7. Albero di accessibilità — <code>index.html</code></h3>
+  <p style="font-size:0.9rem">
+    È la struttura che uno screen reader «vede»: solo <b>ruoli</b> e <b>nomi accessibili</b>, non lo
+    stile. I landmark (<code>banner / navigation / main / contentinfo</code>) e i heading
+    <code>h1&rarr;h2</code> offrono una mappa navigabile della pagina; il widget chat flottante è
+    esposto come <code>dialog</code>. Questa è una copia dell'albero reale della home:
+  </p>
+  <pre style="font-size:0.8rem; background:var(--slate-50); border:1px solid var(--slate-200); border-radius:8px; padding:14px; overflow:auto; line-height:1.5;">document  "EuroCity Strategic Intelligence"            [lang="en"]
+&#9500;&#9472; link        "Salta al contenuto"                    (skip-link, visibile al focus)
+&#9500;&#9472; banner                                              &lt;header&gt;
+&#9474;  &#9492;&#9472; navigation  "Navigazione principale"             &lt;nav&gt;  &rarr; Home &middot; Report &middot; Map
+&#9500;&#9472; heading h1  "30 European capitals, one intelligence."
+&#9500;&#9472; region      "How the data is built"                 &lt;section aria-label&gt;
+&#9474;  &#9492;&#9472; heading h2  "How the data is built"
+&#9500;&#9472; main        "Griglia delle capitali"                &lt;main id="city-grid"&gt;
+&#9474;  &#9500;&#9472; article &rarr; heading h2 "Amsterdam"  + link
+&#9474;  &#9500;&#9472; article &rarr; heading h2 "Athens"     + link
+&#9474;  &#9492;&#9472; &hellip;  (30 article, una card per capitale)
+&#9500;&#9472; contentinfo                                         &lt;footer&gt;  &rarr; link "Report &amp; Documentation"
+&#9500;&#9472; button      "Back to top"
+&#9492;&#9472; dialog      "Virtual Analyst"                       &lt;div role="dialog"&gt;  &larr; widget flottante
+     button "Ask the analyst" &middot; textbox &middot; button "Ask" &middot; button "Close the analyst"</pre>
 </section>
 
 <!-- ===== AI ===== -->

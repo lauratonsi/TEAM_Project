@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Berlin — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 52.5163, "lon": 13.3777, "n": "Brandenburg Gate", "d": "Neoclassical monument symbolizing German unity."}, {"lat": 52.5186, "lon": 13.3761, "n": "Reichstag", "d": "Historic parliament building with a modern glass dome."}, {"lat": 52.505, "lon": 13.4397, "n": "East Side Gallery", "d": "Longest remaining section of the Berlin Wall with murals."}, {"lat": 52.5169, "lon": 13.3999, "n": "Museum Island", "d": "UNESCO site housing five world-renowned museums."}, {"lat": 52.519, "lon": 13.4011, "n": "Berlin Cathedral", "d": "Grand 19th-century cathedral on the Spree river."}, {"lat": 52.5208, "lon": 13.4094, "n": "TV Tower", "d": "Iconic landmark offering views from 203 meters up."}, {"lat": 52.5074, "lon": 13.3904, "n": "Checkpoint Charlie", "d": "Famous former border crossing between East and West."}, {"lat": 52.5139, "lon": 13.3786, "n": "Holocaust Memorial", "d": "Memorial to the murdered Jews of Europe."}, {"lat": 52.5212, "lon": 13.2958, "n": "Charlottenburg Palace", "d": "Largest palace in Berlin with beautiful gardens."}, {"lat": 52.5094, "lon": 13.3767, "n": "Potsdamer Platz", "d": "Public square and symbol of Berlin's urban renewal."}];
   var venues=[{"lat": 52.56382, "lon": 13.328849, "n": "Albert's", "cat": "bar"}, {"lat": 52.5232268, "lon": 13.4164254, "n": "ASeven Club", "cat": "nightclub"}, {"lat": 52.547659, "lon": 13.4887104, "n": "Bar im Wasserturm", "cat": "bar"}, {"lat": 52.4927208, "lon": 13.4217007, "n": "Bei Schlawinchen", "cat": "pub"}, {"lat": 52.512055, "lon": 13.3918753, "n": "Bellboy Berlin", "cat": "bar"}, {"lat": 52.5511652, "lon": 13.4043646, "n": "Blaumilchkanal", "cat": "pub"}, {"lat": 52.5127422, "lon": 13.458706, "n": "booze bar berlin", "cat": "bar"}, {"lat": 52.5700374, "lon": 13.3221149, "n": "B\u00e4ren-Eck", "cat": "pub"}];

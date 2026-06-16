@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=e4602a9f">
+    <link rel="stylesheet" href="../../stile.css?v=6d07c052">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>Rome — EuroCity Strategic Intelligence</title>
 </head>
@@ -98,7 +98,7 @@
   var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
-  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
+  var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 41.8902, "lon": 12.4922, "n": "Colosseum", "d": "The largest ancient amphitheatre ever built."}, {"lat": 41.8986, "lon": 12.4769, "n": "Pantheon", "d": "Ancient Roman temple with a massive dome."}, {"lat": 41.9009, "lon": 12.4833, "n": "Trevi Fountain", "d": "Iconic Baronque fountain where tourists throw coins."}, {"lat": 41.8925, "lon": 12.4853, "n": "Roman Forum", "d": "Ruins of the heart of ancient Roman public life."}, {"lat": 41.9065, "lon": 12.4548, "n": "Vatican Museums", "d": "Art museums including the Sistine Chapel."}, {"lat": 41.9022, "lon": 12.4539, "n": "St. Peter's Basilica", "d": "Major Renaissance church in Vatican City."}, {"lat": 41.8992, "lon": 12.4731, "n": "Piazza Navona", "d": "Square built on an ancient stadium with Bernini fountains."}, {"lat": 41.9059, "lon": 12.4828, "n": "Spanish Steps", "d": "Famous monumental stairway of 135 steps."}, {"lat": 41.9031, "lon": 12.4663, "n": "Castel Sant'Angelo", "d": "Hadrian's mausoleum converted into a papal fortress."}, {"lat": 41.9142, "lon": 12.4921, "n": "Borghese Gallery", "d": "Museum in a villa housing Bernini and Caravaggio."}];
   var venues=[{"lat": 41.8876051, "lon": 12.4771625, "n": "404 Name Not Found", "cat": "pub"}, {"lat": 41.9622761, "lon": 12.5186845, "n": "ABC", "cat": "pub"}, {"lat": 41.9090849, "lon": 12.4536435, "n": "Alexanderplatz", "cat": "bar"}, {"lat": 41.889666, "lon": 12.4690788, "n": "Art Two", "cat": "bar"}, {"lat": 41.871175, "lon": 12.4790787, "n": "Bar Cornetteria", "cat": "pub"}, {"lat": 41.8627773, "lon": 12.4899263, "n": "Bar dei Cesaroni", "cat": "bar"}, {"lat": 41.8890547, "lon": 12.4707375, "n": "Bar San Calisto", "cat": "bar"}, {"lat": 41.89224, "lon": 12.5661173, "n": "Baraka Bistrot", "cat": "pub"}];
