@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([52.2297,21.0122],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 52.2479, "lon": 21.0144, "n": "Royal Castle"}, {"lat": 52.2497, "lon": 21.0122, "n": "Old Town Market"}, {"lat": 52.2153, "lon": 21.0347, "n": "Lazienki Park"}, {"lat": 52.2317, "lon": 21.0061, "n": "Palace of Culture"}, {"lat": 52.1642, "lon": 21.0894, "n": "Wilanow Palace"}, {"lat": 52.2325, "lon": 20.9808, "n": "Uprising Museum"}, {"lat": 52.2444, "lon": 21.025, "n": "Vistula Boulevards"}, {"lat": 52.2494, "lon": 20.9931, "n": "POLIN Museum"}, {"lat": 52.2369, "lon": 21.0089, "n": "Saxon Garden"}, {"lat": 52.25, "lon": 21.0333, "n": "Praga District"}];
+  var attrs=[{"lat": 52.2479, "lon": 21.0144, "n": "Royal Castle", "d": "Reconstructed castle and former royal residence."}, {"lat": 52.2497, "lon": 21.0122, "n": "Old Town Market", "d": "The historical heart and oldest part of Warsaw."}, {"lat": 52.2153, "lon": 21.0347, "n": "Lazienki Park", "d": "Largest park with a palace on the water."}, {"lat": 52.2317, "lon": 21.0061, "n": "Palace of Culture", "d": "Iconic socialist-realist skyscraper and city landmark."}, {"lat": 52.1642, "lon": 21.0894, "n": "Wilanow Palace", "d": "Baroque royal palace survived the wars."}, {"lat": 52.2325, "lon": 20.9808, "n": "Uprising Museum", "d": "Museum dedicated to the Warsaw Uprising of 1944."}, {"lat": 52.2444, "lon": 21.025, "n": "Vistula Boulevards", "d": "Modern riverside promenade with bars and views."}, {"lat": 52.2494, "lon": 20.9931, "n": "POLIN Museum", "d": "Museum of the History of Polish Jews."}, {"lat": 52.2369, "lon": 21.0089, "n": "Saxon Garden", "d": "Oldest public park in the city."}, {"lat": 52.25, "lon": 21.0333, "n": "Praga District", "d": "Artistic district on the right bank of the Vistula."}];
   var venues=[{"lat": 52.2071732, "lon": 20.9724513, "n": "Amarant", "cat": "pub"}, {"lat": 52.2294067, "lon": 21.0147013, "n": "Azyl", "cat": "bar"}, {"lat": 52.2480169, "lon": 21.0455613, "n": "Bar pod Kufelkiem", "cat": "pub"}, {"lat": 52.2247707, "lon": 21.0122492, "n": "Beirut", "cat": "bar"}, {"lat": 52.1737627, "lon": 21.0450075, "n": "Bez S\u0142owa", "cat": "pub"}, {"lat": 52.2400168, "lon": 21.0765039, "n": "Bluesky", "cat": "bar"}, {"lat": 52.2334668, "lon": 21.0202035, "n": "Cafe Foksal", "cat": "pub"}, {"lat": 52.2178857, "lon": 21.0170602, "n": "Cafe Rock'n'Roll", "cat": "pub"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([52.2297,21.0122],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

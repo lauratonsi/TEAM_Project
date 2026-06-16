@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([47.4979,19.0402],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 47.5071, "lon": 19.0456, "n": "Hungarian Parliament"}, {"lat": 47.4962, "lon": 19.0396, "n": "Buda Castle"}, {"lat": 47.5022, "lon": 19.0348, "n": "Fisherman's Bastion"}, {"lat": 47.499, "lon": 19.0441, "n": "Chain Bridge"}, {"lat": 47.5148, "lon": 19.0777, "n": "Heroes' Square"}, {"lat": 47.5009, "lon": 19.0514, "n": "St. Stephen's Basilica"}, {"lat": 47.5188, "lon": 19.0814, "n": "Sz\u00e9chenyi Thermal Bath"}, {"lat": 47.5273, "lon": 19.0468, "n": "Margaret Island"}, {"lat": 47.5019, "lon": 19.0342, "n": "Matthias Church"}, {"lat": 47.4871, "lon": 19.0583, "n": "Great Market Hall"}];
+  var attrs=[{"lat": 47.5071, "lon": 19.0456, "n": "Hungarian Parliament", "d": "Magnificent neo-Gothic building on the Danube bank."}, {"lat": 47.4962, "lon": 19.0396, "n": "Buda Castle", "d": "Historical palace complex of the Hungarian kings."}, {"lat": 47.5022, "lon": 19.0348, "n": "Fisherman's Bastion", "d": "Neo-Romanesque terrace with panoramic views of Pest."}, {"lat": 47.499, "lon": 19.0441, "n": "Chain Bridge", "d": "The first permanent bridge connecting Buda and Pest."}, {"lat": 47.5148, "lon": 19.0777, "n": "Heroes' Square", "d": "Major square featuring the Millennium Monument."}, {"lat": 47.5009, "lon": 19.0514, "n": "St. Stephen's Basilica", "d": "Roman Catholic basilica named after the first King of Hungary."}, {"lat": 47.5188, "lon": 19.0814, "n": "Sz\u00e9chenyi Thermal Bath", "d": "Largest medicinal bath in Europe with outdoor pools."}, {"lat": 47.5273, "lon": 19.0468, "n": "Margaret Island", "d": "Quiet island park in the middle of the Danube."}, {"lat": 47.5019, "lon": 19.0342, "n": "Matthias Church", "d": "Roman Catholic church in the heart of Buda's Castle District."}, {"lat": 47.4871, "lon": 19.0583, "n": "Great Market Hall", "d": "Large indoor market offering local food and crafts."}];
   var venues=[{"lat": 47.4978693, "lon": 19.068726, "n": "Ak\u00e1cfa s\u00f6r\u00f6z\u0151", "cat": "pub"}, {"lat": 47.5016715, "lon": 19.0397561, "n": "Belgian Brasserie Henri", "cat": "pub"}, {"lat": 47.5083433, "lon": 19.0547717, "n": "Bordizs\u00e1r", "cat": "pub"}, {"lat": 47.4973062, "lon": 19.0389453, "n": "Budapest Terrace", "cat": "pub"}, {"lat": 47.50485, "lon": 19.0623146, "n": "Cactus Juice", "cat": "bar"}, {"lat": 47.520504, "lon": 19.0578122, "n": "Cafe Room", "cat": "pub"}, {"lat": 47.5037114, "lon": 19.0637906, "n": "Caf\u00e9 Vian k\u00e1v\u00e9h\u00e1z", "cat": "pub"}, {"lat": 47.5018029, "lon": 19.0553158, "n": "Captain Cook", "cat": "pub"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([47.4979,19.0402],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

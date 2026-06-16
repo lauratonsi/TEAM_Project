@@ -905,15 +905,30 @@ def generate_city_pages(city_data):
         )
 
         # --- City map data ---
-        import json as _json
+        import json as _json, math as _math
         city_lat, city_lon = CAPITAL_COORDS.get(cl, (48.8566, 2.3522))
+
+        def _map_dist_km(lat2, lon2):
+            R = 6371
+            dlat = _math.radians(float(lat2) - city_lat)
+            dlon = _math.radians(float(lon2) - city_lon)
+            a = (_math.sin(dlat/2)**2 +
+                 _math.cos(_math.radians(city_lat)) * _math.cos(_math.radians(float(lat2))) *
+                 _math.sin(dlon/2)**2)
+            return R * 2 * _math.asin(_math.sqrt(a))
+
+        MAX_MAP_KM = 15
         map_attrs_js = _json.dumps([
-            {'lat': float(a['lat']), 'lon': float(a['lon']), 'n': a['n']}
-            for a in city['attractions'] if a.get('lat') and a.get('lon')
+            {'lat': float(a['lat']), 'lon': float(a['lon']), 'n': a['n'], 'd': a.get('d', '')}
+            for a in city['attractions']
+            if a.get('lat') and a.get('lon')
+            and _map_dist_km(a['lat'], a['lon']) <= MAX_MAP_KM
         ])
         map_venues_js = _json.dumps([
             {'lat': float(v['lat']), 'lon': float(v['lon']), 'n': v['n'], 'cat': v.get('cat', 'bar')}
-            for v in city['nightlife'] if v.get('lat') and v.get('lon')
+            for v in city['nightlife']
+            if v.get('lat') and v.get('lon')
+            and _map_dist_km(v['lat'], v['lon']) <= MAX_MAP_KM
         ])
 
         page_html = f"""<!DOCTYPE html>
@@ -971,20 +986,32 @@ def generate_city_pages(city_data):
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){{
-  var map = L.map('city-map').setView([{city_lat},{city_lon}],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{{s}}.basemaps.cartocdn.com/rastertiles/voyager/{{z}}/{{x}}/{{y}}{{r}}.png',
     {{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}}).addTo(map);
   var mkIcon=function(e){{return L.divIcon({{className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]}});}};
   var venueIco={{bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'}};
   var attrs={map_attrs_js};
   var venues={map_venues_js};
+  var allMkrs=[];
   attrs.forEach(function(a){{
-    L.marker([a.lat,a.lon],{{icon:mkIcon('📍')}}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{{icon:mkIcon('📍')}}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   }});
   venues.forEach(function(v){{
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{{icon:mkIcon(ico)}}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{{icon:mkIcon(ico)}}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   }});
+  if(allMkrs.length>0){{
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }}else{{
+    map.setView([{city_lat},{city_lon}],13);
+  }}
 }})();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {{

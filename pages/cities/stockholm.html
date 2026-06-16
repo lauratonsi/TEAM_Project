@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([59.3293,18.0686],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 59.3281, "lon": 18.0914, "n": "Vasa Museum"}, {"lat": 59.3251, "lon": 18.0708, "n": "Gamla Stan"}, {"lat": 59.3275, "lon": 18.0544, "n": "City Hall"}, {"lat": 59.3253, "lon": 18.1039, "n": "Skansen"}, {"lat": 59.3249, "lon": 18.0965, "n": "ABBA Museum"}, {"lat": 59.3268, "lon": 18.0717, "n": "Royal Palace"}, {"lat": 59.3261, "lon": 18.0847, "n": "Moderna Museet"}, {"lat": 59.3217, "lon": 17.8869, "n": "Drottningholm"}, {"lat": 59.3178, "lon": 18.0858, "n": "Fotografiska"}, {"lat": 59.3233, "lon": 18.0964, "n": "Gr\u00f6na Lund"}];
+  var attrs=[{"lat": 59.3281, "lon": 18.0914, "n": "Vasa Museum", "d": "Maritime museum with a salvaged 17th-century ship."}, {"lat": 59.3251, "lon": 18.0708, "n": "Gamla Stan", "d": "The well-preserved medieval old town."}, {"lat": 59.3275, "lon": 18.0544, "n": "City Hall", "d": "Building with a tower hosting the Nobel Banquet."}, {"lat": 59.3253, "lon": 18.1039, "n": "Skansen", "d": "The world's oldest open-air museum and zoo."}, {"lat": 59.3249, "lon": 18.0965, "n": "ABBA Museum", "d": "Interactive museum dedicated to the pop group."}, {"lat": 59.3268, "lon": 18.0717, "n": "Royal Palace", "d": "The official residence of the Swedish monarch."}, {"lat": 59.3261, "lon": 18.0847, "n": "Moderna Museet", "d": "State museum for modern and contemporary art."}, {"lat": 59.3217, "lon": 17.8869, "n": "Drottningholm", "d": "The private residence of the Swedish royal family."}, {"lat": 59.3178, "lon": 18.0858, "n": "Fotografiska", "d": "Major center for contemporary photography."}, {"lat": 59.3233, "lon": 18.0964, "n": "Gr\u00f6na Lund", "d": "Historic amusement park on the island of Djurg\u00e5rden."}];
   var venues=[{"lat": 59.3198089, "lon": 18.0688539, "n": "Akkurat", "cat": "pub"}, {"lat": 59.3403556, "lon": 18.0311352, "n": "Bagpipers's Inn", "cat": "pub"}, {"lat": 59.3340492, "lon": 18.0565703, "n": "Bar City Central", "cat": "pub"}, {"lat": 59.3327653, "lon": 18.0581755, "n": "Belgobaren", "cat": "pub"}, {"lat": 59.3321771, "lon": 18.0738967, "n": "Berns", "cat": "nightclub"}, {"lat": 59.3098213, "lon": 18.0758442, "n": "Brother Tuck", "cat": "pub"}, {"lat": 59.3333991, "lon": 18.0557611, "n": "Fasching", "cat": "nightclub"}, {"lat": 59.333999, "lon": 18.037233, "n": "Flying Scotsman Inn", "cat": "pub"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([59.3293,18.0686],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

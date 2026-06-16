@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([64.1355,-21.8954],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 64.1417, "lon": -21.9267, "n": "Hallgrimskirkja"}, {"lat": 64.1503, "lon": -21.9328, "n": "Harpa"}, {"lat": 64.1475, "lon": -21.9222, "n": "Sun Voyager"}, {"lat": 64.1294, "lon": -21.9189, "n": "Perlan"}, {"lat": 64.1456, "lon": -21.9286, "n": "Laugavegur"}, {"lat": 64.1419, "lon": -21.9481, "n": "National Museum"}, {"lat": 64.1444, "lon": -21.9392, "n": "Tj\u00f6rnin Lake"}, {"lat": 64.1472, "lon": -21.9422, "n": "Settlement Exhibition"}, {"lat": 63.8804, "lon": -22.4495, "n": "Blue Lagoon (Bus)"}, {"lat": 64.1644, "lon": -21.8953, "n": "Imagine Peace Tower"}];
+  var attrs=[{"lat": 64.1417, "lon": -21.9267, "n": "Hallgrimskirkja", "d": "Iconic Lutheran church inspired by basalt columns."}, {"lat": 64.1503, "lon": -21.9328, "n": "Harpa", "d": "Modern concert hall and conference center."}, {"lat": 64.1475, "lon": -21.9222, "n": "Sun Voyager", "d": "Steel sculpture of a boat located on the waterfront."}, {"lat": 64.1294, "lon": -21.9189, "n": "Perlan", "d": "Landmark building with a museum and revolving restaurant."}, {"lat": 64.1456, "lon": -21.9286, "n": "Laugavegur", "d": "The main shopping and nightlife street of Reykjavik."}, {"lat": 64.1419, "lon": -21.9481, "n": "National Museum", "d": "Museum showcasing Iceland's history from the settlement."}, {"lat": 64.1444, "lon": -21.9392, "n": "Tj\u00f6rnin Lake", "d": "Quiet lake in the city center popular for bird watching."}, {"lat": 64.1472, "lon": -21.9422, "n": "Settlement Exhibition", "d": "Museum based on a 10th-century Viking longhouse."}, {"lat": 64.1644, "lon": -21.8953, "n": "Imagine Peace Tower", "d": "Memorial to John Lennon on Vi\u00f0ey Island."}];
   var venues=[{"lat": 64.1476951, "lon": -21.940116, "n": "American Bar", "cat": "pub"}, {"lat": 64.1287706, "lon": -21.8660783, "n": "Billiardbarinn", "cat": "pub"}, {"lat": 64.1486444, "lon": -21.9398559, "n": "Bird", "cat": "pub"}, {"lat": 64.1052642, "lon": -21.8150646, "n": "Caf\u00e9 Bar 8", "cat": "bar"}, {"lat": 64.1126745, "lon": -21.9022563, "n": "Catalina", "cat": "pub"}, {"lat": 64.1388421, "lon": -21.885631, "n": "Classik Rock", "cat": "pub"}, {"lat": 64.1487969, "lon": -21.9404036, "n": "Crystal Champagne Bar", "cat": "pub"}, {"lat": 64.1463823, "lon": -21.9336621, "n": "Den Danske Kro", "cat": "pub"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([64.1355,-21.8954],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

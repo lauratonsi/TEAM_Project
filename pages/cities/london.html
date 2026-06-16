@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([51.5074,-0.1278],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 51.5194, "lon": -0.127, "n": "British Museum"}, {"lat": 51.5081, "lon": -0.0759, "n": "Tower of London"}, {"lat": 51.5033, "lon": -0.1195, "n": "London Eye"}, {"lat": 51.5014, "lon": -0.1419, "n": "Buckingham Palace"}, {"lat": 51.4994, "lon": -0.1273, "n": "Westminster Abbey"}, {"lat": 51.5055, "lon": -0.0754, "n": "Tower Bridge"}, {"lat": 51.5076, "lon": -0.0994, "n": "Tate Modern"}, {"lat": 51.5138, "lon": -0.0984, "n": "St Paul's Cathedral"}, {"lat": 51.5045, "lon": -0.0865, "n": "The Shard"}, {"lat": 51.4967, "lon": -0.1764, "n": "Natural History Museum"}];
+  var attrs=[{"lat": 51.5194, "lon": -0.127, "n": "British Museum", "d": "Museum dedicated to human history, art and culture."}, {"lat": 51.5081, "lon": -0.0759, "n": "Tower of London", "d": "Historic castle and home of the Crown Jewels."}, {"lat": 51.5033, "lon": -0.1195, "n": "London Eye", "d": "Giant Ferris wheel with views over the Thames."}, {"lat": 51.5014, "lon": -0.1419, "n": "Buckingham Palace", "d": "The official residence of the UK monarch."}, {"lat": 51.4994, "lon": -0.1273, "n": "Westminster Abbey", "d": "Gothic abbey church and site of royal coronations."}, {"lat": 51.5055, "lon": -0.0754, "n": "Tower Bridge", "d": "Iconic combined bascule and suspension bridge."}, {"lat": 51.5076, "lon": -0.0994, "n": "Tate Modern", "d": "National gallery of international modern art."}, {"lat": 51.5138, "lon": -0.0984, "n": "St Paul's Cathedral", "d": "Anglican cathedral and seat of the Bishop of London."}, {"lat": 51.5045, "lon": -0.0865, "n": "The Shard", "d": "Tallest building in the UK with an observation deck."}, {"lat": 51.4967, "lon": -0.1764, "n": "Natural History Museum", "d": "Museum housing vast specimens from natural history."}];
   var venues=[{"lat": 51.5167141, "lon": -0.1103638, "n": "26 Furnival Street", "cat": "pub"}, {"lat": 51.5566538, "lon": -0.1383959, "n": "Aces and Eights Saloon Bar", "cat": "pub"}, {"lat": 51.5163376, "lon": -0.119321, "n": "All Bar One", "cat": "bar"}, {"lat": 51.4695231, "lon": -0.0698846, "n": "Bar Story", "cat": "bar"}, {"lat": 51.5411992, "lon": -0.1458705, "n": "Canalside Bar", "cat": "bar"}, {"lat": 51.4994616, "lon": -0.1139642, "n": "Crown &amp; Cushion", "cat": "pub"}, {"lat": 51.5614305, "lon": -0.1504467, "n": "Duke of St. Albans", "cat": "pub"}, {"lat": 51.536675, "lon": -0.1031148, "n": "Fox on the Green", "cat": "bar"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([51.5074,-0.1278],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

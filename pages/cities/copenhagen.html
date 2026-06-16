@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([55.6761,12.5683],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 55.6929, "lon": 12.5993, "n": "Little Mermaid"}, {"lat": 55.6737, "lon": 12.5681, "n": "Tivoli Gardens"}, {"lat": 55.6811, "lon": 12.5893, "n": "Nyhavn"}, {"lat": 55.6841, "lon": 12.5931, "n": "Amalienborg"}, {"lat": 55.6858, "lon": 12.5772, "n": "Rosenborg Castle"}, {"lat": 55.6814, "lon": 12.5758, "n": "Round Tower"}, {"lat": 55.6731, "lon": 12.5997, "n": "Christiania"}, {"lat": 55.6786, "lon": 12.5744, "n": "Str\u00f8get"}, {"lat": 55.6762, "lon": 12.5805, "n": "Christiansborg"}, {"lat": 55.6746, "lon": 12.5748, "n": "National Museum"}];
+  var attrs=[{"lat": 55.6929, "lon": 12.5993, "n": "Little Mermaid", "d": "Small bronze statue inspired by Hans Christian Andersen."}, {"lat": 55.6737, "lon": 12.5681, "n": "Tivoli Gardens", "d": "Famous amusement park and pleasure garden."}, {"lat": 55.6811, "lon": 12.5893, "n": "Nyhavn", "d": "17th-century waterfront and entertainment district."}, {"lat": 55.6841, "lon": 12.5931, "n": "Amalienborg", "d": "The winter residence of the Danish royal family."}, {"lat": 55.6858, "lon": 12.5772, "n": "Rosenborg Castle", "d": "Renaissance castle housing the crown jewels."}, {"lat": 55.6814, "lon": 12.5758, "n": "Round Tower", "d": "17th-century tower built as an astronomical observatory."}, {"lat": 55.6731, "lon": 12.5997, "n": "Christiania", "d": "Self-proclaimed autonomous anarchist district."}, {"lat": 55.6786, "lon": 12.5744, "n": "Str\u00f8get", "d": "One of Europe's longest pedestrian shopping streets."}, {"lat": 55.6762, "lon": 12.5805, "n": "Christiansborg", "d": "Palace housing the Danish Parliament and Supreme Court."}, {"lat": 55.6746, "lon": 12.5748, "n": "National Museum", "d": "Denmark's central museum of cultural history."}];
   var venues=[{"lat": 55.6871555, "lon": 12.5621011, "n": "ALEFARM NBRO", "cat": "bar"}, {"lat": 55.6752681, "lon": 12.5328906, "n": "All\u00e9enberg", "cat": "pub"}, {"lat": 55.6834082, "lon": 12.5651843, "n": "Banker\u00e5t", "cat": "pub"}, {"lat": 55.6836628, "lon": 12.5245604, "n": "Bartof Caf\u00e9", "cat": "pub"}, {"lat": 55.6864894, "lon": 12.5874331, "n": "Black Swan", "cat": "bar"}, {"lat": 55.6864556, "lon": 12.5579695, "n": "Bl\u00e5g\u00e5rds Apotek", "cat": "bar"}, {"lat": 55.6814563, "lon": 12.5495147, "n": "Bodega 48", "cat": "pub"}, {"lat": 55.6696051, "lon": 12.4918721, "n": "Bodega Teglsk\u00e6gget", "cat": "bar"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([55.6761,12.5683],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

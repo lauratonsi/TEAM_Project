@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([48.1486,17.1077],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 48.1422, "lon": 17.1002, "n": "Bratislava Castle"}, {"lat": 48.1415, "lon": 17.1048, "n": "St. Martin's Cathedral"}, {"lat": 48.1449, "lon": 17.1068, "n": "Michael's Gate"}, {"lat": 48.1492, "lon": 17.1077, "n": "Grassalkovich Palace"}, {"lat": 48.1539, "lon": 17.0997, "n": "Slavin Memorial"}, {"lat": 48.1384, "lon": 17.1046, "n": "UFO Observation Deck"}, {"lat": 48.1432, "lon": 17.1166, "n": "Blue Church"}, {"lat": 48.1442, "lon": 17.1085, "n": "Primate's Palace"}, {"lat": 48.1439, "lon": 17.1086, "n": "Old Town Hall"}, {"lat": 48.1402, "lon": 17.1205, "n": "Eurovea"}];
+  var attrs=[{"lat": 48.1422, "lon": 17.1002, "n": "Bratislava Castle", "d": "Main castle of the city overlooking the Danube."}, {"lat": 48.1415, "lon": 17.1048, "n": "St. Martin's Cathedral", "d": "Gothic cathedral and former coronation site of kings."}, {"lat": 48.1449, "lon": 17.1068, "n": "Michael's Gate", "d": "The only city gate preserved from the medieval fortifications."}, {"lat": 48.1492, "lon": 17.1077, "n": "Grassalkovich Palace", "d": "The residence of the President of Slovakia."}, {"lat": 48.1539, "lon": 17.0997, "n": "Slavin Memorial", "d": "Monument and cemetery for Soviet soldiers."}, {"lat": 48.1384, "lon": 17.1046, "n": "UFO Observation Deck", "d": "Unique bridge structure with a deck offering city views."}, {"lat": 48.1432, "lon": 17.1166, "n": "Blue Church", "d": "Art Nouveau church famous for its blue color."}, {"lat": 48.1442, "lon": 17.1085, "n": "Primate's Palace", "d": "Neoclassical palace where the Peace of Pressburg was signed."}, {"lat": 48.1439, "lon": 17.1086, "n": "Old Town Hall", "d": "Complex of buildings dating back to the 14th century."}, {"lat": 48.1402, "lon": 17.1205, "n": "Eurovea", "d": "Modern riverside district for shopping and leisure."}];
   var venues=[{"lat": 48.1806419, "lon": 17.1845266, "n": "Amajka", "cat": "pub"}, {"lat": 48.1515503, "lon": 17.1184819, "n": "Americke pub", "cat": "pub"}, {"lat": 48.1590046, "lon": 17.1161827, "n": "Bastion", "cat": "pub"}, {"lat": 48.1475592, "lon": 17.1063371, "n": "Bernard pri L\u00fdceu", "cat": "pub"}, {"lat": 48.1786793, "lon": 17.0505322, "n": "Black Rose", "cat": "pub"}, {"lat": 48.1032675, "lon": 17.040655, "n": "C2", "cat": "nightclub"}, {"lat": 48.1527045, "lon": 17.0863227, "n": "Chilli Pub", "cat": "pub"}, {"lat": 48.1623963, "lon": 17.0499081, "n": "Coral", "cat": "pub"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([48.1486,17.1077],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

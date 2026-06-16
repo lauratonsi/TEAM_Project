@@ -95,20 +95,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([37.9838,23.7275],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 37.9715, "lon": 23.7257, "n": "Acropolis"}, {"lat": 37.9715, "lon": 23.7267, "n": "Parthenon"}, {"lat": 37.9681, "lon": 23.7285, "n": "Acropolis Museum"}, {"lat": 37.9751, "lon": 23.7225, "n": "Ancient Agora"}, {"lat": 37.9719, "lon": 23.7303, "n": "Plaka"}, {"lat": 37.9693, "lon": 23.7331, "n": "Temple of Zeus"}, {"lat": 37.9755, "lon": 23.7348, "n": "Syntagma Square"}, {"lat": 37.9891, "lon": 23.7327, "n": "National Archaeology Museum"}, {"lat": 37.9683, "lon": 23.7411, "n": "Panathenaic Stadium"}, {"lat": 37.9819, "lon": 23.7432, "n": "Lycabettus Hill"}];
+  var attrs=[{"lat": 37.9715, "lon": 23.7257, "n": "Acropolis", "d": "Ancient citadel with the Parthenon and other historic ruins."}, {"lat": 37.9715, "lon": 23.7267, "n": "Parthenon", "d": "Iconic temple dedicated to the goddess Athena."}, {"lat": 37.9681, "lon": 23.7285, "n": "Acropolis Museum", "d": "Museum housing artifacts found on the Acropolis site."}, {"lat": 37.9751, "lon": 23.7225, "n": "Ancient Agora", "d": "The ancient marketplace and heart of public life in Athens."}, {"lat": 37.9719, "lon": 23.7303, "n": "Plaka", "d": "Oldest neighborhood with neoclassical houses and tavernas."}, {"lat": 37.9693, "lon": 23.7331, "n": "Temple of Zeus", "d": "Ruined colossal temple dedicated to the king of Olympian gods."}, {"lat": 37.9755, "lon": 23.7348, "n": "Syntagma Square", "d": "Central square and home of the Hellenic Parliament."}, {"lat": 37.9891, "lon": 23.7327, "n": "National Archaeology Museum", "d": "Vast collection of ancient Greek antiquities."}, {"lat": 37.9683, "lon": 23.7411, "n": "Panathenaic Stadium", "d": "Marble stadium that hosted the first modern Olympic Games."}, {"lat": 37.9819, "lon": 23.7432, "n": "Lycabettus Hill", "d": "Highest point in Athens offering panoramic views."}];
   var venues=[{"lat": 37.9769161, "lon": 23.732861, "n": "7 Jokers", "cat": "bar"}, {"lat": 37.975977, "lon": 23.7161799, "n": "ACRO bar", "cat": "bar"}, {"lat": 37.9831211, "lon": 23.7366482, "n": "After Dark", "cat": "bar"}, {"lat": 37.9818864, "lon": 23.7166125, "n": "Alphaville", "cat": "bar"}, {"lat": 37.9969291, "lon": 23.723771, "n": "Amora", "cat": "bar"}, {"lat": 37.9711118, "lon": 23.7045141, "n": "Anodos", "cat": "nightclub"}, {"lat": 37.9742911, "lon": 23.7316857, "n": "Blue Bird", "cat": "bar"}, {"lat": 37.984424, "lon": 23.7345382, "n": "Box", "cat": "bar"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([37.9838,23.7275],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

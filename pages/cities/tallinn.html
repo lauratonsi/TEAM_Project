@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([59.437,24.7536],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 59.4372, "lon": 24.7453, "n": "Old Town"}, {"lat": 59.4358, "lon": 24.7397, "n": "Toompea Hill"}, {"lat": 59.4358, "lon": 24.7392, "n": "Nevsky Cathedral"}, {"lat": 59.4384, "lon": 24.7911, "n": "Kadriorg Park"}, {"lat": 59.4514, "lon": 24.7386, "n": "Seaplane Harbour"}, {"lat": 59.4373, "lon": 24.7451, "n": "Town Hall Square"}, {"lat": 59.4394, "lon": 24.7289, "n": "Telliskivi"}, {"lat": 59.4364, "lon": 24.7961, "n": "Kumu Art Museum"}, {"lat": 59.4411, "lon": 24.7478, "n": "St. Olaf's Church"}, {"lat": 59.4425, "lon": 24.7492, "n": "Fat Margaret"}];
+  var attrs=[{"lat": 59.4372, "lon": 24.7453, "n": "Old Town", "d": "medieval heart of Tallinn, a UNESCO World Heritage site."}, {"lat": 59.4358, "lon": 24.7397, "n": "Toompea Hill", "d": "Historic hill with the castle and parliament."}, {"lat": 59.4358, "lon": 24.7392, "n": "Nevsky Cathedral", "d": "Grand Orthodox cathedral with onion domes."}, {"lat": 59.4384, "lon": 24.7911, "n": "Kadriorg Park", "d": "Park and palace built by Peter the Great."}, {"lat": 59.4514, "lon": 24.7386, "n": "Seaplane Harbour", "d": "Maritime museum in historic seaplane hangars."}, {"lat": 59.4373, "lon": 24.7451, "n": "Town Hall Square", "d": "The social heart of the city since the 13th century."}, {"lat": 59.4394, "lon": 24.7289, "n": "Telliskivi", "d": "Creative city hub with restaurants and galleries."}, {"lat": 59.4364, "lon": 24.7961, "n": "Kumu Art Museum", "d": "Main museum for Estonian and international art."}, {"lat": 59.4411, "lon": 24.7478, "n": "St. Olaf's Church", "d": "Gothic church once the tallest building in the world."}, {"lat": 59.4425, "lon": 24.7492, "n": "Fat Margaret", "d": "Historic gate tower and maritime museum."}];
   var venues=[{"lat": 59.4358937, "lon": 24.747503, "n": "Baila", "cat": "bar"}, {"lat": 59.408641, "lon": 24.6746628, "n": "Black Mount Pubi", "cat": "bar"}, {"lat": 59.4388359, "lon": 24.7439968, "n": "Borsi", "cat": "bar"}, {"lat": 59.4376116, "lon": 24.7518225, "n": "Butterfly Lounge", "cat": "bar"}, {"lat": 59.4351515, "lon": 24.7455099, "n": "Club Hollywood", "cat": "nightclub"}, {"lat": 59.4354098, "lon": 24.7474924, "n": "Club M\u00fcnt", "cat": "nightclub"}, {"lat": 59.4352764, "lon": 24.7323042, "n": "Cubano Baar", "cat": "bar"}, {"lat": 59.4375887, "lon": 24.744038, "n": "DM Baar", "cat": "pub"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([59.437,24.7536],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

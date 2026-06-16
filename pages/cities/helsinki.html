@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([60.1699,24.9384],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 60.1702, "lon": 24.9522, "n": "Helsinki Cathedral"}, {"lat": 60.1453, "lon": 24.9888, "n": "Suomenlinna"}, {"lat": 60.1731, "lon": 24.9303, "n": "Temppeliaukio Church"}, {"lat": 60.1675, "lon": 24.9542, "n": "Market Square"}, {"lat": 60.1821, "lon": 24.9135, "n": "Sibelius Monument"}, {"lat": 60.1686, "lon": 24.9602, "n": "Uspenski Cathedral"}, {"lat": 60.1825, "lon": 24.8847, "n": "Seurasaari"}, {"lat": 60.17, "lon": 24.9441, "n": "Ateneum"}, {"lat": 60.1704, "lon": 24.9362, "n": "Amos Rex"}, {"lat": 60.1513, "lon": 24.9303, "n": "L\u00f6yly"}];
+  var attrs=[{"lat": 60.1702, "lon": 24.9522, "n": "Helsinki Cathedral", "d": "Evangelical Lutheran cathedral and iconic city landmark."}, {"lat": 60.1453, "lon": 24.9888, "n": "Suomenlinna", "d": "UNESCO sea fortress located on a cluster of islands."}, {"lat": 60.1731, "lon": 24.9303, "n": "Temppeliaukio Church", "d": "Unique church excavated directly into solid rock."}, {"lat": 60.1675, "lon": 24.9542, "n": "Market Square", "d": "Central square hosting food markets and events."}, {"lat": 60.1821, "lon": 24.9135, "n": "Sibelius Monument", "d": "Abstract sculpture dedicated to composer Jean Sibelius."}, {"lat": 60.1686, "lon": 24.9602, "n": "Uspenski Cathedral", "d": "Eastern Orthodox cathedral with golden onion domes."}, {"lat": 60.1825, "lon": 24.8847, "n": "Seurasaari", "d": "Open-air museum on a beautiful forested island."}, {"lat": 60.17, "lon": 24.9441, "n": "Ateneum", "d": "Museum housing the biggest collection of art in Finland."}, {"lat": 60.1704, "lon": 24.9362, "n": "Amos Rex", "d": "Contemporary art museum with iconic underground skylights."}, {"lat": 60.1513, "lon": 24.9303, "n": "L\u00f6yly", "d": "Modern public sauna and restaurant on the waterfront."}];
   var venues=[{"lat": 60.1677068, "lon": 24.9363589, "n": "Alcatraz Club", "cat": "nightclub"}, {"lat": 60.1625836, "lon": 24.9143167, "n": "Amsterdam", "cat": "pub"}, {"lat": 60.1672061, "lon": 24.9366771, "n": "Anna.K", "cat": "pub"}, {"lat": 60.19261, "lon": 24.9612206, "n": "Backas Bar", "cat": "pub"}, {"lat": 60.1952162, "lon": 24.8999173, "n": "Bar 36", "cat": "pub"}, {"lat": 60.1715906, "lon": 24.9463852, "n": "Bar Chaplin", "cat": "pub"}, {"lat": 60.1719895, "lon": 24.9204769, "n": "Bar Favela", "cat": "bar"}, {"lat": 60.2296028, "lon": 24.896449, "n": "Bar Keskari", "cat": "pub"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([60.1699,24.9384],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

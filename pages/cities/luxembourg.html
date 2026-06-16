@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([49.6117,6.1319],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 49.6117, "lon": 6.1342, "n": "Casemates du Bock"}, {"lat": 49.6108, "lon": 6.1311, "n": "Grand Ducal Palace"}, {"lat": 49.6114, "lon": 6.1286, "n": "Place d'Armes"}, {"lat": 49.6083, "lon": 6.1269, "n": "Adolphe Bridge"}, {"lat": 49.6075, "lon": 6.1353, "n": "Grund District"}, {"lat": 49.6169, "lon": 6.1397, "n": "Mudam"}, {"lat": 49.6097, "lon": 6.1314, "n": "Notre-Dame Cathedral"}, {"lat": 49.6186, "lon": 6.1422, "n": "Philharmonie"}, {"lat": 49.6111, "lon": 6.1339, "n": "Chemin de la Corniche"}, {"lat": 49.6164, "lon": 6.1392, "n": "Fort Th\u00fcngen"}];
+  var attrs=[{"lat": 49.6117, "lon": 6.1342, "n": "Casemates du Bock", "d": "Tunnel system part of the city's ancient fortifications."}, {"lat": 49.6108, "lon": 6.1311, "n": "Grand Ducal Palace", "d": "The official residence of the Grand Duke of Luxembourg."}, {"lat": 49.6114, "lon": 6.1286, "n": "Place d'Armes", "d": "Central square in the heart of the old city."}, {"lat": 49.6083, "lon": 6.1269, "n": "Adolphe Bridge", "d": "Double-decked arch bridge and city symbol."}, {"lat": 49.6075, "lon": 6.1353, "n": "Grund District", "d": "Picturesque valley neighborhood below the city center."}, {"lat": 49.6169, "lon": 6.1397, "n": "Mudam", "d": "Museum of modern art designed by I.M. Pei."}, {"lat": 49.6097, "lon": 6.1314, "n": "Notre-Dame Cathedral", "d": "Jesuit church and the only cathedral in the country."}, {"lat": 49.6186, "lon": 6.1422, "n": "Philharmonie", "d": "Modern concert hall on the Kirchberg plateau."}, {"lat": 49.6111, "lon": 6.1339, "n": "Chemin de la Corniche", "d": "Pedestrian promenade called 'the most beautiful balcony in Europe'."}, {"lat": 49.6164, "lon": 6.1392, "n": "Fort Th\u00fcngen", "d": "Historic fortification and home of the Dr\u00e4i Eechelen Museum."}];
   var venues=[{"lat": 49.6017703, "lon": 6.1365904, "n": ":buvette", "cat": "bar"}, {"lat": 49.5977436, "lon": 6.1348685, "n": "Albicastrense", "cat": "pub"}, {"lat": 49.6038566, "lon": 6.1298819, "n": "Alison caf\u00e9", "cat": "pub"}, {"lat": 49.594574, "lon": 6.1407228, "n": "Am klenge Bistro BTwo", "cat": "pub"}, {"lat": 49.6113179, "lon": 6.1337032, "n": "Art Sc\u00e8ne", "cat": "pub"}, {"lat": 49.595316, "lon": 6.1374921, "n": "Au Bon Vivant", "cat": "pub"}, {"lat": 49.6238045, "lon": 6.1054447, "n": "Bar Liberty", "cat": "pub"}, {"lat": 49.6008067, "lon": 6.130821, "n": "Barbarella", "cat": "pub"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([49.6117,6.1319],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

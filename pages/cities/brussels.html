@@ -95,20 +95,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([50.8503,4.3517],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 50.8467, "lon": 4.3524, "n": "Grand Place"}, {"lat": 50.8949, "lon": 4.3415, "n": "Atomium"}, {"lat": 50.845, "lon": 4.35, "n": "Manneken Pis"}, {"lat": 50.8417, "lon": 4.3622, "n": "Royal Palace"}, {"lat": 50.84, "lon": 4.3917, "n": "Cinquantenaire"}, {"lat": 50.894, "lon": 4.339, "n": "Mini-Europe"}, {"lat": 50.8511, "lon": 4.3601, "n": "Comic Strip Center"}, {"lat": 50.8422, "lon": 4.3586, "n": "Magritte Museum"}, {"lat": 50.8439, "lon": 4.3567, "n": "Mont des Arts"}, {"lat": 50.8478, "lon": 4.3601, "n": "St. Michael Cathedral"}];
+  var attrs=[{"lat": 50.8467, "lon": 4.3524, "n": "Grand Place", "d": "Central square known for its ornate guildhouses."}, {"lat": 50.8949, "lon": 4.3415, "n": "Atomium", "d": "Futuristic structure representing an iron crystal."}, {"lat": 50.845, "lon": 4.35, "n": "Manneken Pis", "d": "Famous small bronze statue of a boy urinating."}, {"lat": 50.8417, "lon": 4.3622, "n": "Royal Palace", "d": "The official residence of the Belgian monarchs."}, {"lat": 50.84, "lon": 4.3917, "n": "Cinquantenaire", "d": "Park featuring a triumphal arch and museums."}, {"lat": 50.894, "lon": 4.339, "n": "Mini-Europe", "d": "Park with miniature models of European landmarks."}, {"lat": 50.8511, "lon": 4.3601, "n": "Comic Strip Center", "d": "Museum dedicated to the history of Belgian comics."}, {"lat": 50.8422, "lon": 4.3586, "n": "Magritte Museum", "d": "Museum dedicated to the surrealist artist Ren\u00e9 Magritte."}, {"lat": 50.8439, "lon": 4.3567, "n": "Mont des Arts", "d": "Historic site with gardens and a panoramic city view."}, {"lat": 50.8478, "lon": 4.3601, "n": "St. Michael Cathedral", "d": "Gothic church located on the Treurenberg hill."}];
   var venues=[{"lat": 50.8945197, "lon": 4.4338512, "n": "'t Amusement", "cat": "pub"}, {"lat": 50.8474396, "lon": 4.3496613, "n": "'t Zuidpaleis", "cat": "bar"}, {"lat": 50.9041033, "lon": 4.304737, "n": "Au 140", "cat": "pub"}, {"lat": 50.8962835, "lon": 4.3927382, "n": "Au Bon Coin", "cat": "pub"}, {"lat": 50.8854765, "lon": 4.3180751, "n": "Au Bon Coin", "cat": "pub"}, {"lat": 50.8272547, "lon": 4.3633948, "n": "BBP Bailli", "cat": "pub"}, {"lat": 50.8464012, "lon": 4.3497269, "n": "Belgica", "cat": "bar"}, {"lat": 50.8302079, "lon": 4.3442551, "n": "Brasserie Verschueren", "cat": "pub"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([50.8503,4.3517],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {

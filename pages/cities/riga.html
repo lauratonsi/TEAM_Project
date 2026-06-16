@@ -91,20 +91,32 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var map = L.map('city-map').setView([56.946,24.1059],13);
+  var map = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:20px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[24,24],iconAnchor:[12,12]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
-  var attrs=[{"lat": 56.9491, "lon": 24.1053, "n": "Old Town"}, {"lat": 56.9472, "lon": 24.1069, "n": "House of Blackheads"}, {"lat": 56.9514, "lon": 24.1131, "n": "Freedom Monument"}, {"lat": 56.9475, "lon": 24.1094, "n": "St. Peter's Church"}, {"lat": 56.9439, "lon": 24.1158, "n": "Central Market"}, {"lat": 56.9592, "lon": 24.1089, "n": "Art Nouveau District"}, {"lat": 56.9539, "lon": 24.1158, "n": "Nativity Cathedral"}, {"lat": 56.9556, "lon": 24.1131, "n": "Latvian National Museum"}, {"lat": 56.9511, "lon": 24.1064, "n": "Swedish Gate"}, {"lat": 56.9714, "lon": 24.2272, "n": "Motor Museum"}];
+  var attrs=[{"lat": 56.9491, "lon": 24.1053, "n": "Old Town", "d": "Historical heart of Riga with cobblestone streets."}, {"lat": 56.9472, "lon": 24.1069, "n": "House of Blackheads", "d": "Historic building reconstructed after WWII."}, {"lat": 56.9514, "lon": 24.1131, "n": "Freedom Monument", "d": "Memorial honoring soldiers killed in the War of Independence."}, {"lat": 56.9475, "lon": 24.1094, "n": "St. Peter's Church", "d": "Gothic church with an observation tower."}, {"lat": 56.9439, "lon": 24.1158, "n": "Central Market", "d": "Large market in former Zeppelin hangars."}, {"lat": 56.9592, "lon": 24.1089, "n": "Art Nouveau District", "d": "Area with the highest concentration of Art Nouveau architecture."}, {"lat": 56.9539, "lon": 24.1158, "n": "Nativity Cathedral", "d": "The largest Orthodox cathedral in the city."}, {"lat": 56.9556, "lon": 24.1131, "n": "Latvian National Museum", "d": "Art museum in a magnificent historicist building."}, {"lat": 56.9511, "lon": 24.1064, "n": "Swedish Gate", "d": "The only remaining gate from the old city walls."}, {"lat": 56.9714, "lon": 24.2272, "n": "Motor Museum", "d": "Museum with a large collection of antique vehicles."}];
   var venues=[{"lat": 56.9492836, "lon": 24.105903, "n": "13 kr\u0113sli", "cat": "pub"}, {"lat": 56.9469015, "lon": 24.1127752, "n": "Aka Latvie\u0161u virtuve", "cat": "bar"}, {"lat": 56.9553822, "lon": 24.1743201, "n": "Alus D\u0101rzs", "cat": "bar"}, {"lat": 56.9263963, "lon": 24.1701644, "n": "Black dragon", "cat": "bar"}, {"lat": 56.9560192, "lon": 24.1093673, "n": "Blues House", "cat": "bar"}, {"lat": 56.9466142, "lon": 24.1103808, "n": "Bon-Vivant", "cat": "pub"}, {"lat": 56.9535179, "lon": 24.127078, "n": "Bruklinas krogs un viskija b\u0101rs", "cat": "pub"}, {"lat": 57.0045916, "lon": 24.1767692, "n": "Cabo cafe", "cat": "bar"}];
+  var allMkrs=[];
   attrs.forEach(function(a){
-    L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map).bindTooltip(a.n);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    m.bindTooltip(a.n);
+    if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
+    allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map).bindTooltip(v.n+' ('+v.cat+')');
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    m.bindTooltip(v.n);
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    allMkrs.push(m);
   });
+  if(allMkrs.length>0){
+    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+  }else{
+    map.setView([56.946,24.1059],13);
+  }
 })();
 var btt = document.getElementById('back-to-top');
 window.addEventListener('scroll', function() {
