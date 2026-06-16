@@ -308,9 +308,11 @@ CITY_PALETTE = [
 ]
 
 
-def _map_js_block(city_data, div_id, city_link_prefix=''):
+def _map_js_block(city_data, div_id, city_link_prefix='', with_layer_control=False):
     """Restituisce il blocco <script> Leaflet per il div indicato.
-    city_link_prefix: prefisso URL per i link alle pagine città."""
+    city_link_prefix: prefisso URL per i link alle pagine città.
+    with_layer_control: se True aggiunge un controllo per filtrare i livelli
+    (attrazioni / locali / capitali) — usato nella mappa a tutta pagina."""
     sorted_cities = sorted(city_data, key=lambda c: c['city_lower'])
     color_map = {c['city_lower']: CITY_PALETTE[i % len(CITY_PALETTE)]
                  for i, c in enumerate(sorted_cities)}
@@ -357,12 +359,14 @@ def _map_js_block(city_data, div_id, city_link_prefix=''):
         "var map_VID=L.map('DID',{center:[52,15],zoom:4});\n"
         "L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',"
         "{attribution:'\\u00a9 OpenStreetMap \\u00a9 CARTO',maxZoom:19}).addTo(map_VID);\n"
-        "var cluster_VID=L.markerClusterGroup({chunkedLoading:true});\n"
+        "var attr_VID=L.markerClusterGroup({chunkedLoading:true});\n"
+        "var venue_VID=L.markerClusterGroup({chunkedLoading:true});\n"
+        "var cap_VID=L.layerGroup();\n"
         "var mapData_VID=DATA_JSON;\n"
         "mapData_VID.forEach(function(c){\n"
         "  c.attrs.forEach(function(a){\n"
         "    L.circleMarker([a.lat,a.lon],{radius:7,color:c.color,fillColor:c.color,fillOpacity:0.85,weight:2})\n"
-        "    .addTo(cluster_VID)\n"
+        "    .addTo(attr_VID)\n"
         "    .bindPopup('<div class=\"mp\"><h4 style=\"color:'+c.color+';margin:0 0 3px\">'+a.n+'</h4>'\n"
         "      +'<small style=\"color:#888\">'+c.flag+' '+c.name+'</small>'\n"
         "      +'<p style=\"margin:6px 0;font-size:.8rem\">'+a.d+'</p>'\n"
@@ -377,7 +381,7 @@ def _map_js_block(city_data, div_id, city_link_prefix=''):
         "      html:'<div class=\"venue-mk\">'+ico+'</div>',\n"
         "      iconSize:[28,28],iconAnchor:[14,14]\n"
         "    })})\n"
-        "    .addTo(cluster_VID)\n"
+        "    .addTo(venue_VID)\n"
         "    .bindPopup('<div class=\"mp\"><h4 style=\"margin:0 0 3px\">'+ico+' '+v.n+'</h4>'\n"
         "      +'<small style=\"color:#888\">'+c.flag+' '+c.name+'</small>'\n"
         "      +'<p style=\"margin:6px 0;font-size:.8rem;color:#64748b\">'+v.cat+'</p>'\n"
@@ -389,31 +393,43 @@ def _map_js_block(city_data, div_id, city_link_prefix=''):
         "      className:'',\n"
         "      html:'<div class=\"cap-mk\" style=\"background:'+c.color+'\">'+'<span>'+c.flag+'</span><b>'+c.appeal+'</b></div>',\n"
         "      iconSize:[70,28],iconAnchor:[35,14]\n"
-        "    })}).addTo(map_VID)\n"
+        "    })}).addTo(cap_VID)\n"
         "    .bindPopup('<div class=\"mp\"><b>'+c.flag+' '+c.name+'</b>'\n"
         "      +'<br>Appeal: <b>'+c.appeal+'</b>'\n"
         "      +'<br><a href=\"'+c.link+'\" class=\"pl\">Explore '+c.name+' \\u2192</a></div>');\n"
         "  }\n"
         "});\n"
-        "map_VID.addLayer(cluster_VID);\n"
-        "</script>"
+        "map_VID.addLayer(attr_VID);map_VID.addLayer(venue_VID);map_VID.addLayer(cap_VID);\n"
+        + ("L.control.layers(null,{'\\ud83d\\udccd Attrazioni':attr_VID,"
+           "'\\ud83c\\udf7a Bar e locali':venue_VID,"
+           "'\\ud83c\\udfc1 Capitali':cap_VID},{collapsed:false}).addTo(map_VID);\n"
+           if with_layer_control else "")
+        + "</script>"
     ).replace('VID', var_id).replace('DID', div_id).replace('DATA_JSON', map_data_json)
 
     return js
 
 
 def generate_map(city_data):
-    """Genera pages/mappa_attrazioni.html: Leaflet con marker colorati per città, capitali e popup."""
-    map_js = _map_js_block(city_data, 'map', 'cities/')
+    """Genera pages/mappa_attrazioni.html: mappa Leaflet navigabile con header, legenda
+    e controllo dei livelli (attrazioni / locali / capitali)."""
+    map_js = _map_js_block(city_data, 'map', 'cities/', with_layer_control=True)
+    n_attr = sum(len(c['attractions']) for c in city_data)
+    n_ven  = sum(len(c['nightlife']) for c in city_data)
     map_html = (
         "<!DOCTYPE html>\n<html lang='en'><head>\n"
         "<meta charset='UTF-8'>\n"
+        "<title>Mappa — EuroCity</title>\n"
         "<meta name='viewport' content='width=device-width,initial-scale=1'>\n"
+        "<link rel='stylesheet' href='../stile.css'>\n"
         "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css'>\n"
         "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css'>\n"
         "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css'>\n"
         "<style>\n"
-        "html,body,#map{height:100%;margin:0;font-family:Inter,sans-serif}\n"
+        "html,body{height:100%;margin:0}\n"
+        "body{display:flex;flex-direction:column;font-family:Inter,sans-serif}\n"
+        ".map-wrap{position:relative;flex:1 1 auto;min-height:0}\n"
+        "#map{position:absolute;inset:0}\n"
         ".cap-mk{display:flex;align-items:center;gap:4px;padding:4px 9px;border-radius:20px;"
         "font-weight:800;font-size:.72rem;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.35);white-space:nowrap}\n"
         ".venue-mk{font-size:18px;line-height:28px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.35))}\n"
@@ -421,9 +437,42 @@ def generate_map(city_data):
         ".mp h4{font-size:.9rem;margin:0 0 2px}\n"
         ".pl{display:inline-block;margin-top:7px;color:#E74C3C;font-weight:700;font-size:.78rem;text-decoration:none}\n"
         ".pl:hover{text-decoration:underline}\n"
+        ".map-legend{position:absolute;left:12px;bottom:18px;z-index:1000;background:#fff;"
+        "border:1px solid var(--slate-200);border-radius:12px;padding:12px 14px;font-size:.78rem;"
+        "box-shadow:0 4px 14px rgba(0,0,0,.12);max-width:230px}\n"
+        ".map-legend h4{margin:0 0 8px;font-size:.8rem;color:var(--primary-dark)}\n"
+        ".map-legend div{display:flex;align-items:center;gap:8px;margin:5px 0;color:var(--slate-800)}\n"
+        ".lg-dot{width:13px;height:13px;border-radius:50%;background:#E74C3C;border:2px solid #C0392B;flex:none}\n"
+        ".map-intro{position:absolute;left:12px;top:12px;z-index:1000;background:rgba(255,255,255,.94);"
+        "border-radius:12px;padding:10px 14px;font-size:.8rem;box-shadow:0 4px 14px rgba(0,0,0,.12);max-width:260px}\n"
+        ".map-intro b{color:var(--accent)}\n"
+        "@media(max-width:600px){.map-legend{display:none}}\n"
         "</style>\n"
         "</head><body>\n"
-        "<main id='map' aria-label='Mappa interattiva delle attrazioni e dei locali'></main>\n"
+        "<a href='#map' class='skip-link'>Salta alla mappa</a>\n"
+        "<header class='topbar'>\n"
+        "  <div class='topbar-inner'>\n"
+        "    <a href='../index.html' class='topbar-logo'>EuroCity <b>SI</b></a>\n"
+        "    <nav class='topbar-nav' aria-label='Navigazione principale'>\n"
+        "      <a href='../index.html'>\U0001f3e0 Home</a>\n"
+        "      <a href='report.html'>\U0001f4ca Report</a>\n"
+        "      <a href='mappa_attrazioni.html' class='active' aria-current='page'>\U0001f5fa️ Map</a>\n"
+        "    </nav>\n"
+        "  </div>\n"
+        "</header>\n"
+        "<main class='map-wrap' aria-label='Mappa interattiva delle attrazioni e dei locali'>\n"
+        "  <div id='map'></div>\n"
+        "  <div class='map-intro'>\U0001f5fa️ <b>" + str(len(city_data)) + " capitali</b> · "
+        + str(n_attr) + " attrazioni · " + str(n_ven) + " locali.<br>"
+        "Usa il pannello in alto a destra per filtrare i livelli.</div>\n"
+        "  <div class='map-legend'>\n"
+        "    <h4>Legenda</h4>\n"
+        "    <div><span class='lg-dot'></span> Attrazione turistica<br><small style='color:#94a3b8'>(colore = città)</small></div>\n"
+        "    <div><span>\U0001f37a</span> Bar / Pub</div>\n"
+        "    <div><span>\U0001f3b5</span> Nightclub</div>\n"
+        "    <div><span class='cap-mk' style='background:#334155'>\U0001f3f3 99</span> Capitale (Appeal)</div>\n"
+        "  </div>\n"
+        "</main>\n"
         "<script src='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js'></script>\n"
         "<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js'></script>\n"
         + map_js + "\n</body></html>"
