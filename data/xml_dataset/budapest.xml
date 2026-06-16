@@ -5,6 +5,7 @@
     <title>Budapest</title>
     <name_it>Budapest</name_it>
     <flag>🇭🇺</flag>
+    <source_url>https://en.wikipedia.org/wiki/Budapest</source_url>
   </metadata>
   <indicators>
     <hotel_count>0</hotel_count>

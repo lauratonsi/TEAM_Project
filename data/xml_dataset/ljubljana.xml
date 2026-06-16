@@ -5,6 +5,7 @@
     <title>Ljubljana</title>
     <name_it>Ljubljana</name_it>
     <flag>🇸🇮</flag>
+    <source_url>https://en.wikipedia.org/wiki/Ljubljana</source_url>
   </metadata>
   <indicators>
     <hotel_count>23</hotel_count>

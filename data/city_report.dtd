@@ -2,10 +2,13 @@
 <!ATTLIST city_report 
     appeal_score CDATA #REQUIRED>
 
-<!ELEMENT metadata (title, name_it, flag)>
+<!ELEMENT metadata (title, name_it, flag, source_url)>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT name_it (#PCDATA)>
 <!ELEMENT flag (#PCDATA)>
+<!-- Canonical URI/IRI of the city: used as microdata itemid in the HTML so that
+     the identifiers in the site correspond exactly to those in the documents -->
+<!ELEMENT source_url (#PCDATA)>
 
 <!ELEMENT indicators (hotel_count, hotel_price, safety, environment, cost_index, economic_accessibility)>
 <!ELEMENT hotel_count (#PCDATA)>

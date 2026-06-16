@@ -5,6 +5,7 @@
     <title>Copenhagen</title>
     <name_it>Copenhagen</name_it>
     <flag>🇩🇰</flag>
+    <source_url>https://en.wikipedia.org/wiki/Copenhagen</source_url>
   </metadata>
   <indicators>
     <hotel_count>10</hotel_count>

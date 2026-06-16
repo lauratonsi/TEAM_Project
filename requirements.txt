@@ -7,3 +7,6 @@ openai
 python-dotenv
 rank-bm25>=0.2.2
 httpx>=0.27.0
+lxml
+pandas
+microdata>=0.8.0

@@ -5,6 +5,7 @@
     <title>Bucharest</title>
     <name_it>Bucharest</name_it>
     <flag>🇷🇴</flag>
+    <source_url>https://en.wikipedia.org/wiki/Bucharest</source_url>
   </metadata>
   <indicators>
     <hotel_count>41</hotel_count>

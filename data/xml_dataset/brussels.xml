@@ -5,6 +5,7 @@
     <title>Brussels</title>
     <name_it>Brussels</name_it>
     <flag>🇧🇪</flag>
+    <source_url>https://en.wikipedia.org/wiki/Brussels</source_url>
   </metadata>
   <indicators>
     <hotel_count>9</hotel_count>

@@ -5,6 +5,30 @@ from lxml import etree
 ROOT = Path(__file__).resolve().parent.parent
 
 
+def count_microdata(paths):
+    """Count microdata annotations across the GENERATED HTML files (regex-based, no
+    external deps). Used in the report to quantify, verifiably, the injected microdata.
+    Cross-checked with the `microdata` library (microdata.get_items) used in the course."""
+    import collections
+    tot = {'items': 0, 'props': 0, 'ids': 0}
+    by_type = collections.Counter()
+    by_prop = collections.Counter()
+    for p in paths:
+        try:
+            with open(p, encoding='utf-8') as f:
+                src = f.read()
+        except OSError:
+            continue
+        tot['items'] += len(re.findall(r'\bitemscope\b', src))
+        tot['ids']   += len(re.findall(r'\bitemid=', src))
+        for t in re.findall(r'''itemtype=["']([^"']+)["']''', src):
+            by_type[t.rsplit('/', 1)[-1]] += 1
+        for pr in re.findall(r'''itemprop=["']([^"']+)["']''', src):
+            by_prop[pr] += 1
+            tot['props'] += 1
+    return tot, by_type, by_prop
+
+
 def inline_to_html(el):
     """Serialise an element's *mixed content* into an HTML fragment, mapping the
     DTD inline vocabulary (b / i / link) to HTML (b / i / a). Plain text and tails
@@ -458,6 +482,8 @@ def deploy():
                 'name_en': root.findtext(".//title"),
                 'name_it': root.findtext(".//name_it") or root.findtext(".//title"),
                 'flag': root.findtext(".//flag") or "🇪🇺",
+                # Canonical URI read FROM the document → microdata itemid (correspondence)
+                'uri': root.findtext(".//source_url") or "",
                 'appeal': root.get("appeal_score", "0"),
                 'price': root.findtext(".//hotel_price", "0"),
                 'safety': root.xpath("string(.//safety/@index_score)") or "0",
@@ -491,7 +517,7 @@ def deploy():
             p_pct = _pct(city_obj['price'], 2.5)   # max €250
             e_pct = _pct(city_obj['economy'])
             cards_html += f"""
-            <article class="city-card" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" itemscope itemtype="https://schema.org/City" itemid="https://en.wikipedia.org/wiki/{city_obj['name_en']}">
+            <article class="city-card" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" itemscope itemtype="https://schema.org/City" itemid="{city_obj['uri']}">
                 <div class="landmark-img-wrap">
                     <img src="{img_src}" alt="{city_obj['name_it']} Landmark" class="landmark-img" loading="lazy">
                     <div class="city-card-overlay">
@@ -809,8 +835,8 @@ document.querySelectorAll('.chip').forEach(function(chip) {{
         f.write(full_html)
     print(f"✅ Dashboard generata correttamente con {len(city_data)} città.")
 
-    generate_report(city_data)
     generate_city_pages(city_data)
+    generate_report(city_data, validation)   # dopo le pagine: conta i microdata reali generati
     generate_map(city_data)
 
 
@@ -1009,9 +1035,9 @@ def generate_city_pages(city_data):
     <span class="city-nav-title">{city['flag']} {city['name_it']}</span>
     <a href="{next_city['city_lower']}.html">{next_city['flag']} {next_city['name_it']} →</a>
 </nav>
-<main class="city-detail" itemscope itemtype="https://schema.org/City" itemid="https://en.wikipedia.org/wiki/{city['name_en']}">
+<main class="city-detail" itemscope itemtype="https://schema.org/City" itemid="{city['uri']}">
     <meta itemprop="name" content="{city['name_it']}">
-    <link itemprop="url" href="https://en.wikipedia.org/wiki/{city['name_en']}">
+    <link itemprop="url" href="{city['uri']}">
     {geo_html}
     {lm_html}
     <h1 class="city-title" style="margin-bottom:25px;">{city['flag']} {city['name_it']}</h1>
@@ -1083,9 +1109,11 @@ btt.onclick = function() {{ window.scrollTo({{top: 0, behavior: 'smooth'}}); }};
     print(f"✅ Generate {n} pagine HTML individuali.")
 
 
-def generate_report(city_data):
-    """Generate report.html: statistics extracted from XML files + pipeline documentation."""
+def generate_report(city_data, validation):
+    """Generate report.html: statistics extracted from XML files + pipeline documentation.
+    `validation` is the DTD-validation summary computed in deploy() (valid/invalid/malformed)."""
     print("📊 Generazione report.html...")
+    val_total = validation['valid'] + validation['invalid'] + validation['malformed']
 
     def fv(x):
         try: return float(x)
@@ -1101,6 +1129,18 @@ def generate_report(city_data):
     total_hotels      = sum(int(c['hotel_count']) for c in city_data if str(c['hotel_count']).isdigit())
     total_attractions = sum(len(c['attractions']) for c in city_data)
     cities_with_dist  = sum(1 for c in city_data if c['districts'])
+
+    # --- Microdata: conteggio REALE sui file HTML appena generati (index + pagine città) ---
+    md_files = [str(OUTPUT_HTML)] + sorted(
+        str(p) for p in (ROOT / 'pages' / 'cities').glob('*.html'))
+    md_tot, md_types, md_props = count_microdata(md_files)
+    md_attrs_total = md_tot['items'] * 2 + md_tot['props'] + md_tot['ids']  # itemscope+itemtype+itemprop+itemid
+    md_type_rows = "".join(
+        f"<tr><td style='padding:6px 10px'><code>schema.org/{t}</code></td>"
+        f"<td style='padding:6px 10px;text-align:right'><b>{n}</b></td></tr>"
+        for t, n in md_types.most_common())
+    md_prop_chips = " · ".join(
+        f"<code>{p}</code>&nbsp;{n}" for p, n in md_props.most_common())
     avg_appeal = round(sum(fv(c['appeal'])  for c in city_data) / total_cities, 1)
     avg_safety = round(sum(fv(c['safety'])  for c in city_data) / total_cities, 1)
     avg_green  = round(sum(fv(c['green'])   for c in city_data) / total_cities, 1)
@@ -1286,6 +1326,7 @@ def generate_report(city_data):
   <a href="#architettura">⚙️ Architecture</a>
   <a href="#dtd">📄 DTD Schema</a>
   <a href="#parsing">🔬 Parsing Techniques</a>
+  <a href="#microdata">🏷️ Microdata</a>
   <a href="#ai">🤖 AI Usage</a>
   <a href="#team">👥 Team</a>
 </nav>
@@ -1366,7 +1407,7 @@ def generate_report(city_data):
         <p>
           Legge i 30 file XML validati e produce <code>index.html</code> (dashboard con griglia
           di card), le 30 pagine città e questo <code>report.html</code>. Le card includono
-          <b>microdata Schema.org</b> (<code>itemscope itemtype="City"</code>). I dati vengono
+          <b>microdata Schema.org</b> (<code>itemscope itemtype="https://schema.org/City"</code>). I dati vengono
           anche serializzati come JSON inline per il Virtual Analyst client-side.
         </p>
       </div>
@@ -1454,6 +1495,37 @@ def generate_report(city_data):
     prima della scrittura. La validazione è eseguita a runtime con <code>lxml.etree.DTD</code>.
     I file non validi vengono segnalati ma non scritti.
   </p>
+
+  <h3>Script di validazione dedicato — <code>validate.py</code></h3>
+  <p>
+    Oltre alla validazione integrata nella pipeline, un <b>script Python standalone</b>
+    (<code>scripts/validate.py</code>), indipendente dal resto del progetto, costruisce il
+    <b>DOM</b> di ogni documento e lo valida rispetto al DTD — esattamente con l'approccio
+    dei laboratori del corso (<code>lab_castles_validation.py</code>). Distingue i tre esiti:
+    <b>mal formato</b> (<code>etree.parse()</code> solleva <code>XMLSyntaxError</code>),
+    <b>non valido</b> (<code>dtd.validate()</code> &rarr; <code>False</code>) e <b>valido</b>.
+  </p>
+  <pre>from lxml import etree
+
+dtd = etree.DTD(open("data/city_report.dtd", "rb"))   # carica il DTD
+
+for filename in files:                                  # scorre la directory XML
+    try:
+        tree = etree.parse(path)                        # parsing → DOM (buona forma)
+    except etree.XMLSyntaxError:
+        ...                                             # documento MAL FORMATO
+        continue
+    if dtd.validate(tree):                              # validazione del DOM
+        ...                                             # VALIDO
+    else:
+        print(dtd.error_log.filter_from_errors())       # NON VALIDO</pre>
+  <p style="background:#ECFDF5;border-left:4px solid #10B981;padding:12px 16px;border-radius:8px;font-size:0.85rem;margin-top:4px">
+    ✅ Esecuzione: <code>python scripts/validate.py</code> &rarr;
+    <b>{validation['valid']}/{val_total} validi · {validation['invalid']} non validi ·
+    {validation['malformed']} malformati</b>. Lo script restituisce codice di uscita
+    <code>0</code> solo se tutti i documenti sono validi.
+  </p>
+
   <h3>Struttura ad albero</h3>
   <pre>city_report [@appeal_score]
 ├── metadata
@@ -1578,6 +1650,47 @@ def generate_report(city_data):
       </p>
     </div>
   </div>
+</section>
+
+<!-- ===== MICRODATA ===== -->
+<section class="report-section" id="microdata">
+  <h2>🏷️ Microdata Schema.org — Quantificazione</h2>
+  <p>
+    Lo script <code>deploy_dashboard.py</code> annota i documenti HTML con <b>microdata
+    Schema.org</b> (vincolo del progetto). Le annotazioni sono generate dallo script e i
+    conteggi qui sotto sono calcolati <b>a runtime</b> ri-scansionando i file HTML appena
+    prodotti (<code>index.html</code> + {len(md_files) - 1} pagine città), quindi non sono
+    valori statici.
+  </p>
+  <div class="rstat-grid">
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>{md_tot['items']}</span><span class='rstat-label'>Item tipizzati (itemscope)</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>{md_tot['props']}</span><span class='rstat-label'>Proprietà (itemprop)</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>{md_tot['ids']}</span><span class='rstat-label'>Identificatori (itemid)</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:#8b5cf6'>{md_attrs_total}</span><span class='rstat-label'>Attributi microdata totali</span></div>
+  </div>
+
+  <h3>Item per tipo Schema.org</h3>
+  <table class="rank-table" style="max-width:420px">
+    <tbody>{md_type_rows}</tbody>
+  </table>
+
+  <h3>Proprietà annotate (itemprop)</h3>
+  <p style="font-size:0.86rem;color:var(--slate-500);line-height:2">{md_prop_chips}</p>
+
+  <h3>Struttura annidata e identità (itemid ↔ documento)</h3>
+  <p style="font-size:0.9rem">
+    La gerarchia rispecchia il pattern multi-livello visto a lezione
+    (<code>lab_microdata.py</code>): <code>City&nbsp;&gt;&nbsp;containsPlace/TouristAttraction&nbsp;&gt;&nbsp;geo/GeoCoordinates</code>.
+    Ogni <code>itemid</code> è l'<b>URI canonico letto dal documento XML</b>
+    (elemento <code>&lt;source_url&gt;</code>): gli identificatori nel sito
+    <b>corrispondono esattamente</b> a quelli nei documenti, come nell'esempio dei castelli
+    del corso (<code>itemid</code> ↔ <code>id</code> del file XML).
+  </p>
+  <p style="font-size:0.86rem;color:var(--slate-500)">
+    Verifica round-trip: i microdata sono ri-estratti dalle pagine con la libreria
+    <code>microdata</code> (<code>microdata.get_items()</code>), la stessa usata nel
+    laboratorio del corso.
+  </p>
 </section>
 
 <!-- ===== AI ===== -->

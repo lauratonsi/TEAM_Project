@@ -5,6 +5,7 @@
     <title>Madrid</title>
     <name_it>Madrid</name_it>
     <flag>🇪🇸</flag>
+    <source_url>https://en.wikipedia.org/wiki/Madrid</source_url>
   </metadata>
   <indicators>
     <hotel_count>0</hotel_count>

@@ -5,6 +5,7 @@
     <title>Luxembourg</title>
     <name_it>Luxembourg</name_it>
     <flag>🇱🇺</flag>
+    <source_url>https://en.wikipedia.org/wiki/Luxembourg</source_url>
   </metadata>
   <indicators>
     <hotel_count>0</hotel_count>

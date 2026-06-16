@@ -5,6 +5,7 @@
     <title>Athens</title>
     <name_it>Athens</name_it>
     <flag>🇬🇷</flag>
+    <source_url>https://en.wikipedia.org/wiki/Athens</source_url>
   </metadata>
   <indicators>
     <hotel_count>27</hotel_count>

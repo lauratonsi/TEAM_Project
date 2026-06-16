@@ -5,6 +5,7 @@
     <title>Lisbon</title>
     <name_it>Lisbon</name_it>
     <flag>🇵🇹</flag>
+    <source_url>https://en.wikipedia.org/wiki/Lisbon</source_url>
   </metadata>
   <indicators>
     <hotel_count>8</hotel_count>

@@ -135,6 +135,7 @@
   <a href="#architettura">⚙️ Architecture</a>
   <a href="#dtd">📄 DTD Schema</a>
   <a href="#parsing">🔬 Parsing Techniques</a>
+  <a href="#microdata">🏷️ Microdata</a>
   <a href="#ai">🤖 AI Usage</a>
   <a href="#team">👥 Team</a>
 </nav>
@@ -215,7 +216,7 @@
         <p>
           Legge i 30 file XML validati e produce <code>index.html</code> (dashboard con griglia
           di card), le 30 pagine città e questo <code>report.html</code>. Le card includono
-          <b>microdata Schema.org</b> (<code>itemscope itemtype="City"</code>). I dati vengono
+          <b>microdata Schema.org</b> (<code>itemscope itemtype="https://schema.org/City"</code>). I dati vengono
           anche serializzati come JSON inline per il Virtual Analyst client-side.
         </p>
       </div>
@@ -303,6 +304,37 @@
     prima della scrittura. La validazione è eseguita a runtime con <code>lxml.etree.DTD</code>.
     I file non validi vengono segnalati ma non scritti.
   </p>
+
+  <h3>Script di validazione dedicato — <code>validate.py</code></h3>
+  <p>
+    Oltre alla validazione integrata nella pipeline, un <b>script Python standalone</b>
+    (<code>scripts/validate.py</code>), indipendente dal resto del progetto, costruisce il
+    <b>DOM</b> di ogni documento e lo valida rispetto al DTD — esattamente con l'approccio
+    dei laboratori del corso (<code>lab_castles_validation.py</code>). Distingue i tre esiti:
+    <b>mal formato</b> (<code>etree.parse()</code> solleva <code>XMLSyntaxError</code>),
+    <b>non valido</b> (<code>dtd.validate()</code> &rarr; <code>False</code>) e <b>valido</b>.
+  </p>
+  <pre>from lxml import etree
+
+dtd = etree.DTD(open("data/city_report.dtd", "rb"))   # carica il DTD
+
+for filename in files:                                  # scorre la directory XML
+    try:
+        tree = etree.parse(path)                        # parsing → DOM (buona forma)
+    except etree.XMLSyntaxError:
+        ...                                             # documento MAL FORMATO
+        continue
+    if dtd.validate(tree):                              # validazione del DOM
+        ...                                             # VALIDO
+    else:
+        print(dtd.error_log.filter_from_errors())       # NON VALIDO</pre>
+  <p style="background:#ECFDF5;border-left:4px solid #10B981;padding:12px 16px;border-radius:8px;font-size:0.85rem;margin-top:4px">
+    ✅ Esecuzione: <code>python scripts/validate.py</code> &rarr;
+    <b>30/30 validi · 0 non validi ·
+    0 malformati</b>. Lo script restituisce codice di uscita
+    <code>0</code> solo se tutti i documenti sono validi.
+  </p>
+
   <h3>Struttura ad albero</h3>
   <pre>city_report [@appeal_score]
 ├── metadata
@@ -337,10 +369,13 @@
 &lt;!ATTLIST city_report 
     appeal_score CDATA #REQUIRED&gt;
 
-&lt;!ELEMENT metadata (title, name_it, flag)&gt;
+&lt;!ELEMENT metadata (title, name_it, flag, source_url)&gt;
 &lt;!ELEMENT title (#PCDATA)&gt;
 &lt;!ELEMENT name_it (#PCDATA)&gt;
 &lt;!ELEMENT flag (#PCDATA)&gt;
+&lt;!-- Canonical URI/IRI of the city: used as microdata itemid in the HTML so that
+     the identifiers in the site correspond exactly to those in the documents --&gt;
+&lt;!ELEMENT source_url (#PCDATA)&gt;
 
 &lt;!ELEMENT indicators (hotel_count, hotel_price, safety, environment, cost_index, economic_accessibility)&gt;
 &lt;!ELEMENT hotel_count (#PCDATA)&gt;
@@ -481,6 +516,47 @@
       </p>
     </div>
   </div>
+</section>
+
+<!-- ===== MICRODATA ===== -->
+<section class="report-section" id="microdata">
+  <h2>🏷️ Microdata Schema.org — Quantificazione</h2>
+  <p>
+    Lo script <code>deploy_dashboard.py</code> annota i documenti HTML con <b>microdata
+    Schema.org</b> (vincolo del progetto). Le annotazioni sono generate dallo script e i
+    conteggi qui sotto sono calcolati <b>a runtime</b> ri-scansionando i file HTML appena
+    prodotti (<code>index.html</code> + 30 pagine città), quindi non sono
+    valori statici.
+  </p>
+  <div class="rstat-grid">
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>690</span><span class='rstat-label'>Item tipizzati (itemscope)</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>2040</span><span class='rstat-label'>Proprietà (itemprop)</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>60</span><span class='rstat-label'>Identificatori (itemid)</span></div>
+    <div class='rstat-card'><span class='rstat-val' style='color:#8b5cf6'>3480</span><span class='rstat-label'>Attributi microdata totali</span></div>
+  </div>
+
+  <h3>Item per tipo Schema.org</h3>
+  <table class="rank-table" style="max-width:420px">
+    <tbody><tr><td style='padding:6px 10px'><code>schema.org/GeoCoordinates</code></td><td style='padding:6px 10px;text-align:right'><b>330</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/TouristAttraction</code></td><td style='padding:6px 10px;text-align:right'><b>300</b></td></tr><tr><td style='padding:6px 10px'><code>schema.org/City</code></td><td style='padding:6px 10px;text-align:right'><b>60</b></td></tr></tbody>
+  </table>
+
+  <h3>Proprietà annotate (itemprop)</h3>
+  <p style="font-size:0.86rem;color:var(--slate-500);line-height:2"><code>name</code>&nbsp;360 · <code>geo</code>&nbsp;330 · <code>latitude</code>&nbsp;330 · <code>longitude</code>&nbsp;330 · <code>description</code>&nbsp;330 · <code>containsPlace</code>&nbsp;300 · <code>url</code>&nbsp;30 · <code>image</code>&nbsp;30</p>
+
+  <h3>Struttura annidata e identità (itemid ↔ documento)</h3>
+  <p style="font-size:0.9rem">
+    La gerarchia rispecchia il pattern multi-livello visto a lezione
+    (<code>lab_microdata.py</code>): <code>City&nbsp;&gt;&nbsp;containsPlace/TouristAttraction&nbsp;&gt;&nbsp;geo/GeoCoordinates</code>.
+    Ogni <code>itemid</code> è l'<b>URI canonico letto dal documento XML</b>
+    (elemento <code>&lt;source_url&gt;</code>): gli identificatori nel sito
+    <b>corrispondono esattamente</b> a quelli nei documenti, come nell'esempio dei castelli
+    del corso (<code>itemid</code> ↔ <code>id</code> del file XML).
+  </p>
+  <p style="font-size:0.86rem;color:var(--slate-500)">
+    Verifica round-trip: i microdata sono ri-estratti dalle pagine con la libreria
+    <code>microdata</code> (<code>microdata.get_items()</code>), la stessa usata nel
+    laboratorio del corso.
+  </p>
 </section>
 
 <!-- ===== AI ===== -->

@@ -5,6 +5,7 @@
     <title>Helsinki</title>
     <name_it>Helsinki</name_it>
     <flag>🇫🇮</flag>
+    <source_url>https://en.wikipedia.org/wiki/Helsinki</source_url>
   </metadata>
   <indicators>
     <hotel_count>10</hotel_count>

@@ -32,9 +32,10 @@ ELABORAZIONE/
 ├── extract_wiki_info.py      # Script 1: preparazione dataset
 ├── final_processor.py        # Script 2: elaborazione principale → XML
 ├── deploy_dashboard.py       # Script 3: generazione HTML
+├── validate.py               # Script standalone: validazione DTD + DOM
 ├── index.html                # Dashboard navigabile (output principale)
 ├── report.html               # Report statistiche + documentazione pipeline
-├── style.css                 # Foglio di stile applicato a tutti i documenti HTML
+├── stile.css                 # Foglio di stile applicato a tutti i documenti HTML
 └── mappa_attrazioni.html     # Mappa Leaflet.js con tutte le attrazioni
 ```
 
@@ -54,6 +55,30 @@ python final_processor.py
 
 # Passo 2 – Generazione HTML (index.html + report.html)
 python deploy_dashboard.py
+```
+
+### Validazione DTD — script standalone
+
+Oltre alla validazione integrata nella pipeline, è disponibile uno **script dedicato e
+indipendente** che valida la directory XML rispetto al DTD, modellato sui laboratori del
+corso (`lab_castles_validation.py`):
+
+```bash
+python scripts/validate.py             # valida data/xml_dataset/
+python scripts/validate.py <altra_dir> # valida un'altra directory
+```
+
+Per ogni file lo script: (1) costruisce il **DOM** con `etree.parse()` — intercettando i
+documenti *mal formati*; (2) lo valida con `etree.DTD(...).validate()` — distinguendo i
+*non validi*; (3) ispeziona il DOM (radice, n. elementi, attrazioni). Restituisce codice
+di uscita `0` solo se tutti i file sono validi. Output:
+
+```
+📄 DTD     : data/city_report.dtd
+📂 Sorgente: data/xml_dataset
+  ✅ amsterdam.xml   VALIDO   [root=<city_report> · 112 elementi · 10 attractions · appeal=63.2]
+  …
+📋 Risultato: 30/30 validi · 0 non validi · 0 malformati
 ```
 
 > `extract_wiki_info.py` è lo script di preparazione iniziale (richiede `mwparserfromhell`, `spacy`,
@@ -94,10 +119,11 @@ testo di un distretto come intro della città sarebbe fuorviante).
                         wiki_intro?, landmark_image?, nightlife?)>
 <!ATTLIST city_report appeal_score CDATA #REQUIRED>
 
-<!ELEMENT metadata (title, name_it, flag)>
+<!ELEMENT metadata (title, name_it, flag, source_url)>
+<!ELEMENT source_url (#PCDATA)>            <!-- URI canonico → itemid microdata -->
 <!ELEMENT indicators (hotel_count, hotel_price, safety, environment,
                        cost_index, economic_accessibility)>
-<!ELEMENT transport (#PCDATA)>
+<!ELEMENT transport (#PCDATA | b | i | link)*>   <!-- content-model misto -->
 <!ELEMENT accommodation (hotel*)>
 <!ELEMENT hotel (name, price)>
 <!ELEMENT highlights (attraction*)>
@@ -105,17 +131,30 @@ testo di un distretto come intro della città sarebbe fuorviante).
 <!ATTLIST attraction lat CDATA #REQUIRED lon CDATA #REQUIRED>
 <!ELEMENT districts (district*)>
 <!ELEMENT district (name, description)>
-<!ELEMENT description (#PCDATA)>
-<!ELEMENT wiki_intro (#PCDATA)>
+<!ELEMENT description (#PCDATA | b | i | link)*>  <!-- content-model misto -->
+<!ELEMENT wiki_intro (#PCDATA | b | i | link)*>   <!-- content-model misto -->
 <!ELEMENT landmark_image (#PCDATA)>
+<!-- Elementi inline per il content-model misto -->
+<!ELEMENT b (#PCDATA)>
+<!ELEMENT i (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link href CDATA #REQUIRED>
 <!ELEMENT nightlife (venue*)>
 <!ELEMENT venue (name, category)>
 <!ATTLIST venue lat CDATA #IMPLIED lon CDATA #IMPLIED>
 <!ELEMENT category (#PCDATA)>
 ```
 
-Tutti i 30 file XML superano la validazione DTD eseguita a runtime
-con `lxml.etree.DTD`.
+**Content-model misto.** I campi `transport`, `description` e `wiki_intro` non sono solo
+testo: contengono markup inline (`<b>`, `<i>`, `<link href>`) interlacciato al testo —
+il content-model misto richiesto dal progetto (es. `<b>Roma</b> ... (<i>Trastevere</i>)`).
+
+**Validazione.** Tutti i 30 file XML superano la validazione DTD, eseguita con
+`lxml.etree.DTD` in **tre punti**: in scrittura (`final_processor.py`), in lettura
+(`deploy_dashboard.py`, che distingue documenti *mal formati* da *non validi* e mostra
+il contatore `30/30 DTD-valid` nell'`index.html`) e tramite lo **script standalone**
+[`validate.py`](scripts/validate.py) (vedi sopra), che costruisce il DOM e lo valida
+in modo isolato dal resto della pipeline.
 
 ---
 
@@ -162,13 +201,44 @@ Per ogni distretto si cerca la sotto-pagina corrispondente nel dump XML
 e si estrae il testo introduttivo come descrizione.
 
 ### 5. Microdata Schema.org
-Ogni card HTML include annotazioni microdata generate dallo script:
+Ogni documento HTML è annotato con microdata Schema.org generati dallo script, con
+struttura **annidata** (come il pattern `Place > Review > Person` visto a lezione):
 ```html
-<article itemscope itemtype="https://schema.org/City">
-  <span itemprop="name">Roma</span>
+<main itemscope itemtype="https://schema.org/City"
+      itemid="https://en.wikipedia.org/wiki/Rome">
+  <meta itemprop="name" content="Roma">
+  <link itemprop="url" href="https://en.wikipedia.org/wiki/Rome">
   ...
-</article>
+  <tr itemprop="containsPlace" itemscope itemtype="https://schema.org/TouristAttraction">
+    <span itemprop="name">Colosseum</span>
+    <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+      <meta itemprop="latitude" content="41.89">
+      <meta itemprop="longitude" content="12.49">
+    </div>
+  </tr>
+</main>
 ```
+
+**Identità (itemid ↔ documento).** L'`itemid` non è arbitrario: è l'URI canonico letto
+dall'elemento `<source_url>` del file XML. Gli identificatori nel sito **corrispondono
+esattamente** a quelli nei documenti, come nell'esempio dei castelli del corso
+(`itemid` dell'HTML ↔ `id` del file XML).
+
+**Quantificazione** (conteggio a runtime, ri-scansionando l'HTML generato — sezione
+`#microdata` di `report.html`; verificato con la libreria `microdata.get_items()` del corso):
+
+| Metrica | Valore |
+|---------|--------|
+| Item tipizzati (`itemscope`) | **690** |
+| Proprietà (`itemprop`) | **2.040** |
+| Identificatori (`itemid`) | 60 |
+| **Attributi microdata totali** | **≈ 3.480** |
+
+| Tipo Schema.org | Item |
+|-----------------|------|
+| `GeoCoordinates` | 330 |
+| `TouristAttraction` | 300 |
+| `City` | 60 |
 
 ---
 
@@ -206,7 +276,7 @@ Le sintesi strategiche in `city_descriptions.json` sono state generate con Claud
 | `xml_dataset/*.xml` | 30 file XML, uno per capitale, validati DTD |
 | `index.html` | Dashboard navigabile con griglia di card, mappa e Virtual Analyst |
 | `report.html` | Statistiche estratte + documentazione pipeline |
-| `style.css` | Foglio di stile applicato a tutti i documenti HTML |
+| `stile.css` | Foglio di stile applicato a tutti i documenti HTML |
 | `pages/mappa_attrazioni.html` | Mappa Leaflet con attrazioni e locali notturni geolocalizzati |
 | `data/nightlife.json` | 240 venue (8 per città) da Overpass API (OpenStreetMap) |
 

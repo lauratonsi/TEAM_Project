@@ -5,6 +5,7 @@
     <title>London</title>
     <name_it>London</name_it>
     <flag>🇬🇧</flag>
+    <source_url>https://en.wikipedia.org/wiki/London</source_url>
   </metadata>
   <indicators>
     <hotel_count>0</hotel_count>
