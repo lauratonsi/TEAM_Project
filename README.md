@@ -264,9 +264,10 @@ Ogni documento HTML è annotato con microdata Schema.org generati dallo script, 
 struttura **annidata** (come il pattern `Place > Review > Person` visto a lezione):
 ```html
 <main itemscope itemtype="https://schema.org/City"
-      itemid="https://en.wikipedia.org/wiki/Rome">
+      itemid="https://en.wikivoyage.org/wiki/Rome">
   <meta itemprop="name" content="Roma">
-  <link itemprop="url" href="https://en.wikipedia.org/wiki/Rome">
+  <!-- URI canonico (Wikivoyage = fonte dei documenti), reso come link visibile -->
+  <a itemprop="url" href="https://en.wikivoyage.org/wiki/Rome">en.wikivoyage.org/wiki/Rome</a>
   ...
   <tr itemprop="containsPlace" itemscope itemtype="https://schema.org/TouristAttraction">
     <span itemprop="name">Colosseum</span>

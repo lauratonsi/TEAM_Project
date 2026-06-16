@@ -431,9 +431,10 @@ def run_pipeline():
         etree.SubElement(meta, "title").text = name
         etree.SubElement(meta, "name_it").text = CITY_MAP.get(name, {}).get("it", name)
         etree.SubElement(meta, "flag").text = CITY_MAP.get(name, {}).get("flag", "🇪🇺")
-        # Canonical URI of the city (mirrored as microdata itemid in the HTML)
+        # Canonical URI of the city — Wikivoyage, la fonte effettiva dei documenti
+        # (mirrored as microdata itemid in the HTML)
         etree.SubElement(meta, "source_url").text = (
-            f"https://en.wikipedia.org/wiki/{name.replace(' ', '_')}"
+            f"https://en.wikivoyage.org/wiki/{name.replace(' ', '_')}"
         )
 
         # --- indicators ---
