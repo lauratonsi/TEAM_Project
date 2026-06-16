@@ -30,13 +30,13 @@
 :root {
     --accent: #E74C3C;
     --accent-dark: #C0392B;
-    --green-500: #27AE60;
-    --blue-500: #3498db;
+    --green-500: #1E8449;
+    --blue-500: #2980B9;
     --primary-dark: #0F172A;
     --slate-50: #F8FAFC;
     --slate-100: #F1F5F9;
     --slate-200: #E2E8F0;
-    --slate-500: #64748B;
+    --slate-500: #475569;
     --slate-800: #1E293B;
     --bg: #EEF2F7;
     --card-radius: 22px;
@@ -88,7 +88,7 @@ body {
     transition: background 0.2s, color 0.2s;
 }
 .topbar-nav a:hover  { background: rgba(255,255,255,0.1); color: #fff; }
-.topbar-nav a.active { background: var(--accent); color: #fff; }
+.topbar-nav a.active { background: var(--accent-dark); color: #fff; }
 
 /* 4. HERO */
 .hero {
@@ -1040,7 +1040,7 @@ html { scroll-behavior: smooth; }
     transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
 .filter-btn:hover  { border-color: var(--accent); color: var(--accent); }
-.filter-btn.active { border-color: var(--accent); background: var(--accent); color: #fff; }
+.filter-btn.active { border-color: var(--accent-dark); background: var(--accent-dark); color: #fff; }
 
 /* Breadcrumb (city pages) */
 .breadcrumb {

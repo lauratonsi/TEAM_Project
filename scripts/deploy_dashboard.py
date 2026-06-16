@@ -1256,7 +1256,7 @@ def generate_report(city_data, validation):
         + stat_card("Avg Appeal", avg_appeal, "var(--accent)")
         + stat_card("Avg Safety", avg_safety, "var(--blue-500)")
         + stat_card("Avg Green Score", avg_green, "var(--green-500)")
-        + stat_card("Validated XML Files", total_cities, "#f59e0b")
+        + stat_card("Validated XML Files", total_cities, "#D97706")
     )
 
     html = f"""<!DOCTYPE html>
@@ -1276,7 +1276,7 @@ def generate_report(city_data, validation):
       font-size: 0.82rem; font-weight: 700; border: 1px solid var(--slate-200);
       transition: 0.2s;
     }}
-    .report-nav a:hover {{ background: var(--accent); color: white; }}
+    .report-nav a:hover {{ background: var(--accent-dark); color: white; }}
     .report-section {{
       max-width: 950px; margin: 36px auto; background: white;
       border-radius: 20px; padding: 40px 44px;
@@ -1367,7 +1367,7 @@ def generate_report(city_data, validation):
     }}
     .step-body p {{ margin: 4px 0 0; font-size: 0.9rem; color: var(--slate-500); }}
     code {{
-      background: var(--slate-100); padding: 2px 6px; border-radius: 4px;
+      background: var(--slate-100); color: var(--slate-800); padding: 2px 6px; border-radius: 4px;
       font-family: monospace; font-size: 0.85em;
     }}
     pre {{
@@ -1382,8 +1382,8 @@ def generate_report(city_data, validation):
       background: var(--slate-50); border: 1px solid var(--slate-200);
       border-radius: 14px; padding: 20px;
     }}
-    .technique-card h4 {{
-      margin: 0 0 8px; font-size: 0.9rem; color: var(--accent);
+    .technique-card h3 {{
+      margin: 0 0 8px; font-size: 0.9rem; color: var(--accent-dark);
       font-weight: 800;
     }}
     .technique-card p {{
@@ -1831,7 +1831,7 @@ for filename in files:                                  # scorre la directory XM
   <h2>🔬 Tecniche di Parsing e Pulizia del Testo</h2>
   <div class="technique-grid">
     <div class="technique-card">
-      <h4>Parsing MediaWiki XML con lxml</h4>
+      <h3>Parsing MediaWiki XML con lxml</h3>
       <p>
         I dump Wikivoyage sono file XML con namespace
         <code>http://www.mediawiki.org/xml/export-0.11/</code>.
@@ -1842,7 +1842,7 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
-      <h4>Parsing del Wikitext con mwparserfromhell</h4>
+      <h3>Parsing del Wikitext con mwparserfromhell</h3>
       <p>
         All'interno di ogni pagina MediaWiki, il contenuto non è XML ma <b>wikitext</b>
         (la sintassi con <code>{{template}}</code>, <code>[[link]]</code>, <code>== sezioni ==</code>,
@@ -1857,7 +1857,7 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
-      <h4>Selezione della Pagina Principale</h4>
+      <h3>Selezione della Pagina Principale</h3>
       <p>
         L'algoritmo cerca nell'ordine: (1) pagina con titolo esatto uguale al nome della
         città; (2) pagina <code>Città/Understand</code> (intro Wikivoyage). Se il dump
@@ -1868,7 +1868,7 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
-      <h4>Pulizia del Wikitext</h4>
+      <h3>Pulizia del Wikitext</h3>
       <p>
         Il testo grezzo in formato Wikitext viene ripulito con sequenze di regex:
         rimozione dei template <code>{{"{{"}}...{{"}}"}}</code> (5 passate per nested),
@@ -1880,7 +1880,7 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
-      <h4>Estrazione dei Distretti</h4>
+      <h3>Estrazione dei Distretti</h3>
       <p>
         La colonna <code>Districts</code> del CSV fornisce i nomi dei distretti
         (estratti nella fase 1). I nomi vengono ripuliti da rumore (es. <i>"Visitor info:"</i>,
@@ -1892,7 +1892,7 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
-      <h4>Validazione DTD con lxml</h4>
+      <h3>Validazione DTD con lxml</h3>
       <p>
         Prima di ogni scrittura, l'albero XML viene validato con
         <code>lxml.etree.DTD(open('city_report.dtd', 'rb')).validate(root)</code>.
@@ -1902,7 +1902,7 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
-      <h4>Microdata Schema.org nell'HTML</h4>
+      <h3>Microdata Schema.org nell'HTML</h3>
       <p>
         Ogni card nella dashboard è annotata con
         <code>itemscope itemtype="https://schema.org/City"</code>
@@ -1912,7 +1912,7 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
-      <h4>HTML semantico nell'output</h4>
+      <h3>HTML semantico nell'output</h3>
       <p>
         L'HTML prodotto segue il principio dell'<b>HTML semantico</b>: nessun tag procedurale
         deprecato (<code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>) né attributi
@@ -1931,7 +1931,7 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
-      <h4>Gestione delle Eccezioni</h4>
+      <h3>Gestione delle Eccezioni</h3>
       <p>
         Ogni città è elaborata in un blocco <code>try/except</code> indipendente:
         un file corrotto non blocca la pipeline. La funzione <code>find_orig_file()</code>
@@ -1942,7 +1942,7 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
-      <h4>Coordinate Geografiche e Mappa</h4>
+      <h3>Coordinate Geografiche e Mappa</h3>
       <p>
         Le attrazioni hanno attributi <code>@lat</code> e <code>@lon</code> estratti
         dal CSV <code>attrazione_descrizione_fixed.csv</code>. La dashboard genera link
@@ -2233,7 +2233,7 @@ for filename in files:                                  # scorre la directory XM
     <code>h1&rarr;h2</code> offrono una mappa navigabile della pagina; il widget chat flottante è
     esposto come <code>dialog</code>. Questa è una copia dell'albero reale della home:
   </p>
-  <pre style="font-size:0.8rem; background:var(--slate-50); border:1px solid var(--slate-200); border-radius:8px; padding:14px; overflow:auto; line-height:1.5;">document  "EuroCity Strategic Intelligence"            [lang="en"]
+  <pre style="font-size:0.8rem; background:var(--slate-50); color:var(--slate-800); border:1px solid var(--slate-200); border-radius:8px; padding:14px; overflow:auto; line-height:1.5;">document  "EuroCity Strategic Intelligence"            [lang="en"]
 &#9500;&#9472; link        "Salta al contenuto"                    (skip-link, visibile al focus)
 &#9500;&#9472; banner                                              &lt;header&gt;
 &#9474;  &#9492;&#9472; navigation  "Navigazione principale"             &lt;nav&gt;  &rarr; Home &middot; Report &middot; Map
