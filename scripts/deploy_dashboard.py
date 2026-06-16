@@ -1040,11 +1040,11 @@ def generate_city_pages(city_data):
             currency_note_html = (
                 f"<div class='currency-note'>"
                 f"<span class='cur-ico'>🪙</span>"
-                f"<div><b>{city['name_it']}</b> non usa l'euro: la valuta locale è "
-                f"<b>{cmeta['name_it']}</b> ({city['currency']}, {cmeta['symbol']}). "
-                f"I prezzi del sito sono una <b>stima sintetica in euro</b> (per confronto tra città); "
-                f"l'equivalente locale (<b>≈ {budget_local}</b> a notte) è indicativo, "
-                f"a tassi di riferimento del {CURRENCY_SNAPSHOT}.</div>"
+                f"<div><b>{city['name_it']}</b> does not use the euro: the local currency is the "
+                f"<b>{cmeta['name_en']}</b> ({city['currency']}, {cmeta['symbol']}). "
+                f"Prices on this site are a <b>synthetic estimate in euros</b> (for cross-city comparison); "
+                f"the local equivalent (<b>≈ {budget_local}</b> per night) is indicative, "
+                f"at {CURRENCY_SNAPSHOT} reference rates.</div>"
                 f"</div>"
             )
         else:
