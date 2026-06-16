@@ -1,4 +1,4 @@
-import os, json, re, html, glob
+import os, json, re, html, glob, hashlib
 from pathlib import Path
 from lxml import etree
 
@@ -57,221 +57,6 @@ def inline_to_html(el):
     return "".join(parts)
 
 
-# ---------------------------------------------------------------------------
-# Virtual Analyst — motore di query client-side
-# Scritto come stringa Python normale (NON f-string) per evitare conflitti con
-# le {} di JavaScript. __CITY_DATA__ viene sostituito a runtime con .replace().
-# ---------------------------------------------------------------------------
-_ANALYST_JS_TEMPLATE = """
-<script>
-const cityData = __CITY_DATA__;
-
-/* ---------- helpers ---------- */
-function badge(val, color) {
-    return '<span style="background:' + color + '22;color:' + color +
-           ';padding:2px 8px;border-radius:6px;font-weight:700;font-size:0.85em">' + val + '</span>';
-}
-
-function topRows(cities, key, unit) {
-    unit = unit || '';
-    return cities.slice(0, 5).map(function(c, i) {
-        return '<li style="padding:5px 0;border-bottom:1px solid #f1f5f9">' +
-               (i+1) + '. ' + c.flag + ' <b>' + c.name_it + '</b> — ' +
-               badge(c[key] + unit, '#E74C3C') + '</li>';
-    }).join('');
-}
-
-function sortBy(key, asc) {
-    return cityData.slice().sort(function(a, b) {
-        return asc ? parseFloat(a[key]) - parseFloat(b[key])
-                   : parseFloat(b[key]) - parseFloat(a[key]);
-    });
-}
-
-function rankOf(city, key) {
-    var sorted = sortBy(key, false);
-    return sorted.findIndex(function(x) { return x.name_en === city.name_en; }) + 1;
-}
-
-/* ---------- render: confronto due città ---------- */
-function renderComparison(a, b) {
-    var rows = [
-        ['Appeal Score',  'appeal',      1],
-        ['Safety',        'safety',      1],
-        ['Green',         'green',       1],
-        ['Affordability', 'economy',     1],
-        ['Budget/night',  'price',      -1],
-        ['Venues',        'hotel_count', 1],
-    ];
-    var rowsHtml = rows.map(function(r) {
-        var lbl = r[0], key = r[1], dir = r[2];
-        var va = a[key], vb = b[key];
-        var na = parseFloat(va), nb = parseFloat(vb);
-        var wa = (na !== nb && dir*(na-nb) > 0) ? ' ✅' : '';
-        var wb = (na !== nb && dir*(nb-na) > 0) ? ' ✅' : '';
-        return '<tr>' +
-            '<td style="padding:6px 10px;color:#64748b;font-size:0.85em">' + lbl + '</td>' +
-            '<td style="padding:6px 10px;text-align:center;font-weight:700">' + va + (key==='price'?'€':'') + wa + '</td>' +
-            '<td style="padding:6px 10px;text-align:center;font-weight:700">' + vb + (key==='price'?'€':'') + wb + '</td>' +
-            '</tr>';
-    }).join('');
-    return '<div style="font-size:0.9em">' +
-        '<b>⚖️ Confronto: ' + a.flag + ' ' + a.name_it + ' vs ' + b.flag + ' ' + b.name_it + '</b>' +
-        '<table style="width:100%;margin-top:10px;border-collapse:collapse">' +
-            '<thead><tr>' +
-                '<th style="padding:6px 10px;text-align:left;border-bottom:2px solid #e2e8f0">Indicatore</th>' +
-                '<th style="padding:6px 10px;text-align:center;border-bottom:2px solid #e2e8f0">' + a.flag + ' ' + a.name_it + '</th>' +
-                '<th style="padding:6px 10px;text-align:center;border-bottom:2px solid #e2e8f0">' + b.flag + ' ' + b.name_it + '</th>' +
-            '</tr></thead>' +
-            '<tbody>' + rowsHtml + '</tbody>' +
-        '</table></div>';
-}
-
-/* ---------- render: query globale (senza nome città) ---------- */
-function renderGlobal(q) {
-    if (/sicur|safe/.test(q))
-        return '<b>🛡️ Top 5 Safest Cities</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('safety',false),'safety') + '</ol>';
-    if (/verde|green|ecolog|sostenib|ambient/.test(q))
-        return '<b>🌱 Top 5 Greenest Cities</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('green',false),'green') + '</ol>';
-    if (/econom|cheap|convenien|afford|basso.cost|economica|prezzi.bass/.test(q))
-        return '<b>💰 Top 5 Most Affordable</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('price',true),'price','€/night') + '</ol>';
-    if (/cara|costosa|expensiv/.test(q))
-        return '<b>💎 Top 5 Most Expensive</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('price',false),'price','€/night') + '</ol>';
-    if (/appeal|miglior|top|ranking|consigl|dove.andare|raccomand/.test(q))
-        return '<b>⭐ Top 5 by Appeal Score</b><ol style="margin:8px 0;padding-left:0;list-style:none">' + topRows(sortBy('appeal',false),'appeal') + '</ol>';
-    if (/quante|totale|dataset|statist/.test(q)) {
-        var totH = cityData.reduce(function(s,c){ return s + parseInt(c.hotel_count||0); }, 0);
-        var totA = cityData.reduce(function(s,c){ return s + c.attractions.length; }, 0);
-        var wD   = cityData.filter(function(c){ return c.districts.length > 0; }).length;
-        return '<b>📊 EuroCity Dataset</b><ul style="margin:8px 0">' +
-            '<li>🏙️ Capitals analysed: <b>' + cityData.length + '</b></li>' +
-            '<li>🏨 Accommodation venues: <b>' + totH + '</b></li>' +
-            '<li>📍 Geolocated attractions: <b>' + totA + '</b></li>' +
-            '<li>🏘️ Cities with districts: <b>' + wD + '/' + cityData.length + '</b></li>' +
-            '</ul>';
-    }
-    return '❓ No city recognised. Try:<br>' +
-        '<span style="color:#64748b;font-size:0.9em">' +
-        '<em>"Safest city?"</em> · ' +
-        '<em>"Top appeal"</em> · ' +
-        '<em>"Hotels in Vienna"</em> · ' +
-        '<em>"Compare Rome and Paris"</em>' +
-        '</span>';
-}
-
-/* ---------- render: query su singola città ---------- */
-function renderCityIntent(c, q) {
-    if (/hotel|alloggio|dorm|dormire|sleep|ostello/.test(q)) {
-        var li = c.hotels.map(function(h) {
-            return '<li style="margin-bottom:4px"><b>' + h.n + '</b> <span style="color:#64748b;font-size:0.9em">(' + h.p + ')</span></li>';
-        }).join('');
-        return '<b>🏨 Accommodation — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:8px 0">' + (li || '<li>No data</li>') + '</ul>';
-    }
-    if (/trasport|muoversi|aeroporto|arriv|come.arrivare/.test(q))
-        return '<b>🚇 Transport — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0;font-size:0.9em">' + c.transport + '</p>';
-
-    if (/distrett|quartier|zona|neighborhood/.test(q)) {
-        if (!c.districts.length)
-            return '<b>' + c.flag + ' ' + c.name_it + '</b>: no district data available in the dataset.';
-        var li = c.districts.map(function(d) {
-            var desc = d.d ? ': <span style="color:#64748b;font-size:0.88em">' +
-                             d.d.substring(0, 90) + (d.d.length > 90 ? '…' : '') + '</span>' : '';
-            return '<li style="margin-bottom:5px"><b>' + d.n + '</b>' + desc + '</li>';
-        }).join('');
-        return '<b>🏘️ Districts — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:8px 0">' + li + '</ul>';
-    }
-    if (/attrazione|visitare|vedere|turismo|cosa.fare|sight|museo|monumento/.test(q)) {
-        var li = c.attractions.slice(0, 5).map(function(a) {
-            return '<li style="margin-bottom:7px"><b>' + a.n + '</b><br>' +
-                   '<span style="color:#64748b;font-size:0.87em">' + a.d + '</span> ' +
-                   '<a href="https://www.google.com/maps?q=' + a.lat + ',' + a.lon +
-                   '" target="_blank" style="font-size:0.75em;color:#3498db">📍 Maps</a></li>';
-        }).join('');
-        return '<b>🗺️ Attractions — ' + c.flag + ' ' + c.name_it + '</b>' +
-               '<ul style="padding-left:0;list-style:none;margin:8px 0">' + li + '</ul>';
-    }
-    if (/sicur|safety|pericol|crime/.test(q)) {
-        var pos = rankOf(c, 'safety');
-        return '<b>🛡️ Safety — ' + c.flag + ' ' + c.name_it + '</b><br>' +
-               'Safety Index: ' + badge(c.safety, '#27AE60') + '<br>' +
-               '<small style="color:#64748b">Global ranking: #' + pos + ' of ' + cityData.length + '</small>';
-    }
-    if (/verde|green|ecolog|ambient|sostenib/.test(q)) {
-        var pos = rankOf(c, 'green');
-        return '<b>🌱 Sustainability — ' + c.flag + ' ' + c.name_it + '</b><br>' +
-               'Green Score: ' + badge(c.green, '#27AE60') + '<br>' +
-               '<small style="color:#64748b">Global ranking: #' + pos + ' of ' + cityData.length + '</small>';
-    }
-    if (/cost|prezz|budget|econom|afford|cara|costosa/.test(q))
-        return '<b>💰 Budget — ' + c.flag + ' ' + c.name_it + '</b><br>' +
-               'Avg. accommodation cost: ' + badge(c.price + '€', '#E74C3C') + '<br>' +
-               'Cost of living index: ' + badge(c.economy + '/100', '#3498db');
-
-    if (/appeal|score|voto|ranking|classifica/.test(q)) {
-        var pos = rankOf(c, 'appeal');
-        return '<b>⭐ Appeal — ' + c.flag + ' ' + c.name_it + '</b><br>' +
-               'Appeal Score: ' + badge(c.appeal, '#E74C3C') + '<br>' +
-               '<small style="color:#64748b">Safety×0.4 + Green×0.4 + Affordability×0.2 · Rank: #' + pos + ' of ' + cityData.length + '</small>';
-    }
-    if (/wiki|storia|descriz|info|racconta|chi.è|intro/.test(q)) {
-        var intro = c.wiki_intro || c.story_it;
-        return '<b>📖 ' + c.flag + ' ' + c.name_it + '</b>' +
-               '<p style="margin:6px 0;font-size:0.9em;color:#334155">' + intro + '</p>';
-    }
-    /* fallback: riepilogo città */
-    return '<b>' + c.flag + ' ' + c.name_it + '</b>' +
-        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:8px 0;font-size:0.87em">' +
-            '<span>⭐ Appeal: <b>' + c.appeal + '</b></span>' +
-            '<span>🛡️ Safety: <b>' + c.safety + '</b></span>' +
-            '<span>🌱 Green: <b>' + c.green + '</b></span>' +
-            '<span>💰 Budget: <b>' + c.price + '€/night</b></span>' +
-        '</div>' +
-        '<p style="color:#64748b;font-size:0.88em;margin:4px 0">' + c.story_it + '</p>' +
-        '<small style="color:#94a3b8">Ask about: <em>hotels · transport · districts · attractions · safety · appeal</em></small>';
-}
-
-/* ---------- dispatcher principale ---------- */
-function runQuery() {
-    var input = document.getElementById('chat-input');
-    var out   = document.getElementById('chat-output');
-    var q = input.value.toLowerCase().trim();
-    if (!q) return;
-
-    var matches = cityData.filter(function(c) {
-        return q.includes(c.name_it.toLowerCase()) || q.includes(c.name_en.toLowerCase());
-    });
-
-    var html;
-    if (matches.length >= 2)       html = renderComparison(matches[0], matches[1]);
-    else if (matches.length === 0)  html = renderGlobal(q);
-    else                            html = renderCityIntent(matches[0], q);
-
-    out.innerHTML = html;
-    out.style.color = 'var(--slate-800)';
-}
-
-/* ---------- event listeners ---------- */
-document.getElementById('chat-btn').onclick = runQuery;
-document.getElementById('chat-input').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') runQuery();
-});
-document.querySelectorAll('.query-chip').forEach(function(chip) {
-    chip.onclick = function() {
-        document.getElementById('chat-input').value = chip.dataset.q;
-        runQuery();
-    };
-});
-
-/* ---------- contatore dinamico ---------- */
-(function() {
-    var totH = cityData.reduce(function(s,c){ return s + parseInt(c.hotel_count||0); }, 0);
-    var totA = cityData.reduce(function(s,c){ return s + c.attractions.length; }, 0);
-    var el = document.getElementById('chat-status');
-    if (el) el.textContent = cityData.length + ' capitals · ' + totA + ' attractions · ' + totH + ' venues';
-})();
-</script>
-"""
-
 # --- CONFIGURAZIONE ---
 XML_DIR = str(ROOT / 'data' / 'xml_dataset')
 OUTPUT_HTML = str(ROOT / 'index.html')
@@ -279,6 +64,15 @@ REPORT_HTML = str(ROOT / 'pages' / 'report.html')
 MAP_FILE = str(ROOT / 'pages' / 'mappa_attrazioni.html')
 DTD_FILE = str(ROOT / 'data' / 'city_report.dtd')
 CURRENCY_FILE = str(ROOT / 'data' / 'currency_rates.json')
+
+# Cache-busting del foglio di stile: un hash del contenuto di stile.css viene
+# accodato come ?v=… ai link CSS, così a ogni modifica del CSS il browser è
+# costretto a riscaricarlo (niente più stile vecchio servito dalla cache).
+try:
+    with open(str(ROOT / 'stile.css'), 'rb') as _css:
+        CSS_VER = hashlib.md5(_css.read()).hexdigest()[:8]
+except OSError:
+    CSS_VER = '1'
 
 # --- VALUTA LOCALE (capitali fuori area euro) ---
 # I prezzi del dataset sono SINTETICI e denominati in EUR (hotel_price =
@@ -453,7 +247,7 @@ def generate_map(city_data):
         "<meta charset='UTF-8'>\n"
         "<title>Mappa — EuroCity</title>\n"
         "<meta name='viewport' content='width=device-width,initial-scale=1'>\n"
-        "<link rel='stylesheet' href='../stile.css'>\n"
+        f"<link rel='stylesheet' href='../stile.css?v={CSS_VER}'>\n"
         "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css'>\n"
         "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css'>\n"
         "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css'>\n"
@@ -892,7 +686,7 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stile.css">
+    <link rel="stylesheet" href="stile.css?v={CSS_VER}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">
@@ -1260,7 +1054,7 @@ def generate_city_pages(city_data):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css">
+    <link rel="stylesheet" href="../../stile.css?v={CSS_VER}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <title>{city['name_it']} — EuroCity Strategic Intelligence</title>
 </head>
@@ -1467,7 +1261,7 @@ def generate_report(city_data, validation):
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../stile.css">
+  <link rel="stylesheet" href="../stile.css?v={CSS_VER}">
   <title>Report &amp; Documentation — EuroCity</title>
   <style>
     .report-nav {{

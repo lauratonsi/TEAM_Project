@@ -22,21 +22,31 @@ e documentazione integrata del processo.
 
 ```
 ELABORAZIONE/
-├── original_source/          # Dump Wikivoyage (MediaWiki XML) scaricati manualmente
-├── xml_dataset/              # Output: 30 file XML validati rispetto al DTD
-├── city_report.dtd           # DTD per la validazione dei file XML
-├── city_indices.json         # Indici: safety, green score, costo della vita
-├── wiki_text_pulito.csv      # Trasporti, hotel, distretti estratti da Wikivoyage
-├── attrazione_descrizione_fixed.csv  # Attrazioni con coordinate geografiche
-├── city_descriptions.json    # Sintesi strategiche in italiano (generate con AI)
-├── extract_wiki_info.py      # Script 1: preparazione dataset
-├── final_processor.py        # Script 2: elaborazione principale → XML
-├── deploy_dashboard.py       # Script 3: generazione HTML
-├── validate.py               # Script standalone: validazione DTD + DOM
-├── index.html                # Dashboard navigabile (output principale)
-├── report.html               # Report statistiche + documentazione pipeline
-├── stile.css                 # Foglio di stile applicato a tutti i documenti HTML
-└── mappa_attrazioni.html     # Mappa Leaflet.js con tutte le attrazioni
+├── data/
+│   ├── original_source/                 # Dump Wikivoyage (MediaWiki XML) scaricati a mano
+│   ├── xml_dataset/                     # Output: 30 file XML validati rispetto al DTD
+│   ├── city_report.dtd                  # DTD per la validazione dei file XML
+│   ├── city_indices.json                # Indici: safety, green score, costo della vita
+│   ├── currency_rates.json              # Valute locali + tassi indicativi (capitali non-euro)
+│   ├── nightlife.json                   # Locali notturni geolocalizzati (Overpass / OSM)
+│   ├── wiki_text_pulito.csv             # Trasporti, hotel, distretti estratti da Wikivoyage
+│   ├── attrazione_descrizione_fixed.csv # Attrazioni con coordinate geografiche
+│   ├── city_descriptions.json           # Sintesi strategiche in italiano (generate con AI)
+│   └── transport_patches.json           # Patch trasporti per città con CSV mancante
+├── scripts/
+│   ├── extract_wiki_info.py             # Preparazione dataset (dump → CSV/JSON)
+│   ├── final_processor.py               # Elaborazione principale → XML (validazione in scrittura)
+│   ├── deploy_dashboard.py              # Generazione HTML/CSS (ri-validazione in lettura)
+│   ├── validate.py                      # Validatore DTD standalone (DOM + DTD)
+│   ├── check_microdata.py               # Verifica round-trip dei microdata (libreria `microdata`)
+│   └── …                                # download_images, fetch_nightlife, map, …
+├── pages/
+│   ├── cities/*.html                    # 30 pagine città (una per file XML)
+│   ├── report.html                      # Report statistiche + documentazione pipeline
+│   └── mappa_attrazioni.html            # Mappa Leaflet con attrazioni e locali
+├── rag/                                 # Virtual Analyst: ingest, vectorstore, API (BM25 + FAISS)
+├── index.html                           # Dashboard navigabile (output principale)
+└── stile.css                            # Foglio di stile unico per tutti i documenti HTML
 ```
 
 ---
@@ -70,10 +80,10 @@ pip install lxml pandas
 ### Esecuzione completa
 ```bash
 # Passo 1 – Generazione XML validati
-python final_processor.py
+python scripts/final_processor.py
 
-# Passo 2 – Generazione HTML (index.html + report.html)
-python deploy_dashboard.py
+# Passo 2 – Generazione HTML (index.html, pagine città, report.html, mappa)
+python scripts/deploy_dashboard.py
 ```
 
 ### Validazione DTD — script standalone
@@ -114,6 +124,8 @@ di uscita `0` solo se tutti i file sono validi. Output:
 |-------|------|-----------|
 | Wikivoyage (MediaWiki XML, download manuale) | `original_source/*.xml` | Testi, trasporti, hotel, distretti |
 | Dataset pubblici (Numbeo, EIU) | `city_indices.json` | Safety, green score, costo della vita |
+| OpenStreetMap (Overpass API) | `nightlife.json` | 240 locali notturni geolocalizzati (bar/pub/nightclub) |
+| Tassi di cambio indicativi (snapshot 2026-01) | `currency_rates.json` | Valuta locale ISO 4217 + tasso EUR→locale delle 10 capitali non-euro |
 | Wikimedia Commons | `landmark_image` in XML | Immagini simbolo (URL stabili via Special:FilePath) |
 | Generato con AI | `city_descriptions.json` | Sintesi strategiche in italiano |
 
@@ -136,7 +148,8 @@ testo di un distretto come intro della città sarebbe fuorviante).
 <!ELEMENT city_report (metadata, indicators, transport, accommodation,
                         highlights, districts?, description,
                         wiki_intro?, landmark_image?, nightlife?)>
-<!ATTLIST city_report appeal_score CDATA #REQUIRED>
+<!ATTLIST city_report appeal_score CDATA #REQUIRED
+                      currency     CDATA #IMPLIED>   <!-- valuta locale (ISO 4217), solo capitali non-euro -->
 
 <!ELEMENT metadata (title, name_it, flag, source_url)>
 <!ELEMENT source_url (#PCDATA)>            <!-- URI canonico → itemid microdata -->
@@ -168,7 +181,7 @@ testo di un distretto come intro della città sarebbe fuorviante).
 
 | Elemento | Content model | Attributi | Cardinalità / Note |
 |----------|---------------|-----------|--------------------|
-| `city_report` | `metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?` | `appeal_score` *(REQ)* | **radice** |
+| `city_report` | `metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?` | `appeal_score` *(REQ)*, `currency` *(IMPL)* | **radice** |
 | `metadata` | `title, name_it, flag, source_url` | — | 1 |
 | `title` / `name_it` / `flag` | `#PCDATA` | — | nome EN / nome IT / emoji bandiera |
 | `source_url` | `#PCDATA` | — | URI canonico → `itemid` microdata |
@@ -195,7 +208,17 @@ testo di un distretto come intro della città sarebbe fuorviante).
 | `nightlife` | `venue*` | — | **opzionale** |
 | `venue` | `name` | `lat` *(REQ)*, `lon` *(REQ)*, `category` *(REQ)* | geolocalizzata; `category` **enumerato** `(bar \| pub \| nightclub)` |
 
-*(REQ) = `#REQUIRED`; `?` = opzionale; `*` = zero o più; gli elementi `EMPTY` portano il dato in un attributo.*
+*(REQ) = `#REQUIRED`; (IMPL) = `#IMPLIED` (opzionale); `?` = opzionale; `*` = zero o più; gli elementi `EMPTY` portano il dato in un attributo.*
+
+**Valuta locale (attributo opzionale).** L'attributo `currency` del root è `#IMPLIED`: è **assente** per le
+città dell'area euro e **presente** (codice ISO 4217, es. `SEK`, `GBP`) solo per le 10 capitali che usano
+un'altra valuta. Il sito lo legge via XPath (`string(/city_report/@currency)`) e mostra, accanto al prezzo
+in euro, l'equivalente locale indicativo letto da `currency_rates.json`.
+
+**Prezzo: stima sintetica, non osservata.** L'elemento `<hotel_price>` **non** è estratto dalle voci
+alloggio di Wikivoyage: è derivato dall'indice Numbeo del costo della vita con `hotel_price = cost_of_living × 1.85`.
+È un proxy in euro pensato per il **confronto tra città**, non un prezzo di mercato. I prezzi dei singoli
+`<hotel>` sono invece testo grezzo verbatim da Wikivoyage (formati eterogenei).
 
 **Content-model misto.** I campi `transport`, `description` e `wiki_intro` non sono solo
 testo: contengono markup inline (`<b>`, `<i>`, `<link href>`) interlacciato al testo —
@@ -289,16 +312,22 @@ esattamente** a quelli nei documenti, come nell'esempio dei castelli del corso
 
 | Metrica | Valore |
 |---------|--------|
-| Item tipizzati (`itemscope`) | **690** |
-| Proprietà (`itemprop`) | **2.040** |
+| Item tipizzati (`itemscope`) | **1.378** |
+| Proprietà (`itemprop`) | **3.924** |
 | Identificatori (`itemid`) | 60 |
-| **Attributi microdata totali** | **≈ 3.480** |
+| **Attributi microdata totali** | **≈ 6.740** |
 
-| Tipo Schema.org | Item |
-|-----------------|------|
-| `GeoCoordinates` | 330 |
-| `TouristAttraction` | 300 |
-| `City` | 60 |
+| Tipo Schema.org | Item | | Tipo Schema.org | Item |
+|-----------------|------|---|-----------------|------|
+| `GeoCoordinates` | 570 | | `Hotel` | 88 |
+| `TouristAttraction` | 300 | | `City` | 60 |
+| `BarOrPub` | 227 | | `AggregateRating` | 30 |
+| `PropertyValue` | 90 | | `NightClub` | 13 |
+
+Oltre alla gerarchia `City > containsPlace`, ogni `City` porta un **`AggregateRating`** (l'Appeal Score, con
+`ratingValue` 0–100) e i sotto-indici come **`PropertyValue`** (`additionalProperty`: Safety, Green, Economic
+Accessibility) — la forma corretta dato che un `Place` ammette un solo `aggregateRating`. La categoria enumerata
+del XML (`bar|pub|nightclub`) è mappata sulla classe più specifica (`BarOrPub` / `NightClub`).
 
 ---
 
@@ -385,13 +414,17 @@ Sottoinsieme di XPath di ElementTree/lxml, usato pervasivamente per navigare il 
 
 L'utilizzo di AI è dichiarato come richiesto dalle linee guida del progetto.
 
-### Claude Code (Anthropic — claude-sonnet-4-6)
+### Claude Code (Anthropic)
 Utilizzato per assistenza allo sviluppo della pipeline:
 - Debugging del problema di selezione della pagina principale nei dump multi-pagina
 - Scrittura della funzione `advanced_wiki_cleaner()` per la pulizia Wikitext
 - Risoluzione della gestione accent-insensitive per Reykjavík
 - Correzione del bug nell'estrazione distretti in `deploy_dashboard.py`
 - Override distretti per Luxembourg (dati CSV errati: siti Mullerthal) e Stockholm
+- Introduzione del content-model misto e della ri-validazione DTD in lettura
+- Espansione dei microdata Schema.org (`AggregateRating`, `PropertyValue`, `BarOrPub`/`NightClub`, `Hotel`) e script `check_microdata.py` per il round-trip
+- Gestione della valuta locale (`currency_rates.json`, attributo `currency`, nota sulle capitali non-euro) e correzione della provenienza del prezzo (stima sintetica, non estratta)
+- Trasformazione del Virtual Analyst in widget flottante presente su ogni pagina
 - Generazione di `report.html` e del presente `README.md`
 
 **Prompt rappresentativo usato con Claude Code:**
@@ -414,10 +447,13 @@ Le sintesi strategiche in `city_descriptions.json` sono state generate con Claud
 |------|-------------|
 | `xml_dataset/*.xml` | 30 file XML, uno per capitale, validati DTD |
 | `index.html` | Dashboard navigabile con griglia di card, mappa e Virtual Analyst |
-| `report.html` | Statistiche estratte + documentazione pipeline |
-| `stile.css` | Foglio di stile applicato a tutti i documenti HTML |
+| `pages/cities/*.html` | 30 pagine città (una per XML), con microdata, mappa e nota valuta per le città non-euro |
+| `pages/report.html` | Statistiche estratte + documentazione pipeline |
 | `pages/mappa_attrazioni.html` | Mappa Leaflet con attrazioni e locali notturni geolocalizzati |
-| `data/nightlife.json` | 240 venue (8 per città) da Overpass API (OpenStreetMap) |
+| `stile.css` | Foglio di stile unico, applicato a tutti i documenti HTML (con cache-busting `?v=hash`) |
+
+Il **Virtual Analyst** (RAG: BM25 + FAISS) è un **widget chat flottante** presente su `index.html` e su ogni
+pagina città: segue lo scroll e resta accessibile in qualsiasi momento della navigazione.
 
 ---
 
