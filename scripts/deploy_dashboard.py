@@ -529,6 +529,183 @@ def _price(val):
     except: return str(val)
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# VIRTUAL ANALYST — widget flottante riusabile su tutte le pagine
+# Markup (launcher + popup) e script sono fattorizzati qui così da iniettare
+# l'identico chatbot su index e su ogni scheda città. NB: la LOGICA di query
+# (runQuery / clientSideAnswer) è invariata; si aggiunge solo il toggle apri/chiudi.
+# ─────────────────────────────────────────────────────────────────────────────
+def analyst_widget_html():
+    """Launcher flottante + pannello popup dell'analista (HTML statico)."""
+    return """
+<!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->
+<button id="va-launcher" class="va-launcher" aria-label="Open the Virtual Analyst" aria-expanded="false">
+    <span class="va-launcher-ico">🤖</span>
+    <span class="va-launcher-txt">Ask the analyst</span>
+</button>
+<div id="va-widget" class="va-widget" role="dialog" aria-label="Virtual Analyst" aria-modal="false" hidden>
+    <div class="analyst-panel va-panel">
+        <div class="analyst-header">
+            <div class="analyst-icon">🤖</div>
+            <div class="va-head-txt">
+                <p class="analyst-title">Virtual Analyst</p>
+                <p class="analyst-sub">RAG · BM25 + FAISS · 350 XML chunks</p>
+            </div>
+            <button id="va-close" class="va-close" aria-label="Close the analyst">✕</button>
+        </div>
+        <div class="analyst-input-row">
+            <input type="text" id="chat-input" class="analyst-input"
+                   placeholder="e.g. transport Rome, bars Dublin, museums Athens…">
+            <button id="chat-btn" class="analyst-btn">Ask</button>
+        </div>
+        <div id="chat-output" class="analyst-output">
+            System ready — type a question or click an example.
+        </div>
+        <div class="analyst-chips">
+            <button class="chip" data-q="transport Rome">🚇 transport Rome</button>
+            <button class="chip" data-q="hotels Amsterdam">🏨 hotels Amsterdam</button>
+            <button class="chip" data-q="museums Athens">🏛️ museums Athens</button>
+            <button class="chip" data-q="safety Berlin">🛡️ safety Berlin</button>
+            <button class="chip" data-q="bars in Dublin">🍺 bars Dublin</button>
+            <button class="chip" data-q="districts Prague">🏘️ districts Prague</button>
+            <button class="chip" data-q="airport Stockholm">✈️ airport Stockholm</button>
+        </div>
+        <details class="analyst-details">
+            <summary>How does it work? — RAG architecture</summary>
+            <p>
+                The Virtual Analyst is a <b>RAG</b> (Retrieval-Augmented Generation) system
+                built on <b>320 text chunks</b> extracted from the 30 validated XML files.
+                Each query uses hybrid <b>BM25 + vector search</b> (FAISS + <code>all-MiniLM-L6-v2</code>)
+                with <b>Reciprocal Rank Fusion</b>, detects intent (hotels / transport / attractions / safety)
+                and responds in real time without an external LLM.
+            </p>
+            <p style="font-size:0.8rem; color:var(--slate-500); margin:8px 0 0;">
+                ⚠️ It knows only the 30 capitals in the dataset; some lack hotel data because
+                they are absent from the Wikivoyage sources.
+            </p>
+        </details>
+    </div>
+</div>
+"""
+
+
+def analyst_script(city_data):
+    """Script dell'analista (logica di query INVARIATA) + toggle del widget flottante."""
+    return f"""<script>
+const cityData = {json.dumps(city_data)};
+
+/* chat query — tenta il server RAG locale, poi fallback client-side */
+const RAG_API = 'http://127.0.0.1:8000';
+
+async function runQuery() {{
+    const q = document.getElementById('chat-input').value.trim();
+    const out = document.getElementById('chat-output');
+    if (!q) return;
+    out.innerHTML = '<span style="color:#64748b;font-size:.9rem">⏳ Searching...</span>';
+    try {{
+        const ctrl = new AbortController();
+        const tid = setTimeout(() => ctrl.abort(), 5000);
+        const resp = await fetch(
+            RAG_API + '/query?q=' + encodeURIComponent(q) + '&simulated_rag=true&k=5',
+            {{signal: ctrl.signal}}
+        );
+        clearTimeout(tid);
+        if (resp.ok) {{
+            const data = await resp.json();
+            let html = '<p style="margin:0">' + (data.answer || '') + '</p>';
+            if (data.sources && data.sources.length) {{
+                html += '<details style="margin-top:8px"><summary style="cursor:pointer;color:#64748b;font-size:.82rem">📚 Sources (' + data.sources.length + ')</summary>' +
+                    '<ul style="margin:4px 0;padding-left:18px;font-size:.82rem;color:#64748b">' +
+                    data.sources.slice(0,3).map(s => '<li>[' + s.city + '] <em>' + s.section + '</em></li>').join('') +
+                    '</ul></details>';
+            }}
+            out.innerHTML = html;
+            return;
+        }}
+    }} catch(e) {{ /* server non disponibile — usa fallback client-side */ }}
+    clientSideAnswer(q.toLowerCase());
+}}
+
+function clientSideAnswer(q) {{
+    const out = document.getElementById('chat-output');
+    let res = '❓ City not found. Try: <em>safety Vienna</em>, <em>hotels Rome</em>, <em>bars Berlin</em>, <em>compare Oslo and Berlin</em>.';
+    cityData.forEach(function(c) {{
+        if (q.includes(c.name_it.toLowerCase()) || q.includes((c.name_en || '').toLowerCase())) {{
+            if (/hotel|alloggio|dorm|ostello|stay|accommodation|sleep|lodg/.test(q)) {{
+                var li = c.hotels.map(h => '<li><b>' + h.n + '</b> <span style="color:#64748b">(' + h.p + ')</span></li>').join('');
+                res = '<b>🏨 Accommodation — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + (li || '<li>No data in dataset</li>') + '</ul>';
+            }} else if (/trasport|muoversi|aeroporto|arriv|transport|airport|metro|subway|bus|train|tram|get.to|getting/.test(q)) {{
+                res = '<b>🚇 Transport — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + c.transport + '</p>';
+            }} else if (/distrett|quartier|zona|district|neighborhood|area|quarter/.test(q)) {{
+                var dn = c.districts.map(d => d.n).join(', ');
+                res = '<b>🏘️ Districts — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + (dn || 'No district data available.') + '</p>';
+            }} else if (/attrazione|visitare|vedere|turismo|museo|sight|museum|visit|attraction|landmark|tour/.test(q)) {{
+                var al = c.attractions.slice(0,5).map(a => '<li><b>' + a.n + '</b> — <span style="color:#64748b;font-size:.88em">' + a.d + '</span> <a href="https://www.google.com/maps?q=' + a.lat + ',' + a.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍</a></li>').join('');
+                res = '<b>🗺️ Attractions — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + al + '</ul>';
+            }} else if (/bar|pub|drink|beer|nightlife|bere|birra|club|nightclub|aperitivo/.test(q)) {{
+                if (!c.nightlife || !c.nightlife.length) {{
+                    res = '<b>' + c.flag + ' ' + c.name_it + '</b>: no nightlife data available.';
+                }} else {{
+                    var nl = c.nightlife.map(v => '<li>' + (v.cat==='nightclub'?'🎵':'🍺') + ' <b>' + v.n + '</b> <span style="color:#94a3b8;font-size:.82em">(' + v.cat + ')</span> <a href="https://www.google.com/maps?q=' + v.lat + ',' + v.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍</a></li>').join('');
+                    res = '<b>🍺 Where to Drink — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + nl + '</ul>';
+                }}
+            }} else if (/sicur|safety|pericol|crime|safe|danger/.test(q)) {{
+                res = '<b>🛡️ ' + c.flag + ' ' + c.name_it + '</b> — Safety Index: <b>' + c.safety + '</b> · Appeal: <b>' + c.appeal + '</b>';
+            }} else if (/verde|green|sustainab|ecolog/.test(q)) {{
+                res = '<b>🌱 ' + c.flag + ' ' + c.name_it + '</b> — Green Score: <b>' + c.green + '</b>';
+            }} else if (/cost|budget|price|cheap|expens|afford/.test(q)) {{
+                res = '<b>💰 ' + c.flag + ' ' + c.name_it + '</b> — Budget: <b>' + Math.round(c.price) + '€/night</b> · Cost of living: <b>' + c.economy + '</b>';
+            }} else {{
+                res = '<b>' + c.flag + ' ' + c.name_it + '</b><div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:6px 0;font-size:.87em"><span>⭐ Appeal: <b>' + c.appeal + '</b></span><span>🛡️ Safety: <b>' + c.safety + '</b></span><span>🌱 Green: <b>' + c.green + '</b></span><span>💰 Budget: <b>' + Math.round(c.price) + '€</b></span></div>';
+            }}
+        }}
+    }});
+    /* global queries without city name */
+    if (res.startsWith('❓')) {{
+        if (/sicur|safe/.test(q)) {{
+            var top = cityData.slice().sort((a,b) => b.safety-a.safety).slice(0,5);
+            res = '<b>🛡️ Top 5 Safest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.safety + '</li>').join('') + '</ol>';
+        }} else if (/verde|green|ecolog|sustainab/.test(q)) {{
+            var top = cityData.slice().sort((a,b) => b.green-a.green).slice(0,5);
+            res = '<b>🌱 Top 5 Greenest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.green + '</li>').join('') + '</ol>';
+        }} else if (/econom|cheap|afford|basso|budget/.test(q)) {{
+            var top = cityData.slice().sort((a,b) => a.price-b.price).slice(0,5);
+            res = '<b>💰 Top 5 Most Affordable</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + Math.round(c.price) + '€/night</li>').join('') + '</ol>';
+        }} else if (/appeal|best|top|ranking/.test(q)) {{
+            var top = cityData.slice().sort((a,b) => b.appeal-a.appeal).slice(0,5);
+            res = '<b>⭐ Top 5 by Appeal Score</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.appeal + '</li>').join('') + '</ol>';
+        }} else if (/confronta|compare|vs/.test(q)) {{
+            res = 'To compare two cities type: <em>"compare Rome and Paris"</em> or <em>"Rome vs Berlin"</em>.';
+        }}
+    }}
+    out.innerHTML = res;
+}}
+document.getElementById('chat-btn').onclick = runQuery;
+document.getElementById('chat-input').addEventListener('keydown', function(e) {{ if (e.key === 'Enter') runQuery(); }});
+document.querySelectorAll('.chip').forEach(function(chip) {{
+    chip.onclick = function() {{
+        document.getElementById('chat-input').value = chip.dataset.q;
+        runQuery();
+    }};
+}});
+
+/* toggle del widget flottante (presentazione, non logica di query) */
+(function() {{
+    var launcher = document.getElementById('va-launcher');
+    var widget   = document.getElementById('va-widget');
+    var closeBtn = document.getElementById('va-close');
+    if (!launcher || !widget) return;
+    function openVA()  {{ widget.hidden = false; launcher.setAttribute('aria-expanded', 'true');
+                          launcher.classList.add('is-open'); document.getElementById('chat-input').focus(); }}
+    function closeVA() {{ widget.hidden = true;  launcher.setAttribute('aria-expanded', 'false');
+                          launcher.classList.remove('is-open'); }}
+    launcher.onclick = function() {{ widget.hidden ? openVA() : closeVA(); }};
+    if (closeBtn) closeBtn.onclick = closeVA;
+    document.addEventListener('keydown', function(e) {{ if (e.key === 'Escape' && !widget.hidden) closeVA(); }});
+}})();
+</script>"""
+
+
 def deploy():
     print("🚀 Generazione Dashboard: Reintegro Attrazioni + Griglia 3x2...")
 
@@ -705,6 +882,10 @@ var observer = new IntersectionObserver(function(entries) {
 document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c); });
 </script>"""
 
+    # Virtual Analyst flottante (stesso markup/logica su index e schede città)
+    analyst_widget = analyst_widget_html()
+    analyst_js = analyst_script(city_data)
+
     # Template finale HTML
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -758,85 +939,53 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
 
 <!-- ═══ DATA PROVENANCE — how the numbers are built ════════════════════ -->
 <section class="provenance-band" aria-label="How the data is built">
+  <div class="prov-inner">
+    <p class="prov-eyebrow">The pipeline</p>
     <h2 class="prov-heading">How the data is built</h2>
-    <div class="prov-flow">
-        <div class="prov-node">
+    <p class="prov-lead">Every page, ranking and map is generated from validated XML — not hand-written.</p>
+
+    <ol class="prov-flow">
+        <li class="prov-node">
+            <span class="prov-step">1</span>
             <span class="prov-ico">📂</span>
             <b>Wikivoyage</b>
-            <small>MediaWiki dumps parsed into clean text (transport, attractions, districts, venues)</small>
-        </div>
-        <span class="prov-arrow" aria-hidden="true">→</span>
-        <div class="prov-node">
+            <small>MediaWiki dumps parsed into clean text: transport, attractions, districts, venues.</small>
+        </li>
+        <li class="prov-node">
+            <span class="prov-step">2</span>
             <span class="prov-ico">📄</span>
             <b>XML + DTD</b>
-            <small>one validated file per city — mixed content, geo-coordinates, Schema.org microdata</small>
-        </div>
-        <span class="prov-arrow" aria-hidden="true">→</span>
-        <div class="prov-node">
+            <small>One validated file per city: mixed content, geo-coordinates, Schema.org microdata.</small>
+        </li>
+        <li class="prov-node">
+            <span class="prov-step">3</span>
             <span class="prov-ico">📊</span>
             <b>Indices</b>
-            <small>Safety · Green · Cost of living merged in from international sources</small>
-        </div>
-        <span class="prov-arrow" aria-hidden="true">→</span>
-        <div class="prov-node">
+            <small>Safety, Green and Cost of living merged in from international sources.</small>
+        </li>
+        <li class="prov-node">
+            <span class="prov-step">4</span>
             <span class="prov-ico">🌐</span>
             <b>This site</b>
-            <small>pages, rankings and map generated directly from the XML</small>
-        </div>
-    </div>
+            <small>Pages, rankings and map generated directly from the XML.</small>
+        </li>
+    </ol>
+
     <div class="prov-formula" role="img"
          aria-label="Appeal Score equals 40% safety, 40% green, 20% affordability">
-        <span class="prov-formula-lbl">Appeal&nbsp;Score =</span>
-        <span class="prov-seg prov-safety">Safety ×0.4</span>
+        <span class="prov-formula-lbl">Appeal&nbsp;Score</span>
+        <span class="prov-eq">=</span>
+        <span class="prov-seg prov-safety">Safety <i>×0.4</i></span>
         <span class="prov-plus">+</span>
-        <span class="prov-seg prov-green">Green ×0.4</span>
+        <span class="prov-seg prov-green">Green <i>×0.4</i></span>
         <span class="prov-plus">+</span>
-        <span class="prov-seg prov-cost">Affordability ×0.2</span>
+        <span class="prov-seg prov-cost">Affordability <i>×0.2</i></span>
         <a class="prov-formula-link" href="pages/report.html#statistiche">see how →</a>
     </div>
+  </div>
 </section>
 
-<!-- ═══ VIRTUAL ANALYST (chat + RAG unificati) ══════════════════════ -->
-<section class="analyst-panel">
-    <div class="analyst-header">
-        <div class="analyst-icon">🤖</div>
-        <div>
-            <p class="analyst-title">Virtual Analyst</p>
-            <p class="analyst-sub">RAG System · BM25 + FAISS · 350 XML chunks</p>
-        </div>
-    </div>
-    <div class="analyst-input-row">
-        <input type="text" id="chat-input" class="analyst-input"
-               placeholder="e.g. transport Rome, bars Dublin, museums Athens, districts Prague…">
-        <button id="chat-btn" class="analyst-btn">Ask</button>
-    </div>
-    <div id="chat-output" class="analyst-output">
-        System ready — type a question or click an example.
-    </div>
-    <div class="analyst-chips">
-        <button class="chip" data-q="transport Rome">🚇 transport Rome</button>
-        <button class="chip" data-q="hotels Amsterdam">🏨 hotels Amsterdam</button>
-        <button class="chip" data-q="museums Athens">🏛️ museums Athens</button>
-        <button class="chip" data-q="safety Berlin">🛡️ safety Berlin</button>
-        <button class="chip" data-q="bars in Dublin">🍺 bars Dublin</button>
-        <button class="chip" data-q="districts Prague">🏘️ districts Prague</button>
-        <button class="chip" data-q="airport Stockholm">✈️ airport Stockholm</button>
-    </div>
-    <details class="analyst-details">
-        <summary>How does it work? — RAG architecture</summary>
-        <p>
-            The Virtual Analyst is a <b>RAG</b> (Retrieval-Augmented Generation) system
-            built on <b>320 text chunks</b> extracted from the 30 validated XML files.
-            Each query uses hybrid <b>BM25 + vector search</b> (FAISS + <code>all-MiniLM-L6-v2</code>)
-            with <b>Reciprocal Rank Fusion</b>, detects intent (hotels / transport / attractions / safety)
-            and responds in real time without an external LLM.
-        </p>
-        <p style="font-size:0.8rem; color:var(--slate-500); margin:8px 0 0;">
-            ⚠️ It knows only the 30 capitals in the dataset; some lack hotel data because
-            they are absent from the Wikivoyage sources.
-        </p>
-    </details>
-</section>
+<!-- Virtual Analyst: ora è un widget flottante, iniettato a fine pagina -->
 
 <!-- ═══ MAPPA INLINE ════════════════════════════════════════════════════ -->
 <div id="map-inline"></div>
@@ -859,104 +1008,8 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
     <a href="pages/report.html">📊 Report &amp; Documentation</a>
 </footer>
 
-<script>
-const cityData = {json.dumps(city_data)};
-
-/* chat query — tenta il server RAG locale, poi fallback client-side */
-const RAG_API = 'http://127.0.0.1:8000';
-
-async function runQuery() {{
-    const q = document.getElementById('chat-input').value.trim();
-    const out = document.getElementById('chat-output');
-    if (!q) return;
-    out.innerHTML = '<span style="color:#64748b;font-size:.9rem">⏳ Searching...</span>';
-    try {{
-        const ctrl = new AbortController();
-        const tid = setTimeout(() => ctrl.abort(), 5000);
-        const resp = await fetch(
-            RAG_API + '/query?q=' + encodeURIComponent(q) + '&simulated_rag=true&k=5',
-            {{signal: ctrl.signal}}
-        );
-        clearTimeout(tid);
-        if (resp.ok) {{
-            const data = await resp.json();
-            let html = '<p style="margin:0">' + (data.answer || '') + '</p>';
-            if (data.sources && data.sources.length) {{
-                html += '<details style="margin-top:8px"><summary style="cursor:pointer;color:#64748b;font-size:.82rem">📚 Sources (' + data.sources.length + ')</summary>' +
-                    '<ul style="margin:4px 0;padding-left:18px;font-size:.82rem;color:#64748b">' +
-                    data.sources.slice(0,3).map(s => '<li>[' + s.city + '] <em>' + s.section + '</em></li>').join('') +
-                    '</ul></details>';
-            }}
-            out.innerHTML = html;
-            return;
-        }}
-    }} catch(e) {{ /* server non disponibile — usa fallback client-side */ }}
-    clientSideAnswer(q.toLowerCase());
-}}
-
-function clientSideAnswer(q) {{
-    const out = document.getElementById('chat-output');
-    let res = '❓ City not found. Try: <em>safety Vienna</em>, <em>hotels Rome</em>, <em>bars Berlin</em>, <em>compare Oslo and Berlin</em>.';
-    cityData.forEach(function(c) {{
-        if (q.includes(c.name_it.toLowerCase()) || q.includes((c.name_en || '').toLowerCase())) {{
-            if (/hotel|alloggio|dorm|ostello|stay|accommodation|sleep|lodg/.test(q)) {{
-                var li = c.hotels.map(h => '<li><b>' + h.n + '</b> <span style="color:#64748b">(' + h.p + ')</span></li>').join('');
-                res = '<b>🏨 Accommodation — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + (li || '<li>No data in dataset</li>') + '</ul>';
-            }} else if (/trasport|muoversi|aeroporto|arriv|transport|airport|metro|subway|bus|train|tram|get.to|getting/.test(q)) {{
-                res = '<b>🚇 Transport — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + c.transport + '</p>';
-            }} else if (/distrett|quartier|zona|district|neighborhood|area|quarter/.test(q)) {{
-                var dn = c.districts.map(d => d.n).join(', ');
-                res = '<b>🏘️ Districts — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + (dn || 'No district data available.') + '</p>';
-            }} else if (/attrazione|visitare|vedere|turismo|museo|sight|museum|visit|attraction|landmark|tour/.test(q)) {{
-                var al = c.attractions.slice(0,5).map(a => '<li><b>' + a.n + '</b> — <span style="color:#64748b;font-size:.88em">' + a.d + '</span> <a href="https://www.google.com/maps?q=' + a.lat + ',' + a.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍</a></li>').join('');
-                res = '<b>🗺️ Attractions — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + al + '</ul>';
-            }} else if (/bar|pub|drink|beer|nightlife|bere|birra|club|nightclub|aperitivo/.test(q)) {{
-                if (!c.nightlife || !c.nightlife.length) {{
-                    res = '<b>' + c.flag + ' ' + c.name_it + '</b>: no nightlife data available.';
-                }} else {{
-                    var nl = c.nightlife.map(v => '<li>' + (v.cat==='nightclub'?'🎵':'🍺') + ' <b>' + v.n + '</b> <span style="color:#94a3b8;font-size:.82em">(' + v.cat + ')</span> <a href="https://www.google.com/maps?q=' + v.lat + ',' + v.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍</a></li>').join('');
-                    res = '<b>🍺 Where to Drink — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + nl + '</ul>';
-                }}
-            }} else if (/sicur|safety|pericol|crime|safe|danger/.test(q)) {{
-                res = '<b>🛡️ ' + c.flag + ' ' + c.name_it + '</b> — Safety Index: <b>' + c.safety + '</b> · Appeal: <b>' + c.appeal + '</b>';
-            }} else if (/verde|green|sustainab|ecolog/.test(q)) {{
-                res = '<b>🌱 ' + c.flag + ' ' + c.name_it + '</b> — Green Score: <b>' + c.green + '</b>';
-            }} else if (/cost|budget|price|cheap|expens|afford/.test(q)) {{
-                res = '<b>💰 ' + c.flag + ' ' + c.name_it + '</b> — Budget: <b>' + Math.round(c.price) + '€/night</b> · Cost of living: <b>' + c.economy + '</b>';
-            }} else {{
-                res = '<b>' + c.flag + ' ' + c.name_it + '</b><div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:6px 0;font-size:.87em"><span>⭐ Appeal: <b>' + c.appeal + '</b></span><span>🛡️ Safety: <b>' + c.safety + '</b></span><span>🌱 Green: <b>' + c.green + '</b></span><span>💰 Budget: <b>' + Math.round(c.price) + '€</b></span></div>';
-            }}
-        }}
-    }});
-    /* global queries without city name */
-    if (res.startsWith('❓')) {{
-        if (/sicur|safe/.test(q)) {{
-            var top = cityData.slice().sort((a,b) => b.safety-a.safety).slice(0,5);
-            res = '<b>🛡️ Top 5 Safest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.safety + '</li>').join('') + '</ol>';
-        }} else if (/verde|green|ecolog|sustainab/.test(q)) {{
-            var top = cityData.slice().sort((a,b) => b.green-a.green).slice(0,5);
-            res = '<b>🌱 Top 5 Greenest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.green + '</li>').join('') + '</ol>';
-        }} else if (/econom|cheap|afford|basso|budget/.test(q)) {{
-            var top = cityData.slice().sort((a,b) => a.price-b.price).slice(0,5);
-            res = '<b>💰 Top 5 Most Affordable</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + Math.round(c.price) + '€/night</li>').join('') + '</ol>';
-        }} else if (/appeal|best|top|ranking/.test(q)) {{
-            var top = cityData.slice().sort((a,b) => b.appeal-a.appeal).slice(0,5);
-            res = '<b>⭐ Top 5 by Appeal Score</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.appeal + '</li>').join('') + '</ol>';
-        }} else if (/confronta|compare|vs/.test(q)) {{
-            res = 'To compare two cities type: <em>"compare Rome and Paris"</em> or <em>"Rome vs Berlin"</em>.';
-        }}
-    }}
-    out.innerHTML = res;
-}}
-document.getElementById('chat-btn').onclick = runQuery;
-document.getElementById('chat-input').addEventListener('keydown', function(e) {{ if (e.key === 'Enter') runQuery(); }});
-document.querySelectorAll('.chip').forEach(function(chip) {{
-    chip.onclick = function() {{
-        document.getElementById('chat-input').value = chip.dataset.q;
-        runQuery();
-    }};
-}});
-</script>
+{analyst_widget}
+{analyst_js}
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
 """ + inline_map_js + "\n" + js_block + "\n</body></html>"
@@ -975,6 +1028,10 @@ def generate_city_pages(city_data):
     print("📄 Generazione pagine individuali per città...")
     cities = sorted(city_data, key=lambda c: c['city_lower'])
     n = len(cities)
+
+    # Virtual Analyst flottante: identico markup/logica dell'index, su ogni scheda
+    analyst_widget = analyst_widget_html()
+    analyst_js = analyst_script(city_data)
 
     for i, city in enumerate(cities):
         prev_city = cities[(i - 1) % n]
@@ -1292,6 +1349,8 @@ window.addEventListener('scroll', function() {{
 }});
 btt.onclick = function() {{ window.scrollTo({{top: 0, behavior: 'smooth'}}); }};
 </script>
+{analyst_widget}
+{analyst_js}
 </body>
 </html>"""
 
