@@ -48,11 +48,43 @@
     .rank-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
     .rank-table td { padding: 8px 6px; vertical-align: middle; }
     .rank-table tr:not(:last-child) { border-bottom: 1px solid var(--slate-100); }
+    /* --- Classifiche: grafici a barre in CSS Grid --- */
     .rank-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px; margin-bottom: 10px;
     }
-    .rank-block h3 { margin-top: 0; }
+    .rank-card {
+      background: var(--slate-50); border: 1px solid var(--slate-100);
+      border-left: 4px solid var(--accent); border-radius: 14px; padding: 16px 18px;
+    }
+    .rk-appeal { border-left-color: var(--accent); }
+    .rk-safety { border-left-color: var(--blue-500); }
+    .rk-green  { border-left-color: var(--green-500); }
+    .rk-price  { border-left-color: #f59e0b; }
+    .rk-head { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
+    .rk-head h3 { margin: 0; font-size: 0.98rem; }
+    .rk-ico { font-size: 1.15rem; line-height: 1; }
+    .rk-tag {
+      margin-left: auto; font-size: 0.64rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--slate-500); background: #fff;
+      border: 1px solid var(--slate-200); border-radius: 6px; padding: 2px 8px;
+    }
+    .rk-chart { display: flex; flex-direction: column; gap: 9px; }
+    .rk-row {
+      display: grid;
+      grid-template-columns: 26px minmax(84px, 130px) 1fr auto;
+      align-items: center; gap: 10px; font-size: 0.86rem;
+    }
+    .rk-pos { text-align: center; font-weight: 800; color: var(--slate-500); }
+    .rk-name {
+      font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .rk-track {
+      height: 10px; background: var(--slate-200); border-radius: 6px; overflow: hidden;
+    }
+    .rk-fill { display: block; height: 100%; border-radius: 6px; min-width: 4px; }
+    .rk-val { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .pipeline-steps {
       display: flex; flex-direction: column; gap: 0;
       position: relative; margin: 8px 0 0;
@@ -229,10 +261,18 @@
         <td style="text-align:right">0–100</td>
       </tr>
       <tr>
-        <td>Prezzo alloggio</td>
-        <td><span class="prov-src src-wiki">📂 Wikivoyage</span></td>
-        <td>Estratto dalle voci alloggio nel Wikitext; mediato in <code>&lt;hotel_price&gt;</code>.</td>
+        <td>Budget alloggio</td>
+        <td><span class="prov-src src-derived">🧮 Derivato</span> <span class="prov-src src-indices">📊 city_indices.json</span></td>
+        <td><b>Stima sintetica</b>, non un prezzo osservato: <code>&lt;hotel_price&gt; = cost_of_living × 1.85</code>
+            (proxy in euro del costo della vita Numbeo). Serve a confrontare le città, non a prenotare.</td>
         <td style="text-align:right">€/notte</td>
+      </tr>
+      <tr>
+        <td>Valuta locale</td>
+        <td><span class="prov-src src-indices">📊 currency_rates.json</span></td>
+        <td>Codice ISO nell'attributo opzionale <code>&lt;city_report&nbsp;currency="…"&gt;</code> (solo capitali fuori
+            area euro); l'equivalente locale mostrato è una conversione <b>indicativa</b> a tassi di riferimento.</td>
+        <td style="text-align:right">ISO 4217</td>
       </tr>
       <tr>
         <td>Attrazioni · Locali · Distretti</td>
@@ -285,22 +325,27 @@
 <!-- ===== CLASSIFICHE ===== -->
 <section class="report-section" id="ranking">
   <h2>🏆 Classifiche per Indicatore</h2>
+  <p style="margin-top:0;color:var(--slate-500);font-size:0.9rem;">
+    Top 5 capitali per ogni indicatore. La <b>barra è proporzionale al valore</b>, normalizzata sul
+    massimo del dataset; per il prezzo la scala è invertita (<b>barra più lunga = più economica</b>),
+    così in ogni grafico la barra più piena è sempre la posizione migliore.
+  </p>
   <div class="rank-grid">
-    <div class="rank-block">
-      <h3>Appeal Score (composito)</h3>
-      <table class="rank-table"><tbody><tr><td style='color:var(--slate-500); width:28px'>1</td><td>🇸🇮 Ljubljana</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:164px; background:var(--accent); border-radius:4px;'></div><b>74.7</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>2</td><td>🇪🇪 Tallinn</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:156px; background:var(--accent); border-radius:4px;'></div><b>71.1</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>3</td><td>🇮🇸 Reykjavík</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:155px; background:var(--accent); border-radius:4px;'></div><b>70.6</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>4</td><td>🇫🇮 Helsinki</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:155px; background:var(--accent); border-radius:4px;'></div><b>70.4</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>5</td><td>🇨🇿 Prague</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:154px; background:var(--accent); border-radius:4px;'></div><b>70.0</b></div></td></tr></tbody></table>
+    <div class="rank-card rk-appeal">
+      <div class="rk-head"><span class="rk-ico">⭐</span><h3>Appeal Score</h3><span class="rk-tag">composito</span></div>
+      <div class="rk-chart"><div class='rk-row'><span class='rk-pos'>🥇</span><span class='rk-name'>🇸🇮 Ljubljana</span><span class='rk-track'><span class='rk-fill' style='width:100%;background:var(--accent)'></span></span><span class='rk-val'>74.7</span></div><div class='rk-row'><span class='rk-pos'>🥈</span><span class='rk-name'>🇪🇪 Tallinn</span><span class='rk-track'><span class='rk-fill' style='width:95%;background:var(--accent)'></span></span><span class='rk-val'>71.1</span></div><div class='rk-row'><span class='rk-pos'>🥉</span><span class='rk-name'>🇮🇸 Reykjavík</span><span class='rk-track'><span class='rk-fill' style='width:95%;background:var(--accent)'></span></span><span class='rk-val'>70.6</span></div><div class='rk-row'><span class='rk-pos'>4</span><span class='rk-name'>🇫🇮 Helsinki</span><span class='rk-track'><span class='rk-fill' style='width:94%;background:var(--accent)'></span></span><span class='rk-val'>70.4</span></div><div class='rk-row'><span class='rk-pos'>5</span><span class='rk-name'>🇨🇿 Prague</span><span class='rk-track'><span class='rk-fill' style='width:94%;background:var(--accent)'></span></span><span class='rk-val'>70.0</span></div></div>
     </div>
-    <div class="rank-block">
-      <h3>Indice di Sicurezza</h3>
-      <table class="rank-table"><tbody><tr><td style='color:var(--slate-500); width:28px'>1</td><td>🇮🇸 Reykjavík</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:181px; background:var(--accent); border-radius:4px;'></div><b>82.3</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>2</td><td>🇸🇮 Ljubljana</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:172px; background:var(--accent); border-radius:4px;'></div><b>78.4</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>3</td><td>🇭🇷 Zagreb</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:170px; background:var(--accent); border-radius:4px;'></div><b>77.1</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>4</td><td>🇫🇮 Helsinki</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:169px; background:var(--accent); border-radius:4px;'></div><b>76.8</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>5</td><td>🇪🇪 Tallinn</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:168px; background:var(--accent); border-radius:4px;'></div><b>76.4</b></div></td></tr></tbody></table>
+    <div class="rank-card rk-safety">
+      <div class="rk-head"><span class="rk-ico">🛡️</span><h3>Indice di Sicurezza</h3><span class="rk-tag">0–100</span></div>
+      <div class="rk-chart"><div class='rk-row'><span class='rk-pos'>🥇</span><span class='rk-name'>🇮🇸 Reykjavík</span><span class='rk-track'><span class='rk-fill' style='width:100%;background:var(--blue-500)'></span></span><span class='rk-val'>82.3</span></div><div class='rk-row'><span class='rk-pos'>🥈</span><span class='rk-name'>🇸🇮 Ljubljana</span><span class='rk-track'><span class='rk-fill' style='width:95%;background:var(--blue-500)'></span></span><span class='rk-val'>78.4</span></div><div class='rk-row'><span class='rk-pos'>🥉</span><span class='rk-name'>🇭🇷 Zagreb</span><span class='rk-track'><span class='rk-fill' style='width:94%;background:var(--blue-500)'></span></span><span class='rk-val'>77.1</span></div><div class='rk-row'><span class='rk-pos'>4</span><span class='rk-name'>🇫🇮 Helsinki</span><span class='rk-track'><span class='rk-fill' style='width:93%;background:var(--blue-500)'></span></span><span class='rk-val'>76.8</span></div><div class='rk-row'><span class='rk-pos'>5</span><span class='rk-name'>🇪🇪 Tallinn</span><span class='rk-track'><span class='rk-fill' style='width:93%;background:var(--blue-500)'></span></span><span class='rk-val'>76.4</span></div></div>
     </div>
-    <div class="rank-block">
-      <h3>Green Score (sostenibilità)</h3>
-      <table class="rank-table"><tbody><tr><td style='color:var(--slate-500); width:28px'>1</td><td>🇳🇴 Oslo</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:202px; background:var(--accent); border-radius:4px;'></div><b>92</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>2</td><td>🇫🇮 Helsinki</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:198px; background:var(--accent); border-radius:4px;'></div><b>90</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>3</td><td>🇸🇮 Ljubljana</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:194px; background:var(--accent); border-radius:4px;'></div><b>88</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>4</td><td>🇮🇸 Reykjavík</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:194px; background:var(--accent); border-radius:4px;'></div><b>88</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>5</td><td>🇸🇪 Stockholm</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:194px; background:var(--accent); border-radius:4px;'></div><b>88</b></div></td></tr></tbody></table>
+    <div class="rank-card rk-green">
+      <div class="rk-head"><span class="rk-ico">🌱</span><h3>Green Score</h3><span class="rk-tag">sostenibilità</span></div>
+      <div class="rk-chart"><div class='rk-row'><span class='rk-pos'>🥇</span><span class='rk-name'>🇳🇴 Oslo</span><span class='rk-track'><span class='rk-fill' style='width:100%;background:var(--green-500)'></span></span><span class='rk-val'>92</span></div><div class='rk-row'><span class='rk-pos'>🥈</span><span class='rk-name'>🇫🇮 Helsinki</span><span class='rk-track'><span class='rk-fill' style='width:98%;background:var(--green-500)'></span></span><span class='rk-val'>90</span></div><div class='rk-row'><span class='rk-pos'>🥉</span><span class='rk-name'>🇸🇮 Ljubljana</span><span class='rk-track'><span class='rk-fill' style='width:96%;background:var(--green-500)'></span></span><span class='rk-val'>88</span></div><div class='rk-row'><span class='rk-pos'>4</span><span class='rk-name'>🇮🇸 Reykjavík</span><span class='rk-track'><span class='rk-fill' style='width:96%;background:var(--green-500)'></span></span><span class='rk-val'>88</span></div><div class='rk-row'><span class='rk-pos'>5</span><span class='rk-name'>🇸🇪 Stockholm</span><span class='rk-track'><span class='rk-fill' style='width:96%;background:var(--green-500)'></span></span><span class='rk-val'>88</span></div></div>
     </div>
-    <div class="rank-block">
-      <h3>Più Accessibili Economicamente</h3>
-      <table class="rank-table"><tbody><tr><td style='color:var(--slate-500); width:28px'>1</td><td>🇧🇬 Sofia</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:193px; background:var(--accent); border-radius:4px;'></div><b>87.88€/night</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>2</td><td>🇷🇴 Bucharest</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:199px; background:var(--accent); border-radius:4px;'></div><b>90.47€/night</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>3</td><td>🇭🇺 Budapest</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:213px; background:var(--accent); border-radius:4px;'></div><b>96.75€/night</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>4</td><td>🇵🇱 Warsaw</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:217px; background:var(--accent); border-radius:4px;'></div><b>98.42€/night</b></div></td></tr><tr><td style='color:var(--slate-500); width:28px'>5</td><td>🇭🇷 Zagreb</td><td><div style='display:flex; align-items:center; gap:8px;'><div style='height:8px; width:223px; background:var(--accent); border-radius:4px;'></div><b>101.38€/night</b></div></td></tr></tbody></table>
+    <div class="rank-card rk-price">
+      <div class="rk-head"><span class="rk-ico">💰</span><h3>Più Economiche</h3><span class="rk-tag">€/notte</span></div>
+      <div class="rk-chart"><div class='rk-row'><span class='rk-pos'>🥇</span><span class='rk-name'>🇧🇬 Sofia</span><span class='rk-track'><span class='rk-fill' style='width:100%;background:#f59e0b'></span></span><span class='rk-val'>88€</span></div><div class='rk-row'><span class='rk-pos'>🥈</span><span class='rk-name'>🇷🇴 Bucharest</span><span class='rk-track'><span class='rk-fill' style='width:97%;background:#f59e0b'></span></span><span class='rk-val'>90€</span></div><div class='rk-row'><span class='rk-pos'>🥉</span><span class='rk-name'>🇭🇺 Budapest</span><span class='rk-track'><span class='rk-fill' style='width:89%;background:#f59e0b'></span></span><span class='rk-val'>97€</span></div><div class='rk-row'><span class='rk-pos'>4</span><span class='rk-name'>🇵🇱 Warsaw</span><span class='rk-track'><span class='rk-fill' style='width:86%;background:#f59e0b'></span></span><span class='rk-val'>98€</span></div><div class='rk-row'><span class='rk-pos'>5</span><span class='rk-name'>🇭🇷 Zagreb</span><span class='rk-track'><span class='rk-fill' style='width:82%;background:#f59e0b'></span></span><span class='rk-val'>101€</span></div></div>
     </div>
   </div>
 </section>
@@ -518,8 +563,12 @@ for filename in files:                                  # scorre la directory XM
 └── landmark_image?    (URL immagine simbolo)</pre>
   <h3>Dichiarazione DTD (file sorgente)</h3>
   <pre>&lt;!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?)&gt;
-&lt;!ATTLIST city_report 
-    appeal_score CDATA #REQUIRED&gt;
+&lt;!-- currency: codice ISO 4217 della valuta locale (es. "GBP", "SEK").
+     Attributo OPZIONALE (#IMPLIED): è assente per le città dell'area euro,
+     presente solo per le capitali che usano una valuta diversa dall'euro. --&gt;
+&lt;!ATTLIST city_report
+    appeal_score CDATA #REQUIRED
+    currency     CDATA #IMPLIED&gt;
 
 &lt;!ELEMENT metadata (title, name_it, flag, source_url)&gt;
 &lt;!ELEMENT title (#PCDATA)&gt;

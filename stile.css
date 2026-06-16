@@ -478,6 +478,34 @@ details[open] .analyst-details summary::before { content: '▾ '; }
     font-size: 1.05rem;
 }
 
+/* Equivalente in valuta locale sotto al Budget (solo capitali non-euro) */
+.stat-local {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #b45309;
+    margin-top: 1px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Nota valuta locale sulle pagine città fuori area euro */
+.currency-note {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 4px solid #f59e0b;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 22px 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #78350f;
+}
+.currency-note .cur-ico { font-size: 1.3rem; line-height: 1; }
+.currency-note b { color: #92400e; }
+
 /* PULSANTE CTA */
 .card-cta {
     display: block;

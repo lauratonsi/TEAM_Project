@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="59.1">
+<city_report appeal_score="59.1" currency="BGN">
   <metadata>
     <title>Sofia</title>
     <name_it>Sofia</name_it>

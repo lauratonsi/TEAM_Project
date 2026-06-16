@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="69.3">
+<city_report appeal_score="69.3" currency="PLN">
   <metadata>
     <title>Warsaw</title>
     <name_it>Warsaw</name_it>

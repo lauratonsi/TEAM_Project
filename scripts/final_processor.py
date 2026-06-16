@@ -76,6 +76,13 @@ LANDMARK_IMAGES = {
 with open(INPUT_JSON_TRANSPORT_PATCHES, encoding='utf-8') as _f:
     TRANSPORT_PATCH = json.load(_f)
 
+# Valuta locale: solo per le capitali fuori dall'area euro. Il codice ISO viene
+# scritto come attributo opzionale `currency` sul root (DTD: #IMPLIED); le città
+# euro non hanno l'attributo. I tassi vivono in currency_rates.json e li usa il sito.
+INPUT_JSON_CURRENCY = str(ROOT / 'data' / 'currency_rates.json')
+with open(INPUT_JSON_CURRENCY, encoding='utf-8') as _f:
+    CITY_CURRENCY = json.load(_f).get('cities', {})
+
 # District names that are clearly noise (not real city districts)
 _NOISE_DISTRICTS = {
     'visitor info', 'visitor info:', 'buses', 'bus', 'trams', 'tram',
@@ -425,6 +432,10 @@ def run_pipeline():
         )
 
         root = etree.Element("city_report", appeal_score=str(score))
+        # Valuta locale (solo capitali fuori area euro): attributo opzionale sul root.
+        local_currency = CITY_CURRENCY.get(name)
+        if local_currency:
+            root.set("currency", local_currency)
 
         # --- metadata ---
         meta = etree.SubElement(root, "metadata")

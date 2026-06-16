@@ -1,6 +1,10 @@
 <!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?)>
-<!ATTLIST city_report 
-    appeal_score CDATA #REQUIRED>
+<!-- currency: codice ISO 4217 della valuta locale (es. "GBP", "SEK").
+     Attributo OPZIONALE (#IMPLIED): è assente per le città dell'area euro,
+     presente solo per le capitali che usano una valuta diversa dall'euro. -->
+<!ATTLIST city_report
+    appeal_score CDATA #REQUIRED
+    currency     CDATA #IMPLIED>
 
 <!ELEMENT metadata (title, name_it, flag, source_url)>
 <!ELEMENT title (#PCDATA)>

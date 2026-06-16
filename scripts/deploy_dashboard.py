@@ -278,6 +278,38 @@ OUTPUT_HTML = str(ROOT / 'index.html')
 REPORT_HTML = str(ROOT / 'pages' / 'report.html')
 MAP_FILE = str(ROOT / 'pages' / 'mappa_attrazioni.html')
 DTD_FILE = str(ROOT / 'data' / 'city_report.dtd')
+CURRENCY_FILE = str(ROOT / 'data' / 'currency_rates.json')
+
+# --- VALUTA LOCALE (capitali fuori area euro) ---
+# I prezzi del dataset sono SINTETICI e denominati in EUR (hotel_price =
+# cost_of_living × 1.85). Per le città non-euro teniamo l'EUR come unità primaria
+# (comparabile in tutto il sito) e affianchiamo l'equivalente locale INDICATIVO,
+# letto dai tassi di currency_rates.json. La valuta di ciascuna città arriva
+# dall'attributo opzionale @currency del documento XML.
+with open(CURRENCY_FILE, encoding='utf-8') as _cf:
+    _CUR = json.load(_cf)
+CURRENCIES = _CUR.get('currencies', {})
+CURRENCY_SNAPSHOT = _CUR.get('_meta', {}).get('snapshot', '')
+
+def local_price(eur_value, code):
+    """Equivalente locale indicativo di un importo EUR (stringa già formattata,
+    es. '1.664 kr'). Ritorna '' per le città in area euro o codici sconosciuti."""
+    meta = CURRENCIES.get(code or '')
+    if not meta:
+        return ''
+    try:
+        amount = float(eur_value or 0) * meta['per_eur']
+    except (TypeError, ValueError):
+        return ''
+    if amount >= 100:                              # valute "grandi" (HUF, ISK, kr): interi
+        n_disp = f"{round(amount):,.0f}".replace(',', '.')
+    else:                                          # GBP, BGN: un decimale
+        n_disp = f"{round(amount, 1)}"
+    return f"{n_disp} {meta['symbol']}"
+
+def currency_meta(code):
+    """Metadati valuta (symbol, name_it, …) o None se euro/sconosciuto."""
+    return CURRENCIES.get(code or '')
 
 # --- MAPPA: coordinate capitali e palette colori ---
 CAPITAL_COORDS = {
@@ -538,6 +570,8 @@ def deploy():
                 'uri': root.findtext(".//source_url") or "",
                 # @ sull'attributo obbligatorio del root via XPath: string(/city_report/@appeal_score)
                 'appeal': root.xpath("string(/city_report/@appeal_score)").strip() or "0",
+                # @currency: attributo opzionale del root (assente = area euro)
+                'currency': root.xpath("string(/city_report/@currency)").strip(),
                 'price': root.findtext(".//hotel_price", "0"),
                 'safety': root.xpath("string(.//safety/@index_score)") or "0",
                 'green': root.xpath("string(.//environment/@green_score)") or "0",
@@ -994,6 +1028,28 @@ def generate_city_pages(city_data):
                 f"style='width:100%; height:100%; object-fit:cover;'></div>"
             )
 
+        # --- Valuta locale (solo capitali fuori area euro) ---
+        # L'euro resta l'unità primaria (il prezzo è una stima sintetica in EUR);
+        # affianchiamo l'equivalente locale indicativo e una nota esplicativa.
+        cmeta = currency_meta(city['currency'])
+        budget_local = local_price(city['price'], city['currency'])
+        budget_local_sub = (
+            f"<span class='stat-local'>≈ {budget_local}</span>" if budget_local else ""
+        )
+        if cmeta:
+            currency_note_html = (
+                f"<div class='currency-note'>"
+                f"<span class='cur-ico'>🪙</span>"
+                f"<div><b>{city['name_it']}</b> non usa l'euro: la valuta locale è "
+                f"<b>{cmeta['name_it']}</b> ({city['currency']}, {cmeta['symbol']}). "
+                f"I prezzi del sito sono una <b>stima sintetica in euro</b> (per confronto tra città); "
+                f"l'equivalente locale (<b>≈ {budget_local}</b> a notte) è indicativo, "
+                f"a tassi di riferimento del {CURRENCY_SNAPSHOT}.</div>"
+                f"</div>"
+            )
+        else:
+            currency_note_html = ""
+
         # --- Stats box ---
         _s = _pct(city['safety']); _g = _pct(city['green'])
         _p = _pct(city['price'], 2.5); _e = _pct(city['economy'])
@@ -1007,7 +1063,7 @@ def generate_city_pages(city_data):
             </div>
             <div class='stat-item'>
                 <span class='stat-label'>Budget</span>
-                <span class='stat-val'>{city['price']}€</span>
+                <span class='stat-val'>{city['price']}€</span>{budget_local_sub}
                 <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:{_p}%'></div></div>
             </div>
             <div class='stat-item'>
@@ -1175,6 +1231,7 @@ def generate_city_pages(city_data):
     {lm_html}
     <h1 class="city-title" style="margin-bottom:25px;">{city['flag']} {city['name_it']}</h1>
     {stats_html}
+    {currency_note_html}
     {transport_html}
     {hotel_html}
     {districts_html}
@@ -1294,22 +1351,31 @@ def generate_report(city_data, validation):
     avg_safety = round(sum(fv(c['safety'])  for c in city_data) / total_cities, 1)
     avg_green  = round(sum(fv(c['green'])   for c in city_data) / total_cities, 1)
 
-    def ranking_rows(cities, key, unit="", n=5):
+    def ranking_chart(cities, key, unit="", color="var(--accent)", invert=False, n=5):
+        """Riga-grafico (CSS Grid) per ogni città: posizione · nome · barra · valore.
+        La barra è normalizzata sul massimo del dataset per quell'indicatore; con
+        `invert=True` (prezzo) più corta = più cara, così la barra più lunga è sempre
+        la 'migliore'. Podio (1-3) marcato con medaglie."""
+        medals = {1: '🥇', 2: '🥈', 3: '🥉'}
+        vals = [fv(c[key]) for c in city_data]
+        vmax, vmin = (max(vals) if vals else 1), (min(vals) if vals else 0)
         rows = ""
         for i, c in enumerate(cities[:n], 1):
-            val = c[key]
-            bar = round(fv(val) / 100 * 220)
+            v = fv(c[key])
+            if invert:
+                pct = round((vmax - v) / (vmax - vmin) * 100) if vmax > vmin else 100
+            else:
+                pct = round(v / vmax * 100) if vmax else 0
+            pct = max(6, min(100, pct))          # pavimento: anche la barra minima resta visibile
+            pos = medals.get(i, str(i))
+            val_disp = str(int(round(v))) if unit == '€' else c[key]   # prezzi: euro interi
             rows += (
-                f"<tr>"
-                f"<td style='color:var(--slate-500); width:28px'>{i}</td>"
-                f"<td>{c['flag']} {c['name_it']}</td>"
-                f"<td>"
-                f"<div style='display:flex; align-items:center; gap:8px;'>"
-                f"<div style='height:8px; width:{bar}px; background:var(--accent); border-radius:4px;'></div>"
-                f"<b>{val}{unit}</b>"
+                f"<div class='rk-row'>"
+                f"<span class='rk-pos'>{pos}</span>"
+                f"<span class='rk-name'>{c['flag']} {c['name_it']}</span>"
+                f"<span class='rk-track'><span class='rk-fill' style='width:{pct}%;background:{color}'></span></span>"
+                f"<span class='rk-val'>{val_disp}{unit}</span>"
                 f"</div>"
-                f"</td>"
-                f"</tr>"
             )
         return rows
 
@@ -1388,11 +1454,43 @@ def generate_report(city_data, validation):
     .rank-table {{ width: 100%; border-collapse: collapse; font-size: 0.9rem; }}
     .rank-table td {{ padding: 8px 6px; vertical-align: middle; }}
     .rank-table tr:not(:last-child) {{ border-bottom: 1px solid var(--slate-100); }}
+    /* --- Classifiche: grafici a barre in CSS Grid --- */
     .rank-grid {{
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px; margin-bottom: 10px;
     }}
-    .rank-block h3 {{ margin-top: 0; }}
+    .rank-card {{
+      background: var(--slate-50); border: 1px solid var(--slate-100);
+      border-left: 4px solid var(--accent); border-radius: 14px; padding: 16px 18px;
+    }}
+    .rk-appeal {{ border-left-color: var(--accent); }}
+    .rk-safety {{ border-left-color: var(--blue-500); }}
+    .rk-green  {{ border-left-color: var(--green-500); }}
+    .rk-price  {{ border-left-color: #f59e0b; }}
+    .rk-head {{ display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }}
+    .rk-head h3 {{ margin: 0; font-size: 0.98rem; }}
+    .rk-ico {{ font-size: 1.15rem; line-height: 1; }}
+    .rk-tag {{
+      margin-left: auto; font-size: 0.64rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--slate-500); background: #fff;
+      border: 1px solid var(--slate-200); border-radius: 6px; padding: 2px 8px;
+    }}
+    .rk-chart {{ display: flex; flex-direction: column; gap: 9px; }}
+    .rk-row {{
+      display: grid;
+      grid-template-columns: 26px minmax(84px, 130px) 1fr auto;
+      align-items: center; gap: 10px; font-size: 0.86rem;
+    }}
+    .rk-pos {{ text-align: center; font-weight: 800; color: var(--slate-500); }}
+    .rk-name {{
+      font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }}
+    .rk-track {{
+      height: 10px; background: var(--slate-200); border-radius: 6px; overflow: hidden;
+    }}
+    .rk-fill {{ display: block; height: 100%; border-radius: 6px; min-width: 4px; }}
+    .rk-val {{ font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }}
     .pipeline-steps {{
       display: flex; flex-direction: column; gap: 0;
       position: relative; margin: 8px 0 0;
@@ -1569,10 +1667,18 @@ def generate_report(city_data, validation):
         <td style="text-align:right">0–100</td>
       </tr>
       <tr>
-        <td>Prezzo alloggio</td>
-        <td><span class="prov-src src-wiki">📂 Wikivoyage</span></td>
-        <td>Estratto dalle voci alloggio nel Wikitext; mediato in <code>&lt;hotel_price&gt;</code>.</td>
+        <td>Budget alloggio</td>
+        <td><span class="prov-src src-derived">🧮 Derivato</span> <span class="prov-src src-indices">📊 city_indices.json</span></td>
+        <td><b>Stima sintetica</b>, non un prezzo osservato: <code>&lt;hotel_price&gt; = cost_of_living × 1.85</code>
+            (proxy in euro del costo della vita Numbeo). Serve a confrontare le città, non a prenotare.</td>
         <td style="text-align:right">€/notte</td>
+      </tr>
+      <tr>
+        <td>Valuta locale</td>
+        <td><span class="prov-src src-indices">📊 currency_rates.json</span></td>
+        <td>Codice ISO nell'attributo opzionale <code>&lt;city_report&nbsp;currency="…"&gt;</code> (solo capitali fuori
+            area euro); l'equivalente locale mostrato è una conversione <b>indicativa</b> a tassi di riferimento.</td>
+        <td style="text-align:right">ISO 4217</td>
       </tr>
       <tr>
         <td>Attrazioni · Locali · Distretti</td>
@@ -1625,22 +1731,27 @@ def generate_report(city_data, validation):
 <!-- ===== CLASSIFICHE ===== -->
 <section class="report-section" id="ranking">
   <h2>🏆 Classifiche per Indicatore</h2>
+  <p style="margin-top:0;color:var(--slate-500);font-size:0.9rem;">
+    Top 5 capitali per ogni indicatore. La <b>barra è proporzionale al valore</b>, normalizzata sul
+    massimo del dataset; per il prezzo la scala è invertita (<b>barra più lunga = più economica</b>),
+    così in ogni grafico la barra più piena è sempre la posizione migliore.
+  </p>
   <div class="rank-grid">
-    <div class="rank-block">
-      <h3>Appeal Score (composito)</h3>
-      <table class="rank-table"><tbody>{ranking_rows(by_appeal, 'appeal')}</tbody></table>
+    <div class="rank-card rk-appeal">
+      <div class="rk-head"><span class="rk-ico">⭐</span><h3>Appeal Score</h3><span class="rk-tag">composito</span></div>
+      <div class="rk-chart">{ranking_chart(by_appeal, 'appeal', color='var(--accent)')}</div>
     </div>
-    <div class="rank-block">
-      <h3>Indice di Sicurezza</h3>
-      <table class="rank-table"><tbody>{ranking_rows(by_safety, 'safety')}</tbody></table>
+    <div class="rank-card rk-safety">
+      <div class="rk-head"><span class="rk-ico">🛡️</span><h3>Indice di Sicurezza</h3><span class="rk-tag">0–100</span></div>
+      <div class="rk-chart">{ranking_chart(by_safety, 'safety', color='var(--blue-500)')}</div>
     </div>
-    <div class="rank-block">
-      <h3>Green Score (sostenibilità)</h3>
-      <table class="rank-table"><tbody>{ranking_rows(by_green, 'green')}</tbody></table>
+    <div class="rank-card rk-green">
+      <div class="rk-head"><span class="rk-ico">🌱</span><h3>Green Score</h3><span class="rk-tag">sostenibilità</span></div>
+      <div class="rk-chart">{ranking_chart(by_green, 'green', color='var(--green-500)')}</div>
     </div>
-    <div class="rank-block">
-      <h3>Più Accessibili Economicamente</h3>
-      <table class="rank-table"><tbody>{ranking_rows(by_cost, 'price', '€/night')}</tbody></table>
+    <div class="rank-card rk-price">
+      <div class="rk-head"><span class="rk-ico">💰</span><h3>Più Economiche</h3><span class="rk-tag">€/notte</span></div>
+      <div class="rk-chart">{ranking_chart(by_cost, 'price', unit='€', color='#f59e0b', invert=True)}</div>
     </div>
   </div>
 </section>

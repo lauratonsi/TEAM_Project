@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="60.3">
+<city_report appeal_score="60.3" currency="RON">
   <metadata>
     <title>Bucharest</title>
     <name_it>Bucharest</name_it>

@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "description": "Mappa città→valuta locale e tassi di cambio indicativi EUR→valuta, per le capitali europee che NON hanno l'euro come valuta ufficiale. I prezzi del dataset sono SINTETICI (hotel_price = cost_of_living × 1.85) e denominati in EUR: la conversione qui sotto è puramente informativa, serve a ricordare che in queste città si paga in valuta locale e a dare un ordine di grandezza dell'equivalente.",
+    "base": "EUR",
+    "rates_basis": "Tassi di riferimento indicativi (snapshot gennaio 2026), ispirati ai reference rates BCE. NON adatti a transazioni reali: arrotondati e non aggiornati in tempo reale.",
+    "snapshot": "2026-01",
+    "note_zagreb": "Zagabria (Croazia) usa l'euro dal 2023 e quindi NON compare in questa lista.",
+    "field_per_eur": "Unità di valuta locale per 1 EUR (prezzo_locale = prezzo_eur × per_eur)."
+  },
+  "currencies": {
+    "GBP": {"symbol": "£",   "name_it": "sterlina britannica", "name_en": "pound sterling",   "per_eur": 0.84},
+    "CZK": {"symbol": "Kč",  "name_it": "corona ceca",         "name_en": "Czech koruna",     "per_eur": 25.2},
+    "DKK": {"symbol": "kr",  "name_it": "corona danese",       "name_en": "Danish krone",     "per_eur": 7.46},
+    "SEK": {"symbol": "kr",  "name_it": "corona svedese",      "name_en": "Swedish krona",    "per_eur": 11.3},
+    "NOK": {"symbol": "kr",  "name_it": "corona norvegese",    "name_en": "Norwegian krone",  "per_eur": 11.7},
+    "ISK": {"symbol": "kr",  "name_it": "corona islandese",    "name_en": "Icelandic króna",  "per_eur": 150.0},
+    "BGN": {"symbol": "лв",  "name_it": "lev bulgaro",         "name_en": "Bulgarian lev",    "per_eur": 1.96},
+    "RON": {"symbol": "lei", "name_it": "leu rumeno",          "name_en": "Romanian leu",     "per_eur": 4.97},
+    "HUF": {"symbol": "Ft",  "name_it": "fiorino ungherese",   "name_en": "Hungarian forint", "per_eur": 395.0},
+    "PLN": {"symbol": "zł",  "name_it": "złoty polacco",       "name_en": "Polish złoty",     "per_eur": 4.25}
+  },
+  "cities": {
+    "London": "GBP",
+    "Prague": "CZK",
+    "Copenhagen": "DKK",
+    "Stockholm": "SEK",
+    "Oslo": "NOK",
+    "Reykjavik": "ISK",
+    "Sofia": "BGN",
+    "Bucharest": "RON",
+    "Budapest": "HUF",
+    "Warsaw": "PLN"
+  }
+}

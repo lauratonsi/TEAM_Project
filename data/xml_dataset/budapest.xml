@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="59.8">
+<city_report appeal_score="59.8" currency="HUF">
   <metadata>
     <title>Budapest</title>
     <name_it>Budapest</name_it>
