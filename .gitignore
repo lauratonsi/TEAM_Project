@@ -1,4 +1,5 @@
 # Ignore local model files and environment files
+/SLIDES/
 /models/
 .env
 
