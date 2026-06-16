@@ -865,7 +865,7 @@ def generate_city_pages(city_data):
             for v in city['nightlife']
         ])
         nightlife_html = (
-            f"<div class='info-block nightlife-block'>"
+            f"<div id='nightlife' class='info-block nightlife-block'>"
             f"<span class='block-title'>🍺 Where to Drink</span>"
             f"<ul style='margin:0; padding-left:15px;'>{night_li}</ul></div>"
         ) if night_li else ""
@@ -1004,7 +1004,9 @@ def generate_city_pages(city_data):
     var ico=venueIco[v.cat]||'🍺';
     var m=L.marker([v.lat,v.lon],{{icon:mkIcon(ico)}}).addTo(map);
     m.bindTooltip(v.n);
-    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0;font-size:.82rem;color:#64748b">'+v.cat+'</p></div>');
+    m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
+      +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
+      +'<a href="#nightlife" class="pl">🍺 Where to Drink ↓</a></div>');
     allMkrs.push(m);
   }});
   if(allMkrs.length>0){{
