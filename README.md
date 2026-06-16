@@ -41,6 +41,25 @@ ELABORAZIONE/
 
 ---
 
+## Architettura della Pipeline
+
+Cinque componenti Python. La pipeline trasforma i dump MediaWiki in file XML conformi al DTD
+(con **content-model misto**), li valida, genera l'HTML annotato con **microdata** e indicizza
+i contenuti per le query in linguaggio naturale.
+
+| # | Componente | Ruolo |
+|---|-----------|-------|
+| 1 | `extract_wiki_info.py` | Preparazione: dump Wikivoyage → CSV/JSON (mwparserfromhell, spaCy) |
+| 2 | `final_processor.py` | Costruzione XML (content-model misto + `<source_url>`) e **validazione DTD in scrittura** |
+| 3 | `deploy_dashboard.py` | **Ri-validazione DTD in lettura** + generazione HTML/CSS con microdata annidati (`itemid` ← documento) |
+| 4 | `validate.py` | **Validatore DTD standalone**: DOM + `etree.DTD().validate()`, isolato dal resto |
+| 5 | `rag/` | Indicizzazione FAISS + BM25 e Virtual Analyst per query in linguaggio naturale |
+
+La validazione DTD avviene quindi in **tre punti** (scrittura, lettura, script standalone),
+tutti con `lxml.etree.DTD`.
+
+---
+
 ## Come Eseguire la Pipeline
 
 ### Prerequisiti

@@ -1370,9 +1370,10 @@ def generate_report(city_data, validation):
 <section class="report-section" id="architettura">
   <h2>⚙️ Architettura della Pipeline TEAM</h2>
   <p>
-    Il progetto è composto da quattro componenti Python. La pipeline trasforma dump MediaWiki
-    in file XML conformi al DTD, genera le pagine HTML navigabili e indicizza i contenuti
-    in un sistema RAG per le query in linguaggio naturale.
+    Il progetto è composto da <b>cinque</b> componenti Python. La pipeline trasforma dump
+    MediaWiki in file XML conformi al DTD (con <b>content-model misto</b>), li valida, genera
+    le pagine HTML navigabili annotate con <b>microdata</b> e indicizza i contenuti in un
+    sistema RAG per le query in linguaggio naturale.
   </p>
   <div class="pipeline-steps">
     <div class="pipeline-step">
@@ -1394,9 +1395,12 @@ def generate_report(city_data, validation):
         <h3 style="margin:0;"><code>final_processor.py</code> — Elaborazione e validazione XML</h3>
         <p>
           Script centrale del progetto. Per ogni capitale individua la pagina principale nel dump,
-          pulisce il Wikitext con regex, estrae distretti con descrizioni dalle sotto-pagine,
-          valida il file XML risultante rispetto al DTD tramite <b>lxml.etree.DTD</b>
-          e scrive i file in <code>data/xml_dataset/</code>.
+          pulisce il Wikitext con regex, estrae distretti con descrizioni dalle sotto-pagine, e
+          costruisce l'albero XML. I campi <code>transport</code>, <code>description</code> e
+          <code>wiki_intro</code> sono generati come <b>content-model misto</b> (testo + markup
+          inline <code>&lt;b&gt;/&lt;i&gt;/&lt;link&gt;</code>); ogni documento riceve l'URI
+          canonico <code>&lt;source_url&gt;</code>. L'albero viene <b>validato</b> rispetto al DTD
+          con <b>lxml.etree.DTD</b> prima della scrittura in <code>data/xml_dataset/</code>.
         </p>
       </div>
     </div>
@@ -1405,15 +1409,33 @@ def generate_report(city_data, validation):
       <div class="step-body">
         <h3 style="margin:0;"><code>deploy_dashboard.py</code> — Generazione HTML</h3>
         <p>
-          Legge i 30 file XML validati e produce <code>index.html</code> (dashboard con griglia
-          di card), le 30 pagine città e questo <code>report.html</code>. Le card includono
-          <b>microdata Schema.org</b> (<code>itemscope itemtype="https://schema.org/City"</code>). I dati vengono
-          anche serializzati come JSON inline per il Virtual Analyst client-side.
+          Legge la directory dei 30 file XML e li <b>ri-valida in lettura</b> (distinguendo
+          documenti <i>mal formati</i> da <i>non validi</i>, con contatore <code>30/30</code>
+          nell'<code>index.html</code>). Produce <code>index.html</code>, le 30 pagine città e
+          questo <code>report.html</code>, preservando il markup inline del content-model misto.
+          Ogni documento è annotato con <b>microdata Schema.org</b> annidati
+          (<code>City &gt; containsPlace/TouristAttraction &gt; geo/GeoCoordinates</code>), dove
+          l'<code>itemid</code> è l'URI letto dal documento (<code>&lt;source_url&gt;</code>).
+          I dati sono anche serializzati come JSON inline per il Virtual Analyst client-side.
         </p>
       </div>
     </div>
     <div class="pipeline-step">
       <div class="step-num">4</div>
+      <div class="step-body">
+        <h3 style="margin:0;"><code>validate.py</code> — Validazione DTD standalone</h3>
+        <p>
+          Script <b>indipendente</b> dal resto della pipeline (modellato sui laboratori del corso):
+          scorre la directory XML, costruisce il <b>DOM</b> con <code>etree.parse()</code> e lo
+          valida con <code>etree.DTD(...).validate()</code>, distinguendo <i>mal formati</i>,
+          <i>non validi</i> e <i>validi</i>. Stampa l'esito per file e restituisce codice di uscita
+          <code>0</code> solo se tutti i documenti sono validi. Vedi sezione
+          <a href="#dtd">Schema DTD</a>.
+        </p>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">5</div>
       <div class="step-body">
         <h3 style="margin:0;"><code>rag/</code> — Sistema RAG per query in linguaggio naturale</h3>
         <p>
