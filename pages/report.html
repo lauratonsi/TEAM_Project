@@ -463,6 +463,21 @@ for filename in files:                                  # scorre la directory XM
       </p>
     </div>
     <div class="technique-card">
+      <h4>Parsing del Wikitext con mwparserfromhell</h4>
+      <p>
+        All'interno di ogni pagina MediaWiki, il contenuto non è XML ma <b>wikitext</b>
+        (la sintassi con <code>{template}</code>, <code>[[link]]</code>, <code>== sezioni ==</code>,
+        tabelle, ecc.). <b>mwparserfromhell</b> (&ldquo;MediaWiki Parser from Hell&rdquo;) è la
+        libreria Python — usata anche dai bot di Wikipedia — che analizza questo wikitext e lo
+        trasforma in un <b>albero di nodi</b> tipizzati (template, wikilink, tag, heading…).
+        Permette di estrarre e ripulire il testo in modo <b>strutturato e robusto</b> — ad es.
+        <code>wikicode.filter_templates()</code> per individuare e rimuovere i template, o
+        <code>strip_code()</code> per ottenere il testo leggibile — invece di affidarsi solo a
+        fragili espressioni regolari. È impiegata in <code>extract_wiki_info.py</code> nella fase
+        di preparazione del dataset.
+      </p>
+    </div>
+    <div class="technique-card">
       <h4>Selezione della Pagina Principale</h4>
       <p>
         L'algoritmo cerca nell'ordine: (1) pagina con titolo esatto uguale al nome della
