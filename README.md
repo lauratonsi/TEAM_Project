@@ -420,7 +420,7 @@ ruoli e nomi accessibili, non lo stile:
 document  "EuroCity Strategic Intelligence"            [lang="en"]
 ├─ link        "Salta al contenuto"                    (skip-link, visibile al focus)
 ├─ banner                                              ‹header›
-│  └─ navigation  "Navigazione principale"             ‹nav›  → Home · Report · Map
+│  └─ navigation  "Navigazione principale"             ‹nav›  → Home · Map · Report
 ├─ heading h1  "30 European capitals, one intelligence."
 ├─ region      "How the data is built"                 ‹section[aria-label]›
 │  └─ heading h2  "How the data is built"

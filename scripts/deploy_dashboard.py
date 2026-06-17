@@ -301,8 +301,8 @@ def generate_map(city_data):
         "    <a href='../index.html' class='topbar-logo'>EuroCity <b>SI</b></a>\n"
         "    <nav class='topbar-nav' aria-label='Navigazione principale'>\n"
         "      <a href='../index.html'>\U0001f3e0 Home</a>\n"
-        "      <a href='report.html'>\U0001f4ca Report</a>\n"
         "      <a href='mappa_attrazioni.html' class='active' aria-current='page'>\U0001f5fa️ Map</a>\n"
+        "      <a href='report.html'>\U0001f4ca Report</a>\n"
         "    </nav>\n"
         "  </div>\n"
         "</header>\n"
@@ -820,8 +820,8 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
         <span class="topbar-logo">EuroCity <b>SI</b></span>
         <nav class="topbar-nav" aria-label="Navigazione principale">
             <a href="#" class="active" aria-current="page">🏠 Home</a>
-            <a href="pages/report.html">📊 Report</a>
             <a href="pages/mappa_attrazioni.html">🗺️ Map</a>
+            <a href="pages/report.html">📊 Report</a>
         </nav>
     </div>
 </header>
@@ -1280,8 +1280,8 @@ def generate_city_pages(city_data):
         <a href="../../index.html" class="topbar-logo">EuroCity <b>SI</b></a>
         <nav class="topbar-nav" aria-label="Navigazione principale">
             <a href="../../index.html">🏠 Home</a>
-            <a href="../../pages/report.html">📊 Report</a>
             <a href="../../pages/mappa_attrazioni.html">🗺️ Map</a>
+            <a href="../../pages/report.html">📊 Report</a>
         </nav>
     </div>
 </header>
@@ -1661,8 +1661,8 @@ def generate_report(city_data, validation):
     <a href="../index.html" class="topbar-logo">EuroCity <b>SI</b></a>
     <nav class="topbar-nav" aria-label="Navigazione principale">
       <a href="../index.html">🏠 Home</a>
-      <a href="report.html" class="active" aria-current="page">📊 Report</a>
       <a href="mappa_attrazioni.html">🗺️ Map</a>
+      <a href="report.html" class="active" aria-current="page">📊 Report</a>
     </nav>
   </div>
 </header>
