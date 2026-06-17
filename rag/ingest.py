@@ -64,16 +64,42 @@ def build_embeddings_and_index(model_name='all-MiniLM-L6-v2'):
 
         city = (root.findtext('metadata/title') or xml_file.stem).upper()
 
-        def add(text, section):
+        # --- Structured city-level metadata (injected XML attributes) -------------
+        # Carried on EVERY chunk so retrieval can pre-filter on exact dimensions
+        # (region UN M49 / currency / appeal / indicators) — "metadata-filtered RAG".
+        def _num(xpath, default=0.0):
+            val = root.xpath(f'string({xpath})').strip()
+            try:
+                return float(val)
+            except ValueError:
+                return default
+
+        city_meta = {
+            'appeal': _num('/city_report/@appeal_score'),
+            # @currency absent ⇒ eurozone; normalise to 'EUR' for uniform filtering
+            'currency': root.xpath('string(/city_report/@currency)').strip() or 'EUR',
+            'region': root.xpath('string(/city_report/@region)').strip(),
+            'safety': _num('.//safety/@index_score'),
+            'green': _num('.//environment/@green_score'),
+            'cost': _num('.//cost_index/@value'),
+            'economy': _num('.//economic_accessibility/@score'),
+            'price': _num('.//hotel_price'),
+        }
+
+        def add(text, section, extra=None):
             if not text or not text.strip():
                 return
             for chunk in chunk_text(text.strip()):
-                docs.append({
+                doc = {
                     'text': f'[{city}] {chunk}',
                     'city': city,
                     'section': section,
                     'source': xml_file.name,
-                })
+                    'meta': city_meta,
+                }
+                if extra:
+                    doc.update(extra)
+                docs.append(doc)
 
         # Transport
         add(root.findtext('transport'), 'transport')
@@ -119,7 +145,9 @@ def build_embeddings_and_index(model_name='all-MiniLM-L6-v2'):
                 for v in venues if v.findtext('name')
             ]
             if venue_parts:
-                add('Bar e locali notturni: ' + '; '.join(venue_parts), 'nightlife')
+                cats = sorted({(v.get('category') or 'bar') for v in venues if v.findtext('name')})
+                add('Bar e locali notturni: ' + '; '.join(venue_parts), 'nightlife',
+                    extra={'categories': cats})
 
     print(f'Prepared {len(docs)} text chunks from {len(xml_files)} cities')
 

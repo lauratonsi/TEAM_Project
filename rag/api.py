@@ -126,6 +126,61 @@ def detect_intent(query: str) -> str:
     return best if scores[best] > 0 else 'general'
 
 
+_REGION_KW = {
+    'northern': ('northern', 'north europe', 'nord', 'nordic', 'scandinav', 'baltic'),
+    'southern': ('southern', 'south europe', 'sud', 'mediterran', 'meridional'),
+    'western': ('western', 'west europe', 'ovest', 'occidental'),
+    'eastern': ('eastern', 'east europe', 'est europ', 'orientale', 'balkan'),
+}
+
+
+def _parse_threshold(q: str, kw: str) -> Optional[dict]:
+    """Extract a numeric constraint like 'appeal over 60' / 'budget under 120'."""
+    over = r'(over|above|more than|greater than|higher than|at least|>|più di|piu di|sopra|oltre)'
+    under = r'(under|below|less than|lower than|cheaper than|at most|<|meno di|sotto)'
+    for op, words in (('>=', over), ('<=', under)):
+        m = re.search(rf'(?:{kw})[^0-9]{{0,18}}{words}\s*([0-9]+)', q) or \
+            re.search(rf'{words}\s*([0-9]+)[^0-9]{{0,14}}(?:{kw})', q)
+        if m:
+            return {'op': op, 'val': float(m.group(2))}
+    return None
+
+
+def parse_filters(query: str) -> dict:
+    """Derive structured metadata filters from a natural-language query.
+
+    Mirrors the client-side metadata engine: region (UN M49) / currency / venue
+    category / numeric thresholds on appeal, safety, green and price.
+    """
+    q = query.lower()
+    filters: dict = {}
+
+    for code, kws in _REGION_KW.items():
+        if any(kw in q for kw in kws):
+            filters['region'] = code
+            break
+
+    if re.search(r"non[ -]?euro|outside (the )?euro|fuori.{0,8}euro|senza euro|not use the euro", q):
+        filters['currency'] = 'other'
+    elif re.search(r"eurozone|euro area|euro zone|area euro|in the euro\b|uses? the euro", q):
+        filters['currency'] = 'eur'
+
+    if re.search(r'nightclub|night club|discotec|clubbing', q):
+        filters['category'] = 'nightclub'
+    elif re.search(r'\bpubs?\b', q):
+        filters['category'] = 'pub'
+    elif re.search(r'\bbars?\b', q):
+        filters['category'] = 'bar'
+
+    for key, kw in (('appeal', 'appeal'), ('safety', 'safety|safe|secure'),
+                    ('green', 'green|eco|sustainab'), ('price', 'budget|price|cost')):
+        t = _parse_threshold(q, kw)
+        if t:
+            filters[key] = t
+
+    return filters
+
+
 def ollama_synthesize(query: str, chunks: list[dict]) -> Optional[str]:
     """Use Ollama to synthesize a natural-language answer from retrieved chunks.
     Returns None if Ollama is unavailable, so the caller can fall back gracefully."""
@@ -337,15 +392,18 @@ def run_ingest():
 
 @app.get('/query')
 def query(q: str = Query(..., description='Query text'), k: int = 5, use_llm: bool = False, simulated_rag: bool = False):
+    # Metadata-filtered retrieval: derive structured constraints and pre-filter the
+    # candidate set before semantic search (region / currency / category / numeric).
+    filters = parse_filters(q)
     if simulated_rag:
-        internal_results = vectorstore.hybrid_search(q, k=max(k, 50))
+        internal_results = vectorstore.hybrid_search(q, k=max(k, 50), filters=filters)
         top_chunks = rank_chunks(q, internal_results, k=k)
         answer = ollama_synthesize(q, top_chunks)
         if not answer:
             answer, _ = simulated_rag_answer(q, internal_results)
-        return {'answer': answer, 'sources': top_chunks}
+        return {'answer': answer, 'sources': top_chunks, 'filters': filters}
 
-    results = vectorstore.hybrid_search(q, k=k)
+    results = vectorstore.hybrid_search(q, k=k, filters=filters)
 
     if use_llm and os.getenv('OPENAI_API_KEY'):
         try:
@@ -364,7 +422,7 @@ def query(q: str = Query(..., description='Query text'), k: int = 5, use_llm: bo
             return {'answer': answer, 'sources': results}
         except Exception as e:
             return {'error': str(e), 'sources': results}
-    return {'query': q, 'results': results}
+    return {'query': q, 'results': results, 'filters': filters}
 
 
 @app.get('/health')

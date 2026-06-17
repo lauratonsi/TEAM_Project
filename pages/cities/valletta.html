@@ -145,7 +145,7 @@ btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
             <div class="analyst-icon">🤖</div>
             <div class="va-head-txt">
                 <p class="analyst-title">Virtual Analyst</p>
-                <p class="analyst-sub">RAG · BM25 + FAISS · 350 XML chunks</p>
+                <p class="analyst-sub">RAG · BM25 + FAISS · metadata-filtered</p>
             </div>
             <button id="va-close" class="va-close" aria-label="Close the analyst">✕</button>
         </div>
@@ -159,21 +159,23 @@ btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
         </div>
         <div class="analyst-chips">
             <button class="chip" data-q="transport Rome">🚇 transport Rome</button>
-            <button class="chip" data-q="hotels Amsterdam">🏨 hotels Amsterdam</button>
-            <button class="chip" data-q="museums Athens">🏛️ museums Athens</button>
-            <button class="chip" data-q="safety Berlin">🛡️ safety Berlin</button>
             <button class="chip" data-q="bars in Dublin">🍺 bars Dublin</button>
-            <button class="chip" data-q="districts Prague">🏘️ districts Prague</button>
-            <button class="chip" data-q="airport Stockholm">✈️ airport Stockholm</button>
+            <button class="chip" data-q="nightclubs in non-euro cities">🎵 nightclubs · non-euro</button>
+            <button class="chip" data-q="attractions in northern europe">🗺️ attractions · north</button>
+            <button class="chip" data-q="cities with appeal over 60">⭐ appeal &gt; 60</button>
+            <button class="chip" data-q="pubs in eastern europe">🍻 pubs · east</button>
         </div>
         <details class="analyst-details">
-            <summary>How does it work? — RAG architecture</summary>
+            <summary>How does it work? — RAG + metadata filtering</summary>
             <p>
-                The Virtual Analyst is a <b>RAG</b> (Retrieval-Augmented Generation) system
-                built on <b>320 text chunks</b> extracted from the 30 validated XML files.
-                Each query uses hybrid <b>BM25 + vector search</b> (FAISS + <code>all-MiniLM-L6-v2</code>)
-                with <b>Reciprocal Rank Fusion</b>, detects intent (hotels / transport / attractions / safety)
-                and responds in real time without an external LLM.
+                The Virtual Analyst combines two layers. The <b>reference RAG</b> (run locally) indexes the
+                validated XML into text chunks and answers with hybrid <b>BM25 + vector search</b>
+                (FAISS + <code>all-MiniLM-L6-v2</code>) fused via <b>Reciprocal Rank Fusion</b>.
+                On the published site it runs a <b>metadata-filtered</b> engine entirely in your browser:
+                queries are parsed for structured dimensions — macro-region (<code>@region</code>, UN&nbsp;M49),
+                currency (<code>@currency</code>) and venue type (<code>@category</code>) — to filter cities and
+                venues <i>exactly</i>, then returns guaranteed values (coordinates, appeal score, indicators)
+                straight from the injected Schema.org metadata, with no LLM and no hallucinated numbers.
             </p>
             <p style="font-size:0.8rem; color:var(--slate-500); margin:8px 0 0;">
                 ⚠️ It knows only the 30 capitals in the dataset; some lack hotel data because
@@ -218,9 +220,123 @@ async function runQuery() {
     clientSideAnswer(q.toLowerCase());
 }
 
+/* ── METADATA-FILTERED query (structured): region / currency / category / numeric thresholds.
+      Sfrutta i metadati strutturati già iniettati (@region UN M49, @currency, @category, lat/lon)
+      per filtri esatti + valori numerici garantiti, senza alcun backend. ── */
+const REGION_NAMES = {northern:'Northern Europe', southern:'Southern Europe', western:'Western Europe', eastern:'Eastern Europe'};
+const REGION_KW = {
+    northern: /(northern|north europe|nord|nordic|scandinav|baltic)/,
+    southern: /(southern|south europe|sud|mediterran|meridional)/,
+    western:  /(western|west europe|ovest|occidental)/,
+    eastern:  /(eastern|east europe|est europ|orientale|balkan)/
+};
+function mThresh(q, kw) {
+    var over  = new RegExp('(' + kw + ')[^0-9]{0,18}(over|above|more than|greater than|higher than|at least|>|più di|piu di|sopra|oltre) *([0-9]+)');
+    var und   = new RegExp('(' + kw + ')[^0-9]{0,18}(under|below|less than|lower than|cheaper than|at most|<|meno di|sotto) *([0-9]+)');
+    var overR = new RegExp('(over|above|more than|greater than|higher than|at least|>) *([0-9]+)[^0-9]{0,14}(' + kw + ')');
+    var undR  = new RegExp('(under|below|less than|cheaper than|at most|<) *([0-9]+)[^0-9]{0,14}(' + kw + ')');
+    var m;
+    if ((m = q.match(over)))  return {op:'>=', val:+m[3]};
+    if ((m = q.match(und)))   return {op:'<=', val:+m[3]};
+    if ((m = q.match(overR))) return {op:'>=', val:+m[2]};
+    if ((m = q.match(undR)))  return {op:'<=', val:+m[2]};
+    return null;
+}
+function mCmp(v, t){ return t.op === '>=' ? v >= t.val : v <= t.val; }
+function mCoord(v){ return (v.lat && v.lon) ? ' <a href="https://www.google.com/maps?q=' + v.lat + ',' + v.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍 ' + (+v.lat).toFixed(4) + ', ' + (+v.lon).toFixed(4) + '</a>' : ''; }
+function metadataQuery(q) {
+    var region = null;
+    for (var rk in REGION_KW) { if (REGION_KW[rk].test(q)) { region = rk; break; } }
+    var currency = null;
+    if (/non[ -]?euro|outside (the )?euro|outside the eurozone|fuori.{0,8}euro|senza euro|don't use the euro|do not use the euro|not use the euro/.test(q)) currency = 'other';
+    else if (/eurozone|euro area|euro zone|area euro|in the euro\b|uses? the euro/.test(q)) currency = 'eur';
+    var cat = null;
+    if (/nightclub|night club|discotec|clubbing/.test(q)) cat = 'nightclub';
+    else if (/\bpubs?\b/.test(q)) cat = 'pub';
+    else if (/\bbars?\b/.test(q)) cat = 'bar';
+    var tA = mThresh(q, 'appeal');
+    var tS = mThresh(q, 'safety|safe|secure');
+    var tG = mThresh(q, 'green|eco|sustainab');
+    var tB = mThresh(q, 'budget|price|cost|night');
+    var hasFilter = region || currency || cat || tA || tS || tG || tB;
+    if (!hasFilter) return null;
+    var conds = [];
+    if (region)             conds.push(function(c){ return c.region === region; });
+    if (currency==='other') conds.push(function(c){ return c.currency !== ''; });
+    if (currency==='eur')   conds.push(function(c){ return c.currency === ''; });
+    if (tA) conds.push(function(c){ return mCmp(+c.appeal, tA); });
+    if (tS) conds.push(function(c){ return mCmp(+c.safety, tS); });
+    if (tG) conds.push(function(c){ return mCmp(+c.green,  tG); });
+    if (tB) conds.push(function(c){ return mCmp(+c.price,  tB); });
+    var cities = cityData.filter(function(c){ return conds.every(function(fn){ return fn(c); }); });
+    var desc = [];
+    if (region) desc.push(REGION_NAMES[region]);
+    if (currency==='other') desc.push('non-euro');
+    if (currency==='eur')   desc.push('eurozone');
+    if (tA) desc.push('appeal ' + tA.op + ' ' + tA.val);
+    if (tS) desc.push('safety ' + tS.op + ' ' + tS.val);
+    if (tG) desc.push('green ' + tG.op + ' ' + tG.val);
+    if (tB) desc.push('budget ' + tB.op + ' ' + tB.val + '€');
+    var dtxt = desc.join(' · ');
+    var entity = null;
+    if (cat || /nightlife|where to drink|locali|drinking/.test(q)) entity = 'nightlife';
+    else if (/attraction|museum|sight|landmark|monument|things to do|to see|to visit/.test(q)) entity = 'attractions';
+    else if (/hotel|accommodation|stay|sleep|hostel|lodg/.test(q)) entity = 'hotels';
+    if (!cities.length) return '<b>🔎 ' + (dtxt || 'filter') + '</b><p style="margin:6px 0">No cities match these criteria.</p>';
+    if (entity === 'nightlife') {
+        var total = 0, blocks = [];
+        cities.forEach(function(c){
+            var vs = (c.nightlife||[]).filter(function(v){ return !cat || v.cat === cat; });
+            if (!vs.length) return;
+            total += vs.length;
+            var items = vs.slice(0,6).map(function(v){ return '<li>' + (v.cat==='nightclub'?'🎵':(v.cat==='pub'?'🍻':'🍺')) + ' ' + v.n + ' <span style="color:#94a3b8;font-size:.8em">(' + v.cat + ')</span>' + mCoord(v) + '</li>'; }).join('');
+            if (vs.length > 6) items += '<li style="color:#94a3b8">…+' + (vs.length-6) + ' more</li>';
+            blocks.push('<li style="margin-top:4px">' + c.flag + ' <b>' + c.name_it + '</b> <span style="color:#64748b">(' + vs.length + ')</span><ul style="margin:2px 0 4px;padding-left:16px">' + items + '</ul></li>');
+        });
+        if (!total) return '<b>🍺 ' + (cat||'venues') + ' · ' + dtxt + '</b><p style="margin:6px 0">No matching venues.</p>';
+        var label = cat ? cat + 's' : 'venues';
+        return '<b>🍺 ' + total + ' ' + label + (dtxt ? ' — ' + dtxt : '') + '</b><ul style="margin:6px 0;padding-left:18px">' + blocks.join('') + '</ul>';
+    }
+    if (entity === 'attractions') {
+        var totalA = 0, blocksA = [];
+        cities.forEach(function(c){
+            var as = c.attractions || [];
+            if (!as.length) return;
+            totalA += as.length;
+            var items = as.slice(0,4).map(function(a){ return '<li><b>' + a.n + '</b>' + mCoord(a) + '</li>'; }).join('');
+            if (as.length > 4) items += '<li style="color:#94a3b8">…+' + (as.length-4) + ' more</li>';
+            blocksA.push('<li style="margin-top:4px">' + c.flag + ' <b>' + c.name_it + '</b> <span style="color:#64748b">(' + as.length + ')</span><ul style="margin:2px 0 4px;padding-left:16px">' + items + '</ul></li>');
+        });
+        return '<b>🗺️ ' + totalA + ' attractions' + (dtxt ? ' — ' + dtxt : '') + '</b><ul style="margin:6px 0;padding-left:18px">' + blocksA.join('') + '</ul>';
+    }
+    if (entity === 'hotels') {
+        var blocksH = [];
+        cities.forEach(function(c){
+            var hs = c.hotels || [];
+            if (!hs.length) return;
+            var items = hs.slice(0,4).map(function(h){ return '<li><b>' + h.n + '</b> <span style="color:#64748b">(' + (h.p||'N/D') + ')</span></li>'; }).join('');
+            blocksH.push('<li style="margin-top:4px">' + c.flag + ' <b>' + c.name_it + '</b><ul style="margin:2px 0 4px;padding-left:16px">' + items + '</ul></li>');
+        });
+        if (!blocksH.length) return '<b>🏨 ' + dtxt + '</b><p style="margin:6px 0">No hotel data for matching cities.</p>';
+        return '<b>🏨 Hotels' + (dtxt ? ' — ' + dtxt : '') + '</b><ul style="margin:6px 0;padding-left:18px">' + blocksH.join('') + '</ul>';
+    }
+    var sorted = cities.slice().sort(function(a,b){ return (+b.appeal) - (+a.appeal); });
+    var li = sorted.map(function(c){
+        var bits = ['⭐ ' + c.appeal];
+        if (tS) bits.push('🛡️ ' + c.safety);
+        if (tG) bits.push('🌱 ' + c.green);
+        if (tB) bits.push('💰 ' + Math.round(c.price) + '€');
+        bits.push(c.currency ? c.currency : 'EUR');
+        return '<li>' + c.flag + ' <b>' + c.name_it + '</b> <span style="color:#64748b;font-size:.85em">' + bits.join(' · ') + '</span></li>';
+    }).join('');
+    return '<b>🌍 ' + cities.length + ' cities' + (dtxt ? ' — ' + dtxt : '') + '</b><ol style="margin:6px 0;padding-left:18px">' + li + '</ol>';
+}
+
 function clientSideAnswer(q) {
     const out = document.getElementById('chat-output');
-    let res = '❓ City not found. Try: <em>safety Vienna</em>, <em>hotels Rome</em>, <em>bars Berlin</em>, <em>compare Oslo and Berlin</em>.';
+    let res = '❓ City not found. Try: <em>safety Vienna</em>, <em>hotels Rome</em>, <em>bars Berlin</em>, <em>nightclubs in non-euro cities</em>.';
+    var hasCity = cityData.some(function(c){ return q.includes(c.name_it.toLowerCase()) || q.includes((c.name_en||'').toLowerCase()); });
+    if (!hasCity) { var mq = metadataQuery(q); if (mq) { out.innerHTML = mq; return; } }
     cityData.forEach(function(c) {
         if (q.includes(c.name_it.toLowerCase()) || q.includes((c.name_en || '').toLowerCase())) {
             if (/hotel|alloggio|dorm|ostello|stay|accommodation|sleep|lodg/.test(q)) {

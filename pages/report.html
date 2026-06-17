@@ -432,7 +432,7 @@
         <h3 style="margin:0;"><code>rag/</code> — Sistema RAG per query in linguaggio naturale</h3>
         <p>
           Modulo indipendente composto da tre file: <code>ingest.py</code> legge i 30 XML e
-          costruisce <b>320 chunk testuali</b> tematici (trasporti, hotel, distretti, attrazioni,
+          costruisce <b>336 chunk testuali</b> tematici (trasporti, hotel, distretti, attrazioni,
           descrizione strategica, panoramica wiki) prefissati con il nome della città.
           <code>vectorstore.py</code> indicizza i chunk in un indice <b>FAISS IndexFlatIP</b>
           (384 dimensioni, <code>all-MiniLM-L6-v2</code>) e mantiene un indice <b>BM25Okapi</b>
@@ -441,6 +441,28 @@
           rileva l'intento (transport / hotel / attractions / safety / general), boosta i chunk
           della sezione corrispondente e sintetizza la risposta estraendo le frasi più rilevanti
           — senza LLM esterno.
+        </p>
+        <h4 style="margin:14px 0 4px;color:var(--accent-dark)">Metadata-filtered retrieval — la fusione dei moduli</h4>
+        <p>
+          Il punto in cui RAG e <b>Web of Data</b> si fondono: <code>ingest.py</code> non indicizza solo
+          testo, ma allega a ogni chunk i <b>metadati strutturati</b> iniettati nell'XML (gli stessi esposti
+          come microdata Schema.org). <code>parse_filters()</code> analizza la domanda per dimensioni esatte
+          e <code>hybrid_search()</code> <b>pre-filtra</b> i candidati prima della ricerca semantica:
+        </p>
+        <ul style="margin:6px 0;font-size:0.9rem">
+          <li><b>Filtraggio esatto</b> su <code>@region</code> (UN&nbsp;M49), <code>@currency</code> e
+              <code>@category</code> dei locali — niente più «zuppa di tag» da indovinare nel testo
+              <em>(es. «nightclubs in non-euro cities» → solo nightlife di città non-euro)</em>.</li>
+          <li><b>Disambiguazione</b>: un pub o una discoteca derivano dalla categoria tipizzata
+              (<code>BarOrPub</code> / <code>NightClub</code>), non da pattern sulle frasi.</li>
+          <li><b>Valori numerici garantiti</b>: coordinate (<code>GeoCoordinates</code>), appeal
+              (<code>AggregateRating</code>) e indicatori sono restituiti verbatim dai metadati — zero
+              allucinazioni sui numeri.</li>
+        </ul>
+        <p style="font-size:0.82rem;color:var(--slate-500);margin:8px 0 0;">
+          La <b>stessa logica gira su GitHub Pages</b>: poiché l'hosting statico non può eseguire il backend
+          FastAPI, il sito esegue il motore <code>metadataQuery()</code> direttamente nel browser sui dati
+          già serializzati, ottenendo gli stessi filtri esatti senza alcun server.
         </p>
         <p style="font-size:0.82rem;color:var(--slate-500);margin:8px 0 0;">
           <b>Limiti noti:</b> alcune città (Londra, Budapest, Parigi…) mancano di dati hotel
