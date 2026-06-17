@@ -649,20 +649,20 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 
 /* 5c. CORPO DELLA CARD */
 .city-card-body {
-    padding: 14px 14px 16px;
+    padding: 18px 18px 18px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
 /* 6. STATS — lista verticale pulita, stile sito di viaggi.
-   Ogni metrica è una riga: etichetta a sinistra, valore a destra,
+   Ogni metrica è una riga: icona + etichetta a sinistra, valore a destra,
    barra sottile a tutta larghezza sotto (quando presente).
    Niente colonne fisse → nessun testo tagliato a qualsiasi larghezza. */
 .stats-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .stat-item {
@@ -670,16 +670,22 @@ details[open] .analyst-details summary::before { content: '▾ '; }
     grid-template-columns: 1fr auto;
     align-items: center;
     column-gap: 10px;
-    padding: 9px 0;
+    padding: 8px 8px;
+    margin: 0 -8px;
+    border-radius: 10px;
     border-bottom: 1px solid var(--slate-100);
     background: transparent;
-    border-radius: 0;
     text-align: left;
+    transition: background 0.15s ease;
 }
 
 .stat-item:last-child { border-bottom: none; }
+.city-card:hover .stat-item:hover { background: var(--slate-50); }
 
 .stat-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 0.74rem;
     text-transform: uppercase;
     color: var(--slate-500);
@@ -687,21 +693,35 @@ details[open] .analyst-details summary::before { content: '▾ '; }
     letter-spacing: 0.03em;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     min-width: 0;
 }
 
 .stat-val {
     justify-self: end;
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    color: var(--slate-800, #1e293b);
     white-space: nowrap;
+    font-variant-numeric: tabular-nums;
 }
+
+/* Icone per metrica — ordine fisso delle card della landing (.city-card).
+   Non si applicano alle pagine città, dove l'ordine è diverso. */
+.city-card .stat-label::before {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+.city-card .stat-item:nth-child(1) .stat-label::before { content: "🛏️"; }
+.city-card .stat-item:nth-child(2) .stat-label::before { content: "🛡️"; }
+.city-card .stat-item:nth-child(3) .stat-label::before { content: "🌱"; }
+.city-card .stat-item:nth-child(4) .stat-label::before { content: "🍸"; }
+.city-card .stat-item:nth-child(5) .stat-label::before { content: "💰"; }
+.city-card .stat-item:nth-child(6) .stat-label::before { content: "🏛️"; }
 
 /* La barra punteggio occupa l'intera larghezza, sotto etichetta+valore */
 .stat-item .score-bar-wrap {
     grid-column: 1 / -1;
-    margin-top: 7px;
+    margin-top: 8px;
 }
 
 /* Equivalente in valuta locale sotto al Budget (solo capitali non-euro) */
@@ -735,7 +755,7 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 /* PULSANTE CTA */
 .card-cta {
     display: block;
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
     color: white;
     text-align: center;
     padding: 13px 20px;
@@ -745,13 +765,14 @@ details[open] .analyst-details summary::before { content: '▾ '; }
     font-size: 0.88rem;
     margin-top: auto;
     letter-spacing: 0.3px;
-    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(231,76,60,0.22);
+    transition: transform 0.15s, box-shadow 0.2s, filter 0.2s;
 }
 
 .card-cta:hover {
-    background: var(--accent-dark);
+    filter: brightness(1.05);
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(231,76,60,0.35);
+    box-shadow: 0 8px 22px rgba(231,76,60,0.38);
 }
 
 /* 6b. TITOLO CITTÀ (pagine individuali) */
@@ -1067,7 +1088,7 @@ html { scroll-behavior: smooth; }
 .score-bar-wrap {
     background: var(--slate-200);
     border-radius: 99px;
-    height: 5px;
+    height: 6px;
     overflow: hidden;
     margin-top: 5px;
 }
