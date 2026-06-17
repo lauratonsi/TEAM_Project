@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../stile.css?v=93525e79">
+  <link rel="stylesheet" href="../stile.css?v=9e6d60db">
   <title>Report &amp; Documentation — EuroCity</title>
   <style>
     .report-nav {
@@ -275,6 +275,14 @@
         <td style="text-align:right">ISO 4217</td>
       </tr>
       <tr>
+        <td>Macro-regione</td>
+        <td><span class="prov-src src-indices">📊 geo_regions.json</span></td>
+        <td>Attributo <b>enumerato obbligatorio</b> <code>&lt;city_report&nbsp;region="…"&gt;</code> secondo il geoscheme
+            <b>UN&nbsp;M49</b> (Northern/Western/Southern/Eastern). Cipro, classificato da M49 in Asia occidentale, è
+            assegnato a <i>southern</i> come eccezione UE documentata. Usato come filtro per area nell'index.</td>
+        <td style="text-align:right">UN&nbsp;M49</td>
+      </tr>
+      <tr>
         <td>Attrazioni · Locali · Distretti</td>
         <td><span class="prov-src src-wiki">📂 Wikivoyage</span></td>
         <td>Conteggio diretto degli elementi <code>&lt;attraction&gt;</code> / <code>&lt;venue&gt;</code> / <code>&lt;district&gt;</code> nei documenti.</td>
@@ -533,7 +541,7 @@ for filename in files:                                  # scorre la directory XM
   </p>
 
   <h3>Struttura ad albero</h3>
-  <pre>city_report [@appeal_score]
+  <pre>city_report [@appeal_score, @currency?, @region]
 ├── metadata
 │   ├── title          (nome EN)
 │   ├── name_it        (nome IT)
@@ -565,10 +573,13 @@ for filename in files:                                  # scorre la directory XM
   <pre>&lt;!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?)&gt;
 &lt;!-- currency: codice ISO 4217 della valuta locale (es. "GBP", "SEK").
      Attributo OPZIONALE (#IMPLIED): è assente per le città dell'area euro,
-     presente solo per le capitali che usano una valuta diversa dall'euro. --&gt;
+     presente solo per le capitali che usano una valuta diversa dall'euro.
+     region: macro-regione geografica (geoscheme UN M49). Attributo ENUMERATO
+     e OBBLIGATORIO: ogni capitale appartiene a una e una sola area. --&gt;
 &lt;!ATTLIST city_report
-    appeal_score CDATA #REQUIRED
-    currency     CDATA #IMPLIED&gt;
+    appeal_score CDATA                                       #REQUIRED
+    currency     CDATA                                       #IMPLIED
+    region       (northern | western | southern | eastern)   #REQUIRED&gt;
 
 &lt;!ELEMENT metadata (title, name_it, flag, source_url)&gt;
 &lt;!ELEMENT title (#PCDATA)&gt;

@@ -28,6 +28,7 @@ ELABORAZIONE/
 │   ├── city_report.dtd                  # DTD per la validazione dei file XML
 │   ├── city_indices.json                # Indici: safety, green score, costo della vita
 │   ├── currency_rates.json              # Valute locali + tassi indicativi (capitali non-euro)
+│   ├── geo_regions.json                 # Macro-regione per capitale (geoscheme UN M49) + fonte
 │   ├── nightlife.json                   # Locali notturni geolocalizzati (Overpass / OSM)
 │   ├── wiki_text_pulito.csv             # Trasporti, hotel, distretti estratti da Wikivoyage
 │   ├── attrazione_descrizione_fixed.csv # Attrazioni con coordinate geografiche
@@ -126,6 +127,7 @@ di uscita `0` solo se tutti i file sono validi. Output:
 | Dataset pubblici (Numbeo, EIU) | `city_indices.json` | Safety, green score, costo della vita |
 | OpenStreetMap (Overpass API) | `nightlife.json` | 240 locali notturni geolocalizzati (bar/pub/nightclub) |
 | Tassi di cambio indicativi (snapshot 2026-01) | `currency_rates.json` | Valuta locale ISO 4217 + tasso EUR→locale delle 10 capitali non-euro |
+| [UN M49 geoscheme](https://unstats.un.org/unsd/methodology/m49/) (UN Statistics Division) | `geo_regions.json` | Macro-regione (Northern/Western/Southern/Eastern) di ogni capitale + nota su Cipro |
 | Wikimedia Commons | `landmark_image` in XML | Immagini simbolo (URL stabili via Special:FilePath) |
 | Generato con AI | `city_descriptions.json` | Sintesi strategiche in italiano |
 
@@ -148,8 +150,9 @@ testo di un distretto come intro della città sarebbe fuorviante).
 <!ELEMENT city_report (metadata, indicators, transport, accommodation,
                         highlights, districts?, description,
                         wiki_intro?, landmark_image?, nightlife?)>
-<!ATTLIST city_report appeal_score CDATA #REQUIRED
-                      currency     CDATA #IMPLIED>   <!-- valuta locale (ISO 4217), solo capitali non-euro -->
+<!ATTLIST city_report appeal_score CDATA                                     #REQUIRED
+                      currency     CDATA                                     #IMPLIED   <!-- valuta locale (ISO 4217), solo capitali non-euro -->
+                      region       (northern | western | southern | eastern) #REQUIRED> <!-- macro-regione UN M49 (enumerato) -->
 
 <!ELEMENT metadata (title, name_it, flag, source_url)>
 <!ELEMENT source_url (#PCDATA)>            <!-- URI canonico → itemid microdata -->
@@ -181,7 +184,7 @@ testo di un distretto come intro della città sarebbe fuorviante).
 
 | Elemento | Content model | Attributi | Cardinalità / Note |
 |----------|---------------|-----------|--------------------|
-| `city_report` | `metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?` | `appeal_score` *(REQ)*, `currency` *(IMPL)* | **radice** |
+| `city_report` | `metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?` | `appeal_score` *(REQ)*, `currency` *(IMPL)*, `region` **enum** *(REQ)* | **radice** |
 | `metadata` | `title, name_it, flag, source_url` | — | 1 |
 | `title` / `name_it` / `flag` | `#PCDATA` | — | nome EN / nome IT / emoji bandiera |
 | `source_url` | `#PCDATA` | — | URI canonico → `itemid` microdata |
@@ -215,6 +218,16 @@ città dell'area euro e **presente** (codice ISO 4217, es. `SEK`, `GBP`) solo pe
 un'altra valuta. Il sito lo legge via XPath (`string(/city_report/@currency)`) e mostra, accanto al prezzo
 in euro, l'equivalente locale indicativo letto da `currency_rates.json`.
 
+**Macro-regione (attributo enumerato obbligatorio).** L'attributo `region` del root è **enumerato** e
+`#REQUIRED`: ogni capitale appartiene a una e una sola area tra `northern | western | southern | eastern`.
+La classificazione segue il **geoscheme UN M49** (UN Statistics Division); la mappa capitale→regione e la sua
+fonte vivono in [`data/geo_regions.json`](data/geo_regions.json). Unica eccezione documentata: **Cipro**
+(Nicosia), che M49 colloca in *Asia occidentale*, è assegnata a `southern` in quanto Stato membro UE
+all'estremo sud-est dell'Unione. Il dato è scritto da `final_processor.py` e riletto via XPath
+(`string(/city_report/@region)`) da `deploy_dashboard.py`, che lo usa come **filtro per area** nell'`index.html`.
+Essendo enumerato, un valore fuori vocabolario (es. `region="central"`) fa **fallire** la validazione DTD —
+verificabile sostituendolo in un file e rilanciando `validate.py`.
+
 **Prezzo: stima sintetica, non osservata.** L'elemento `<hotel_price>` **non** è estratto dalle voci
 alloggio di Wikivoyage: è derivato dall'indice Numbeo del costo della vita con `hotel_price = cost_of_living × 1.85`.
 È un proxy in euro pensato per il **confronto tra città**, non un prezzo di mercato. I prezzi dei singoli
@@ -240,7 +253,8 @@ in modo isolato dal resto della pipeline.
 
 **Analisi critica della validazione.** Nel rispetto delle linee guida del Progetto TEAM la
 validazione strutturale è affidata a un **DTD**, scelta ottima per il **content-model misto**
-delle sezioni narrative (trasporti, introduzioni). Tuttavia, data l'abbondanza di dati puramente
+delle sezioni narrative (trasporti, introduzioni) e per i vincoli **enumerati** (`venue/@category`,
+`city_report/@region`), in cui il DTD è pienamente espressivo. Tuttavia, data l'abbondanza di dati puramente
 strutturati e numerici nel dataset (coordinate `lat`/`lon`, indici di sicurezza, green score,
 prezzi), il DTD mostra limiti di **espressività**: può validarli solo come stringhe generiche
 (`CDATA` / `#PCDATA`). In uno scenario di produzione, per garantire la robustezza dei *tipi di
@@ -461,6 +475,7 @@ Utilizzato per assistenza allo sviluppo della pipeline:
 - Introduzione del content-model misto e della ri-validazione DTD in lettura
 - Espansione dei microdata Schema.org (`AggregateRating`, `PropertyValue`, `BarOrPub`/`NightClub`, `Hotel`) e script `check_microdata.py` per il round-trip
 - Gestione della valuta locale (`currency_rates.json`, attributo `currency`, nota sulle capitali non-euro) e correzione della provenienza del prezzo (stima sintetica, non estratta)
+- Iniezione della macro-regione geografica negli XML (`geo_regions.json`, attributo enumerato `region` da geoscheme UN M49) come dimensione di filtro/navigazione nell'index
 - Trasformazione del Virtual Analyst in widget flottante presente su ogni pagina
 - Generazione di `report.html` e del presente `README.md`
 

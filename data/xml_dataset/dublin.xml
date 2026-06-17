@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="53.1">
+<city_report appeal_score="53.1" region="northern">
   <metadata>
     <title>Dublin</title>
     <name_it>Dublin</name_it>

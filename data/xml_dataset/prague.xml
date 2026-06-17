@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="70.0" currency="CZK">
+<city_report appeal_score="70.0" currency="CZK" region="eastern">
   <metadata>
     <title>Prague</title>
     <name_it>Prague</name_it>

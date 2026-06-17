@@ -1,10 +1,13 @@
 <!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?)>
 <!-- currency: codice ISO 4217 della valuta locale (es. "GBP", "SEK").
      Attributo OPZIONALE (#IMPLIED): è assente per le città dell'area euro,
-     presente solo per le capitali che usano una valuta diversa dall'euro. -->
+     presente solo per le capitali che usano una valuta diversa dall'euro.
+     region: macro-regione geografica (geoscheme UN M49). Attributo ENUMERATO
+     e OBBLIGATORIO: ogni capitale appartiene a una e una sola area. -->
 <!ATTLIST city_report
-    appeal_score CDATA #REQUIRED
-    currency     CDATA #IMPLIED>
+    appeal_score CDATA                                       #REQUIRED
+    currency     CDATA                                       #IMPLIED
+    region       (northern | western | southern | eastern)   #REQUIRED>
 
 <!ELEMENT metadata (title, name_it, flag, source_url)>
 <!ELEMENT title (#PCDATA)>

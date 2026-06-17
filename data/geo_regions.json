@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "description": "Mappa capitale→macro-regione geografica europea (Northern / Western / Southern / Eastern). Dato categoriale di prima classe scritto nell'XML come attributo enumerato obbligatorio `region` sul root city_report (DTD: (northern|western|southern|eastern) #REQUIRED). Usato dall'index.html come dimensione di navigazione (filtro per area).",
+    "source": "UN Statistics Division — Standard Country or Area Codes for Statistical Use (M49), 'Geographic Regions', sottoregioni europee: Northern Europe (154), Western Europe (155), Southern Europe (039), Eastern Europe (151).",
+    "source_url": "https://unstats.un.org/unsd/methodology/m49/",
+    "snapshot": "M49 revision 2024",
+    "values": ["northern", "western", "southern", "eastern"],
+    "note_cyprus": "Cipro (Nicosia): UN M49 classifica Cipro sotto 'Western Asia', non sotto una sottoregione europea. Trattandosi di uno Stato membro UE all'estremo sud-est dell'Unione, in questo dataset EU-centrico è assegnato — come eccezione esplicita e documentata — a 'southern'. È l'unica divergenza dalla classificazione M49 stretta.",
+    "note_uk": "Il Regno Unito (London) resta in 'northern' come da geoscheme M49: la classificazione è geografica, non politica (indipendente dall'appartenenza UE).",
+    "distribution": {"northern": 10, "western": 6, "southern": 8, "eastern": 6}
+  },
+  "cities": {
+    "Copenhagen": "northern",
+    "Dublin": "northern",
+    "Helsinki": "northern",
+    "London": "northern",
+    "Oslo": "northern",
+    "Reykjavik": "northern",
+    "Riga": "northern",
+    "Stockholm": "northern",
+    "Tallinn": "northern",
+    "Vilnius": "northern",
+
+    "Amsterdam": "western",
+    "Berlin": "western",
+    "Brussels": "western",
+    "Luxembourg": "western",
+    "Paris": "western",
+    "Vienna": "western",
+
+    "Athens": "southern",
+    "Lisbon": "southern",
+    "Ljubljana": "southern",
+    "Madrid": "southern",
+    "Nicosia": "southern",
+    "Rome": "southern",
+    "Valletta": "southern",
+    "Zagreb": "southern",
+
+    "Bratislava": "eastern",
+    "Bucharest": "eastern",
+    "Budapest": "eastern",
+    "Prague": "eastern",
+    "Sofia": "eastern",
+    "Warsaw": "eastern"
+  }
+}

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="62.5">
+<city_report appeal_score="62.5" region="northern">
   <metadata>
     <title>Riga</title>
     <name_it>Riga</name_it>

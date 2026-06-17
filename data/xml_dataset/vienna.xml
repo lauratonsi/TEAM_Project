@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="67.9">
+<city_report appeal_score="67.9" region="western">
   <metadata>
     <title>Vienna</title>
     <name_it>Vienna</name_it>

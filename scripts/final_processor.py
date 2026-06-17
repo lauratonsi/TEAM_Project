@@ -83,6 +83,13 @@ INPUT_JSON_CURRENCY = str(ROOT / 'data' / 'currency_rates.json')
 with open(INPUT_JSON_CURRENCY, encoding='utf-8') as _f:
     CITY_CURRENCY = json.load(_f).get('cities', {})
 
+# Macro-regione geografica (UN M49): scritta come attributo ENUMERATO obbligatorio
+# `region` sul root (DTD: (northern|western|southern|eastern) #REQUIRED). La mappa
+# e la sua fonte vivono in geo_regions.json; il sito la usa come filtro di navigazione.
+INPUT_JSON_REGION = str(ROOT / 'data' / 'geo_regions.json')
+with open(INPUT_JSON_REGION, encoding='utf-8') as _f:
+    CITY_REGION = json.load(_f).get('cities', {})
+
 # District names that are clearly noise (not real city districts)
 _NOISE_DISTRICTS = {
     'visitor info', 'visitor info:', 'buses', 'bus', 'trams', 'tram',
@@ -436,6 +443,13 @@ def run_pipeline():
         local_currency = CITY_CURRENCY.get(name)
         if local_currency:
             root.set("currency", local_currency)
+        # Macro-regione geografica (UN M49): attributo enumerato obbligatorio sul root.
+        region = CITY_REGION.get(name)
+        if region:
+            root.set("region", region)
+        else:
+            # Senza regione il file non sarebbe valido (attributo #REQUIRED): segnala.
+            print(f"⚠️  {name}: regione mancante in geo_regions.json")
 
         # --- metadata ---
         meta = etree.SubElement(root, "metadata")

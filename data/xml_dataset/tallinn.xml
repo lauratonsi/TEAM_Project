@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="71.1">
+<city_report appeal_score="71.1" region="northern">
   <metadata>
     <title>Tallinn</title>
     <name_it>Tallinn</name_it>

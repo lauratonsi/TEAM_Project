@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="44.8">
+<city_report appeal_score="44.8" region="southern">
   <metadata>
     <title>Valletta</title>
     <name_it>Valletta</name_it>

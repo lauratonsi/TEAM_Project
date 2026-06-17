@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="74.7">
+<city_report appeal_score="74.7" region="southern">
   <metadata>
     <title>Ljubljana</title>
     <name_it>Ljubljana</name_it>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE city_report SYSTEM "../city_report.dtd">
-<city_report appeal_score="50.9">
+<city_report appeal_score="50.9" region="southern">
   <metadata>
     <title>Nicosia</title>
     <name_it>Nicosia</name_it>

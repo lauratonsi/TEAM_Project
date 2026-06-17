@@ -124,6 +124,16 @@ CAPITAL_COORDS = {
     'warsaw': (52.2297, 21.0122), 'zagreb': (45.8150, 15.9819),
 }
 
+# --- REGIONE GEOGRAFICA (geoscheme UN M49) ---
+# Dimensione di navigazione: la macro-area di ogni capitale è un dato di prima
+# classe scritto nell'XML come attributo enumerato `region` (vedi geo_regions.json
+# e final_processor.py). Qui servono solo le ETICHETTE mostrate nei filtri UI;
+# i valori arrivano dal documento via XPath string(/city_report/@region).
+REGION_LABELS = {
+    'northern': '🧭 Northern', 'western': '🌅 Western',
+    'southern': '☀️ Southern', 'eastern': '🌄 Eastern',
+}
+
 CITY_PALETTE = [
     '#E74C3C','#3498DB','#2ECC71','#F39C12','#9B59B6',
     '#1ABC9C','#E67E22','#34495E','#E91E63','#00BCD4',
@@ -545,6 +555,8 @@ def deploy():
                 'appeal': root.xpath("string(/city_report/@appeal_score)").strip() or "0",
                 # @currency: attributo opzionale del root (assente = area euro)
                 'currency': root.xpath("string(/city_report/@currency)").strip(),
+                # @region: attributo enumerato obbligatorio (UN M49) → filtro per area
+                'region': root.xpath("string(/city_report/@region)").strip(),
                 'price': root.findtext(".//hotel_price", "0"),
                 'safety': root.xpath("string(.//safety/@index_score)") or "0",
                 'green': root.xpath("string(.//environment/@green_score)") or "0",
@@ -572,12 +584,15 @@ def deploy():
             # Card compatta per index: solo immagine + stats + CTA
             img_src = city_obj.get('landmark_image', '')
             n_attr = len(city_obj['attractions'])
+            # Dimensioni extra per i filtri/ordinamento dell'index
+            cur_bucket = 'eur' if not city_obj['currency'] else 'other'
+            region_code = city_obj['region']
             s_pct = _pct(city_obj['safety'])
             g_pct = _pct(city_obj['green'])
             p_pct = _pct(city_obj['price'], 2.5)   # max €250
             e_pct = _pct(city_obj['economy'])
             cards_html += f"""
-            <article class="city-card" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" itemscope itemtype="https://schema.org/City" itemid="{city_obj['uri']}">
+            <article class="city-card" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" data-appeal="{city_obj['appeal']}" data-economy="{city_obj['economy']}" data-attractions="{n_attr}" data-venues="{city_obj['hotel_count']}" data-currency="{cur_bucket}" data-region="{region_code}" data-name="{city_obj['name_it'].lower()}" itemscope itemtype="https://schema.org/City" itemid="{city_obj['uri']}">
                 <div class="landmark-img-wrap">
                     <img src="{img_src}" alt="{city_obj['name_it']} Landmark" class="landmark-img" loading="lazy">
                     <div class="city-card-overlay">
@@ -649,24 +664,88 @@ window.addEventListener('scroll', function() {
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
 
-/* filter buttons */
-document.querySelectorAll('.filter-btn[data-filter]').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('.filter-btn[data-filter]').forEach(function(b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        var f = btn.dataset.filter;
-        document.querySelectorAll('#city-grid .city-card').forEach(function(card) {
-            var s = parseFloat(card.dataset.safety || 0);
-            var g = parseFloat(card.dataset.green  || 0);
-            var p = parseFloat(card.dataset.price  || 999);
-            var show = true;
-            if (f === 'safety') show = s >= 70;
-            if (f === 'green')  show = g >= 70;
-            if (f === 'budget') show = p <= 120;
-            card.style.display = show ? '' : 'none';
+/* ───── Toolbar: faceted filter (search + profile/region/currency) + sort ───── */
+(function() {
+    var grid = document.getElementById('city-grid');
+    if (!grid) return;
+    var cards   = Array.prototype.slice.call(grid.querySelectorAll('.city-card'));
+    var search  = document.getElementById('city-search');
+    var sortSel = document.getElementById('city-sort');
+    var countEl = document.getElementById('ft-count');
+    var resetBtn= document.getElementById('ft-reset');
+    var chips   = Array.prototype.slice.call(document.querySelectorAll('.filter-btn[data-dim]'));
+    var total   = cards.length;
+    var num     = function(c, attr) { return parseFloat(c.dataset[attr] || 0); };
+
+    function activeVals(dim) {
+        return chips.filter(function(c) {
+            return c.dataset.dim === dim && c.getAttribute('aria-pressed') === 'true';
+        }).map(function(c) { return c.dataset.val; });
+    }
+
+    function matches(card) {
+        var q = (search.value || '').trim().toLowerCase();
+        if (q && (card.dataset.name || '').indexOf(q) === -1) return false;
+        // Profile: ogni soglia attiva è un vincolo AND
+        var prof = activeVals('profile');
+        for (var i = 0; i < prof.length; i++) {
+            if (prof[i] === 'safety' && num(card, 'safety') < 70)  return false;
+            if (prof[i] === 'green'  && num(card, 'green')  < 70)  return false;
+            if (prof[i] === 'budget' && num(card, 'price')  > 120) return false;
+        }
+        // Region / Currency: OR all'interno del gruppo, AND fra gruppi
+        var reg = activeVals('region');
+        if (reg.length && reg.indexOf(card.dataset.region) === -1) return false;
+        var cur = activeVals('currency');
+        if (cur.length && cur.indexOf(card.dataset.currency) === -1) return false;
+        return true;
+    }
+
+    function sortCards() {
+        var key = sortSel.value;
+        cards.slice().sort(function(a, b) {
+            switch (key) {
+                case 'safety':      return num(b,'safety') - num(a,'safety');
+                case 'green':       return num(b,'green') - num(a,'green');
+                case 'price-asc':   return num(a,'price') - num(b,'price');
+                case 'price-desc':  return num(b,'price') - num(a,'price');
+                case 'attractions': return num(b,'attractions') - num(a,'attractions');
+                case 'venues':      return num(b,'venues') - num(a,'venues');
+                case 'name':        return (a.dataset.name||'').localeCompare(b.dataset.name||'');
+                default:            return num(b,'appeal') - num(a,'appeal');
+            }
+        }).forEach(function(c) { grid.appendChild(c); });
+    }
+
+    function apply() {
+        sortCards();
+        var shown = 0;
+        cards.forEach(function(c) {
+            var ok = matches(c);
+            c.style.display = ok ? '' : 'none';
+            if (ok) shown++;
+        });
+        countEl.textContent = 'Showing ' + shown + ' of ' + total + ' capitals';
+    }
+
+    chips.forEach(function(chip) {
+        chip.addEventListener('click', function() {
+            var on = chip.getAttribute('aria-pressed') === 'true';
+            chip.setAttribute('aria-pressed', on ? 'false' : 'true');
+            chip.classList.toggle('active', !on);
+            apply();
         });
     });
-});
+    search.addEventListener('input', apply);
+    sortSel.addEventListener('change', apply);
+    resetBtn.addEventListener('click', function() {
+        chips.forEach(function(c) { c.setAttribute('aria-pressed','false'); c.classList.remove('active'); });
+        search.value = '';
+        sortSel.value = 'appeal';
+        apply();
+    });
+    apply();
+})();
 
 /* card entrance animation */
 document.body.classList.add('js-loaded');
@@ -681,6 +760,13 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
     # Virtual Analyst flottante (stesso markup/logica su index e schede città)
     analyst_widget = analyst_widget_html()
     analyst_js = analyst_script(city_data)
+
+    # Chip dei filtri "Regione" generati dalla mappatura geografica
+    region_chips = "\n        ".join(
+        f'<button class="filter-btn" data-dim="region" data-val="{code}" '
+        f'aria-pressed="false">{label}</button>'
+        for code, label in REGION_LABELS.items()
+    )
 
     # Template finale HTML
     full_html = f"""<!DOCTYPE html>
@@ -786,13 +872,49 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
 <!-- ═══ MAPPA INLINE ════════════════════════════════════════════════════ -->
 <div id="map-inline"></div>
 
-<!-- ═══ FILTRI + GRIGLIA ════════════════════════════════════════════════ -->
-<div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">🌍 All Capitals</button>
-    <button class="filter-btn" data-filter="safety">🛡️ Safety ≥ 70</button>
-    <button class="filter-btn" data-filter="green">🌱 Green ≥ 70</button>
-    <button class="filter-btn" data-filter="budget">💰 Budget ≤ €120/night</button>
-</div>
+<!-- ═══ TOOLBAR FILTRI + ORDINAMENTO ════════════════════════════════════ -->
+<section class="filter-toolbar" id="filter-toolbar" aria-label="Filtra e ordina le capitali">
+    <div class="ft-row ft-main">
+        <div class="ft-search">
+            <label for="city-search" class="ft-sr">Search a capital by name</label>
+            <input type="search" id="city-search" placeholder="🔍 Search a capital…" autocomplete="off">
+        </div>
+        <div class="ft-sort">
+            <label for="city-sort">Sort by</label>
+            <select id="city-sort">
+                <option value="appeal">⭐ Appeal score</option>
+                <option value="safety">🛡️ Safest first</option>
+                <option value="green">🌱 Greenest first</option>
+                <option value="price-asc">💰 Cheapest first</option>
+                <option value="price-desc">💎 Priciest first</option>
+                <option value="attractions">🏛️ Most attractions</option>
+                <option value="venues">🍺 Most venues</option>
+                <option value="name">🔤 A–Z</option>
+            </select>
+        </div>
+    </div>
+    <div class="ft-row ft-facets">
+        <div class="ft-group" role="group" aria-label="Profilo">
+            <span class="ft-glabel">Profile</span>
+            <button class="filter-btn" data-dim="profile" data-val="safety" aria-pressed="false">🛡️ Safe ≥ 70</button>
+            <button class="filter-btn" data-dim="profile" data-val="green" aria-pressed="false">🌱 Green ≥ 70</button>
+            <button class="filter-btn" data-dim="profile" data-val="budget" aria-pressed="false">💰 ≤ €120/night</button>
+        </div>
+        <div class="ft-group" role="group" aria-label="Regione">
+            <span class="ft-glabel">Region</span>
+            {region_chips}
+        </div>
+        <div class="ft-group" role="group" aria-label="Valuta">
+            <span class="ft-glabel">Currency</span>
+            <button class="filter-btn" data-dim="currency" data-val="eur" aria-pressed="false">💶 Eurozone</button>
+            <button class="filter-btn" data-dim="currency" data-val="other" aria-pressed="false">💱 Non-euro</button>
+        </div>
+    </div>
+    <div class="ft-row ft-meta">
+        <span class="ft-count" id="ft-count" aria-live="polite">Showing {len(city_data)} of {len(city_data)} capitals</span>
+        <button class="ft-reset" id="ft-reset" type="button">✕ Reset filters</button>
+    </div>
+</section>
 <main class="container" id="city-grid" aria-label="Griglia delle capitali">{cards_html}</main>
 
 <button id="back-to-top" title="Back to top">↑</button>
@@ -1536,6 +1658,14 @@ def generate_report(city_data, validation):
         <td style="text-align:right">ISO 4217</td>
       </tr>
       <tr>
+        <td>Macro-regione</td>
+        <td><span class="prov-src src-indices">📊 geo_regions.json</span></td>
+        <td>Attributo <b>enumerato obbligatorio</b> <code>&lt;city_report&nbsp;region="…"&gt;</code> secondo il geoscheme
+            <b>UN&nbsp;M49</b> (Northern/Western/Southern/Eastern). Cipro, classificato da M49 in Asia occidentale, è
+            assegnato a <i>southern</i> come eccezione UE documentata. Usato come filtro per area nell'index.</td>
+        <td style="text-align:right">UN&nbsp;M49</td>
+      </tr>
+      <tr>
         <td>Attrazioni · Locali · Distretti</td>
         <td><span class="prov-src src-wiki">📂 Wikivoyage</span></td>
         <td>Conteggio diretto degli elementi <code>&lt;attraction&gt;</code> / <code>&lt;venue&gt;</code> / <code>&lt;district&gt;</code> nei documenti.</td>
@@ -1794,7 +1924,7 @@ for filename in files:                                  # scorre la directory XM
   </p>
 
   <h3>Struttura ad albero</h3>
-  <pre>city_report [@appeal_score]
+  <pre>city_report [@appeal_score, @currency?, @region]
 ├── metadata
 │   ├── title          (nome EN)
 │   ├── name_it        (nome IT)
