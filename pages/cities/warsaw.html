@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Warsaw — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='69.3'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='74.8'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='75'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='46.8'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Eastern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='151'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2479'><meta itemprop='longitude' content='21.0144'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/warsaw.jpg' alt='Warsaw Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇵🇱 Warsaw <span style="opacity:.7;font-weight:400">· Varsavia</span></h1>
-    
-        <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>69.3</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:69%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>98.42€</span><span class='stat-local'>≈ 418 zł</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>74.8</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:75%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>75</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:75%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>0</span>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>46.8</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:47%'></div></div>
-            </div>
-        </div>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/warsaw.jpg' alt='Warsaw Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-safe'>🛡️ Ultra Safe</span><span class='city-hero-badge badge-top'>⭐ Top Rated</span><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇵🇱 Warsaw <span style="opacity:.7;font-weight:400">· Varsavia</span></h1><p class='city-hero-sub'>Eastern Europe</p></div></div>
     <div class='currency-note'><span class='cur-ico'>🪙</span><div><b>Warsaw</b> does not use the euro: the local currency is the <b>Polish złoty</b> (PLN, zł). Prices on this site are a <b>synthetic estimate in euros</b> (for cross-city comparison); the local equivalent (<b>≈ 418 zł</b> per night) is indicative, at 2026-01 reference rates.</div></div>
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>Regular <strong>Warsaw</strong> transport tickets issued by ZTM (the local transport operator which runs city buses, trams and the metro) are valid on SKM train services between the airport and <strong>Warsaw</strong>. The airport is in fare zone 1 so a single adult ride is 3.40 zł. If you need a bus at the other end, get a one-transfer ticket (valid 75 min) for 4.40 zł.</p></div>
-    
-    <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul style='margin:0; padding-left:15px;'><li><b>Old and New Town</b>: Quartiere di Varsavia.</li><li><b>Śródmieście</b>: Quartiere di Varsavia.</li><li><b>Western Centre</b>: Quartiere di Varsavia.</li><li><b>Praga</b>: Quartiere di Varsavia.</li><li><b>South</b>: Quartiere di Varsavia.</li></ul></div>
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=52.2071732,20.9724513' target='_blank'>Amarant</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2071732'><meta itemprop='longitude' content='20.9724513'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=52.2294067,21.0147013' target='_blank'>Azyl</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2294067'><meta itemprop='longitude' content='21.0147013'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=52.2480169,21.0455613' target='_blank'>Bar pod Kufelkiem</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2480169'><meta itemprop='longitude' content='21.0455613'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=52.2247707,21.0122492' target='_blank'>Beirut</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2247707'><meta itemprop='longitude' content='21.0122492'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=52.1737627,21.0450075' target='_blank'>Bez Słowa</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.1737627'><meta itemprop='longitude' content='21.0450075'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=52.2400168,21.0765039' target='_blank'>Bluesky</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2400168'><meta itemprop='longitude' content='21.0765039'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=52.2334668,21.0202035' target='_blank'>Cafe Foksal</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2334668'><meta itemprop='longitude' content='21.0202035'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=52.2178857,21.0170602' target='_blank'>Cafe Rock'n'Roll</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2178857'><meta itemprop='longitude' content='21.0170602'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>An extraordinary example of reconstruction and resilience, <strong>Warsaw</strong> is now a vertical and dynamic metropolis. It combines a growing financial sector with large green spaces and improved urban safety.</p>
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
+        <div class='stats-box'>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>69.3</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='69'></div></div>
             </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Warsaw</strong> (Polish: Warszawa) is Poland&#x27;s capital and largest city. <strong>Warsaw</strong> is a bustling metropolis and one of the European Union&#x27;s fastest-developing capitals and the Union&#x27;s ninth most populous urban centre. It has a mixture of new and old in its eclectic architectural mix, and is constantly changing. There is a large variety of museums, galleries and other tourist attractions, and there is always something happening throughout the year. While sprawling, it is quite easy to navigate for tourists thanks to a good public transit system, and most important sights are quite close to each other. There is no shortage of accommodation options and a wide choice of restaurants and bars. <strong>Warsaw</strong>&#x27;s nightlife is also on the rebound, and a reborn cafe culture has taken over the city. A city of 1.8 million inhabitants (2021), it sits on the Vistula River (Polish: Wisła) in the middle of the country. <strong>Warsaw</strong>&#x27;s history of rapid development after many wars that ravaged and destroyed the city has earned it a reputation as a &quot;phoenix city&quot;, able to recreate itself from the ruins and regain its erstwhile glory every time. During the Second World War, it suffered a fate similar to Rotterdam and Dresden in that it was almost completely razed, although in the case of <strong>Warsaw</strong> it was a much more tragic story of successive destruction and defeat. Due to the great efforts of its surviving inhabitants and, indeed the entire nation, it was rebuilt from a field of rubble, with its historic core recreated, but much of its heritage was lost. <strong>Warsaw</strong> also had one of the largest Jewish populations in Europe, which for the most part perished during the war, making <strong>Warsaw</strong> an important place of Holocaust remembrance. There are records of human settlements and economic activity in the area of what is now <strong>Warsaw</strong> from the 9th century onwards, but it wasn&#x27;t until the 13th century that <strong>Warsaw</strong> was founded by the Dukes of Mazovia. While developing as an administrative and economic centre, it played second fiddle to Płock within Mazovia until the 15th century, and was by no means a match for Poland&#x27;s former capital, Kraków. It gained growing importance due to its economic might and strategically important central location in Poland, cemented when the Polish Sejm (parliament of nobles) relocated there permanently in the 16th century, and it became the site of royal elections. In 1596, it became the de facto capital of the country when King Sigismund III Vasa decided to permanently relocate to what is now the Royal Castle in <strong>Warsaw</strong>. The city started to develop rapidly beyond the what is now the Old and New Town, as noblemen started moving in and building mansions and palaces around town. In the 17th century, Praga, on the right-hand side of the river Vistula, was incorporated as a separate town (and did not become a part of <strong>Warsaw</strong> until the 19th century).</p></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>74.8</span>
+                    <div class='circular-ring ring-safe' data-pct='75'></div>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>75</span>
+                    <div class='circular-ring ring-green' data-pct='75'></div>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>98.42€</span>
+                </div>
+                <span class='val-local'>≈ 418 zł</span>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>0</span>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>46.8</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='47'></div></div>
+            </div>
         </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Royal Castle</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2479'><meta itemprop='longitude' content='21.0144'></div></td><td class='atn-desc'><span itemprop='description'>Reconstructed castle and former royal residence.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.2479,21.0144' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Old Town Market</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2497'><meta itemprop='longitude' content='21.0122'></div></td><td class='atn-desc'><span itemprop='description'>The historical heart and oldest part of Warsaw.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.2497,21.0122' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Lazienki Park</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2153'><meta itemprop='longitude' content='21.0347'></div></td><td class='atn-desc'><span itemprop='description'>Largest park with a palace on the water.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.2153,21.0347' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Palace of Culture</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2317'><meta itemprop='longitude' content='21.0061'></div></td><td class='atn-desc'><span itemprop='description'>Iconic socialist-realist skyscraper and city landmark.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.2317,21.0061' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Wilanow Palace</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.1642'><meta itemprop='longitude' content='21.0894'></div></td><td class='atn-desc'><span itemprop='description'>Baroque royal palace survived the wars.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.1642,21.0894' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Uprising Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2325'><meta itemprop='longitude' content='20.9808'></div></td><td class='atn-desc'><span itemprop='description'>Museum dedicated to the Warsaw Uprising of 1944.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.2325,20.9808' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Vistula Boulevards</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2444'><meta itemprop='longitude' content='21.025'></div></td><td class='atn-desc'><span itemprop='description'>Modern riverside promenade with bars and views.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.2444,21.025' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>POLIN Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2494'><meta itemprop='longitude' content='20.9931'></div></td><td class='atn-desc'><span itemprop='description'>Museum of the History of Polish Jews.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.2494,20.9931' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Saxon Garden</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2369'><meta itemprop='longitude' content='21.0089'></div></td><td class='atn-desc'><span itemprop='description'>Oldest public park in the city.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.2369,21.0089' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Praga District</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.25'><meta itemprop='longitude' content='21.0333'></div></td><td class='atn-desc'><span itemprop='description'>Artistic district on the right bank of the Vistula.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=52.25,21.0333' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul class='block-ul'><li><b>Old and New Town</b>: Quartiere di Varsavia.</li><li><b>Śródmieście</b>: Quartiere di Varsavia.</li><li><b>Western Centre</b>: Quartiere di Varsavia.</li><li><b>Praga</b>: Quartiere di Varsavia.</li><li><b>South</b>: Quartiere di Varsavia.</li></ul></div>
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/warsaw.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Warsaw" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Warsaw</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Royal Castle</span><p class='attr-card-desc' itemprop='description'>Reconstructed castle and former royal residence.</p><a href='https://www.google.com/maps?q=52.2479,21.0144' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2479'><meta itemprop='longitude' content='21.0144'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Old Town Market</span><p class='attr-card-desc' itemprop='description'>The historical heart and oldest part of Warsaw.</p><a href='https://www.google.com/maps?q=52.2497,21.0122' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2497'><meta itemprop='longitude' content='21.0122'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Lazienki Park</span><p class='attr-card-desc' itemprop='description'>Largest park with a palace on the water.</p><a href='https://www.google.com/maps?q=52.2153,21.0347' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2153'><meta itemprop='longitude' content='21.0347'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Palace of Culture</span><p class='attr-card-desc' itemprop='description'>Iconic socialist-realist skyscraper and city landmark.</p><a href='https://www.google.com/maps?q=52.2317,21.0061' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2317'><meta itemprop='longitude' content='21.0061'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Wilanow Palace</span><p class='attr-card-desc' itemprop='description'>Baroque royal palace survived the wars.</p><a href='https://www.google.com/maps?q=52.1642,21.0894' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.1642'><meta itemprop='longitude' content='21.0894'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Uprising Museum</span><p class='attr-card-desc' itemprop='description'>Museum dedicated to the Warsaw Uprising of 1944.</p><a href='https://www.google.com/maps?q=52.2325,20.9808' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2325'><meta itemprop='longitude' content='20.9808'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Vistula Boulevards</span><p class='attr-card-desc' itemprop='description'>Modern riverside promenade with bars and views.</p><a href='https://www.google.com/maps?q=52.2444,21.025' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2444'><meta itemprop='longitude' content='21.025'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>POLIN Museum</span><p class='attr-card-desc' itemprop='description'>Museum of the History of Polish Jews.</p><a href='https://www.google.com/maps?q=52.2494,20.9931' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2494'><meta itemprop='longitude' content='20.9931'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Saxon Garden</span><p class='attr-card-desc' itemprop='description'>Oldest public park in the city.</p><a href='https://www.google.com/maps?q=52.2369,21.0089' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2369'><meta itemprop='longitude' content='21.0089'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Praga District</span><p class='attr-card-desc' itemprop='description'>Artistic district on the right bank of the Vistula.</p><a href='https://www.google.com/maps?q=52.25,21.0333' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.25'><meta itemprop='longitude' content='21.0333'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=52.2071732,20.9724513' target='_blank'>Amarant</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2071732'><meta itemprop='longitude' content='20.9724513'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=52.2294067,21.0147013' target='_blank'>Azyl</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2294067'><meta itemprop='longitude' content='21.0147013'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=52.2480169,21.0455613' target='_blank'>Bar pod Kufelkiem</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2480169'><meta itemprop='longitude' content='21.0455613'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=52.2247707,21.0122492' target='_blank'>Beirut</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2247707'><meta itemprop='longitude' content='21.0122492'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=52.1737627,21.0450075' target='_blank'>Bez Słowa</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.1737627'><meta itemprop='longitude' content='21.0450075'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=52.2400168,21.0765039' target='_blank'>Bluesky</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2400168'><meta itemprop='longitude' content='21.0765039'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=52.2334668,21.0202035' target='_blank'>Cafe Foksal</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2334668'><meta itemprop='longitude' content='21.0202035'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=52.2178857,21.0170602' target='_blank'>Cafe Rock'n'Roll</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='52.2178857'><meta itemprop='longitude' content='21.0170602'></div></li></ul></div>
+        
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>Regular <strong>Warsaw</strong> transport tickets issued by ZTM (the local transport operator which runs city buses, trams and the metro) are valid on SKM train services between the airport and <strong>Warsaw</strong>. The airport is in fare zone 1 so a single adult ride is 3.40 zł. If you need a bus at the other end, get a one-transfer ticket (valid 75 min) for 4.40 zł.</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>An extraordinary example of reconstruction and resilience, <strong>Warsaw</strong> is now a vertical and dynamic metropolis. It combines a growing financial sector with large green spaces and improved urban safety.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Warsaw</strong> (Polish: Warszawa) is Poland&#x27;s capital and largest city. <strong>Warsaw</strong> is a bustling metropolis and one of the European Union&#x27;s fastest-developing capitals and the Union&#x27;s ninth most populous urban centre. It has a mixture of new and old in its eclectic architectural mix, and is constantly changing. There is a large variety of museums, galleries and other tourist attractions, and there is always something happening throughout the year. While sprawling, it is quite easy to navigate for tourists thanks to a good public transit system, and most important sights are quite close to each other. There is no shortage of accommodation options and a wide choice of restaurants and bars. <strong>Warsaw</strong>&#x27;s nightlife is also on the rebound, and a reborn cafe culture has taken over the city. A city of 1.8 million inhabitants (2021), it sits on the Vistula River (Polish: Wisła) in the middle of the country. <strong>Warsaw</strong>&#x27;s history of rapid development after many wars that ravaged and destroyed the city has earned it a reputation as a &quot;phoenix city&quot;, able to recreate itself from the ruins and regain its erstwhile glory every time. During the Second World War, it suffered a fate similar to Rotterdam and Dresden in that it was almost completely razed, although in the case of <strong>Warsaw</strong> it was a much more tragic story of successive destruction and defeat. Due to the great efforts of its surviving inhabitants and, indeed the entire nation, it was rebuilt from a field of rubble, with its historic core recreated, but much of its heritage was lost. <strong>Warsaw</strong> also had one of the largest Jewish populations in Europe, which for the most part perished during the war, making <strong>Warsaw</strong> an important place of Holocaust remembrance. There are records of human settlements and economic activity in the area of what is now <strong>Warsaw</strong> from the 9th century onwards, but it wasn&#x27;t until the 13th century that <strong>Warsaw</strong> was founded by the Dukes of Mazovia. While developing as an administrative and economic centre, it played second fiddle to Płock within Mazovia until the 15th century, and was by no means a match for Poland&#x27;s former capital, Kraków. It gained growing importance due to its economic might and strategically important central location in Poland, cemented when the Polish Sejm (parliament of nobles) relocated there permanently in the 16th century, and it became the site of royal elections. In 1596, it became the de facto capital of the country when King Sigismund III Vasa decided to permanently relocate to what is now the Royal Castle in <strong>Warsaw</strong>. The city started to develop rapidly beyond the what is now the Old and New Town, as noblemen started moving in and building mansions and palaces around town. In the 17th century, Praga, on the right-hand side of the river Vistula, was incorporated as a separate town (and did not become a part of <strong>Warsaw</strong> until the 19th century).</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/warsaw.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Warsaw" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Warsaw</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 52.2479, "lon": 21.0144, "n": "Royal Castle", "d": "Reconstructed castle and former royal residence."}, {"lat": 52.2497, "lon": 21.0122, "n": "Old Town Market", "d": "The historical heart and oldest part of Warsaw."}, {"lat": 52.2153, "lon": 21.0347, "n": "Lazienki Park", "d": "Largest park with a palace on the water."}, {"lat": 52.2317, "lon": 21.0061, "n": "Palace of Culture", "d": "Iconic socialist-realist skyscraper and city landmark."}, {"lat": 52.1642, "lon": 21.0894, "n": "Wilanow Palace", "d": "Baroque royal palace survived the wars."}, {"lat": 52.2325, "lon": 20.9808, "n": "Uprising Museum", "d": "Museum dedicated to the Warsaw Uprising of 1944."}, {"lat": 52.2444, "lon": 21.025, "n": "Vistula Boulevards", "d": "Modern riverside promenade with bars and views."}, {"lat": 52.2494, "lon": 20.9931, "n": "POLIN Museum", "d": "Museum of the History of Polish Jews."}, {"lat": 52.2369, "lon": 21.0089, "n": "Saxon Garden", "d": "Oldest public park in the city."}, {"lat": 52.25, "lon": 21.0333, "n": "Praga District", "d": "Artistic district on the right bank of the Vistula."}];
   var venues=[{"lat": 52.2071732, "lon": 20.9724513, "n": "Amarant", "cat": "pub"}, {"lat": 52.2294067, "lon": 21.0147013, "n": "Azyl", "cat": "bar"}, {"lat": 52.2480169, "lon": 21.0455613, "n": "Bar pod Kufelkiem", "cat": "pub"}, {"lat": 52.2247707, "lon": 21.0122492, "n": "Beirut", "cat": "bar"}, {"lat": 52.1737627, "lon": 21.0450075, "n": "Bez S\u0142owa", "cat": "pub"}, {"lat": 52.2400168, "lon": 21.0765039, "n": "Bluesky", "cat": "bar"}, {"lat": 52.2334668, "lon": 21.0202035, "n": "Cafe Foksal", "cat": "pub"}, {"lat": 52.2178857, "lon": 21.0170602, "n": "Cafe Rock'n'Roll", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([52.2297,21.0122],13);
+    cityMap.setView([52.2297,21.0122],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

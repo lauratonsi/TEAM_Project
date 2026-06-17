@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Budapest — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='59.8'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='65.7'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='60'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='47.7'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Eastern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='151'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5071'><meta itemprop='longitude' content='19.0456'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/budapest.jpg' alt='Budapest Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇭🇺 Budapest</h1>
-    
-        <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>59.8</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:60%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>96.75€</span><span class='stat-local'>≈ 38.216 Ft</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>65.7</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:66%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>60</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:60%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>0</span>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>47.7</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:48%'></div></div>
-            </div>
-        </div>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/budapest.jpg' alt='Budapest Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇭🇺 Budapest</h1><p class='city-hero-sub'>Eastern Europe</p></div></div>
     <div class='currency-note'><span class='cur-ico'>🪙</span><div><b>Budapest</b> does not use the euro: the local currency is the <b>Hungarian forint</b> (HUF, Ft). Prices on this site are a <b>synthetic estimate in euros</b> (for cross-city comparison); the local equivalent (<b>≈ 38.216 Ft</b> per night) is indicative, at 2026-01 reference rates.</div></div>
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>Metro + Bus line 200E Bus line 200E runs between Terminal 2 and Kőbánya-Kispest Metro station, taking 25 min, bus fare Ft500. You there buy a Metro ticket for another Ft500 and ride line 3 to the city centre, about 20 mins to the main interchange at Deák Ferenc tér. The bus runs all day every day, with 7-8 minutes frequency during the day, 30-60 minutes at late night.</p></div>
-    
-    
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=47.4978693,19.068726' target='_blank'>Akácfa söröző</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.4978693'><meta itemprop='longitude' content='19.068726'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=47.5016715,19.0397561' target='_blank'>Belgian Brasserie Henri</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5016715'><meta itemprop='longitude' content='19.0397561'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=47.5083433,19.0547717' target='_blank'>Bordizsár</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5083433'><meta itemprop='longitude' content='19.0547717'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=47.4973062,19.0389453' target='_blank'>Budapest Terrace</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.4973062'><meta itemprop='longitude' content='19.0389453'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=47.50485,19.0623146' target='_blank'>Cactus Juice</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.50485'><meta itemprop='longitude' content='19.0623146'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=47.520504,19.0578122' target='_blank'>Cafe Room</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.520504'><meta itemprop='longitude' content='19.0578122'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=47.5037114,19.0637906' target='_blank'>Café Vian kávéház</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5037114'><meta itemprop='longitude' content='19.0637906'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=47.5018029,19.0553158' target='_blank'>Captain Cook</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5018029'><meta itemprop='longitude' content='19.0553158'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>With majestic architecture and a historic thermal bath network, <strong>Budapest</strong> remains one of the most accessible and scenic capitals. Recent urban reforms aim to strengthen public transport and the safety of central districts.</p>
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
+        <div class='stats-box'>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>59.8</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='60'></div></div>
             </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Budapest</strong> is the capital city of Hungary. With a unique, youthful atmosphere, world-class classical music scene, a pulsating nightlife increasingly appreciated among European youth, and last but not least, an exceptional offer of natural thermal baths, <strong>Budapest</strong> is one of Europe&#x27;s most delightful and enjoyable cities. Due to the exceedingly scenic setting, and its architecture it is nicknamed &quot;Paris of the East&quot;. The modern-day <strong>Budapest</strong> results from the amalgamation of two historic cities lying right opposite each other over the Danube river. Buda is the western (right) bank side, with the high hill atop which the Buda castle sits. Pest is the relatively flat eastern (left) bank side, with the Parliament, numerous other stately buildings, and busy streets retaining all their 19th century architectural heritage. In 1987 <strong>Budapest</strong> was added to the for the cultural and architectural significance of the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue. Although <strong>Budapest</strong> is administratively divided into 23 numbered districts (always written in Roman numerals) it is colloquially often divided into parts, roughly corresponding to the two major cities of Buda and Pest, which it comprises. Listings of particular points of interests - museums, historic monuments, restaurants, bars, hotels, shopping opportunities and such - can be found in the following articles: Of course, quarters often offer their own atmosphere due to their history and inhabitants. Roughly speaking, areas near to, especially inside of Nagykörút (Great Boulevard or Ringroad, served by Tram 4 and Tram 6) are considered central, even if some of these are in less than perfect condition and not typically frequented by tourists. In Pest, Kiskörút (Small Boulevard) is traditionally considered as the border of the centre proper, including some highly touristed areas. Informally, quarters are known under their own historical name which are often referred to by the locals. The names are often linked to members of the House of Hapsburg or - in fringe areas - the names of villages or towns which later became part of <strong>Budapest</strong>. Particularly interesting quarters are Belváros (Inner City) and Lipótváros (Leopold Town), together form the Belváros district (a bit confusing but usually the biggest or oldest quarter gave its name to the entire district), the heart of Pest, including a number of major sights but also beautiful squares and cafés. With the Parliament, a number of ministries and banking houses, Lipótváros is also a major political and business centre of the country. The name refers to the Hapsburg Emperor Leopold I whose coronation to the King of Hungary in 1790 gave rise to the name of the then-new quarter. Újlipótváros (New Leopold Town) The inner part of the XIII. district (so called Angyalföld), just outside of the Great Boulevard north of Leopold Town with the marvellous Margaret Bridge at its corner, was built between the 1910s and 1930s.</p></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>65.7</span>
+                    <div class='circular-ring ring-safe' data-pct='66'></div>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>60</span>
+                    <div class='circular-ring ring-green' data-pct='60'></div>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>96.75€</span>
+                </div>
+                <span class='val-local'>≈ 38.216 Ft</span>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>0</span>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>47.7</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='48'></div></div>
+            </div>
         </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Hungarian Parliament</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5071'><meta itemprop='longitude' content='19.0456'></div></td><td class='atn-desc'><span itemprop='description'>Magnificent neo-Gothic building on the Danube bank.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.5071,19.0456' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Buda Castle</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.4962'><meta itemprop='longitude' content='19.0396'></div></td><td class='atn-desc'><span itemprop='description'>Historical palace complex of the Hungarian kings.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.4962,19.0396' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Fisherman's Bastion</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5022'><meta itemprop='longitude' content='19.0348'></div></td><td class='atn-desc'><span itemprop='description'>Neo-Romanesque terrace with panoramic views of Pest.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.5022,19.0348' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Chain Bridge</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.499'><meta itemprop='longitude' content='19.0441'></div></td><td class='atn-desc'><span itemprop='description'>The first permanent bridge connecting Buda and Pest.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.499,19.0441' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Heroes' Square</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5148'><meta itemprop='longitude' content='19.0777'></div></td><td class='atn-desc'><span itemprop='description'>Major square featuring the Millennium Monument.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.5148,19.0777' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>St. Stephen's Basilica</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5009'><meta itemprop='longitude' content='19.0514'></div></td><td class='atn-desc'><span itemprop='description'>Roman Catholic basilica named after the first King of Hungary.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.5009,19.0514' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Széchenyi Thermal Bath</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5188'><meta itemprop='longitude' content='19.0814'></div></td><td class='atn-desc'><span itemprop='description'>Largest medicinal bath in Europe with outdoor pools.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.5188,19.0814' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Margaret Island</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5273'><meta itemprop='longitude' content='19.0468'></div></td><td class='atn-desc'><span itemprop='description'>Quiet island park in the middle of the Danube.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.5273,19.0468' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Matthias Church</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5019'><meta itemprop='longitude' content='19.0342'></div></td><td class='atn-desc'><span itemprop='description'>Roman Catholic church in the heart of Buda's Castle District.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.5019,19.0342' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Great Market Hall</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.4871'><meta itemprop='longitude' content='19.0583'></div></td><td class='atn-desc'><span itemprop='description'>Large indoor market offering local food and crafts.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=47.4871,19.0583' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/budapest.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Budapest" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Budapest</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Hungarian Parliament</span><p class='attr-card-desc' itemprop='description'>Magnificent neo-Gothic building on the Danube bank.</p><a href='https://www.google.com/maps?q=47.5071,19.0456' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5071'><meta itemprop='longitude' content='19.0456'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Buda Castle</span><p class='attr-card-desc' itemprop='description'>Historical palace complex of the Hungarian kings.</p><a href='https://www.google.com/maps?q=47.4962,19.0396' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.4962'><meta itemprop='longitude' content='19.0396'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Fisherman's Bastion</span><p class='attr-card-desc' itemprop='description'>Neo-Romanesque terrace with panoramic views of Pest.</p><a href='https://www.google.com/maps?q=47.5022,19.0348' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5022'><meta itemprop='longitude' content='19.0348'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Chain Bridge</span><p class='attr-card-desc' itemprop='description'>The first permanent bridge connecting Buda and Pest.</p><a href='https://www.google.com/maps?q=47.499,19.0441' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.499'><meta itemprop='longitude' content='19.0441'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Heroes' Square</span><p class='attr-card-desc' itemprop='description'>Major square featuring the Millennium Monument.</p><a href='https://www.google.com/maps?q=47.5148,19.0777' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5148'><meta itemprop='longitude' content='19.0777'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>St. Stephen's Basilica</span><p class='attr-card-desc' itemprop='description'>Roman Catholic basilica named after the first King of Hungary.</p><a href='https://www.google.com/maps?q=47.5009,19.0514' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5009'><meta itemprop='longitude' content='19.0514'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Széchenyi Thermal Bath</span><p class='attr-card-desc' itemprop='description'>Largest medicinal bath in Europe with outdoor pools.</p><a href='https://www.google.com/maps?q=47.5188,19.0814' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5188'><meta itemprop='longitude' content='19.0814'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Margaret Island</span><p class='attr-card-desc' itemprop='description'>Quiet island park in the middle of the Danube.</p><a href='https://www.google.com/maps?q=47.5273,19.0468' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5273'><meta itemprop='longitude' content='19.0468'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Matthias Church</span><p class='attr-card-desc' itemprop='description'>Roman Catholic church in the heart of Buda's Castle District.</p><a href='https://www.google.com/maps?q=47.5019,19.0342' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5019'><meta itemprop='longitude' content='19.0342'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Great Market Hall</span><p class='attr-card-desc' itemprop='description'>Large indoor market offering local food and crafts.</p><a href='https://www.google.com/maps?q=47.4871,19.0583' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.4871'><meta itemprop='longitude' content='19.0583'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=47.4978693,19.068726' target='_blank'>Akácfa söröző</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.4978693'><meta itemprop='longitude' content='19.068726'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=47.5016715,19.0397561' target='_blank'>Belgian Brasserie Henri</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5016715'><meta itemprop='longitude' content='19.0397561'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=47.5083433,19.0547717' target='_blank'>Bordizsár</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5083433'><meta itemprop='longitude' content='19.0547717'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=47.4973062,19.0389453' target='_blank'>Budapest Terrace</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.4973062'><meta itemprop='longitude' content='19.0389453'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=47.50485,19.0623146' target='_blank'>Cactus Juice</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.50485'><meta itemprop='longitude' content='19.0623146'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=47.520504,19.0578122' target='_blank'>Cafe Room</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.520504'><meta itemprop='longitude' content='19.0578122'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=47.5037114,19.0637906' target='_blank'>Café Vian kávéház</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5037114'><meta itemprop='longitude' content='19.0637906'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=47.5018029,19.0553158' target='_blank'>Captain Cook</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='47.5018029'><meta itemprop='longitude' content='19.0553158'></div></li></ul></div>
+        
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>Metro + Bus line 200E Bus line 200E runs between Terminal 2 and Kőbánya-Kispest Metro station, taking 25 min, bus fare Ft500. You there buy a Metro ticket for another Ft500 and ride line 3 to the city centre, about 20 mins to the main interchange at Deák Ferenc tér. The bus runs all day every day, with 7-8 minutes frequency during the day, 30-60 minutes at late night.</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>With majestic architecture and a historic thermal bath network, <strong>Budapest</strong> remains one of the most accessible and scenic capitals. Recent urban reforms aim to strengthen public transport and the safety of central districts.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Budapest</strong> is the capital city of Hungary. With a unique, youthful atmosphere, world-class classical music scene, a pulsating nightlife increasingly appreciated among European youth, and last but not least, an exceptional offer of natural thermal baths, <strong>Budapest</strong> is one of Europe&#x27;s most delightful and enjoyable cities. Due to the exceedingly scenic setting, and its architecture it is nicknamed &quot;Paris of the East&quot;. The modern-day <strong>Budapest</strong> results from the amalgamation of two historic cities lying right opposite each other over the Danube river. Buda is the western (right) bank side, with the high hill atop which the Buda castle sits. Pest is the relatively flat eastern (left) bank side, with the Parliament, numerous other stately buildings, and busy streets retaining all their 19th century architectural heritage. In 1987 <strong>Budapest</strong> was added to the for the cultural and architectural significance of the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue. Although <strong>Budapest</strong> is administratively divided into 23 numbered districts (always written in Roman numerals) it is colloquially often divided into parts, roughly corresponding to the two major cities of Buda and Pest, which it comprises. Listings of particular points of interests - museums, historic monuments, restaurants, bars, hotels, shopping opportunities and such - can be found in the following articles: Of course, quarters often offer their own atmosphere due to their history and inhabitants. Roughly speaking, areas near to, especially inside of Nagykörút (Great Boulevard or Ringroad, served by Tram 4 and Tram 6) are considered central, even if some of these are in less than perfect condition and not typically frequented by tourists. In Pest, Kiskörút (Small Boulevard) is traditionally considered as the border of the centre proper, including some highly touristed areas. Informally, quarters are known under their own historical name which are often referred to by the locals. The names are often linked to members of the House of Hapsburg or - in fringe areas - the names of villages or towns which later became part of <strong>Budapest</strong>. Particularly interesting quarters are Belváros (Inner City) and Lipótváros (Leopold Town), together form the Belváros district (a bit confusing but usually the biggest or oldest quarter gave its name to the entire district), the heart of Pest, including a number of major sights but also beautiful squares and cafés. With the Parliament, a number of ministries and banking houses, Lipótváros is also a major political and business centre of the country. The name refers to the Hapsburg Emperor Leopold I whose coronation to the King of Hungary in 1790 gave rise to the name of the then-new quarter. Újlipótváros (New Leopold Town) The inner part of the XIII. district (so called Angyalföld), just outside of the Great Boulevard north of Leopold Town with the marvellous Margaret Bridge at its corner, was built between the 1910s and 1930s.</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/budapest.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Budapest" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Budapest</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 47.5071, "lon": 19.0456, "n": "Hungarian Parliament", "d": "Magnificent neo-Gothic building on the Danube bank."}, {"lat": 47.4962, "lon": 19.0396, "n": "Buda Castle", "d": "Historical palace complex of the Hungarian kings."}, {"lat": 47.5022, "lon": 19.0348, "n": "Fisherman's Bastion", "d": "Neo-Romanesque terrace with panoramic views of Pest."}, {"lat": 47.499, "lon": 19.0441, "n": "Chain Bridge", "d": "The first permanent bridge connecting Buda and Pest."}, {"lat": 47.5148, "lon": 19.0777, "n": "Heroes' Square", "d": "Major square featuring the Millennium Monument."}, {"lat": 47.5009, "lon": 19.0514, "n": "St. Stephen's Basilica", "d": "Roman Catholic basilica named after the first King of Hungary."}, {"lat": 47.5188, "lon": 19.0814, "n": "Sz\u00e9chenyi Thermal Bath", "d": "Largest medicinal bath in Europe with outdoor pools."}, {"lat": 47.5273, "lon": 19.0468, "n": "Margaret Island", "d": "Quiet island park in the middle of the Danube."}, {"lat": 47.5019, "lon": 19.0342, "n": "Matthias Church", "d": "Roman Catholic church in the heart of Buda's Castle District."}, {"lat": 47.4871, "lon": 19.0583, "n": "Great Market Hall", "d": "Large indoor market offering local food and crafts."}];
   var venues=[{"lat": 47.4978693, "lon": 19.068726, "n": "Ak\u00e1cfa s\u00f6r\u00f6z\u0151", "cat": "pub"}, {"lat": 47.5016715, "lon": 19.0397561, "n": "Belgian Brasserie Henri", "cat": "pub"}, {"lat": 47.5083433, "lon": 19.0547717, "n": "Bordizs\u00e1r", "cat": "pub"}, {"lat": 47.4973062, "lon": 19.0389453, "n": "Budapest Terrace", "cat": "pub"}, {"lat": 47.50485, "lon": 19.0623146, "n": "Cactus Juice", "cat": "bar"}, {"lat": 47.520504, "lon": 19.0578122, "n": "Cafe Room", "cat": "pub"}, {"lat": 47.5037114, "lon": 19.0637906, "n": "Caf\u00e9 Vian k\u00e1v\u00e9h\u00e1z", "cat": "pub"}, {"lat": 47.5018029, "lon": 19.0553158, "n": "Captain Cook", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([47.4979,19.0402],13);
+    cityMap.setView([47.4979,19.0402],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

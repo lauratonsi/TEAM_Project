@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../stile.css?v=20260617d">
+  <link rel="stylesheet" href="../stile.css?v=db2333b3">
   <title>Report &amp; Documentation — EuroCity</title>
   <style>
     .report-nav {
@@ -229,9 +229,8 @@
   <p style="font-size:0.9rem; color:var(--slate-500); margin:0 0 14px;">
     In ogni XML confluiscono due famiglie di dati: i <b>contenuti testuali</b> estratti
     algoritmicamente dai dump <b>Wikivoyage</b> (trasporti, attrazioni, distretti, locali) e gli
-    <b>indici numerici</b> presi da <code>city_indices.json</code> (fonti internazionali). Due valori
-    sono <i>derivati</i> dalla pipeline: l'<b>Appeal Score</b> (ricalcolato dai tre indici) e il
-    <b>budget alloggio</b> (stima sintetica: <code>hotel_price = cost_of_living × 1.85</code>).
+    <b>indici numerici</b> presi da <code>city_indices.json</code> (fonti internazionali). L'unico
+    valore <i>derivato</i> dalla pipeline è l'<b>Appeal Score</b>, ricalcolato dai tre indici.
   </p>
   <table class="prov-table">
     <thead>
@@ -246,39 +245,39 @@
       </tr>
       <tr>
         <td>Indice di Sicurezza</td>
-        <td><span class="prov-src src-indices">📊 <a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/city_indices.json" target="_blank" style="color:inherit">city_indices.json</a></span></td>
+        <td><span class="prov-src src-indices">📊 city_indices.json</span></td>
         <td>Numbeo Safety Index 2024; letto da <code>&lt;safety index_score="…"&gt;</code>.</td>
         <td style="text-align:right">0–100</td>
       </tr>
       <tr>
         <td>Green Score</td>
-        <td><span class="prov-src src-indices">📊 <a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/city_indices.json" target="_blank" style="color:inherit">city_indices.json</a></span></td>
+        <td><span class="prov-src src-indices">📊 city_indices.json</span></td>
         <td>EU Green Capital Award / EEA; letto da <code>&lt;environment green_score="…"&gt;</code>.</td>
         <td style="text-align:right">0–100</td>
       </tr>
       <tr>
         <td>Accessibilità economica</td>
-        <td><span class="prov-src src-indices">📊 <a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/city_indices.json" target="_blank" style="color:inherit">city_indices.json</a></span></td>
+        <td><span class="prov-src src-indices">📊 city_indices.json</span></td>
         <td>Numbeo Cost of Living 2024; letto da <code>&lt;economic_accessibility score="…"&gt;</code>.</td>
         <td style="text-align:right">0–100</td>
       </tr>
       <tr>
         <td>Budget alloggio</td>
-        <td><span class="prov-src src-derived">🧮 Derivato</span> <span class="prov-src src-indices">📊 <a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/city_indices.json" target="_blank" style="color:inherit">city_indices.json</a></span></td>
+        <td><span class="prov-src src-derived">🧮 Derivato</span> <span class="prov-src src-indices">📊 city_indices.json</span></td>
         <td><b>Stima sintetica</b>, non un prezzo osservato: <code>&lt;hotel_price&gt; = cost_of_living × 1.85</code>
             (proxy in euro del costo della vita Numbeo). Serve a confrontare le città, non a prenotare.</td>
         <td style="text-align:right">€/notte</td>
       </tr>
       <tr>
         <td>Valuta locale</td>
-        <td><span class="prov-src src-indices">📊 <a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/currency_rates.json" target="_blank" style="color:inherit">currency_rates.json</a></span></td>
+        <td><span class="prov-src src-indices">📊 currency_rates.json</span></td>
         <td>Codice ISO nell'attributo opzionale <code>&lt;city_report&nbsp;currency="…"&gt;</code> (solo capitali fuori
             area euro); l'equivalente locale mostrato è una conversione <b>indicativa</b> a tassi di riferimento.</td>
         <td style="text-align:right">ISO 4217</td>
       </tr>
       <tr>
         <td>Macro-regione</td>
-        <td><span class="prov-src src-indices">📊 <a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/geo_regions.json" target="_blank" style="color:inherit">geo_regions.json</a></span></td>
+        <td><span class="prov-src src-indices">📊 geo_regions.json</span></td>
         <td>Attributo <b>enumerato obbligatorio</b> <code>&lt;city_report&nbsp;region="…"&gt;</code> secondo il geoscheme
             <b>UN&nbsp;M49</b> (Northern/Western/Southern/Eastern). Cipro, classificato da M49 in Asia occidentale, è
             assegnato a <i>southern</i> come eccezione UE documentata. Usato come filtro per area nell'index.</td>
@@ -373,7 +372,7 @@
     <div class="pipeline-step">
       <div class="step-num">1</div>
       <div class="step-body">
-        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/extract_wiki_info.py" target="_blank" style="color:inherit;text-decoration:none;"><code>extract_wiki_info.py</code></a> — Preparazione dati</h3>
+        <h3 style="margin:0;"><code>extract_wiki_info.py</code> — Preparazione dati</h3>
         <p>
           Analizza i dump Wikivoyage in <code>data/original_source/</code>. Utilizza
           <b>mwparserfromhell</b> e <b>spaCy</b> per estrarre testo strutturato.
@@ -386,7 +385,7 @@
     <div class="pipeline-step">
       <div class="step-num">2</div>
       <div class="step-body">
-        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/final_processor.py" target="_blank" style="color:inherit;text-decoration:none;"><code>final_processor.py</code></a> — Elaborazione e validazione XML</h3>
+        <h3 style="margin:0;"><code>final_processor.py</code> — Elaborazione e validazione XML</h3>
         <p>
           Script centrale del progetto. Per ogni capitale individua la pagina principale nel dump,
           pulisce il Wikitext con regex, estrae distretti con descrizioni dalle sotto-pagine, e
@@ -401,7 +400,7 @@
     <div class="pipeline-step">
       <div class="step-num">3</div>
       <div class="step-body">
-        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/deploy_dashboard.py" target="_blank" style="color:inherit;text-decoration:none;"><code>deploy_dashboard.py</code></a> — Generazione HTML</h3>
+        <h3 style="margin:0;"><code>deploy_dashboard.py</code> — Generazione HTML</h3>
         <p>
           Legge la directory dei 30 file XML e li <b>ri-valida in lettura</b> (distinguendo
           documenti <i>mal formati</i> da <i>non validi</i>, con contatore <code>30/30</code>
@@ -417,7 +416,7 @@
     <div class="pipeline-step">
       <div class="step-num">4</div>
       <div class="step-body">
-        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/validate.py" target="_blank" style="color:inherit;text-decoration:none;"><code>validate.py</code></a> — Validazione DTD standalone</h3>
+        <h3 style="margin:0;"><code>validate.py</code> — Validazione DTD standalone</h3>
         <p>
           Script <b>indipendente</b> dal resto della pipeline (modellato sui laboratori del corso):
           scorre la directory XML, costruisce il <b>DOM</b> con <code>etree.parse()</code> e lo
@@ -431,7 +430,7 @@
     <div class="pipeline-step">
       <div class="step-num">5</div>
       <div class="step-body">
-        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/tree/main/rag" target="_blank" style="color:inherit;text-decoration:none;"><code>rag/</code></a> — Sistema RAG per query in linguaggio naturale</h3>
+        <h3 style="margin:0;"><code>rag/</code> — Sistema RAG per query in linguaggio naturale</h3>
         <p>
           Modulo indipendente (<code>ingest.py</code> + <code>vectorstore.py</code> + <code>api.py</code>):
           indicizza i 30 XML in <b>336 chunk</b> su un indice <b>FAISS</b> + <b>BM25Okapi</b> con
@@ -1236,12 +1235,6 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
   </p>
 
   <h3 style="margin-top:32px;">Elenco Completo dei File e Fonti</h3>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 20px">
-    <div class="rstat-card"><span class="rstat-val" style="color:var(--accent)">11</span><span class="rstat-label">File sorgente / dati</span></div>
-    <div class="rstat-card"><span class="rstat-val" style="color:var(--blue-500)">10</span><span class="rstat-label">Script Python</span></div>
-    <div class="rstat-card"><span class="rstat-val" style="color:var(--green-500)">33</span><span class="rstat-label">Pagine HTML generate</span></div>
-    <div class="rstat-card"><span class="rstat-val" style="color:#8b5cf6">30</span><span class="rstat-label">XML validati DTD</span></div>
-  </div>
   <table style="width:100%;border-collapse:collapse;font-size:0.87rem;margin-top:12px">
     <thead>
       <tr style="background:var(--slate-50);text-align:left">
@@ -1253,132 +1246,57 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
     </thead>
     <tbody>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/tree/main/data/original_source" target="_blank"><code>data/original_source/*.xml</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/original_source/*.xml</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Dump MediaWiki delle 30 capitali (testi, trasporti, hotel, distretti)</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://en.wikivoyage.org" target="_blank">Wikivoyage</a> — download manuale</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA 3.0</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/wiki_text_pulito.csv" target="_blank"><code>data/wiki_text_pulito.csv</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/wiki_text_pulito.csv</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Trasporti, hotel e distretti estratti dai dump tramite <code>extract_wiki_info.py</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Derivato da Wikivoyage</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA 3.0</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/attrazione_descrizione_fixed.csv" target="_blank"><code>data/attrazione_descrizione_fixed.csv</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/attrazione_descrizione_fixed.csv</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">300 attrazioni con nome, descrizione e coordinate geografiche</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Derivato da Wikivoyage + curato manualmente</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA 3.0</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/city_indices.json" target="_blank"><code>data/city_indices.json</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/city_indices.json</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Safety Index, Cost of Living, Green Score per 30 città</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Numbeo 2024, EU Green Capital Award, EEA — rielaborati con AI (Gemini)</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Stima — non ufficiale</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/city_descriptions.json" target="_blank"><code>data/city_descriptions.json</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/city_descriptions.json</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Sintesi strategiche in inglese per 30 città (campo <i>Strategic Summary</i>)</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Generato con AI (Gemini) — testo originale</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testo didattico</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/nightlife.json" target="_blank"><code>data/nightlife.json</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/nightlife.json</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">240 locali notturni (bar, pub, nightclub) con coordinate geografiche</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a> via Overpass API</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">ODbL (Open Database Licence)</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/tree/main/data/xml_dataset" target="_blank"><code>data/xml_dataset/*.xml</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/xml_dataset/*.xml</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">30 file XML output, validati DTD, uno per capitale</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Generato dalla pipeline — derivato dalle fonti sopra</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/transport_patches.json" target="_blank"><code>data/transport_patches.json</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/transport_patches.json</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testi trasporto AI per 5 città (Paris, Brussels, Luxembourg, Lisbon, Nicosia)</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Generato con AI (Gemini) — testo originale</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testo didattico</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/currency_rates.json" target="_blank"><code>data/currency_rates.json</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Valuta locale ISO 4217 + tassi EUR→locale (snapshot 2026-01) per 10 capitali non-euro</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Tassi di cambio indicativi raccolti manualmente</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/geo_regions.json" target="_blank"><code>data/geo_regions.json</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Macro-regione UN M49 per ogni capitale (fonte + nota su Cipro)</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://unstats.un.org/unsd/methodology/m49/" target="_blank">UN Statistics Division</a> (geoscheme M49)</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/data/city_report.dtd" target="_blank"><code>data/city_report.dtd</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Schema DTD per la validazione dei file XML</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Creato originalmente per il progetto</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr style="background:var(--slate-100)">
-        <td colspan="4" style="padding:6px 12px;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;color:var(--slate-500)">Script Python</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/extract_wiki_info.py" target="_blank"><code>scripts/extract_wiki_info.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Step 1 pipeline — dump Wikivoyage → CSV/JSON (usa <code>mwparserfromhell</code>, spaCy)</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/built_dataset.py" target="_blank"><code>scripts/built_dataset.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Precursore / variante di <code>final_processor.py</code> — costruisce gli XML dal dataset; menzionato nella sezione XPath</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/final_processor.py" target="_blank"><code>scripts/final_processor.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Step 2 pipeline — elaborazione principale: XML con content-model misto + validazione DTD in scrittura</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/deploy_dashboard.py" target="_blank"><code>scripts/deploy_dashboard.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Step 3 pipeline — ri-validazione DTD in lettura + generazione HTML con microdata Schema.org</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/validate.py" target="_blank"><code>scripts/validate.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Step 4 pipeline — validatore DTD standalone: DOM + <code>etree.DTD().validate()</code></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/check_microdata.py" target="_blank"><code>scripts/check_microdata.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Verifica round-trip microdata: ri-estrae i <code>schema.org</code> item dalle pagine HTML con <code>microdata.get_items()</code> e li confronta con i dati XML sorgente</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/fetch_nightlife.py" target="_blank"><code>scripts/fetch_nightlife.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">One-shot: recupera bar/pub/nightclub da OpenStreetMap via Overpass API per le 30 capitali → produce <code>nightlife.json</code></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">OpenStreetMap (ODbL)</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/download_images.py" target="_blank"><code>scripts/download_images.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">One-shot: scarica immagini landmark per le 30 città tramite Wikipedia pageimages API → <code>assets/images/*.jpg</code></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Wikimedia Commons (CC-BY-SA)</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/google_language_api.py" target="_blank"><code>scripts/google_language_api.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Analisi testuale con Google Cloud Language API su <code>wiki_text_pulito.csv</code> (richiede credenziali GCP)</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Google Cloud NLP</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 12px"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/map.py" target="_blank"><code>scripts/map.py</code></a></td>
-        <td style="padding:8px 12px">Prototipo iniziale della mappa interattiva con Folium; sostituito dall'implementazione Leaflet.js</td>
-        <td style="padding:8px 12px">Progetto originale</td>
+        <td style="padding:8px 12px"><code>data/city_report.dtd</code></td>
+        <td style="padding:8px 12px">Schema DTD per la validazione dei file XML</td>
+        <td style="padding:8px 12px">Creato originalmente per il progetto</td>
         <td style="padding:8px 12px">—</td>
       </tr>
     </tbody>
@@ -1412,16 +1330,7 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
 </section>
 </main>
 
-<footer class="site-footer">
-  <nav class="footer-nav" aria-label="Navigazione footer">
-    <a href="../index.html">🏠 Home</a>
-    <span class="footer-sep">·</span>
-    <a href="mappa_attrazioni.html">🗺️ Mappa</a>
-    <span class="footer-sep">·</span>
-    <a href="report.html" aria-current="page">📊 Report</a>
-    <span class="footer-sep">·</span>
-    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Torna su</a>
-  </nav>
+<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
   Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
   Università di Bologna — A.A. 2024/2025
 </footer>

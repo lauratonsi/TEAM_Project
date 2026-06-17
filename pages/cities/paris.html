@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Paris — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='46.1'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='42.5'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='65'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='15.3'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Western Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='155'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8584'><meta itemprop='longitude' content='2.2945'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/paris.jpg' alt='Paris Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇫🇷 Paris <span style="opacity:.7;font-weight:400">· Parigi</span></h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/paris.jpg' alt='Paris Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'></div><h1 class='city-hero-title'>🇫🇷 Paris <span style="opacity:.7;font-weight:400">· Parigi</span></h1><p class='city-hero-sub'>Western Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>46.1</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:46%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>46.1</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='46'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>156.7€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>42.5</span>
+                    <div class='circular-ring ring-safe' data-pct='42'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>42.5</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:42%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>65</span>
+                    <div class='circular-ring ring-green' data-pct='65'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>65</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:65%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>156.7€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>0</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>15.3</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:15%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>15.3</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='15'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>From CDG Airport: RER B to Gare du Nord (35 min) or RoissyBus to Opéra (75 min). Within the city: metro (16 lines), buses and RER cover the entire metropolitan area.</p></div>
-    
-    <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul style='margin:0; padding-left:15px;'><li><b>10th arrondissement</b>: The 10th arrondissement of Paris centres on the Canal Saint Martin and the restaurants and cafés which line its banks. Part sleepy faubourg — as suburbs were called in 18th century Paris — and part in...</li><li><b>11th arrondissement</b>: The 11th Arrondissement is home to two quite different but equally blossoming centres of Parisian nightlife. The streets just northwest of Place de la Bastille are full of little bars which attract a ...</li><li><b>12th arrondissement</b>: The 12th arrondissement of Paris is one of the largest of the city's districts even without the 2,460 acre Bois de Vincennes, which more than doubles its size. Gare de Lyon in the 12th will likely be ...</li><li><b>13th arrondissement</b>: The 13th arrondissement of Paris is primarily a residential and business district in the southeast of Paris, on the Left Bank of the Seine. Although not usually recognised as a natural magnet for tour...</li><li><b>14th arrondissement</b>: Although largely residential, the 14th arrondissement is best known for its northeastern quartier Montparnasse, for the Paris Catacombs and the Parc Montsouris. The Cité Universitaire is also found in...</li></ul></div>
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.883838,2.3707362' target='_blank'>25° Est</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.883838'><meta itemprop='longitude' content='2.3707362'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.8632455,2.3860891' target='_blank'>Atelier 103</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8632455'><meta itemprop='longitude' content='2.3860891'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.8687856,2.3275106' target='_blank'>Bar Hemingway</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8687856'><meta itemprop='longitude' content='2.3275106'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.861504,2.3575623' target='_blank'>Bar nouveau</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.861504'><meta itemprop='longitude' content='2.3575623'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.8658567,2.3778299' target='_blank'>Café Charbon</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8658567'><meta itemprop='longitude' content='2.3778299'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.874105,2.3752878' target='_blank'>Café Chéri(e)</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.874105'><meta itemprop='longitude' content='2.3752878'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.8474549,2.3471635' target='_blank'>Ces années là</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8474549'><meta itemprop='longitude' content='2.3471635'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.8429884,2.3495493' target='_blank'>Drunken Bunny</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8429884'><meta itemprop='longitude' content='2.3495493'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>The City of Light is revolutionizing its internal mobility by replacing cars with bike lanes and hanging gardens. It remains the undisputed capital of luxury and cultural tourism with very high hospitality standards.</p>
-            </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Paris</strong>, the cosmopolitan capital of France, has the reputation of being the most beautiful and romantic of all cities, brimming with historic associations and remaining vastly influential in the realms of culture, art, fashion, food and design. Dubbed the City of Light (la ville lumière) and the City of Love (la ville de l&#x27;amour), <strong>Paris</strong> is home to some of the world&#x27;s finest and most luxurious fashion designers and cosmetics, such as Chanel, Christian Dior, Yves Saint-Laurent, Guerlain, Lancôme, L&#x27;Oréal, and Clarins. A large part of the city, including the banks of the River Seine, is a UNESCO World Heritage Site. The city has the second highest number of Michelin-starred restaurants in the world (after Tokyo, which is much larger) and contains numerous iconic landmarks such as the Eiffel Tower, the Arc de Triomphe, Notre-Dame de <strong>Paris</strong>, the Louvre, the Moulin Rouge and the Basilique du Sacré-Cœur, making it one of the most popular international tourist destinations in the world, with around 14 million visitors annually.  The city of <strong>Paris</strong> is divided into 20 districts called arrondissements, numbered from 1 to 20 in a clockwise spiral from the centre of the city (which is known as Kilomètre zéro and is located at the front of Notre Dame). Arrondissements are named according to their number. You might, for example, stay in the &quot;5th&quot;, which would be written as 5e in French. The 12th and 16th arrondissements include large parks: the Bois de Vincennes and the Bois de Boulogne respectively. The very best map you can get for <strong>Paris</strong> is called &quot;<strong>Paris</strong> Pratique par Arrondissement&quot; which you can buy for about €5 at any news stand. It makes navigating the city easy. The various tourist information centres and hotels in <strong>Paris</strong> also provide various city and metro maps for free and which contain all the essential details for a tourist. Each arrondissement has its own unique character and selection of attractions for the traveller: Beyond <strong>Paris</strong>, the outlying suburbs are called La Banlieue. Schematically, those to the west of <strong>Paris</strong> (Neuilly-sur-Seine, Boulogne-Billancourt, Saint Cloud, Levallois, Versailles, Poissy, Rueil-Malmaison) are wealthy residential communities, even if some more middle class suburbs can be found. Those to the north are poorer communities, and very ethnically diverse. Those to the south are a mix of rough and poor neighbourhoods alongside very affluent communities. Finally, those to the east are usually lower-middle class mingled with a few upper-middle class communities. <strong>Paris</strong> sits on the River Seine, in north-central France. Around 2.2&amp;amp;nbsp;million people live in the city of <strong>Paris</strong>, but this only represents the urban core within the Boulevard Périphérique. There are some 10 million people in the wider Métropole du Grand <strong>Paris</strong> (814 km2) and almost 13&amp;amp;nbsp;million people living in the metropolitan area, making this one of Europe&#x27;s largest.</p></div>
-        </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Eiffel Tower</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8584'><meta itemprop='longitude' content='2.2945'></div></td><td class='atn-desc'><span itemprop='description'>Global icon of France and landmark of Paris.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.8584,2.2945' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Louvre Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8606'><meta itemprop='longitude' content='2.3376'></div></td><td class='atn-desc'><span itemprop='description'>The world's largest art museum.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.8606,2.3376' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Notre-Dame</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.853'><meta itemprop='longitude' content='2.3499'></div></td><td class='atn-desc'><span itemprop='description'>Iconic Gothic cathedral on the île de la Cité.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.853,2.3499' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Arc de Triomphe</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8738'><meta itemprop='longitude' content='2.295'></div></td><td class='atn-desc'><span itemprop='description'>Monument honoring those who fought for France.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.8738,2.295' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Sacre-Coeur</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8867'><meta itemprop='longitude' content='2.3431'></div></td><td class='atn-desc'><span itemprop='description'>White basilica on the summit of Montmartre.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.8867,2.3431' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Musée d'Orsay</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8599'><meta itemprop='longitude' content='2.3265'></div></td><td class='atn-desc'><span itemprop='description'>Museum in a former station with Impressionist art.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.8599,2.3265' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Panthéon</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8462'><meta itemprop='longitude' content='2.3449'></div></td><td class='atn-desc'><span itemprop='description'>Secular mausoleum for distinguished French citizens.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.8462,2.3449' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Centre Pompidou</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8606'><meta itemprop='longitude' content='2.3522'></div></td><td class='atn-desc'><span itemprop='description'>High-tech building housing a major modern art museum.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.8606,2.3522' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Sainte-Chapelle</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8554'><meta itemprop='longitude' content='2.345'></div></td><td class='atn-desc'><span itemprop='description'>Gothic chapel with spectacular stained glass.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.8554,2.345' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Tuileries Garden</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8633'><meta itemprop='longitude' content='2.3272'></div></td><td class='atn-desc'><span itemprop='description'>Public garden between the Louvre and Place de la Concorde.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.8633,2.3272' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul class='block-ul'><li><b>10th arrondissement</b>: The 10th arrondissement of Paris centres on the Canal Saint Martin and the restaurants and cafés which line its banks. Part sleepy faubourg — as suburbs were called in 18th century Paris — and part in...</li><li><b>11th arrondissement</b>: The 11th Arrondissement is home to two quite different but equally blossoming centres of Parisian nightlife. The streets just northwest of Place de la Bastille are full of little bars which attract a ...</li><li><b>12th arrondissement</b>: The 12th arrondissement of Paris is one of the largest of the city's districts even without the 2,460 acre Bois de Vincennes, which more than doubles its size. Gare de Lyon in the 12th will likely be ...</li><li><b>13th arrondissement</b>: The 13th arrondissement of Paris is primarily a residential and business district in the southeast of Paris, on the Left Bank of the Seine. Although not usually recognised as a natural magnet for tour...</li><li><b>14th arrondissement</b>: Although largely residential, the 14th arrondissement is best known for its northeastern quartier Montparnasse, for the Paris Catacombs and the Parc Montsouris. The Cité Universitaire is also found in...</li></ul></div>
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/paris.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Paris" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Paris</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Eiffel Tower</span><p class='attr-card-desc' itemprop='description'>Global icon of France and landmark of Paris.</p><a href='https://www.google.com/maps?q=48.8584,2.2945' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8584'><meta itemprop='longitude' content='2.2945'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Louvre Museum</span><p class='attr-card-desc' itemprop='description'>The world's largest art museum.</p><a href='https://www.google.com/maps?q=48.8606,2.3376' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8606'><meta itemprop='longitude' content='2.3376'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Notre-Dame</span><p class='attr-card-desc' itemprop='description'>Iconic Gothic cathedral on the île de la Cité.</p><a href='https://www.google.com/maps?q=48.853,2.3499' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.853'><meta itemprop='longitude' content='2.3499'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Arc de Triomphe</span><p class='attr-card-desc' itemprop='description'>Monument honoring those who fought for France.</p><a href='https://www.google.com/maps?q=48.8738,2.295' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8738'><meta itemprop='longitude' content='2.295'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Sacre-Coeur</span><p class='attr-card-desc' itemprop='description'>White basilica on the summit of Montmartre.</p><a href='https://www.google.com/maps?q=48.8867,2.3431' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8867'><meta itemprop='longitude' content='2.3431'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Musée d'Orsay</span><p class='attr-card-desc' itemprop='description'>Museum in a former station with Impressionist art.</p><a href='https://www.google.com/maps?q=48.8599,2.3265' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8599'><meta itemprop='longitude' content='2.3265'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Panthéon</span><p class='attr-card-desc' itemprop='description'>Secular mausoleum for distinguished French citizens.</p><a href='https://www.google.com/maps?q=48.8462,2.3449' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8462'><meta itemprop='longitude' content='2.3449'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Centre Pompidou</span><p class='attr-card-desc' itemprop='description'>High-tech building housing a major modern art museum.</p><a href='https://www.google.com/maps?q=48.8606,2.3522' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8606'><meta itemprop='longitude' content='2.3522'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Sainte-Chapelle</span><p class='attr-card-desc' itemprop='description'>Gothic chapel with spectacular stained glass.</p><a href='https://www.google.com/maps?q=48.8554,2.345' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8554'><meta itemprop='longitude' content='2.345'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Tuileries Garden</span><p class='attr-card-desc' itemprop='description'>Public garden between the Louvre and Place de la Concorde.</p><a href='https://www.google.com/maps?q=48.8633,2.3272' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8633'><meta itemprop='longitude' content='2.3272'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.883838,2.3707362' target='_blank'>25° Est</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.883838'><meta itemprop='longitude' content='2.3707362'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.8632455,2.3860891' target='_blank'>Atelier 103</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8632455'><meta itemprop='longitude' content='2.3860891'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.8687856,2.3275106' target='_blank'>Bar Hemingway</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8687856'><meta itemprop='longitude' content='2.3275106'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.861504,2.3575623' target='_blank'>Bar nouveau</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.861504'><meta itemprop='longitude' content='2.3575623'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.8658567,2.3778299' target='_blank'>Café Charbon</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8658567'><meta itemprop='longitude' content='2.3778299'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.874105,2.3752878' target='_blank'>Café Chéri(e)</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.874105'><meta itemprop='longitude' content='2.3752878'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.8474549,2.3471635' target='_blank'>Ces années là</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8474549'><meta itemprop='longitude' content='2.3471635'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.8429884,2.3495493' target='_blank'>Drunken Bunny</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.8429884'><meta itemprop='longitude' content='2.3495493'></div></li></ul></div>
+        
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>From CDG Airport: RER B to Gare du Nord (35 min) or RoissyBus to Opéra (75 min). Within the city: metro (16 lines), buses and RER cover the entire metropolitan area.</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>The City of Light is revolutionizing its internal mobility by replacing cars with bike lanes and hanging gardens. It remains the undisputed capital of luxury and cultural tourism with very high hospitality standards.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Paris</strong>, the cosmopolitan capital of France, has the reputation of being the most beautiful and romantic of all cities, brimming with historic associations and remaining vastly influential in the realms of culture, art, fashion, food and design. Dubbed the City of Light (la ville lumière) and the City of Love (la ville de l&#x27;amour), <strong>Paris</strong> is home to some of the world&#x27;s finest and most luxurious fashion designers and cosmetics, such as Chanel, Christian Dior, Yves Saint-Laurent, Guerlain, Lancôme, L&#x27;Oréal, and Clarins. A large part of the city, including the banks of the River Seine, is a UNESCO World Heritage Site. The city has the second highest number of Michelin-starred restaurants in the world (after Tokyo, which is much larger) and contains numerous iconic landmarks such as the Eiffel Tower, the Arc de Triomphe, Notre-Dame de <strong>Paris</strong>, the Louvre, the Moulin Rouge and the Basilique du Sacré-Cœur, making it one of the most popular international tourist destinations in the world, with around 14 million visitors annually.  The city of <strong>Paris</strong> is divided into 20 districts called arrondissements, numbered from 1 to 20 in a clockwise spiral from the centre of the city (which is known as Kilomètre zéro and is located at the front of Notre Dame). Arrondissements are named according to their number. You might, for example, stay in the &quot;5th&quot;, which would be written as 5e in French. The 12th and 16th arrondissements include large parks: the Bois de Vincennes and the Bois de Boulogne respectively. The very best map you can get for <strong>Paris</strong> is called &quot;<strong>Paris</strong> Pratique par Arrondissement&quot; which you can buy for about €5 at any news stand. It makes navigating the city easy. The various tourist information centres and hotels in <strong>Paris</strong> also provide various city and metro maps for free and which contain all the essential details for a tourist. Each arrondissement has its own unique character and selection of attractions for the traveller: Beyond <strong>Paris</strong>, the outlying suburbs are called La Banlieue. Schematically, those to the west of <strong>Paris</strong> (Neuilly-sur-Seine, Boulogne-Billancourt, Saint Cloud, Levallois, Versailles, Poissy, Rueil-Malmaison) are wealthy residential communities, even if some more middle class suburbs can be found. Those to the north are poorer communities, and very ethnically diverse. Those to the south are a mix of rough and poor neighbourhoods alongside very affluent communities. Finally, those to the east are usually lower-middle class mingled with a few upper-middle class communities. <strong>Paris</strong> sits on the River Seine, in north-central France. Around 2.2&amp;amp;nbsp;million people live in the city of <strong>Paris</strong>, but this only represents the urban core within the Boulevard Périphérique. There are some 10 million people in the wider Métropole du Grand <strong>Paris</strong> (814 km2) and almost 13&amp;amp;nbsp;million people living in the metropolitan area, making this one of Europe&#x27;s largest.</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/paris.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Paris" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Paris</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 48.8584, "lon": 2.2945, "n": "Eiffel Tower", "d": "Global icon of France and landmark of Paris."}, {"lat": 48.8606, "lon": 2.3376, "n": "Louvre Museum", "d": "The world's largest art museum."}, {"lat": 48.853, "lon": 2.3499, "n": "Notre-Dame", "d": "Iconic Gothic cathedral on the \u00eele de la Cit\u00e9."}, {"lat": 48.8738, "lon": 2.295, "n": "Arc de Triomphe", "d": "Monument honoring those who fought for France."}, {"lat": 48.8867, "lon": 2.3431, "n": "Sacre-Coeur", "d": "White basilica on the summit of Montmartre."}, {"lat": 48.8599, "lon": 2.3265, "n": "Mus\u00e9e d'Orsay", "d": "Museum in a former station with Impressionist art."}, {"lat": 48.8462, "lon": 2.3449, "n": "Panth\u00e9on", "d": "Secular mausoleum for distinguished French citizens."}, {"lat": 48.8606, "lon": 2.3522, "n": "Centre Pompidou", "d": "High-tech building housing a major modern art museum."}, {"lat": 48.8554, "lon": 2.345, "n": "Sainte-Chapelle", "d": "Gothic chapel with spectacular stained glass."}, {"lat": 48.8633, "lon": 2.3272, "n": "Tuileries Garden", "d": "Public garden between the Louvre and Place de la Concorde."}];
   var venues=[{"lat": 48.883838, "lon": 2.3707362, "n": "25\u00b0 Est", "cat": "bar"}, {"lat": 48.8632455, "lon": 2.3860891, "n": "Atelier 103", "cat": "pub"}, {"lat": 48.8687856, "lon": 2.3275106, "n": "Bar Hemingway", "cat": "bar"}, {"lat": 48.861504, "lon": 2.3575623, "n": "Bar nouveau", "cat": "pub"}, {"lat": 48.8658567, "lon": 2.3778299, "n": "Caf\u00e9 Charbon", "cat": "bar"}, {"lat": 48.874105, "lon": 2.3752878, "n": "Caf\u00e9 Ch\u00e9ri(e)", "cat": "bar"}, {"lat": 48.8474549, "lon": 2.3471635, "n": "Ces ann\u00e9es l\u00e0", "cat": "bar"}, {"lat": 48.8429884, "lon": 2.3495493, "n": "Drunken Bunny", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([48.8566,2.3522],13);
+    cityMap.setView([48.8566,2.3522],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

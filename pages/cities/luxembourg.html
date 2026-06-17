@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Luxembourg — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='62.9'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='73.5'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='77'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='13.6'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Western Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='155'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6117'><meta itemprop='longitude' content='6.1342'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/luxembourg.jpg' alt='Luxembourg Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇱🇺 Luxembourg <span style="opacity:.7;font-weight:400">· Lussemburgo</span></h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/luxembourg.jpg' alt='Luxembourg Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-green'>🌿 Green City</span><span class='city-hero-badge badge-safe'>🛡️ Ultra Safe</span><span class='city-hero-badge badge-top'>⭐ Top Rated</span></div><h1 class='city-hero-title'>🇱🇺 Luxembourg <span style="opacity:.7;font-weight:400">· Lussemburgo</span></h1><p class='city-hero-sub'>Western Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>62.9</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:63%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>62.9</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='63'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>159.84€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>73.5</span>
+                    <div class='circular-ring ring-safe' data-pct='74'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>73.5</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:74%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>77</span>
+                    <div class='circular-ring ring-green' data-pct='77'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>77</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:77%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>159.84€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>0</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>13.6</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:14%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>13.6</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='14'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>The best way to get around is via the intercity bus network and the dense road system. Trains directly connect the city centre to all major districts.</p></div>
-    
-    <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul style='margin:0; padding-left:15px;'><li><b>Ville-Haute</b>: The historic and political centre of the city, home to the Grand Ducal Palace.</li><li><b>Grund</b>: A picturesque medieval district along the Alzette river, known for its bistros.</li><li><b>Kirchberg</b>: The European quarter, seat of EU institutions and the MUDAM museum.</li><li><b>Clausen</b>: A residential district along the Alzette, famous for its breweries.</li><li><b>Limpertsberg</b>: A leafy, upscale neighbourhood with the university and quality shops.</li></ul></div>
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=49.6017703,6.1365904' target='_blank'>:buvette</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6017703'><meta itemprop='longitude' content='6.1365904'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=49.5977436,6.1348685' target='_blank'>Albicastrense</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.5977436'><meta itemprop='longitude' content='6.1348685'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=49.6038566,6.1298819' target='_blank'>Alison café</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6038566'><meta itemprop='longitude' content='6.1298819'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=49.594574,6.1407228' target='_blank'>Am klenge Bistro BTwo</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.594574'><meta itemprop='longitude' content='6.1407228'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=49.6113179,6.1337032' target='_blank'>Art Scène</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6113179'><meta itemprop='longitude' content='6.1337032'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=49.595316,6.1374921' target='_blank'>Au Bon Vivant</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.595316'><meta itemprop='longitude' content='6.1374921'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=49.6238045,6.1054447' target='_blank'>Bar Liberty</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6238045'><meta itemprop='longitude' content='6.1054447'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=49.6008067,6.130821' target='_blank'>Barbarella</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6008067'><meta itemprop='longitude' content='6.130821'></div></li></ul></div>
-    
+        <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul class='block-ul'><li><b>Ville-Haute</b>: The historic and political centre of the city, home to the Grand Ducal Palace.</li><li><b>Grund</b>: A picturesque medieval district along the Alzette river, known for its bistros.</li><li><b>Kirchberg</b>: The European quarter, seat of EU institutions and the MUDAM museum.</li><li><b>Clausen</b>: A residential district along the Alzette, famous for its breweries.</li><li><b>Limpertsberg</b>: A leafy, upscale neighbourhood with the university and quality shops.</li></ul></div>
+    </div>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Casemates du Bock</span><p class='attr-card-desc' itemprop='description'>Tunnel system part of the city's ancient fortifications.</p><a href='https://www.google.com/maps?q=49.6117,6.1342' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6117'><meta itemprop='longitude' content='6.1342'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Grand Ducal Palace</span><p class='attr-card-desc' itemprop='description'>The official residence of the Grand Duke of Luxembourg.</p><a href='https://www.google.com/maps?q=49.6108,6.1311' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6108'><meta itemprop='longitude' content='6.1311'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Place d'Armes</span><p class='attr-card-desc' itemprop='description'>Central square in the heart of the old city.</p><a href='https://www.google.com/maps?q=49.6114,6.1286' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6114'><meta itemprop='longitude' content='6.1286'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Adolphe Bridge</span><p class='attr-card-desc' itemprop='description'>Double-decked arch bridge and city symbol.</p><a href='https://www.google.com/maps?q=49.6083,6.1269' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6083'><meta itemprop='longitude' content='6.1269'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Grund District</span><p class='attr-card-desc' itemprop='description'>Picturesque valley neighborhood below the city center.</p><a href='https://www.google.com/maps?q=49.6075,6.1353' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6075'><meta itemprop='longitude' content='6.1353'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Mudam</span><p class='attr-card-desc' itemprop='description'>Museum of modern art designed by I.M. Pei.</p><a href='https://www.google.com/maps?q=49.6169,6.1397' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6169'><meta itemprop='longitude' content='6.1397'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Notre-Dame Cathedral</span><p class='attr-card-desc' itemprop='description'>Jesuit church and the only cathedral in the country.</p><a href='https://www.google.com/maps?q=49.6097,6.1314' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6097'><meta itemprop='longitude' content='6.1314'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Philharmonie</span><p class='attr-card-desc' itemprop='description'>Modern concert hall on the Kirchberg plateau.</p><a href='https://www.google.com/maps?q=49.6186,6.1422' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6186'><meta itemprop='longitude' content='6.1422'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Chemin de la Corniche</span><p class='attr-card-desc' itemprop='description'>Pedestrian promenade called 'the most beautiful balcony in Europe'.</p><a href='https://www.google.com/maps?q=49.6111,6.1339' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6111'><meta itemprop='longitude' content='6.1339'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Fort Thüngen</span><p class='attr-card-desc' itemprop='description'>Historic fortification and home of the Dräi Eechelen Museum.</p><a href='https://www.google.com/maps?q=49.6164,6.1392' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6164'><meta itemprop='longitude' content='6.1392'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=49.6017703,6.1365904' target='_blank'>:buvette</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6017703'><meta itemprop='longitude' content='6.1365904'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=49.5977436,6.1348685' target='_blank'>Albicastrense</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.5977436'><meta itemprop='longitude' content='6.1348685'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=49.6038566,6.1298819' target='_blank'>Alison café</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6038566'><meta itemprop='longitude' content='6.1298819'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=49.594574,6.1407228' target='_blank'>Am klenge Bistro BTwo</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.594574'><meta itemprop='longitude' content='6.1407228'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=49.6113179,6.1337032' target='_blank'>Art Scène</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6113179'><meta itemprop='longitude' content='6.1337032'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=49.595316,6.1374921' target='_blank'>Au Bon Vivant</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.595316'><meta itemprop='longitude' content='6.1374921'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=49.6238045,6.1054447' target='_blank'>Bar Liberty</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6238045'><meta itemprop='longitude' content='6.1054447'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=49.6008067,6.130821' target='_blank'>Barbarella</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6008067'><meta itemprop='longitude' content='6.130821'></div></li></ul></div>
+        
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>The best way to get around is via the intercity bus network and the dense road system. Trains directly connect the city centre to all major districts.</p></div>
+        
         <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
+            <div class='desc-section strategic'>
                 <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>Elite financial center, <strong>Luxembourg</strong> offers free public transport and one of the highest safety levels in the world. It is the paradigm of the wealthy capital that invests massively in its residents&#x27; well-being.</p>
+                <p class='desc-strategic-p' itemprop='description'>Elite financial center, <strong>Luxembourg</strong> offers free public transport and one of the highest safety levels in the world. It is the paradigm of the wealthy capital that invests massively in its residents&#x27; well-being.</p>
             </div>
             
         </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Casemates du Bock</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6117'><meta itemprop='longitude' content='6.1342'></div></td><td class='atn-desc'><span itemprop='description'>Tunnel system part of the city's ancient fortifications.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6117,6.1342' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Grand Ducal Palace</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6108'><meta itemprop='longitude' content='6.1311'></div></td><td class='atn-desc'><span itemprop='description'>The official residence of the Grand Duke of Luxembourg.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6108,6.1311' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Place d'Armes</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6114'><meta itemprop='longitude' content='6.1286'></div></td><td class='atn-desc'><span itemprop='description'>Central square in the heart of the old city.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6114,6.1286' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Adolphe Bridge</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6083'><meta itemprop='longitude' content='6.1269'></div></td><td class='atn-desc'><span itemprop='description'>Double-decked arch bridge and city symbol.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6083,6.1269' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Grund District</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6075'><meta itemprop='longitude' content='6.1353'></div></td><td class='atn-desc'><span itemprop='description'>Picturesque valley neighborhood below the city center.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6075,6.1353' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Mudam</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6169'><meta itemprop='longitude' content='6.1397'></div></td><td class='atn-desc'><span itemprop='description'>Museum of modern art designed by I.M. Pei.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6169,6.1397' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Notre-Dame Cathedral</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6097'><meta itemprop='longitude' content='6.1314'></div></td><td class='atn-desc'><span itemprop='description'>Jesuit church and the only cathedral in the country.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6097,6.1314' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Philharmonie</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6186'><meta itemprop='longitude' content='6.1422'></div></td><td class='atn-desc'><span itemprop='description'>Modern concert hall on the Kirchberg plateau.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6186,6.1422' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Chemin de la Corniche</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6111'><meta itemprop='longitude' content='6.1339'></div></td><td class='atn-desc'><span itemprop='description'>Pedestrian promenade called 'the most beautiful balcony in Europe'.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6111,6.1339' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Fort Thüngen</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='49.6164'><meta itemprop='longitude' content='6.1392'></div></td><td class='atn-desc'><span itemprop='description'>Historic fortification and home of the Dräi Eechelen Museum.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=49.6164,6.1392' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
-    </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/luxembourg.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Luxembourg" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Luxembourg</a>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/luxembourg.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Luxembourg" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Luxembourg</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 49.6117, "lon": 6.1342, "n": "Casemates du Bock", "d": "Tunnel system part of the city's ancient fortifications."}, {"lat": 49.6108, "lon": 6.1311, "n": "Grand Ducal Palace", "d": "The official residence of the Grand Duke of Luxembourg."}, {"lat": 49.6114, "lon": 6.1286, "n": "Place d'Armes", "d": "Central square in the heart of the old city."}, {"lat": 49.6083, "lon": 6.1269, "n": "Adolphe Bridge", "d": "Double-decked arch bridge and city symbol."}, {"lat": 49.6075, "lon": 6.1353, "n": "Grund District", "d": "Picturesque valley neighborhood below the city center."}, {"lat": 49.6169, "lon": 6.1397, "n": "Mudam", "d": "Museum of modern art designed by I.M. Pei."}, {"lat": 49.6097, "lon": 6.1314, "n": "Notre-Dame Cathedral", "d": "Jesuit church and the only cathedral in the country."}, {"lat": 49.6186, "lon": 6.1422, "n": "Philharmonie", "d": "Modern concert hall on the Kirchberg plateau."}, {"lat": 49.6111, "lon": 6.1339, "n": "Chemin de la Corniche", "d": "Pedestrian promenade called 'the most beautiful balcony in Europe'."}, {"lat": 49.6164, "lon": 6.1392, "n": "Fort Th\u00fcngen", "d": "Historic fortification and home of the Dr\u00e4i Eechelen Museum."}];
   var venues=[{"lat": 49.6017703, "lon": 6.1365904, "n": ":buvette", "cat": "bar"}, {"lat": 49.5977436, "lon": 6.1348685, "n": "Albicastrense", "cat": "pub"}, {"lat": 49.6038566, "lon": 6.1298819, "n": "Alison caf\u00e9", "cat": "pub"}, {"lat": 49.594574, "lon": 6.1407228, "n": "Am klenge Bistro BTwo", "cat": "pub"}, {"lat": 49.6113179, "lon": 6.1337032, "n": "Art Sc\u00e8ne", "cat": "pub"}, {"lat": 49.595316, "lon": 6.1374921, "n": "Au Bon Vivant", "cat": "pub"}, {"lat": 49.6238045, "lon": 6.1054447, "n": "Bar Liberty", "cat": "pub"}, {"lat": 49.6008067, "lon": 6.130821, "n": "Barbarella", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([49.6117,6.1319],13);
+    cityMap.setView([49.6117,6.1319],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

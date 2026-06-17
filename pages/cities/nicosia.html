@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Nicosia — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='50.9'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='67.9'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='40'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='38.8'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Southern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='039'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1764'><meta itemprop='longitude' content='33.3644'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/nicosia.jpg' alt='Nicosia Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇨🇾 Nicosia</h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/nicosia.jpg' alt='Nicosia Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇨🇾 Nicosia</h1><p class='city-hero-sub'>Southern Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>50.9</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:51%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>50.9</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='51'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>113.22€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>67.9</span>
+                    <div class='circular-ring ring-safe' data-pct='68'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>67.9</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:68%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>40</span>
+                    <div class='circular-ring ring-green' data-pct='40'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>40</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:40%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>113.22€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>14</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>14</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>38.8</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:39%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>38.8</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='39'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>The Old City is compact and easily walkable. For the wider metropolitan area a bus network and private taxis are available at accessible prices. Intercity buses connect <strong>Nicosia</strong> to other Cypriot towns.</p></div>
-    <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Averof Hotel</b> <small>(<span itemprop='priceRange'>sgl €35, dbl €55</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Sky Hotel</b> <small>(<span itemprop='priceRange'>rates from €60</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Asty Hotel</b> <small>(<span itemprop='priceRange'>sgl from €45, dbl from €65</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Kipros Accommodation</b> <small>(<span itemprop='priceRange'>rates from €44</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Delphi Hotel</b> <small>(<span itemprop='priceRange'>rates around €50</span>)</small></li></ul></div>
-    
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.1596682,33.3561106' target='_blank'>Abbey Garden</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1596682'><meta itemprop='longitude' content='33.3561106'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.1636055,33.3584549' target='_blank'>Allou</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1636055'><meta itemprop='longitude' content='33.3584549'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.1630446,33.3551565' target='_blank'>Babylon</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1630446'><meta itemprop='longitude' content='33.3551565'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.1630898,33.3585924' target='_blank'>BARaki Live</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1630898'><meta itemprop='longitude' content='33.3585924'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.1646859,33.3605366' target='_blank'>Blurry Lights</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1646859'><meta itemprop='longitude' content='33.3605366'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.1737286,33.3612322' target='_blank'>Brewfellas</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1737286'><meta itemprop='longitude' content='33.3612322'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.168404,33.3592474' target='_blank'>Caprice</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.168404'><meta itemprop='longitude' content='33.3592474'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.1626192,33.3541143' target='_blank'>Carry Pride</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1626192'><meta itemprop='longitude' content='33.3541143'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>Bridge between Europe and the Middle East, <strong>Nicosia</strong> offers a privileged climate and a very competitive cost of living. Its development plan aims to integrate architectural modernity with the preservation of historic walls.</p>
-            </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Nicosia</strong> (Greek: Λευκωσία; Turkish: Lefkoşa) is the capital of Cyprus and is the largest city by far. While it may not boast the same abundance of archaeological sites and lively beaches as other parts of Cyprus, the city&#x27;s Old Town, with its museums and churches, is still a pleasant place to explore. What&#x27;s more, with fewer tourists than the resorts on the southern coast, <strong>Nicosia</strong> maintains a more authentically Cypriot atmosphere.  Take a stroll through the city&#x27;s charming streets, where you&#x27;ll find delightful cafes serving traditional Cypriot coffee, as well as woodworking shops tucked away in unexpected corners. And don&#x27;t miss the opportunity to visit the Green Line, the boundary that divides North from South. As the financial and administrative center of the island, <strong>Nicosia</strong> is a haven for shopping enthusiasts. <strong>Nicosia</strong> is one of the very few divided capitals in the world. The barbed wire and guardtowers of the Green Line cuts the town in two, with the northern side being the capital of the self-proclaimed Northern Cyprus and the southern half being the capital of the Republic of Cyprus. The municipality of <strong>Nicosia</strong> governs only the central portion, but the city now sprawls for several kilometers and has engulfed surrounding villages and settlements. The population of the Greek part hovers around 245,000 in 2020 (a third of the total population of Cyprus), but the city has a feel of one much larger. It is the administrative and financial hub of the island as well as home to several universities, colleges and other educational establishments. It hosts most foreign embassies and offshore companies (a big industry in Cyprus nowadays). Along with its international students and foreign workers it has developed a truly cosmopolitan feel. It also acts as a separate administrative capital for the <strong>Nicosia</strong> district. One of the southernmost locations in Europe, <strong>Nicosia</strong>&#x27;s climate is classified as subtropical and semi-arid. Summers are very hot and dry, you can expect temperatures to regularly rise above 35°C. Pleasantly warm temperatures are common early in the spring and late in the autumn, making these good times to visit. Winter is the wettest time of the year, though even then just 7-8 days of the month see rain. During mid-winter, the temperature may sometimes drop below freezing and light frost and sleet occurs, but snowfall is very rare. Cyprus is in the Levant, and as with other places in this part of the world it has a long and tumultuous history and has seen many great empires come and go. Taking that into consideration, <strong>Nicosia</strong> has surprisingly few sights dating back from antiquity or even from the middle ages. <strong>Nicosia</strong> is in the middle of the island and the region has been inhabited since around 2500 BC. A city-state by the name of Ledra was established here sometimes after the end of the Trojan War (1180 BC), though not much of it is known today. By 330 BC Ledra was recorded as a small unimportant farming town.</p></div>
-        </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Selimiye Mosque</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1764'><meta itemprop='longitude' content='33.3644'></div></td><td class='atn-desc'><span itemprop='description'>Former cathedral converted into a mosque.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.1764,33.3644' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Ledra Street</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.174'><meta itemprop='longitude' content='33.3614'></div></td><td class='atn-desc'><span itemprop='description'>Main shopping street and crossing point to the north.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.174,33.3614' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Cyprus Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1717'><meta itemprop='longitude' content='33.3556'></div></td><td class='atn-desc'><span itemprop='description'>Oldest and largest archaeological museum in Cyprus.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.1717,33.3556' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Kyrenia Gate</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1814'><meta itemprop='longitude' content='33.3614'></div></td><td class='atn-desc'><span itemprop='description'>One of the three gates in the Venetian walls.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.1814,33.3614' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Venetian Walls</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1719'><meta itemprop='longitude' content='33.3667'></div></td><td class='atn-desc'><span itemprop='description'>Circular fortifications surrounding the old city.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.1719,33.3667' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Buyuk Han</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1761'><meta itemprop='longitude' content='33.3625'></div></td><td class='atn-desc'><span itemprop='description'>Largest caravanserai on the island of Cyprus.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.1761,33.3625' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>St John's Cathedral</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1731'><meta itemprop='longitude' content='33.3678'></div></td><td class='atn-desc'><span itemprop='description'>Main church of the Church of Cyprus.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.1731,33.3678' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Leventis Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1706'><meta itemprop='longitude' content='33.3611'></div></td><td class='atn-desc'><span itemprop='description'>Museum dedicated to the history of Nicosia.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.1706,33.3611' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Liberty Monument</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1736'><meta itemprop='longitude' content='33.3711'></div></td><td class='atn-desc'><span itemprop='description'>Sculpture commemorating EOKA's fight for independence.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.1736,33.3711' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Shacolas Tower</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1711'><meta itemprop='longitude' content='33.3617'></div></td><td class='atn-desc'><span itemprop='description'>Observatory offering views of the whole city.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.1711,33.3617' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/nicosia.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Nicosia" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Nicosia</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Selimiye Mosque</span><p class='attr-card-desc' itemprop='description'>Former cathedral converted into a mosque.</p><a href='https://www.google.com/maps?q=35.1764,33.3644' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1764'><meta itemprop='longitude' content='33.3644'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Ledra Street</span><p class='attr-card-desc' itemprop='description'>Main shopping street and crossing point to the north.</p><a href='https://www.google.com/maps?q=35.174,33.3614' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.174'><meta itemprop='longitude' content='33.3614'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Cyprus Museum</span><p class='attr-card-desc' itemprop='description'>Oldest and largest archaeological museum in Cyprus.</p><a href='https://www.google.com/maps?q=35.1717,33.3556' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1717'><meta itemprop='longitude' content='33.3556'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Kyrenia Gate</span><p class='attr-card-desc' itemprop='description'>One of the three gates in the Venetian walls.</p><a href='https://www.google.com/maps?q=35.1814,33.3614' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1814'><meta itemprop='longitude' content='33.3614'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Venetian Walls</span><p class='attr-card-desc' itemprop='description'>Circular fortifications surrounding the old city.</p><a href='https://www.google.com/maps?q=35.1719,33.3667' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1719'><meta itemprop='longitude' content='33.3667'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Buyuk Han</span><p class='attr-card-desc' itemprop='description'>Largest caravanserai on the island of Cyprus.</p><a href='https://www.google.com/maps?q=35.1761,33.3625' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1761'><meta itemprop='longitude' content='33.3625'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>St John's Cathedral</span><p class='attr-card-desc' itemprop='description'>Main church of the Church of Cyprus.</p><a href='https://www.google.com/maps?q=35.1731,33.3678' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1731'><meta itemprop='longitude' content='33.3678'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Leventis Museum</span><p class='attr-card-desc' itemprop='description'>Museum dedicated to the history of Nicosia.</p><a href='https://www.google.com/maps?q=35.1706,33.3611' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1706'><meta itemprop='longitude' content='33.3611'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Liberty Monument</span><p class='attr-card-desc' itemprop='description'>Sculpture commemorating EOKA's fight for independence.</p><a href='https://www.google.com/maps?q=35.1736,33.3711' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1736'><meta itemprop='longitude' content='33.3711'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Shacolas Tower</span><p class='attr-card-desc' itemprop='description'>Observatory offering views of the whole city.</p><a href='https://www.google.com/maps?q=35.1711,33.3617' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1711'><meta itemprop='longitude' content='33.3617'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.1596682,33.3561106' target='_blank'>Abbey Garden</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1596682'><meta itemprop='longitude' content='33.3561106'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.1636055,33.3584549' target='_blank'>Allou</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1636055'><meta itemprop='longitude' content='33.3584549'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.1630446,33.3551565' target='_blank'>Babylon</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1630446'><meta itemprop='longitude' content='33.3551565'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.1630898,33.3585924' target='_blank'>BARaki Live</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1630898'><meta itemprop='longitude' content='33.3585924'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.1646859,33.3605366' target='_blank'>Blurry Lights</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1646859'><meta itemprop='longitude' content='33.3605366'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.1737286,33.3612322' target='_blank'>Brewfellas</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1737286'><meta itemprop='longitude' content='33.3612322'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.168404,33.3592474' target='_blank'>Caprice</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.168404'><meta itemprop='longitude' content='33.3592474'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.1626192,33.3541143' target='_blank'>Carry Pride</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.1626192'><meta itemprop='longitude' content='33.3541143'></div></li></ul></div>
+        <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul class='block-ul'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Averof Hotel</b> <small>(<span itemprop='priceRange'>sgl €35, dbl €55</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Sky Hotel</b> <small>(<span itemprop='priceRange'>rates from €60</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Asty Hotel</b> <small>(<span itemprop='priceRange'>sgl from €45, dbl from €65</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Kipros Accommodation</b> <small>(<span itemprop='priceRange'>rates from €44</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Delphi Hotel</b> <small>(<span itemprop='priceRange'>rates around €50</span>)</small></li></ul></div>
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>The Old City is compact and easily walkable. For the wider metropolitan area a bus network and private taxis are available at accessible prices. Intercity buses connect <strong>Nicosia</strong> to other Cypriot towns.</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>Bridge between Europe and the Middle East, <strong>Nicosia</strong> offers a privileged climate and a very competitive cost of living. Its development plan aims to integrate architectural modernity with the preservation of historic walls.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Nicosia</strong> (Greek: Λευκωσία; Turkish: Lefkoşa) is the capital of Cyprus and is the largest city by far. While it may not boast the same abundance of archaeological sites and lively beaches as other parts of Cyprus, the city&#x27;s Old Town, with its museums and churches, is still a pleasant place to explore. What&#x27;s more, with fewer tourists than the resorts on the southern coast, <strong>Nicosia</strong> maintains a more authentically Cypriot atmosphere.  Take a stroll through the city&#x27;s charming streets, where you&#x27;ll find delightful cafes serving traditional Cypriot coffee, as well as woodworking shops tucked away in unexpected corners. And don&#x27;t miss the opportunity to visit the Green Line, the boundary that divides North from South. As the financial and administrative center of the island, <strong>Nicosia</strong> is a haven for shopping enthusiasts. <strong>Nicosia</strong> is one of the very few divided capitals in the world. The barbed wire and guardtowers of the Green Line cuts the town in two, with the northern side being the capital of the self-proclaimed Northern Cyprus and the southern half being the capital of the Republic of Cyprus. The municipality of <strong>Nicosia</strong> governs only the central portion, but the city now sprawls for several kilometers and has engulfed surrounding villages and settlements. The population of the Greek part hovers around 245,000 in 2020 (a third of the total population of Cyprus), but the city has a feel of one much larger. It is the administrative and financial hub of the island as well as home to several universities, colleges and other educational establishments. It hosts most foreign embassies and offshore companies (a big industry in Cyprus nowadays). Along with its international students and foreign workers it has developed a truly cosmopolitan feel. It also acts as a separate administrative capital for the <strong>Nicosia</strong> district. One of the southernmost locations in Europe, <strong>Nicosia</strong>&#x27;s climate is classified as subtropical and semi-arid. Summers are very hot and dry, you can expect temperatures to regularly rise above 35°C. Pleasantly warm temperatures are common early in the spring and late in the autumn, making these good times to visit. Winter is the wettest time of the year, though even then just 7-8 days of the month see rain. During mid-winter, the temperature may sometimes drop below freezing and light frost and sleet occurs, but snowfall is very rare. Cyprus is in the Levant, and as with other places in this part of the world it has a long and tumultuous history and has seen many great empires come and go. Taking that into consideration, <strong>Nicosia</strong> has surprisingly few sights dating back from antiquity or even from the middle ages. <strong>Nicosia</strong> is in the middle of the island and the region has been inhabited since around 2500 BC. A city-state by the name of Ledra was established here sometimes after the end of the Trojan War (1180 BC), though not much of it is known today. By 330 BC Ledra was recorded as a small unimportant farming town.</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/nicosia.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Nicosia" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Nicosia</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 35.1764, "lon": 33.3644, "n": "Selimiye Mosque", "d": "Former cathedral converted into a mosque."}, {"lat": 35.174, "lon": 33.3614, "n": "Ledra Street", "d": "Main shopping street and crossing point to the north."}, {"lat": 35.1717, "lon": 33.3556, "n": "Cyprus Museum", "d": "Oldest and largest archaeological museum in Cyprus."}, {"lat": 35.1814, "lon": 33.3614, "n": "Kyrenia Gate", "d": "One of the three gates in the Venetian walls."}, {"lat": 35.1719, "lon": 33.3667, "n": "Venetian Walls", "d": "Circular fortifications surrounding the old city."}, {"lat": 35.1761, "lon": 33.3625, "n": "Buyuk Han", "d": "Largest caravanserai on the island of Cyprus."}, {"lat": 35.1731, "lon": 33.3678, "n": "St John's Cathedral", "d": "Main church of the Church of Cyprus."}, {"lat": 35.1706, "lon": 33.3611, "n": "Leventis Museum", "d": "Museum dedicated to the history of Nicosia."}, {"lat": 35.1736, "lon": 33.3711, "n": "Liberty Monument", "d": "Sculpture commemorating EOKA's fight for independence."}, {"lat": 35.1711, "lon": 33.3617, "n": "Shacolas Tower", "d": "Observatory offering views of the whole city."}];
   var venues=[{"lat": 35.1596682, "lon": 33.3561106, "n": "Abbey Garden", "cat": "pub"}, {"lat": 35.1636055, "lon": 33.3584549, "n": "Allou", "cat": "pub"}, {"lat": 35.1630446, "lon": 33.3551565, "n": "Babylon", "cat": "pub"}, {"lat": 35.1630898, "lon": 33.3585924, "n": "BARaki Live", "cat": "bar"}, {"lat": 35.1646859, "lon": 33.3605366, "n": "Blurry Lights", "cat": "bar"}, {"lat": 35.1737286, "lon": 33.3612322, "n": "Brewfellas", "cat": "bar"}, {"lat": 35.168404, "lon": 33.3592474, "n": "Caprice", "cat": "pub"}, {"lat": 35.1626192, "lon": 33.3541143, "n": "Carry Pride", "cat": "bar"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([35.1856,33.3823],13);
+    cityMap.setView([35.1856,33.3823],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

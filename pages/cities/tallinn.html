@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Tallinn — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='71.1'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='76.4'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='82'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='38.5'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Northern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='154'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4372'><meta itemprop='longitude' content='24.7453'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/tallinn.jpg' alt='Tallinn Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇪🇪 Tallinn</h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/tallinn.jpg' alt='Tallinn Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-green'>🌿 Green City</span><span class='city-hero-badge badge-safe'>🛡️ Ultra Safe</span><span class='city-hero-badge badge-top'>⭐ Top Rated</span><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇪🇪 Tallinn</h1><p class='city-hero-sub'>Northern Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>71.1</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:71%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>71.1</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='71'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>113.78€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>76.4</span>
+                    <div class='circular-ring ring-safe' data-pct='76'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>76.4</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:76%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>82</span>
+                    <div class='circular-ring ring-green' data-pct='82'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>82</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:82%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>113.78€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>43</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>43</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>38.5</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:38%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>38.5</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='38'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>Land transport: Taxis to the old town should cost €7–10. The Bolt app is more popular than Uber (it&#x27;s Estonian after all!) #2 is diverted until 2025 and doesn&#x27;t stop at the airport – it will resume when construction of the Rail Baltica terminal has reached a point where the tram can pass under the railway line.</p></div>
-    <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>16EUR Hostel</b> <small>(<span itemprop='priceRange'>Dorm bed: from €10; Single: €16-25</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Alur Hostel</b> <small>(<span itemprop='priceRange'>Dorm bed: from €9</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Euphoria</b> <small>(<span itemprop='priceRange'>Dorm bed: from €9</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Fat Margeret's</b> <small>(<span itemprop='priceRange'>Bed from €10</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Flying Kiwi Backpackers</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li></ul></div>
-    <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul style='margin:0; padding-left:15px;'><li><b>Kesklinn</b>: Quartiere di Tallinn.</li><li><b>Haabersti</b>: Quartiere di Tallinn.</li><li><b>Pirita</b>: Quartiere di Tallinn.</li></ul></div>
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=59.4358937,24.747503' target='_blank'>Baila</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4358937'><meta itemprop='longitude' content='24.747503'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=59.408641,24.6746628' target='_blank'>Black Mount Pubi</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.408641'><meta itemprop='longitude' content='24.6746628'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=59.4388359,24.7439968' target='_blank'>Borsi</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4388359'><meta itemprop='longitude' content='24.7439968'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=59.4376116,24.7518225' target='_blank'>Butterfly Lounge</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4376116'><meta itemprop='longitude' content='24.7518225'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><a itemprop='name' href='https://www.google.com/maps?q=59.4351515,24.7455099' target='_blank'>Club Hollywood</a> <span style='color:#94a3b8; font-size:0.82rem;'>(nightclub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4351515'><meta itemprop='longitude' content='24.7455099'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><a itemprop='name' href='https://www.google.com/maps?q=59.4354098,24.7474924' target='_blank'>Club Münt</a> <span style='color:#94a3b8; font-size:0.82rem;'>(nightclub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4354098'><meta itemprop='longitude' content='24.7474924'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=59.4352764,24.7323042' target='_blank'>Cubano Baar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4352764'><meta itemprop='longitude' content='24.7323042'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=59.4375887,24.744038' target='_blank'>DM Baar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4375887'><meta itemprop='longitude' content='24.744038'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>The digital capital of Europe, where every service is within a click and safety is guaranteed by advanced technologies. Its medieval center is perfectly preserved within a high-tech ecosystem.</p>
-            </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Tallinn</strong> is Estonia&#x27;s capital and largest city. <strong>Tallinn</strong> is an important port of the Baltic Sea, with the busy passenger section of the port reaching the foothill of the picturesque medieval Old Town, which has been astonishingly well preserved and is a since 1997.  On the shore of the Gulf of Finland, it is a city of over 450,000 inhabitants (2023). It is home to a third of the country&#x27;s population, and is also the capital of Harju County in Northern Estonia. In a striking contrast to its Old Town, its immediate outskirts are filled with a cluster of modern office towers, with intermittent architectural monuments to the Soviet era. Further out, you will find a bewildering variety of historic and modern neighbourhoods, religious, civic, industrial and maritime heritage. This all provides for the city seeing very sizeable tourist traffic given its size, which in turn means the infrastructure is robust and extensive. <strong>Tallinn</strong> is a historic city dating back to medieval times. The first fortress on Toompea was built around 1050 and <strong>Tallinn</strong> was possibly first recorded on a world map in 1154. In 1219, the city was conquered by Valdemar II of Denmark and it became a member of the Hanseatic League in 1285. The city, known as Reval at the time, prospered as a trading town in the 14th century, and much of <strong>Tallinn</strong>&#x27;s historic centre was built at this time. <strong>Tallinn</strong> then became a pawn in the geopolitical games of its big neighbours, passing into Swedish hands in 1561 and then to the Russian Empire under Peter the Great in 1710. By World War I and the ensuing brief Estonian independence (starting 1918) <strong>Tallinn</strong>&#x27;s population had reached 150,000. Estonia was occupied by the Soviet Union in 1940, conquered by Nazi Germany (1941–44), and then retaken by the Soviets. In World War II, the city was quite extensively bombed by the Soviets, although luckily the medieval town survived. The Soviet Union undertook a program of massive East Slavic migration, and just over 40% of <strong>Tallinn</strong>&#x27;s current inhabitants are Slavic (compared to an average of 28% for the entire country). On 20 August 1991, Estonia declared independence and <strong>Tallinn</strong> became its capital once again. Today <strong>Tallinn</strong> is a bustling, gleaming city. However, among the tall glassy buildings and corporate headquarters, <strong>Tallinn</strong> retains an inner charm seldom found elsewhere.</p></div>
-        </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Old Town</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4372'><meta itemprop='longitude' content='24.7453'></div></td><td class='atn-desc'><span itemprop='description'>medieval heart of Tallinn, a UNESCO World Heritage site.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4372,24.7453' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Toompea Hill</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4358'><meta itemprop='longitude' content='24.7397'></div></td><td class='atn-desc'><span itemprop='description'>Historic hill with the castle and parliament.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4358,24.7397' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Nevsky Cathedral</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4358'><meta itemprop='longitude' content='24.7392'></div></td><td class='atn-desc'><span itemprop='description'>Grand Orthodox cathedral with onion domes.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4358,24.7392' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Kadriorg Park</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4384'><meta itemprop='longitude' content='24.7911'></div></td><td class='atn-desc'><span itemprop='description'>Park and palace built by Peter the Great.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4384,24.7911' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Seaplane Harbour</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4514'><meta itemprop='longitude' content='24.7386'></div></td><td class='atn-desc'><span itemprop='description'>Maritime museum in historic seaplane hangars.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4514,24.7386' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Town Hall Square</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4373'><meta itemprop='longitude' content='24.7451'></div></td><td class='atn-desc'><span itemprop='description'>The social heart of the city since the 13th century.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4373,24.7451' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Telliskivi</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4394'><meta itemprop='longitude' content='24.7289'></div></td><td class='atn-desc'><span itemprop='description'>Creative city hub with restaurants and galleries.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4394,24.7289' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Kumu Art Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4364'><meta itemprop='longitude' content='24.7961'></div></td><td class='atn-desc'><span itemprop='description'>Main museum for Estonian and international art.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4364,24.7961' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>St. Olaf's Church</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4411'><meta itemprop='longitude' content='24.7478'></div></td><td class='atn-desc'><span itemprop='description'>Gothic church once the tallest building in the world.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4411,24.7478' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Fat Margaret</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4425'><meta itemprop='longitude' content='24.7492'></div></td><td class='atn-desc'><span itemprop='description'>Historic gate tower and maritime museum.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=59.4425,24.7492' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul class='block-ul'><li><b>Kesklinn</b>: Quartiere di Tallinn.</li><li><b>Haabersti</b>: Quartiere di Tallinn.</li><li><b>Pirita</b>: Quartiere di Tallinn.</li></ul></div>
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/tallinn.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Tallinn" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Tallinn</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Old Town</span><p class='attr-card-desc' itemprop='description'>medieval heart of Tallinn, a UNESCO World Heritage site.</p><a href='https://www.google.com/maps?q=59.4372,24.7453' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4372'><meta itemprop='longitude' content='24.7453'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Toompea Hill</span><p class='attr-card-desc' itemprop='description'>Historic hill with the castle and parliament.</p><a href='https://www.google.com/maps?q=59.4358,24.7397' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4358'><meta itemprop='longitude' content='24.7397'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Nevsky Cathedral</span><p class='attr-card-desc' itemprop='description'>Grand Orthodox cathedral with onion domes.</p><a href='https://www.google.com/maps?q=59.4358,24.7392' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4358'><meta itemprop='longitude' content='24.7392'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Kadriorg Park</span><p class='attr-card-desc' itemprop='description'>Park and palace built by Peter the Great.</p><a href='https://www.google.com/maps?q=59.4384,24.7911' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4384'><meta itemprop='longitude' content='24.7911'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Seaplane Harbour</span><p class='attr-card-desc' itemprop='description'>Maritime museum in historic seaplane hangars.</p><a href='https://www.google.com/maps?q=59.4514,24.7386' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4514'><meta itemprop='longitude' content='24.7386'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Town Hall Square</span><p class='attr-card-desc' itemprop='description'>The social heart of the city since the 13th century.</p><a href='https://www.google.com/maps?q=59.4373,24.7451' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4373'><meta itemprop='longitude' content='24.7451'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Telliskivi</span><p class='attr-card-desc' itemprop='description'>Creative city hub with restaurants and galleries.</p><a href='https://www.google.com/maps?q=59.4394,24.7289' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4394'><meta itemprop='longitude' content='24.7289'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Kumu Art Museum</span><p class='attr-card-desc' itemprop='description'>Main museum for Estonian and international art.</p><a href='https://www.google.com/maps?q=59.4364,24.7961' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4364'><meta itemprop='longitude' content='24.7961'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>St. Olaf's Church</span><p class='attr-card-desc' itemprop='description'>Gothic church once the tallest building in the world.</p><a href='https://www.google.com/maps?q=59.4411,24.7478' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4411'><meta itemprop='longitude' content='24.7478'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Fat Margaret</span><p class='attr-card-desc' itemprop='description'>Historic gate tower and maritime museum.</p><a href='https://www.google.com/maps?q=59.4425,24.7492' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4425'><meta itemprop='longitude' content='24.7492'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=59.4358937,24.747503' target='_blank'>Baila</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4358937'><meta itemprop='longitude' content='24.747503'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=59.408641,24.6746628' target='_blank'>Black Mount Pubi</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.408641'><meta itemprop='longitude' content='24.6746628'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=59.4388359,24.7439968' target='_blank'>Borsi</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4388359'><meta itemprop='longitude' content='24.7439968'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=59.4376116,24.7518225' target='_blank'>Butterfly Lounge</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4376116'><meta itemprop='longitude' content='24.7518225'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=59.4351515,24.7455099' target='_blank'>Club Hollywood</a></span><span class='venue-cat cat-nightclub'>nightclub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4351515'><meta itemprop='longitude' content='24.7455099'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=59.4354098,24.7474924' target='_blank'>Club Münt</a></span><span class='venue-cat cat-nightclub'>nightclub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4354098'><meta itemprop='longitude' content='24.7474924'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=59.4352764,24.7323042' target='_blank'>Cubano Baar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4352764'><meta itemprop='longitude' content='24.7323042'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=59.4375887,24.744038' target='_blank'>DM Baar</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='59.4375887'><meta itemprop='longitude' content='24.744038'></div></li></ul></div>
+        <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul class='block-ul'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>16EUR Hostel</b> <small>(<span itemprop='priceRange'>Dorm bed: from €10; Single: €16-25</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Alur Hostel</b> <small>(<span itemprop='priceRange'>Dorm bed: from €9</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Euphoria</b> <small>(<span itemprop='priceRange'>Dorm bed: from €9</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Fat Margeret's</b> <small>(<span itemprop='priceRange'>Bed from €10</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Flying Kiwi Backpackers</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li></ul></div>
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>Land transport: Taxis to the old town should cost €7–10. The Bolt app is more popular than Uber (it&#x27;s Estonian after all!) #2 is diverted until 2025 and doesn&#x27;t stop at the airport – it will resume when construction of the Rail Baltica terminal has reached a point where the tram can pass under the railway line.</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>The digital capital of Europe, where every service is within a click and safety is guaranteed by advanced technologies. Its medieval center is perfectly preserved within a high-tech ecosystem.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Tallinn</strong> is Estonia&#x27;s capital and largest city. <strong>Tallinn</strong> is an important port of the Baltic Sea, with the busy passenger section of the port reaching the foothill of the picturesque medieval Old Town, which has been astonishingly well preserved and is a since 1997.  On the shore of the Gulf of Finland, it is a city of over 450,000 inhabitants (2023). It is home to a third of the country&#x27;s population, and is also the capital of Harju County in Northern Estonia. In a striking contrast to its Old Town, its immediate outskirts are filled with a cluster of modern office towers, with intermittent architectural monuments to the Soviet era. Further out, you will find a bewildering variety of historic and modern neighbourhoods, religious, civic, industrial and maritime heritage. This all provides for the city seeing very sizeable tourist traffic given its size, which in turn means the infrastructure is robust and extensive. <strong>Tallinn</strong> is a historic city dating back to medieval times. The first fortress on Toompea was built around 1050 and <strong>Tallinn</strong> was possibly first recorded on a world map in 1154. In 1219, the city was conquered by Valdemar II of Denmark and it became a member of the Hanseatic League in 1285. The city, known as Reval at the time, prospered as a trading town in the 14th century, and much of <strong>Tallinn</strong>&#x27;s historic centre was built at this time. <strong>Tallinn</strong> then became a pawn in the geopolitical games of its big neighbours, passing into Swedish hands in 1561 and then to the Russian Empire under Peter the Great in 1710. By World War I and the ensuing brief Estonian independence (starting 1918) <strong>Tallinn</strong>&#x27;s population had reached 150,000. Estonia was occupied by the Soviet Union in 1940, conquered by Nazi Germany (1941–44), and then retaken by the Soviets. In World War II, the city was quite extensively bombed by the Soviets, although luckily the medieval town survived. The Soviet Union undertook a program of massive East Slavic migration, and just over 40% of <strong>Tallinn</strong>&#x27;s current inhabitants are Slavic (compared to an average of 28% for the entire country). On 20 August 1991, Estonia declared independence and <strong>Tallinn</strong> became its capital once again. Today <strong>Tallinn</strong> is a bustling, gleaming city. However, among the tall glassy buildings and corporate headquarters, <strong>Tallinn</strong> retains an inner charm seldom found elsewhere.</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/tallinn.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Tallinn" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Tallinn</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 59.4372, "lon": 24.7453, "n": "Old Town", "d": "medieval heart of Tallinn, a UNESCO World Heritage site."}, {"lat": 59.4358, "lon": 24.7397, "n": "Toompea Hill", "d": "Historic hill with the castle and parliament."}, {"lat": 59.4358, "lon": 24.7392, "n": "Nevsky Cathedral", "d": "Grand Orthodox cathedral with onion domes."}, {"lat": 59.4384, "lon": 24.7911, "n": "Kadriorg Park", "d": "Park and palace built by Peter the Great."}, {"lat": 59.4514, "lon": 24.7386, "n": "Seaplane Harbour", "d": "Maritime museum in historic seaplane hangars."}, {"lat": 59.4373, "lon": 24.7451, "n": "Town Hall Square", "d": "The social heart of the city since the 13th century."}, {"lat": 59.4394, "lon": 24.7289, "n": "Telliskivi", "d": "Creative city hub with restaurants and galleries."}, {"lat": 59.4364, "lon": 24.7961, "n": "Kumu Art Museum", "d": "Main museum for Estonian and international art."}, {"lat": 59.4411, "lon": 24.7478, "n": "St. Olaf's Church", "d": "Gothic church once the tallest building in the world."}, {"lat": 59.4425, "lon": 24.7492, "n": "Fat Margaret", "d": "Historic gate tower and maritime museum."}];
   var venues=[{"lat": 59.4358937, "lon": 24.747503, "n": "Baila", "cat": "bar"}, {"lat": 59.408641, "lon": 24.6746628, "n": "Black Mount Pubi", "cat": "bar"}, {"lat": 59.4388359, "lon": 24.7439968, "n": "Borsi", "cat": "bar"}, {"lat": 59.4376116, "lon": 24.7518225, "n": "Butterfly Lounge", "cat": "bar"}, {"lat": 59.4351515, "lon": 24.7455099, "n": "Club Hollywood", "cat": "nightclub"}, {"lat": 59.4354098, "lon": 24.7474924, "n": "Club M\u00fcnt", "cat": "nightclub"}, {"lat": 59.4352764, "lon": 24.7323042, "n": "Cubano Baar", "cat": "bar"}, {"lat": 59.4375887, "lon": 24.744038, "n": "DM Baar", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([59.437,24.7536],13);
+    cityMap.setView([59.437,24.7536],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

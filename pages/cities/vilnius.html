@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Vilnius — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='69.3'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='71.5'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='80'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='43.6'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Northern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='154'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6867'><meta itemprop='longitude' content='25.2908'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/vilnius.jpg' alt='Vilnius Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇱🇹 Vilnius</h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/vilnius.jpg' alt='Vilnius Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-green'>🌿 Green City</span><span class='city-hero-badge badge-safe'>🛡️ Ultra Safe</span><span class='city-hero-badge badge-top'>⭐ Top Rated</span><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇱🇹 Vilnius</h1><p class='city-hero-sub'>Northern Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>69.3</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:69%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>69.3</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='69'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>104.34€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>71.5</span>
+                    <div class='circular-ring ring-safe' data-pct='72'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>71.5</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:72%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>80</span>
+                    <div class='circular-ring ring-green' data-pct='80'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>80</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:80%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>104.34€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>23</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>23</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>43.6</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:44%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>43.6</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='44'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>Buses leave from outside Arrivals every 15-30 min and take 15 min to go downtown. Simplest is to buy a €1 single ticket by card, and you might pay extra for bulky luggage. &quot;Get around&quot; below describes other ticket deals, such as the smart card Vilniečio kortelė — buy it from the Narvesen kiosk next to Arrivals.</p></div>
-    <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Filaretai Hostel</b> <small>(<span itemprop='priceRange'>Dorm €33 ppn</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Jimmy Jumps House</b> <small>(<span itemprop='priceRange'>Dorm beds from ~€18, privates from ~€40</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Pogo Hostel</b> <small>(<span itemprop='priceRange'>Dorm €20 ppn</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>City Hotel Algirdas</b> <small>(<span itemprop='priceRange'>B&amp;B double €50</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Domus Maria</b> <small>(<span itemprop='priceRange'>B&amp;B double €60</span>)</small></li></ul></div>
-    
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=54.6840708,25.2903339' target='_blank'>13 statinių</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6840708'><meta itemprop='longitude' content='25.2903339'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=54.6888598,25.2757378' target='_blank'>Akivarai</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6888598'><meta itemprop='longitude' content='25.2757378'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=54.6797935,25.277749' target='_blank'>Akvariumas</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6797935'><meta itemprop='longitude' content='25.277749'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=54.6799771,25.2787171' target='_blank'>Alaus biblioteka</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6799771'><meta itemprop='longitude' content='25.2787171'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=54.6936373,25.2689725' target='_blank'>Alaus namai</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6936373'><meta itemprop='longitude' content='25.2689725'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=54.7079381,25.2956792' target='_blank'>Alaus studija</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.7079381'><meta itemprop='longitude' content='25.2956792'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=54.679263,25.287105' target='_blank'>Amatininkai</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.679263'><meta itemprop='longitude' content='25.287105'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=54.6764695,25.2895043' target='_blank'>Apuokas</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6764695'><meta itemprop='longitude' content='25.2895043'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>Green and welcoming capital, <strong>Vilnius</strong> stands out for a baroque historic center and a startup incentive policy. It offers a high quality of life at decidedly low costs.</p>
-            </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Vilnius</strong> is the capital and largest city of Lithuania. It has a beautiful baroque Old Town, listed as a , and excellent tourist facilities in all price ranges. It stands on the River Neris in the southeast pocket of the country, the Dzūkija region, and in 2023 had a population of 629,000. <strong>Vilnius</strong> has been central to the country&#x27;s life for as long as there has been Lithuania, but that has often been a tragic tale. Its Neolithic people traded in Baltic amber. In the early Middle Ages five petty kingdoms combined into two then one, when Mindaugas in 1253 became Lithuania&#x27;s first king and noble Christian convert. The country splintered after his assassination but was re-united under Gediminas, who established <strong>Vilnius</strong> castle — in legend on the site where a wolf in a dream told him to build. But the real wolves were his neighbouring countries, and finding a powerful ally meant adopting their religion. Poland was the best bet and a dynastic marriage in 1486 united the crowns, later the nations, and Lithuania became Roman Catholic. <strong>Vilnius</strong> Old Town was largely built in the following 150 years.  This united Polish–Lithuanian Commonwealth grew almost to the Black Sea, but all the power and money shifted to Poland. Like Hungary in the Austro-Hungarian Empire or Ireland within Britain, Lithuania was the poor country cousin. And then Poland fell, with its territory carved up between Prussia, Austria and Russia, and others snatching what they could. Lithuania became a territory of the Russian Empire. Poland and Lithuania only regained independence after the First World War, and almost at once were at war with each other and with Russia. <strong>Vilnius</strong> was captured and from 1920 was a Polish exclave, and the Lithuanian capital moved to Kaunas. In the run-up to the Second World War Russia (as the Soviet Union) again seized the territory. This history meant that when Nazi Germany invaded in 1941, they found many local supporters, and the Jewish population of <strong>Vilnius</strong> was slaughtered.  Postwar the Soviet iron fist clutched Lithuania, until 1991 when civil unrest and the collapse of the USSR enabled the country to seize independence. It looked west for allies, adopting capitalism, joining NATO and the European Union, and — crucially for travellers — welcoming the budget airlines. All this has made <strong>Vilnius</strong> a friendly, tourist-oriented city, with a wealth of sights reflecting its layers of history.  Tourist information: Go <strong>Vilnius</strong> have a kiosk at the airport and another in Cathedral Square, both open daily 10:00-19:00. They speak good English and are helpful with maps, brochures, tours and suggestions, but they don&#x27;t book accommodation Far from moderating Atlantic, <strong>Vilnius</strong> winter is extremely cold and temperatures often stay below freezing day after day. Temperatures often reach -25ºC (-13 °F) in the months of January and February, freezing all the rivers and lakes around the city. Summers are warm to hot, with heat waves that send temperatures to rise above 30°C (86°F).</p></div>
-        </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Gediminas Tower</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6867'><meta itemprop='longitude' content='25.2908'></div></td><td class='atn-desc'><span itemprop='description'>The only remaining tower of the Upper Castle.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6867,25.2908' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>St. Anne's Church</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6831'><meta itemprop='longitude' content='25.2931'></div></td><td class='atn-desc'><span itemprop='description'>Masterpiece of Flamboyant Gothic architecture.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6831,25.2931' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Uzupis</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6806'><meta itemprop='longitude' content='25.2953'></div></td><td class='atn-desc'><span itemprop='description'>Bohemian district that declared its own republic.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6806,25.2953' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Vilnius Cathedral</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6858'><meta itemprop='longitude' content='25.2878'></div></td><td class='atn-desc'><span itemprop='description'>Main Roman Catholic cathedral of Lithuania.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6858,25.2878' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Gates of Dawn</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6744'><meta itemprop='longitude' content='25.2894'></div></td><td class='atn-desc'><span itemprop='description'>The only surviving gate of the city's original walls.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6744,25.2894' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Grand Dukes Palace</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6858'><meta itemprop='longitude' content='25.2892'></div></td><td class='atn-desc'><span itemprop='description'>Reconstructed palace of the Lithuanian rulers.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6858,25.2892' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Bernadine Garden</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6842'><meta itemprop='longitude' content='25.2953'></div></td><td class='atn-desc'><span itemprop='description'>Main park in the heart of the old town.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6842,25.2953' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Church of St. Peter</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6939'><meta itemprop='longitude' content='25.3058'></div></td><td class='atn-desc'><span itemprop='description'>Baroque church known for its white plaster carvings.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6939,25.3058' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Three Crosses</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6869'><meta itemprop='longitude' content='25.2975'></div></td><td class='atn-desc'><span itemprop='description'>Monument on the hill offering panoramic views.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6869,25.2975' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Museum of Occupations</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6878'><meta itemprop='longitude' content='25.2722'></div></td><td class='atn-desc'><span itemprop='description'>Former KGB headquarters now a museum.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=54.6878,25.2722' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/vilnius.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Vilnius" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Vilnius</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Gediminas Tower</span><p class='attr-card-desc' itemprop='description'>The only remaining tower of the Upper Castle.</p><a href='https://www.google.com/maps?q=54.6867,25.2908' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6867'><meta itemprop='longitude' content='25.2908'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>St. Anne's Church</span><p class='attr-card-desc' itemprop='description'>Masterpiece of Flamboyant Gothic architecture.</p><a href='https://www.google.com/maps?q=54.6831,25.2931' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6831'><meta itemprop='longitude' content='25.2931'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Uzupis</span><p class='attr-card-desc' itemprop='description'>Bohemian district that declared its own republic.</p><a href='https://www.google.com/maps?q=54.6806,25.2953' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6806'><meta itemprop='longitude' content='25.2953'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Vilnius Cathedral</span><p class='attr-card-desc' itemprop='description'>Main Roman Catholic cathedral of Lithuania.</p><a href='https://www.google.com/maps?q=54.6858,25.2878' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6858'><meta itemprop='longitude' content='25.2878'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Gates of Dawn</span><p class='attr-card-desc' itemprop='description'>The only surviving gate of the city's original walls.</p><a href='https://www.google.com/maps?q=54.6744,25.2894' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6744'><meta itemprop='longitude' content='25.2894'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Grand Dukes Palace</span><p class='attr-card-desc' itemprop='description'>Reconstructed palace of the Lithuanian rulers.</p><a href='https://www.google.com/maps?q=54.6858,25.2892' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6858'><meta itemprop='longitude' content='25.2892'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Bernadine Garden</span><p class='attr-card-desc' itemprop='description'>Main park in the heart of the old town.</p><a href='https://www.google.com/maps?q=54.6842,25.2953' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6842'><meta itemprop='longitude' content='25.2953'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Church of St. Peter</span><p class='attr-card-desc' itemprop='description'>Baroque church known for its white plaster carvings.</p><a href='https://www.google.com/maps?q=54.6939,25.3058' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6939'><meta itemprop='longitude' content='25.3058'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Three Crosses</span><p class='attr-card-desc' itemprop='description'>Monument on the hill offering panoramic views.</p><a href='https://www.google.com/maps?q=54.6869,25.2975' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6869'><meta itemprop='longitude' content='25.2975'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Museum of Occupations</span><p class='attr-card-desc' itemprop='description'>Former KGB headquarters now a museum.</p><a href='https://www.google.com/maps?q=54.6878,25.2722' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6878'><meta itemprop='longitude' content='25.2722'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=54.6840708,25.2903339' target='_blank'>13 statinių</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6840708'><meta itemprop='longitude' content='25.2903339'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=54.6888598,25.2757378' target='_blank'>Akivarai</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6888598'><meta itemprop='longitude' content='25.2757378'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=54.6797935,25.277749' target='_blank'>Akvariumas</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6797935'><meta itemprop='longitude' content='25.277749'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=54.6799771,25.2787171' target='_blank'>Alaus biblioteka</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6799771'><meta itemprop='longitude' content='25.2787171'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=54.6936373,25.2689725' target='_blank'>Alaus namai</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6936373'><meta itemprop='longitude' content='25.2689725'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=54.7079381,25.2956792' target='_blank'>Alaus studija</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.7079381'><meta itemprop='longitude' content='25.2956792'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=54.679263,25.287105' target='_blank'>Amatininkai</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.679263'><meta itemprop='longitude' content='25.287105'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=54.6764695,25.2895043' target='_blank'>Apuokas</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='54.6764695'><meta itemprop='longitude' content='25.2895043'></div></li></ul></div>
+        <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul class='block-ul'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Filaretai Hostel</b> <small>(<span itemprop='priceRange'>Dorm €33 ppn</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Jimmy Jumps House</b> <small>(<span itemprop='priceRange'>Dorm beds from ~€18, privates from ~€40</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Pogo Hostel</b> <small>(<span itemprop='priceRange'>Dorm €20 ppn</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>City Hotel Algirdas</b> <small>(<span itemprop='priceRange'>B&amp;B double €50</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Domus Maria</b> <small>(<span itemprop='priceRange'>B&amp;B double €60</span>)</small></li></ul></div>
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>Buses leave from outside Arrivals every 15-30 min and take 15 min to go downtown. Simplest is to buy a €1 single ticket by card, and you might pay extra for bulky luggage. &quot;Get around&quot; below describes other ticket deals, such as the smart card Vilniečio kortelė — buy it from the Narvesen kiosk next to Arrivals.</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>Green and welcoming capital, <strong>Vilnius</strong> stands out for a baroque historic center and a startup incentive policy. It offers a high quality of life at decidedly low costs.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Vilnius</strong> is the capital and largest city of Lithuania. It has a beautiful baroque Old Town, listed as a , and excellent tourist facilities in all price ranges. It stands on the River Neris in the southeast pocket of the country, the Dzūkija region, and in 2023 had a population of 629,000. <strong>Vilnius</strong> has been central to the country&#x27;s life for as long as there has been Lithuania, but that has often been a tragic tale. Its Neolithic people traded in Baltic amber. In the early Middle Ages five petty kingdoms combined into two then one, when Mindaugas in 1253 became Lithuania&#x27;s first king and noble Christian convert. The country splintered after his assassination but was re-united under Gediminas, who established <strong>Vilnius</strong> castle — in legend on the site where a wolf in a dream told him to build. But the real wolves were his neighbouring countries, and finding a powerful ally meant adopting their religion. Poland was the best bet and a dynastic marriage in 1486 united the crowns, later the nations, and Lithuania became Roman Catholic. <strong>Vilnius</strong> Old Town was largely built in the following 150 years.  This united Polish–Lithuanian Commonwealth grew almost to the Black Sea, but all the power and money shifted to Poland. Like Hungary in the Austro-Hungarian Empire or Ireland within Britain, Lithuania was the poor country cousin. And then Poland fell, with its territory carved up between Prussia, Austria and Russia, and others snatching what they could. Lithuania became a territory of the Russian Empire. Poland and Lithuania only regained independence after the First World War, and almost at once were at war with each other and with Russia. <strong>Vilnius</strong> was captured and from 1920 was a Polish exclave, and the Lithuanian capital moved to Kaunas. In the run-up to the Second World War Russia (as the Soviet Union) again seized the territory. This history meant that when Nazi Germany invaded in 1941, they found many local supporters, and the Jewish population of <strong>Vilnius</strong> was slaughtered.  Postwar the Soviet iron fist clutched Lithuania, until 1991 when civil unrest and the collapse of the USSR enabled the country to seize independence. It looked west for allies, adopting capitalism, joining NATO and the European Union, and — crucially for travellers — welcoming the budget airlines. All this has made <strong>Vilnius</strong> a friendly, tourist-oriented city, with a wealth of sights reflecting its layers of history.  Tourist information: Go <strong>Vilnius</strong> have a kiosk at the airport and another in Cathedral Square, both open daily 10:00-19:00. They speak good English and are helpful with maps, brochures, tours and suggestions, but they don&#x27;t book accommodation Far from moderating Atlantic, <strong>Vilnius</strong> winter is extremely cold and temperatures often stay below freezing day after day. Temperatures often reach -25ºC (-13 °F) in the months of January and February, freezing all the rivers and lakes around the city. Summers are warm to hot, with heat waves that send temperatures to rise above 30°C (86°F).</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/vilnius.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Vilnius" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Vilnius</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 54.6867, "lon": 25.2908, "n": "Gediminas Tower", "d": "The only remaining tower of the Upper Castle."}, {"lat": 54.6831, "lon": 25.2931, "n": "St. Anne's Church", "d": "Masterpiece of Flamboyant Gothic architecture."}, {"lat": 54.6806, "lon": 25.2953, "n": "Uzupis", "d": "Bohemian district that declared its own republic."}, {"lat": 54.6858, "lon": 25.2878, "n": "Vilnius Cathedral", "d": "Main Roman Catholic cathedral of Lithuania."}, {"lat": 54.6744, "lon": 25.2894, "n": "Gates of Dawn", "d": "The only surviving gate of the city's original walls."}, {"lat": 54.6858, "lon": 25.2892, "n": "Grand Dukes Palace", "d": "Reconstructed palace of the Lithuanian rulers."}, {"lat": 54.6842, "lon": 25.2953, "n": "Bernadine Garden", "d": "Main park in the heart of the old town."}, {"lat": 54.6939, "lon": 25.3058, "n": "Church of St. Peter", "d": "Baroque church known for its white plaster carvings."}, {"lat": 54.6869, "lon": 25.2975, "n": "Three Crosses", "d": "Monument on the hill offering panoramic views."}, {"lat": 54.6878, "lon": 25.2722, "n": "Museum of Occupations", "d": "Former KGB headquarters now a museum."}];
   var venues=[{"lat": 54.6840708, "lon": 25.2903339, "n": "13 statini\u0173", "cat": "bar"}, {"lat": 54.6888598, "lon": 25.2757378, "n": "Akivarai", "cat": "pub"}, {"lat": 54.6797935, "lon": 25.277749, "n": "Akvariumas", "cat": "pub"}, {"lat": 54.6799771, "lon": 25.2787171, "n": "Alaus biblioteka", "cat": "pub"}, {"lat": 54.6936373, "lon": 25.2689725, "n": "Alaus namai", "cat": "pub"}, {"lat": 54.7079381, "lon": 25.2956792, "n": "Alaus studija", "cat": "pub"}, {"lat": 54.679263, "lon": 25.287105, "n": "Amatininkai", "cat": "pub"}, {"lat": 54.6764695, "lon": 25.2895043, "n": "Apuokas", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([54.6872,25.2797],13);
+    cityMap.setView([54.6872,25.2797],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

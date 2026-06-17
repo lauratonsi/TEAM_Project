@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Vienna — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='67.9'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='73.2'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='85'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='23.1'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Western Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='155'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1845'><meta itemprop='longitude' content='16.3122'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/vienna.jpg' alt='Vienna Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇦🇹 Vienna</h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/vienna.jpg' alt='Vienna Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-green'>🌿 Green City</span><span class='city-hero-badge badge-safe'>🛡️ Ultra Safe</span><span class='city-hero-badge badge-top'>⭐ Top Rated</span></div><h1 class='city-hero-title'>🇦🇹 Vienna</h1><p class='city-hero-sub'>Western Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>67.9</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:68%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>67.9</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='68'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>142.27€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>73.2</span>
+                    <div class='circular-ring ring-safe' data-pct='73'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>73.2</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:73%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>85</span>
+                    <div class='circular-ring ring-green' data-pct='85'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>85</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:85%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>142.27€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>0</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>23.1</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:23%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>23.1</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='23'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'><strong>Vienna</strong> International Airport <strong>Vienna</strong> International Airport <strong>Vienna</strong> International Airport url email address lat48.110278 long16.569722 directionsjust outside the city limits of <strong>Vienna</strong> on the far side of the City of Schwechat phone tollfree hours price wikipediaVienna International Airport image2011-06-14 10-23-53 Austria Niederösterreich Fischamend Markt.jpg wikidataQ32999 lastedit2025-07-26 contentTo get to <strong>Vienna</strong>, you have three different railway options. The cheaper but slower S-Bahn line S7 (24 minutes; €4.60) and the more expensive but faster City Airport Train (15 minutes; from €11) both go to Wien-Mitte/Landstraße.</p></div>
-    
-    <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul style='margin:0; padding-left:15px;'><li><b>Innere Stadt</b>: Quartiere di Vienna.</li><li><b>Landstraße</b>: Quartiere di Vienna.</li><li><b>Wieden</b>: Quartiere di Vienna.</li><li><b>Margareten</b>: Quartiere di Vienna.</li><li><b>Mariahilf</b>: Quartiere di Vienna.</li></ul></div>
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.2177686,16.3374533' target='_blank'>'s Beisl am Eck</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2177686'><meta itemprop='longitude' content='16.3374533'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.2060233,16.3865177' target='_blank'>'s Stammbeisl</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2060233'><meta itemprop='longitude' content='16.3865177'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.2171591,16.3774265' target='_blank'>6er Haus</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2171591'><meta itemprop='longitude' content='16.3774265'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.2290642,16.3437056' target='_blank'>Anton Frank - cafe bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2290642'><meta itemprop='longitude' content='16.3437056'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.2044132,16.3432618' target='_blank'>BackBone Irish Pub</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2044132'><meta itemprop='longitude' content='16.3432618'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.2098841,16.3677' target='_blank'>Bockshorn Irish Pub</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2098841'><meta itemprop='longitude' content='16.3677'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.2160352,16.3784001' target='_blank'>Brendl</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2160352'><meta itemprop='longitude' content='16.3784001'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><a itemprop='name' href='https://www.google.com/maps?q=48.218708,16.3810931' target='_blank'>Bricks</a> <span style='color:#94a3b8; font-size:0.82rem;'>(nightclub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.218708'><meta itemprop='longitude' content='16.3810931'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>Consistently ranked the world&#x27;s most livable city, <strong>Vienna</strong> excels in social housing and public transport. Its balance between imperial culture and sustainable modernity is its distinctive signature.</p>
-            </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Vienna</strong> (German: Wien; Austro-Bavarian: Wean) is the capital of Austria and by far its most populous city, with an urban population of 2 million and a metropolitan population of 2.9 million (2023). It is the country&#x27;s artistic, cultural, economic and political centre. It is known for its high living standards, relaxed yet elegant lifestyle and rich musical life. <strong>Vienna</strong>, renowned as the former seat of the Habsburg court and its diverse empires, stands not only as a grand metropolis but also as a historical center that has perpetually thrived with a substantial population. This city&#x27;s distinction lies in its privileged stature, fostering an environment that has nurtured numerous eminent artists, notably Beethoven, Haydn, Liszt, Mozart, Schubert, and Johann Strauss II, among others. It was long the largest German-speaking city in the world before being surpassed by Berlin. The large historic city centre of <strong>Vienna</strong> filled with monuments to its imperial past is inscribed on the UNESCO World Heritage List. <strong>Vienna</strong> is broadly divided in inner (1–9) and outer districts (10–23). The 23 districts or wards each have a name and a number. They vary immensely in size and each has its own flair. These function subordinately to the city as decentralized administrative branches of the commune, and make local decisions. Wikivoyage has divided the 23 official districts of <strong>Vienna</strong> into 13 here for travel purposes. The low-lying Danube plain in and around what is now <strong>Vienna</strong> has had a human population since at least the late Paleolithic (see Prehistoric Europe); one of the city&#x27;s most famous artifacts, the 24,000-year-old Venus of Willendorf, now in <strong>Vienna</strong>&#x27;s Natural History Museum, was found nearby. <strong>Vienna</strong>&#x27;s own recorded history began with the Romans, who founded it in the 1st century CE as Vindobona, one of a line of Roman defensive outposts against Germanic tribes. Vindobona&#x27;s central garrison was on the site of what is now the Hoher Markt (the &quot;High Market&quot; so-called because of its relative height over the Danube), and you can still see astounding excavations of its foundations there today. Given its prestige, <strong>Vienna</strong> hosted the Habsburg court for several centuries, first as the Imperial seat of the Holy Roman Empire, then the capital of the Austrian Empire, and later of the Austro-Hungarian Empire, which finally fell in 1918 with the abdication of the last Emperor Karl I. The court tremendously influenced the culture that exists here even today: <strong>Vienna</strong>&#x27;s residents are often overly formal, with small doses of courtliness, polite forms of address, and formal dress attire. One distinguishable paradox of the quirky city is that its residents can be equally modern and progressive as they are extremely old-fashioned. The empires also served to make <strong>Vienna</strong> a very metropolitan city at an early time, and especially so through the years of industrialization and fall of the Austro-Hungarian Empire at the turn of the 20th century.</p></div>
-        </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Schönbrunn Palace</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1845'><meta itemprop='longitude' content='16.3122'></div></td><td class='atn-desc'><span itemprop='description'>Grand Baroque palace and former summer residence.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1845,16.3122' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>St. Stephen's</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2084'><meta itemprop='longitude' content='16.3731'></div></td><td class='atn-desc'><span itemprop='description'>Iconic Gothic cathedral in the city center.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.2084,16.3731' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Belvedere</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1915'><meta itemprop='longitude' content='16.3808'></div></td><td class='atn-desc'><span itemprop='description'>Historic complex with two Baroque palaces and art.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1915,16.3808' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Prater</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2166'><meta itemprop='longitude' content='16.3958'></div></td><td class='atn-desc'><span itemprop='description'>Large public park with a giant Ferris wheel.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.2166,16.3958' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Hofburg</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2065'><meta itemprop='longitude' content='16.3653'></div></td><td class='atn-desc'><span itemprop='description'>Former imperial palace of the Habsburgs.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.2065,16.3653' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>State Opera</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.203'><meta itemprop='longitude' content='16.3691'></div></td><td class='atn-desc'><span itemprop='description'>One of the leading opera houses in the world.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.203,16.3691' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Naschmarkt</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1973'><meta itemprop='longitude' content='16.361'></div></td><td class='atn-desc'><span itemprop='description'>Famous open-air market for food and goods.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1973,16.361' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Albertina</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2047'><meta itemprop='longitude' content='16.3681'></div></td><td class='atn-desc'><span itemprop='description'>Art museum with one of the world's largest print rooms.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.2047,16.3681' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Kunsthistorisches</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2037'><meta itemprop='longitude' content='16.3617'></div></td><td class='atn-desc'><span itemprop='description'>Imperial museum of art and artifacts.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.2037,16.3617' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Rathaus</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2109'><meta itemprop='longitude' content='16.3575'></div></td><td class='atn-desc'><span itemprop='description'>Neogothic city hall building and event square.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.2109,16.3575' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul class='block-ul'><li><b>Innere Stadt</b>: Quartiere di Vienna.</li><li><b>Landstraße</b>: Quartiere di Vienna.</li><li><b>Wieden</b>: Quartiere di Vienna.</li><li><b>Margareten</b>: Quartiere di Vienna.</li><li><b>Mariahilf</b>: Quartiere di Vienna.</li></ul></div>
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/vienna.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Vienna" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Vienna</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Schönbrunn Palace</span><p class='attr-card-desc' itemprop='description'>Grand Baroque palace and former summer residence.</p><a href='https://www.google.com/maps?q=48.1845,16.3122' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1845'><meta itemprop='longitude' content='16.3122'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>St. Stephen's</span><p class='attr-card-desc' itemprop='description'>Iconic Gothic cathedral in the city center.</p><a href='https://www.google.com/maps?q=48.2084,16.3731' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2084'><meta itemprop='longitude' content='16.3731'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Belvedere</span><p class='attr-card-desc' itemprop='description'>Historic complex with two Baroque palaces and art.</p><a href='https://www.google.com/maps?q=48.1915,16.3808' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1915'><meta itemprop='longitude' content='16.3808'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Prater</span><p class='attr-card-desc' itemprop='description'>Large public park with a giant Ferris wheel.</p><a href='https://www.google.com/maps?q=48.2166,16.3958' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2166'><meta itemprop='longitude' content='16.3958'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Hofburg</span><p class='attr-card-desc' itemprop='description'>Former imperial palace of the Habsburgs.</p><a href='https://www.google.com/maps?q=48.2065,16.3653' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2065'><meta itemprop='longitude' content='16.3653'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>State Opera</span><p class='attr-card-desc' itemprop='description'>One of the leading opera houses in the world.</p><a href='https://www.google.com/maps?q=48.203,16.3691' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.203'><meta itemprop='longitude' content='16.3691'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Naschmarkt</span><p class='attr-card-desc' itemprop='description'>Famous open-air market for food and goods.</p><a href='https://www.google.com/maps?q=48.1973,16.361' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1973'><meta itemprop='longitude' content='16.361'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Albertina</span><p class='attr-card-desc' itemprop='description'>Art museum with one of the world's largest print rooms.</p><a href='https://www.google.com/maps?q=48.2047,16.3681' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2047'><meta itemprop='longitude' content='16.3681'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Kunsthistorisches</span><p class='attr-card-desc' itemprop='description'>Imperial museum of art and artifacts.</p><a href='https://www.google.com/maps?q=48.2037,16.3617' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2037'><meta itemprop='longitude' content='16.3617'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Rathaus</span><p class='attr-card-desc' itemprop='description'>Neogothic city hall building and event square.</p><a href='https://www.google.com/maps?q=48.2109,16.3575' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2109'><meta itemprop='longitude' content='16.3575'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.2177686,16.3374533' target='_blank'>'s Beisl am Eck</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2177686'><meta itemprop='longitude' content='16.3374533'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.2060233,16.3865177' target='_blank'>'s Stammbeisl</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2060233'><meta itemprop='longitude' content='16.3865177'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.2171591,16.3774265' target='_blank'>6er Haus</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2171591'><meta itemprop='longitude' content='16.3774265'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.2290642,16.3437056' target='_blank'>Anton Frank - cafe bar</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2290642'><meta itemprop='longitude' content='16.3437056'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.2044132,16.3432618' target='_blank'>BackBone Irish Pub</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2044132'><meta itemprop='longitude' content='16.3432618'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.2098841,16.3677' target='_blank'>Bockshorn Irish Pub</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2098841'><meta itemprop='longitude' content='16.3677'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.2160352,16.3784001' target='_blank'>Brendl</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.2160352'><meta itemprop='longitude' content='16.3784001'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.218708,16.3810931' target='_blank'>Bricks</a></span><span class='venue-cat cat-nightclub'>nightclub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.218708'><meta itemprop='longitude' content='16.3810931'></div></li></ul></div>
+        
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'><strong>Vienna</strong> International Airport <strong>Vienna</strong> International Airport <strong>Vienna</strong> International Airport url email address lat48.110278 long16.569722 directionsjust outside the city limits of <strong>Vienna</strong> on the far side of the City of Schwechat phone tollfree hours price wikipediaVienna International Airport image2011-06-14 10-23-53 Austria Niederösterreich Fischamend Markt.jpg wikidataQ32999 lastedit2025-07-26 contentTo get to <strong>Vienna</strong>, you have three different railway options. The cheaper but slower S-Bahn line S7 (24 minutes; €4.60) and the more expensive but faster City Airport Train (15 minutes; from €11) both go to Wien-Mitte/Landstraße.</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>Consistently ranked the world&#x27;s most livable city, <strong>Vienna</strong> excels in social housing and public transport. Its balance between imperial culture and sustainable modernity is its distinctive signature.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Vienna</strong> (German: Wien; Austro-Bavarian: Wean) is the capital of Austria and by far its most populous city, with an urban population of 2 million and a metropolitan population of 2.9 million (2023). It is the country&#x27;s artistic, cultural, economic and political centre. It is known for its high living standards, relaxed yet elegant lifestyle and rich musical life. <strong>Vienna</strong>, renowned as the former seat of the Habsburg court and its diverse empires, stands not only as a grand metropolis but also as a historical center that has perpetually thrived with a substantial population. This city&#x27;s distinction lies in its privileged stature, fostering an environment that has nurtured numerous eminent artists, notably Beethoven, Haydn, Liszt, Mozart, Schubert, and Johann Strauss II, among others. It was long the largest German-speaking city in the world before being surpassed by Berlin. The large historic city centre of <strong>Vienna</strong> filled with monuments to its imperial past is inscribed on the UNESCO World Heritage List. <strong>Vienna</strong> is broadly divided in inner (1–9) and outer districts (10–23). The 23 districts or wards each have a name and a number. They vary immensely in size and each has its own flair. These function subordinately to the city as decentralized administrative branches of the commune, and make local decisions. Wikivoyage has divided the 23 official districts of <strong>Vienna</strong> into 13 here for travel purposes. The low-lying Danube plain in and around what is now <strong>Vienna</strong> has had a human population since at least the late Paleolithic (see Prehistoric Europe); one of the city&#x27;s most famous artifacts, the 24,000-year-old Venus of Willendorf, now in <strong>Vienna</strong>&#x27;s Natural History Museum, was found nearby. <strong>Vienna</strong>&#x27;s own recorded history began with the Romans, who founded it in the 1st century CE as Vindobona, one of a line of Roman defensive outposts against Germanic tribes. Vindobona&#x27;s central garrison was on the site of what is now the Hoher Markt (the &quot;High Market&quot; so-called because of its relative height over the Danube), and you can still see astounding excavations of its foundations there today. Given its prestige, <strong>Vienna</strong> hosted the Habsburg court for several centuries, first as the Imperial seat of the Holy Roman Empire, then the capital of the Austrian Empire, and later of the Austro-Hungarian Empire, which finally fell in 1918 with the abdication of the last Emperor Karl I. The court tremendously influenced the culture that exists here even today: <strong>Vienna</strong>&#x27;s residents are often overly formal, with small doses of courtliness, polite forms of address, and formal dress attire. One distinguishable paradox of the quirky city is that its residents can be equally modern and progressive as they are extremely old-fashioned. The empires also served to make <strong>Vienna</strong> a very metropolitan city at an early time, and especially so through the years of industrialization and fall of the Austro-Hungarian Empire at the turn of the 20th century.</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/vienna.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Vienna" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Vienna</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 48.1845, "lon": 16.3122, "n": "Sch\u00f6nbrunn Palace", "d": "Grand Baroque palace and former summer residence."}, {"lat": 48.2084, "lon": 16.3731, "n": "St. Stephen's", "d": "Iconic Gothic cathedral in the city center."}, {"lat": 48.1915, "lon": 16.3808, "n": "Belvedere", "d": "Historic complex with two Baroque palaces and art."}, {"lat": 48.2166, "lon": 16.3958, "n": "Prater", "d": "Large public park with a giant Ferris wheel."}, {"lat": 48.2065, "lon": 16.3653, "n": "Hofburg", "d": "Former imperial palace of the Habsburgs."}, {"lat": 48.203, "lon": 16.3691, "n": "State Opera", "d": "One of the leading opera houses in the world."}, {"lat": 48.1973, "lon": 16.361, "n": "Naschmarkt", "d": "Famous open-air market for food and goods."}, {"lat": 48.2047, "lon": 16.3681, "n": "Albertina", "d": "Art museum with one of the world's largest print rooms."}, {"lat": 48.2037, "lon": 16.3617, "n": "Kunsthistorisches", "d": "Imperial museum of art and artifacts."}, {"lat": 48.2109, "lon": 16.3575, "n": "Rathaus", "d": "Neogothic city hall building and event square."}];
   var venues=[{"lat": 48.2177686, "lon": 16.3374533, "n": "'s Beisl am Eck", "cat": "pub"}, {"lat": 48.2060233, "lon": 16.3865177, "n": "'s Stammbeisl", "cat": "pub"}, {"lat": 48.2171591, "lon": 16.3774265, "n": "6er Haus", "cat": "pub"}, {"lat": 48.2290642, "lon": 16.3437056, "n": "Anton Frank - cafe bar", "cat": "pub"}, {"lat": 48.2044132, "lon": 16.3432618, "n": "BackBone Irish Pub", "cat": "pub"}, {"lat": 48.2098841, "lon": 16.3677, "n": "Bockshorn Irish Pub", "cat": "pub"}, {"lat": 48.2160352, "lon": 16.3784001, "n": "Brendl", "cat": "pub"}, {"lat": 48.218708, "lon": 16.3810931, "n": "Bricks", "cat": "nightclub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([48.2082,16.3738],13);
+    cityMap.setView([48.2082,16.3738],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

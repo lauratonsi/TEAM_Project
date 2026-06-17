@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Athens — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,94 +31,121 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='47.6'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='55.2'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='45'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='37.6'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Southern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='039'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9715'><meta itemprop='longitude' content='23.7257'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/athens.jpg' alt='Athens Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇬🇷 Athens <span style="opacity:.7;font-weight:400">· Atene</span></h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/athens.jpg' alt='Athens Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇬🇷 Athens <span style="opacity:.7;font-weight:400">· Atene</span></h1><p class='city-hero-sub'>Southern Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>47.6</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:48%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>47.6</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='48'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>115.44€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>55.2</span>
+                    <div class='circular-ring ring-safe' data-pct='55'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>55.2</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:55%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>45</span>
+                    <div class='circular-ring ring-green' data-pct='45'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>45</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:45%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>115.44€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>27</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>27</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>37.6</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:38%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>37.6</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='38'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>Transport for <strong>Athens</strong> (<em>OASA</em>) operates public transportation in <strong>Athens</strong>. Its subdivisions include STASY and OSY. A single ticket allows you to travel on any types of transport, metro, trams, buses, with unlimited transfers anywhere time within <strong>Athens</strong> for 90 minutes.</p></div>
-    <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Dionissotis Camping</b> <small>(<span itemprop='priceRange'>€6 per person, €4 per small tent, €6 per large tent/caravan</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Athens Backpackers</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Athens Psiri Hotel</b> <small>(<span itemprop='priceRange'>€35</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Safestay Athens Monastiraki</b> <small>(<span itemprop='priceRange'>€15-50</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hotel Dioskouros Athens</b> <small>(<span itemprop='priceRange'>€15-20 per person in high season</span>)</small></li></ul></div>
-    <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul style='margin:0; padding-left:15px;'><li><b>Central Athens</b>: Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. ...</li><li><b>North Athens</b>: Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. ...</li><li><b>West Athens</b>: Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. ...</li><li><b>Piraeus (Area)</b>: Quartiere di Atene.</li><li><b>South Athens</b>: Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. ...</li></ul></div>
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=37.9769161,23.732861' target='_blank'>7 Jokers</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9769161'><meta itemprop='longitude' content='23.732861'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=37.975977,23.7161799' target='_blank'>ACRO bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.975977'><meta itemprop='longitude' content='23.7161799'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=37.9831211,23.7366482' target='_blank'>After Dark</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9831211'><meta itemprop='longitude' content='23.7366482'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=37.9818864,23.7166125' target='_blank'>Alphaville</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9818864'><meta itemprop='longitude' content='23.7166125'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=37.9969291,23.723771' target='_blank'>Amora</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9969291'><meta itemprop='longitude' content='23.723771'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><a itemprop='name' href='https://www.google.com/maps?q=37.9711118,23.7045141' target='_blank'>Anodos</a> <span style='color:#94a3b8; font-size:0.82rem;'>(nightclub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9711118'><meta itemprop='longitude' content='23.7045141'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=37.9742911,23.7316857' target='_blank'>Blue Bird</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9742911'><meta itemprop='longitude' content='23.7316857'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=37.984424,23.7345382' target='_blank'>Box</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.984424'><meta itemprop='longitude' content='23.7345382'></div></li></ul></div>
-    
+        <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul class='block-ul'><li><b>Central Athens</b>: Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. ...</li><li><b>North Athens</b>: Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. ...</li><li><b>West Athens</b>: Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. ...</li><li><b>Piraeus (Area)</b>: Quartiere di Atene.</li><li><b>South Athens</b>: Athens (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. ...</li></ul></div>
+    </div>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Acropolis</span><p class='attr-card-desc' itemprop='description'>Ancient citadel with the Parthenon and other historic ruins.</p><a href='https://www.google.com/maps?q=37.9715,23.7257' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9715'><meta itemprop='longitude' content='23.7257'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Parthenon</span><p class='attr-card-desc' itemprop='description'>Iconic temple dedicated to the goddess Athena.</p><a href='https://www.google.com/maps?q=37.9715,23.7267' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9715'><meta itemprop='longitude' content='23.7267'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Acropolis Museum</span><p class='attr-card-desc' itemprop='description'>Museum housing artifacts found on the Acropolis site.</p><a href='https://www.google.com/maps?q=37.9681,23.7285' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9681'><meta itemprop='longitude' content='23.7285'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Ancient Agora</span><p class='attr-card-desc' itemprop='description'>The ancient marketplace and heart of public life in Athens.</p><a href='https://www.google.com/maps?q=37.9751,23.7225' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9751'><meta itemprop='longitude' content='23.7225'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Plaka</span><p class='attr-card-desc' itemprop='description'>Oldest neighborhood with neoclassical houses and tavernas.</p><a href='https://www.google.com/maps?q=37.9719,23.7303' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9719'><meta itemprop='longitude' content='23.7303'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Temple of Zeus</span><p class='attr-card-desc' itemprop='description'>Ruined colossal temple dedicated to the king of Olympian gods.</p><a href='https://www.google.com/maps?q=37.9693,23.7331' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9693'><meta itemprop='longitude' content='23.7331'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Syntagma Square</span><p class='attr-card-desc' itemprop='description'>Central square and home of the Hellenic Parliament.</p><a href='https://www.google.com/maps?q=37.9755,23.7348' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9755'><meta itemprop='longitude' content='23.7348'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>National Archaeology Museum</span><p class='attr-card-desc' itemprop='description'>Vast collection of ancient Greek antiquities.</p><a href='https://www.google.com/maps?q=37.9891,23.7327' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9891'><meta itemprop='longitude' content='23.7327'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Panathenaic Stadium</span><p class='attr-card-desc' itemprop='description'>Marble stadium that hosted the first modern Olympic Games.</p><a href='https://www.google.com/maps?q=37.9683,23.7411' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9683'><meta itemprop='longitude' content='23.7411'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Lycabettus Hill</span><p class='attr-card-desc' itemprop='description'>Highest point in Athens offering panoramic views.</p><a href='https://www.google.com/maps?q=37.9819,23.7432' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9819'><meta itemprop='longitude' content='23.7432'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=37.9769161,23.732861' target='_blank'>7 Jokers</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9769161'><meta itemprop='longitude' content='23.732861'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=37.975977,23.7161799' target='_blank'>ACRO bar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.975977'><meta itemprop='longitude' content='23.7161799'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=37.9831211,23.7366482' target='_blank'>After Dark</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9831211'><meta itemprop='longitude' content='23.7366482'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=37.9818864,23.7166125' target='_blank'>Alphaville</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9818864'><meta itemprop='longitude' content='23.7166125'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=37.9969291,23.723771' target='_blank'>Amora</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9969291'><meta itemprop='longitude' content='23.723771'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=37.9711118,23.7045141' target='_blank'>Anodos</a></span><span class='venue-cat cat-nightclub'>nightclub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9711118'><meta itemprop='longitude' content='23.7045141'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=37.9742911,23.7316857' target='_blank'>Blue Bird</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9742911'><meta itemprop='longitude' content='23.7316857'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=37.984424,23.7345382' target='_blank'>Box</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.984424'><meta itemprop='longitude' content='23.7345382'></div></li></ul></div>
+        <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul class='block-ul'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Dionissotis Camping</b> <small>(<span itemprop='priceRange'>€6 per person, €4 per small tent, €6 per large tent/caravan</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Athens Backpackers</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Athens Psiri Hotel</b> <small>(<span itemprop='priceRange'>€35</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Safestay Athens Monastiraki</b> <small>(<span itemprop='priceRange'>€15-50</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hotel Dioskouros Athens</b> <small>(<span itemprop='priceRange'>€15-20 per person in high season</span>)</small></li></ul></div>
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>Transport for <strong>Athens</strong> (<em>OASA</em>) operates public transportation in <strong>Athens</strong>. Its subdivisions include STASY and OSY. A single ticket allows you to travel on any types of transport, metro, trams, buses, with unlimited transfers anywhere time within <strong>Athens</strong> for 90 minutes.</p></div>
+        
         <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
+            <div class='desc-section strategic'>
                 <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>The cradle of Western civilization is undergoing an urban renaissance focused on digitization and the recovery of historic spaces. The mix of monumental heritage and new economic incentives makes it a strategic case study in the Mediterranean.</p>
+                <p class='desc-strategic-p' itemprop='description'>The cradle of Western civilization is undergoing an urban renaissance focused on digitization and the recovery of historic spaces. The mix of monumental heritage and new economic incentives makes it a strategic case study in the Mediterranean.</p>
             </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Athens</strong> (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don&#x27;t come expecting a philosopher&#x27;s theme park; contemporary <strong>Athens</strong> is the graffiti-coated, fast-beating urban heart of the country, where modern Greek culture, business and social life flourish amidst ancient monuments. <strong>Athens</strong> is the largest city in Greece, and sprawls across the majority of the Attica region. Most areas of interest to visitors will be found within the central <strong>Athens</strong> municipality. The following are the five main regions.  * Central <strong>Athens</strong> - The active heart of the city. Most ancient sites as well as museums can be found here. 
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Athens</strong> (Greek: , Athína) is the capital city of Greece with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of Classical Greece, a place that deeply influenced the course of Western civilization. Don&#x27;t come expecting a philosopher&#x27;s theme park; contemporary <strong>Athens</strong> is the graffiti-coated, fast-beating urban heart of the country, where modern Greek culture, business and social life flourish amidst ancient monuments. <strong>Athens</strong> is the largest city in Greece, and sprawls across the majority of the Attica region. Most areas of interest to visitors will be found within the central <strong>Athens</strong> municipality. The following are the five main regions.  * Central <strong>Athens</strong> - The active heart of the city. Most ancient sites as well as museums can be found here. 
 * North <strong>Athens</strong> - A mainly residential area. Contains some museums, high end restaurants and malls, and activities.
 * West <strong>Athens</strong> - Residential with some malls. 
 * Piraeus (<em>Area</em>) - <strong>Athens</strong>&#x27; main port. Location of National Library as well as some activities.
 * South <strong>Athens</strong> - The location of most beaches accessible by public transport. According to mythology, the Greek Gods Poseidon and Athena wanted to claim the city for their own. To persuade the people to accept them, they granted gifts. Poseidon struck his spear into the ground and produced running water. Athena gave the city olive trees, which provide food and economic prosperity through trade. The people were then asked to vote for the Gods, and Athena won by a single vote, resulting in the city bearing her name. The first pre-historic settlements were constructed in 3000 BCE around the hill of Acropolis. According to legend the King of <strong>Athens</strong>, Theseus, unified the ten tribes of early <strong>Athens</strong> into one kingdom in around 1230 BCE. This process of synoikismos () – bringing together in one home – created the largest and wealthiest state on the Greek mainland, but it also created a larger class of people excluded from political life by the nobility. By the 7th century BCE, social unrest had become widespread, and the Areopagus appointed Draco to draft a strict new law code (hence &quot;draconian&quot;). Still, the Draconian laws were a big advancement, as they codified crime and punishment unlike the previous arbitrary judgments of the rulers. When Draco&#x27;s system failed, they appointed Solon, with a mandate to create a new constitution (594 BCE). This was the great beginning of a new social revolution, which was the result of the democracy under Cleisthenes (508 BCE). When Roman historians wrote the history of their own republic, they fudged the date so that their republic would be older than Athenian democracy, but today&#x27;s scholarly consensus is that Rome &quot;got inspiration&quot; from the Greeks. In the 5th century BCE, <strong>Athens</strong> reached the peak of its fame.</p></div>
         </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Acropolis</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9715'><meta itemprop='longitude' content='23.7257'></div></td><td class='atn-desc'><span itemprop='description'>Ancient citadel with the Parthenon and other historic ruins.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9715,23.7257' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Parthenon</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9715'><meta itemprop='longitude' content='23.7267'></div></td><td class='atn-desc'><span itemprop='description'>Iconic temple dedicated to the goddess Athena.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9715,23.7267' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Acropolis Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9681'><meta itemprop='longitude' content='23.7285'></div></td><td class='atn-desc'><span itemprop='description'>Museum housing artifacts found on the Acropolis site.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9681,23.7285' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Ancient Agora</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9751'><meta itemprop='longitude' content='23.7225'></div></td><td class='atn-desc'><span itemprop='description'>The ancient marketplace and heart of public life in Athens.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9751,23.7225' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Plaka</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9719'><meta itemprop='longitude' content='23.7303'></div></td><td class='atn-desc'><span itemprop='description'>Oldest neighborhood with neoclassical houses and tavernas.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9719,23.7303' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Temple of Zeus</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9693'><meta itemprop='longitude' content='23.7331'></div></td><td class='atn-desc'><span itemprop='description'>Ruined colossal temple dedicated to the king of Olympian gods.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9693,23.7331' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Syntagma Square</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9755'><meta itemprop='longitude' content='23.7348'></div></td><td class='atn-desc'><span itemprop='description'>Central square and home of the Hellenic Parliament.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9755,23.7348' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>National Archaeology Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9891'><meta itemprop='longitude' content='23.7327'></div></td><td class='atn-desc'><span itemprop='description'>Vast collection of ancient Greek antiquities.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9891,23.7327' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Panathenaic Stadium</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9683'><meta itemprop='longitude' content='23.7411'></div></td><td class='atn-desc'><span itemprop='description'>Marble stadium that hosted the first modern Olympic Games.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9683,23.7411' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Lycabettus Hill</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='37.9819'><meta itemprop='longitude' content='23.7432'></div></td><td class='atn-desc'><span itemprop='description'>Highest point in Athens offering panoramic views.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=37.9819,23.7432' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
-    </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/athens.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Athens" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Athens</a>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/athens.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Athens" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Athens</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 37.9715, "lon": 23.7257, "n": "Acropolis", "d": "Ancient citadel with the Parthenon and other historic ruins."}, {"lat": 37.9715, "lon": 23.7267, "n": "Parthenon", "d": "Iconic temple dedicated to the goddess Athena."}, {"lat": 37.9681, "lon": 23.7285, "n": "Acropolis Museum", "d": "Museum housing artifacts found on the Acropolis site."}, {"lat": 37.9751, "lon": 23.7225, "n": "Ancient Agora", "d": "The ancient marketplace and heart of public life in Athens."}, {"lat": 37.9719, "lon": 23.7303, "n": "Plaka", "d": "Oldest neighborhood with neoclassical houses and tavernas."}, {"lat": 37.9693, "lon": 23.7331, "n": "Temple of Zeus", "d": "Ruined colossal temple dedicated to the king of Olympian gods."}, {"lat": 37.9755, "lon": 23.7348, "n": "Syntagma Square", "d": "Central square and home of the Hellenic Parliament."}, {"lat": 37.9891, "lon": 23.7327, "n": "National Archaeology Museum", "d": "Vast collection of ancient Greek antiquities."}, {"lat": 37.9683, "lon": 23.7411, "n": "Panathenaic Stadium", "d": "Marble stadium that hosted the first modern Olympic Games."}, {"lat": 37.9819, "lon": 23.7432, "n": "Lycabettus Hill", "d": "Highest point in Athens offering panoramic views."}];
   var venues=[{"lat": 37.9769161, "lon": 23.732861, "n": "7 Jokers", "cat": "bar"}, {"lat": 37.975977, "lon": 23.7161799, "n": "ACRO bar", "cat": "bar"}, {"lat": 37.9831211, "lon": 23.7366482, "n": "After Dark", "cat": "bar"}, {"lat": 37.9818864, "lon": 23.7166125, "n": "Alphaville", "cat": "bar"}, {"lat": 37.9969291, "lon": 23.723771, "n": "Amora", "cat": "bar"}, {"lat": 37.9711118, "lon": 23.7045141, "n": "Anodos", "cat": "nightclub"}, {"lat": 37.9742911, "lon": 23.7316857, "n": "Blue Bird", "cat": "bar"}, {"lat": 37.984424, "lon": 23.7345382, "n": "Box", "cat": "bar"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -125,9 +153,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([37.9838,23.7275],13);
+    cityMap.setView([37.9838,23.7275],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -135,6 +163,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

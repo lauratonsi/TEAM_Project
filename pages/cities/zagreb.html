@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Zagreb — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,92 +31,119 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='67.9'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='77.1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='70'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='45.2'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Southern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='039'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8144'><meta itemprop='longitude' content='15.9792'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/zagreb.jpg' alt='Zagreb Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇭🇷 Zagreb <span style="opacity:.7;font-weight:400">· Zagabria</span></h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/zagreb.jpg' alt='Zagreb Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-safe'>🛡️ Ultra Safe</span><span class='city-hero-badge badge-top'>⭐ Top Rated</span><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇭🇷 Zagreb <span style="opacity:.7;font-weight:400">· Zagabria</span></h1><p class='city-hero-sub'>Southern Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>67.9</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:68%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>67.9</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='68'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>101.38€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>77.1</span>
+                    <div class='circular-ring ring-safe' data-pct='77'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>77.1</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:77%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>70</span>
+                    <div class='circular-ring ring-green' data-pct='70'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>70</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:70%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>101.38€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>30</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>30</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>45.2</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:45%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>45.2</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='45'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>Buses leave from the airport at 07:00 and every 30 minutes between 08:00 and 20:00. Beyond these hours, there are buses leaving to the main bus station every time a Croatia Airlines plane lands. When traveling to the airport from the main <strong>Zagreb</strong> bus station, the buses are scheduled between 04:30 and 20:30.</p></div>
-    <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Chillout Hostel Zagreb</b> <small>(<span itemprop='priceRange'>From €25</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Fulir Hostel Zagreb</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Funk Lounge</b> <small>(<span itemprop='priceRange'>dorm from: €13, private from: €20</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hobo Bear Hostel</b> <small>(<span itemprop='priceRange'>Dorm bed: €14</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hostel Lika</b> <small>(<span itemprop='priceRange'>Dorm bed: €13.5</span>)</small></li></ul></div>
-    
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=45.8074304,15.9841948' target='_blank'>&amp; More by Sheraton bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8074304'><meta itemprop='longitude' content='15.9841948'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=45.8007542,15.9723829' target='_blank'>808 bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8007542'><meta itemprop='longitude' content='15.9723829'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=45.7872642,15.9529793' target='_blank'>A most unusual garden</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.7872642'><meta itemprop='longitude' content='15.9529793'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=45.7859116,15.9528122' target='_blank'>Absolut bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.7859116'><meta itemprop='longitude' content='15.9528122'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=45.7957109,15.9000845' target='_blank'>After Eight</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.7957109'><meta itemprop='longitude' content='15.9000845'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=45.8088727,15.9973586' target='_blank'>Akunbar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8088727'><meta itemprop='longitude' content='15.9973586'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=45.8077358,15.9965759' target='_blank'>Ambasada</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8077358'><meta itemprop='longitude' content='15.9965759'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=45.7961008,15.9697694' target='_blank'>Anera</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.7961008'><meta itemprop='longitude' content='15.9697694'></div></li></ul></div>
-    
+        
+    </div>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Zagreb Cathedral</span><p class='attr-card-desc' itemprop='description'>Gothic cathedral and tallest building in Croatia.</p><a href='https://www.google.com/maps?q=45.8144,15.9792' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8144'><meta itemprop='longitude' content='15.9792'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>St. Mark's Church</span><p class='attr-card-desc' itemprop='description'>Church famous for its colorful tiled roof.</p><a href='https://www.google.com/maps?q=45.8164,15.9739' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8164'><meta itemprop='longitude' content='15.9739'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Upper Town</span><p class='attr-card-desc' itemprop='description'>Historic medieval core of Zagreb (Gradec).</p><a href='https://www.google.com/maps?q=45.815,15.9733' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.815'><meta itemprop='longitude' content='15.9733'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Ban Jelacic Square</span><p class='attr-card-desc' itemprop='description'>The central square and meeting point of the city.</p><a href='https://www.google.com/maps?q=45.8131,15.9772' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8131'><meta itemprop='longitude' content='15.9772'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Maksimir Park</span><p class='attr-card-desc' itemprop='description'>Oldest public park in South East Europe.</p><a href='https://www.google.com/maps?q=45.8242,16.0189' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8242'><meta itemprop='longitude' content='16.0189'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Museum of Broken Relationships</span><p class='attr-card-desc' itemprop='description'>Unique museum dedicated to failed love stories.</p><a href='https://www.google.com/maps?q=45.815,15.9731' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.815'><meta itemprop='longitude' content='15.9731'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Dolac Market</span><p class='attr-card-desc' itemprop='description'>The main open-air farmers market.</p><a href='https://www.google.com/maps?q=45.8139,15.9775' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8139'><meta itemprop='longitude' content='15.9775'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Lotrščak Tower</span><p class='attr-card-desc' itemprop='description'>13th-century tower with a daily cannon shot.</p><a href='https://www.google.com/maps?q=45.8144,15.9733' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8144'><meta itemprop='longitude' content='15.9733'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Zrinjevac Park</span><p class='attr-card-desc' itemprop='description'>Park with a music pavilion and fountains.</p><a href='https://www.google.com/maps?q=45.8106,15.9783' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8106'><meta itemprop='longitude' content='15.9783'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Mimara Museum</span><p class='attr-card-desc' itemprop='description'>Art museum housing the collection of Wiltrud and Ante Mimara.</p><a href='https://www.google.com/maps?q=45.8086,15.9678' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8086'><meta itemprop='longitude' content='15.9678'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=45.8074304,15.9841948' target='_blank'>&amp; More by Sheraton bar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8074304'><meta itemprop='longitude' content='15.9841948'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=45.8007542,15.9723829' target='_blank'>808 bar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8007542'><meta itemprop='longitude' content='15.9723829'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=45.7872642,15.9529793' target='_blank'>A most unusual garden</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.7872642'><meta itemprop='longitude' content='15.9529793'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=45.7859116,15.9528122' target='_blank'>Absolut bar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.7859116'><meta itemprop='longitude' content='15.9528122'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=45.7957109,15.9000845' target='_blank'>After Eight</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.7957109'><meta itemprop='longitude' content='15.9000845'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=45.8088727,15.9973586' target='_blank'>Akunbar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8088727'><meta itemprop='longitude' content='15.9973586'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=45.8077358,15.9965759' target='_blank'>Ambasada</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8077358'><meta itemprop='longitude' content='15.9965759'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=45.7961008,15.9697694' target='_blank'>Anera</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.7961008'><meta itemprop='longitude' content='15.9697694'></div></li></ul></div>
+        <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul class='block-ul'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Chillout Hostel Zagreb</b> <small>(<span itemprop='priceRange'>From €25</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Fulir Hostel Zagreb</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Funk Lounge</b> <small>(<span itemprop='priceRange'>dorm from: €13, private from: €20</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hobo Bear Hostel</b> <small>(<span itemprop='priceRange'>Dorm bed: €14</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hostel Lika</b> <small>(<span itemprop='priceRange'>Dorm bed: €13.5</span>)</small></li></ul></div>
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>Buses leave from the airport at 07:00 and every 30 minutes between 08:00 and 20:00. Beyond these hours, there are buses leaving to the main bus station every time a Croatia Airlines plane lands. When traveling to the airport from the main <strong>Zagreb</strong> bus station, the buses are scheduled between 04:30 and 20:30.</p></div>
+        
         <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
+            <div class='desc-section strategic'>
                 <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>A city with a dual character, Central European and Mediterranean, <strong>Zagreb</strong> offers relaxed and safe livability. Its horseshoe-shaped parks and café life make it welcoming and lively.</p>
+                <p class='desc-strategic-p' itemprop='description'>A city with a dual character, Central European and Mediterranean, <strong>Zagreb</strong> offers relaxed and safe livability. Its horseshoe-shaped parks and café life make it welcoming and lively.</p>
             </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Zagreb</strong> is a city in Central Croatia and the capital of Croatia. The city has a charming medieval &#x27;old city&#x27; with architecture and cobbled streets reminiscent of Vienna, Budapest, Prague and other Central European capitals. <strong>Zagreb</strong> is a vibrant city of around 770,000 people (2021, metropolitan area: 1,100,000). In 2017 it was visited by over a million tourists, mainly from Austria, Germany and Italy. <strong>Zagreb</strong> is also well known for its Advent festival, which occurs from December to early January, boasting vibrant nightlife and additional cultural and gastronomic activities. *  Other information points are located at the airport, bus station, railway station and at the Lotrščak Tower. Getting there: * Buses leave from the airport at 07:00 and every 30 minutes between 08:00 and 20:00. Beyond these hours, there are buses leaving to the main bus station every time a Croatia Airlines plane lands. When traveling to the airport from the main <strong>Zagreb</strong> bus station, the buses are scheduled between 04:30 and 20:30. A journey takes about 30 min. The price of the single ticket is . Online timetable can be checked at the Pleso prijevoz website. Airport buses leave from the main bus station which is in the wider city center; they leave from its northeast wing (toward the city)—look for &quot;Croatia Airlines&quot; and &quot;Eurolines&quot; banners on the building.
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Zagreb</strong> is a city in Central Croatia and the capital of Croatia. The city has a charming medieval &#x27;old city&#x27; with architecture and cobbled streets reminiscent of Vienna, Budapest, Prague and other Central European capitals. <strong>Zagreb</strong> is a vibrant city of around 770,000 people (2021, metropolitan area: 1,100,000). In 2017 it was visited by over a million tourists, mainly from Austria, Germany and Italy. <strong>Zagreb</strong> is also well known for its Advent festival, which occurs from December to early January, boasting vibrant nightlife and additional cultural and gastronomic activities. *  Other information points are located at the airport, bus station, railway station and at the Lotrščak Tower. Getting there: * Buses leave from the airport at 07:00 and every 30 minutes between 08:00 and 20:00. Beyond these hours, there are buses leaving to the main bus station every time a Croatia Airlines plane lands. When traveling to the airport from the main <strong>Zagreb</strong> bus station, the buses are scheduled between 04:30 and 20:30. A journey takes about 30 min. The price of the single ticket is . Online timetable can be checked at the Pleso prijevoz website. Airport buses leave from the main bus station which is in the wider city center; they leave from its northeast wing (toward the city)—look for &quot;Croatia Airlines&quot; and &quot;Eurolines&quot; banners on the building.
 * A cheaper local ZET bus 290 also goes to the city center (and back to the airport) from the main road outside the terminal. 
 * You can also order a taxi, Bolt or Uber. A ride from the airport to the city center can cost from . Five trains a day run from Ljubljana, taking 2 hr 30 min via Zidani Most and the border at Dobova. Two of these start from Villach (4-5 hr). Tickets cannot be purchased online; they can only be purchased at the station. Second-class tickets are for €9, but first-class is also available. From Zurich, Munich or Vienna change at Villach. From Budapest change at Graz and Zidani Most.  Domestic trains are slow. Two per day are from Rijeka (one direct, one with a change), taking 5 hours via just about every intervening village with a j or v in its name. One train a day from Split takes 8 hours. Three per day run from Hrvatska Kostajnica, taking 1 hr 40 min. Local trains fan out to Harmica, Ivanić-Grad, Koprivnica, Novoselec, Ogulin, Savski Marof, Sisak Caprag, Vinkovci, Virovitica and Zabok.  See Croatia Railways for timetables and tickets. Trains no longer cross the border to Sarajevo in Bosnia. The work-around rail route is to take the train from <strong>Zagreb</strong> main station at 09:00 to Hrvatska Kostajnica, arriving by 10:45. This is 3 km from the Bosnian border crossing, either take a taxi, or walk south into town then east and cross the river by the first bridge. Once you&#x27;ve entered Bosnia, find a taxi to Banja Luka, 100 km southeast and taking 90 min. You&#x27;ll reach Banja Luka in time for the 15:45 local train to Sarajevo via Zenica, arriving by 20:40. Or take the direct bus from <strong>Zagreb</strong> to Banja Luka.</p></div>
         </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Zagreb Cathedral</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8144'><meta itemprop='longitude' content='15.9792'></div></td><td class='atn-desc'><span itemprop='description'>Gothic cathedral and tallest building in Croatia.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.8144,15.9792' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>St. Mark's Church</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8164'><meta itemprop='longitude' content='15.9739'></div></td><td class='atn-desc'><span itemprop='description'>Church famous for its colorful tiled roof.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.8164,15.9739' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Upper Town</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.815'><meta itemprop='longitude' content='15.9733'></div></td><td class='atn-desc'><span itemprop='description'>Historic medieval core of Zagreb (Gradec).</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.815,15.9733' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Ban Jelacic Square</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8131'><meta itemprop='longitude' content='15.9772'></div></td><td class='atn-desc'><span itemprop='description'>The central square and meeting point of the city.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.8131,15.9772' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Maksimir Park</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8242'><meta itemprop='longitude' content='16.0189'></div></td><td class='atn-desc'><span itemprop='description'>Oldest public park in South East Europe.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.8242,16.0189' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Museum of Broken Relationships</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.815'><meta itemprop='longitude' content='15.9731'></div></td><td class='atn-desc'><span itemprop='description'>Unique museum dedicated to failed love stories.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.815,15.9731' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Dolac Market</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8139'><meta itemprop='longitude' content='15.9775'></div></td><td class='atn-desc'><span itemprop='description'>The main open-air farmers market.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.8139,15.9775' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Lotrščak Tower</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8144'><meta itemprop='longitude' content='15.9733'></div></td><td class='atn-desc'><span itemprop='description'>13th-century tower with a daily cannon shot.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.8144,15.9733' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Zrinjevac Park</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8106'><meta itemprop='longitude' content='15.9783'></div></td><td class='atn-desc'><span itemprop='description'>Park with a music pavilion and fountains.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.8106,15.9783' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Mimara Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='45.8086'><meta itemprop='longitude' content='15.9678'></div></td><td class='atn-desc'><span itemprop='description'>Art museum housing the collection of Wiltrud and Ante Mimara.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=45.8086,15.9678' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
-    </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/zagreb.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Zagreb" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Zagreb</a>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/zagreb.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Zagreb" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Zagreb</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 45.8144, "lon": 15.9792, "n": "Zagreb Cathedral", "d": "Gothic cathedral and tallest building in Croatia."}, {"lat": 45.8164, "lon": 15.9739, "n": "St. Mark's Church", "d": "Church famous for its colorful tiled roof."}, {"lat": 45.815, "lon": 15.9733, "n": "Upper Town", "d": "Historic medieval core of Zagreb (Gradec)."}, {"lat": 45.8131, "lon": 15.9772, "n": "Ban Jelacic Square", "d": "The central square and meeting point of the city."}, {"lat": 45.8242, "lon": 16.0189, "n": "Maksimir Park", "d": "Oldest public park in South East Europe."}, {"lat": 45.815, "lon": 15.9731, "n": "Museum of Broken Relationships", "d": "Unique museum dedicated to failed love stories."}, {"lat": 45.8139, "lon": 15.9775, "n": "Dolac Market", "d": "The main open-air farmers market."}, {"lat": 45.8144, "lon": 15.9733, "n": "Lotr\u0161\u010dak Tower", "d": "13th-century tower with a daily cannon shot."}, {"lat": 45.8106, "lon": 15.9783, "n": "Zrinjevac Park", "d": "Park with a music pavilion and fountains."}, {"lat": 45.8086, "lon": 15.9678, "n": "Mimara Museum", "d": "Art museum housing the collection of Wiltrud and Ante Mimara."}];
   var venues=[{"lat": 45.8074304, "lon": 15.9841948, "n": "&amp; More by Sheraton bar", "cat": "bar"}, {"lat": 45.8007542, "lon": 15.9723829, "n": "808 bar", "cat": "bar"}, {"lat": 45.7872642, "lon": 15.9529793, "n": "A most unusual garden", "cat": "bar"}, {"lat": 45.7859116, "lon": 15.9528122, "n": "Absolut bar", "cat": "bar"}, {"lat": 45.7957109, "lon": 15.9000845, "n": "After Eight", "cat": "bar"}, {"lat": 45.8088727, "lon": 15.9973586, "n": "Akunbar", "cat": "bar"}, {"lat": 45.8077358, "lon": 15.9965759, "n": "Ambasada", "cat": "pub"}, {"lat": 45.7961008, "lon": 15.9697694, "n": "Anera", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -123,9 +151,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([45.815,15.9819],13);
+    cityMap.setView([45.815,15.9819],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -133,6 +161,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

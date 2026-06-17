@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Bratislava — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='61.7'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='68.4'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='65'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='41.9'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Eastern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='151'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1422'><meta itemprop='longitude' content='17.1002'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/bratislava.jpg' alt='Bratislava Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇸🇰 Bratislava</h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/bratislava.jpg' alt='Bratislava Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-top'>⭐ Top Rated</span><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇸🇰 Bratislava</h1><p class='city-hero-sub'>Eastern Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>61.7</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:62%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>61.7</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='62'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>107.49€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>68.4</span>
+                    <div class='circular-ring ring-safe' data-pct='68'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>68.4</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:68%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>65</span>
+                    <div class='circular-ring ring-green' data-pct='65'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>65</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:65%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>107.49€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>25</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>25</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>41.9</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:42%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>41.9</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='42'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>There are no dedicated airport shuttles, however the airport is served as part of the municipal bus network. Use bus No 61 (or N61 at night) for a direct connection to the Central Train Station (Hlavná stanica). Or change for a tram at Trnavské mýto to get to the city (in order to get to the tram stop, use the underpass and the exit marked &quot;Centrum&quot; (city ) and take any tram in the direction towards .</p></div>
-    <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Patio Hostel</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hostel Chors</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Wild Elephants Hostel</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hotel Arcus</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Aston Business Hotel</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li></ul></div>
-    
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.1806419,17.1845266' target='_blank'>Amajka</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1806419'><meta itemprop='longitude' content='17.1845266'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.1515503,17.1184819' target='_blank'>Americke pub</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1515503'><meta itemprop='longitude' content='17.1184819'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.1590046,17.1161827' target='_blank'>Bastion</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1590046'><meta itemprop='longitude' content='17.1161827'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.1475592,17.1063371' target='_blank'>Bernard pri Lýceu</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1475592'><meta itemprop='longitude' content='17.1063371'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.1786793,17.0505322' target='_blank'>Black Rose</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1786793'><meta itemprop='longitude' content='17.0505322'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><a itemprop='name' href='https://www.google.com/maps?q=48.1032675,17.040655' target='_blank'>C2</a> <span style='color:#94a3b8; font-size:0.82rem;'>(nightclub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1032675'><meta itemprop='longitude' content='17.040655'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.1527045,17.0863227' target='_blank'>Chilli Pub</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1527045'><meta itemprop='longitude' content='17.0863227'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=48.1623963,17.0499081' target='_blank'>Coral</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1623963'><meta itemprop='longitude' content='17.0499081'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>Strategically located on the Danube, <strong>Bratislava</strong> combines competitive operating costs with rapid growth in the service sector. Its human scale allows for high safety standards and a swift transition to green infrastructure.</p>
-            </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Bratislava</strong> (Hungarian: Pozsony, German: Pressburg, known as Prešporok before 1919), is the capital and largest city of Slovakia. It has a population of more than 475,000 (2021), and is the administrative, cultural and economic centre of the country. For most visitors, it is the entry point into the rest of the country. Located on the border tripoint of Slovakia, Austria and Hungary, the city has sat in the very hearts of empires since its earliest mention in the 10th century. As such, the city is a place of contrasts; the city centre features the medieval and renaissance old town, as well as the skyscraper-heavy business and shopping district; the outskirts feature both hillside villas, and communist-era apartment blocks. <strong>Bratislava</strong> has a very pleasant medieval inner city with narrow, winding streets, a hill-top castle next to the river Danube, and many historic churches and buildings to visit. The old town is centered on two squares, Hlavné námestie (main square) and Hviezdoslavovo námestie (Hviezdoslav square, named after a famous Slovak poet). Of a rather different architectural character are some of the communist-era buildings found in the modern parts of the city; a prime example is Petrzalka housing estate, the biggest Communist-era concrete block housing complex in Central Europe, which stretches on endlessly just across the river. Move further east and there are plenty of rural places to explore. There are farms, vineyards, agricultural land, and tiny villages less than 50 km to the north and east of <strong>Bratislava</strong>. <strong>Bratislava</strong> and its surroundings form the second-most prosperous region in Central and Eastern Europe, with a per capita GDP of around 167% of the EU-27 average. <strong>Bratislava</strong> is the sixth richest region of the European Union, and GDP per capita is about three times higher than in other Slovak regions. After the fall of the Great Moravian Empire, Slovakia became part of the Kingdom of Hungary from the 10th century (later included with the Austro-Hungarian Empire) until the end of the First World War. The city was the capital (1536-1784), the coronation city (1563-1830), and the seat of the Diet (1536-1848) of the Kingdom of Hungary for three centuries. In this period, eleven Hungarian kings and queens were crowned at St. Martin&#x27;s Cathedral. At that time, the city was called Preßburg in German and Pozsony in Hungarian, and had a clear German (42%) and Hungarian (40%) ethnic majority (1910 census). In 1919, the Treaty of Trianon created Czechoslovakia, and <strong>Bratislava</strong> was attached to the newly founded state. In the same year, the name <strong>Bratislava</strong> was officially adopted for the first time. Between 1939 and 1944, Slovakia was a Nazi puppet state. In 1941–1942 and 1944–1945, this government collaborated in deporting most of <strong>Bratislava</strong>&#x27;s approximately 15,000 Jews to concentration camps, where most were murdered.</p></div>
-        </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Bratislava Castle</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1422'><meta itemprop='longitude' content='17.1002'></div></td><td class='atn-desc'><span itemprop='description'>Main castle of the city overlooking the Danube.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1422,17.1002' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>St. Martin's Cathedral</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1415'><meta itemprop='longitude' content='17.1048'></div></td><td class='atn-desc'><span itemprop='description'>Gothic cathedral and former coronation site of kings.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1415,17.1048' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Michael's Gate</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1449'><meta itemprop='longitude' content='17.1068'></div></td><td class='atn-desc'><span itemprop='description'>The only city gate preserved from the medieval fortifications.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1449,17.1068' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Grassalkovich Palace</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1492'><meta itemprop='longitude' content='17.1077'></div></td><td class='atn-desc'><span itemprop='description'>The residence of the President of Slovakia.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1492,17.1077' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Slavin Memorial</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1539'><meta itemprop='longitude' content='17.0997'></div></td><td class='atn-desc'><span itemprop='description'>Monument and cemetery for Soviet soldiers.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1539,17.0997' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>UFO Observation Deck</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1384'><meta itemprop='longitude' content='17.1046'></div></td><td class='atn-desc'><span itemprop='description'>Unique bridge structure with a deck offering city views.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1384,17.1046' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Blue Church</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1432'><meta itemprop='longitude' content='17.1166'></div></td><td class='atn-desc'><span itemprop='description'>Art Nouveau church famous for its blue color.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1432,17.1166' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Primate's Palace</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1442'><meta itemprop='longitude' content='17.1085'></div></td><td class='atn-desc'><span itemprop='description'>Neoclassical palace where the Peace of Pressburg was signed.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1442,17.1085' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Old Town Hall</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1439'><meta itemprop='longitude' content='17.1086'></div></td><td class='atn-desc'><span itemprop='description'>Complex of buildings dating back to the 14th century.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1439,17.1086' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Eurovea</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1402'><meta itemprop='longitude' content='17.1205'></div></td><td class='atn-desc'><span itemprop='description'>Modern riverside district for shopping and leisure.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=48.1402,17.1205' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/bratislava.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Bratislava" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Bratislava</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Bratislava Castle</span><p class='attr-card-desc' itemprop='description'>Main castle of the city overlooking the Danube.</p><a href='https://www.google.com/maps?q=48.1422,17.1002' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1422'><meta itemprop='longitude' content='17.1002'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>St. Martin's Cathedral</span><p class='attr-card-desc' itemprop='description'>Gothic cathedral and former coronation site of kings.</p><a href='https://www.google.com/maps?q=48.1415,17.1048' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1415'><meta itemprop='longitude' content='17.1048'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Michael's Gate</span><p class='attr-card-desc' itemprop='description'>The only city gate preserved from the medieval fortifications.</p><a href='https://www.google.com/maps?q=48.1449,17.1068' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1449'><meta itemprop='longitude' content='17.1068'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Grassalkovich Palace</span><p class='attr-card-desc' itemprop='description'>The residence of the President of Slovakia.</p><a href='https://www.google.com/maps?q=48.1492,17.1077' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1492'><meta itemprop='longitude' content='17.1077'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Slavin Memorial</span><p class='attr-card-desc' itemprop='description'>Monument and cemetery for Soviet soldiers.</p><a href='https://www.google.com/maps?q=48.1539,17.0997' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1539'><meta itemprop='longitude' content='17.0997'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>UFO Observation Deck</span><p class='attr-card-desc' itemprop='description'>Unique bridge structure with a deck offering city views.</p><a href='https://www.google.com/maps?q=48.1384,17.1046' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1384'><meta itemprop='longitude' content='17.1046'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Blue Church</span><p class='attr-card-desc' itemprop='description'>Art Nouveau church famous for its blue color.</p><a href='https://www.google.com/maps?q=48.1432,17.1166' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1432'><meta itemprop='longitude' content='17.1166'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Primate's Palace</span><p class='attr-card-desc' itemprop='description'>Neoclassical palace where the Peace of Pressburg was signed.</p><a href='https://www.google.com/maps?q=48.1442,17.1085' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1442'><meta itemprop='longitude' content='17.1085'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Old Town Hall</span><p class='attr-card-desc' itemprop='description'>Complex of buildings dating back to the 14th century.</p><a href='https://www.google.com/maps?q=48.1439,17.1086' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1439'><meta itemprop='longitude' content='17.1086'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Eurovea</span><p class='attr-card-desc' itemprop='description'>Modern riverside district for shopping and leisure.</p><a href='https://www.google.com/maps?q=48.1402,17.1205' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1402'><meta itemprop='longitude' content='17.1205'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.1806419,17.1845266' target='_blank'>Amajka</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1806419'><meta itemprop='longitude' content='17.1845266'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.1515503,17.1184819' target='_blank'>Americke pub</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1515503'><meta itemprop='longitude' content='17.1184819'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.1590046,17.1161827' target='_blank'>Bastion</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1590046'><meta itemprop='longitude' content='17.1161827'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.1475592,17.1063371' target='_blank'>Bernard pri Lýceu</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1475592'><meta itemprop='longitude' content='17.1063371'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.1786793,17.0505322' target='_blank'>Black Rose</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1786793'><meta itemprop='longitude' content='17.0505322'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.1032675,17.040655' target='_blank'>C2</a></span><span class='venue-cat cat-nightclub'>nightclub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1032675'><meta itemprop='longitude' content='17.040655'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.1527045,17.0863227' target='_blank'>Chilli Pub</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1527045'><meta itemprop='longitude' content='17.0863227'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=48.1623963,17.0499081' target='_blank'>Coral</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='48.1623963'><meta itemprop='longitude' content='17.0499081'></div></li></ul></div>
+        <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul class='block-ul'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Patio Hostel</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hostel Chors</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Wild Elephants Hostel</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Hotel Arcus</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Aston Business Hotel</b> <small>(<span itemprop='priceRange'>Prezzo N/D</span>)</small></li></ul></div>
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>There are no dedicated airport shuttles, however the airport is served as part of the municipal bus network. Use bus No 61 (or N61 at night) for a direct connection to the Central Train Station (Hlavná stanica). Or change for a tram at Trnavské mýto to get to the city (in order to get to the tram stop, use the underpass and the exit marked &quot;Centrum&quot; (city ) and take any tram in the direction towards .</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>Strategically located on the Danube, <strong>Bratislava</strong> combines competitive operating costs with rapid growth in the service sector. Its human scale allows for high safety standards and a swift transition to green infrastructure.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Bratislava</strong> (Hungarian: Pozsony, German: Pressburg, known as Prešporok before 1919), is the capital and largest city of Slovakia. It has a population of more than 475,000 (2021), and is the administrative, cultural and economic centre of the country. For most visitors, it is the entry point into the rest of the country. Located on the border tripoint of Slovakia, Austria and Hungary, the city has sat in the very hearts of empires since its earliest mention in the 10th century. As such, the city is a place of contrasts; the city centre features the medieval and renaissance old town, as well as the skyscraper-heavy business and shopping district; the outskirts feature both hillside villas, and communist-era apartment blocks. <strong>Bratislava</strong> has a very pleasant medieval inner city with narrow, winding streets, a hill-top castle next to the river Danube, and many historic churches and buildings to visit. The old town is centered on two squares, Hlavné námestie (main square) and Hviezdoslavovo námestie (Hviezdoslav square, named after a famous Slovak poet). Of a rather different architectural character are some of the communist-era buildings found in the modern parts of the city; a prime example is Petrzalka housing estate, the biggest Communist-era concrete block housing complex in Central Europe, which stretches on endlessly just across the river. Move further east and there are plenty of rural places to explore. There are farms, vineyards, agricultural land, and tiny villages less than 50 km to the north and east of <strong>Bratislava</strong>. <strong>Bratislava</strong> and its surroundings form the second-most prosperous region in Central and Eastern Europe, with a per capita GDP of around 167% of the EU-27 average. <strong>Bratislava</strong> is the sixth richest region of the European Union, and GDP per capita is about three times higher than in other Slovak regions. After the fall of the Great Moravian Empire, Slovakia became part of the Kingdom of Hungary from the 10th century (later included with the Austro-Hungarian Empire) until the end of the First World War. The city was the capital (1536-1784), the coronation city (1563-1830), and the seat of the Diet (1536-1848) of the Kingdom of Hungary for three centuries. In this period, eleven Hungarian kings and queens were crowned at St. Martin&#x27;s Cathedral. At that time, the city was called Preßburg in German and Pozsony in Hungarian, and had a clear German (42%) and Hungarian (40%) ethnic majority (1910 census). In 1919, the Treaty of Trianon created Czechoslovakia, and <strong>Bratislava</strong> was attached to the newly founded state. In the same year, the name <strong>Bratislava</strong> was officially adopted for the first time. Between 1939 and 1944, Slovakia was a Nazi puppet state. In 1941–1942 and 1944–1945, this government collaborated in deporting most of <strong>Bratislava</strong>&#x27;s approximately 15,000 Jews to concentration camps, where most were murdered.</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/bratislava.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Bratislava" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Bratislava</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 48.1422, "lon": 17.1002, "n": "Bratislava Castle", "d": "Main castle of the city overlooking the Danube."}, {"lat": 48.1415, "lon": 17.1048, "n": "St. Martin's Cathedral", "d": "Gothic cathedral and former coronation site of kings."}, {"lat": 48.1449, "lon": 17.1068, "n": "Michael's Gate", "d": "The only city gate preserved from the medieval fortifications."}, {"lat": 48.1492, "lon": 17.1077, "n": "Grassalkovich Palace", "d": "The residence of the President of Slovakia."}, {"lat": 48.1539, "lon": 17.0997, "n": "Slavin Memorial", "d": "Monument and cemetery for Soviet soldiers."}, {"lat": 48.1384, "lon": 17.1046, "n": "UFO Observation Deck", "d": "Unique bridge structure with a deck offering city views."}, {"lat": 48.1432, "lon": 17.1166, "n": "Blue Church", "d": "Art Nouveau church famous for its blue color."}, {"lat": 48.1442, "lon": 17.1085, "n": "Primate's Palace", "d": "Neoclassical palace where the Peace of Pressburg was signed."}, {"lat": 48.1439, "lon": 17.1086, "n": "Old Town Hall", "d": "Complex of buildings dating back to the 14th century."}, {"lat": 48.1402, "lon": 17.1205, "n": "Eurovea", "d": "Modern riverside district for shopping and leisure."}];
   var venues=[{"lat": 48.1806419, "lon": 17.1845266, "n": "Amajka", "cat": "pub"}, {"lat": 48.1515503, "lon": 17.1184819, "n": "Americke pub", "cat": "pub"}, {"lat": 48.1590046, "lon": 17.1161827, "n": "Bastion", "cat": "pub"}, {"lat": 48.1475592, "lon": 17.1063371, "n": "Bernard pri L\u00fdceu", "cat": "pub"}, {"lat": 48.1786793, "lon": 17.0505322, "n": "Black Rose", "cat": "pub"}, {"lat": 48.1032675, "lon": 17.040655, "n": "C2", "cat": "nightclub"}, {"lat": 48.1527045, "lon": 17.0863227, "n": "Chilli Pub", "cat": "pub"}, {"lat": 48.1623963, "lon": 17.0499081, "n": "Coral", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([48.1486,17.1077],13);
+    cityMap.setView([48.1486,17.1077],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

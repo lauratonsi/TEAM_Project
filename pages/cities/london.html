@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>London — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='49.2'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='46.2'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='68'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='17.5'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Northern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='154'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5194'><meta itemprop='longitude' content='-0.127'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/london.jpg' alt='London Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇬🇧 London <span style="opacity:.7;font-weight:400">· Londra</span></h1>
-    
-        <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>49.2</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:49%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>152.62€</span><span class='stat-local'>≈ 128 £</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>46.2</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:46%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>68</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:68%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>0</span>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>17.5</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:18%'></div></div>
-            </div>
-        </div>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/london.jpg' alt='London Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'></div><h1 class='city-hero-title'>🇬🇧 London <span style="opacity:.7;font-weight:400">· Londra</span></h1><p class='city-hero-sub'>Northern Europe</p></div></div>
     <div class='currency-note'><span class='cur-ico'>🪙</span><div><b>London</b> does not use the euro: the local currency is the <b>pound sterling</b> (GBP, £). Prices on this site are a <b>synthetic estimate in euros</b> (for cross-city comparison); the local equivalent (<b>≈ 128 £</b> per night) is indicative, at 2026-01 reference rates.</div></div>
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>Heathrow Express - Non-stop trains to <strong>London</strong> Paddington. Departures every 15 minutes from Heathrow Terminal 2 and 3, and Heathrow Terminal 5. Journey time is 15-20 minutes.</p></div>
-    
-    <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul style='margin:0; padding-left:15px;'><li><b>City of London</b>: Vibrant and truly multicultural, London is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South-East England. Greate...</li><li><b>Westminster</b>: Quartiere di Londra.</li><li><b>Camden</b>: Quartiere di Londra.</li><li><b>Wandsworth</b>: Quartiere di Londra.</li><li><b>Southwark-Lewisham</b>: Quartiere di Londra.</li></ul></div>
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=51.5167141,-0.1103638' target='_blank'>26 Furnival Street</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5167141'><meta itemprop='longitude' content='-0.1103638'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=51.5566538,-0.1383959' target='_blank'>Aces and Eights Saloon Bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5566538'><meta itemprop='longitude' content='-0.1383959'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=51.5163376,-0.119321' target='_blank'>All Bar One</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5163376'><meta itemprop='longitude' content='-0.119321'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=51.4695231,-0.0698846' target='_blank'>Bar Story</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.4695231'><meta itemprop='longitude' content='-0.0698846'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=51.5411992,-0.1458705' target='_blank'>Canalside Bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5411992'><meta itemprop='longitude' content='-0.1458705'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=51.4994616,-0.1139642' target='_blank'>Crown &amp; Cushion</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.4994616'><meta itemprop='longitude' content='-0.1139642'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=51.5614305,-0.1504467' target='_blank'>Duke of St. Albans</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5614305'><meta itemprop='longitude' content='-0.1504467'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=51.536675,-0.1031148' target='_blank'>Fox on the Green</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.536675'><meta itemprop='longitude' content='-0.1031148'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>Global metropolis with inexhaustible economic power, <strong>London</strong> handles immense tourist flows with cutting-edge security systems. Despite high costs, it remains the hub of innovation and European cultural diversity.</p>
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
+        <div class='stats-box'>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>49.2</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='49'></div></div>
             </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;">Vibrant and truly multicultural, <strong>London</strong> is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South-East England. Greater <strong>London</strong> has a population of a little over 9 million. Considered one of the world&#x27;s leading &quot;global cities&quot;, <strong>London</strong> remains an international capital of culture, music, education, fashion, politics, finance and trade.  For the visitor, there is a seemingly endless choice of historical sites, shopping, museums, food, art galleries, nightlife, and activities. Once a Celtic settlement, <strong>London</strong> is a bustling city, where visitors come to experience the urban heritage and see its specific royal-themed attractions. The name &quot;<strong>London</strong>&quot; used to refer only to the once-walled &quot;Square Mile&quot; of the original Roman and later medieval city; this is now confusingly called the &quot;City of <strong>London</strong>&quot; or just &quot;The City&quot;. Today, <strong>London</strong> has taken on a much larger meaning to include all of the vast central parts of the modern metropolis, with the city having absorbed numerous surrounding towns and villages over the centuries, including large portions of the surrounding &quot;home counties&quot;, one of which - Middlesex - being completely consumed by the growing metropolis. The term Greater <strong>London</strong> embraces Central <strong>London</strong> together with all the outlying suburbs that lie in one continuous urban sprawl within the lower Thames Valley. Though densely populated, <strong>London</strong> retains large swathes of green parkland and open space, even within the city centre. Greater <strong>London</strong> is most of the area surrounded by the M25 orbital motorway, and consists of 32 <strong>London</strong> Boroughs and the City of <strong>London</strong> that, together with the office of the Mayor of <strong>London</strong>, form the basis for <strong>London</strong>&#x27;s local government. The Mayor of <strong>London</strong> is elected by <strong>London</strong> residents and should not be confused with the Lord Mayor of the City of <strong>London</strong>. The names of several boroughs, such as Westminster and Camden, are well-known, others less so, such as Wandsworth and Lewisham. This traveller&#x27;s guide to <strong>London</strong> recognises cultural, functional and social districts of varying type and size: Settlements have existed on the site of <strong>London</strong> since well before Roman times, with evidence of Bronze Age and Celtic inhabitants. The Roman city of Londinium, established just after the Roman conquest of Britannia in the year 43, formed the basis for the modern city (some isolated Roman period remains are still to be seen within the City). After the end of Roman rule in 410 and a short-lived decline, <strong>London</strong> experienced a gradual revival under the Anglo-Saxons, as well as the Norsemen, and emerged as a great medieval trading city, eventually replacing Winchester as the royal capital of England. This paramount status for <strong>London</strong> was confirmed when William the Conqueror, a Norman, built the Tower of <strong>London</strong> after the conquest in 1066 and was crowned King of England in Westminster.</p></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>46.2</span>
+                    <div class='circular-ring ring-safe' data-pct='46'></div>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>68</span>
+                    <div class='circular-ring ring-green' data-pct='68'></div>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>152.62€</span>
+                </div>
+                <span class='val-local'>≈ 128 £</span>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>0</span>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>17.5</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='18'></div></div>
+            </div>
         </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>British Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5194'><meta itemprop='longitude' content='-0.127'></div></td><td class='atn-desc'><span itemprop='description'>Museum dedicated to human history, art and culture.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.5194,-0.127' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Tower of London</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5081'><meta itemprop='longitude' content='-0.0759'></div></td><td class='atn-desc'><span itemprop='description'>Historic castle and home of the Crown Jewels.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.5081,-0.0759' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>London Eye</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5033'><meta itemprop='longitude' content='-0.1195'></div></td><td class='atn-desc'><span itemprop='description'>Giant Ferris wheel with views over the Thames.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.5033,-0.1195' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Buckingham Palace</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5014'><meta itemprop='longitude' content='-0.1419'></div></td><td class='atn-desc'><span itemprop='description'>The official residence of the UK monarch.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.5014,-0.1419' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Westminster Abbey</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.4994'><meta itemprop='longitude' content='-0.1273'></div></td><td class='atn-desc'><span itemprop='description'>Gothic abbey church and site of royal coronations.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.4994,-0.1273' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Tower Bridge</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5055'><meta itemprop='longitude' content='-0.0754'></div></td><td class='atn-desc'><span itemprop='description'>Iconic combined bascule and suspension bridge.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.5055,-0.0754' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Tate Modern</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5076'><meta itemprop='longitude' content='-0.0994'></div></td><td class='atn-desc'><span itemprop='description'>National gallery of international modern art.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.5076,-0.0994' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>St Paul's Cathedral</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5138'><meta itemprop='longitude' content='-0.0984'></div></td><td class='atn-desc'><span itemprop='description'>Anglican cathedral and seat of the Bishop of London.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.5138,-0.0984' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>The Shard</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5045'><meta itemprop='longitude' content='-0.0865'></div></td><td class='atn-desc'><span itemprop='description'>Tallest building in the UK with an observation deck.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.5045,-0.0865' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Natural History Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.4967'><meta itemprop='longitude' content='-0.1764'></div></td><td class='atn-desc'><span itemprop='description'>Museum housing vast specimens from natural history.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=51.4967,-0.1764' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul class='block-ul'><li><b>City of London</b>: Vibrant and truly multicultural, London is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South-East England. Greate...</li><li><b>Westminster</b>: Quartiere di Londra.</li><li><b>Camden</b>: Quartiere di Londra.</li><li><b>Wandsworth</b>: Quartiere di Londra.</li><li><b>Southwark-Lewisham</b>: Quartiere di Londra.</li></ul></div>
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/london.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/London" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/London</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>British Museum</span><p class='attr-card-desc' itemprop='description'>Museum dedicated to human history, art and culture.</p><a href='https://www.google.com/maps?q=51.5194,-0.127' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5194'><meta itemprop='longitude' content='-0.127'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Tower of London</span><p class='attr-card-desc' itemprop='description'>Historic castle and home of the Crown Jewels.</p><a href='https://www.google.com/maps?q=51.5081,-0.0759' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5081'><meta itemprop='longitude' content='-0.0759'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>London Eye</span><p class='attr-card-desc' itemprop='description'>Giant Ferris wheel with views over the Thames.</p><a href='https://www.google.com/maps?q=51.5033,-0.1195' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5033'><meta itemprop='longitude' content='-0.1195'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Buckingham Palace</span><p class='attr-card-desc' itemprop='description'>The official residence of the UK monarch.</p><a href='https://www.google.com/maps?q=51.5014,-0.1419' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5014'><meta itemprop='longitude' content='-0.1419'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Westminster Abbey</span><p class='attr-card-desc' itemprop='description'>Gothic abbey church and site of royal coronations.</p><a href='https://www.google.com/maps?q=51.4994,-0.1273' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.4994'><meta itemprop='longitude' content='-0.1273'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Tower Bridge</span><p class='attr-card-desc' itemprop='description'>Iconic combined bascule and suspension bridge.</p><a href='https://www.google.com/maps?q=51.5055,-0.0754' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5055'><meta itemprop='longitude' content='-0.0754'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Tate Modern</span><p class='attr-card-desc' itemprop='description'>National gallery of international modern art.</p><a href='https://www.google.com/maps?q=51.5076,-0.0994' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5076'><meta itemprop='longitude' content='-0.0994'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>St Paul's Cathedral</span><p class='attr-card-desc' itemprop='description'>Anglican cathedral and seat of the Bishop of London.</p><a href='https://www.google.com/maps?q=51.5138,-0.0984' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5138'><meta itemprop='longitude' content='-0.0984'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>The Shard</span><p class='attr-card-desc' itemprop='description'>Tallest building in the UK with an observation deck.</p><a href='https://www.google.com/maps?q=51.5045,-0.0865' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5045'><meta itemprop='longitude' content='-0.0865'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Natural History Museum</span><p class='attr-card-desc' itemprop='description'>Museum housing vast specimens from natural history.</p><a href='https://www.google.com/maps?q=51.4967,-0.1764' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.4967'><meta itemprop='longitude' content='-0.1764'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=51.5167141,-0.1103638' target='_blank'>26 Furnival Street</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5167141'><meta itemprop='longitude' content='-0.1103638'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=51.5566538,-0.1383959' target='_blank'>Aces and Eights Saloon Bar</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5566538'><meta itemprop='longitude' content='-0.1383959'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=51.5163376,-0.119321' target='_blank'>All Bar One</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5163376'><meta itemprop='longitude' content='-0.119321'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=51.4695231,-0.0698846' target='_blank'>Bar Story</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.4695231'><meta itemprop='longitude' content='-0.0698846'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=51.5411992,-0.1458705' target='_blank'>Canalside Bar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5411992'><meta itemprop='longitude' content='-0.1458705'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=51.4994616,-0.1139642' target='_blank'>Crown &amp; Cushion</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.4994616'><meta itemprop='longitude' content='-0.1139642'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=51.5614305,-0.1504467' target='_blank'>Duke of St. Albans</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.5614305'><meta itemprop='longitude' content='-0.1504467'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=51.536675,-0.1031148' target='_blank'>Fox on the Green</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='51.536675'><meta itemprop='longitude' content='-0.1031148'></div></li></ul></div>
+        
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>Heathrow Express - Non-stop trains to <strong>London</strong> Paddington. Departures every 15 minutes from Heathrow Terminal 2 and 3, and Heathrow Terminal 5. Journey time is 15-20 minutes.</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>Global metropolis with inexhaustible economic power, <strong>London</strong> handles immense tourist flows with cutting-edge security systems. Despite high costs, it remains the hub of innovation and European cultural diversity.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p">Vibrant and truly multicultural, <strong>London</strong> is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the United Kingdom sits on the River Thames in South-East England. Greater <strong>London</strong> has a population of a little over 9 million. Considered one of the world&#x27;s leading &quot;global cities&quot;, <strong>London</strong> remains an international capital of culture, music, education, fashion, politics, finance and trade.  For the visitor, there is a seemingly endless choice of historical sites, shopping, museums, food, art galleries, nightlife, and activities. Once a Celtic settlement, <strong>London</strong> is a bustling city, where visitors come to experience the urban heritage and see its specific royal-themed attractions. The name &quot;<strong>London</strong>&quot; used to refer only to the once-walled &quot;Square Mile&quot; of the original Roman and later medieval city; this is now confusingly called the &quot;City of <strong>London</strong>&quot; or just &quot;The City&quot;. Today, <strong>London</strong> has taken on a much larger meaning to include all of the vast central parts of the modern metropolis, with the city having absorbed numerous surrounding towns and villages over the centuries, including large portions of the surrounding &quot;home counties&quot;, one of which - Middlesex - being completely consumed by the growing metropolis. The term Greater <strong>London</strong> embraces Central <strong>London</strong> together with all the outlying suburbs that lie in one continuous urban sprawl within the lower Thames Valley. Though densely populated, <strong>London</strong> retains large swathes of green parkland and open space, even within the city centre. Greater <strong>London</strong> is most of the area surrounded by the M25 orbital motorway, and consists of 32 <strong>London</strong> Boroughs and the City of <strong>London</strong> that, together with the office of the Mayor of <strong>London</strong>, form the basis for <strong>London</strong>&#x27;s local government. The Mayor of <strong>London</strong> is elected by <strong>London</strong> residents and should not be confused with the Lord Mayor of the City of <strong>London</strong>. The names of several boroughs, such as Westminster and Camden, are well-known, others less so, such as Wandsworth and Lewisham. This traveller&#x27;s guide to <strong>London</strong> recognises cultural, functional and social districts of varying type and size: Settlements have existed on the site of <strong>London</strong> since well before Roman times, with evidence of Bronze Age and Celtic inhabitants. The Roman city of Londinium, established just after the Roman conquest of Britannia in the year 43, formed the basis for the modern city (some isolated Roman period remains are still to be seen within the City). After the end of Roman rule in 410 and a short-lived decline, <strong>London</strong> experienced a gradual revival under the Anglo-Saxons, as well as the Norsemen, and emerged as a great medieval trading city, eventually replacing Winchester as the royal capital of England. This paramount status for <strong>London</strong> was confirmed when William the Conqueror, a Norman, built the Tower of <strong>London</strong> after the conquest in 1066 and was crowned King of England in Westminster.</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/london.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/London" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/London</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 51.5194, "lon": -0.127, "n": "British Museum", "d": "Museum dedicated to human history, art and culture."}, {"lat": 51.5081, "lon": -0.0759, "n": "Tower of London", "d": "Historic castle and home of the Crown Jewels."}, {"lat": 51.5033, "lon": -0.1195, "n": "London Eye", "d": "Giant Ferris wheel with views over the Thames."}, {"lat": 51.5014, "lon": -0.1419, "n": "Buckingham Palace", "d": "The official residence of the UK monarch."}, {"lat": 51.4994, "lon": -0.1273, "n": "Westminster Abbey", "d": "Gothic abbey church and site of royal coronations."}, {"lat": 51.5055, "lon": -0.0754, "n": "Tower Bridge", "d": "Iconic combined bascule and suspension bridge."}, {"lat": 51.5076, "lon": -0.0994, "n": "Tate Modern", "d": "National gallery of international modern art."}, {"lat": 51.5138, "lon": -0.0984, "n": "St Paul's Cathedral", "d": "Anglican cathedral and seat of the Bishop of London."}, {"lat": 51.5045, "lon": -0.0865, "n": "The Shard", "d": "Tallest building in the UK with an observation deck."}, {"lat": 51.4967, "lon": -0.1764, "n": "Natural History Museum", "d": "Museum housing vast specimens from natural history."}];
   var venues=[{"lat": 51.5167141, "lon": -0.1103638, "n": "26 Furnival Street", "cat": "pub"}, {"lat": 51.5566538, "lon": -0.1383959, "n": "Aces and Eights Saloon Bar", "cat": "pub"}, {"lat": 51.5163376, "lon": -0.119321, "n": "All Bar One", "cat": "bar"}, {"lat": 51.4695231, "lon": -0.0698846, "n": "Bar Story", "cat": "bar"}, {"lat": 51.5411992, "lon": -0.1458705, "n": "Canalside Bar", "cat": "bar"}, {"lat": 51.4994616, "lon": -0.1139642, "n": "Crown &amp; Cushion", "cat": "pub"}, {"lat": 51.5614305, "lon": -0.1504467, "n": "Duke of St. Albans", "cat": "pub"}, {"lat": 51.536675, "lon": -0.1031148, "n": "Fox on the Green", "cat": "bar"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([51.5074,-0.1278],13);
+    cityMap.setView([51.5074,-0.1278],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

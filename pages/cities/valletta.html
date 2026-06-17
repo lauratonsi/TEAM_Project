@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Valletta — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,92 +31,119 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='44.8'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='61.2'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='35'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='31.6'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Southern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='039'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8949'><meta itemprop='longitude' content='14.5123'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/valletta.jpg' alt='Valletta Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇲🇹 Valletta <span style="opacity:.7;font-weight:400">· La Valletta</span></h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/valletta.jpg' alt='Valletta Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇲🇹 Valletta <span style="opacity:.7;font-weight:400">· La Valletta</span></h1><p class='city-hero-sub'>Southern Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>44.8</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:45%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>44.8</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='45'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>126.54€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>61.2</span>
+                    <div class='circular-ring ring-safe' data-pct='61'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>61.2</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:61%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>35</span>
+                    <div class='circular-ring ring-green' data-pct='35'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>35</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:35%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>126.54€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>12</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>12</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>31.6</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:32%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>31.6</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='32'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>By bus In front of the main gate of <strong>Valletta</strong> is the main bus station for the entire island, and bus lines covering the island in a grid, most of them spread out from here and return to here.</p></div>
-    <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Asti Guesthouse</b> <small>(<span itemprop='priceRange'>€20</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Grand Harbour Hotel</b> <small>(<span itemprop='priceRange'>standard double rooms from €100 (from €80 in low season), including breakfast</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>British Hotel</b> <small>(<span itemprop='priceRange'>rates from about €120</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Valletta G-House</b> <small>(<span itemprop='priceRange'>€150/night</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Valletta Suites</b> <small>(<span itemprop='priceRange'>€140 per suite per night</span>)</small></li></ul></div>
-    
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.8999391,14.5088802' target='_blank'>222 Wine Bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8999391'><meta itemprop='longitude' content='14.5088802'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.9244566,14.488431' target='_blank'>Bar Native</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9244566'><meta itemprop='longitude' content='14.488431'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.9222347,14.4910566' target='_blank'>Bellini</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9222347'><meta itemprop='longitude' content='14.4910566'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.9081685,14.5006288' target='_blank'>Black Gold Saloon Malta</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9081685'><meta itemprop='longitude' content='14.5006288'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.8951718,14.4656418' target='_blank'>Butterfly Bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8951718'><meta itemprop='longitude' content='14.4656418'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.9080856,14.5004518' target='_blank'>Chequers</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9080856'><meta itemprop='longitude' content='14.5004518'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=35.9158518,14.4933316' target='_blank'>City of London</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9158518'><meta itemprop='longitude' content='14.4933316'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><a itemprop='name' href='https://www.google.com/maps?q=35.9221301,14.4923768' target='_blank'>Club 22</a> <span style='color:#94a3b8; font-size:0.82rem;'>(nightclub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9221301'><meta itemprop='longitude' content='14.4923768'></div></li></ul></div>
-    
+        
+    </div>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Upper Barrakka</span><p class='attr-card-desc' itemprop='description'>Public gardens with panoramic views of the harbor.</p><a href='https://www.google.com/maps?q=35.8949,14.5123' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8949'><meta itemprop='longitude' content='14.5123'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>St. John's Cathedral</span><p class='attr-card-desc' itemprop='description'>Highly decorated Baroque church with Caravaggio art.</p><a href='https://www.google.com/maps?q=35.8977,14.5126' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8977'><meta itemprop='longitude' content='14.5126'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Grand Harbour</span><p class='attr-card-desc' itemprop='description'>The historic natural harbor of Malta.</p><a href='https://www.google.com/maps?q=35.8944,14.5186' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8944'><meta itemprop='longitude' content='14.5186'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Fort St. Elmo</span><p class='attr-card-desc' itemprop='description'>Star-shaped fort and National War Museum.</p><a href='https://www.google.com/maps?q=35.9019,14.5186' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9019'><meta itemprop='longitude' content='14.5186'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Grandmaster's Palace</span><p class='attr-card-desc' itemprop='description'>The historic center of government in Malta.</p><a href='https://www.google.com/maps?q=35.8986,14.5136' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8986'><meta itemprop='longitude' content='14.5136'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Republic Street</span><p class='attr-card-desc' itemprop='description'>The main shopping and commercial street.</p><a href='https://www.google.com/maps?q=35.8983,14.5128' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8983'><meta itemprop='longitude' content='14.5128'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>National Archaeology</span><p class='attr-card-desc' itemprop='description'>Museum housing prehistoric artifacts from the islands.</p><a href='https://www.google.com/maps?q=35.8979,14.5113' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8979'><meta itemprop='longitude' content='14.5113'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Casa Rocca Piccola</span><p class='attr-card-desc' itemprop='description'>16th-century palace belonging to a noble family.</p><a href='https://www.google.com/maps?q=35.8997,14.5139' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8997'><meta itemprop='longitude' content='14.5139'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Teatru Manoel</span><p class='attr-card-desc' itemprop='description'>One of the oldest working theaters in Europe.</p><a href='https://www.google.com/maps?q=35.8997,14.5125' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8997'><meta itemprop='longitude' content='14.5125'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Hastings Gardens</span><p class='attr-card-desc' itemprop='description'>Quiet gardens on top of the St. John's Bastion.</p><a href='https://www.google.com/maps?q=35.8989,14.5086' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8989'><meta itemprop='longitude' content='14.5086'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.8999391,14.5088802' target='_blank'>222 Wine Bar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8999391'><meta itemprop='longitude' content='14.5088802'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.9244566,14.488431' target='_blank'>Bar Native</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9244566'><meta itemprop='longitude' content='14.488431'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.9222347,14.4910566' target='_blank'>Bellini</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9222347'><meta itemprop='longitude' content='14.4910566'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.9081685,14.5006288' target='_blank'>Black Gold Saloon Malta</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9081685'><meta itemprop='longitude' content='14.5006288'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.8951718,14.4656418' target='_blank'>Butterfly Bar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8951718'><meta itemprop='longitude' content='14.4656418'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.9080856,14.5004518' target='_blank'>Chequers</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9080856'><meta itemprop='longitude' content='14.5004518'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.9158518,14.4933316' target='_blank'>City of London</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9158518'><meta itemprop='longitude' content='14.4933316'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/NightClub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=35.9221301,14.4923768' target='_blank'>Club 22</a></span><span class='venue-cat cat-nightclub'>nightclub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9221301'><meta itemprop='longitude' content='14.4923768'></div></li></ul></div>
+        <div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span><ul class='block-ul'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Asti Guesthouse</b> <small>(<span itemprop='priceRange'>€20</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Grand Harbour Hotel</b> <small>(<span itemprop='priceRange'>standard double rooms from €100 (from €80 in low season), including breakfast</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>British Hotel</b> <small>(<span itemprop='priceRange'>rates from about €120</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Valletta G-House</b> <small>(<span itemprop='priceRange'>€150/night</span>)</small></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/Hotel'><b itemprop='name'>Valletta Suites</b> <small>(<span itemprop='priceRange'>€140 per suite per night</span>)</small></li></ul></div>
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>By bus In front of the main gate of <strong>Valletta</strong> is the main bus station for the entire island, and bus lines covering the island in a grid, most of them spread out from here and return to here.</p></div>
+        
         <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
+            <div class='desc-section strategic'>
                 <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>Baroque fortress in the heart of the Mediterranean, <strong>Valletta</strong> is an open-air museum with impeccable safety. Its small size hides vibrant cultural energy and a mild climate year-round.</p>
+                <p class='desc-strategic-p' itemprop='description'>Baroque fortress in the heart of the Mediterranean, <strong>Valletta</strong> is an open-air museum with impeccable safety. Its small size hides vibrant cultural energy and a mild climate year-round.</p>
             </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Valletta</strong> or Il-Belt is the capital of Malta. Historically built as harbour city to first capital, <strong>Valletta</strong> preserves much of its 16th-century architectural heritage built under the Hospitallers. <strong>Valletta</strong> was one of the earliest sites inscribed on the UNESCO World Heritage List. Referred to colloquially as Il-Belt (&quot;The City&quot;) in Maltese, it takes its name from its founder, Grandmaster Jean Parisot de Valette. With a population of less than 5,200 in 2021, it is the least populated national capital in the European Union. The population of the urban area is 480,000 (2020), so <strong>Valletta</strong> doesn&#x27;t feel like a small town. It is also the southernmost capital in the union, and one of only two without rail-based public transit (the other being Nicosia in Cyprus). <strong>Valletta</strong> was a &quot;European Capital of Culture&quot; for 2018, an honour it shared with Leeuwarden. Being the southernmost European capital except for Nicosia and sitting next to the Mediterranean, <strong>Valletta</strong> is amongst the places in Europe that have mild and warm weather in most seasons. Nighttime lows are around 9/10°C in the winter, however at that time of the year, it&#x27;s comparatively rainy. During the summer, expect sunny, hot weather. Most bus routes and many arterial roads converge on <strong>Valletta</strong>. However, inside the city, there are many one-way streets and some pedestrian zones. Parking can be difficult. There is a large multi-storey car park in Floriana, about half a kilometre from the City Gate entrance to <strong>Valletta</strong>. In front of the main gate of <strong>Valletta</strong> is the for the entire island, and bus lines covering the island in a grid, most of them spread out from here and return to here. For those opting not to fly to Malta, Virtu Ferries runs ferries from Pozzallo on the island of Sicily, Italy. A much shorter journey can be done by <strong>Valletta</strong> Ferry Services across beautiful Marsamxett harbour from Sliema and past Manoel Island, for just €1.50. Considerably cheaper than paying for a harbour cruise. * 
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Valletta</strong> or Il-Belt is the capital of Malta. Historically built as harbour city to first capital, <strong>Valletta</strong> preserves much of its 16th-century architectural heritage built under the Hospitallers. <strong>Valletta</strong> was one of the earliest sites inscribed on the UNESCO World Heritage List. Referred to colloquially as Il-Belt (&quot;The City&quot;) in Maltese, it takes its name from its founder, Grandmaster Jean Parisot de Valette. With a population of less than 5,200 in 2021, it is the least populated national capital in the European Union. The population of the urban area is 480,000 (2020), so <strong>Valletta</strong> doesn&#x27;t feel like a small town. It is also the southernmost capital in the union, and one of only two without rail-based public transit (the other being Nicosia in Cyprus). <strong>Valletta</strong> was a &quot;European Capital of Culture&quot; for 2018, an honour it shared with Leeuwarden. Being the southernmost European capital except for Nicosia and sitting next to the Mediterranean, <strong>Valletta</strong> is amongst the places in Europe that have mild and warm weather in most seasons. Nighttime lows are around 9/10°C in the winter, however at that time of the year, it&#x27;s comparatively rainy. During the summer, expect sunny, hot weather. Most bus routes and many arterial roads converge on <strong>Valletta</strong>. However, inside the city, there are many one-way streets and some pedestrian zones. Parking can be difficult. There is a large multi-storey car park in Floriana, about half a kilometre from the City Gate entrance to <strong>Valletta</strong>. In front of the main gate of <strong>Valletta</strong> is the for the entire island, and bus lines covering the island in a grid, most of them spread out from here and return to here. For those opting not to fly to Malta, Virtu Ferries runs ferries from Pozzallo on the island of Sicily, Italy. A much shorter journey can be done by <strong>Valletta</strong> Ferry Services across beautiful Marsamxett harbour from Sliema and past Manoel Island, for just €1.50. Considerably cheaper than paying for a harbour cruise. * 
 * Water taxis leave whenever they have six people during daylight hours, €3 per person (Feb 2025). Another little-known way is to visit Vittoriosa by bus and then have the Maltese version of the gondola, the so called Dghajsa, bring you back in style across the spectacular Grand Harbour to <strong>Valletta</strong>, and drop you off just by Victoria gate for €3.50. The island&#x27;s sole airport is 
 *The X4 bus runs from the airport to <strong>Valletta</strong>, with generally two buses per hour taking about 20 minutes, costing €2.50 in cash or with contant-less bank card on the bus. The <strong>Valletta</strong> peninsula is only a couple of kilometres in length and so the ideal way is to do everything on foot, which enables you to take many shortcuts via stairs. However, the city is built on a ridge and is steep in parts (requiring walking up and down stairs in some places), which can be tiring.</p></div>
         </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Upper Barrakka</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8949'><meta itemprop='longitude' content='14.5123'></div></td><td class='atn-desc'><span itemprop='description'>Public gardens with panoramic views of the harbor.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.8949,14.5123' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>St. John's Cathedral</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8977'><meta itemprop='longitude' content='14.5126'></div></td><td class='atn-desc'><span itemprop='description'>Highly decorated Baroque church with Caravaggio art.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.8977,14.5126' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Grand Harbour</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8944'><meta itemprop='longitude' content='14.5186'></div></td><td class='atn-desc'><span itemprop='description'>The historic natural harbor of Malta.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.8944,14.5186' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Fort St. Elmo</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.9019'><meta itemprop='longitude' content='14.5186'></div></td><td class='atn-desc'><span itemprop='description'>Star-shaped fort and National War Museum.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.9019,14.5186' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Grandmaster's Palace</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8986'><meta itemprop='longitude' content='14.5136'></div></td><td class='atn-desc'><span itemprop='description'>The historic center of government in Malta.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.8986,14.5136' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Republic Street</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8983'><meta itemprop='longitude' content='14.5128'></div></td><td class='atn-desc'><span itemprop='description'>The main shopping and commercial street.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.8983,14.5128' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>National Archaeology</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8979'><meta itemprop='longitude' content='14.5113'></div></td><td class='atn-desc'><span itemprop='description'>Museum housing prehistoric artifacts from the islands.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.8979,14.5113' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Casa Rocca Piccola</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8997'><meta itemprop='longitude' content='14.5139'></div></td><td class='atn-desc'><span itemprop='description'>16th-century palace belonging to a noble family.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.8997,14.5139' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Teatru Manoel</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8997'><meta itemprop='longitude' content='14.5125'></div></td><td class='atn-desc'><span itemprop='description'>One of the oldest working theaters in Europe.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.8997,14.5125' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Hastings Gardens</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='35.8989'><meta itemprop='longitude' content='14.5086'></div></td><td class='atn-desc'><span itemprop='description'>Quiet gardens on top of the St. John's Bastion.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=35.8989,14.5086' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
-    </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/valletta.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Valletta" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Valletta</a>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/valletta.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Valletta" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Valletta</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 35.8949, "lon": 14.5123, "n": "Upper Barrakka", "d": "Public gardens with panoramic views of the harbor."}, {"lat": 35.8977, "lon": 14.5126, "n": "St. John's Cathedral", "d": "Highly decorated Baroque church with Caravaggio art."}, {"lat": 35.8944, "lon": 14.5186, "n": "Grand Harbour", "d": "The historic natural harbor of Malta."}, {"lat": 35.9019, "lon": 14.5186, "n": "Fort St. Elmo", "d": "Star-shaped fort and National War Museum."}, {"lat": 35.8986, "lon": 14.5136, "n": "Grandmaster's Palace", "d": "The historic center of government in Malta."}, {"lat": 35.8983, "lon": 14.5128, "n": "Republic Street", "d": "The main shopping and commercial street."}, {"lat": 35.8979, "lon": 14.5113, "n": "National Archaeology", "d": "Museum housing prehistoric artifacts from the islands."}, {"lat": 35.8997, "lon": 14.5139, "n": "Casa Rocca Piccola", "d": "16th-century palace belonging to a noble family."}, {"lat": 35.8997, "lon": 14.5125, "n": "Teatru Manoel", "d": "One of the oldest working theaters in Europe."}, {"lat": 35.8989, "lon": 14.5086, "n": "Hastings Gardens", "d": "Quiet gardens on top of the St. John's Bastion."}];
   var venues=[{"lat": 35.8999391, "lon": 14.5088802, "n": "222 Wine Bar", "cat": "bar"}, {"lat": 35.9244566, "lon": 14.488431, "n": "Bar Native", "cat": "bar"}, {"lat": 35.9222347, "lon": 14.4910566, "n": "Bellini", "cat": "bar"}, {"lat": 35.9081685, "lon": 14.5006288, "n": "Black Gold Saloon Malta", "cat": "bar"}, {"lat": 35.8951718, "lon": 14.4656418, "n": "Butterfly Bar", "cat": "bar"}, {"lat": 35.9080856, "lon": 14.5004518, "n": "Chequers", "cat": "bar"}, {"lat": 35.9158518, "lon": 14.4933316, "n": "City of London", "cat": "pub"}, {"lat": 35.9221301, "lon": 14.4923768, "n": "Club 22", "cat": "nightclub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -123,9 +151,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([35.8989,14.5146],13);
+    cityMap.setView([35.8989,14.5146],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -133,6 +161,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

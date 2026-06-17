@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Madrid — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='65.2'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='71.3'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='74'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='35.2'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Southern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='039'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4138'><meta itemprop='longitude' content='-3.6921'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/madrid.jpg' alt='Madrid Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇪🇸 Madrid</h1>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/madrid.jpg' alt='Madrid Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-safe'>🛡️ Ultra Safe</span><span class='city-hero-badge badge-top'>⭐ Top Rated</span><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇪🇸 Madrid</h1><p class='city-hero-sub'>Southern Europe</p></div></div>
     
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>65.2</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:65%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>65.2</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='65'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>119.88€</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>71.3</span>
+                    <div class='circular-ring ring-safe' data-pct='71'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>71.3</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:71%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>74</span>
+                    <div class='circular-ring ring-green' data-pct='74'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>74</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:74%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>119.88€</span>
+                </div>
+                
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>0</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>0</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>35.2</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:35%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>35.2</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='35'></div></div>
             </div>
         </div>
-    
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>To and from the airport During the day, Metro a popular best way to reach city centre. Line 8 (pink) runs from Nuevos Ministerios to Terminals 1,2&amp;3, Barajas town (no airport here, don&#x27;t get off!) and T4. It runs from 06:00 to 01:30, taking 15 min from city to T123 and another 5 min to T4.</p></div>
-    
-    <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul style='margin:0; padding-left:15px;'><li><b>Retiro-Paseo del Arte</b>: Quartiere di Madrid.</li><li><b>Salamanca</b>: Quartiere di Madrid.</li><li><b>Chamberí-Castellana</b>: Quartiere di Madrid.</li><li><b>Moncloa</b>: Quartiere di Madrid.</li><li><b>Arganzuela</b>: Quartiere di Madrid.</li></ul></div>
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=40.4130638,-3.7129344' target='_blank'>Bar Barocco</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4130638'><meta itemprop='longitude' content='-3.7129344'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=40.4039506,-3.7014278' target='_blank'>Bar Díaz</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4039506'><meta itemprop='longitude' content='-3.7014278'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=40.4048223,-3.6960055' target='_blank'>Bar la familia</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4048223'><meta itemprop='longitude' content='-3.6960055'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=40.4041585,-3.6959215' target='_blank'>Bar Teide</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4041585'><meta itemprop='longitude' content='-3.6959215'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=40.4097328,-3.7010866' target='_blank'>Café Melo's</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4097328'><meta itemprop='longitude' content='-3.7010866'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=40.4108575,-3.6957127' target='_blank'>Casablanca</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4108575'><meta itemprop='longitude' content='-3.6957127'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=40.4118925,-3.7109337' target='_blank'>Cervecería San Andrés</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4118925'><meta itemprop='longitude' content='-3.7109337'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=40.4192413,-3.7074836' target='_blank'>Cervercería Erte</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4192413'><meta itemprop='longitude' content='-3.7074836'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>Famous for its social energy and broad tree-lined avenues, <strong>Madrid</strong> is investing heavily in &#x27;urban forests&#x27; to counter heat. Its accessibility and safe nightlife make it an unmissable destination.</p>
-            </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Madrid</strong> is Spain&#x27;s capital and largest city. A city that has been marked by Spain&#x27;s varied and tumultuous history, <strong>Madrid</strong> has some of Europe&#x27;s most impressive cultural and architectural heritage, which includes grand avenues, plazas, buildings and monuments, world-class art galleries and museums, highly popular football teams, and cultural events of international fame for everyone. <strong>Madrid</strong> is also renowned for gastronomic delights and a nightlife lasting up until dawn. <strong>Madrid</strong> is more often than not disregarded by tourists who gravitate to other parts of the country. But though it may appear to lack some of the breathtaking architecture of Barcelona, the frenetic energy of London and Berlin, or the flair of Paris and Rome, <strong>Madrid</strong> is a massive treasure chest that has something for those who are willing to get off the beaten tourist tracks. It might not be the most sought-after city, but those who seek out what <strong>Madrid</strong> has to offer will discover a city of unexpected beauty.  <strong>Madrid</strong> has over 3.4 million residents within the city limits and 7 million people live in the autonomous Community of <strong>Madrid</strong> region (as of 2025). <strong>Madrid</strong> is just northeast of the geographical centre of the Iberian Peninsula, in the middle of the Spanish central Castillian plateau (Meseta central), at an average altitude of . Nearly all of the most famous tourist areas are in the centre of the city including Puerta del Sol, Plaza Mayor, Palacio Real, and Plaza de Colón. The major streets in <strong>Madrid</strong> include the Gran Via, Alcalá Street, and Paseo de la Castellana. The climate of <strong>Madrid</strong> is continental, mainly dry and quite extreme at times. <strong>Madrid</strong> experiences a characteristically hot and dry summer, along with a fairly cold winter with frequent frosts during the night and occasional snowfalls. Spring and autumn are generally mild with the most rainfall concentrated in these seasons. Spring and autumn are definitely the best times to visit, especially the months of April, May, June, September and October. There is very little rainfall during summer and also less rainfall during winter. During winter, snow occurs sporadically; however, snow usually lasts only for a few days, but there is abundant snowfall in the adjacent mountain ranges nearby. <strong>Madrid</strong> is a city that goes back to the Spanish Muslims, but virtually nothing of <strong>Madrid</strong> before the Reconquista is left. A few historic city walls have been archeologically preserved but <strong>Madrid</strong> was by far overshadowed by Toledo (Roman Toletum) until the early modern era. To give just one example, construction on <strong>Madrid</strong> Cathedral did not start until the late 19th century, and only finished in the 1990s, as the archbishop of Toledo did not want to relinquish episcopal power, and the monarchs had moved the capital in part precisely to escape the power of Toledo&#x27;s archbishop. The culture of <strong>Madrid</strong> was dominated by its royal history, centre of the Spanish Empire.</p></div>
-        </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Prado Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4138'><meta itemprop='longitude' content='-3.6921'></div></td><td class='atn-desc'><span itemprop='description'>Main Spanish national art museum.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.4138,-3.6921' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Royal Palace</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4179'><meta itemprop='longitude' content='-3.7144'></div></td><td class='atn-desc'><span itemprop='description'>Official residence of the Spanish royal family.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.4179,-3.7144' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Retiro Park</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4153'><meta itemprop='longitude' content='-3.6839'></div></td><td class='atn-desc'><span itemprop='description'>Large urban park with a lake and monuments.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.4153,-3.6839' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>Plaza Mayor</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4154'><meta itemprop='longitude' content='-3.7074'></div></td><td class='atn-desc'><span itemprop='description'>Central square in the heart of Madrid.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.4154,-3.7074' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Puerta del Sol</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4169'><meta itemprop='longitude' content='-3.7035'></div></td><td class='atn-desc'><span itemprop='description'>Busy public square and 'Kilometre Zero' for Spanish roads.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.4169,-3.7035' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Reina Sofia Museum</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4079'><meta itemprop='longitude' content='-3.6946'></div></td><td class='atn-desc'><span itemprop='description'>National museum of 20th-century art (Guernica).</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.4079,-3.6946' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Thyssen-Bornemisza</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4161'><meta itemprop='longitude' content='-3.6949'></div></td><td class='atn-desc'><span itemprop='description'>Major art museum forming the Golden Triangle of Art.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.4161,-3.6949' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Gran Via</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.42'><meta itemprop='longitude' content='-3.7011'></div></td><td class='atn-desc'><span itemprop='description'>Iconic shopping street with landmark architecture.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.42,-3.7011' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Santiago Bernabéu</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4531'><meta itemprop='longitude' content='-3.6883'></div></td><td class='atn-desc'><span itemprop='description'>Stadium and home ground of Real Madrid CF.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.4531,-3.6883' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Temple of Debod</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4241'><meta itemprop='longitude' content='-3.7177'></div></td><td class='atn-desc'><span itemprop='description'>Ancient Egyptian temple rebuilt in Madrid.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=40.4241,-3.7177' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul class='block-ul'><li><b>Retiro-Paseo del Arte</b>: Quartiere di Madrid.</li><li><b>Salamanca</b>: Quartiere di Madrid.</li><li><b>Chamberí-Castellana</b>: Quartiere di Madrid.</li><li><b>Moncloa</b>: Quartiere di Madrid.</li><li><b>Arganzuela</b>: Quartiere di Madrid.</li></ul></div>
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/madrid.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Madrid" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Madrid</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Prado Museum</span><p class='attr-card-desc' itemprop='description'>Main Spanish national art museum.</p><a href='https://www.google.com/maps?q=40.4138,-3.6921' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4138'><meta itemprop='longitude' content='-3.6921'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Royal Palace</span><p class='attr-card-desc' itemprop='description'>Official residence of the Spanish royal family.</p><a href='https://www.google.com/maps?q=40.4179,-3.7144' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4179'><meta itemprop='longitude' content='-3.7144'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Retiro Park</span><p class='attr-card-desc' itemprop='description'>Large urban park with a lake and monuments.</p><a href='https://www.google.com/maps?q=40.4153,-3.6839' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4153'><meta itemprop='longitude' content='-3.6839'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>Plaza Mayor</span><p class='attr-card-desc' itemprop='description'>Central square in the heart of Madrid.</p><a href='https://www.google.com/maps?q=40.4154,-3.7074' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4154'><meta itemprop='longitude' content='-3.7074'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Puerta del Sol</span><p class='attr-card-desc' itemprop='description'>Busy public square and 'Kilometre Zero' for Spanish roads.</p><a href='https://www.google.com/maps?q=40.4169,-3.7035' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4169'><meta itemprop='longitude' content='-3.7035'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Reina Sofia Museum</span><p class='attr-card-desc' itemprop='description'>National museum of 20th-century art (Guernica).</p><a href='https://www.google.com/maps?q=40.4079,-3.6946' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4079'><meta itemprop='longitude' content='-3.6946'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Thyssen-Bornemisza</span><p class='attr-card-desc' itemprop='description'>Major art museum forming the Golden Triangle of Art.</p><a href='https://www.google.com/maps?q=40.4161,-3.6949' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4161'><meta itemprop='longitude' content='-3.6949'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Gran Via</span><p class='attr-card-desc' itemprop='description'>Iconic shopping street with landmark architecture.</p><a href='https://www.google.com/maps?q=40.42,-3.7011' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.42'><meta itemprop='longitude' content='-3.7011'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Santiago Bernabéu</span><p class='attr-card-desc' itemprop='description'>Stadium and home ground of Real Madrid CF.</p><a href='https://www.google.com/maps?q=40.4531,-3.6883' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4531'><meta itemprop='longitude' content='-3.6883'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Temple of Debod</span><p class='attr-card-desc' itemprop='description'>Ancient Egyptian temple rebuilt in Madrid.</p><a href='https://www.google.com/maps?q=40.4241,-3.7177' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4241'><meta itemprop='longitude' content='-3.7177'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=40.4130638,-3.7129344' target='_blank'>Bar Barocco</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4130638'><meta itemprop='longitude' content='-3.7129344'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=40.4039506,-3.7014278' target='_blank'>Bar Díaz</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4039506'><meta itemprop='longitude' content='-3.7014278'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=40.4048223,-3.6960055' target='_blank'>Bar la familia</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4048223'><meta itemprop='longitude' content='-3.6960055'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=40.4041585,-3.6959215' target='_blank'>Bar Teide</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4041585'><meta itemprop='longitude' content='-3.6959215'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=40.4097328,-3.7010866' target='_blank'>Café Melo's</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4097328'><meta itemprop='longitude' content='-3.7010866'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=40.4108575,-3.6957127' target='_blank'>Casablanca</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4108575'><meta itemprop='longitude' content='-3.6957127'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=40.4118925,-3.7109337' target='_blank'>Cervecería San Andrés</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4118925'><meta itemprop='longitude' content='-3.7109337'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=40.4192413,-3.7074836' target='_blank'>Cervercería Erte</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='40.4192413'><meta itemprop='longitude' content='-3.7074836'></div></li></ul></div>
+        
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>To and from the airport During the day, Metro a popular best way to reach city centre. Line 8 (pink) runs from Nuevos Ministerios to Terminals 1,2&amp;3, Barajas town (no airport here, don&#x27;t get off!) and T4. It runs from 06:00 to 01:30, taking 15 min from city to T123 and another 5 min to T4.</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>Famous for its social energy and broad tree-lined avenues, <strong>Madrid</strong> is investing heavily in &#x27;urban forests&#x27; to counter heat. Its accessibility and safe nightlife make it an unmissable destination.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Madrid</strong> is Spain&#x27;s capital and largest city. A city that has been marked by Spain&#x27;s varied and tumultuous history, <strong>Madrid</strong> has some of Europe&#x27;s most impressive cultural and architectural heritage, which includes grand avenues, plazas, buildings and monuments, world-class art galleries and museums, highly popular football teams, and cultural events of international fame for everyone. <strong>Madrid</strong> is also renowned for gastronomic delights and a nightlife lasting up until dawn. <strong>Madrid</strong> is more often than not disregarded by tourists who gravitate to other parts of the country. But though it may appear to lack some of the breathtaking architecture of Barcelona, the frenetic energy of London and Berlin, or the flair of Paris and Rome, <strong>Madrid</strong> is a massive treasure chest that has something for those who are willing to get off the beaten tourist tracks. It might not be the most sought-after city, but those who seek out what <strong>Madrid</strong> has to offer will discover a city of unexpected beauty.  <strong>Madrid</strong> has over 3.4 million residents within the city limits and 7 million people live in the autonomous Community of <strong>Madrid</strong> region (as of 2025). <strong>Madrid</strong> is just northeast of the geographical centre of the Iberian Peninsula, in the middle of the Spanish central Castillian plateau (Meseta central), at an average altitude of . Nearly all of the most famous tourist areas are in the centre of the city including Puerta del Sol, Plaza Mayor, Palacio Real, and Plaza de Colón. The major streets in <strong>Madrid</strong> include the Gran Via, Alcalá Street, and Paseo de la Castellana. The climate of <strong>Madrid</strong> is continental, mainly dry and quite extreme at times. <strong>Madrid</strong> experiences a characteristically hot and dry summer, along with a fairly cold winter with frequent frosts during the night and occasional snowfalls. Spring and autumn are generally mild with the most rainfall concentrated in these seasons. Spring and autumn are definitely the best times to visit, especially the months of April, May, June, September and October. There is very little rainfall during summer and also less rainfall during winter. During winter, snow occurs sporadically; however, snow usually lasts only for a few days, but there is abundant snowfall in the adjacent mountain ranges nearby. <strong>Madrid</strong> is a city that goes back to the Spanish Muslims, but virtually nothing of <strong>Madrid</strong> before the Reconquista is left. A few historic city walls have been archeologically preserved but <strong>Madrid</strong> was by far overshadowed by Toledo (Roman Toletum) until the early modern era. To give just one example, construction on <strong>Madrid</strong> Cathedral did not start until the late 19th century, and only finished in the 1990s, as the archbishop of Toledo did not want to relinquish episcopal power, and the monarchs had moved the capital in part precisely to escape the power of Toledo&#x27;s archbishop. The culture of <strong>Madrid</strong> was dominated by its royal history, centre of the Spanish Empire.</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/madrid.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Madrid" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Madrid</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 40.4138, "lon": -3.6921, "n": "Prado Museum", "d": "Main Spanish national art museum."}, {"lat": 40.4179, "lon": -3.7144, "n": "Royal Palace", "d": "Official residence of the Spanish royal family."}, {"lat": 40.4153, "lon": -3.6839, "n": "Retiro Park", "d": "Large urban park with a lake and monuments."}, {"lat": 40.4154, "lon": -3.7074, "n": "Plaza Mayor", "d": "Central square in the heart of Madrid."}, {"lat": 40.4169, "lon": -3.7035, "n": "Puerta del Sol", "d": "Busy public square and 'Kilometre Zero' for Spanish roads."}, {"lat": 40.4079, "lon": -3.6946, "n": "Reina Sofia Museum", "d": "National museum of 20th-century art (Guernica)."}, {"lat": 40.4161, "lon": -3.6949, "n": "Thyssen-Bornemisza", "d": "Major art museum forming the Golden Triangle of Art."}, {"lat": 40.42, "lon": -3.7011, "n": "Gran Via", "d": "Iconic shopping street with landmark architecture."}, {"lat": 40.4531, "lon": -3.6883, "n": "Santiago Bernab\u00e9u", "d": "Stadium and home ground of Real Madrid CF."}, {"lat": 40.4241, "lon": -3.7177, "n": "Temple of Debod", "d": "Ancient Egyptian temple rebuilt in Madrid."}];
   var venues=[{"lat": 40.4130638, "lon": -3.7129344, "n": "Bar Barocco", "cat": "bar"}, {"lat": 40.4039506, "lon": -3.7014278, "n": "Bar D\u00edaz", "cat": "pub"}, {"lat": 40.4048223, "lon": -3.6960055, "n": "Bar la familia", "cat": "pub"}, {"lat": 40.4041585, "lon": -3.6959215, "n": "Bar Teide", "cat": "pub"}, {"lat": 40.4097328, "lon": -3.7010866, "n": "Caf\u00e9 Melo's", "cat": "pub"}, {"lat": 40.4108575, "lon": -3.6957127, "n": "Casablanca", "cat": "pub"}, {"lat": 40.4118925, "lon": -3.7109337, "n": "Cervecer\u00eda San Andr\u00e9s", "cat": "pub"}, {"lat": 40.4192413, "lon": -3.7074836, "n": "Cervercer\u00eda Erte", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([40.4168,-3.7038],13);
+    cityMap.setView([40.4168,-3.7038],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

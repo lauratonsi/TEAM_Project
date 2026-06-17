@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../stile.css?v=20260617d">
+    <link rel="stylesheet" href="../../stile.css?v=db2333b3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Prague — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -30,90 +31,117 @@
     <div itemprop='aggregateRating' itemscope itemtype='https://schema.org/AggregateRating'><meta itemprop='ratingValue' content='70.0'><meta itemprop='bestRating' content='100'><meta itemprop='worstRating' content='0'><meta itemprop='ratingCount' content='1'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Safety Index'><meta itemprop='value' content='75.6'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Green Score'><meta itemprop='value' content='78'></div><div itemprop='additionalProperty' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='name' content='Economic Accessibility'><meta itemprop='value' content='42.6'></div>
     <div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'><meta itemprop='name' content='Eastern Europe'><div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'><meta itemprop='propertyID' content='UN M49'><meta itemprop='value' content='151'></div><div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'><meta itemprop='name' content='Europe'><link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'></div></div>
     <div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0865'><meta itemprop='longitude' content='14.4114'></div>
-    <div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'><img itemprop='image' src='../../assets/images/prague.jpg' alt='Prague Landmark' style='width:100%; height:100%; object-fit:cover;'></div>
-    <h1 class="city-title" style="margin-bottom:25px;">🇨🇿 Prague <span style="opacity:.7;font-weight:400">· Praga</span></h1>
-    
-        <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>70.0</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:70%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>106.19€</span><span class='stat-local'>≈ 2.676 Kč</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:100%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>75.6</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:76%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>78</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:78%'></div></div>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>0</span>
-            </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>42.6</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:43%'></div></div>
-            </div>
-        </div>
+    <div class='city-hero'><img itemprop='image' src='../../assets/images/prague.jpg' alt='Prague Landmark'><div class='city-hero-overlay'></div><div class='city-hero-info'><div class='city-hero-badges'><span class='city-hero-badge badge-green'>🌿 Green City</span><span class='city-hero-badge badge-safe'>🛡️ Ultra Safe</span><span class='city-hero-badge badge-top'>⭐ Top Rated</span><span class='city-hero-badge badge-budget'>💰 Budget Pick</span></div><h1 class='city-hero-title'>🇨🇿 Prague <span style="opacity:.7;font-weight:400">· Praga</span></h1><p class='city-hero-sub'>Eastern Europe</p></div></div>
     <div class='currency-note'><span class='cur-ico'>🪙</span><div><b>Prague</b> does not use the euro: the local currency is the <b>Czech koruna</b> (CZK, Kč). Prices on this site are a <b>synthetic estimate in euros</b> (for cross-city comparison); the local equivalent (<b>≈ 2.676 Kč</b> per night) is indicative, at 2026-01 reference rates.</div></div>
-    <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p style='margin:0;'>The public transport around <strong>Prague</strong> consists of three metro lines (prague, prague, prague), over twenty tram lines (numbered 1–31 &amp; 91–99 for night trams), trolleybuses (numbered 58–59), buses (3-digit numbers), ferries, a few train lines (numbered S1, S2, S49,…), and one funicular, all using the same time tickets. Public transport schedules and fares are integrated by Pražská Integrovaná Doprava (abbreviated PID).</p></div>
-    
-    <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul style='margin:0; padding-left:15px;'><li><b>Old Town and Josefov</b>: Quartiere di Praga.</li><li><b>Castle and Lesser Town</b>: Quartiere di Praga.</li><li><b>New Town and Vysehrad</b>: Quartiere di Praga.</li><li><b>East bank of Vltava</b>: Quartiere di Praga.</li><li><b>West bank of Vltava</b>: Quartiere di Praga.</li></ul></div>
-    <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul style='margin:0; padding-left:15px;'><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=50.0874351,14.4193478' target='_blank'>Absintherie Franz Kafka</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0874351'><meta itemprop='longitude' content='14.4193478'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=50.0824881,14.444303' target='_blank'>Belzepub</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0824881'><meta itemprop='longitude' content='14.444303'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=50.0747455,14.431049' target='_blank'>Ber.lin Bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0747455'><meta itemprop='longitude' content='14.431049'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=50.0842199,14.4142283' target='_blank'>Café-Bar Duende</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0842199'><meta itemprop='longitude' content='14.4142283'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=50.0999349,14.4879307' target='_blank'>Club Montana</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0999349'><meta itemprop='longitude' content='14.4879307'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=50.0804853,14.405884' target='_blank'>Craft Beer Spot</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0804853'><meta itemprop='longitude' content='14.405884'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=50.0862561,14.4416022' target='_blank'>District 3 Bar</a> <span style='color:#94a3b8; font-size:0.82rem;'>(bar)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0862561'><meta itemprop='longitude' content='14.4416022'></div></li><li itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><a itemprop='name' href='https://www.google.com/maps?q=50.086847,14.3760312' target='_blank'>Hostinec "u Anduly"</a> <span style='color:#94a3b8; font-size:0.82rem;'>(pub)</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.086847'><meta itemprop='longitude' content='14.3760312'></div></li></ul></div>
-    
-        <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
-                <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>Keeper of an intact UNESCO heritage, <strong>Prague</strong> is one of the safest and most accessible cities on the continent. Its public transport system is among the most efficient in Europe, enabling stress-free livability.</p>
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        
+        <div class='stats-box'>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>70.0</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='70'></div></div>
             </div>
-            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;"><strong>Prague</strong> (Czech: Praha) is the capital and largest city of the Czech Republic. The city&#x27;s historic buildings and narrow, winding streets are testament to its centuries-old role as capital of the historic region of Bohemia. <strong>Prague</strong> lies on the banks of the beautiful, meandering Vltava River that reflects the city&#x27;s golden spires and 9th century castle that dominates the skyline. This historic atmosphere is combined with a certain quirkiness that embraces the entire city. From the Museum of Czech Cubism to the technicolour Jubilee Synagogue; the castle to the river, <strong>Prague</strong> is a Bohemian capital in every sense. Several incompatible district systems dating from different historical periods are used in <strong>Prague</strong>, for various purposes – at least three schemes. Making things worse, a given district name can be used in all the systems, but with different meanings. In this guide, a simplified version of the &quot;old&quot; district system is used. Under this system, <strong>Prague</strong> is divided into ten numbered districts (Praha 1 through Praha 10). Its advantage is that it is used on street signs and house numbers throughout the city, so you can always easily determine which &quot;old&quot; district you are in. If you encounter a district number higher than 10, a different system is being used. For example, Praha 13 is part of the &quot;old&quot; Praha 5 district.  Praha 1 is the oldest part of the city, the original &#x27;Town of <strong>Prague</strong>&#x27;, and has by far the largest number of attractions. Praha 2 also contains important historic areas. In this central area, the &quot;old&quot; district system (or any of the newer systems) is too crude to be practical, and a finer division is needed. Traditional city &quot;quarters&quot; provide such a division. Their disadvantage is that they are somewhat incompatible with the modern district systems – although &quot;quarters&quot; are smaller than the &quot;old&quot; system districts, a single quarter can belong to two or even more districts. The advantage is that these central quarters are well known and widely used and identical to the homonymous cadastral areas shown on the street and house number signs along with the &quot;old&quot; district designation, allowing easy orientation. Buildings in bigger cities in the Czech Republic are marked with two numbers, one blue and one red. The blue ones are the orientation numbers – it is the ordinal number of the building on its street. Historically these numbers always started from the end of the street which is closer to a river. The red numbers are related to the house register of the entire district (for example, Staré Město), and thus usually correspond to the order in which the buildings in that district were constructed. Most people do not remember them; if somebody refers to &quot;Dlouhá street, number 8&quot;, they will usually mean the blue number. Red numbers usually have 3 or more digits. This city of bridges, cathedrals, gold-tipped towers and church domes, has mirrored on the surface of the swan-filled Vltava river for more than ten centuries.</p></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>75.6</span>
+                    <div class='circular-ring ring-safe' data-pct='76'></div>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>78</span>
+                    <div class='circular-ring ring-green' data-pct='78'></div>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>106.19€</span>
+                </div>
+                <span class='val-local'>≈ 2.676 Kč</span>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='100'></div></div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>0</span>
+                </div>
+            </div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>42.6</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='43'></div></div>
+            </div>
         </div>
-    <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><table class='attr-table'><thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead><tbody><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>1</td><td class='atn-name'><span itemprop='name'>Charles Bridge</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0865'><meta itemprop='longitude' content='14.4114'></div></td><td class='atn-desc'><span itemprop='description'>Historic 14th-century bridge with 30 statues.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.0865,14.4114' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>2</td><td class='atn-name'><span itemprop='name'>Prague Castle</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0911'><meta itemprop='longitude' content='14.4016'></div></td><td class='atn-desc'><span itemprop='description'>Largest ancient castle complex in the world.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.0911,14.4016' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>3</td><td class='atn-name'><span itemprop='name'>Old Town Square</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0875'><meta itemprop='longitude' content='14.4214'></div></td><td class='atn-desc'><span itemprop='description'>Central square with the Astronomical Clock.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.0875,14.4214' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>4</td><td class='atn-name'><span itemprop='name'>St. Vitus Cathedral</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0908'><meta itemprop='longitude' content='14.4005'></div></td><td class='atn-desc'><span itemprop='description'>Gothic masterpiece located within the castle walls.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.0908,14.4005' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>5</td><td class='atn-name'><span itemprop='name'>Astronomical Clock</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.087'><meta itemprop='longitude' content='14.4207'></div></td><td class='atn-desc'><span itemprop='description'>15th-century medieval clock on the Town Hall.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.087,14.4207' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>6</td><td class='atn-name'><span itemprop='name'>Josefov</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0894'><meta itemprop='longitude' content='14.4181'></div></td><td class='atn-desc'><span itemprop='description'>The Jewish Quarter with historic synagogues and cemetery.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.0894,14.4181' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>7</td><td class='atn-name'><span itemprop='name'>Wenceslas Square</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0817'><meta itemprop='longitude' content='14.4278'></div></td><td class='atn-desc'><span itemprop='description'>Major city square and center of business and culture.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.0817,14.4278' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>8</td><td class='atn-name'><span itemprop='name'>Dancing House</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0755'><meta itemprop='longitude' content='14.4142'></div></td><td class='atn-desc'><span itemprop='description'>Modern architectural landmark designed by Gehry.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.0755,14.4142' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>9</td><td class='atn-name'><span itemprop='name'>Lennon Wall</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0862'><meta itemprop='longitude' content='14.4069'></div></td><td class='atn-desc'><span itemprop='description'>Wall filled with John Lennon-inspired graffiti and lyrics.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.0862,14.4069' target='_blank' class='maps-link'>📍</a></td></tr><tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><td class='atn'>10</td><td class='atn-name'><span itemprop='name'>Petrin Lookout</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0835'><meta itemprop='longitude' content='14.3951'></div></td><td class='atn-desc'><span itemprop='description'>Steel tower on a hill resembling the Eiffel Tower.</span></td><td class='atn-map'><a href='https://www.google.com/maps?q=50.0835,14.3951' target='_blank' class='maps-link'>📍</a></td></tr></tbody></table></div>
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+        <div class='info-block district-block'><span class='block-title'>🏙️ Districts</span><ul class='block-ul'><li><b>Old Town and Josefov</b>: Quartiere di Praga.</li><li><b>Castle and Lesser Town</b>: Quartiere di Praga.</li><li><b>New Town and Vysehrad</b>: Quartiere di Praga.</li><li><b>East bank of Vltava</b>: Quartiere di Praga.</li><li><b>West bank of Vltava</b>: Quartiere di Praga.</li></ul></div>
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/prague.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="https://en.wikivoyage.org/wiki/Prague" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Prague</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        <div class='attractions'><span class='block-title'>Strategic Sights &amp; Coordinates</span><div class='attractions-grid'><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#1</span><span class='attr-card-name' itemprop='name'>Charles Bridge</span><p class='attr-card-desc' itemprop='description'>Historic 14th-century bridge with 30 statues.</p><a href='https://www.google.com/maps?q=50.0865,14.4114' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0865'><meta itemprop='longitude' content='14.4114'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#2</span><span class='attr-card-name' itemprop='name'>Prague Castle</span><p class='attr-card-desc' itemprop='description'>Largest ancient castle complex in the world.</p><a href='https://www.google.com/maps?q=50.0911,14.4016' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0911'><meta itemprop='longitude' content='14.4016'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#3</span><span class='attr-card-name' itemprop='name'>Old Town Square</span><p class='attr-card-desc' itemprop='description'>Central square with the Astronomical Clock.</p><a href='https://www.google.com/maps?q=50.0875,14.4214' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0875'><meta itemprop='longitude' content='14.4214'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#4</span><span class='attr-card-name' itemprop='name'>St. Vitus Cathedral</span><p class='attr-card-desc' itemprop='description'>Gothic masterpiece located within the castle walls.</p><a href='https://www.google.com/maps?q=50.0908,14.4005' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0908'><meta itemprop='longitude' content='14.4005'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#5</span><span class='attr-card-name' itemprop='name'>Astronomical Clock</span><p class='attr-card-desc' itemprop='description'>15th-century medieval clock on the Town Hall.</p><a href='https://www.google.com/maps?q=50.087,14.4207' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.087'><meta itemprop='longitude' content='14.4207'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#6</span><span class='attr-card-name' itemprop='name'>Josefov</span><p class='attr-card-desc' itemprop='description'>The Jewish Quarter with historic synagogues and cemetery.</p><a href='https://www.google.com/maps?q=50.0894,14.4181' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0894'><meta itemprop='longitude' content='14.4181'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#7</span><span class='attr-card-name' itemprop='name'>Wenceslas Square</span><p class='attr-card-desc' itemprop='description'>Major city square and center of business and culture.</p><a href='https://www.google.com/maps?q=50.0817,14.4278' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0817'><meta itemprop='longitude' content='14.4278'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#8</span><span class='attr-card-name' itemprop='name'>Dancing House</span><p class='attr-card-desc' itemprop='description'>Modern architectural landmark designed by Gehry.</p><a href='https://www.google.com/maps?q=50.0755,14.4142' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0755'><meta itemprop='longitude' content='14.4142'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#9</span><span class='attr-card-name' itemprop='name'>Lennon Wall</span><p class='attr-card-desc' itemprop='description'>Wall filled with John Lennon-inspired graffiti and lyrics.</p><a href='https://www.google.com/maps?q=50.0862,14.4069' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0862'><meta itemprop='longitude' content='14.4069'></div></div><div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'><span class='attr-card-num'>#10</span><span class='attr-card-name' itemprop='name'>Petrin Lookout</span><p class='attr-card-desc' itemprop='description'>Steel tower on a hill resembling the Eiffel Tower.</p><a href='https://www.google.com/maps?q=50.0835,14.3951' target='_blank' class='attr-card-link'>📍 Open Maps</a><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0835'><meta itemprop='longitude' content='14.3951'></div></div></div></div>
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        <div id='nightlife' class='info-block nightlife-block'><span class='block-title'>🍺 Where to Drink</span><ul class='nightlife-grid'><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=50.0874351,14.4193478' target='_blank'>Absintherie Franz Kafka</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0874351'><meta itemprop='longitude' content='14.4193478'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=50.0824881,14.444303' target='_blank'>Belzepub</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0824881'><meta itemprop='longitude' content='14.444303'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=50.0747455,14.431049' target='_blank'>Ber.lin Bar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0747455'><meta itemprop='longitude' content='14.431049'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=50.0842199,14.4142283' target='_blank'>Café-Bar Duende</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0842199'><meta itemprop='longitude' content='14.4142283'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=50.0999349,14.4879307' target='_blank'>Club Montana</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0999349'><meta itemprop='longitude' content='14.4879307'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=50.0804853,14.405884' target='_blank'>Craft Beer Spot</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0804853'><meta itemprop='longitude' content='14.405884'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=50.0862561,14.4416022' target='_blank'>District 3 Bar</a></span><span class='venue-cat cat-bar'>bar</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.0862561'><meta itemprop='longitude' content='14.4416022'></div></li><li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/BarOrPub'><span class='venue-card-name'><a itemprop='name' href='https://www.google.com/maps?q=50.086847,14.3760312' target='_blank'>Hostinec "u Anduly"</a></span><span class='venue-cat cat-pub'>pub</span><div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'><meta itemprop='latitude' content='50.086847'><meta itemprop='longitude' content='14.3760312'></div></li></ul></div>
+        
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        <div class='info-block transport-block'><span class='block-title'>🚇 Urban Transport</span><p class='block-p'>The public transport around <strong>Prague</strong> consists of three metro lines (prague, prague, prague), over twenty tram lines (numbered 1–31 &amp; 91–99 for night trams), trolleybuses (numbered 58–59), buses (3-digit numbers), ferries, a few train lines (numbered S1, S2, S49,…), and one funicular, all using the same time tickets. Public transport schedules and fares are integrated by Pražská Integrovaná Doprava (abbreviated PID).</p></div>
+        
+        <div class='city-desc'>
+            <div class='desc-section strategic'>
+                <span class='source-tag'>🎯 Strategic Summary</span>
+                <p class='desc-strategic-p' itemprop='description'>Keeper of an intact UNESCO heritage, <strong>Prague</strong> is one of the safest and most accessible cities on the continent. Its public transport system is among the most efficient in Europe, enabling stress-free livability.</p>
+            </div>
+            <div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p"><strong>Prague</strong> (Czech: Praha) is the capital and largest city of the Czech Republic. The city&#x27;s historic buildings and narrow, winding streets are testament to its centuries-old role as capital of the historic region of Bohemia. <strong>Prague</strong> lies on the banks of the beautiful, meandering Vltava River that reflects the city&#x27;s golden spires and 9th century castle that dominates the skyline. This historic atmosphere is combined with a certain quirkiness that embraces the entire city. From the Museum of Czech Cubism to the technicolour Jubilee Synagogue; the castle to the river, <strong>Prague</strong> is a Bohemian capital in every sense. Several incompatible district systems dating from different historical periods are used in <strong>Prague</strong>, for various purposes – at least three schemes. Making things worse, a given district name can be used in all the systems, but with different meanings. In this guide, a simplified version of the &quot;old&quot; district system is used. Under this system, <strong>Prague</strong> is divided into ten numbered districts (Praha 1 through Praha 10). Its advantage is that it is used on street signs and house numbers throughout the city, so you can always easily determine which &quot;old&quot; district you are in. If you encounter a district number higher than 10, a different system is being used. For example, Praha 13 is part of the &quot;old&quot; Praha 5 district.  Praha 1 is the oldest part of the city, the original &#x27;Town of <strong>Prague</strong>&#x27;, and has by far the largest number of attractions. Praha 2 also contains important historic areas. In this central area, the &quot;old&quot; district system (or any of the newer systems) is too crude to be practical, and a finer division is needed. Traditional city &quot;quarters&quot; provide such a division. Their disadvantage is that they are somewhat incompatible with the modern district systems – although &quot;quarters&quot; are smaller than the &quot;old&quot; system districts, a single quarter can belong to two or even more districts. The advantage is that these central quarters are well known and widely used and identical to the homonymous cadastral areas shown on the street and house number signs along with the &quot;old&quot; district designation, allowing easy orientation. Buildings in bigger cities in the Czech Republic are marked with two numbers, one blue and one red. The blue ones are the orientation numbers – it is the ordinal number of the building on its street. Historically these numbers always started from the end of the street which is closer to a river. The red numbers are related to the house register of the entire district (for example, Staré Město), and thus usually correspond to the order in which the buildings in that district were constructed. Most people do not remember them; if somebody refers to &quot;Dlouhá street, number 8&quot;, they will usually mean the blue number. Red numbers usually have 3 or more digits. This city of bridges, cathedrals, gold-tipped towers and church domes, has mirrored on the surface of the swan-filled Vltava river for more than ten centuries.</p></div>
+        </div>
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/prague.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="https://en.wikivoyage.org/wiki/Prague" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 en.wikivoyage.org/wiki/Prague</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+    {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(cityMap);
   var mkIcon=function(e){return L.divIcon({className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]});};
   var venueIco={bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'};
   var attrs=[{"lat": 50.0865, "lon": 14.4114, "n": "Charles Bridge", "d": "Historic 14th-century bridge with 30 statues."}, {"lat": 50.0911, "lon": 14.4016, "n": "Prague Castle", "d": "Largest ancient castle complex in the world."}, {"lat": 50.0875, "lon": 14.4214, "n": "Old Town Square", "d": "Central square with the Astronomical Clock."}, {"lat": 50.0908, "lon": 14.4005, "n": "St. Vitus Cathedral", "d": "Gothic masterpiece located within the castle walls."}, {"lat": 50.087, "lon": 14.4207, "n": "Astronomical Clock", "d": "15th-century medieval clock on the Town Hall."}, {"lat": 50.0894, "lon": 14.4181, "n": "Josefov", "d": "The Jewish Quarter with historic synagogues and cemetery."}, {"lat": 50.0817, "lon": 14.4278, "n": "Wenceslas Square", "d": "Major city square and center of business and culture."}, {"lat": 50.0755, "lon": 14.4142, "n": "Dancing House", "d": "Modern architectural landmark designed by Gehry."}, {"lat": 50.0862, "lon": 14.4069, "n": "Lennon Wall", "d": "Wall filled with John Lennon-inspired graffiti and lyrics."}, {"lat": 50.0835, "lon": 14.3951, "n": "Petrin Lookout", "d": "Steel tower on a hill resembling the Eiffel Tower."}];
   var venues=[{"lat": 50.0874351, "lon": 14.4193478, "n": "Absintherie Franz Kafka", "cat": "bar"}, {"lat": 50.0824881, "lon": 14.444303, "n": "Belzepub", "cat": "pub"}, {"lat": 50.0747455, "lon": 14.431049, "n": "Ber.lin Bar", "cat": "bar"}, {"lat": 50.0842199, "lon": 14.4142283, "n": "Caf\u00e9-Bar Duende", "cat": "bar"}, {"lat": 50.0999349, "lon": 14.4879307, "n": "Club Montana", "cat": "pub"}, {"lat": 50.0804853, "lon": 14.405884, "n": "Craft Beer Spot", "cat": "bar"}, {"lat": 50.0862561, "lon": 14.4416022, "n": "District 3 Bar", "cat": "bar"}, {"lat": 50.086847, "lon": 14.3760312, "n": "Hostinec \"u Anduly\"", "cat": "pub"}];
   var allMkrs=[];
   attrs.forEach(function(a){
-    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{icon:mkIcon('📍')}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   });
   venues.forEach(function(v){
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{icon:mkIcon(ico)}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -121,9 +149,9 @@
     allMkrs.push(m);
   });
   if(allMkrs.length>0){
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }else{
-    map.setView([50.0755,14.4378],13);
+    cityMap.setView([50.0755,14.4378],13);
   }
 })();
 var btt = document.getElementById('back-to-top');
@@ -131,6 +159,31 @@ window.addEventListener('scroll', function() {
     btt.classList.toggle('visible', window.scrollY > 400);
 });
 btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
+(function(){
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){ panel.classList.add('active'); }
+      if(this.dataset.tab === 'attractions' && cityMap){
+        setTimeout(function(){ cityMap.invalidateSize(); }, 50);
+      }
+    });
+  });
+  document.querySelectorAll('[data-pct]').forEach(function(el){
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){
+      el.style.setProperty('--pct', v);
+    } else {
+      el.style.setProperty('--bar-w', v + '%');
+    }
+  });
+})();
 </script>
 
 <!-- ═══ FLOATING VIRTUAL ANALYST ════════════════════════════════════════ -->

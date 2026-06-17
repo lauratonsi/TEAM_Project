@@ -1177,17 +1177,30 @@ def generate_city_pages(city_data):
                 f"</div>"
             )
 
-        # --- Landmark image ---
-        lm_html = ""
-        if city['landmark_image']:
-            img_url = city['landmark_image']
-            if not img_url.startswith('http'):
-                img_url = '../../' + img_url.lstrip('/')
-            lm_html = (
-                f"<div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'>"
-                f"<img itemprop='image' src='{img_url}' alt='{city['name_en']} Landmark' "
-                f"style='width:100%; height:100%; object-fit:cover;'></div>"
-            )
+        # --- Hero full-width (sempre presente: tutti i 30 XML hanno landmark_image) ---
+        _badges = ""
+        try:
+            if float(city['green'])  > 75:  _badges += "<span class='city-hero-badge badge-green'>🌿 Green City</span>"
+            if float(city['safety']) > 70:  _badges += "<span class='city-hero-badge badge-safe'>🛡️ Ultra Safe</span>"
+            if float(city['appeal']) > 60:  _badges += "<span class='city-hero-badge badge-top'>⭐ Top Rated</span>"
+            if float(city['price'])  < 130: _badges += "<span class='city-hero-badge badge-budget'>💰 Budget Pick</span>"
+        except (ValueError, TypeError):
+            pass
+        _hero_img = city['landmark_image'] or f'assets/images/{cl}.jpg'
+        if _hero_img and not _hero_img.startswith('http'):
+            _hero_img = '../../' + _hero_img.lstrip('/')
+        _region_label = city.get('region', '').replace('_', ' ').title()
+        lm_html = (
+            f"<div class='city-hero'>"
+            f"<img itemprop='image' src='{_hero_img}' alt='{city['name_en']} Landmark'>"
+            f"<div class='city-hero-overlay'></div>"
+            f"<div class='city-hero-info'>"
+            f"<div class='city-hero-badges'>{_badges}</div>"
+            f"<h1 class='city-hero-title'>{city['flag']} {city['name_en']}{city['name_it_badge']}</h1>"
+            f"<p class='city-hero-sub'>{_region_label} Europe</p>"
+            f"</div>"
+            f"</div>"
+        )
 
         # --- Valuta locale (solo capitali fuori area euro) ---
         # L'euro resta l'unità primaria (il prezzo è una stima sintetica in EUR);
@@ -1195,7 +1208,7 @@ def generate_city_pages(city_data):
         cmeta = currency_meta(city['currency'])
         budget_local = local_price(city['price'], city['currency'])
         budget_local_sub = (
-            f"<span class='stat-local'>≈ {budget_local}</span>" if budget_local else ""
+            f"<span class='val-local'>≈ {budget_local}</span>" if budget_local else ""
         )
         if cmeta:
             currency_note_html = (
@@ -1217,34 +1230,47 @@ def generate_city_pages(city_data):
         _a = _pct(city['appeal'])
         stats_html = f"""
         <div class='stats-box'>
-            <div class='stat-item'>
-                <span class='stat-label'>Appeal</span>
-                <span class='stat-val' style='color:var(--accent)'>{city['appeal']}</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill red' style='width:{_a}%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>⭐ Appeal</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-accent'>{city['appeal']}</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-red' data-pct='{_a}'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Budget</span>
-                <span class='stat-val'>{city['price']}€</span>{budget_local_sub}
-                <div class='score-bar-wrap'><div class='score-bar-fill amber' style='width:{_p}%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛡️ Safety</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>{city['safety']}</span>
+                    <div class='circular-ring ring-safe' data-pct='{_s}'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Safety</span>
-                <span class='stat-val'>{city['safety']}</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:{_s}%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🌱 Green</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-green'>{city['green']}</span>
+                    <div class='circular-ring ring-green' data-pct='{_g}'></div>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Green</span>
-                <span class='stat-val' style='color:var(--green-500)'>{city['green']}</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill green' style='width:{_g}%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🛏️ Budget / night</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-gold'>{city['price']}€</span>
+                </div>
+                {budget_local_sub}
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-amber' data-pct='{_p}'></div></div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Venues</span>
-                <span class='stat-val' style='color:var(--blue-500)'>{city['hotel_count']}</span>
+            <div class='stat-card'>
+                <span class='stat-card-label'>🍸 Venues</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val val-blue'>{city['hotel_count']}</span>
+                </div>
             </div>
-            <div class='stat-item'>
-                <span class='stat-label'>Cost of living</span>
-                <span class='stat-val'>{city['economy']}</span>
-                <div class='score-bar-wrap'><div class='score-bar-fill blue' style='width:{_e}%'></div></div>
+            <div class='stat-card'>
+                <span class='stat-card-label'>💰 Cost of living</span>
+                <div class='stat-card-top'>
+                    <span class='stat-card-val'>{city['economy']}</span>
+                </div>
+                <div class='pill-bar-wrap'><div class='pill-bar-fill bar-blue' data-pct='{_e}'></div></div>
             </div>
         </div>"""
 
@@ -1256,7 +1282,7 @@ def generate_city_pages(city_data):
             for h in city['hotels']])
         hotel_html = (
             f"<div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span>"
-            f"<ul style='margin:0; padding-left:15px;'>{hotel_li}</ul></div>"
+            f"<ul class='block-ul'>{hotel_li}</ul></div>"
         ) if hotel_li else ""
 
         # --- Transport (strip inline AI-source marker before display) ---
@@ -1265,7 +1291,7 @@ def generate_city_pages(city_data):
         transport_html = (
             f"<div class='info-block transport-block'>"
             f"<span class='block-title'>🚇 Urban Transport</span>"
-            f"<p style='margin:0;'>{transport_display}</p></div>"
+            f"<p class='block-p'>{transport_display}</p></div>"
         )
 
         # --- Districts ---
@@ -1275,7 +1301,7 @@ def generate_city_pages(city_data):
         ])
         districts_html = (
             f"<div class='info-block district-block'><span class='block-title'>🏙️ Districts</span>"
-            f"<ul style='margin:0; padding-left:15px;'>{dist_li}</ul></div>"
+            f"<ul class='block-ul'>{dist_li}</ul></div>"
         ) if dist_li else ""
 
         # --- Nightlife ---
@@ -1283,53 +1309,64 @@ def generate_city_pages(city_data):
         # più specifica: NightClub per le discoteche, BarOrPub per bar e pub.
         def _venue_schema(cat):
             return 'NightClub' if cat == 'nightclub' else 'BarOrPub'
-        night_li = "".join([
-            f"<li itemprop='containsPlace' itemscope itemtype='https://schema.org/{_venue_schema(v['cat'])}'>"
-            f"<a itemprop='name' href='https://www.google.com/maps?q={v['lat']},{v['lon']}' target='_blank'>{v['n']}</a>"
-            f" <span style='color:#94a3b8; font-size:0.82rem;'>({v['cat']})</span>"
-            f"<div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>"
-            f"<meta itemprop='latitude' content='{v['lat']}'>"
-            f"<meta itemprop='longitude' content='{v['lon']}'></div></li>"
-            for v in city['nightlife']
-        ])
+        def _cat_class(cat):
+            return f"cat-{cat}" if cat in ('nightclub', 'pub', 'bar') else ""
+
+        night_cards_parts = []
+        for v in city['nightlife']:
+            _vcat   = v['cat']
+            _vlat   = v['lat']
+            _vlon   = v['lon']
+            _vname  = v['n']
+            _schema = _venue_schema(_vcat)
+            _cclass = _cat_class(_vcat)
+            night_cards_parts.append(
+                f"<li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/{_schema}'>"
+                f"<span class='venue-card-name'>"
+                f"<a itemprop='name' href='https://www.google.com/maps?q={_vlat},{_vlon}' target='_blank'>{_vname}</a>"
+                f"</span>"
+                f"<span class='venue-cat {_cclass}'>{_vcat}</span>"
+                f"<div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>"
+                f"<meta itemprop='latitude' content='{_vlat}'>"
+                f"<meta itemprop='longitude' content='{_vlon}'></div>"
+                f"</li>"
+            )
+        night_cards = "".join(night_cards_parts)
         nightlife_html = (
             f"<div id='nightlife' class='info-block nightlife-block'>"
             f"<span class='block-title'>🍺 Where to Drink</span>"
-            f"<ul style='margin:0; padding-left:15px;'>{night_li}</ul></div>"
-        ) if night_li else ""
+            f"<ul class='nightlife-grid'>{night_cards}</ul></div>"
+        ) if night_cards else ""
 
         # --- Descriptions ---
         desc_html = f"""
         <div class='city-desc'>
-            <div class='desc-section' style='border-left:3px solid var(--blue-500); padding-left:15px; background:#f0f9ff;'>
+            <div class='desc-section strategic'>
                 <span class='source-tag'>🎯 Strategic Summary</span>
-                <p style='font-weight:600; margin:0;' itemprop='description'>{city['story_it']}</p>
+                <p class='desc-strategic-p' itemprop='description'>{city['story_it']}</p>
             </div>
-            {'<div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p style="font-size:0.85rem; margin:0;">' + city['wiki_intro'] + '</p></div>' if city['wiki_intro'] else ''}
+            {'<div class="desc-section"><span class="source-tag">📂 Wiki Archive</span><p class="desc-wiki-p">' + city['wiki_intro'] + '</p></div>' if city['wiki_intro'] else ''}
         </div>"""
 
         # --- Attractions with microdata (tabular layout) ---
-        attr_rows = ""
+        attr_cards = ""
         for idx, a in enumerate(city['attractions'], 1):
-            attr_rows += (
-                f"<tr itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>"
-                f"<td class='atn'>{idx}</td>"
-                f"<td class='atn-name'><span itemprop='name'>{a['n']}</span>"
+            attr_cards += (
+                f"<div class='attr-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/TouristAttraction'>"
+                f"<span class='attr-card-num'>#{idx}</span>"
+                f"<span class='attr-card-name' itemprop='name'>{a['n']}</span>"
+                f"<p class='attr-card-desc' itemprop='description'>{a['d']}</p>"
+                f"<a href='https://www.google.com/maps?q={a['lat']},{a['lon']}' target='_blank' class='attr-card-link'>📍 Open Maps</a>"
                 f"<div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>"
                 f"<meta itemprop='latitude' content='{a['lat']}'>"
-                f"<meta itemprop='longitude' content='{a['lon']}'></div></td>"
-                f"<td class='atn-desc'><span itemprop='description'>{a['d']}</span></td>"
-                f"<td class='atn-map'>"
-                f"<a href='https://www.google.com/maps?q={a['lat']},{a['lon']}' target='_blank' class='maps-link'>📍</a>"
-                f"</td></tr>"
+                f"<meta itemprop='longitude' content='{a['lon']}'></div>"
+                f"</div>"
             )
         attractions_html = (
             "<div class='attractions'>"
             "<span class='block-title'>Strategic Sights &amp; Coordinates</span>"
-            "<table class='attr-table'>"
-            "<thead><tr><th>#</th><th>Attraction</th><th>Description</th><th></th></tr></thead>"
-            f"<tbody>{attr_rows}</tbody>"
-            "</table></div>"
+            f"<div class='attractions-grid'>{attr_cards}</div>"
+            "</div>"
         )
 
         # --- City map data ---
@@ -1366,6 +1403,7 @@ def generate_city_pages(city_data):
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../stile.css?v={CSS_VER}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>{city['name_en']} — EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -1392,51 +1430,65 @@ def generate_city_pages(city_data):
     {region_md_html}
     {geo_html}
     {lm_html}
-    <h1 class="city-title" style="margin-bottom:25px;">{city['flag']} {city['name_en']}{city['name_it_badge']}</h1>
-    {stats_html}
     {currency_note_html}
-    {transport_html}
-    {hotel_html}
-    {districts_html}
-    {nightlife_html}
-    {desc_html}
-    {attractions_html}
-    <div class="info-block" style="padding:0;overflow:hidden;border-radius:16px;">
-        <span class="block-title" style="display:block;padding:14px 18px;">🗺️ City Map</span>
-        <div id="city-map" style="height:380px;width:100%;"></div>
+    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    </nav>
+    <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
+        {stats_html}
+        {districts_html}
     </div>
-    <div class="download-block">
-        <p style="color:var(--slate-500); font-size:0.85rem; margin-bottom:12px;">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
-        <a href="../../data/xml_dataset/{cl}.xml" download class="download-link">📥 Download XML source</a>
-        <p style="color:var(--slate-500); font-size:0.85rem; margin:14px 0 0;">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
-        <a href="{city['uri']}" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 {city['uri'].replace('https://', '').replace('http://', '')}</a>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        {attractions_html}
+        <div class="info-block city-map-block">
+            <span class="block-title city-map-title">🗺️ City Map</span>
+            <div id="city-map" class="city-map-div"></div>
+        </div>
+    </div>
+    <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
+        {nightlife_html}
+        {hotel_html}
+    </div>
+    <div id="tab-tips" class="city-tab-panel" role="tabpanel">
+        {transport_html}
+        {desc_html}
+        <div class="download-block">
+            <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
+            <a href="../../data/xml_dataset/{cl}.xml" download class="download-link">📥 Download XML source</a>
+            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <a href="{city['uri']}" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 {city['uri'].replace('https://', '').replace('http://', '')}</a>
+        </div>
     </div>
 </main>
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="city-footer">
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
     Università di Bologna — A.A. 2024/2025
 </footer>
 <button id="back-to-top" title="Back to top">↑</button>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+var cityMap;
 (function(){{
-  var map = L.map('city-map');
+  cityMap = L.map('city-map');
   L.tileLayer('https://{{s}}.basemaps.cartocdn.com/rastertiles/voyager/{{z}}/{{x}}/{{y}}{{r}}.png',
-    {{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}}).addTo(map);
+    {{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}}).addTo(cityMap);
   var mkIcon=function(e){{return L.divIcon({{className:'',html:'<div style="font-size:21px;line-height:32px;width:32px;text-align:center;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">'+e+'</div>',iconSize:[32,32],iconAnchor:[16,16]}});}};
   var venueIco={{bar:'🍺',pub:'🍺',biergarten:'🍺',nightclub:'🎵'}};
   var attrs={map_attrs_js};
   var venues={map_venues_js};
   var allMkrs=[];
   attrs.forEach(function(a){{
-    var m=L.marker([a.lat,a.lon],{{icon:mkIcon('📍')}}).addTo(map);
+    var m=L.marker([a.lat,a.lon],{{icon:mkIcon('📍')}}).addTo(cityMap);
     m.bindTooltip(a.n);
     if(a.d)m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">📍 '+a.n+'</h4><p style="margin:0;font-size:.82rem;color:#334155">'+a.d+'</p></div>');
     allMkrs.push(m);
   }});
   venues.forEach(function(v){{
     var ico=venueIco[v.cat]||'🍺';
-    var m=L.marker([v.lat,v.lon],{{icon:mkIcon(ico)}}).addTo(map);
+    var m=L.marker([v.lat,v.lon],{{icon:mkIcon(ico)}}).addTo(cityMap);
     m.bindTooltip(v.n);
     m.bindPopup('<div class="mp"><h4 style="margin:0 0 4px">'+ico+' '+v.n+'</h4><p style="margin:0 0 6px;font-size:.82rem;color:#64748b">'+v.cat+'</p>'
       +'<a href="https://www.google.com/maps?q='+v.lat+','+v.lon+'" target="_blank" class="pl" style="margin-right:10px">📍 Maps</a>'
@@ -1444,9 +1496,9 @@ def generate_city_pages(city_data):
     allMkrs.push(m);
   }});
   if(allMkrs.length>0){{
-    map.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
+    cityMap.fitBounds(L.featureGroup(allMkrs).getBounds().pad(0.2));
   }}else{{
-    map.setView([{city_lat},{city_lon}],13);
+    cityMap.setView([{city_lat},{city_lon}],13);
   }}
 }})();
 var btt = document.getElementById('back-to-top');
@@ -1454,6 +1506,31 @@ window.addEventListener('scroll', function() {{
     btt.classList.toggle('visible', window.scrollY > 400);
 }});
 btt.onclick = function() {{ window.scrollTo({{top: 0, behavior: 'smooth'}}); }};
+(function(){{
+  var btns   = document.querySelectorAll('.city-tab-btn');
+  var panels = document.querySelectorAll('.city-tab-panel');
+  btns.forEach(function(btn){{
+    btn.addEventListener('click', function(){{
+      btns.forEach(function(b){{ b.classList.remove('active'); b.setAttribute('aria-selected','false'); }});
+      panels.forEach(function(p){{ p.classList.remove('active'); }});
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      var panel = document.getElementById('tab-' + this.dataset.tab);
+      if(panel){{ panel.classList.add('active'); }}
+      if(this.dataset.tab === 'attractions' && cityMap){{
+        setTimeout(function(){{ cityMap.invalidateSize(); }}, 50);
+      }}
+    }});
+  }});
+  document.querySelectorAll('[data-pct]').forEach(function(el){{
+    var v = el.dataset.pct;
+    if(el.classList.contains('circular-ring')){{
+      el.style.setProperty('--pct', v);
+    }} else {{
+      el.style.setProperty('--bar-w', v + '%');
+    }}
+  }});
+}})();
 </script>
 {analyst_widget}
 {analyst_js}
