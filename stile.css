@@ -543,26 +543,11 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 /* 5. GRID E LAYOUT CARDS */
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
     padding: 20px 32px 80px;
     max-width: 1900px;
     margin: auto;
-}
-/* 5 colonne esatte a desktop wide → 30 card = 6 righe pari */
-@media (min-width: 1500px) {
-    .container {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 22px;
-    }
-}
-/* 3 colonne a desktop medium → 30 card = 10 righe pari */
-@media (min-width: 900px) and (max-width: 1499px) {
-    .container { grid-template-columns: repeat(3, 1fr); }
-}
-/* 2 colonne a tablet → 30 card = 15 righe pari */
-@media (min-width: 600px) and (max-width: 899px) {
-    .container { grid-template-columns: repeat(2, 1fr); gap: 18px; padding: 16px 20px 60px; }
 }
 
 .city-card {
