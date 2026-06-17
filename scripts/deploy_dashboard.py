@@ -1003,7 +1003,8 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
     <div class="ft-row ft-main">
         <div class="ft-search">
             <label for="city-search" class="ft-sr">Search a capital by name</label>
-            <input type="search" id="city-search" placeholder="🔍 Search a capital…" autocomplete="off">
+            <span class="ft-search-ico" aria-hidden="true">🔍</span>
+            <input type="search" id="city-search" placeholder="Search a capital by name…" autocomplete="off">
         </div>
         <div class="ft-sort">
             <label for="city-sort">Sort by</label>
@@ -1284,6 +1285,15 @@ def generate_city_pages(city_data):
             f"<div class='info-block hotel-block'><span class='block-title'>🏨 Where to Stay</span>"
             f"<ul class='block-ul'>{hotel_li}</ul></div>"
         ) if hotel_li else ""
+        # Tab "Stay" dedicato: mostrato solo per le città che hanno hotel catalogati.
+        stay_tab_btn = (
+            '<button class="city-tab-btn" data-tab="stay" role="tab" aria-selected="false">🏨 Stay</button>'
+            if hotel_html else ""
+        )
+        stay_panel = (
+            f'<div id="tab-stay" class="city-tab-panel" role="tabpanel">{hotel_html}</div>'
+            if hotel_html else ""
+        )
 
         # --- Transport (strip inline AI-source marker before display) ---
         import re as _re
@@ -1322,11 +1332,11 @@ def generate_city_pages(city_data):
             _cclass = _cat_class(_vcat)
             night_cards_parts.append(
                 f"<li class='venue-card {_cclass}' itemprop='containsPlace' itemscope itemtype='https://schema.org/{_schema}'>"
-                f"<div class='venue-card-header'>"
+                f"<span class='venue-card-name' itemprop='name'>{_vname}</span>"
+                f"<div class='venue-card-footer'>"
                 f"<span class='venue-cat {_cclass}'>{_vcat}</span>"
                 f"<a class='venue-map-link' href='https://www.google.com/maps?q={_vlat},{_vlon}' target='_blank' title='Open in Maps'>📍</a>"
                 f"</div>"
-                f"<span class='venue-card-name' itemprop='name'>{_vname}</span>"
                 f"<div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>"
                 f"<meta itemprop='latitude' content='{_vlat}'>"
                 f"<meta itemprop='longitude' content='{_vlon}'></div>"
@@ -1436,6 +1446,7 @@ def generate_city_pages(city_data):
         <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Overview</button>
         <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Sights</button>
         <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Nightlife</button>
+        {stay_tab_btn}
         <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Tips</button>
     </nav>
     <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
@@ -1451,8 +1462,8 @@ def generate_city_pages(city_data):
     </div>
     <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
         {nightlife_html}
-        {hotel_html}
     </div>
+    {stay_panel}
     <div id="tab-tips" class="city-tab-panel" role="tabpanel">
         {transport_html}
         {desc_html}
@@ -1638,48 +1649,63 @@ def generate_report(city_data, validation):
             dtd_content = f.read().replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
     summary_cards = (
-        stat_card("Capitals Analysed", total_cities)
-        + stat_card("Accommodation Venues", total_hotels, "var(--blue-500)")
-        + stat_card("Attractions Catalogued", total_attractions, "var(--green-500)")
-        + stat_card("Cities with Districts", f"{cities_with_dist}/{total_cities}", "#8b5cf6")
-        + stat_card("Avg Appeal", avg_appeal, "var(--accent)")
-        + stat_card("Avg Safety", avg_safety, "var(--blue-500)")
-        + stat_card("Avg Green Score", avg_green, "var(--green-500)")
-        + stat_card("Validated XML Files", total_cities, "#D97706")
+        stat_card("Capitali analizzate", total_cities)
+        + stat_card("Strutture ricettive", total_hotels, "var(--blue-500)")
+        + stat_card("Attrazioni catalogate", total_attractions, "var(--green-500)")
+        + stat_card("Città con distretti", f"{cities_with_dist}/{total_cities}", "#8b5cf6")
+        + stat_card("Appeal medio", avg_appeal, "var(--accent)")
+        + stat_card("Safety media", avg_safety, "var(--blue-500)")
+        + stat_card("Green Score medio", avg_green, "var(--green-500)")
+        + stat_card("File XML validati", total_cities, "#D97706")
     )
 
     html = f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../stile.css?v={CSS_VER}">
-  <title>Report &amp; Documentation — EuroCity</title>
+  <title>Report &amp; Documentazione — EuroCity</title>
   <style>
     .report-nav {{
-      max-width: 950px; margin: 0 auto 0; padding: 18px 20px;
-      display: flex; gap: 12px; flex-wrap: wrap;
+      position: sticky; top: 0; z-index: 20;
+      max-width: 100%; margin: 0; padding: 14px 24px;
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+      background: rgba(244, 241, 222, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--slate-200);
     }}
     .report-nav a {{
-      background: var(--slate-100); color: var(--slate-800);
-      padding: 7px 18px; border-radius: 20px; text-decoration: none;
-      font-size: 0.82rem; font-weight: 700; border: 1px solid var(--slate-200);
-      transition: 0.2s;
+      background: #fff; color: var(--slate-800);
+      padding: 7px 16px; border-radius: 99px; text-decoration: none;
+      font-size: 0.8rem; font-weight: 700; border: 1px solid var(--slate-200);
+      transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
     }}
-    .report-nav a:hover {{ background: var(--accent-dark); color: white; }}
+    .report-nav a:hover {{
+      background: var(--accent); color: white; border-color: var(--accent);
+      transform: translateY(-1px);
+    }}
     .report-section {{
-      max-width: 950px; margin: 36px auto; background: white;
+      max-width: 980px; margin: 32px auto; background: white;
       border-radius: 20px; padding: 40px 44px;
       border: 1px solid var(--slate-200);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
     }}
     .report-section h2 {{
-      font-size: 1.35rem; font-weight: 800; margin: 0 0 24px;
-      padding-bottom: 12px; border-bottom: 3px solid var(--accent);
-      color: var(--primary-dark);
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.65rem; font-weight: 700; margin: 0 0 24px;
+      padding-bottom: 14px; border-bottom: 3px solid var(--accent);
+      color: var(--night, var(--primary-dark)); letter-spacing: -0.01em;
     }}
     .report-section h3 {{
       font-size: 1rem; font-weight: 800; color: var(--slate-800);
       margin: 24px 0 10px;
+    }}
+    /* Paragrafi della documentazione (sostituiscono gli inline style) */
+    .rp-lead {{ margin-top: 0; color: var(--slate-500); font-size: 0.92rem; }}
+    .rp-sm   {{ font-size: 0.9rem; }}
+    .rstat-card, .technique-card {{ transition: transform 0.18s, box-shadow 0.18s; }}
+    .rstat-card:hover, .technique-card:hover {{
+      transform: translateY(-3px); box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
     }}
     .rstat-grid {{
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
@@ -1841,22 +1867,22 @@ def generate_report(city_data, validation):
   </div>
 </header>
 <div class="report-hero">
-  <h1 class="report-hero-title">Report &amp; Documentation</h1>
-  <p class="report-hero-sub">Statistics extracted algorithmically · TEAM Pipeline · UniBo A.Y. 2024/2025</p>
+  <h1 class="report-hero-title">Report &amp; Documentazione</h1>
+  <p class="report-hero-sub">Statistiche estratte algoritmicamente · Pipeline TEAM · UniBo A.A. 2024/2025</p>
 </div>
 
 <nav class="report-nav" aria-label="Sezioni del report">
-  <a href="#statistiche">📊 Statistics</a>
-  <a href="#ranking">🏆 Rankings</a>
-  <a href="#architettura">⚙️ Architecture</a>
-  <a href="#dtd">📄 DTD Schema</a>
-  <a href="#parsing">🔬 Parsing Techniques</a>
+  <a href="#statistiche">📊 Statistiche</a>
+  <a href="#ranking">🏆 Classifiche</a>
+  <a href="#architettura">⚙️ Architettura</a>
+  <a href="#dtd">📄 Schema DTD</a>
+  <a href="#parsing">🔬 Parsing</a>
   <a href="#xpath">🧭 XPath</a>
   <a href="#microdata">🏷️ Microdata</a>
   <a href="#semantica">♿ HTML &amp; Accessibilità</a>
   <a href="#frontend">🎨 CSS &amp; JS</a>
   <a href="#rag">🔎 Virtual Analyst (RAG)</a>
-  <a href="#ai">🤖 AI Usage</a>
+  <a href="#ai">🤖 Uso dell'AI</a>
   <a href="#team">👥 Team</a>
 </nav>
 
@@ -2647,55 +2673,62 @@ for filename in files:                                  # scorre la directory XM
 
 <!-- ===== FRONTEND CSS & JS ===== -->
 <section class="report-section" id="frontend">
-  <h2>🎨 Frontend Architecture — CSS &amp; JavaScript</h2>
-  <p style="margin-top:0;color:var(--slate-500);font-size:0.92rem;">
-    The Travel 2026 interface enforces a strict <b>separation of concerns</b>: all presentation
-    lives in the single external file <code>stile.css</code>. JavaScript is limited to three
-    roles — tab class-toggling, reading <code>data-pct</code> attributes to feed CSS custom
-    properties, and calling <code>map.invalidateSize()</code> when the map container reappears.
-    No inline <code>style=""</code> attributes are written in the generated markup.
+  <h2>🎨 Architettura Frontend — CSS &amp; JavaScript</h2>
+  <p class="rp-lead">
+    L'interfaccia <b>Travel 2026</b> applica una rigorosa <b>separazione delle competenze</b>: tutta
+    la presentazione vive in un unico file esterno, <code>stile.css</code>. Il JavaScript è limitato
+    a tre soli compiti — commutare le classi dei tab, leggere gli attributi <code>data-pct</code> per
+    alimentare le <i>custom property</i> CSS e chiamare <code>map.invalidateSize()</code> quando il
+    contenitore della mappa torna visibile. Nel markup generato non viene scritto <b>alcun</b>
+    attributo <code>style=""</code> inline.
   </p>
 
-  <h3>1. External stylesheet — <code>stile.css</code></h3>
-  <p style="font-size:0.9rem">
-    All 30 city pages share one stylesheet, versioned with an MD5 hash of its content
-    (<code>stile.css?v=<em>hash</em></code>) so any edit forces a browser cache-bust.
-    New city-page rules are scoped under <code>.city-detail</code> or <code>.city-hero</code>
-    to avoid touching <code>index.html</code> or this <code>report.html</code>.
+  <h3>1. Foglio di stile esterno — <code>stile.css</code></h3>
+  <p class="rp-sm">
+    Tutte le 30 pagine città condividono un unico foglio di stile, versionato con un hash MD5 del suo
+    contenuto (<code>stile.css?v=<em>hash</em></code>): così ogni modifica forza l'invalidazione della
+    cache del browser. Le nuove regole delle pagine città sono confinate sotto i prefissi
+    <code>.city-detail</code> e <code>.city-hero</code> per non intaccare <code>index.html</code> né
+    questo <code>report.html</code>.
   </p>
   <div class="technique-grid">
     <div class="technique-card">
-      <h3>Travel 2026 palette — CSS custom properties</h3>
-      <p>Four brand variables added to <code>:root</code>:
+      <h3>Palette Travel 2026 — custom property CSS</h3>
+      <p>Quattro variabili di brand aggiunte a <code>:root</code>:
         <code>--terra: #E07A5F</code> (terracotta),
         <code>--crema: #F4F1DE</code>,
-        <code>--night: #3D405B</code> (midnight blue),
-        <code>--gold: #E9C46A</code>. Hero titles and this report use <b>Playfair Display</b> (serif) via Google Fonts, loaded alongside Inter.</p>
+        <code>--night: #3D405B</code> (blu notte),
+        <code>--gold: #E9C46A</code>. I titoli hero e questo report usano <b>Playfair Display</b> (serif) via Google Fonts, caricato insieme a Inter.</p>
     </div>
     <div class="technique-card">
-      <h3>Circular progress — <code>conic-gradient</code></h3>
-      <p>Safety and Green rings are pure CSS:
+      <h3>Anello di progresso — <code>conic-gradient</code></h3>
+      <p>Gli anelli di Safety e Green sono puro CSS:
         <code>conic-gradient(currentColor calc(var(--pct,0) * 3.6deg), var(--slate-200) 0deg)</code>.
-        The factor 3.6 maps a 0–100 score to 0–360°.
-        A <code>::after</code> pseudo-element (inset 7 px) masks the centre to form the donut shape.</p>
+        Il fattore 3.6 mappa un punteggio 0–100 su 0–360°.
+        Uno pseudo-elemento <code>::after</code> (inset 7 px) maschera il centro creando la forma a ciambella.</p>
     </div>
     <div class="technique-card">
-      <h3>Animated pill bars — <code>var(--bar-w)</code></h3>
-      <p>Horizontal bars use <code>width: var(--bar-w, 0%)</code> with
+      <h3>Barre animate — <code>var(--bar-w)</code></h3>
+      <p>Le barre orizzontali usano <code>width: var(--bar-w, 0%)</code> con
         <code>transition: width 0.8s cubic-bezier(.4,0,.2,1)</code>.
-        The property starts at 0; JS sets the final value after render, triggering the animation
-        without writing any inline <code>style=""</code>.</p>
+        La proprietà parte da 0; il JS imposta il valore finale dopo il render, innescando l'animazione
+        senza scrivere alcuno <code>style=""</code> inline.</p>
     </div>
     <div class="technique-card">
-      <h3>Tab panel system — class toggle only</h3>
-      <p><code>.city-tab-panel {{ display: none }}</code> hides all panels by default.
+      <h3>Sistema a tab — solo toggle di classe</h3>
+      <p><code>.city-tab-panel {{ display: none }}</code> nasconde tutti i pannelli per default.
         <code>.city-tab-panel.active {{ display: block; animation: tabIn 0.22s }}</code>
-        shows the active one with a fade-in slide. JS only adds or removes the <code>active</code>
-        class — no <code>innerHTML</code>, no inline styles.</p>
+        mostra quello attivo con una dissolvenza in entrata. Il JS si limita ad aggiungere o togliere la
+        classe <code>active</code> — niente <code>innerHTML</code>, niente stili inline.</p>
     </div>
   </div>
 
-  <h3>2. Tab switcher</h3>
+  <h3>2. I tab della scheda città</h3>
+  <p class="rp-sm">
+    Ogni scheda città è organizzata in cinque tab — <b>Overview</b>, <b>Sights</b>, <b>Nightlife</b>,
+    <b>Stay</b> (mostrato solo se la città ha hotel catalogati) e <b>Tips</b>. Il gestore dei click
+    commuta soltanto le classi <code>active</code>:
+  </p>
   <pre>var btns   = document.querySelectorAll('.city-tab-btn');
 var panels = document.querySelectorAll('.city-tab-panel');
 btns.forEach(function(btn){{
@@ -2705,50 +2738,50 @@ btns.forEach(function(btn){{
     this.classList.add('active');
     var panel = document.getElementById('tab-' + this.dataset.tab);
     if(panel){{ panel.classList.add('active'); }}
-    // Leaflet must recalculate its container size when the Overview tab re-activates
+    // Leaflet deve ricalcolare le dimensioni quando il tab Overview torna attivo
     if(this.dataset.tab === 'overview' && cityMap){{
       setTimeout(function(){{ cityMap.invalidateSize(); }}, 50);
     }}
   }});
 }});</pre>
 
-  <h3>3. <code>data-pct</code> → CSS custom property</h3>
-  <p style="font-size:0.9rem">
-    Metric cards carry a <code>data-pct</code> HTML attribute with the numeric value (0–100).
-    After the DOM is ready, a single loop reads each attribute and pushes the value into the
-    matching CSS custom property — the <b>only</b> accepted exception to the zero-inline-styles rule
-    (setting a custom property via <code>style.setProperty</code> feeds a variable, not a presentation rule):
+  <h3>3. <code>data-pct</code> → custom property CSS</h3>
+  <p class="rp-sm">
+    Le metric card portano un attributo HTML <code>data-pct</code> con il valore numerico (0–100).
+    Quando il DOM è pronto, un unico ciclo legge ciascun attributo e ne riversa il valore nella
+    custom property CSS corrispondente — l'<b>unica</b> eccezione ammessa alla regola «zero stili inline»
+    (impostare una custom property con <code>style.setProperty</code> alimenta una variabile, non una regola di presentazione):
   </p>
   <pre>document.querySelectorAll('[data-pct]').forEach(function(el){{
   var v = el.dataset.pct;
   if(el.classList.contains('circular-ring')){{
-    el.style.setProperty('--pct', v);         // drives conic-gradient angle
+    el.style.setProperty('--pct', v);         // pilota l'angolo del conic-gradient
   }} else {{
-    el.style.setProperty('--bar-w', v + '%'); // drives pill bar width → CSS transition fires
+    el.style.setProperty('--bar-w', v + '%'); // pilota la larghezza della barra → parte la transizione CSS
   }}
 }});</pre>
 
-  <h3>4. Leaflet — <code>invalidateSize()</code> pattern</h3>
-  <p style="font-size:0.9rem">
-    The Leaflet map sits inside the <b>Overview</b> tab (the default active panel), so it renders
-    correctly on first load. When the user navigates away and comes back, the container has already
-    been sized once; the <code>setTimeout(..., 50)</code> call lets the browser finish the CSS
-    <code>display: block</code> paint cycle before Leaflet re-reads the dimensions.
-    The <code>cityMap</code> variable is declared outside the IIFE so the tab handler can reach it.
+  <h3>4. Leaflet — il pattern <code>invalidateSize()</code></h3>
+  <p class="rp-sm">
+    La mappa Leaflet si trova nel tab <b>Overview</b> (il pannello attivo di default), quindi viene
+    renderizzata correttamente al primo caricamento. Quando l'utente esce e torna, il contenitore è già
+    stato dimensionato una volta; la chiamata <code>setTimeout(..., 50)</code> lascia al browser il tempo
+    di completare il ciclo di paint del <code>display: block</code> prima che Leaflet rilegga le dimensioni.
+    La variabile <code>cityMap</code> è dichiarata fuori dalla IIFE così che il gestore dei tab possa raggiungerla.
   </p>
 
-  <h3>5. Hero badge thresholds (computed at build time)</h3>
-  <p style="font-size:0.9rem">
-    Badges are computed by <code>deploy_dashboard.py</code> when regenerating pages,
-    calibrated against actual dataset value ranges (appeal 48–68, safety 47–75, green 60–88, price 88–163 €):
+  <h3>5. Soglie dei badge hero (calcolate in fase di build)</h3>
+  <p class="rp-sm">
+    I badge sono calcolati da <code>deploy_dashboard.py</code> durante la rigenerazione delle pagine,
+    tarati sugli intervalli reali del dataset (appeal 48–68, safety 47–75, green 60–88, prezzo 88–163 €):
   </p>
   <table class="prov-table">
-    <thead><tr><th>Badge</th><th>Condition</th><th>Verified example</th></tr></thead>
+    <thead><tr><th>Badge</th><th>Condizione</th><th>Esempio verificato</th></tr></thead>
     <tbody>
-      <tr><td>🌿 Green City</td><td><code>green &gt; 75</code></td><td>Stockholm 88 ✓</td></tr>
-      <tr><td>🛡️ Ultra Safe</td><td><code>safety &gt; 70</code></td><td>Luxembourg 73.5 ✓</td></tr>
-      <tr><td>⭐ Top Rated</td><td><code>appeal &gt; 60</code></td><td>Copenhagen 66 ✓</td></tr>
-      <tr><td>💰 Budget Pick</td><td><code>price &lt; 130 €</code></td><td>Lisbon 112 € ✓</td></tr>
+      <tr><td>🌿 Green City</td><td><code>green &gt; 75</code></td><td>Stoccolma 88 ✓</td></tr>
+      <tr><td>🛡️ Ultra Safe</td><td><code>safety &gt; 70</code></td><td>Lussemburgo 73.5 ✓</td></tr>
+      <tr><td>⭐ Top Rated</td><td><code>appeal &gt; 60</code></td><td>Copenaghen 66 ✓</td></tr>
+      <tr><td>💰 Budget Pick</td><td><code>price &lt; 130 €</code></td><td>Lisbona 112 € ✓</td></tr>
     </tbody>
   </table>
 </section>

@@ -539,6 +539,7 @@ Utilizzato per assistenza allo sviluppo della pipeline:
 - Gestione della valuta locale (`currency_rates.json`, attributo `currency`, nota sulle capitali non-euro) e correzione della provenienza del prezzo (stima sintetica, non estratta)
 - Iniezione della macro-regione geografica negli XML (`geo_regions.json`, attributo enumerato `region` da geoscheme UN M49) come dimensione di filtro/navigazione nell'index
 - Trasformazione del Virtual Analyst in widget flottante presente su ogni pagina
+- Redesign "Travel 2026" delle schede città (hero full-width, metriche con anelli `conic-gradient`, layout a 5 tab Overview/Sights/Nightlife/Stay/Tips) e della toolbar di ricerca/filtri dell'index, con tutta la presentazione in CSS esterno
 - Generazione di `report.html` e del presente `README.md`
 
 **Prompt rappresentativo usato con Claude Code:**
@@ -561,7 +562,7 @@ Le sintesi strategiche in `city_descriptions.json` sono state generate con Claud
 |------|-------------|
 | `xml_dataset/*.xml` | 30 file XML, uno per capitale, validati DTD |
 | `index.html` | Dashboard navigabile: griglia di card **filtrabile** (profilo/regione/valuta), **ordinabile** e con **ricerca**, mappa e Virtual Analyst |
-| `pages/cities/*.html` | 30 pagine città (una per XML), con microdata, mappa e nota valuta per le città non-euro |
+| `pages/cities/*.html` | 30 pagine città (una per XML), con microdata, mappa e nota valuta per le città non-euro. Layout "Travel 2026" a **tab** — *Overview* (metriche + distretti + mappa Leaflet), *Sights*, *Nightlife*, *Stay* (mostrato solo per le città con hotel catalogati) e *Tips* — con hero full-width e card animate via CSS |
 | `pages/report.html` | Statistiche estratte + documentazione pipeline |
 | `pages/mappa_attrazioni.html` | Mappa Leaflet con attrazioni e locali notturni geolocalizzati |
 | `stile.css` | Foglio di stile unico, applicato a tutti i documenti HTML (con cache-busting `?v=hash`) |
