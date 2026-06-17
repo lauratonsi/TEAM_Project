@@ -543,7 +543,7 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 /* 5. GRID E LAYOUT CARDS */
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 22px;
     padding: 20px 32px 80px;
     max-width: 1900px;
