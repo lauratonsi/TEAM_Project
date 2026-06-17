@@ -543,10 +543,13 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 /* 5. GRID E LAYOUT CARDS */
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 22px;
+    /* Adattivo e a prova di cross-platform: ~5 colonne su desktop ampi,
+       4 su laptop, meno su schermi piccoli — senza mai tagliare le card.
+       min(100%, 300px) evita overflow anche su viewport molto stretti. */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 24px;
     padding: 20px 32px 80px;
-    max-width: 1900px;
+    max-width: 1700px;
     margin: auto;
 }
 
@@ -560,6 +563,7 @@ details[open] .analyst-details summary::before { content: '▾ '; }
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-width: 0; /* consente alla card di restringersi nella traccia grid senza overflow */
     transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s ease;
 }
 
@@ -651,35 +655,53 @@ details[open] .analyst-details summary::before { content: '▾ '; }
     flex: 1;
 }
 
-/* 6. STATS GRID (3×2) */
+/* 6. STATS — lista verticale pulita, stile sito di viaggi.
+   Ogni metrica è una riga: etichetta a sinistra, valore a destra,
+   barra sottile a tutta larghezza sotto (quando presente).
+   Niente colonne fisse → nessun testo tagliato a qualsiasi larghezza. */
 .stats-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 16px;
 }
 
 .stat-item {
-    background: var(--slate-50);
-    padding: 10px 6px;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid var(--slate-100);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--slate-100);
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
 }
 
+.stat-item:last-child { border-bottom: none; }
+
 .stat-label {
-    display: block;
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     text-transform: uppercase;
     color: var(--slate-500);
     font-weight: 700;
-    letter-spacing: 0.04em;
-    margin-bottom: 3px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 
 .stat-val {
+    justify-self: end;
     font-weight: 800;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+/* La barra punteggio occupa l'intera larghezza, sotto etichetta+valore */
+.stat-item .score-bar-wrap {
+    grid-column: 1 / -1;
+    margin-top: 7px;
 }
 
 /* Equivalente in valuta locale sotto al Budget (solo capitali non-euro) */
@@ -1021,7 +1043,6 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .container { padding: 16px; gap: 16px; }
-    .stats-box { grid-template-columns: 1fr 1fr; }
     header h1 { font-size: 2.2rem; }
     header { padding: 70px 20px 80px; }
 }

@@ -993,54 +993,6 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
     </div>
 </section>
 
-<!-- ═══ DATA PROVENANCE — how the numbers are built ════════════════════ -->
-<section class="provenance-band" aria-label="How the data is built">
-  <div class="prov-inner">
-    <p class="prov-eyebrow">The pipeline</p>
-    <h2 class="prov-heading">How the data is built</h2>
-    <p class="prov-lead">Every page, ranking and map is generated from validated XML — not hand-written.</p>
-
-    <ol class="prov-flow">
-        <li class="prov-node">
-            <span class="prov-step">1</span>
-            <span class="prov-ico">📂</span>
-            <b>Wikivoyage</b>
-            <small>MediaWiki dumps parsed into clean text: transport, attractions, districts, venues.</small>
-        </li>
-        <li class="prov-node">
-            <span class="prov-step">2</span>
-            <span class="prov-ico">📄</span>
-            <b>XML + DTD</b>
-            <small>One validated file per city: mixed content, geo-coordinates, Schema.org microdata.</small>
-        </li>
-        <li class="prov-node">
-            <span class="prov-step">3</span>
-            <span class="prov-ico">📊</span>
-            <b>Indices</b>
-            <small>Safety, Green and Cost of living merged in from international sources.</small>
-        </li>
-        <li class="prov-node">
-            <span class="prov-step">4</span>
-            <span class="prov-ico">🌐</span>
-            <b>This site</b>
-            <small>Pages, rankings and map generated directly from the XML.</small>
-        </li>
-    </ol>
-
-    <div class="prov-formula" role="img"
-         aria-label="Appeal Score equals 40% safety, 40% green, 20% affordability">
-        <span class="prov-formula-lbl">Appeal&nbsp;Score</span>
-        <span class="prov-eq">=</span>
-        <span class="prov-seg prov-safety">Safety <i>×0.4</i></span>
-        <span class="prov-plus">+</span>
-        <span class="prov-seg prov-green">Green <i>×0.4</i></span>
-        <span class="prov-plus">+</span>
-        <span class="prov-seg prov-cost">Affordability <i>×0.2</i></span>
-        <a class="prov-formula-link" href="pages/report.html#statistiche">see how →</a>
-    </div>
-  </div>
-</section>
-
 <!-- Virtual Analyst: ora è un widget flottante, iniettato a fine pagina -->
 
 <!-- ═══ MAPPA INLINE ════════════════════════════════════════════════════ -->
