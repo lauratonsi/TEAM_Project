@@ -133,6 +133,14 @@ REGION_LABELS = {
     'northern': '🧭 Northern', 'western': '🌅 Western',
     'southern': '☀️ Southern', 'eastern': '🌄 Eastern',
 }
+# Nome esteso + codice UN M49 per ciascuna macro-regione: usati nei microdata
+# schema.org delle schede città (City containedInPlace → Place → Continent Europe).
+REGION_META = {
+    'northern': ('Northern Europe', '154'),
+    'western':  ('Western Europe',  '155'),
+    'southern': ('Southern Europe', '039'),
+    'eastern':  ('Eastern Europe',  '151'),
+}
 
 CITY_PALETTE = [
     '#E74C3C','#3498DB','#2ECC71','#F39C12','#9B59B6',
@@ -1052,6 +1060,28 @@ def generate_city_pages(city_data):
             )
         )
 
+        # --- Region come microdata: containment geografico VERSO L'ALTO ---
+        # City containedInPlace → Place (macro-regione, id UN M49) containedInPlace
+        # → Continent "Europe" (sameAs Wikidata). Specchio di containsPlace, derivato
+        # dall'attributo @region del documento XML.
+        region_md_html = ""
+        _rmeta = REGION_META.get(city['region'])
+        if _rmeta:
+            _rname, _m49 = _rmeta
+            region_md_html = (
+                f"<div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Place'>"
+                f"<meta itemprop='name' content='{_rname}'>"
+                f"<div itemprop='identifier' itemscope itemtype='https://schema.org/PropertyValue'>"
+                f"<meta itemprop='propertyID' content='UN M49'>"
+                f"<meta itemprop='value' content='{_m49}'>"
+                f"</div>"
+                f"<div itemprop='containedInPlace' itemscope itemtype='https://schema.org/Continent'>"
+                f"<meta itemprop='name' content='Europe'>"
+                f"<link itemprop='sameAs' href='https://www.wikidata.org/wiki/Q46'>"
+                f"</div>"
+                f"</div>"
+            )
+
         # --- Landmark image ---
         lm_html = ""
         if city['landmark_image']:
@@ -1263,6 +1293,7 @@ def generate_city_pages(city_data):
 <main id="main" class="city-detail" itemscope itemtype="https://schema.org/City" itemid="{city['uri']}">
     <meta itemprop="name" content="{city['name_it']}">
     {rating_html}
+    {region_md_html}
     {geo_html}
     {lm_html}
     <h1 class="city-title" style="margin-bottom:25px;">{city['flag']} {city['name_it']}</h1>
@@ -2257,9 +2288,13 @@ for filename in files:                                  # scorre la directory XM
     <code>City</code> che <b>contiene</b> (<code>containsPlace</code>) le entità annidate del
     documento —
     <code>TouristAttraction</code>, <code>Hotel</code> e i locali notturni — ognuna con il proprio
-    blocco <code>geo/GeoCoordinates</code> (<code>latitude</code>/<code>longitude</code>):
+    blocco <code>geo/GeoCoordinates</code> (<code>latitude</code>/<code>longitude</code>), e che a
+    sua volta è <b>contenuta</b> (<code>containedInPlace</code>) nella propria macro-regione e nel
+    continente:
   </p>
   <pre style="font-size:0.8rem">City [itemid = source_url]
+ ├─ containedInPlace → Place "… Europe"  [identifier → PropertyValue "UN M49"]
+ │   └─ containedInPlace → Continent "Europe"  (sameAs → wikidata.org/Q46)
  ├─ aggregateRating → AggregateRating   (ratingValue = appeal_score, best/worst 100/0)
  ├─ additionalProperty → PropertyValue  (Safety Index · Green Score · Economic Accessibility)
  ├─ containsPlace → TouristAttraction   (name, description, geo → GeoCoordinates)
@@ -2273,7 +2308,10 @@ for filename in files:                                  # scorre la directory XM
     Score (composito) come <code>AggregateRating</code> — l'unico <code>aggregateRating</code>
     ammesso su un <code>Place</code> — e i tre sotto-indici come <code>PropertyValue</code> via
     <code>additionalProperty</code>, evitando di forzare più <i>rating</i> distinti su una sola
-    proprietà.
+    proprietà; <b>(3)</b> l'attributo XML <code>region</code> (UN&nbsp;M49) diventa la relazione di
+    <b>contenimento geografico</b> <code>containedInPlace</code> — speculare a <code>containsPlace</code> —
+    risalendo dalla città alla macro-regione (<code>Place</code>, con il codice M49 come
+    <code>identifier</code>) fino al <code>Continent</code> "Europe" (<code>sameAs</code> Wikidata).
   </p>
   <p style="font-size:0.9rem">
     Ogni <code>itemid</code> è l'<b>URI canonico letto dal documento XML</b>

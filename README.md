@@ -323,6 +323,17 @@ struttura **annidata** (come il pattern `Place > Review > Person` visto a lezion
       <meta itemprop="longitude" content="12.49">
     </div>
   </tr>
+  <!-- Contenimento geografico VERSO L'ALTO (dall'attributo @region, geoscheme UN M49) -->
+  <div itemprop="containedInPlace" itemscope itemtype="https://schema.org/Place">
+    <meta itemprop="name" content="Southern Europe">
+    <div itemprop="identifier" itemscope itemtype="https://schema.org/PropertyValue">
+      <meta itemprop="propertyID" content="UN M49"><meta itemprop="value" content="039">
+    </div>
+    <div itemprop="containedInPlace" itemscope itemtype="https://schema.org/Continent">
+      <meta itemprop="name" content="Europe">
+      <link itemprop="sameAs" href="https://www.wikidata.org/wiki/Q46">
+    </div>
+  </div>
 </main>
 ```
 
@@ -336,22 +347,28 @@ esattamente** a quelli nei documenti, come nell'esempio dei castelli del corso
 
 | Metrica | Valore |
 |---------|--------|
-| Item tipizzati (`itemscope`) | **1.378** |
-| Proprietà (`itemprop`) | **3.924** |
+| Item tipizzati (`itemscope`) | **1.468** |
+| Proprietà (`itemprop`) | **4.164** |
 | Identificatori (`itemid`) | 60 |
-| **Attributi microdata totali** | **≈ 6.740** |
+| **Attributi microdata totali** | **≈ 7.160** |
 
 | Tipo Schema.org | Item | | Tipo Schema.org | Item |
 |-----------------|------|---|-----------------|------|
-| `GeoCoordinates` | 570 | | `Hotel` | 88 |
-| `TouristAttraction` | 300 | | `City` | 60 |
-| `BarOrPub` | 227 | | `AggregateRating` | 30 |
-| `PropertyValue` | 90 | | `NightClub` | 13 |
+| `GeoCoordinates` | 570 | | `City` | 60 |
+| `TouristAttraction` | 300 | | `AggregateRating` | 30 |
+| `BarOrPub` | 227 | | `Place` *(macro-regione)* | 30 |
+| `PropertyValue` | 120 | | `Continent` *(Europe)* | 30 |
+| `Hotel` | 88 | | `NightClub` | 13 |
 
-Oltre alla gerarchia `City > containsPlace`, ogni `City` porta un **`AggregateRating`** (l'Appeal Score, con
-`ratingValue` 0–100) e i sotto-indici come **`PropertyValue`** (`additionalProperty`: Safety, Green, Economic
-Accessibility) — la forma corretta dato che un `Place` ammette un solo `aggregateRating`. La categoria enumerata
-del XML (`bar|pub|nightclub`) è mappata sulla classe più specifica (`BarOrPub` / `NightClub`).
+Oltre alla gerarchia *discendente* `City > containsPlace`, ogni `City` porta un **`AggregateRating`** (l'Appeal
+Score, con `ratingValue` 0–100) e i sotto-indici come **`PropertyValue`** (`additionalProperty`: Safety, Green,
+Economic Accessibility) — la forma corretta dato che un `Place` ammette un solo `aggregateRating`. La categoria
+enumerata del XML (`bar|pub|nightclub`) è mappata sulla classe più specifica (`BarOrPub` / `NightClub`).
+
+Specularmente, l'attributo XML **`region`** (UN M49) genera la gerarchia *ascendente* **`containedInPlace`**:
+ogni `City` è contenuta in un **`Place`** (la macro-regione, col codice M49 come `identifier`/`PropertyValue`),
+a sua volta contenuto nel **`Continent`** "Europe" (`sameAs` → Wikidata). È l'inverso esatto di `containsPlace`:
+il documento `<city_report region="…">` diventa una catena di contenimento navigabile dalla città al continente.
 
 ---
 
@@ -473,7 +490,7 @@ Utilizzato per assistenza allo sviluppo della pipeline:
 - Correzione del bug nell'estrazione distretti in `deploy_dashboard.py`
 - Override distretti per Luxembourg (dati CSV errati: siti Mullerthal) e Stockholm
 - Introduzione del content-model misto e della ri-validazione DTD in lettura
-- Espansione dei microdata Schema.org (`AggregateRating`, `PropertyValue`, `BarOrPub`/`NightClub`, `Hotel`) e script `check_microdata.py` per il round-trip
+- Espansione dei microdata Schema.org (`AggregateRating`, `PropertyValue`, `BarOrPub`/`NightClub`, `Hotel`, e il contenimento geografico `containedInPlace` → `Place`/`Continent` dall'attributo `region`) e script `check_microdata.py` per il round-trip
 - Gestione della valuta locale (`currency_rates.json`, attributo `currency`, nota sulle capitali non-euro) e correzione della provenienza del prezzo (stima sintetica, non estratta)
 - Iniezione della macro-regione geografica negli XML (`geo_regions.json`, attributo enumerato `region` da geoscheme UN M49) come dimensione di filtro/navigazione nell'index
 - Trasformazione del Virtual Analyst in widget flottante presente su ogni pagina
