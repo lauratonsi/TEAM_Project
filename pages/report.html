@@ -229,8 +229,9 @@
   <p style="font-size:0.9rem; color:var(--slate-500); margin:0 0 14px;">
     In ogni XML confluiscono due famiglie di dati: i <b>contenuti testuali</b> estratti
     algoritmicamente dai dump <b>Wikivoyage</b> (trasporti, attrazioni, distretti, locali) e gli
-    <b>indici numerici</b> presi da <code>city_indices.json</code> (fonti internazionali). L'unico
-    valore <i>derivato</i> dalla pipeline è l'<b>Appeal Score</b>, ricalcolato dai tre indici.
+    <b>indici numerici</b> presi da <code>city_indices.json</code> (fonti internazionali). Due valori
+    sono <i>derivati</i> dalla pipeline: l'<b>Appeal Score</b> (ricalcolato dai tre indici) e il
+    <b>budget alloggio</b> (stima sintetica: <code>hotel_price = cost_of_living × 1.85</code>).
   </p>
   <table class="prov-table">
     <thead>
@@ -372,7 +373,7 @@
     <div class="pipeline-step">
       <div class="step-num">1</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>extract_wiki_info.py</code> — Preparazione dati</h3>
+        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/extract_wiki_info.py" target="_blank" style="color:inherit;text-decoration:none;"><code>extract_wiki_info.py</code></a> — Preparazione dati</h3>
         <p>
           Analizza i dump Wikivoyage in <code>data/original_source/</code>. Utilizza
           <b>mwparserfromhell</b> e <b>spaCy</b> per estrarre testo strutturato.
@@ -385,7 +386,7 @@
     <div class="pipeline-step">
       <div class="step-num">2</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>final_processor.py</code> — Elaborazione e validazione XML</h3>
+        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/final_processor.py" target="_blank" style="color:inherit;text-decoration:none;"><code>final_processor.py</code></a> — Elaborazione e validazione XML</h3>
         <p>
           Script centrale del progetto. Per ogni capitale individua la pagina principale nel dump,
           pulisce il Wikitext con regex, estrae distretti con descrizioni dalle sotto-pagine, e
@@ -400,7 +401,7 @@
     <div class="pipeline-step">
       <div class="step-num">3</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>deploy_dashboard.py</code> — Generazione HTML</h3>
+        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/deploy_dashboard.py" target="_blank" style="color:inherit;text-decoration:none;"><code>deploy_dashboard.py</code></a> — Generazione HTML</h3>
         <p>
           Legge la directory dei 30 file XML e li <b>ri-valida in lettura</b> (distinguendo
           documenti <i>mal formati</i> da <i>non validi</i>, con contatore <code>30/30</code>
@@ -416,7 +417,7 @@
     <div class="pipeline-step">
       <div class="step-num">4</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>validate.py</code> — Validazione DTD standalone</h3>
+        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/blob/main/scripts/validate.py" target="_blank" style="color:inherit;text-decoration:none;"><code>validate.py</code></a> — Validazione DTD standalone</h3>
         <p>
           Script <b>indipendente</b> dal resto della pipeline (modellato sui laboratori del corso):
           scorre la directory XML, costruisce il <b>DOM</b> con <code>etree.parse()</code> e lo
@@ -430,7 +431,7 @@
     <div class="pipeline-step">
       <div class="step-num">5</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>rag/</code> — Sistema RAG per query in linguaggio naturale</h3>
+        <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/tree/main/rag" target="_blank" style="color:inherit;text-decoration:none;"><code>rag/</code></a> — Sistema RAG per query in linguaggio naturale</h3>
         <p>
           Modulo indipendente (<code>ingest.py</code> + <code>vectorstore.py</code> + <code>api.py</code>):
           indicizza i 30 XML in <b>336 chunk</b> su un indice <b>FAISS</b> + <b>BM25Okapi</b> con
@@ -1235,6 +1236,12 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
   </p>
 
   <h3 style="margin-top:32px;">Elenco Completo dei File e Fonti</h3>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 20px">
+    <div class="rstat-card"><span class="rstat-val" style="color:var(--accent)">11</span><span class="rstat-label">File sorgente / dati</span></div>
+    <div class="rstat-card"><span class="rstat-val" style="color:var(--blue-500)">5</span><span class="rstat-label">Script Python</span></div>
+    <div class="rstat-card"><span class="rstat-val" style="color:var(--green-500)">33</span><span class="rstat-label">Pagine HTML generate</span></div>
+    <div class="rstat-card"><span class="rstat-val" style="color:#8b5cf6">30</span><span class="rstat-label">XML validati DTD</span></div>
+  </div>
   <table style="width:100%;border-collapse:collapse;font-size:0.87rem;margin-top:12px">
     <thead>
       <tr style="background:var(--slate-50);text-align:left">
@@ -1294,6 +1301,18 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testo didattico</td>
       </tr>
       <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/currency_rates.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Valuta locale ISO 4217 + tassi EUR→locale (snapshot 2026-01) per 10 capitali non-euro</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Tassi di cambio indicativi raccolti manualmente</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/geo_regions.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Macro-regione UN M49 per ogni capitale (fonte + nota su Cipro)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://unstats.un.org/unsd/methodology/m49/" target="_blank">UN Statistics Division</a> (geoscheme M49)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
         <td style="padding:8px 12px"><code>data/city_report.dtd</code></td>
         <td style="padding:8px 12px">Schema DTD per la validazione dei file XML</td>
         <td style="padding:8px 12px">Creato originalmente per il progetto</td>
@@ -1330,7 +1349,16 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
 </section>
 </main>
 
-<footer style="text-align:center; padding:40px; color:var(--slate-500); font-size:0.82rem;">
+<footer class="site-footer">
+  <nav class="footer-nav" aria-label="Navigazione footer">
+    <a href="../index.html">🏠 Home</a>
+    <span class="footer-sep">·</span>
+    <a href="mappa_attrazioni.html">🗺️ Mappa</a>
+    <span class="footer-sep">·</span>
+    <a href="report.html" aria-current="page">📊 Report</a>
+    <span class="footer-sep">·</span>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Torna su</a>
+  </nav>
   Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale<br>
   Università di Bologna — A.A. 2024/2025
 </footer>
