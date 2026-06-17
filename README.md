@@ -60,7 +60,7 @@ i contenuti per le query in linguaggio naturale.
 
 | # | Componente | Ruolo |
 |---|-----------|-------|
-| 1 | `extract_wiki_info.py` | Preparazione: dump Wikivoyage → CSV/JSON (mwparserfromhell, spaCy) |
+| 1 | `extract_wiki_info.py` | Preparazione: dump Wikivoyage → CSV/JSON ([mwparserfromhell](https://mwparserfromhell.readthedocs.io/), spaCy) |
 | 2 | `final_processor.py` | Costruzione XML (content-model misto + `<source_url>`) e **validazione DTD in scrittura** |
 | 3 | `deploy_dashboard.py` | **Ri-validazione DTD in lettura** + generazione HTML/CSS con microdata annidati (`itemid` ← documento) |
 | 4 | `validate.py` | **Validatore DTD standalone**: DOM + `etree.DTD().validate()`, isolato dal resto |
@@ -111,7 +111,7 @@ di uscita `0` solo se tutti i file sono validi. Output:
 📋 Risultato: 30/30 validi · 0 non validi · 0 malformati
 ```
 
-> `extract_wiki_info.py` è lo script di preparazione iniziale (richiede `mwparserfromhell`, `spacy`,
+> `extract_wiki_info.py` è lo script di preparazione iniziale (richiede [`mwparserfromhell`](https://mwparserfromhell.readthedocs.io/), `spacy`,
 > opzionalmente Google Cloud Language API). I file CSV/JSON prodotti sono già inclusi nel repository,
 > quindi non è necessario rieseguirlo.
 
