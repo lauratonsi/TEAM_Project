@@ -345,13 +345,28 @@ function metadataQuery(q) {
     return '<b>🌍 ' + cities.length + ' cities' + (dtxt ? ' — ' + dtxt : '') + '</b><ol style="margin:6px 0;padding-left:18px">' + li + '</ol>';
 }
 
+/* nomi italiani delle capitali (solo dove differiscono dall'inglese): nel dataset name_it
+   coincide col nome EN, quindi senza questi alias "Roma"/"Praga"/… non verrebbero riconosciuti */
+const CITY_IT = {
+    Athens:'atene', Berlin:'berlino', Brussels:'bruxelles', Bucharest:'bucarest',
+    Copenhagen:'copenaghen', Dublin:'dublino', Lisbon:'lisbona', Ljubljana:'lubiana',
+    London:'londra', Luxembourg:'lussemburgo', Paris:'parigi', Prague:'praga',
+    Rome:'roma', Stockholm:'stoccolma', Valletta:'la valletta', Warsaw:'varsavia', Zagreb:'zagabria'
+};
+function cityMatch(c, q) {
+    var a = CITY_IT[c.name_en];
+    return q.includes((c.name_en || '').toLowerCase())
+        || q.includes((c.name_it || '').toLowerCase())
+        || (a && q.includes(a));
+}
+
 function clientSideAnswer(q) {
     const out = document.getElementById('chat-output');
-    let res = '❓ City not found. Try: <em>safety Vienna</em>, <em>hotels Rome</em>, <em>bars Berlin</em>, <em>nightclubs in non-euro cities</em>.';
-    var hasCity = cityData.some(function(c){ return q.includes(c.name_it.toLowerCase()) || q.includes((c.name_en||'').toLowerCase()); });
+    let res = '❓ City not found. Try: <em>safety Vienna</em>, <em>hotels Roma</em>, <em>bars Berlino</em>, <em>nightclubs in non-euro cities</em>.';
+    var hasCity = cityData.some(function(c){ return cityMatch(c, q); });
     if (!hasCity) { var mq = metadataQuery(q); if (mq) { out.innerHTML = mq; return; } }
     cityData.forEach(function(c) {
-        if (q.includes(c.name_it.toLowerCase()) || q.includes((c.name_en || '').toLowerCase())) {
+        if (cityMatch(c, q)) {
             if (/hotel|alloggio|dorm|ostello|stay|accommodation|sleep|lodg/.test(q)) {
                 var li = c.hotels.map(h => '<li><b>' + h.n + '</b> <span style="color:#64748b">(' + h.p + ')</span></li>').join('');
                 res = '<b>🏨 Accommodation — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + (li || '<li>No data in dataset</li>') + '</ul>';
@@ -360,7 +375,7 @@ function clientSideAnswer(q) {
             } else if (/distrett|quartier|zona|district|neighborhood|area|quarter/.test(q)) {
                 var dn = c.districts.map(d => d.n).join(', ');
                 res = '<b>🏘️ Districts — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + (dn || 'No district data available.') + '</p>';
-            } else if (/attrazione|visitare|vedere|turismo|museo|sight|museum|visit|attraction|landmark|tour/.test(q)) {
+            } else if (/attrazion|visitar|vedere|turismo|muse|sight|visit|attraction|landmark|tour/.test(q)) {
                 var al = c.attractions.slice(0,5).map(a => '<li><b>' + a.n + '</b> — <span style="color:#64748b;font-size:.88em">' + a.d + '</span> <a href="https://www.google.com/maps?q=' + a.lat + ',' + a.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍</a></li>').join('');
                 res = '<b>🗺️ Attractions — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + al + '</ul>';
             } else if (/bar|pub|drink|beer|nightlife|bere|birra|club|nightclub|aperitivo/.test(q)) {
