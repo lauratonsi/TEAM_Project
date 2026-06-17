@@ -90,8 +90,7 @@ python scripts/deploy_dashboard.py
 ### Validazione DTD — script standalone
 
 Oltre alla validazione integrata nella pipeline, è disponibile uno **script dedicato e
-indipendente** che valida la directory XML rispetto al DTD, modellato sui laboratori del
-corso (`lab_castles_validation.py`):
+indipendente** che valida la directory XML rispetto al DTD :
 
 ```bash
 python scripts/validate.py             # valida data/xml_dataset/

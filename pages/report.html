@@ -514,8 +514,7 @@
   <p>
     Oltre alla validazione integrata nella pipeline, un <b>script Python standalone</b>
     (<code>scripts/validate.py</code>), indipendente dal resto del progetto, costruisce il
-    <b>DOM</b> di ogni documento e lo valida rispetto al DTD — esattamente con l'approccio
-    dei laboratori del corso (<code>lab_castles_validation.py</code>). Distingue i tre esiti:
+    <b>DOM</b> di ogni documento e lo valida rispetto al DTD. Distingue i tre esiti:
     <b>mal formato</b> (<code>etree.parse()</code> solleva <code>XMLSyntaxError</code>),
     <b>non valido</b> (<code>dtd.validate()</code> &rarr; <code>False</code>) e <b>valido</b>.
   </p>
@@ -724,7 +723,7 @@ for filename in files:                                  # scorre la directory XM
         <code>itemscope itemtype="https://schema.org/City"</code>
         e <code>itemprop="name"</code> sul nome della città.
         Le annotazioni microdata sono generate direttamente dallo script
-        <code>deploy_dashboard.py</code>, come richiesto dalle linee guida del progetto.
+        <code>deploy_dashboard.py</code>. 
       </p>
     </div>
     <div class="technique-card">
@@ -936,8 +935,8 @@ for filename in files:                                  # scorre la directory XM
     organizzazione logica. Gli elementi si dividono in quelli <b>di blocco</b> (che vanno a
     capo) e <b>inline</b> (come <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code> o il
     generico <code>&lt;span&gt;</code>), che si inseriscono nel flusso del testo senza
-    spezzarlo.» — <span style="font-style:normal;color:var(--slate-500)">slide del corso</span>
-  </p>
+    spezzarlo.» 
+    </p>
   <p>
     Tutto l'HTML prodotto da <code>deploy_dashboard.py</code> applica questo principio. Di
     seguito come la teoria si traduce nel codice generato e, soprattutto, in un effetto reale.
@@ -1076,11 +1075,6 @@ for filename in files:                                  # scorre la directory XM
 <!-- ===== AI ===== -->
 <section class="report-section" id="ai">
   <h2>🤖 Dichiarazione Utilizzo Strumenti AI</h2>
-  <p>
-    Come previsto dalle linee guida del progetto TEAM, l'utilizzo di strumenti AI è
-    dichiarato e documentato di seguito.
-  </p>
-
   <h3>Claude Code (Anthropic) — Assistenza allo Sviluppo</h3>
   <span class="ai-badge">Claude Code / claude-sonnet-4-6</span>
   <p>
