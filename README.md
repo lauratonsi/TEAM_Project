@@ -71,6 +71,42 @@ tutti con `lxml.etree.DTD`.
 
 ---
 
+## Virtual Analyst — RAG & Metadata-filtered retrieval
+
+Il **Virtual Analyst** (cartella [`rag/`](rag/)) risponde a domande in linguaggio naturale (**italiano o
+inglese**) sulle 30 capitali. È il punto in cui i moduli del corso si **fondono**: la **RAG**
+(Retrieval-Augmented Generation) non lavora solo sul testo, ma sfrutta i **metadati strutturati** iniettati
+negli XML (gli stessi esposti come microdata Schema.org) per filtrare in modo esatto — *Metadata-filtered RAG*.
+
+```
+data/xml_dataset/*.xml → rag/ingest.py → rag_index/ (FAISS 384-dim + docs.json: 336 chunk + meta)
+                                            → rag/vectorstore.py  FAISS + BM25Okapi + RRF + pre-filtro metadati
+                                            → rag/api.py          FastAPI · parse_filters() · rilevamento intento
+```
+
+- **Ricerca ibrida**: FAISS (`all-MiniLM-L6-v2`) + BM25Okapi fusi con **Reciprocal Rank Fusion** (α=0.5).
+- **Pre-filtro per metadati**: la query è analizzata per dimensioni esatte e il set di candidati è ristretto
+  **prima** della ricerca semantica — macro-regione (`@region`, UN M49), valuta (`@currency`), categoria locale
+  (`@category`), soglie numeriche (appeal / safety / green / prezzo). Es. *«nightclubs in non-euro cities»*,
+  *«attractions in northern europe»*, *«cities with appeal over 60»*.
+- **Tre vantaggi** della fusione RAG × Web of Data: filtraggio esatto (niente «zuppa di tag»), disambiguazione
+  via categoria tipizzata (`BarOrPub` / `NightClub`), valori numerici garantiti verbatim
+  (`GeoCoordinates`, `AggregateRating`) — zero allucinazioni sui numeri.
+
+**Due layer di esecuzione.** La RAG FastAPI è la *reference implementation* locale; poiché **GitHub Pages** è
+statico e non può ospitare il backend Python, il sito esegue la stessa logica di filtraggio in un motore
+**client-side** (`metadataQuery()`) direttamente nel browser, sui dati già serializzati come JSON inline.
+
+```bash
+pip install -r requirements.txt
+python -m rag.ingest                                   # costruisce l'indice dai 30 XML
+uvicorn rag.api:app --host 127.0.0.1 --port 8000       # avvia l'API (reference locale)
+```
+
+> 📖 **Documentazione completa** (schema dei chunk, dimensioni di filtro, endpoint): [`README_RAG.md`](README_RAG.md).
+
+---
+
 ## Come Eseguire la Pipeline
 
 ### Prerequisiti

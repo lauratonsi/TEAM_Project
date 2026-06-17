@@ -207,6 +207,7 @@
   <a href="#xpath">🧭 XPath</a>
   <a href="#microdata">🏷️ Microdata</a>
   <a href="#semantica">♿ HTML &amp; Accessibilità</a>
+  <a href="#rag">🔎 Virtual Analyst (RAG)</a>
   <a href="#ai">🤖 AI Usage</a>
   <a href="#team">👥 Team</a>
 </nav>
@@ -431,43 +432,11 @@
       <div class="step-body">
         <h3 style="margin:0;"><code>rag/</code> — Sistema RAG per query in linguaggio naturale</h3>
         <p>
-          Modulo indipendente composto da tre file: <code>ingest.py</code> legge i 30 XML e
-          costruisce <b>336 chunk testuali</b> tematici (trasporti, hotel, distretti, attrazioni,
-          descrizione strategica, panoramica wiki) prefissati con il nome della città.
-          <code>vectorstore.py</code> indicizza i chunk in un indice <b>FAISS IndexFlatIP</b>
-          (384 dimensioni, <code>all-MiniLM-L6-v2</code>) e mantiene un indice <b>BM25Okapi</b>
-          parallelo; la ricerca ibrida applica <b>Reciprocal Rank Fusion</b> (α=0.5).
-          <code>api.py</code> (FastAPI su <code>127.0.0.1:8000</code>) riceve la query,
-          rileva l'intento (transport / hotel / attractions / safety / general), boosta i chunk
-          della sezione corrispondente e sintetizza la risposta estraendo le frasi più rilevanti
-          — senza LLM esterno.
-        </p>
-        <h4 style="margin:14px 0 4px;color:var(--accent-dark)">Metadata-filtered retrieval — la fusione dei moduli</h4>
-        <p>
-          Il punto in cui RAG e <b>Web of Data</b> si fondono: <code>ingest.py</code> non indicizza solo
-          testo, ma allega a ogni chunk i <b>metadati strutturati</b> iniettati nell'XML (gli stessi esposti
-          come microdata Schema.org). <code>parse_filters()</code> analizza la domanda per dimensioni esatte
-          e <code>hybrid_search()</code> <b>pre-filtra</b> i candidati prima della ricerca semantica:
-        </p>
-        <ul style="margin:6px 0;font-size:0.9rem">
-          <li><b>Filtraggio esatto</b> su <code>@region</code> (UN&nbsp;M49), <code>@currency</code> e
-              <code>@category</code> dei locali — niente più «zuppa di tag» da indovinare nel testo
-              <em>(es. «nightclubs in non-euro cities» → solo nightlife di città non-euro)</em>.</li>
-          <li><b>Disambiguazione</b>: un pub o una discoteca derivano dalla categoria tipizzata
-              (<code>BarOrPub</code> / <code>NightClub</code>), non da pattern sulle frasi.</li>
-          <li><b>Valori numerici garantiti</b>: coordinate (<code>GeoCoordinates</code>), appeal
-              (<code>AggregateRating</code>) e indicatori sono restituiti verbatim dai metadati — zero
-              allucinazioni sui numeri.</li>
-        </ul>
-        <p style="font-size:0.82rem;color:var(--slate-500);margin:8px 0 0;">
-          La <b>stessa logica gira su GitHub Pages</b>: poiché l'hosting statico non può eseguire il backend
-          FastAPI, il sito esegue il motore <code>metadataQuery()</code> direttamente nel browser sui dati
-          già serializzati, ottenendo gli stessi filtri esatti senza alcun server.
-        </p>
-        <p style="font-size:0.82rem;color:var(--slate-500);margin:8px 0 0;">
-          <b>Limiti noti:</b> alcune città (Londra, Budapest, Parigi…) mancano di dati hotel
-          nelle sorgenti Wikivoyage originali; l'estrazione di frasi è euristica e non
-          garantisce coerenza sintattica sulle risposte lunghe.
+          Modulo indipendente (<code>ingest.py</code> + <code>vectorstore.py</code> + <code>api.py</code>):
+          indicizza i 30 XML in <b>336 chunk</b> su un indice <b>FAISS</b> + <b>BM25Okapi</b> con
+          <b>Reciprocal Rank Fusion</b>, e applica un <b>pre-filtro per metadati</b> (regione / valuta /
+          categoria / soglie) prima della ricerca semantica. Documentazione completa nella sezione dedicata
+          <a href="#rag">🔎 Virtual Analyst (RAG)</a>.
         </p>
       </div>
     </div>
@@ -1092,6 +1061,102 @@ for filename in files:                                  # scorre la directory XM
 &#9500;&#9472; button      "Back to top"
 &#9492;&#9472; dialog      "Virtual Analyst"                       &lt;div role="dialog"&gt;  &larr; widget flottante
      button "Ask the analyst" &middot; textbox &middot; button "Ask" &middot; button "Close the analyst"</pre>
+</section>
+
+<!-- ===== RAG / VIRTUAL ANALYST ===== -->
+<section class="report-section" id="rag">
+  <h2>🔎 Virtual Analyst — l'assistente che risponde alle domande</h2>
+  <p>
+    Il <b>Virtual Analyst</b> è l'assistente del sito: risponde a domande scritte in linguaggio naturale
+    (italiano o inglese) sulle 30 capitali — per esempio <em>«bar a Dublino»</em> o
+    <em>«discoteche nelle città fuori dall'euro»</em>. È un sistema <b>RAG</b> (<i>Retrieval-Augmented
+    Generation</i>): invece di "sapere" le risposte, <b>le va a cercare</b> nei 30 file XML e le mostra
+    in modo ordinato. Non inventa: riporta solo ciò che è nel dataset.
+  </p>
+
+  <h3>Come trova la risposta giusta</h3>
+  <p>
+    Per ogni domanda cerca in <b>due modi complementari</b> allo stesso tempo: <b>per significato</b> (capisce
+    il senso anche con parole diverse — «dove dormire» trova gli hotel) e <b>per parole chiave</b> (cerca i
+    termini esatti). Poi <b>fonde le due classifiche</b> in un'unica graduatoria: un risultato che convince
+    entrambi i metodi finisce in cima.
+  </p>
+
+  <h3>La marcia in più: cercare tra i metadati</h3>
+  <p>
+    La ricerca nel testo va bene per le domande discorsive, ma fa fatica con quelle <b>precise</b>
+    (es. <em>«discoteche nelle città che non usano l'euro»</em>). Per questo l'analista sfrutta i <b>metadati</b>
+    già iniettati in ogni città — <b>macro-regione</b>, <b>valuta</b>, <b>tipo di locale</b>, punteggi numerici —
+    esattamente come i <b>filtri di un sito di e-commerce</b>: prima restringe il campo a colpo sicuro
+    (es. <em>valuta ≠ euro</em> <b>e</b> <em>tipo = discoteca</em>), <b>poi</b> cerca nel testo solo dentro
+    quel sottoinsieme. È il punto in cui <b>RAG</b> e <b>Web of Data</b> (i microdata Schema.org) si fondono:
+    la stessa informazione che descrive le città per i motori di ricerca serve anche a rispondere meglio.
+  </p>
+
+  <h3>I tre vantaggi della fusione RAG &times; Web of Data</h3>
+  <ul>
+    <li><b>Precisione</b>: i filtri su <code>@region</code>, <code>@currency</code>, <code>@category</code> sono esatti — niente più «zuppa di tag» da indovinare nel testo.</li>
+    <li><b>Niente confusione tra categorie</b>: un pub e una discoteca si distinguono dall'etichetta tipizzata (<code>BarOrPub</code> / <code>NightClub</code>), non dal contesto della frase.</li>
+    <li><b>Numeri garantiti</b>: coordinate (<code>GeoCoordinates</code>), appeal (<code>AggregateRating</code>) e indicatori sono restituiti <b>identici</b> al dato — zero allucinazioni sui numeri.</li>
+  </ul>
+
+  <h3>I due "motori": uno in locale, uno nel browser</h3>
+  <p>
+    La versione completa è un piccolo server <b>Python (FastAPI)</b> con gli indici di ricerca veri: è la
+    <i>reference implementation</i>, si avvia sul proprio computer. Ma il sito è pubblicato su
+    <b>GitHub Pages</b>, che ospita <b>solo file statici</b> e non può eseguire un server Python: perciò, quando
+    non riesce a contattare il server locale, la pagina usa una versione <b>che gira interamente nel browser</b>
+    (<code>metadataQuery()</code>) sui dati già inclusi nella pagina. I due motori usano la <b>stessa logica di
+    filtraggio</b>: quello del browser è ciò che i visitatori usano davvero, e funziona senza alcun server.
+  </p>
+
+  <h3 style="margin-top:24px;color:var(--slate-500)">Dettagli tecnici (approfondimento)</h3>
+  <p style="font-size:0.9rem">Le sezioni precedenti bastano per capire il sistema; qui sotto il "sotto il cofano".</p>
+  <pre>data/xml_dataset/*.xml  &rarr;  rag/ingest.py  &rarr;  rag_index/  (index.faiss 384-dim &middot; docs.json 336 chunk + meta)
+                                              &darr;
+                       rag/vectorstore.py   FAISS + BM25Okapi &rarr; Reciprocal Rank Fusion + pre-filtro metadati
+                                              &darr;
+                       rag/api.py           FastAPI (127.0.0.1:8000) &middot; parse_filters() &middot; rilevamento intento</pre>
+  <ul style="font-size:0.9rem">
+    <li><b>FAISS</b> <code>IndexFlatIP</code> (384 dim, <code>all-MiniLM-L6-v2</code>) per la ricerca semantica; <b>BM25Okapi</b> per quella lessicale; fusione con <b>Reciprocal Rank Fusion</b> (α=0.5, k=60);</li>
+    <li>il <b>rilevamento d'intento</b> (transport / hotel / attractions / safety / districts / nightlife) dà priorità ai chunk della sezione pertinente.</li>
+  </ul>
+  <p style="font-size:0.9rem;margin-top:12px"><code>ingest.py</code> allega a <b>ogni</b> chunk i metadati strutturati dell'XML, così la ricerca filtra su valori esatti invece di cercarli nel testo:</p>
+  <pre>{
+  "text": "[BERLIN] Bar e locali notturni: ...",
+  "city": "BERLIN", "section": "nightlife", "source": "Berlin.xml",
+  "meta": { "appeal": 63.2, "currency": "EUR", "region": "western",
+           "safety": 72.5, "green": 78.0, "cost": 85.0, "economy": 15.0, "price": 157.25 },
+  "categories": ["bar", "pub", "nightclub"]
+}</pre>
+
+  <h4 style="margin:12px 0 4px">Dimensioni di filtro riconosciute</h4>
+  <table style="width:100%;border-collapse:collapse;font-size:0.88rem;margin-top:8px">
+    <thead>
+      <tr style="background:var(--slate-50);text-align:left">
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Dimensione</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Sorgente metadato</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Esempio di domanda</th>
+        <th style="padding:8px 12px;border-bottom:2px solid var(--slate-200)">Filtro applicato</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Macro-regione</td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>@region</code> (UN M49)</td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><em>attractions in northern europe</em></td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>region = northern</code></td></tr>
+      <tr><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Valuta</td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>@currency</code></td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><em>nightclubs in non-euro cities</em></td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>currency &ne; EUR</code></td></tr>
+      <tr><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Categoria locale</td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>@category</code></td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><em>pubs in eastern europe</em></td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>category = pub</code></td></tr>
+      <tr><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Soglie numeriche</td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>appeal/safety/green/price</code></td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><em>cities with appeal over 60</em></td><td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>appeal &ge; 60</code></td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:10px;font-size:0.9rem">
+    I vincoli si combinano in <b>AND</b> (es. <em>eurozone + green over 70</em>). Lato server la risposta
+    <code>/query</code> include il campo <code>filters</code> con le dimensioni applicate (trasparenza); lato
+    client il motore restituisce in più i <b>valori garantiti</b> verbatim dai metadati.
+  </p>
+
+  <p style="font-size:0.82rem;color:var(--slate-500);margin:14px 0 0;">
+    <b>Limiti noti:</b> alcune città (Londra, Budapest, Parigi…) mancano di dati hotel nelle sorgenti
+    Wikivoyage; la sintesi delle risposte testuali è euristica (estrazione di frasi), non generativa.
+  </p>
 </section>
 
 <!-- ===== AI ===== -->

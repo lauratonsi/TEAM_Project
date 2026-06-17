@@ -151,35 +151,47 @@ btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
         </div>
         <div class="analyst-input-row">
             <input type="text" id="chat-input" class="analyst-input"
-                   placeholder="e.g. transport Rome, bars Dublin, museums Athens…">
+                   placeholder="e.g. transport Rome, nightclubs in non-euro cities…">
             <button id="chat-btn" class="analyst-btn">Ask</button>
         </div>
         <div id="chat-output" class="analyst-output">
-            System ready — type a question or click an example.
+            System ready — ask in English or Italian, or click an example below.
         </div>
+        <p class="analyst-hint" style="margin:8px 0 4px;font-size:0.78rem;color:var(--slate-500)">
+            💬 You can ask in <b>English or Italian</b> — try a single city, or filter by
+            region · currency · category · numeric threshold.
+        </p>
         <div class="analyst-chips">
             <button class="chip" data-q="transport Rome">🚇 transport Rome</button>
+            <button class="chip" data-q="hotels Amsterdam">🏨 hotels Amsterdam</button>
+            <button class="chip" data-q="museums Athens">🏛️ museums Athens</button>
             <button class="chip" data-q="bars in Dublin">🍺 bars Dublin</button>
+            <button class="chip" data-q="safety Vienna">🛡️ safety Vienna</button>
+            <button class="chip" data-q="districts Prague">🏘️ districts Prague</button>
             <button class="chip" data-q="nightclubs in non-euro cities">🎵 nightclubs · non-euro</button>
             <button class="chip" data-q="attractions in northern europe">🗺️ attractions · north</button>
-            <button class="chip" data-q="cities with appeal over 60">⭐ appeal &gt; 60</button>
             <button class="chip" data-q="pubs in eastern europe">🍻 pubs · east</button>
+            <button class="chip" data-q="cities with appeal over 60">⭐ appeal &gt; 60</button>
+            <button class="chip" data-q="greenest cities">🌱 greenest cities</button>
+            <button class="chip" data-q="most affordable cities">💰 most affordable</button>
         </div>
         <details class="analyst-details">
-            <summary>How does it work? — RAG + metadata filtering</summary>
+            <summary>How does it work?</summary>
             <p>
-                The Virtual Analyst combines two layers. The <b>reference RAG</b> (run locally) indexes the
-                validated XML into text chunks and answers with hybrid <b>BM25 + vector search</b>
-                (FAISS + <code>all-MiniLM-L6-v2</code>) fused via <b>Reciprocal Rank Fusion</b>.
-                On the published site it runs a <b>metadata-filtered</b> engine entirely in your browser:
-                queries are parsed for structured dimensions — macro-region (<code>@region</code>, UN&nbsp;M49),
-                currency (<code>@currency</code>) and venue type (<code>@category</code>) — to filter cities and
-                venues <i>exactly</i>, then returns guaranteed values (coordinates, appeal score, indicators)
-                straight from the injected Schema.org metadata, with no LLM and no hallucinated numbers.
+                Ask a question and the analyst <b>looks up the answer</b> in the 30 city files — it never
+                makes things up. It searches in two ways at once: by <b>meaning</b> (so "where to sleep"
+                also finds hotels) and by <b>exact keywords</b>, then merges the two rankings.
+            </p>
+            <p>
+                For precise questions it also uses the <b>metadata</b> built into every city — region,
+                currency and venue type — like the <b>filters on a shopping site</b>: it first narrows the
+                cities down (e.g. <i>non-euro</i> + <i>nightclub</i>), then searches inside them. Numbers
+                (coordinates, appeal score, indicators) come <b>straight from the data</b>, so they are always exact.
             </p>
             <p style="font-size:0.8rem; color:var(--slate-500); margin:8px 0 0;">
-                ⚠️ It knows only the 30 capitals in the dataset; some lack hotel data because
-                they are absent from the Wikivoyage sources.
+                💡 On this published site the analyst runs <b>entirely in your browser</b>, no server needed.
+                It only knows the 30 capitals in the dataset; some lack hotel data because they are absent
+                from the Wikivoyage sources.
             </p>
         </details>
     </div>
