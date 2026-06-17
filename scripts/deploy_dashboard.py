@@ -1321,11 +1321,12 @@ def generate_city_pages(city_data):
             _schema = _venue_schema(_vcat)
             _cclass = _cat_class(_vcat)
             night_cards_parts.append(
-                f"<li class='venue-card' itemprop='containsPlace' itemscope itemtype='https://schema.org/{_schema}'>"
-                f"<span class='venue-card-name'>"
-                f"<a itemprop='name' href='https://www.google.com/maps?q={_vlat},{_vlon}' target='_blank'>{_vname}</a>"
-                f"</span>"
+                f"<li class='venue-card {_cclass}' itemprop='containsPlace' itemscope itemtype='https://schema.org/{_schema}'>"
+                f"<div class='venue-card-header'>"
                 f"<span class='venue-cat {_cclass}'>{_vcat}</span>"
+                f"<a class='venue-map-link' href='https://www.google.com/maps?q={_vlat},{_vlon}' target='_blank' title='Open in Maps'>📍</a>"
+                f"</div>"
+                f"<span class='venue-card-name' itemprop='name'>{_vname}</span>"
                 f"<div itemprop='geo' itemscope itemtype='https://schema.org/GeoCoordinates'>"
                 f"<meta itemprop='latitude' content='{_vlat}'>"
                 f"<meta itemprop='longitude' content='{_vlon}'></div>"
@@ -1431,22 +1432,22 @@ def generate_city_pages(city_data):
     {geo_html}
     {lm_html}
     {currency_note_html}
-    <nav class="city-tabs-nav" role="tablist" aria-label="Sezioni della città">
-        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Panoramica</button>
-        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Attrazioni</button>
-        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Vita Notturna</button>
-        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Suggerimenti</button>
+    <nav class="city-tabs-nav" role="tablist" aria-label="City sections">
+        <button class="city-tab-btn active" data-tab="overview"    role="tab" aria-selected="true">🏙️ Overview</button>
+        <button class="city-tab-btn"        data-tab="attractions" role="tab" aria-selected="false">🏛️ Sights</button>
+        <button class="city-tab-btn"        data-tab="nightlife"   role="tab" aria-selected="false">🍺 Nightlife</button>
+        <button class="city-tab-btn"        data-tab="tips"        role="tab" aria-selected="false">💡 Tips</button>
     </nav>
     <div id="tab-overview" class="city-tab-panel active" role="tabpanel">
         {stats_html}
         {districts_html}
-    </div>
-    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
-        {attractions_html}
         <div class="info-block city-map-block">
             <span class="block-title city-map-title">🗺️ City Map</span>
             <div id="city-map" class="city-map-div"></div>
         </div>
+    </div>
+    <div id="tab-attractions" class="city-tab-panel" role="tabpanel">
+        {attractions_html}
     </div>
     <div id="tab-nightlife" class="city-tab-panel" role="tabpanel">
         {nightlife_html}
@@ -1458,7 +1459,7 @@ def generate_city_pages(city_data):
         <div class="download-block">
             <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
             <a href="../../data/xml_dataset/{cl}.xml" download class="download-link">📥 Download XML source</a>
-            <p class="download-uri-note">URI canonico del documento (elemento <code>&lt;source_url&gt;</code>, usato anche come <code>itemid</code> microdata):</p>
+            <p class="download-uri-note">Canonical URI (element <code>&lt;source_url&gt;</code>, also used as <code>itemid</code> microdata):</p>
             <a href="{city['uri']}" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 {city['uri'].replace('https://', '').replace('http://', '')}</a>
         </div>
     </div>
@@ -1517,7 +1518,7 @@ btt.onclick = function() {{ window.scrollTo({{top: 0, behavior: 'smooth'}}); }};
       this.setAttribute('aria-selected','true');
       var panel = document.getElementById('tab-' + this.dataset.tab);
       if(panel){{ panel.classList.add('active'); }}
-      if(this.dataset.tab === 'attractions' && cityMap){{
+      if(this.dataset.tab === 'overview' && cityMap){{
         setTimeout(function(){{ cityMap.invalidateSize(); }}, 50);
       }}
     }});
@@ -1839,12 +1840,9 @@ def generate_report(city_data, validation):
     </nav>
   </div>
 </header>
-<div style="background:linear-gradient(135deg,#0F172A 0%,#1a2e4a 60%,#1e3a58 100%);
-            color:white; padding:40px 24px 50px; text-align:center; border-bottom:4px solid var(--accent);">
-  <h1 style="font-size:clamp(1.5rem,3vw,2.4rem);font-weight:800;margin:0 0 8px;letter-spacing:-0.03em;">
-    Report &amp; Documentation</h1>
-  <p style="opacity:0.7;font-size:1rem;margin:0;">
-    Statistics extracted algorithmically · TEAM Pipeline · UniBo A.Y. 2024/2025</p>
+<div class="report-hero">
+  <h1 class="report-hero-title">Report &amp; Documentation</h1>
+  <p class="report-hero-sub">Statistics extracted algorithmically · TEAM Pipeline · UniBo A.Y. 2024/2025</p>
 </div>
 
 <nav class="report-nav" aria-label="Sezioni del report">
@@ -1856,6 +1854,7 @@ def generate_report(city_data, validation):
   <a href="#xpath">🧭 XPath</a>
   <a href="#microdata">🏷️ Microdata</a>
   <a href="#semantica">♿ HTML &amp; Accessibilità</a>
+  <a href="#frontend">🎨 CSS &amp; JS</a>
   <a href="#rag">🔎 Virtual Analyst (RAG)</a>
   <a href="#ai">🤖 AI Usage</a>
   <a href="#team">👥 Team</a>
@@ -2644,6 +2643,114 @@ for filename in files:                                  # scorre la directory XM
 &#9500;&#9472; button      "Back to top"
 &#9492;&#9472; dialog      "Virtual Analyst"                       &lt;div role="dialog"&gt;  &larr; widget flottante
      button "Ask the analyst" &middot; textbox &middot; button "Ask" &middot; button "Close the analyst"</pre>
+</section>
+
+<!-- ===== FRONTEND CSS & JS ===== -->
+<section class="report-section" id="frontend">
+  <h2>🎨 Frontend Architecture — CSS &amp; JavaScript</h2>
+  <p style="margin-top:0;color:var(--slate-500);font-size:0.92rem;">
+    The Travel 2026 interface enforces a strict <b>separation of concerns</b>: all presentation
+    lives in the single external file <code>stile.css</code>. JavaScript is limited to three
+    roles — tab class-toggling, reading <code>data-pct</code> attributes to feed CSS custom
+    properties, and calling <code>map.invalidateSize()</code> when the map container reappears.
+    No inline <code>style=""</code> attributes are written in the generated markup.
+  </p>
+
+  <h3>1. External stylesheet — <code>stile.css</code></h3>
+  <p style="font-size:0.9rem">
+    All 30 city pages share one stylesheet, versioned with an MD5 hash of its content
+    (<code>stile.css?v=<em>hash</em></code>) so any edit forces a browser cache-bust.
+    New city-page rules are scoped under <code>.city-detail</code> or <code>.city-hero</code>
+    to avoid touching <code>index.html</code> or this <code>report.html</code>.
+  </p>
+  <div class="technique-grid">
+    <div class="technique-card">
+      <h3>Travel 2026 palette — CSS custom properties</h3>
+      <p>Four brand variables added to <code>:root</code>:
+        <code>--terra: #E07A5F</code> (terracotta),
+        <code>--crema: #F4F1DE</code>,
+        <code>--night: #3D405B</code> (midnight blue),
+        <code>--gold: #E9C46A</code>. Hero titles and this report use <b>Playfair Display</b> (serif) via Google Fonts, loaded alongside Inter.</p>
+    </div>
+    <div class="technique-card">
+      <h3>Circular progress — <code>conic-gradient</code></h3>
+      <p>Safety and Green rings are pure CSS:
+        <code>conic-gradient(currentColor calc(var(--pct,0) * 3.6deg), var(--slate-200) 0deg)</code>.
+        The factor 3.6 maps a 0–100 score to 0–360°.
+        A <code>::after</code> pseudo-element (inset 7 px) masks the centre to form the donut shape.</p>
+    </div>
+    <div class="technique-card">
+      <h3>Animated pill bars — <code>var(--bar-w)</code></h3>
+      <p>Horizontal bars use <code>width: var(--bar-w, 0%)</code> with
+        <code>transition: width 0.8s cubic-bezier(.4,0,.2,1)</code>.
+        The property starts at 0; JS sets the final value after render, triggering the animation
+        without writing any inline <code>style=""</code>.</p>
+    </div>
+    <div class="technique-card">
+      <h3>Tab panel system — class toggle only</h3>
+      <p><code>.city-tab-panel {{ display: none }}</code> hides all panels by default.
+        <code>.city-tab-panel.active {{ display: block; animation: tabIn 0.22s }}</code>
+        shows the active one with a fade-in slide. JS only adds or removes the <code>active</code>
+        class — no <code>innerHTML</code>, no inline styles.</p>
+    </div>
+  </div>
+
+  <h3>2. Tab switcher</h3>
+  <pre>var btns   = document.querySelectorAll('.city-tab-btn');
+var panels = document.querySelectorAll('.city-tab-panel');
+btns.forEach(function(btn){{
+  btn.addEventListener('click', function(){{
+    btns.forEach(function(b){{ b.classList.remove('active'); }});
+    panels.forEach(function(p){{ p.classList.remove('active'); }});
+    this.classList.add('active');
+    var panel = document.getElementById('tab-' + this.dataset.tab);
+    if(panel){{ panel.classList.add('active'); }}
+    // Leaflet must recalculate its container size when the Overview tab re-activates
+    if(this.dataset.tab === 'overview' && cityMap){{
+      setTimeout(function(){{ cityMap.invalidateSize(); }}, 50);
+    }}
+  }});
+}});</pre>
+
+  <h3>3. <code>data-pct</code> → CSS custom property</h3>
+  <p style="font-size:0.9rem">
+    Metric cards carry a <code>data-pct</code> HTML attribute with the numeric value (0–100).
+    After the DOM is ready, a single loop reads each attribute and pushes the value into the
+    matching CSS custom property — the <b>only</b> accepted exception to the zero-inline-styles rule
+    (setting a custom property via <code>style.setProperty</code> feeds a variable, not a presentation rule):
+  </p>
+  <pre>document.querySelectorAll('[data-pct]').forEach(function(el){{
+  var v = el.dataset.pct;
+  if(el.classList.contains('circular-ring')){{
+    el.style.setProperty('--pct', v);         // drives conic-gradient angle
+  }} else {{
+    el.style.setProperty('--bar-w', v + '%'); // drives pill bar width → CSS transition fires
+  }}
+}});</pre>
+
+  <h3>4. Leaflet — <code>invalidateSize()</code> pattern</h3>
+  <p style="font-size:0.9rem">
+    The Leaflet map sits inside the <b>Overview</b> tab (the default active panel), so it renders
+    correctly on first load. When the user navigates away and comes back, the container has already
+    been sized once; the <code>setTimeout(..., 50)</code> call lets the browser finish the CSS
+    <code>display: block</code> paint cycle before Leaflet re-reads the dimensions.
+    The <code>cityMap</code> variable is declared outside the IIFE so the tab handler can reach it.
+  </p>
+
+  <h3>5. Hero badge thresholds (computed at build time)</h3>
+  <p style="font-size:0.9rem">
+    Badges are computed by <code>deploy_dashboard.py</code> when regenerating pages,
+    calibrated against actual dataset value ranges (appeal 48–68, safety 47–75, green 60–88, price 88–163 €):
+  </p>
+  <table class="prov-table">
+    <thead><tr><th>Badge</th><th>Condition</th><th>Verified example</th></tr></thead>
+    <tbody>
+      <tr><td>🌿 Green City</td><td><code>green &gt; 75</code></td><td>Stockholm 88 ✓</td></tr>
+      <tr><td>🛡️ Ultra Safe</td><td><code>safety &gt; 70</code></td><td>Luxembourg 73.5 ✓</td></tr>
+      <tr><td>⭐ Top Rated</td><td><code>appeal &gt; 60</code></td><td>Copenhagen 66 ✓</td></tr>
+      <tr><td>💰 Budget Pick</td><td><code>price &lt; 130 €</code></td><td>Lisbon 112 € ✓</td></tr>
+    </tbody>
+  </table>
 </section>
 
 <!-- ===== RAG / VIRTUAL ANALYST ===== -->
