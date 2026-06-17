@@ -424,6 +424,10 @@ document  "EuroCity Strategic Intelligence"            [lang="en"]
 ├─ heading h1  "30 European capitals, one intelligence."
 ├─ region      "How the data is built"                 ‹section[aria-label]›
 │  └─ heading h2  "How the data is built"
+├─ region      "Filtra e ordina le capitali"           ‹section.filter-toolbar[aria-label]›
+│  ├─ searchbox   "Search a capital by name"
+│  ├─ combobox    "Sort by"                             (8 criteri: appeal, safety, …)
+│  └─ group ×3    "Profilo" · "Regione" · "Valuta"      (chip filtro, aria-pressed)
 ├─ main        "Griglia delle capitali"                ‹main#city-grid›
 │  ├─ article → heading h2 "Amsterdam"  + link
 │  ├─ article → heading h2 "Athens"     + link
@@ -515,7 +519,7 @@ Le sintesi strategiche in `city_descriptions.json` sono state generate con Claud
 | File | Descrizione |
 |------|-------------|
 | `xml_dataset/*.xml` | 30 file XML, uno per capitale, validati DTD |
-| `index.html` | Dashboard navigabile con griglia di card, mappa e Virtual Analyst |
+| `index.html` | Dashboard navigabile: griglia di card **filtrabile** (profilo/regione/valuta), **ordinabile** e con **ricerca**, mappa e Virtual Analyst |
 | `pages/cities/*.html` | 30 pagine città (una per XML), con microdata, mappa e nota valuta per le città non-euro |
 | `pages/report.html` | Statistiche estratte + documentazione pipeline |
 | `pages/mappa_attrazioni.html` | Mappa Leaflet con attrazioni e locali notturni geolocalizzati |
@@ -523,6 +527,15 @@ Le sintesi strategiche in `city_descriptions.json` sono state generate con Claud
 
 Il **Virtual Analyst** (RAG: BM25 + FAISS) è un **widget chat flottante** presente su `index.html` e su ogni
 pagina città: segue lo scroll e resta accessibile in qualsiasi momento della navigazione.
+
+**Navigazione multi-dimensionale (`index.html`).** La griglia delle capitali si esplora da più punti di vista:
+una **ricerca** per nome, un **ordinamento** (appeal, sicurezza, green, prezzo, n. attrazioni, n. locali, A–Z)
+e tre gruppi di **filtri faceted** combinabili — *Profilo* (soglie Safety/Green/Budget, in **AND**), *Regione*
+(le quattro macro-aree dell'attributo `region`) e *Valuta* (euro / non-euro, dall'attributo `currency`), con
+selezione **singola** per Regione e Valuta. I filtri agiscono solo **lato client** sui dati già resi dagli XML;
+un contatore mostra "*N di 30*". L'ordine corrente delle capitali visibili viene propagato alle schede città
+(via `sessionStorage`/`localStorage`), così la navigazione **← / →** in fondo a ogni scheda segue l'**insieme
+filtrato** anziché il puro ordine alfabetico (fallback statico se si arriva diretti alla pagina).
 
 ---
 
