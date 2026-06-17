@@ -3,7 +3,7 @@
 <city_report appeal_score="47.6" region="southern">
   <metadata>
     <title>Athens</title>
-    <name_it>Athens</name_it>
+    <name_it>Atene</name_it>
     <flag>🇬🇷</flag>
     <source_url>https://en.wikivoyage.org/wiki/Athens</source_url>
   </metadata>
@@ -107,7 +107,7 @@
     </district>
     <district>
       <name>Piraeus (Area)</name>
-      <description>Quartiere di Athens.</description>
+      <description>Quartiere di Atene.</description>
     </district>
     <district>
       <name>South Athens</name>

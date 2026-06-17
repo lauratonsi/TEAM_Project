@@ -185,7 +185,7 @@ def _map_js_block(city_data, div_id, city_link_prefix='', with_layer_control=Fal
             except (TypeError, ValueError):
                 pass
         map_data.append({
-            'cl': cl, 'name': city['name_it'], 'flag': city['flag'],
+            'cl': cl, 'name': city['name_en'], 'flag': city['flag'],
             'appeal': city['appeal'], 'color': color,
             'link': city_link_prefix + cl + '.html',
             'capLat': coord[0], 'capLon': coord[1],
@@ -525,7 +525,7 @@ function metadataQuery(q) {{
             total += vs.length;
             var items = vs.slice(0,6).map(function(v){{ return '<li>' + (v.cat==='nightclub'?'🎵':(v.cat==='pub'?'🍻':'🍺')) + ' ' + v.n + ' <span style="color:#94a3b8;font-size:.8em">(' + v.cat + ')</span>' + mCoord(v) + '</li>'; }}).join('');
             if (vs.length > 6) items += '<li style="color:#94a3b8">…+' + (vs.length-6) + ' more</li>';
-            blocks.push('<li style="margin-top:4px">' + c.flag + ' <b>' + c.name_it + '</b> <span style="color:#64748b">(' + vs.length + ')</span><ul style="margin:2px 0 4px;padding-left:16px">' + items + '</ul></li>');
+            blocks.push('<li style="margin-top:4px">' + c.flag + ' <b>' + c.name_en + '</b> <span style="color:#64748b">(' + vs.length + ')</span><ul style="margin:2px 0 4px;padding-left:16px">' + items + '</ul></li>');
         }});
         if (!total) return '<b>🍺 ' + (cat||'venues') + ' · ' + dtxt + '</b><p style="margin:6px 0">No matching venues.</p>';
         var label = cat ? cat + 's' : 'venues';
@@ -539,7 +539,7 @@ function metadataQuery(q) {{
             totalA += as.length;
             var items = as.slice(0,4).map(function(a){{ return '<li><b>' + a.n + '</b>' + mCoord(a) + '</li>'; }}).join('');
             if (as.length > 4) items += '<li style="color:#94a3b8">…+' + (as.length-4) + ' more</li>';
-            blocksA.push('<li style="margin-top:4px">' + c.flag + ' <b>' + c.name_it + '</b> <span style="color:#64748b">(' + as.length + ')</span><ul style="margin:2px 0 4px;padding-left:16px">' + items + '</ul></li>');
+            blocksA.push('<li style="margin-top:4px">' + c.flag + ' <b>' + c.name_en + '</b> <span style="color:#64748b">(' + as.length + ')</span><ul style="margin:2px 0 4px;padding-left:16px">' + items + '</ul></li>');
         }});
         return '<b>🗺️ ' + totalA + ' attractions' + (dtxt ? ' — ' + dtxt : '') + '</b><ul style="margin:6px 0;padding-left:18px">' + blocksA.join('') + '</ul>';
     }}
@@ -549,7 +549,7 @@ function metadataQuery(q) {{
             var hs = c.hotels || [];
             if (!hs.length) return;
             var items = hs.slice(0,4).map(function(h){{ return '<li><b>' + h.n + '</b> <span style="color:#64748b">(' + (h.p||'N/D') + ')</span></li>'; }}).join('');
-            blocksH.push('<li style="margin-top:4px">' + c.flag + ' <b>' + c.name_it + '</b><ul style="margin:2px 0 4px;padding-left:16px">' + items + '</ul></li>');
+            blocksH.push('<li style="margin-top:4px">' + c.flag + ' <b>' + c.name_en + '</b><ul style="margin:2px 0 4px;padding-left:16px">' + items + '</ul></li>');
         }});
         if (!blocksH.length) return '<b>🏨 ' + dtxt + '</b><p style="margin:6px 0">No hotel data for matching cities.</p>';
         return '<b>🏨 Hotels' + (dtxt ? ' — ' + dtxt : '') + '</b><ul style="margin:6px 0;padding-left:18px">' + blocksH.join('') + '</ul>';
@@ -561,24 +561,17 @@ function metadataQuery(q) {{
         if (tG) bits.push('🌱 ' + c.green);
         if (tB) bits.push('💰 ' + Math.round(c.price) + '€');
         bits.push(c.currency ? c.currency : 'EUR');
-        return '<li>' + c.flag + ' <b>' + c.name_it + '</b> <span style="color:#64748b;font-size:.85em">' + bits.join(' · ') + '</span></li>';
+        return '<li>' + c.flag + ' <b>' + c.name_en + '</b> <span style="color:#64748b;font-size:.85em">' + bits.join(' · ') + '</span></li>';
     }}).join('');
     return '<b>🌍 ' + cities.length + ' cities' + (dtxt ? ' — ' + dtxt : '') + '</b><ol style="margin:6px 0;padding-left:18px">' + li + '</ol>';
 }}
 
-/* nomi italiani delle capitali (solo dove differiscono dall'inglese): nel dataset name_it
-   coincide col nome EN, quindi senza questi alias "Roma"/"Praga"/… non verrebbero riconosciuti */
-const CITY_IT = {{
-    Athens:'atene', Berlin:'berlino', Brussels:'bruxelles', Bucharest:'bucarest',
-    Copenhagen:'copenaghen', Dublin:'dublino', Lisbon:'lisbona', Ljubljana:'lubiana',
-    London:'londra', Luxembourg:'lussemburgo', Paris:'parigi', Prague:'praga',
-    Rome:'roma', Stockholm:'stoccolma', Valletta:'la valletta', Warsaw:'varsavia', Zagreb:'zagabria'
-}};
+/* riconosce la città dal nome inglese (name_en) o italiano reale (name_it, ora popolato
+   negli XML): così funzionano sia "Rome" sia "Roma". Notazione a parentesi su name_it
+   per il matching, distinta da c.name_en usato per il display. */
 function cityMatch(c, q) {{
-    var a = CITY_IT[c.name_en];
     return q.includes((c.name_en || '').toLowerCase())
-        || q.includes((c.name_it || '').toLowerCase())
-        || (a && q.includes(a));
+        || q.includes((c['name_it'] || '').toLowerCase());
 }}
 
 function clientSideAnswer(q) {{
@@ -590,30 +583,30 @@ function clientSideAnswer(q) {{
         if (cityMatch(c, q)) {{
             if (/hotel|alloggio|dorm|ostello|stay|accommodation|sleep|lodg/.test(q)) {{
                 var li = c.hotels.map(h => '<li><b>' + h.n + '</b> <span style="color:#64748b">(' + h.p + ')</span></li>').join('');
-                res = '<b>🏨 Accommodation — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + (li || '<li>No data in dataset</li>') + '</ul>';
+                res = '<b>🏨 Accommodation — ' + c.flag + ' ' + c.name_en + '</b><ul style="margin:6px 0;padding-left:18px">' + (li || '<li>No data in dataset</li>') + '</ul>';
             }} else if (/trasport|muoversi|aeroporto|arriv|transport|airport|metro|subway|bus|train|tram|get.to|getting/.test(q)) {{
-                res = '<b>🚇 Transport — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + c.transport + '</p>';
+                res = '<b>🚇 Transport — ' + c.flag + ' ' + c.name_en + '</b><p style="margin:6px 0">' + c.transport + '</p>';
             }} else if (/distrett|quartier|zona|district|neighborhood|area|quarter/.test(q)) {{
                 var dn = c.districts.map(d => d.n).join(', ');
-                res = '<b>🏘️ Districts — ' + c.flag + ' ' + c.name_it + '</b><p style="margin:6px 0">' + (dn || 'No district data available.') + '</p>';
+                res = '<b>🏘️ Districts — ' + c.flag + ' ' + c.name_en + '</b><p style="margin:6px 0">' + (dn || 'No district data available.') + '</p>';
             }} else if (/attrazion|visitar|vedere|turismo|muse|sight|visit|attraction|landmark|tour/.test(q)) {{
                 var al = c.attractions.slice(0,5).map(a => '<li><b>' + a.n + '</b> — <span style="color:#64748b;font-size:.88em">' + a.d + '</span> <a href="https://www.google.com/maps?q=' + a.lat + ',' + a.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍</a></li>').join('');
-                res = '<b>🗺️ Attractions — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + al + '</ul>';
+                res = '<b>🗺️ Attractions — ' + c.flag + ' ' + c.name_en + '</b><ul style="margin:6px 0;padding-left:18px">' + al + '</ul>';
             }} else if (/bar|pub|drink|beer|nightlife|bere|birra|club|nightclub|aperitivo/.test(q)) {{
                 if (!c.nightlife || !c.nightlife.length) {{
-                    res = '<b>' + c.flag + ' ' + c.name_it + '</b>: no nightlife data available.';
+                    res = '<b>' + c.flag + ' ' + c.name_en + '</b>: no nightlife data available.';
                 }} else {{
                     var nl = c.nightlife.map(v => '<li>' + (v.cat==='nightclub'?'🎵':'🍺') + ' <b>' + v.n + '</b> <span style="color:#94a3b8;font-size:.82em">(' + v.cat + ')</span> <a href="https://www.google.com/maps?q=' + v.lat + ',' + v.lon + '" target="_blank" style="font-size:.75em;color:#3498db">📍</a></li>').join('');
-                    res = '<b>🍺 Where to Drink — ' + c.flag + ' ' + c.name_it + '</b><ul style="margin:6px 0;padding-left:18px">' + nl + '</ul>';
+                    res = '<b>🍺 Where to Drink — ' + c.flag + ' ' + c.name_en + '</b><ul style="margin:6px 0;padding-left:18px">' + nl + '</ul>';
                 }}
             }} else if (/sicur|safety|pericol|crime|safe|danger/.test(q)) {{
-                res = '<b>🛡️ ' + c.flag + ' ' + c.name_it + '</b> — Safety Index: <b>' + c.safety + '</b> · Appeal: <b>' + c.appeal + '</b>';
+                res = '<b>🛡️ ' + c.flag + ' ' + c.name_en + '</b> — Safety Index: <b>' + c.safety + '</b> · Appeal: <b>' + c.appeal + '</b>';
             }} else if (/verde|green|sustainab|ecolog/.test(q)) {{
-                res = '<b>🌱 ' + c.flag + ' ' + c.name_it + '</b> — Green Score: <b>' + c.green + '</b>';
+                res = '<b>🌱 ' + c.flag + ' ' + c.name_en + '</b> — Green Score: <b>' + c.green + '</b>';
             }} else if (/cost|budget|price|cheap|expens|afford/.test(q)) {{
-                res = '<b>💰 ' + c.flag + ' ' + c.name_it + '</b> — Budget: <b>' + Math.round(c.price) + '€/night</b> · Cost of living: <b>' + c.economy + '</b>';
+                res = '<b>💰 ' + c.flag + ' ' + c.name_en + '</b> — Budget: <b>' + Math.round(c.price) + '€/night</b> · Cost of living: <b>' + c.economy + '</b>';
             }} else {{
-                res = '<b>' + c.flag + ' ' + c.name_it + '</b><div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:6px 0;font-size:.87em"><span>⭐ Appeal: <b>' + c.appeal + '</b></span><span>🛡️ Safety: <b>' + c.safety + '</b></span><span>🌱 Green: <b>' + c.green + '</b></span><span>💰 Budget: <b>' + Math.round(c.price) + '€</b></span></div>';
+                res = '<b>' + c.flag + ' ' + c.name_en + '</b><div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:6px 0;font-size:.87em"><span>⭐ Appeal: <b>' + c.appeal + '</b></span><span>🛡️ Safety: <b>' + c.safety + '</b></span><span>🌱 Green: <b>' + c.green + '</b></span><span>💰 Budget: <b>' + Math.round(c.price) + '€</b></span></div>';
             }}
         }}
     }});
@@ -621,16 +614,16 @@ function clientSideAnswer(q) {{
     if (res.startsWith('❓')) {{
         if (/sicur|safe/.test(q)) {{
             var top = cityData.slice().sort((a,b) => b.safety-a.safety).slice(0,5);
-            res = '<b>🛡️ Top 5 Safest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.safety + '</li>').join('') + '</ol>';
+            res = '<b>🛡️ Top 5 Safest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_en + ' — ' + c.safety + '</li>').join('') + '</ol>';
         }} else if (/verde|green|ecolog|sustainab/.test(q)) {{
             var top = cityData.slice().sort((a,b) => b.green-a.green).slice(0,5);
-            res = '<b>🌱 Top 5 Greenest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.green + '</li>').join('') + '</ol>';
+            res = '<b>🌱 Top 5 Greenest Cities</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_en + ' — ' + c.green + '</li>').join('') + '</ol>';
         }} else if (/econom|cheap|afford|basso|budget/.test(q)) {{
             var top = cityData.slice().sort((a,b) => a.price-b.price).slice(0,5);
-            res = '<b>💰 Top 5 Most Affordable</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + Math.round(c.price) + '€/night</li>').join('') + '</ol>';
+            res = '<b>💰 Top 5 Most Affordable</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_en + ' — ' + Math.round(c.price) + '€/night</li>').join('') + '</ol>';
         }} else if (/appeal|best|top|ranking/.test(q)) {{
             var top = cityData.slice().sort((a,b) => b.appeal-a.appeal).slice(0,5);
-            res = '<b>⭐ Top 5 by Appeal Score</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_it + ' — ' + c.appeal + '</li>').join('') + '</ol>';
+            res = '<b>⭐ Top 5 by Appeal Score</b><ol style="padding-left:18px;margin:6px 0">' + top.map(c => '<li>' + c.flag + ' ' + c.name_en + ' — ' + c.appeal + '</li>').join('') + '</ol>';
         }} else if (/confronta|compare|vs/.test(q)) {{
             res = 'To compare two cities type: <em>"compare Rome and Paris"</em> or <em>"Rome vs Berlin"</em>.';
         }}
@@ -730,6 +723,12 @@ def deploy():
                 'landmark_image': root.findtext("landmark_image") or "",
                 'city_lower': city_lower,
             }
+            # Nome display: inglese primario (UI in inglese); il nome italiano si affianca
+            # come secondario solo dove differisce. name_it_diff = '' se coincide con l'inglese.
+            _ne, _ni = city_obj['name_en'], city_obj['name_it']
+            city_obj['name_it_diff'] = '' if _ne == _ni else _ni
+            city_obj['name_it_badge'] = '' if _ne == _ni else (
+                f' <span style="opacity:.7;font-weight:400">· {_ni}</span>')
             city_data.append(city_obj)
 
             # Card compatta per index: solo immagine + stats + CTA
@@ -743,14 +742,15 @@ def deploy():
             p_pct = _pct(city_obj['price'], 2.5)   # max €250
             e_pct = _pct(city_obj['economy'])
             cards_html += f"""
-            <article class="city-card" data-slug="{city_lower}" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" data-appeal="{city_obj['appeal']}" data-economy="{city_obj['economy']}" data-attractions="{n_attr}" data-venues="{city_obj['hotel_count']}" data-currency="{cur_bucket}" data-region="{region_code}" data-name="{city_obj['name_it'].lower()}" itemscope itemtype="https://schema.org/City" itemid="{city_obj['uri']}">
+            <article class="city-card" data-slug="{city_lower}" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" data-appeal="{city_obj['appeal']}" data-economy="{city_obj['economy']}" data-attractions="{n_attr}" data-venues="{city_obj['hotel_count']}" data-currency="{cur_bucket}" data-region="{region_code}" data-name="{(city_obj['name_en'] + ' ' + city_obj['name_it']).lower()}" itemscope itemtype="https://schema.org/City" itemid="{city_obj['uri']}">
                 <div class="landmark-img-wrap">
-                    <img src="{img_src}" alt="{city_obj['name_it']} Landmark" class="landmark-img" loading="lazy">
+                    <img src="{img_src}" alt="{city_obj['name_en']} Landmark" class="landmark-img" loading="lazy">
                     <div class="city-card-overlay">
                         <h2 class="city-title-overlay">
                             <span>{city_obj['flag']}</span>
-                            <a href="pages/cities/{city_lower}.html" itemprop="name" class="city-overlay-link">{city_obj['name_it']}</a>
+                            <a href="pages/cities/{city_lower}.html" itemprop="name" class="city-overlay-link">{city_obj['name_en']}</a>{city_obj['name_it_badge']}
                         </h2>
+                        {f'<meta itemprop="alternateName" content="{city_obj["name_it_diff"]}">' if city_obj['name_it_diff'] else ''}
                         <div class="city-score-badge">{city_obj['appeal']}<small> score</small></div>
                     </div>
                 </div>
@@ -785,7 +785,7 @@ def deploy():
                             <span class="stat-val">{n_attr}</span>
                         </div>
                     </div>
-                    <a href="pages/cities/{city_lower}.html" class="card-cta">Explore {city_obj['name_it']} →</a>
+                    <a href="pages/cities/{city_lower}.html" class="card-cta">Explore {city_obj['name_en']} →</a>
                 </div>
             </article>"""
         except etree.XMLSyntaxError as e:
@@ -1133,7 +1133,7 @@ def generate_city_pages(city_data):
 
     # Mappa slug → {bandiera, nome} per le etichette prev/next dinamiche (identica su ogni scheda)
     nav_cities_map = "{" + ",".join(
-        f'{json.dumps(c["city_lower"])}:{{"f":{json.dumps(c["flag"])},"n":{json.dumps(c["name_it"])}}}'
+        f'{json.dumps(c["city_lower"])}:{{"f":{json.dumps(c["flag"])},"n":{json.dumps(c["name_en"])}}}'
         for c in cities
     ) + "}"
     # Script (parentesi normali: è una stringa Python, NON una f-string) iniettato in
@@ -1233,7 +1233,7 @@ def generate_city_pages(city_data):
                 img_url = '../../' + img_url.lstrip('/')
             lm_html = (
                 f"<div style='border-radius:20px; overflow:hidden; height:280px; margin-bottom:30px;'>"
-                f"<img itemprop='image' src='{img_url}' alt='{city['name_it']} Landmark' "
+                f"<img itemprop='image' src='{img_url}' alt='{city['name_en']} Landmark' "
                 f"style='width:100%; height:100%; object-fit:cover;'></div>"
             )
 
@@ -1249,7 +1249,7 @@ def generate_city_pages(city_data):
             currency_note_html = (
                 f"<div class='currency-note'>"
                 f"<span class='cur-ico'>🪙</span>"
-                f"<div><b>{city['name_it']}</b> does not use the euro: the local currency is the "
+                f"<div><b>{city['name_en']}</b> does not use the euro: the local currency is the "
                 f"<b>{cmeta['name_en']}</b> ({city['currency']}, {cmeta['symbol']}). "
                 f"Prices on this site are a <b>synthetic estimate in euros</b> (for cross-city comparison); "
                 f"the local equivalent (<b>≈ {budget_local}</b> per night) is indicative, "
@@ -1414,7 +1414,7 @@ def generate_city_pages(city_data):
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../stile.css?v={CSS_VER}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <title>{city['name_it']} — EuroCity Strategic Intelligence</title>
+    <title>{city['name_en']} — EuroCity Strategic Intelligence</title>
 </head>
 <body>
 <a href="#main" class="skip-link">Salta al contenuto</a>
@@ -1429,17 +1429,18 @@ def generate_city_pages(city_data):
     </div>
 </header>
 <nav class="city-nav" data-slug="{cl}" aria-label="Navigazione tra le città">
-    <a href="{prev_city['city_lower']}.html">← {prev_city['flag']} {prev_city['name_it']}</a>
-    <span class="city-nav-title">{city['flag']} {city['name_it']}</span>
-    <a href="{next_city['city_lower']}.html">{next_city['flag']} {next_city['name_it']} →</a>
+    <a href="{prev_city['city_lower']}.html">← {prev_city['flag']} {prev_city['name_en']}</a>
+    <span class="city-nav-title">{city['flag']} {city['name_en']}</span>
+    <a href="{next_city['city_lower']}.html">{next_city['flag']} {next_city['name_en']} →</a>
 </nav>
 <main id="main" class="city-detail" itemscope itemtype="https://schema.org/City" itemid="{city['uri']}">
-    <meta itemprop="name" content="{city['name_it']}">
+    <meta itemprop="name" content="{city['name_en']}">
+    {f'<meta itemprop="alternateName" content="{city["name_it_diff"]}">' if city['name_it_diff'] else ''}
     {rating_html}
     {region_md_html}
     {geo_html}
     {lm_html}
-    <h1 class="city-title" style="margin-bottom:25px;">{city['flag']} {city['name_it']}</h1>
+    <h1 class="city-title" style="margin-bottom:25px;">{city['flag']} {city['name_en']}{city['name_it_badge']}</h1>
     {stats_html}
     {currency_note_html}
     {transport_html}
@@ -1585,7 +1586,7 @@ def generate_report(city_data, validation):
             rows += (
                 f"<div class='rk-row'>"
                 f"<span class='rk-pos'>{pos}</span>"
-                f"<span class='rk-name'>{c['flag']} {c['name_it']}</span>"
+                f"<span class='rk-name'>{c['flag']} {c['name_en']}</span>"
                 f"<span class='rk-track'><span class='rk-fill' style='width:{pct}%;background:{color}'></span></span>"
                 f"<span class='rk-val'>{val_disp}{unit}</span>"
                 f"</div>"

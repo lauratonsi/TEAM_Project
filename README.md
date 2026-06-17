@@ -383,9 +383,9 @@ esattamente** a quelli nei documenti, come nell'esempio dei castelli del corso
 | Metrica | Valore |
 |---------|--------|
 | Item tipizzati (`itemscope`) | **1.468** |
-| Proprietà (`itemprop`) | **4.164** |
+| Proprietà (`itemprop`) | **4.200** |
 | Identificatori (`itemid`) | 60 |
-| **Attributi microdata totali** | **≈ 7.160** |
+| **Attributi microdata totali** | **≈ 7.196** |
 
 | Tipo Schema.org | Item | | Tipo Schema.org | Item |
 |-----------------|------|---|-----------------|------|
@@ -399,6 +399,8 @@ Oltre alla gerarchia *discendente* `City > containsPlace`, ogni `City` porta un 
 Score, con `ratingValue` 0–100) e i sotto-indici come **`PropertyValue`** (`additionalProperty`: Safety, Green,
 Economic Accessibility) — la forma corretta dato che un `Place` ammette un solo `aggregateRating`. La categoria
 enumerata del XML (`bar|pub|nightclub`) è mappata sulla classe più specifica (`BarOrPub` / `NightClub`).
+Il nome italiano della capitale (`<name_it>`) è esposto come **`alternateName`** accanto al `name` canonico
+inglese (es. *Rome* → `alternateName` *Roma*), così l'entità resta identificabile in entrambe le lingue.
 
 Specularmente, l'attributo XML **`region`** (UN M49) genera la gerarchia *ascendente* **`containedInPlace`**:
 ogni `City` è contenuta in un **`Place`** (la macro-regione, col codice M49 come `identifier`/`PropertyValue`),
