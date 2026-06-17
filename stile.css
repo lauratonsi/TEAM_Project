@@ -718,6 +718,46 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 .city-card .stat-item:nth-child(5) .stat-label::before { content: "💰"; }
 .city-card .stat-item:nth-child(6) .stat-label::before { content: "🏛️"; }
 
+/* Stesse icone sulle pagine delle singole città (.city-detail),
+   ma con l'ordine metriche diverso: Appeal, Budget, Safety, Green, Venues, Cost of living. */
+.city-detail .stat-label::before {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+.city-detail .stat-item:nth-child(1) .stat-label::before { content: "⭐"; }
+.city-detail .stat-item:nth-child(2) .stat-label::before { content: "🛏️"; }
+.city-detail .stat-item:nth-child(3) .stat-label::before { content: "🛡️"; }
+.city-detail .stat-item:nth-child(4) .stat-label::before { content: "🌱"; }
+.city-detail .stat-item:nth-child(5) .stat-label::before { content: "🍸"; }
+.city-detail .stat-item:nth-child(6) .stat-label::before { content: "💰"; }
+
+/* Pannello statistiche sulle pagine città: 2 colonne dentro un riquadro,
+   più ordinato e compatto rispetto alla lista singola della landing. */
+.city-detail .stats-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 0;
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: 16px;
+    padding: 8px 22px;
+    margin-bottom: 30px;
+}
+.city-detail .stat-item {
+    margin: 0;
+    padding: 11px 0;
+    border-radius: 0;
+}
+/* Niente bordo sotto l'ultima riga (gli ultimi due item in 2 colonne) */
+.city-detail .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+.city-detail .stat-item:hover { background: transparent; }
+
+@media (max-width: 560px) {
+    .city-detail .stats-box { grid-template-columns: 1fr; column-gap: 0; }
+    .city-detail .stat-item:nth-last-child(2) { border-bottom: 1px solid var(--slate-100); }
+}
+
 /* La barra punteggio occupa l'intera larghezza, sotto etichetta+valore */
 .stat-item .score-bar-wrap {
     grid-column: 1 / -1;
