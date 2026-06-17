@@ -513,15 +513,56 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 }
 .site-footer a { color: var(--accent); text-decoration: none; font-weight: 700; }
 .site-footer a:hover { text-decoration: underline; }
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    font-size: 0.88rem;
+}
+.footer-nav a {
+    color: var(--slate-700);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--slate-200);
+    background: var(--slate-50);
+    transition: 0.15s;
+}
+.footer-nav a:hover, .footer-nav a[aria-current="page"] {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    text-decoration: none;
+}
+.footer-sep { color: var(--slate-300); font-weight: 400; }
 
 /* 5. GRID E LAYOUT CARDS */
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
-    gap: 28px;
-    padding: 20px 40px 80px;
-    max-width: 1600px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 20px 32px 80px;
+    max-width: 1900px;
     margin: auto;
+}
+/* 5 colonne esatte a desktop wide → 30 card = 6 righe pari */
+@media (min-width: 1500px) {
+    .container {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 22px;
+    }
+}
+/* 3 colonne a desktop medium → 30 card = 10 righe pari */
+@media (min-width: 900px) and (max-width: 1499px) {
+    .container { grid-template-columns: repeat(3, 1fr); }
+}
+/* 2 colonne a tablet → 30 card = 15 righe pari */
+@media (min-width: 600px) and (max-width: 899px) {
+    .container { grid-template-columns: repeat(2, 1fr); gap: 18px; padding: 16px 20px 60px; }
 }
 
 .city-card {
@@ -716,10 +757,11 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 
 /* 7. INFO BLOCKS */
 .info-block {
-    margin-bottom: 20px;
-    padding: 15px;
+    margin-bottom: 28px;
+    padding: 20px 22px;
     border-radius: 14px;
     font-size: 0.9rem;
+    line-height: 1.7;
 }
 
 .transport-block {
@@ -740,11 +782,27 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 
 .block-title {
     display: block;
-    font-size: 0.7rem;
+    font-size: 0.73rem;
     font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 6px;
-    opacity: 0.7;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+    opacity: 0.82;
+}
+
+/* Hotel/bar listings dentro i blocchi */
+.hotel-block ul, .info-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+}
+.hotel-block li, .info-block ul li {
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 0.87rem;
+}
+.hotel-block li:last-child, .info-block ul li:last-child {
+    border-bottom: none;
 }
 
 /* 8. DESCRIZIONI */
@@ -857,15 +915,56 @@ details[open] .analyst-details summary::before { content: '▾ '; }
     .attr-table thead th:nth-child(3) { display: none; }
 }
 
-/* 10. MAP INLINE */
-#map-inline {
-    width: 90%;
-    height: 450px;
+/* 10. MAP CTA (sostituisce mappa inline) */
+.map-cta {
+    max-width: 1900px;
     margin: 0 auto 40px;
-    display: block;
+    padding: 0 32px;
+}
+.map-cta-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
     border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    padding: 32px 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    flex-wrap: wrap;
+}
+.map-cta-icon { font-size: 2.8rem; flex-shrink: 0; }
+.map-cta-text { flex: 1; min-width: 200px; }
+.map-cta-text h2 {
+    margin: 0 0 6px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+}
+.map-cta-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+}
+.btn-map-cta {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.15s;
+    flex-shrink: 0;
+}
+.btn-map-cta:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+@media (max-width: 700px) {
+    .map-cta-inner { flex-direction: column; text-align: center; padding: 24px; }
+    .btn-map-cta { width: 100%; text-align: center; }
 }
 
 /* Popup e marker capitale (usati da Leaflet inline e mappa standalone) */
@@ -934,14 +1033,14 @@ details[open] .analyst-details summary::before { content: '▾ '; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .container { padding: 20px; gap: 20px; }
+    .container { padding: 16px; gap: 16px; }
     .stats-box { grid-template-columns: 1fr 1fr; }
     header h1 { font-size: 2.2rem; }
     header { padding: 70px 20px 80px; }
 }
 
 @media (max-width: 480px) {
-    .container { grid-template-columns: 1fr; padding: 12px; }
+    .container { grid-template-columns: 1fr; padding: 12px; gap: 14px; }
     header { padding: 50px 16px 60px; }
     header h1 { font-size: 1.6rem; }
     .chat-section { padding: 18px; margin: -20px 12px 30px; }
