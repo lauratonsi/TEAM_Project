@@ -293,6 +293,16 @@ def generate_map(city_data):
         "border-radius:12px;padding:10px 14px;font-size:.8rem;box-shadow:0 4px 14px rgba(0,0,0,.12);max-width:260px}\n"
         ".map-intro b{color:var(--accent)}\n"
         "@media(max-width:600px){.map-legend{display:none}}\n"
+        # --- Pannello ricerca capitale (feature di Susanna) ---
+        ".city-search-panel{position:absolute;left:12px;top:88px;z-index:1000;background:rgba(255,255,255,.96);"
+        "border-radius:12px;padding:10px 12px;box-shadow:0 4px 14px rgba(0,0,0,.12);max-width:230px;min-width:200px}\n"
+        "#city-search-map{width:100%;box-sizing:border-box;border:1px solid #e2e8f0;border-radius:8px;"
+        "padding:7px 10px;font-size:.82rem;outline:none;font-family:inherit;background:#f8fafc}\n"
+        "#city-search-map:focus{border-color:var(--accent);background:#fff}\n"
+        ".city-search-list{list-style:none;margin:6px 0 0;padding:0;max-height:190px;overflow-y:auto}\n"
+        ".city-search-list li{padding:6px 8px;border-radius:6px;cursor:pointer;font-size:.82rem;"
+        "display:flex;align-items:center;gap:6px;white-space:nowrap}\n"
+        ".city-search-list li:hover{background:#f1f5f9}\n"
         "</style>\n"
         "</head><body>\n"
         "<a href='#map' class='skip-link'>Salta alla mappa</a>\n"
@@ -311,6 +321,10 @@ def generate_map(city_data):
         "  <div class='map-intro'>\U0001f5fa️ <b>" + str(len(city_data)) + " capitali</b> · "
         + str(n_attr) + " attrazioni · " + str(n_ven) + " locali.<br>"
         "Usa il pannello in alto a destra per filtrare i livelli.</div>\n"
+        "  <div class='city-search-panel' id='city-search-panel'>\n"
+        "    <input type='search' id='city-search-map' placeholder='\U0001f50d Cerca capitale…' autocomplete='off' aria-label='Cerca una capitale'>\n"
+        "    <ul id='city-search-results' class='city-search-list' hidden></ul>\n"
+        "  </div>\n"
         "  <div class='map-legend'>\n"
         "    <h4>Legenda</h4>\n"
         "    <div><span class='lg-dot'></span> Attrazione turistica<br><small style='color:#94a3b8'>(colore = città)</small></div>\n"
@@ -321,7 +335,58 @@ def generate_map(city_data):
         "</main>\n"
         "<script src='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js'></script>\n"
         "<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js'></script>\n"
-        + map_js + "\n</body></html>"
+        + map_js + "\n"
+        # --- Ricerca capitale: fly-to + apertura popup (feature di Susanna) ---
+        "<script>\n"
+        "(function(){\n"
+        "  var inp=document.getElementById('city-search-map');\n"
+        "  var lst=document.getElementById('city-search-results');\n"
+        "  function showResults(){\n"
+        "    var q=inp.value.trim().toLowerCase();\n"
+        "    lst.innerHTML='';\n"
+        "    if(!q){lst.hidden=true;return;}\n"
+        "    var matches=mapData_map.filter(function(c){return c.name.toLowerCase().indexOf(q)!==-1;});\n"
+        "    if(!matches.length){lst.hidden=true;return;}\n"
+        "    matches.forEach(function(c){\n"
+        "      var li=document.createElement('li');\n"
+        "      li.textContent=c.flag+' '+c.name;\n"
+        "      li.onclick=function(){\n"
+        "        inp.value=c.name;\n"
+        "        lst.hidden=true;\n"
+        "        map_map.flyTo([c.capLat,c.capLon],12,{duration:1.2});\n"
+        "        setTimeout(function(){\n"
+        "          cap_map.eachLayer(function(lyr){\n"
+        "            if(lyr.getLatLng){\n"
+        "              var ll=lyr.getLatLng();\n"
+        "              if(Math.abs(ll.lat-c.capLat)<0.01&&Math.abs(ll.lng-c.capLon)<0.01){lyr.openPopup();}\n"
+        "            }\n"
+        "          });\n"
+        "        },1300);\n"
+        "      };\n"
+        "      lst.appendChild(li);\n"
+        "    });\n"
+        "    lst.hidden=false;\n"
+        "  }\n"
+        "  inp.addEventListener('input',showResults);\n"
+        "  inp.addEventListener('focus',showResults);\n"
+        "  document.addEventListener('click',function(e){\n"
+        "    if(!document.getElementById('city-search-panel').contains(e.target)){lst.hidden=true;}\n"
+        "  });\n"
+        "})();\n"
+        "</script>\n"
+        # --- Footer di navigazione (feature di Susanna) ---
+        "<footer class='site-footer'>\n"
+        "  <nav class='footer-nav' aria-label='Navigazione footer'>\n"
+        "    <a href='../index.html'>\U0001f3e0 Home</a>\n"
+        "    <span class='footer-sep'>·</span>\n"
+        "    <a href='mappa_attrazioni.html' aria-current='page'>\U0001f5fa️ Mappa</a>\n"
+        "    <span class='footer-sep'>·</span>\n"
+        "    <a href='report.html'>\U0001f4ca Report</a>\n"
+        "  </nav>\n"
+        "  Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale ·\n"
+        "  Università di Bologna A.A. 2024/2025\n"
+        "</footer>\n"
+        "</body></html>"
     )
     os.makedirs(os.path.dirname(MAP_FILE), exist_ok=True)
     with open(MAP_FILE, 'w', encoding='utf-8') as f:
@@ -1659,6 +1724,16 @@ def generate_report(city_data, validation):
         + stat_card("File XML validati", total_cities, "#D97706")
     )
 
+    # --- Conteggio REALE dei file del repository (calcolato a runtime) ---
+    GH = "https://github.com/lauratonsi/TEAM_Project"   # base URL del repository
+    _data_dir    = ROOT / 'data'
+    _scripts_dir = ROOT / 'scripts'
+    _cities_dir  = ROOT / 'pages' / 'cities'
+    n_data_files = len([f for f in os.listdir(_data_dir) if f.endswith(('.json', '.csv', '.dtd'))]) + 2 if _data_dir.is_dir() else 0  # +2: cartelle original_source/ e xml_dataset/
+    n_scripts    = len([f for f in os.listdir(_scripts_dir) if f.endswith('.py')]) if _scripts_dir.is_dir() else 0
+    n_cities_html = len([f for f in os.listdir(_cities_dir) if f.endswith('.html')]) if _cities_dir.is_dir() else total_cities
+    n_html_pages  = n_cities_html + 3   # + index.html, report.html, mappa_attrazioni.html
+
     html = f"""<!DOCTYPE html>
 <html lang="it">
 <head>
@@ -2003,6 +2078,7 @@ def generate_report(city_data, validation):
   <p style="font-size:0.82rem; color:var(--slate-500); margin:0;">
     Dettaglio tecnico del costrutto nella sezione <a href="#xpath">Uso di XPath</a>.
   </p>
+
 </section>
 
 <!-- ===== CLASSIFICHE ===== -->
@@ -2957,7 +3033,17 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
     la consultazione diretta dei dataset originali Numbeo o EEA per usi di ricerca.
   </p>
 
-  <h3 style="margin-top:32px;">Elenco Completo dei File e Fonti</h3>
+  <h3 style="margin-top:32px;">📁 Elenco Completo dei File e Fonti</h3>
+  <p class="rp-sm" style="color:var(--slate-500);margin:0 0 4px;">
+    Inventario completo del repository, con link diretto a ogni file su GitHub e alla fonte originale.
+    I conteggi qui sotto sono <b>calcolati a runtime</b> scandendo le cartelle del progetto.
+  </p>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 20px">
+    <div class="rstat-card"><span class="rstat-val" style="color:var(--accent)">{n_data_files}</span><span class="rstat-label">File sorgente / dati</span></div>
+    <div class="rstat-card"><span class="rstat-val" style="color:var(--blue-500)">{n_scripts}</span><span class="rstat-label">Script Python</span></div>
+    <div class="rstat-card"><span class="rstat-val" style="color:var(--green-500)">{n_html_pages}</span><span class="rstat-label">Pagine HTML generate</span></div>
+    <div class="rstat-card"><span class="rstat-val" style="color:#8b5cf6">{total_cities}</span><span class="rstat-label">XML validati DTD</span></div>
+  </div>
   <table style="width:100%;border-collapse:collapse;font-size:0.87rem;margin-top:12px">
     <thead>
       <tr style="background:var(--slate-50);text-align:left">
@@ -2969,57 +3055,132 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
     </thead>
     <tbody>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/original_source/*.xml</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/tree/main/data/original_source" target="_blank"><code>data/original_source/*.xml</code></a></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Dump MediaWiki delle 30 capitali (testi, trasporti, hotel, distretti)</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://en.wikivoyage.org" target="_blank">Wikivoyage</a> — download manuale</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA 3.0</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/wiki_text_pulito.csv</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/data/wiki_text_pulito.csv" target="_blank"><code>data/wiki_text_pulito.csv</code></a></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Trasporti, hotel e distretti estratti dai dump tramite <code>extract_wiki_info.py</code></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Derivato da Wikivoyage</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA 3.0</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/attrazione_descrizione_fixed.csv</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/data/attrazione_descrizione_fixed.csv" target="_blank"><code>data/attrazione_descrizione_fixed.csv</code></a></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">300 attrazioni con nome, descrizione e coordinate geografiche</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Derivato da Wikivoyage + curato manualmente</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA 3.0</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/city_indices.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/data/city_indices.json" target="_blank"><code>data/city_indices.json</code></a></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Safety Index, Cost of Living, Green Score per 30 città</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Numbeo 2024, EU Green Capital Award, EEA — rielaborati con AI (Gemini)</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Stima — non ufficiale</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/city_descriptions.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/data/city_descriptions.json" target="_blank"><code>data/city_descriptions.json</code></a></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Sintesi strategiche in inglese per 30 città (campo <i>Strategic Summary</i>)</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Generato con AI (Gemini) — testo originale</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testo didattico</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/nightlife.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/data/nightlife.json" target="_blank"><code>data/nightlife.json</code></a></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">240 locali notturni (bar, pub, nightclub) con coordinate geografiche</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a> via Overpass API</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">ODbL (Open Database Licence)</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/xml_dataset/*.xml</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/tree/main/data/xml_dataset" target="_blank"><code>data/xml_dataset/*.xml</code></a></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">30 file XML output, validati DTD, uno per capitale</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Generato dalla pipeline — derivato dalle fonti sopra</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><code>data/transport_patches.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/data/transport_patches.json" target="_blank"><code>data/transport_patches.json</code></a></td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testi trasporto AI per 5 città (Paris, Brussels, Luxembourg, Lisbon, Nicosia)</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Generato con AI (Gemini) — testo originale</td>
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Testo didattico</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px"><code>data/city_report.dtd</code></td>
-        <td style="padding:8px 12px">Schema DTD per la validazione dei file XML</td>
-        <td style="padding:8px 12px">Creato originalmente per il progetto</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/data/currency_rates.json" target="_blank"><code>data/currency_rates.json</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Valuta locale ISO 4217 + tassi EUR→locale (snapshot 2026-01) per 10 capitali non-euro</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Tassi di cambio indicativi raccolti manualmente</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/data/geo_regions.json" target="_blank"><code>data/geo_regions.json</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Macro-regione UN M49 per ogni capitale (fonte + nota su Cipro)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="https://unstats.un.org/unsd/methodology/m49/" target="_blank">UN Statistics Division</a> (geoscheme M49)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/data/city_report.dtd" target="_blank"><code>data/city_report.dtd</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Schema DTD per la validazione dei file XML</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Creato originalmente per il progetto</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr style="background:var(--slate-100)">
+        <td colspan="4" style="padding:6px 12px;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;color:var(--slate-500)">Script Python</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/extract_wiki_info.py" target="_blank"><code>scripts/extract_wiki_info.py</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Step 1 pipeline — dump Wikivoyage → CSV/JSON (usa <code>mwparserfromhell</code>, spaCy)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/built_dataset.py" target="_blank"><code>scripts/built_dataset.py</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Precursore / variante di <code>final_processor.py</code> — costruisce gli XML dal dataset; menzionato nella sezione XPath</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/final_processor.py" target="_blank"><code>scripts/final_processor.py</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Step 2 pipeline — elaborazione principale: XML con content-model misto + validazione DTD in scrittura</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/deploy_dashboard.py" target="_blank"><code>scripts/deploy_dashboard.py</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Step 3 pipeline — ri-validazione DTD in lettura + generazione HTML con microdata Schema.org</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/validate.py" target="_blank"><code>scripts/validate.py</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Step 4 pipeline — validatore DTD standalone: DOM + <code>etree.DTD().validate()</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/check_microdata.py" target="_blank"><code>scripts/check_microdata.py</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Verifica round-trip microdata: ri-estrae gli item <code>schema.org</code> dalle pagine HTML con <code>microdata.get_items()</code> e li confronta con i dati XML sorgente</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Progetto originale</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/fetch_nightlife.py" target="_blank"><code>scripts/fetch_nightlife.py</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">One-shot: recupera bar/pub/nightclub da OpenStreetMap via Overpass API per le 30 capitali → produce <code>nightlife.json</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">OpenStreetMap (ODbL)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/download_images.py" target="_blank"><code>scripts/download_images.py</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">One-shot: scarica immagini landmark per le 30 città tramite Wikipedia pageimages API → <code>assets/images/*.jpg</code></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Wikimedia Commons (CC-BY-SA)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/google_language_api.py" target="_blank"><code>scripts/google_language_api.py</code></a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Analisi testuale con Google Cloud Language API su <code>wiki_text_pulito.csv</code> (richiede credenziali GCP)</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Google Cloud NLP</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px"><a href="{GH}/blob/main/scripts/map.py" target="_blank"><code>scripts/map.py</code></a></td>
+        <td style="padding:8px 12px">Prototipo iniziale della mappa interattiva con Folium; sostituito dall'implementazione Leaflet.js</td>
+        <td style="padding:8px 12px">Progetto originale</td>
         <td style="padding:8px 12px">—</td>
       </tr>
     </tbody>

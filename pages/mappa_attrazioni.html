@@ -3,7 +3,7 @@
 <meta charset='UTF-8'>
 <title>Mappa — EuroCity</title>
 <meta name='viewport' content='width=device-width,initial-scale=1'>
-<link rel='stylesheet' href='../stile.css?v=bfd857c4'>
+<link rel='stylesheet' href='../stile.css?v=182adf84'>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css'>
@@ -25,6 +25,12 @@ body{display:flex;flex-direction:column;font-family:Inter,sans-serif}
 .map-intro{position:absolute;left:12px;top:12px;z-index:1000;background:rgba(255,255,255,.94);border-radius:12px;padding:10px 14px;font-size:.8rem;box-shadow:0 4px 14px rgba(0,0,0,.12);max-width:260px}
 .map-intro b{color:var(--accent)}
 @media(max-width:600px){.map-legend{display:none}}
+.city-search-panel{position:absolute;left:12px;top:88px;z-index:1000;background:rgba(255,255,255,.96);border-radius:12px;padding:10px 12px;box-shadow:0 4px 14px rgba(0,0,0,.12);max-width:230px;min-width:200px}
+#city-search-map{width:100%;box-sizing:border-box;border:1px solid #e2e8f0;border-radius:8px;padding:7px 10px;font-size:.82rem;outline:none;font-family:inherit;background:#f8fafc}
+#city-search-map:focus{border-color:var(--accent);background:#fff}
+.city-search-list{list-style:none;margin:6px 0 0;padding:0;max-height:190px;overflow-y:auto}
+.city-search-list li{padding:6px 8px;border-radius:6px;cursor:pointer;font-size:.82rem;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.city-search-list li:hover{background:#f1f5f9}
 </style>
 </head><body>
 <a href='#map' class='skip-link'>Salta alla mappa</a>
@@ -41,6 +47,10 @@ body{display:flex;flex-direction:column;font-family:Inter,sans-serif}
 <main class='map-wrap' aria-label='Mappa interattiva delle attrazioni e dei locali'>
   <div id='map'></div>
   <div class='map-intro'>🗺️ <b>30 capitali</b> · 300 attrazioni · 240 locali.<br>Usa il pannello in alto a destra per filtrare i livelli.</div>
+  <div class='city-search-panel' id='city-search-panel'>
+    <input type='search' id='city-search-map' placeholder='🔍 Cerca capitale…' autocomplete='off' aria-label='Cerca una capitale'>
+    <ul id='city-search-results' class='city-search-list' hidden></ul>
+  </div>
   <div class='map-legend'>
     <h4>Legenda</h4>
     <div><span class='lg-dot'></span> Attrazione turistica<br><small style='color:#94a3b8'>(colore = città)</small></div>
@@ -97,4 +107,52 @@ mapData_map.forEach(function(c){
 map_map.addLayer(attr_map);map_map.addLayer(venue_map);map_map.addLayer(cap_map);
 L.control.layers(null,{'\ud83d\udccd Attrazioni':attr_map,'\ud83c\udf7a Bar e locali':venue_map,'\ud83c\udfc1 Capitali':cap_map},{collapsed:false}).addTo(map_map);
 </script>
+<script>
+(function(){
+  var inp=document.getElementById('city-search-map');
+  var lst=document.getElementById('city-search-results');
+  function showResults(){
+    var q=inp.value.trim().toLowerCase();
+    lst.innerHTML='';
+    if(!q){lst.hidden=true;return;}
+    var matches=mapData_map.filter(function(c){return c.name.toLowerCase().indexOf(q)!==-1;});
+    if(!matches.length){lst.hidden=true;return;}
+    matches.forEach(function(c){
+      var li=document.createElement('li');
+      li.textContent=c.flag+' '+c.name;
+      li.onclick=function(){
+        inp.value=c.name;
+        lst.hidden=true;
+        map_map.flyTo([c.capLat,c.capLon],12,{duration:1.2});
+        setTimeout(function(){
+          cap_map.eachLayer(function(lyr){
+            if(lyr.getLatLng){
+              var ll=lyr.getLatLng();
+              if(Math.abs(ll.lat-c.capLat)<0.01&&Math.abs(ll.lng-c.capLon)<0.01){lyr.openPopup();}
+            }
+          });
+        },1300);
+      };
+      lst.appendChild(li);
+    });
+    lst.hidden=false;
+  }
+  inp.addEventListener('input',showResults);
+  inp.addEventListener('focus',showResults);
+  document.addEventListener('click',function(e){
+    if(!document.getElementById('city-search-panel').contains(e.target)){lst.hidden=true;}
+  });
+})();
+</script>
+<footer class='site-footer'>
+  <nav class='footer-nav' aria-label='Navigazione footer'>
+    <a href='../index.html'>🏠 Home</a>
+    <span class='footer-sep'>·</span>
+    <a href='mappa_attrazioni.html' aria-current='page'>🗺️ Mappa</a>
+    <span class='footer-sep'>·</span>
+    <a href='report.html'>📊 Report</a>
+  </nav>
+  Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale ·
+  Università di Bologna A.A. 2024/2025
+</footer>
 </body></html>
