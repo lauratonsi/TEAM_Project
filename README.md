@@ -35,12 +35,16 @@ ELABORAZIONE/
 │   ├── city_descriptions.json           # Sintesi strategiche in italiano (generate con AI)
 │   └── transport_patches.json           # Patch trasporti per città con CSV mancante
 ├── scripts/
-│   ├── extract_wiki_info.py             # Preparazione dataset (dump → CSV/JSON)
-│   ├── final_processor.py               # Elaborazione principale → XML (validazione in scrittura)
-│   ├── deploy_dashboard.py              # Generazione HTML/CSS (ri-validazione in lettura)
-│   ├── validate.py                      # Validatore DTD standalone (DOM + DTD)
-│   ├── check_microdata.py               # Verifica round-trip dei microdata (libreria `microdata`)
-│   └── …                                # download_images, fetch_nightlife, map, …
+│   ├── extract_wiki_info.py             # Step 1 — dump Wikivoyage → CSV/JSON (mwparserfromhell, spaCy)
+│   ├── built_dataset.py                 # Precursore/variante di final_processor.py (menzionato nella sezione XPath)
+│   ├── final_processor.py               # Step 2 — elaborazione principale → XML (content-model misto + DTD in scrittura)
+│   ├── deploy_dashboard.py              # Step 3 — generazione HTML con microdata (ri-validazione DTD in lettura)
+│   ├── validate.py                      # Step 4 — validatore DTD standalone (DOM + etree.DTD().validate())
+│   ├── check_microdata.py               # Verifica round-trip microdata Schema.org (libreria `microdata`)
+│   ├── fetch_nightlife.py               # One-shot: recupera locali da OpenStreetMap/Overpass → nightlife.json
+│   ├── download_images.py               # One-shot: scarica immagini landmark via Wikipedia API → assets/images/
+│   ├── google_language_api.py           # One-shot: analisi testuale con Google Cloud Language API (richiede GCP)
+│   └── map.py                           # Prototipo mappa Folium (sostituito da implementazione Leaflet.js)
 ├── pages/
 │   ├── cities/*.html                    # 30 pagine città (una per file XML)
 │   ├── report.html                      # Report statistiche + documentazione pipeline
@@ -158,13 +162,13 @@ di uscita `0` solo se tutti i file sono validi. Output:
 
 | Fonte | File | Contenuto |
 |-------|------|-----------|
-| Wikivoyage (MediaWiki XML, download manuale) | `original_source/*.xml` | Testi, trasporti, hotel, distretti |
-| Dataset pubblici (Numbeo, EIU) | `city_indices.json` | Safety, green score, costo della vita |
-| OpenStreetMap (Overpass API) | `nightlife.json` | 240 locali notturni geolocalizzati (bar/pub/nightclub) |
-| Tassi di cambio indicativi (snapshot 2026-01) | `currency_rates.json` | Valuta locale ISO 4217 + tasso EUR→locale delle 10 capitali non-euro |
-| [UN M49 geoscheme](https://unstats.un.org/unsd/methodology/m49/) (UN Statistics Division) | `geo_regions.json` | Macro-regione (Northern/Western/Southern/Eastern) di ogni capitale + nota su Cipro |
-| Wikimedia Commons | `landmark_image` in XML | Immagini simbolo (URL stabili via Special:FilePath) |
-| Generato con AI | `city_descriptions.json` | Sintesi strategiche in italiano |
+| [Wikivoyage](https://en.wikivoyage.org) (MediaWiki XML, download manuale) | [`original_source/*.xml`](data/original_source) | Testi, trasporti, hotel, distretti |
+| Dataset pubblici ([Numbeo](https://www.numbeo.com/crime/region_rankings.jsp?title=2024&region=150), EEA) | [`city_indices.json`](data/city_indices.json) | Safety, green score, costo della vita |
+| [OpenStreetMap](https://www.openstreetmap.org) (Overpass API) | [`nightlife.json`](data/nightlife.json) | 240 locali notturni geolocalizzati (bar/pub/nightclub) |
+| Tassi di cambio indicativi (snapshot 2026-01) | [`currency_rates.json`](data/currency_rates.json) | Valuta locale ISO 4217 + tasso EUR→locale delle 10 capitali non-euro |
+| [UN M49 geoscheme](https://unstats.un.org/unsd/methodology/m49/) (UN Statistics Division) | [`geo_regions.json`](data/geo_regions.json) | Macro-regione (Northern/Western/Southern/Eastern) di ogni capitale + nota su Cipro |
+| [Wikimedia Commons](https://commons.wikimedia.org) | `landmark_image` in XML (via `download_images.py`) | Immagini simbolo (URL stabili via Special:FilePath) |
+| Generato con AI (Gemini) | [`city_descriptions.json`](data/city_descriptions.json) | Sintesi strategiche in italiano |
 
 ### Struttura dei Dump Wikivoyage
 
