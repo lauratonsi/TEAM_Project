@@ -1994,39 +1994,39 @@ def generate_report(city_data, validation):
       </tr>
       <tr>
         <td>Indice di Sicurezza</td>
-        <td><span class="prov-src src-indices">📊 city_indices.json</span></td>
+        <td><span class="prov-src src-indices">📊 <a href="{GH}/blob/main/data/city_indices.json" target="_blank" style="color:inherit">city_indices.json</a></span></td>
         <td>Numbeo Safety Index 2024; letto da <code>&lt;safety index_score="…"&gt;</code>.</td>
         <td style="text-align:right">0–100</td>
       </tr>
       <tr>
         <td>Green Score</td>
-        <td><span class="prov-src src-indices">📊 city_indices.json</span></td>
+        <td><span class="prov-src src-indices">📊 <a href="{GH}/blob/main/data/city_indices.json" target="_blank" style="color:inherit">city_indices.json</a></span></td>
         <td>EU Green Capital Award / EEA; letto da <code>&lt;environment green_score="…"&gt;</code>.</td>
         <td style="text-align:right">0–100</td>
       </tr>
       <tr>
         <td>Accessibilità economica</td>
-        <td><span class="prov-src src-indices">📊 city_indices.json</span></td>
+        <td><span class="prov-src src-indices">📊 <a href="{GH}/blob/main/data/city_indices.json" target="_blank" style="color:inherit">city_indices.json</a></span></td>
         <td>Numbeo Cost of Living 2024; letto da <code>&lt;economic_accessibility score="…"&gt;</code>.</td>
         <td style="text-align:right">0–100</td>
       </tr>
       <tr>
         <td>Budget alloggio</td>
-        <td><span class="prov-src src-derived">🧮 Derivato</span> <span class="prov-src src-indices">📊 city_indices.json</span></td>
+        <td><span class="prov-src src-derived">🧮 Derivato</span> <span class="prov-src src-indices">📊 <a href="{GH}/blob/main/data/city_indices.json" target="_blank" style="color:inherit">city_indices.json</a></span></td>
         <td><b>Stima sintetica</b>, non un prezzo osservato: <code>&lt;hotel_price&gt; = cost_of_living × 1.85</code>
             (proxy in euro del costo della vita Numbeo). Serve a confrontare le città, non a prenotare.</td>
         <td style="text-align:right">€/notte</td>
       </tr>
       <tr>
         <td>Valuta locale</td>
-        <td><span class="prov-src src-indices">📊 currency_rates.json</span></td>
+        <td><span class="prov-src src-indices">📊 <a href="{GH}/blob/main/data/currency_rates.json" target="_blank" style="color:inherit">currency_rates.json</a></span></td>
         <td>Codice ISO nell'attributo opzionale <code>&lt;city_report&nbsp;currency="…"&gt;</code> (solo capitali fuori
             area euro); l'equivalente locale mostrato è una conversione <b>indicativa</b> a tassi di riferimento.</td>
         <td style="text-align:right">ISO 4217</td>
       </tr>
       <tr>
         <td>Macro-regione</td>
-        <td><span class="prov-src src-indices">📊 geo_regions.json</span></td>
+        <td><span class="prov-src src-indices">📊 <a href="{GH}/blob/main/data/geo_regions.json" target="_blank" style="color:inherit">geo_regions.json</a></span></td>
         <td>Attributo <b>enumerato obbligatorio</b> <code>&lt;city_report&nbsp;region="…"&gt;</code> secondo il geoscheme
             <b>UN&nbsp;M49</b> (Northern/Western/Southern/Eastern). Cipro, classificato da M49 in Asia occidentale, è
             assegnato a <i>southern</i> come eccezione UE documentata. Usato come filtro per area nell'index.</td>
@@ -2122,7 +2122,7 @@ def generate_report(city_data, validation):
     <div class="pipeline-step">
       <div class="step-num">1</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>extract_wiki_info.py</code> — Preparazione dati</h3>
+        <h3 style="margin:0;"><a href="{GH}/blob/main/scripts/extract_wiki_info.py" target="_blank" style="color:inherit;text-decoration:none;"><code>extract_wiki_info.py</code></a> — Preparazione dati</h3>
         <p>
           Analizza i dump Wikivoyage in <code>data/original_source/</code>. Utilizza
           <b>mwparserfromhell</b> e <b>spaCy</b> per estrarre testo strutturato.
@@ -2135,7 +2135,7 @@ def generate_report(city_data, validation):
     <div class="pipeline-step">
       <div class="step-num">2</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>final_processor.py</code> — Elaborazione e validazione XML</h3>
+        <h3 style="margin:0;"><a href="{GH}/blob/main/scripts/final_processor.py" target="_blank" style="color:inherit;text-decoration:none;"><code>final_processor.py</code></a> — Elaborazione e validazione XML</h3>
         <p>
           Script centrale del progetto. Per ogni capitale individua la pagina principale nel dump,
           pulisce il Wikitext con regex, estrae distretti con descrizioni dalle sotto-pagine, e
@@ -2150,7 +2150,7 @@ def generate_report(city_data, validation):
     <div class="pipeline-step">
       <div class="step-num">3</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>deploy_dashboard.py</code> — Generazione HTML</h3>
+        <h3 style="margin:0;"><a href="{GH}/blob/main/scripts/deploy_dashboard.py" target="_blank" style="color:inherit;text-decoration:none;"><code>deploy_dashboard.py</code></a> — Generazione HTML</h3>
         <p>
           Legge la directory dei 30 file XML e li <b>ri-valida in lettura</b> (distinguendo
           documenti <i>mal formati</i> da <i>non validi</i>, con contatore <code>30/30</code>
@@ -2166,7 +2166,7 @@ def generate_report(city_data, validation):
     <div class="pipeline-step">
       <div class="step-num">4</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>validate.py</code> — Validazione DTD standalone</h3>
+        <h3 style="margin:0;"><a href="{GH}/blob/main/scripts/validate.py" target="_blank" style="color:inherit;text-decoration:none;"><code>validate.py</code></a> — Validazione DTD standalone</h3>
         <p>
           Script <b>indipendente</b> dal resto della pipeline (modellato sui laboratori del corso):
           scorre la directory XML, costruisce il <b>DOM</b> con <code>etree.parse()</code> e lo
@@ -2180,7 +2180,7 @@ def generate_report(city_data, validation):
     <div class="pipeline-step">
       <div class="step-num">5</div>
       <div class="step-body">
-        <h3 style="margin:0;"><code>rag/</code> — Sistema RAG per query in linguaggio naturale</h3>
+        <h3 style="margin:0;"><a href="{GH}/tree/main/rag" target="_blank" style="color:inherit;text-decoration:none;"><code>rag/</code></a> — Sistema RAG per query in linguaggio naturale</h3>
         <p>
           Modulo indipendente (<code>ingest.py</code> + <code>vectorstore.py</code> + <code>api.py</code>):
           indicizza i 30 XML in <b>336 chunk</b> su un indice <b>FAISS</b> + <b>BM25Okapi</b> con
