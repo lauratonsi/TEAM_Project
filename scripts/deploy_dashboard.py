@@ -592,7 +592,7 @@ def deploy():
             p_pct = _pct(city_obj['price'], 2.5)   # max €250
             e_pct = _pct(city_obj['economy'])
             cards_html += f"""
-            <article class="city-card" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" data-appeal="{city_obj['appeal']}" data-economy="{city_obj['economy']}" data-attractions="{n_attr}" data-venues="{city_obj['hotel_count']}" data-currency="{cur_bucket}" data-region="{region_code}" data-name="{city_obj['name_it'].lower()}" itemscope itemtype="https://schema.org/City" itemid="{city_obj['uri']}">
+            <article class="city-card" data-slug="{city_lower}" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" data-appeal="{city_obj['appeal']}" data-economy="{city_obj['economy']}" data-attractions="{n_attr}" data-venues="{city_obj['hotel_count']}" data-currency="{cur_bucket}" data-region="{region_code}" data-name="{city_obj['name_it'].lower()}" itemscope itemtype="https://schema.org/City" itemid="{city_obj['uri']}">
                 <div class="landmark-img-wrap">
                     <img src="{img_src}" alt="{city_obj['name_it']} Landmark" class="landmark-img" loading="lazy">
                     <div class="city-card-overlay">
@@ -703,7 +703,7 @@ btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
 
     function sortCards() {
         var key = sortSel.value;
-        cards.slice().sort(function(a, b) {
+        var sorted = cards.slice().sort(function(a, b) {
             switch (key) {
                 case 'safety':      return num(b,'safety') - num(a,'safety');
                 case 'green':       return num(b,'green') - num(a,'green');
@@ -714,23 +714,46 @@ btt.onclick = function() { window.scrollTo({top: 0, behavior: 'smooth'}); };
                 case 'name':        return (a.dataset.name||'').localeCompare(b.dataset.name||'');
                 default:            return num(b,'appeal') - num(a,'appeal');
             }
-        }).forEach(function(c) { grid.appendChild(c); });
+        });
+        sorted.forEach(function(c) { grid.appendChild(c); });
+        return sorted;
     }
 
     function apply() {
-        sortCards();
-        var shown = 0;
-        cards.forEach(function(c) {
+        var sorted = sortCards();
+        var shown = 0, order = [];
+        sorted.forEach(function(c) {
             var ok = matches(c);
             c.style.display = ok ? '' : 'none';
-            if (ok) shown++;
+            if (ok) { shown++; order.push(c.dataset.slug); }
         });
         countEl.textContent = 'Showing ' + shown + ' of ' + total + ' capitals';
+        // Memorizza l'ordine corrente delle capitali VISIBILI: le schede città lo
+        // useranno per una navigazione prev/next coerente col filtro scelto qui.
+        // Doppio storage: sessionStorage (semantica corretta, http) + localStorage
+        // (fallback affidabile quando il sito è aperto da file:// e session non è condiviso).
+        try {
+            var payload = JSON.stringify(order);
+            sessionStorage.setItem('eurocity_nav', payload);
+            localStorage.setItem('eurocity_nav', payload);
+        } catch (e) {}
     }
 
+    // Region e Currency sono a selezione SINGOLA (una città sta in una sola area /
+    // usa una sola valuta): cliccare un'opzione deseleziona le altre dello stesso
+    // gruppo. Profile resta multiplo: le soglie si combinano in AND (safe + green + …).
+    var SINGLE = { region: true, currency: true };
     chips.forEach(function(chip) {
         chip.addEventListener('click', function() {
             var on = chip.getAttribute('aria-pressed') === 'true';
+            if (SINGLE[chip.dataset.dim] && !on) {
+                chips.forEach(function(c) {
+                    if (c.dataset.dim === chip.dataset.dim && c !== chip) {
+                        c.setAttribute('aria-pressed', 'false');
+                        c.classList.remove('active');
+                    }
+                });
+            }
             chip.setAttribute('aria-pressed', on ? 'false' : 'true');
             chip.classList.toggle('active', !on);
             apply();
@@ -893,21 +916,27 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
             </select>
         </div>
     </div>
-    <div class="ft-row ft-facets">
+    <div class="ft-facets">
         <div class="ft-group" role="group" aria-label="Profilo">
             <span class="ft-glabel">Profile</span>
-            <button class="filter-btn" data-dim="profile" data-val="safety" aria-pressed="false">🛡️ Safe ≥ 70</button>
-            <button class="filter-btn" data-dim="profile" data-val="green" aria-pressed="false">🌱 Green ≥ 70</button>
-            <button class="filter-btn" data-dim="profile" data-val="budget" aria-pressed="false">💰 ≤ €120/night</button>
+            <div class="ft-chips">
+                <button class="filter-btn" data-dim="profile" data-val="safety" aria-pressed="false">🛡️ Safe ≥ 70</button>
+                <button class="filter-btn" data-dim="profile" data-val="green" aria-pressed="false">🌱 Green ≥ 70</button>
+                <button class="filter-btn" data-dim="profile" data-val="budget" aria-pressed="false">💰 ≤ €120/night</button>
+            </div>
         </div>
         <div class="ft-group" role="group" aria-label="Regione">
             <span class="ft-glabel">Region</span>
-            {region_chips}
+            <div class="ft-chips">
+                {region_chips}
+            </div>
         </div>
         <div class="ft-group" role="group" aria-label="Valuta">
             <span class="ft-glabel">Currency</span>
-            <button class="filter-btn" data-dim="currency" data-val="eur" aria-pressed="false">💶 Eurozone</button>
-            <button class="filter-btn" data-dim="currency" data-val="other" aria-pressed="false">💱 Non-euro</button>
+            <div class="ft-chips">
+                <button class="filter-btn" data-dim="currency" data-val="eur" aria-pressed="false">💶 Eurozone</button>
+                <button class="filter-btn" data-dim="currency" data-val="other" aria-pressed="false">💱 Non-euro</button>
+            </div>
         </div>
     </div>
     <div class="ft-row ft-meta">
@@ -950,6 +979,38 @@ def generate_city_pages(city_data):
     # Virtual Analyst flottante: identico markup/logica dell'index, su ogni scheda
     analyst_widget = analyst_widget_html()
     analyst_js = analyst_script(city_data)
+
+    # Mappa slug → {bandiera, nome} per le etichette prev/next dinamiche (identica su ogni scheda)
+    nav_cities_map = "{" + ",".join(
+        f'{json.dumps(c["city_lower"])}:{{"f":{json.dumps(c["flag"])},"n":{json.dumps(c["name_it"])}}}'
+        for c in cities
+    ) + "}"
+    # Script (parentesi normali: è una stringa Python, NON una f-string) iniettato in
+    # ogni scheda. Rende prev/next coerenti col filtro+ordinamento scelto sull'index,
+    # leggendo l'ordine salvato in sessionStorage; se assente o la città è stata
+    # filtrata fuori, lascia i vicini statici (alfabetici) già presenti nell'HTML.
+    nav_rewrite_js = """<script>
+(function() {
+  var nav = document.querySelector('.city-nav');
+  if (!nav) return;
+  var CITIES = __NAV_MAP__;
+  var current = nav.dataset.slug, order, raw = null;
+  try { raw = sessionStorage.getItem('eurocity_nav') || localStorage.getItem('eurocity_nav'); } catch (e) {}
+  try { order = JSON.parse(raw || 'null'); } catch (e) { order = null; }
+  if (!Array.isArray(order)) return;
+  var idx = order.indexOf(current);
+  if (idx === -1 || order.length < 2) return;   // arrivo diretto o città filtrata fuori → statico
+  var prev = order[(idx - 1 + order.length) % order.length];
+  var next = order[(idx + 1) % order.length];
+  var links = nav.querySelectorAll('a');
+  if (links[0] && CITIES[prev]) { links[0].setAttribute('href', prev + '.html'); links[0].textContent = '\\u2190 ' + CITIES[prev].f + ' ' + CITIES[prev].n; }
+  if (links[1] && CITIES[next]) { links[1].setAttribute('href', next + '.html'); links[1].textContent = CITIES[next].f + ' ' + CITIES[next].n + ' \\u2192'; }
+  if (order.length < __TOTAL__) {
+    nav.setAttribute('data-filtered', 'true');
+    nav.setAttribute('title', 'Navigazione tra le ' + order.length + ' capitali filtrate');
+  }
+})();
+</script>""".replace('__NAV_MAP__', nav_cities_map).replace('__TOTAL__', str(n))
 
     for i, city in enumerate(cities):
         prev_city = cities[(i - 1) % n]
@@ -1194,7 +1255,7 @@ def generate_city_pages(city_data):
         </nav>
     </div>
 </header>
-<nav class="city-nav" aria-label="Navigazione tra le città">
+<nav class="city-nav" data-slug="{cl}" aria-label="Navigazione tra le città">
     <a href="{prev_city['city_lower']}.html">← {prev_city['flag']} {prev_city['name_it']}</a>
     <span class="city-nav-title">{city['flag']} {city['name_it']}</span>
     <a href="{next_city['city_lower']}.html">{next_city['flag']} {next_city['name_it']} →</a>
@@ -1269,6 +1330,7 @@ btt.onclick = function() {{ window.scrollTo({{top: 0, behavior: 'smooth'}}); }};
 </script>
 {analyst_widget}
 {analyst_js}
+{nav_rewrite_js}
 </body>
 </html>"""
 
