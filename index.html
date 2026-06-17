@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stile.css?v=cfcf8a3e">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">
     <title>EuroCity Strategic Intelligence</title>
 </head>
 <body>
@@ -98,8 +95,17 @@
 
 <!-- Virtual Analyst: ora è un widget flottante, iniettato a fine pagina -->
 
-<!-- ═══ MAPPA INLINE ════════════════════════════════════════════════════ -->
-<div id="map-inline"></div>
+<!-- ═══ MAPPA CTA ════════════════════════════════════════════════════════ -->
+<section class="map-cta" aria-label="Esplora la mappa interattiva">
+  <div class="map-cta-inner">
+    <div class="map-cta-icon">🗺️</div>
+    <div class="map-cta-text">
+      <h2>Esplora attrazioni e locali su mappa</h2>
+      <p>300 attrazioni e 240 locali notturni distribuiti su 30 capitali europee, con filtri per categoria e ricerca per città.</p>
+    </div>
+    <a href="pages/mappa_attrazioni.html" class="btn-map-cta">Apri la mappa interattiva →</a>
+  </div>
+</section>
 
 <!-- ═══ TOOLBAR FILTRI + ORDINAMENTO ════════════════════════════════════ -->
 <section class="filter-toolbar" id="filter-toolbar" aria-label="Filtra e ordina le capitali">
@@ -1538,10 +1544,17 @@
 <button id="back-to-top" title="Back to top">↑</button>
 
 <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Navigazione footer">
+        <a href="#">🏠 Home</a>
+        <span class="footer-sep">·</span>
+        <a href="pages/mappa_attrazioni.html">🗺️ Mappa</a>
+        <span class="footer-sep">·</span>
+        <a href="pages/report.html">📊 Report</a>
+        <span class="footer-sep">·</span>
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Torna su</a>
+    </nav>
     Progetto TEAM — Laurea Magistrale in Governance e Politiche dell'Innovazione Digitale ·
     Università di Bologna A.A. 2024/2025
-    <br>
-    <a href="pages/report.html">📊 Report &amp; Documentation</a>
 </footer>
 
 
@@ -1843,10 +1856,9 @@ document.querySelectorAll('.chip').forEach(function(chip) {
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !widget.hidden) closeVA(); });
 })();
 </script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
 <script>
-var map_map_inline=L.map('map-inline',{center:[52,15],zoom:4});
+var _map_removed=true; // mappa inline rimossa (usare pages/mappa_attrazioni.html)
+if(false){var map_map_inline=null;
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'\u00a9 OpenStreetMap \u00a9 CARTO',maxZoom:19}).addTo(map_map_inline);
 var attr_map_inline=L.markerClusterGroup({chunkedLoading:true});
 var venue_map_inline=L.markerClusterGroup({chunkedLoading:true});
@@ -1889,6 +1901,7 @@ mapData_map_inline.forEach(function(c){
   }
 });
 map_map_inline.addLayer(attr_map_inline);map_map_inline.addLayer(venue_map_inline);map_map_inline.addLayer(cap_map_inline);
+} // end if(false)
 </script>
 <script>
 /* back-to-top */
