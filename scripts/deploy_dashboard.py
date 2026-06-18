@@ -848,7 +848,7 @@ def deploy():
             p_pct = _pct(city_obj['price'], 2.5)   # max €250
             e_pct = _pct(city_obj['economy'])
             cards_html += f"""
-            <article class="city-card" data-slug="{city_lower}" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" data-appeal="{city_obj['appeal']}" data-economy="{city_obj['economy']}" data-attractions="{n_attr}" data-venues="{city_obj['hotel_count']}" data-currency="{cur_bucket}" data-region="{region_code}" data-name="{(city_obj['name_en'] + ' ' + city_obj['name_it']).lower()}" itemscope itemtype="https://schema.org/City" itemid="{city_obj['uri']}">
+            <article class="city-card" data-slug="{city_lower}" data-safety="{city_obj['safety']}" data-green="{city_obj['green']}" data-price="{city_obj['price']}" data-appeal="{city_obj['appeal']}" data-economy="{city_obj['economy']}" data-attractions="{n_attr}" data-venues="{len(city_obj['nightlife'])}" data-currency="{cur_bucket}" data-region="{region_code}" data-name="{(city_obj['name_en'] + ' ' + city_obj['name_it']).lower()}" itemscope itemtype="https://schema.org/City" itemid="{city_obj['uri']}">
                 <div class="landmark-img-wrap">
                     <img src="{img_src}" alt="{city_obj['name_en']} Landmark" class="landmark-img" loading="lazy">
                     <div class="city-card-overlay">
@@ -879,7 +879,7 @@ def deploy():
                         </div>
                         <div class="stat-item">
                             <span class="stat-label">Venues</span>
-                            <span class="stat-val" style="color:var(--blue-500)">{city_obj['hotel_count']}</span>
+                            <span class="stat-val" style="color:var(--blue-500)">{len(city_obj['nightlife'])}</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-label">Cost of living</span>
@@ -928,7 +928,9 @@ def deploy():
     inline_map_js = _map_js_block(city_data, 'map-inline', 'pages/cities/')
 
     n_attractions = sum(len(c['attractions']) for c in city_data)
-    n_hotels      = sum(len(c['hotels'])      for c in city_data)
+    # "Venues" = locali notturni (bar/pub/nightclub), coerente col report (240 totali):
+    # NON gli hotel. In precedenza l'hero/le card mostravano per errore hotel_count.
+    n_venues      = sum(len(c['nightlife'])   for c in city_data)
 
     # Il secondo blocco <script> è una stringa NON f-string: usare { e } singoli (non {{ }})
     js_block = """<script>
@@ -1108,7 +1110,7 @@ document.querySelectorAll('.city-card').forEach(function(c) { observer.observe(c
         <div class="hero-stats">
             <div class="hero-stat"><span class="hs-num">{len(city_data)}</span><span class="hs-lbl">capitals</span></div>
             <div class="hero-stat"><span class="hs-num">{n_attractions}</span><span class="hs-lbl">attractions</span></div>
-            <div class="hero-stat"><span class="hs-num">{n_hotels}</span><span class="hs-lbl">venues</span></div>
+            <div class="hero-stat"><span class="hs-num">{n_venues}</span><span class="hs-lbl">venues</span></div>
             <div class="hero-stat" title="File XML validati rispetto a city_report.dtd (lxml.etree.DTD)">
                 <span class="hs-num">{validation['valid']}/{len(files)}</span>
                 <span class="hs-lbl">✅ DTD-valid XML</span>
@@ -2026,9 +2028,11 @@ def generate_report(city_data, validation):
 <section class="report-section" id="statistiche">
   <h2>📊 Statistiche Comparative — Dati Estratti dai File XML</h2>
   <p style="margin-top:0; color:var(--slate-500); font-size:0.92rem;">
-    Nessun numero in questa pagina è scritto a mano: ognuno è <b>calcolato a runtime</b> rileggendo
-    i {total_cities} file <code>data/xml_dataset/*.xml</code> già validati contro il DTD. Il report
-    è quindi il <b>riflesso diretto</b> dei documenti — se cambia un XML, cambia la statistica.
+    I numeri in questa pagina sono <b>calcolati a runtime</b> rileggendo i {total_cities} file
+    <code>data/xml_dataset/*.xml</code> già validati contro il DTD: non sono scritti a mano nel report.
+    Gli XML, a loro volta, derivano dai dati sorgente (con alcune <b>correzioni manuali documentate</b>
+    sui dati grezzi, p.es. gli override distretti per Luxembourg e Stockholm). Il report è quindi il
+    <b>riflesso diretto</b> dei documenti — se cambia un XML, cambia la statistica.
   </p>
   <div class="rstat-grid">
     {summary_cards}
@@ -2378,7 +2382,7 @@ for filename in files:                                  # scorre la directory XM
 │   └── district*
 │       ├── name
 │       └── description
-├── description        (sintesi strategica IT)
+├── description        (sintesi strategica EN)
 ├── wiki_intro?        (intro da Wikivoyage, ripulita)
 └── landmark_image?    (URL immagine simbolo)</pre>
   <h3>Dichiarazione DTD (file sorgente)</h3>
@@ -3060,12 +3064,12 @@ btns.forEach(function(btn){{
   <h3>AI per i Contenuti del Dataset</h3>
   <span class="ai-badge">city_descriptions.json</span>
   <p>
-    Le sintesi strategiche in italiano in <code>city_descriptions.json</code>
-    (mostrate come <i>Strategic Summary</i> nelle card) sono state generate con
+    Le sintesi strategiche in inglese in <code>city_descriptions.json</code>
+    (mostrate come <i>Strategic Summary</i> nel tab <i>Tips</i> delle schede città) sono state generate con
     <b>Gemini</b> (Google AI) tramite prompt strutturati. Fonte: testo a scopo
     didattico, non estratto da una singola fonte primaria.
   </p>
-  <pre style="font-size:0.8rem;">Genera una descrizione strategica in italiano (max 2 frasi) di [CITTÀ]
+  <pre style="font-size:0.8rem;">Genera una descrizione strategica in inglese (max 2 frasi) di [CITTÀ]
 come capitale europea, focalizzandoti su: innovazione urbana, sostenibilità,
 sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</pre>
 

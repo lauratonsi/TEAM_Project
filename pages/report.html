@@ -230,9 +230,11 @@
 <section class="report-section" id="statistiche">
   <h2>📊 Statistiche Comparative — Dati Estratti dai File XML</h2>
   <p style="margin-top:0; color:var(--slate-500); font-size:0.92rem;">
-    Nessun numero in questa pagina è scritto a mano: ognuno è <b>calcolato a runtime</b> rileggendo
-    i 30 file <code>data/xml_dataset/*.xml</code> già validati contro il DTD. Il report
-    è quindi il <b>riflesso diretto</b> dei documenti — se cambia un XML, cambia la statistica.
+    I numeri in questa pagina sono <b>calcolati a runtime</b> rileggendo i 30 file
+    <code>data/xml_dataset/*.xml</code> già validati contro il DTD: non sono scritti a mano nel report.
+    Gli XML, a loro volta, derivano dai dati sorgente (con alcune <b>correzioni manuali documentate</b>
+    sui dati grezzi, p.es. gli override distretti per Luxembourg e Stockholm). Il report è quindi il
+    <b>riflesso diretto</b> dei documenti — se cambia un XML, cambia la statistica.
   </p>
   <div class="rstat-grid">
     <div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>30</span><span class='rstat-label'>Capitali analizzate</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>370</span><span class='rstat-label'>Strutture ricettive</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>300</span><span class='rstat-label'>Attrazioni catalogate</span></div><div class='rstat-card'><span class='rstat-val' style='color:#8b5cf6'>19/30</span><span class='rstat-label'>Città con distretti</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>61.3</span><span class='rstat-label'>Appeal medio</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>66.0</span><span class='rstat-label'>Safety media</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>71.8</span><span class='rstat-label'>Green Score medio</span></div><div class='rstat-card'><span class='rstat-val' style='color:#D97706'>30</span><span class='rstat-label'>File XML validati</span></div>
@@ -582,7 +584,7 @@ for filename in files:                                  # scorre la directory XM
 │   └── district*
 │       ├── name
 │       └── description
-├── description        (sintesi strategica IT)
+├── description        (sintesi strategica EN)
 ├── wiki_intro?        (intro da Wikivoyage, ripulita)
 └── landmark_image?    (URL immagine simbolo)</pre>
   <h3>Dichiarazione DTD (file sorgente)</h3>
@@ -1330,12 +1332,12 @@ btns.forEach(function(btn){
   <h3>AI per i Contenuti del Dataset</h3>
   <span class="ai-badge">city_descriptions.json</span>
   <p>
-    Le sintesi strategiche in italiano in <code>city_descriptions.json</code>
-    (mostrate come <i>Strategic Summary</i> nelle card) sono state generate con
+    Le sintesi strategiche in inglese in <code>city_descriptions.json</code>
+    (mostrate come <i>Strategic Summary</i> nel tab <i>Tips</i> delle schede città) sono state generate con
     <b>Gemini</b> (Google AI) tramite prompt strutturati. Fonte: testo a scopo
     didattico, non estratto da una singola fonte primaria.
   </p>
-  <pre style="font-size:0.8rem;">Genera una descrizione strategica in italiano (max 2 frasi) di [CITTÀ]
+  <pre style="font-size:0.8rem;">Genera una descrizione strategica in inglese (max 2 frasi) di [CITTÀ]
 come capitale europea, focalizzandoti su: innovazione urbana, sostenibilità,
 sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</pre>
 

@@ -34,7 +34,7 @@ ELABORAZIONE/
 │   ├── nightlife.json                   # Locali notturni geolocalizzati (Overpass / OSM)
 │   ├── wiki_text_pulito.csv             # Trasporti, hotel, distretti estratti da Wikivoyage
 │   ├── attrazione_descrizione_fixed.csv # Attrazioni con coordinate geografiche
-│   ├── city_descriptions.json           # Sintesi strategiche in italiano (generate con AI)
+│   ├── city_descriptions.json           # Sintesi strategiche in inglese (generate con AI)
 │   └── transport_patches.json           # Patch trasporti per città con CSV mancante
 ├── scripts/
 │   ├── extract_wiki_info.py             # Step 1 — dump Wikivoyage → CSV/JSON (mwparserfromhell, spaCy)
@@ -181,7 +181,7 @@ di uscita `0` solo se tutti i file sono validi. Output:
 | Tassi di cambio indicativi (snapshot 2026-01) | [`currency_rates.json`](data/currency_rates.json) | Valuta locale ISO 4217 + tasso EUR→locale delle 10 capitali non-euro |
 | [UN M49 geoscheme](https://unstats.un.org/unsd/methodology/m49/) (UN Statistics Division) | [`geo_regions.json`](data/geo_regions.json) | Macro-regione (Northern/Western/Southern/Eastern) di ogni capitale + nota su Cipro |
 | [Wikimedia Commons](https://commons.wikimedia.org) | `landmark_image` in XML (via `download_images.py`) | Immagini simbolo (URL stabili via Special:FilePath) |
-| Generato con AI (Gemini) | [`city_descriptions.json`](data/city_descriptions.json) | Sintesi strategiche in italiano |
+| Generato con AI (Gemini) | [`city_descriptions.json`](data/city_descriptions.json) | Sintesi strategiche in inglese |
 
 ### Struttura dei Dump Wikivoyage
 
@@ -578,9 +578,9 @@ Utilizzato per assistenza allo sviluppo della pipeline:
 > ancora i distretti/li hanno errati, ci sono alcuni errori nelle bandiere."
 
 ### AI per i Contenuti del Dataset
-Le sintesi strategiche in `city_descriptions.json` sono state generate con Claude (Anthropic):
+Le sintesi strategiche in `city_descriptions.json` sono state generate con **Gemini (Google AI)**:
 
-> *Prompt tipo:* "Genera una descrizione strategica in italiano (max 2 frasi) di [CITTÀ]
+> *Prompt tipo:* "Genera una descrizione strategica in inglese (max 2 frasi) di [CITTÀ]
 > come capitale europea, focalizzandoti su: innovazione urbana, sostenibilità, sicurezza,
 > accessibilità economica. Tono: analitico, da report istituzionale."
 
