@@ -1,0 +1,205 @@
+{
+  "city_report": {
+    "@appeal_score": "44.8",
+    "@region": "southern",
+    "metadata": {
+      "title": "Valletta",
+      "name_it": "La Valletta",
+      "flag": "🇲🇹",
+      "source_url": "https://en.wikivoyage.org/wiki/Valletta"
+    },
+    "indicators": {
+      "hotel_count": "12",
+      "hotel_price": "126.54",
+      "safety": {
+        "@index_score": "61.2"
+      },
+      "environment": {
+        "@green_score": "35"
+      },
+      "cost_index": {
+        "@value": "68.4"
+      },
+      "economic_accessibility": {
+        "@score": "31.6"
+      }
+    },
+    "transport": {
+      "b": "Valletta",
+      "#text": "By bus In front of the main gate of"
+    },
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Asti Guesthouse",
+          "price": "€20"
+        },
+        {
+          "name": "Grand Harbour Hotel",
+          "price": "standard double rooms from €100 (from €80 in low season), including breakfast"
+        },
+        {
+          "name": "British Hotel",
+          "price": "rates from about €120"
+        },
+        {
+          "name": "Valletta G-House",
+          "price": "€150/night"
+        },
+        {
+          "name": "Valletta Suites",
+          "price": "€140 per suite per night"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "35.8949",
+          "@lon": "14.5123",
+          "name": "Upper Barrakka",
+          "description": "Public gardens with panoramic views of the harbor."
+        },
+        {
+          "@lat": "35.8977",
+          "@lon": "14.5126",
+          "name": "St. John's Cathedral",
+          "description": "Highly decorated Baroque church with Caravaggio art."
+        },
+        {
+          "@lat": "35.8944",
+          "@lon": "14.5186",
+          "name": "Grand Harbour",
+          "description": "The historic natural harbor of Malta."
+        },
+        {
+          "@lat": "35.9019",
+          "@lon": "14.5186",
+          "name": "Fort St. Elmo",
+          "description": "Star-shaped fort and National War Museum."
+        },
+        {
+          "@lat": "35.8986",
+          "@lon": "14.5136",
+          "name": "Grandmaster's Palace",
+          "description": "The historic center of government in Malta."
+        },
+        {
+          "@lat": "35.8983",
+          "@lon": "14.5128",
+          "name": "Republic Street",
+          "description": "The main shopping and commercial street."
+        },
+        {
+          "@lat": "35.8979",
+          "@lon": "14.5113",
+          "name": "National Archaeology",
+          "description": "Museum housing prehistoric artifacts from the islands."
+        },
+        {
+          "@lat": "35.8997",
+          "@lon": "14.5139",
+          "name": "Casa Rocca Piccola",
+          "description": "16th-century palace belonging to a noble family."
+        },
+        {
+          "@lat": "35.8997",
+          "@lon": "14.5125",
+          "name": "Teatru Manoel",
+          "description": "One of the oldest working theaters in Europe."
+        },
+        {
+          "@lat": "35.8989",
+          "@lon": "14.5086",
+          "name": "Hastings Gardens",
+          "description": "Quiet gardens on top of the St. John's Bastion."
+        }
+      ]
+    },
+    "description": {
+      "b": "Valletta",
+      "#text": "Baroque fortress in the heart of the Mediterranean,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Valletta",
+        "Valletta",
+        "Valletta",
+        "Valletta",
+        "Valletta",
+        "Valletta",
+        "Valletta",
+        "Valletta",
+        "Valletta",
+        "Valletta"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Malta",
+          "#text": "Malta"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/UNESCO_World_Heritage_List",
+          "#text": "UNESCO World Heritage List"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Maltese_phrasebook",
+          "#text": "Maltese"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/valletta.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "35.8999391",
+          "@lon": "14.5088802",
+          "@category": "bar",
+          "name": "222 Wine Bar"
+        },
+        {
+          "@lat": "35.9244566",
+          "@lon": "14.488431",
+          "@category": "bar",
+          "name": "Bar Native"
+        },
+        {
+          "@lat": "35.9222347",
+          "@lon": "14.4910566",
+          "@category": "bar",
+          "name": "Bellini"
+        },
+        {
+          "@lat": "35.9081685",
+          "@lon": "14.5006288",
+          "@category": "bar",
+          "name": "Black Gold Saloon Malta"
+        },
+        {
+          "@lat": "35.8951718",
+          "@lon": "14.4656418",
+          "@category": "bar",
+          "name": "Butterfly Bar"
+        },
+        {
+          "@lat": "35.9080856",
+          "@lon": "14.5004518",
+          "@category": "bar",
+          "name": "Chequers"
+        },
+        {
+          "@lat": "35.9158518",
+          "@lon": "14.4933316",
+          "@category": "pub",
+          "name": "City of London"
+        },
+        {
+          "@lat": "35.9221301",
+          "@lon": "14.4923768",
+          "@category": "nightclub",
+          "name": "Club 22"
+        }
+      ]
+    }
+  }
+}

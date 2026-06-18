@@ -1,0 +1,204 @@
+{
+  "city_report": {
+    "@appeal_score": "59.1",
+    "@currency": "BGN",
+    "@region": "eastern",
+    "metadata": {
+      "title": "Sofia",
+      "name_it": "Sofia",
+      "flag": "🇧🇬",
+      "source_url": "https://en.wikivoyage.org/wiki/Sofia"
+    },
+    "indicators": {
+      "hotel_count": "18",
+      "hotel_price": "87.88",
+      "safety": {
+        "@index_score": "58.4"
+      },
+      "environment": {
+        "@green_score": "63"
+      },
+      "cost_index": {
+        "@value": "47.5"
+      },
+      "economic_accessibility": {
+        "@score": "52.5"
+      }
+    },
+    "transport": {
+      "b": "Sofia",
+      "i": "Yellow"
+    },
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Peter Pan Hostel",
+          "price": "Private €12-14"
+        },
+        {
+          "name": "Levitt Hostel",
+          "price": "€10"
+        },
+        {
+          "name": "Crosspoint Sofia Hostel",
+          "price": "€9-18"
+        },
+        {
+          "name": "Hostel Mostel",
+          "price": "From €9"
+        },
+        {
+          "name": "Nightingale Hostel",
+          "price": "€7-12"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "42.6958",
+          "@lon": "23.3328",
+          "name": "Nevsky Cathedral",
+          "description": "One of the largest Orthodox cathedrals in the world."
+        },
+        {
+          "@lat": "42.6911",
+          "@lon": "23.3203",
+          "name": "Vitosha Boulevard",
+          "description": "Main commercial street with views of Vitosha Mountain."
+        },
+        {
+          "@lat": "42.6447",
+          "@lon": "23.2661",
+          "name": "Boyana Church",
+          "description": "Medieval church with world-famous frescoes."
+        },
+        {
+          "@lat": "42.6978",
+          "@lon": "23.3225",
+          "name": "Serdica Ruins",
+          "description": "Ancient Roman ruins in the center of Sofia."
+        },
+        {
+          "@lat": "42.6936",
+          "@lon": "23.3267",
+          "name": "National Theater",
+          "description": "Beautiful Neoclassical theater building."
+        },
+        {
+          "@lat": "42.6969",
+          "@lon": "23.3228",
+          "name": "St. George Rotunda",
+          "description": "The oldest building in Sofia, a 4th-century church."
+        },
+        {
+          "@lat": "42.6994",
+          "@lon": "23.3225",
+          "name": "Banya Bashi Mosque",
+          "description": "16th-century mosque built over natural thermal spas."
+        },
+        {
+          "@lat": "42.655",
+          "@lon": "23.2708",
+          "name": "National History Museum",
+          "description": "Largest museum in Bulgaria with the Thracian treasures."
+        },
+        {
+          "@lat": "42.6967",
+          "@lon": "23.3214",
+          "name": "Sveta Nedelya",
+          "description": "Medieval Orthodox cathedral in the heart of the city."
+        },
+        {
+          "@lat": "42.6975",
+          "@lon": "23.3222",
+          "name": "Largo",
+          "description": "Architectural ensemble of Socialist Classicism."
+        }
+      ]
+    },
+    "description": {
+      "b": "Sofia",
+      "#text": "Located at the foot of Mount Vitosha,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Sofia",
+        "Sofia",
+        "Sofia",
+        "Sofia",
+        "Sofia",
+        "Sofia",
+        "Sofia",
+        "Sofia"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Bulgaria",
+          "#text": "Bulgaria"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/UNESCO_World_Heritage_Site",
+          "#text": "UNESCO World Heritage Site"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Constantinople",
+          "#text": "Constantinople"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/sofia.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "42.647392",
+          "@lon": "23.3725373",
+          "@category": "bar",
+          "name": "120ска"
+        },
+        {
+          "@lat": "42.6862595",
+          "@lon": "23.3220992",
+          "@category": "bar",
+          "name": "3 oz. bar"
+        },
+        {
+          "@lat": "42.6900767",
+          "@lon": "23.3204954",
+          "@category": "pub",
+          "name": "Ale House"
+        },
+        {
+          "@lat": "42.6902288",
+          "@lon": "23.3393279",
+          "@category": "bar",
+          "name": "Art Club"
+        },
+        {
+          "@lat": "42.6940747",
+          "@lon": "23.3186521",
+          "@category": "bar",
+          "name": "Baskerville"
+        },
+        {
+          "@lat": "42.6913226",
+          "@lon": "23.3205792",
+          "@category": "bar",
+          "name": "Caligo"
+        },
+        {
+          "@lat": "42.6869936",
+          "@lon": "23.2395698",
+          "@category": "bar",
+          "name": "Club 303"
+        },
+        {
+          "@lat": "42.6946385",
+          "@lon": "23.3190705",
+          "@category": "bar",
+          "name": "Coda"
+        }
+      ]
+    }
+  }
+}

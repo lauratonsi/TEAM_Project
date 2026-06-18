@@ -516,7 +516,8 @@ details[open] .analyst-details summary::before { content: '▾ '; }
     margin-top: 20px;
     line-height: 1.8;
 }
-.site-footer a { color: var(--accent); text-decoration: none; font-weight: 700; }
+/* accent-dark (#C0392B, 5.44:1 su bianco) anziché accent (#E74C3C, 3.82:1): contrasto AA per testo piccolo */
+.site-footer a { color: var(--accent-dark); text-decoration: none; font-weight: 700; }
 .site-footer a:hover { text-decoration: underline; }
 .footer-nav {
     display: flex;

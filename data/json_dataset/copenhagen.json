@@ -1,0 +1,228 @@
+{
+  "city_report": {
+    "@appeal_score": "66.0",
+    "@currency": "DKK",
+    "@region": "northern",
+    "metadata": {
+      "title": "Copenhagen",
+      "name_it": "Copenaghen",
+      "flag": "🇩🇰",
+      "source_url": "https://en.wikivoyage.org/wiki/Copenhagen"
+    },
+    "indicators": {
+      "hotel_count": "10",
+      "hotel_price": "163.35",
+      "safety": {
+        "@index_score": "74.1"
+      },
+      "environment": {
+        "@green_score": "85"
+      },
+      "cost_index": {
+        "@value": "88.3"
+      },
+      "economic_accessibility": {
+        "@score": "11.7"
+      }
+    },
+    "transport": {
+      "b": "Copenhagen",
+      "#text": "By train It takes 13 minutes to get to"
+    },
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Copenhagen Camping",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Danhostel Amager",
+          "price": "Dorm beds from 130 kr, Singles from 380 kr"
+        },
+        {
+          "name": "Dragør Badehotel",
+          "price": "Single from 370 kr"
+        },
+        {
+          "name": "Dragør Fort",
+          "price": "Doubles from 695 kr"
+        },
+        {
+          "name": "House of Colors",
+          "price": "580 kr for one person, 680 kr for two, discount for stays of one week or longer"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "55.6929",
+          "@lon": "12.5993",
+          "name": "Little Mermaid",
+          "description": "Small bronze statue inspired by Hans Christian Andersen."
+        },
+        {
+          "@lat": "55.6737",
+          "@lon": "12.5681",
+          "name": "Tivoli Gardens",
+          "description": "Famous amusement park and pleasure garden."
+        },
+        {
+          "@lat": "55.6811",
+          "@lon": "12.5893",
+          "name": "Nyhavn",
+          "description": "17th-century waterfront and entertainment district."
+        },
+        {
+          "@lat": "55.6841",
+          "@lon": "12.5931",
+          "name": "Amalienborg",
+          "description": "The winter residence of the Danish royal family."
+        },
+        {
+          "@lat": "55.6858",
+          "@lon": "12.5772",
+          "name": "Rosenborg Castle",
+          "description": "Renaissance castle housing the crown jewels."
+        },
+        {
+          "@lat": "55.6814",
+          "@lon": "12.5758",
+          "name": "Round Tower",
+          "description": "17th-century tower built as an astronomical observatory."
+        },
+        {
+          "@lat": "55.6731",
+          "@lon": "12.5997",
+          "name": "Christiania",
+          "description": "Self-proclaimed autonomous anarchist district."
+        },
+        {
+          "@lat": "55.6786",
+          "@lon": "12.5744",
+          "name": "Strøget",
+          "description": "One of Europe's longest pedestrian shopping streets."
+        },
+        {
+          "@lat": "55.6762",
+          "@lon": "12.5805",
+          "name": "Christiansborg",
+          "description": "Palace housing the Danish Parliament and Supreme Court."
+        },
+        {
+          "@lat": "55.6746",
+          "@lon": "12.5748",
+          "name": "National Museum",
+          "description": "Denmark's central museum of cultural history."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Amager",
+          "description": "Amager (pronounced Ama'r) is a district and island east and southeast of central Copenhagen, covering some , and mostly notable as the home of Copenhagen Airport and the charming old fishing hamlet of Dragør. It was built as a waste depot for the evolving city of Copenhagen, was and long considered the backwaters of the city. This old working class district is now undergoing rapid development, contributing to some wonderful contrasts; from the huge uncultivated wetlands of Kalvebod Fælled, the ultra modern Ørestad development area, the laid-back and impossibly picturesque Dragør fishing hamlet to the fiercely local patriotic public housing blocks on the northern part of the island. The Amager district includes the Danish islands in Øresund. Saltholm is 7-km across, with a handful of human inhabitants, together with livestock and wild birds, so flat that it gets flooded during storms. Flakfortet and Middelgrundsfortet are artificial fortress islands. Peberholm is an artificial island built for the Øresund Bridge, which is off limits for regular visitors. Amager used to be much smaller than today's island. Its modern history begins with King Christian II inviting Dutch farmers to dam and grow the fields of the island to supply fresh vegetables to the king and the city. Coupled with successful fishing, the island grew into one of the wealthiest rural areas in the country. As Copenhagen grew, so did the pressure to populate the island. Copenhagen spilled out on the island in the 19th century with the construction of sundbyerne. Some farmers maintain a small stronghold on the southern tip of the island to this day, with many old farmhouses and small traces of the Dutch ancestry. With development, the fortunes of the islanders faded, and the island became long a forgotten district of Copenhagen, out of sight and out of mind of the local population. Despite playing host to the city's airport, people mainly saw the tedious transportation by bus through the slow-moving transportation network as a necessary nuisance. The most common colloquial name for the island was Lorteøen, or Shit Island in English, a canny reference to the fact that Amager was mainly build of landfill and sewage from the rest of Copenhagen. The islanders — or Amaricans — responded with a fierce local patriotism — some to the point where they flat-out refused to leave the island. This all changed when the Danish and Swedish governments finally ended years and years of bickering, and agreed to construct a bridge from Copenhagen to Malmö, and the residents would finally get transportation links to the rest of the city. A highway and railway connection was constructed across the island to connect the city with the airport and the new bridge. This meant that property values rose, and the municipal council decided to sell a huge patch of unused land to finance a new subway system. The island got two new subway lines."
+        },
+        {
+          "name": "Østerbro",
+          "description": "Østerbro is a mainly residential district of Copenhagen, just north of the inner city. With its quiet cobblestone and tree lined streets, and its excellent shopping and cafe life, it makes for a good excursion from the downtown area. Along with Frederiksberg in the west, Østerbro has long been considered the posh or upper class district of Copenhagen. These days this is mainly due to the demographic of young, liberal leaning, well paid academics, which has earned Østerbro nicknames like the Latté district and 2100 Spelt. But it has been a neighborhood of the upper middle class since modern Østerbro's inception, when Copenhagen expanded beyond the old fortifications in the 1850s. The district takes its name from being near the old eastern gate of the city, and translates roughly into the Eastern borough, and before the city's defenses were dismantled, the area were largely dominated by grazing cows and grassy meadows, traces of which is still visible in the huge park; Fælledparken, dominating the area. When Copenhagen was finally allowed to grow out over the ramparts following a cholera epidemic, Østerbro was not build up as quickly and disorganized as its neighbours Nørrebro and Vestebro, and it was mainly the bourgeoisie who moved here in pompous villas in green surroundings, a heritage which has stuck to the district, many of the mansions still stand today, and a lot of them are occupied by foreign embassies. When development finally took hold at the turn of the century, it was better planned, and more upscale than its counterparts, and with its big apartments and nicely crafted ornamented buildings. Even the construction of a new and dirty harbour by the waterfront and new factories could not quite take the bourgeoisie aura away from the district, something it has retained to this day. And while Østerbro is still trailing behind Frederiksberg and its posh northern neighbour, Hellerup in terms of wealthy residents, visitors should still expect it to be fashionable, rather than \"hip\" or \"cool\", but watch out for the swarms of expensive prams parading the neighbourhood! Nordhavn is a new development on the ground of the former North Harbour. Østerbro is almost entirely located within Zone 1 of the common ticketing system that covers both the Metro, Buses, and Trains in the Copenhagen area. Østerbro is served both by the S-train suburban services that are grouped together through the central part of Copenhagen, The circle Metro line, as well as several regional lines that terminate on Østerbro's main station; Østerport. All S-Train lines except line F stop at the three S-stations on Østerbro: , , and , while lines A and F also have stops on station in the northern part of Østerbro."
+        },
+        {
+          "name": "Christiania",
+          "description": "Christiania is a self-governing \"free town\" established in 1971, a city within the city, on the site of a military barracks as an alternative to mainstream culture. Christiania is considered to be the fourth largest tourist attraction in Copenhagen. Christiania is an intentional community and commune of about 850 to 1,000 residents, covering 7.7 hectares (19 acres) in the borough of Christianshavn in Copenhagen on the island of Amager. The open trade of cannabis was shut down in April 2024 as a collaborative effort with police and the majority of the inhabitants of Christania. * Christiania local government website Christiania is car-free, and parking conditions outside can be hellish in good weather, so do what everyone else does and jump on a bike, if that doesn't cut it, take public transit; there are two options: * Take the metro to Christianshavn station, from there it is about a 6-minute walk (500 m), when you exit the metro station continue straight ahead (south) until the second intersection (there is a furniture store on the corner) turn left down (east) Prinsessegade and walk a couple of hundred meters, you won't miss it, if you have any sort of idea what you are looking for.\n* You can also bus opt for bus 9A, which stops right outside the entrance, it leaves from both Vesterport and the central station, about every 10 minutes for most of the day. There are hundreds of buildings on Christiania, in all sorts of imaginative shapes, sizes and colours ranging from old army buildings dating back to the by-gone barrack days, to elaborate self-build homes. The best way to see them is just walking around sucking in the atmosphere. There is graffiti art everywhere, too. All the buildings have their own story. If you are friendly, open-minded, a bit lucky, and outside the main tourist season, you can sometimes get locals to tell you the, often amazing, stories of their particular house; otherwise the regular walking tours are a good introduction to the main sights. * \n* \n*  * \n**  Christiania is something of a powerhouse in Copenhagen's cultural life, especially on the alternative scene, and there will almost always be something going on, in one of the many club and venues dotted around the central part near Pusher street, or the open air scene on Café Nemoland (listed under drink). One of the most popular activities is simply buying some weed and consuming it at a chill spot. * \n* \n*\n* \n* \n*  Christiania offers some truly unique shopping, apart from its infamous major export item: cannabis. If you want to bring home a really unique souvenir from Copenhagen, there is a bunch of interesting options here. As of August 2024, Pusher Street, where you could buy everything from cannabis posters to bongs and Jamaican clothing, has been de-paved, and is no more, though. Despite efforts by the police to shut down the cannabis trade here, the selling is still going on relatively openly."
+        },
+        {
+          "name": "Christianshavn",
+          "description": "Christianshavn is a district east of the inner city of Copenhagen. Once a working-class neighbourhood, today Christianshavn is a trendy part of the city with its own unique identity. people from all walks of life, live side-by-side among cool cafes, old school bodegas, fancy restaurants and charming 19th-century houses along picturesque canals. Further north, Holmen is an old naval area, that has seen a dramatic change in the past few years, with the old buildings being updated for residence, along with new dramatic architecture - fittingly a new home of the royal Danish school of architecture. Christianshavn is an artificial island, erected in the swampy area between what is now the Inner city and the island of Amager, by King Christian the 4th, as a grand unification of his mad dash of construction projects, and his ambitions to develop Denmark into a major Naval power. The district was built as part of the southern fortification of Copenhagen in the early 17th century. It was designed in the image of Amsterdam, with a canal cutting straight through the centre — from this point Danish merchants were to expand trade over the seven seas, a heritage that is still very visible today, with the forest of masts from the sailing ships docked along the canal, and the century-old watering holes of sailors still handing out beers and snaps to thirsty passers by. In the early days Christianshavn was an independent city, until it was swallowed by the rapidly expanding capital, but it retains a unique atmosphere — and the people refer to themselves at Christianhavners first, and then as Copenhageners. In many ways Christianshavn is still a small town in a big city. Diversity is thriving here, and the district has managed to embrace people from all walks of life; from the alcoholic sipping beer at the corner, to the marketing yuppie, and form its own special identity stemming from this diversity. Christianshavn and the subdistrict of Holmen are on a peninsula stretching out north through the old fortifications. Because it is virtually surrounded by water, the only access is across the Knippelsbro Bridge and the dam to Amager. It is entirely located within Zone 1 of the common ticketing system of the Metro, trains and buses. If you prefer not to pay for mass transit, it is a pleasant 10-minute walk from Strøget on Amagertorv, past the parliament, and over the Knippelsbro Bridge. The backbone of bus transport in central Copenhagen are the A buses operated by Movia, which run every few minutes throughout the day. The S Buses are express buses that operate on longer lines, with fewer stops. Christianshavn's Square is the major stop, with stops by 3 different buslines, and interchange to the Metro."
+        },
+        {
+          "name": "Frederiksberg",
+          "description": "Frederiksberg might look like a part of Copenhagen to a traveller, but the municipality of Frederiksberg is an enclave of 103,000 people (2022) inside the municipality of Copenhagen. The inhabitants of Frederiksberg have historically been richer than their neighbours around them, although the rest of Copenhagen is catching up. Frederiksberg still has more parks, big villas with gardens, wide avenues, etc. Tourism information: Visit Copenhagen: Frederiksberg. The metro line crosses the northern part of Frederiksberg, so it is the best way to get there from Copenhagen Airport, as well as several other areas of the city served by metro, such as Amager. The following Metro stations are in Frederiksberg:\n* \n* \n* \n* \n*  From south to north, two lines of the S-Tog cross Frederiksberg - lines C (and its express variant H) closer to the centre and line F along the eastern border of Frederiksberg. The following stations on line C are in Frederiksberg:\n* \n* Flintholm - interchange with metro and S-Tog line F, and the only stop in Frederiksberg where the express line H stops\nLine F has the following stops along the border of Frederiksberg:\n* \n* \n* Flintholm - interchange with metro and S-Tog lines C and H The eastern part of Frederiksberg is so close to the Copenhagen Central Station that you may simply walk. Once you've made it to Copenhagen, Frederiksberg is as difficult or easy to reach by car as any other central district. If you're used to drive in European cities, Frederiksberg shouldn't be much of a problem for you.  Finding a parking spot can take a bit of time, but is by no means impossible. Note that Fredericksberg's parking rules are different from those in the rest of Copenhagen. Some information in English can be found on the official website. Most of Frederiksberg belongs to a single large parking zone (Parkeringszone 2000) with consistent rules, but always watch out for signs imposing additional local restrictions. Within the zone, parking is free at night between 00:00 and 07:00, Saturday evenings from 17:00 on, and on Sundays and public holidays. Outside these hours, you get another 2 hours of free parking, after which you'll have to pay by the hour. Parking disks are not accepted, parking apps are preferred instead (there's a list of accepted apps on the website). You can also buy a digital ticket at one of the small green vending machines (no cash!). These are somewhat rare, though, and not very easy to spot if you don't know what you're looking for. You can find their locations on the parking information maps on the streets or on the online map (activate map layer Trafik og mobilitet). One advantage over at least some of the apps is that the machines also offer day tickets for 95 kr and week tickets for 475 kr. As of 1 October 2023 a low emission zone has been introduced in Frederiksberg, see Driving in Denmark#Low Emission Zones."
+        }
+      ]
+    },
+    "description": {
+      "b": "Copenhagen",
+      "#text": "Global leader in ecological transition,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Copenhagen",
+        "Copenhagen",
+        "Copenhagen",
+        "Copenhagen",
+        "Copenhagen",
+        "Copenhagen",
+        "Copenhagen",
+        "Copenhagen"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Danish_phrasebook",
+          "#text": "Danish"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Denmark",
+          "#text": "Denmark"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Sweden",
+          "#text": "Sweden"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/copenhagen.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "55.6871555",
+          "@lon": "12.5621011",
+          "@category": "bar",
+          "name": "ALEFARM NBRO"
+        },
+        {
+          "@lat": "55.6752681",
+          "@lon": "12.5328906",
+          "@category": "pub",
+          "name": "Alléenberg"
+        },
+        {
+          "@lat": "55.6834082",
+          "@lon": "12.5651843",
+          "@category": "pub",
+          "name": "Bankeråt"
+        },
+        {
+          "@lat": "55.6836628",
+          "@lon": "12.5245604",
+          "@category": "pub",
+          "name": "Bartof Café"
+        },
+        {
+          "@lat": "55.6864894",
+          "@lon": "12.5874331",
+          "@category": "bar",
+          "name": "Black Swan"
+        },
+        {
+          "@lat": "55.6864556",
+          "@lon": "12.5579695",
+          "@category": "bar",
+          "name": "Blågårds Apotek"
+        },
+        {
+          "@lat": "55.6814563",
+          "@lon": "12.5495147",
+          "@category": "pub",
+          "name": "Bodega 48"
+        },
+        {
+          "@lat": "55.6696051",
+          "@lon": "12.4918721",
+          "@category": "bar",
+          "name": "Bodega Teglskægget"
+        }
+      ]
+    }
+  }
+}

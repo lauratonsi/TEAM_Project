@@ -1,0 +1,172 @@
+{
+  "city_report": {
+    "@appeal_score": "59.8",
+    "@currency": "HUF",
+    "@region": "eastern",
+    "metadata": {
+      "title": "Budapest",
+      "name_it": "Budapest",
+      "flag": "🇭🇺",
+      "source_url": "https://en.wikivoyage.org/wiki/Budapest"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "96.75",
+      "safety": {
+        "@index_score": "65.7"
+      },
+      "environment": {
+        "@green_score": "60"
+      },
+      "cost_index": {
+        "@value": "52.3"
+      },
+      "economic_accessibility": {
+        "@score": "47.7"
+      }
+    },
+    "transport": "Metro + Bus line 200E Bus line 200E runs between Terminal 2 and Kőbánya-Kispest Metro station, taking 25 min, bus fare Ft500. You there buy a Metro ticket for another Ft500 and ride line 3 to the city centre, about 20 mins to the main interchange at Deák Ferenc tér. The bus runs all day every day, with 7-8 minutes frequency during the day, 30-60 minutes at late night.",
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "47.5071",
+          "@lon": "19.0456",
+          "name": "Hungarian Parliament",
+          "description": "Magnificent neo-Gothic building on the Danube bank."
+        },
+        {
+          "@lat": "47.4962",
+          "@lon": "19.0396",
+          "name": "Buda Castle",
+          "description": "Historical palace complex of the Hungarian kings."
+        },
+        {
+          "@lat": "47.5022",
+          "@lon": "19.0348",
+          "name": "Fisherman's Bastion",
+          "description": "Neo-Romanesque terrace with panoramic views of Pest."
+        },
+        {
+          "@lat": "47.499",
+          "@lon": "19.0441",
+          "name": "Chain Bridge",
+          "description": "The first permanent bridge connecting Buda and Pest."
+        },
+        {
+          "@lat": "47.5148",
+          "@lon": "19.0777",
+          "name": "Heroes' Square",
+          "description": "Major square featuring the Millennium Monument."
+        },
+        {
+          "@lat": "47.5009",
+          "@lon": "19.0514",
+          "name": "St. Stephen's Basilica",
+          "description": "Roman Catholic basilica named after the first King of Hungary."
+        },
+        {
+          "@lat": "47.5188",
+          "@lon": "19.0814",
+          "name": "Széchenyi Thermal Bath",
+          "description": "Largest medicinal bath in Europe with outdoor pools."
+        },
+        {
+          "@lat": "47.5273",
+          "@lon": "19.0468",
+          "name": "Margaret Island",
+          "description": "Quiet island park in the middle of the Danube."
+        },
+        {
+          "@lat": "47.5019",
+          "@lon": "19.0342",
+          "name": "Matthias Church",
+          "description": "Roman Catholic church in the heart of Buda's Castle District."
+        },
+        {
+          "@lat": "47.4871",
+          "@lon": "19.0583",
+          "name": "Great Market Hall",
+          "description": "Large indoor market offering local food and crafts."
+        }
+      ]
+    },
+    "description": {
+      "b": "Budapest",
+      "#text": "With majestic architecture and a historic thermal bath network,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Budapest",
+        "Budapest",
+        "Budapest",
+        "Budapest",
+        "Budapest",
+        "Budapest"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Hungary",
+          "#text": "Hungary"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Budapest/Belváros",
+          "#text": "Belváros"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/budapest.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "47.4978693",
+          "@lon": "19.068726",
+          "@category": "pub",
+          "name": "Akácfa söröző"
+        },
+        {
+          "@lat": "47.5016715",
+          "@lon": "19.0397561",
+          "@category": "pub",
+          "name": "Belgian Brasserie Henri"
+        },
+        {
+          "@lat": "47.5083433",
+          "@lon": "19.0547717",
+          "@category": "pub",
+          "name": "Bordizsár"
+        },
+        {
+          "@lat": "47.4973062",
+          "@lon": "19.0389453",
+          "@category": "pub",
+          "name": "Budapest Terrace"
+        },
+        {
+          "@lat": "47.50485",
+          "@lon": "19.0623146",
+          "@category": "bar",
+          "name": "Cactus Juice"
+        },
+        {
+          "@lat": "47.520504",
+          "@lon": "19.0578122",
+          "@category": "pub",
+          "name": "Cafe Room"
+        },
+        {
+          "@lat": "47.5037114",
+          "@lon": "19.0637906",
+          "@category": "pub",
+          "name": "Café Vian kávéház"
+        },
+        {
+          "@lat": "47.5018029",
+          "@lon": "19.0553158",
+          "@category": "pub",
+          "name": "Captain Cook"
+        }
+      ]
+    }
+  }
+}

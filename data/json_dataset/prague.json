@@ -1,0 +1,203 @@
+{
+  "city_report": {
+    "@appeal_score": "70.0",
+    "@currency": "CZK",
+    "@region": "eastern",
+    "metadata": {
+      "title": "Prague",
+      "name_it": "Praga",
+      "flag": "🇨🇿",
+      "source_url": "https://en.wikivoyage.org/wiki/Prague"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "106.19",
+      "safety": {
+        "@index_score": "75.6"
+      },
+      "environment": {
+        "@green_score": "78"
+      },
+      "cost_index": {
+        "@value": "57.4"
+      },
+      "economic_accessibility": {
+        "@score": "42.6"
+      }
+    },
+    "transport": {
+      "b": "Prague",
+      "#text": "The public transport around"
+    },
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "50.0865",
+          "@lon": "14.4114",
+          "name": "Charles Bridge",
+          "description": "Historic 14th-century bridge with 30 statues."
+        },
+        {
+          "@lat": "50.0911",
+          "@lon": "14.4016",
+          "name": "Prague Castle",
+          "description": "Largest ancient castle complex in the world."
+        },
+        {
+          "@lat": "50.0875",
+          "@lon": "14.4214",
+          "name": "Old Town Square",
+          "description": "Central square with the Astronomical Clock."
+        },
+        {
+          "@lat": "50.0908",
+          "@lon": "14.4005",
+          "name": "St. Vitus Cathedral",
+          "description": "Gothic masterpiece located within the castle walls."
+        },
+        {
+          "@lat": "50.087",
+          "@lon": "14.4207",
+          "name": "Astronomical Clock",
+          "description": "15th-century medieval clock on the Town Hall."
+        },
+        {
+          "@lat": "50.0894",
+          "@lon": "14.4181",
+          "name": "Josefov",
+          "description": "The Jewish Quarter with historic synagogues and cemetery."
+        },
+        {
+          "@lat": "50.0817",
+          "@lon": "14.4278",
+          "name": "Wenceslas Square",
+          "description": "Major city square and center of business and culture."
+        },
+        {
+          "@lat": "50.0755",
+          "@lon": "14.4142",
+          "name": "Dancing House",
+          "description": "Modern architectural landmark designed by Gehry."
+        },
+        {
+          "@lat": "50.0862",
+          "@lon": "14.4069",
+          "name": "Lennon Wall",
+          "description": "Wall filled with John Lennon-inspired graffiti and lyrics."
+        },
+        {
+          "@lat": "50.0835",
+          "@lon": "14.3951",
+          "name": "Petrin Lookout",
+          "description": "Steel tower on a hill resembling the Eiffel Tower."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Old Town and Josefov",
+          "description": "Quartiere di Praga."
+        },
+        {
+          "name": "Castle and Lesser Town",
+          "description": "Quartiere di Praga."
+        },
+        {
+          "name": "New Town and Vysehrad",
+          "description": "Quartiere di Praga."
+        },
+        {
+          "name": "East bank of Vltava",
+          "description": "Quartiere di Praga."
+        },
+        {
+          "name": "West bank of Vltava",
+          "description": "Quartiere di Praga."
+        }
+      ]
+    },
+    "description": {
+      "b": "Prague",
+      "#text": "Keeper of an intact UNESCO heritage,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Prague",
+        "Prague",
+        "Prague",
+        "Prague",
+        "Prague",
+        "Prague"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Czech_phrasebook",
+          "#text": "Czech"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Czech_Republic",
+          "#text": "Czech Republic"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Prague/Old_Town_and_Josefov#See",
+          "#text": "Museum of Czech Cubism"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/prague.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "50.0874351",
+          "@lon": "14.4193478",
+          "@category": "bar",
+          "name": "Absintherie Franz Kafka"
+        },
+        {
+          "@lat": "50.0824881",
+          "@lon": "14.444303",
+          "@category": "pub",
+          "name": "Belzepub"
+        },
+        {
+          "@lat": "50.0747455",
+          "@lon": "14.431049",
+          "@category": "bar",
+          "name": "Ber.lin Bar"
+        },
+        {
+          "@lat": "50.0842199",
+          "@lon": "14.4142283",
+          "@category": "bar",
+          "name": "Café-Bar Duende"
+        },
+        {
+          "@lat": "50.0999349",
+          "@lon": "14.4879307",
+          "@category": "pub",
+          "name": "Club Montana"
+        },
+        {
+          "@lat": "50.0804853",
+          "@lon": "14.405884",
+          "@category": "bar",
+          "name": "Craft Beer Spot"
+        },
+        {
+          "@lat": "50.0862561",
+          "@lon": "14.4416022",
+          "@category": "bar",
+          "name": "District 3 Bar"
+        },
+        {
+          "@lat": "50.086847",
+          "@lon": "14.3760312",
+          "@category": "pub",
+          "name": "Hostinec \"u Anduly\""
+        }
+      ]
+    }
+  }
+}

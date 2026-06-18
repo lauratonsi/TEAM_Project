@@ -1,0 +1,216 @@
+{
+  "city_report": {
+    "@appeal_score": "71.1",
+    "@region": "northern",
+    "metadata": {
+      "title": "Tallinn",
+      "name_it": "Tallinn",
+      "flag": "🇪🇪",
+      "source_url": "https://en.wikivoyage.org/wiki/Tallinn"
+    },
+    "indicators": {
+      "hotel_count": "43",
+      "hotel_price": "113.78",
+      "safety": {
+        "@index_score": "76.4"
+      },
+      "environment": {
+        "@green_score": "82"
+      },
+      "cost_index": {
+        "@value": "61.5"
+      },
+      "economic_accessibility": {
+        "@score": "38.5"
+      }
+    },
+    "transport": "Land transport: Taxis to the old town should cost €7–10. The Bolt app is more popular than Uber (it's Estonian after all!) #2 is diverted until 2025 and doesn't stop at the airport – it will resume when construction of the Rail Baltica terminal has reached a point where the tram can pass under the railway line.",
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "16EUR Hostel",
+          "price": "Dorm bed: from €10; Single: €16-25"
+        },
+        {
+          "name": "Alur Hostel",
+          "price": "Dorm bed: from €9"
+        },
+        {
+          "name": "Euphoria",
+          "price": "Dorm bed: from €9"
+        },
+        {
+          "name": "Fat Margeret's",
+          "price": "Bed from €10"
+        },
+        {
+          "name": "Flying Kiwi Backpackers",
+          "price": "Prezzo N/D"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "59.4372",
+          "@lon": "24.7453",
+          "name": "Old Town",
+          "description": "medieval heart of Tallinn, a UNESCO World Heritage site."
+        },
+        {
+          "@lat": "59.4358",
+          "@lon": "24.7397",
+          "name": "Toompea Hill",
+          "description": "Historic hill with the castle and parliament."
+        },
+        {
+          "@lat": "59.4358",
+          "@lon": "24.7392",
+          "name": "Nevsky Cathedral",
+          "description": "Grand Orthodox cathedral with onion domes."
+        },
+        {
+          "@lat": "59.4384",
+          "@lon": "24.7911",
+          "name": "Kadriorg Park",
+          "description": "Park and palace built by Peter the Great."
+        },
+        {
+          "@lat": "59.4514",
+          "@lon": "24.7386",
+          "name": "Seaplane Harbour",
+          "description": "Maritime museum in historic seaplane hangars."
+        },
+        {
+          "@lat": "59.4373",
+          "@lon": "24.7451",
+          "name": "Town Hall Square",
+          "description": "The social heart of the city since the 13th century."
+        },
+        {
+          "@lat": "59.4394",
+          "@lon": "24.7289",
+          "name": "Telliskivi",
+          "description": "Creative city hub with restaurants and galleries."
+        },
+        {
+          "@lat": "59.4364",
+          "@lon": "24.7961",
+          "name": "Kumu Art Museum",
+          "description": "Main museum for Estonian and international art."
+        },
+        {
+          "@lat": "59.4411",
+          "@lon": "24.7478",
+          "name": "St. Olaf's Church",
+          "description": "Gothic church once the tallest building in the world."
+        },
+        {
+          "@lat": "59.4425",
+          "@lon": "24.7492",
+          "name": "Fat Margaret",
+          "description": "Historic gate tower and maritime museum."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Kesklinn",
+          "description": "Quartiere di Tallinn."
+        },
+        {
+          "name": "Haabersti",
+          "description": "Quartiere di Tallinn."
+        },
+        {
+          "name": "Pirita",
+          "description": "Quartiere di Tallinn."
+        }
+      ]
+    },
+    "description": "The digital capital of Europe, where every service is within a click and safety is guaranteed by advanced technologies. Its medieval center is perfectly preserved within a high-tech ecosystem.",
+    "wiki_intro": {
+      "b": [
+        "Tallinn",
+        "Tallinn",
+        "Tallinn",
+        "Tallinn",
+        "Tallinn",
+        "Tallinn",
+        "Tallinn",
+        "Tallinn",
+        "Tallinn",
+        "Tallinn",
+        "Tallinn"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Estonia",
+          "#text": "Estonia"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/North_Estonia",
+          "#text": "Northern Estonia"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Soviet_Union",
+          "#text": "Soviet era"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/tallinn.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "59.4358937",
+          "@lon": "24.747503",
+          "@category": "bar",
+          "name": "Baila"
+        },
+        {
+          "@lat": "59.408641",
+          "@lon": "24.6746628",
+          "@category": "bar",
+          "name": "Black Mount Pubi"
+        },
+        {
+          "@lat": "59.4388359",
+          "@lon": "24.7439968",
+          "@category": "bar",
+          "name": "Borsi"
+        },
+        {
+          "@lat": "59.4376116",
+          "@lon": "24.7518225",
+          "@category": "bar",
+          "name": "Butterfly Lounge"
+        },
+        {
+          "@lat": "59.4351515",
+          "@lon": "24.7455099",
+          "@category": "nightclub",
+          "name": "Club Hollywood"
+        },
+        {
+          "@lat": "59.4354098",
+          "@lon": "24.7474924",
+          "@category": "nightclub",
+          "name": "Club Münt"
+        },
+        {
+          "@lat": "59.4352764",
+          "@lon": "24.7323042",
+          "@category": "bar",
+          "name": "Cubano Baar"
+        },
+        {
+          "@lat": "59.4375887",
+          "@lon": "24.744038",
+          "@category": "pub",
+          "name": "DM Baar"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "city_report": {
+    "@appeal_score": "70.6",
+    "@currency": "ISK",
+    "@region": "northern",
+    "metadata": {
+      "title": "Reykjavik",
+      "name_it": "Reykjavík",
+      "flag": "🇮🇸",
+      "source_url": "https://en.wikivoyage.org/wiki/Reykjavik"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "161.88",
+      "safety": {
+        "@index_score": "82.3"
+      },
+      "environment": {
+        "@green_score": "88"
+      },
+      "cost_index": {
+        "@value": "87.5"
+      },
+      "economic_accessibility": {
+        "@score": "12.5"
+      }
+    },
+    "transport": "Public transport information unavailable.",
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "64.1417",
+          "@lon": "-21.9267",
+          "name": "Hallgrimskirkja",
+          "description": "Iconic Lutheran church inspired by basalt columns."
+        },
+        {
+          "@lat": "64.1503",
+          "@lon": "-21.9328",
+          "name": "Harpa",
+          "description": "Modern concert hall and conference center."
+        },
+        {
+          "@lat": "64.1475",
+          "@lon": "-21.9222",
+          "name": "Sun Voyager",
+          "description": "Steel sculpture of a boat located on the waterfront."
+        },
+        {
+          "@lat": "64.1294",
+          "@lon": "-21.9189",
+          "name": "Perlan",
+          "description": "Landmark building with a museum and revolving restaurant."
+        },
+        {
+          "@lat": "64.1456",
+          "@lon": "-21.9286",
+          "name": "Laugavegur",
+          "description": "The main shopping and nightlife street of Reykjavik."
+        },
+        {
+          "@lat": "64.1419",
+          "@lon": "-21.9481",
+          "name": "National Museum",
+          "description": "Museum showcasing Iceland's history from the settlement."
+        },
+        {
+          "@lat": "64.1444",
+          "@lon": "-21.9392",
+          "name": "Tjörnin Lake",
+          "description": "Quiet lake in the city center popular for bird watching."
+        },
+        {
+          "@lat": "64.1472",
+          "@lon": "-21.9422",
+          "name": "Settlement Exhibition",
+          "description": "Museum based on a 10th-century Viking longhouse."
+        },
+        {
+          "@lat": "63.8804",
+          "@lon": "-22.4495",
+          "name": "Blue Lagoon (Bus)",
+          "description": "Geothermal spa (reached by bus from the capital)."
+        },
+        {
+          "@lat": "64.1644",
+          "@lon": "-21.8953",
+          "name": "Imagine Peace Tower",
+          "description": "Memorial to John Lennon on Viðey Island."
+        }
+      ]
+    },
+    "description": {
+      "b": "Reykjavik",
+      "#text": "The northernmost capital in the world is a laboratory of geothermal energy and absolute safety. Small and clean,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Reykjavík",
+        "Reykjavik",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík",
+        "Reykjavík"
+      ],
+      "link": {
+        "@href": "https://en.wikivoyage.org/wiki/Iceland",
+        "#text": "Iceland"
+      }
+    },
+    "landmark_image": "assets/images/reykjavik.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "64.1476951",
+          "@lon": "-21.940116",
+          "@category": "pub",
+          "name": "American Bar"
+        },
+        {
+          "@lat": "64.1287706",
+          "@lon": "-21.8660783",
+          "@category": "pub",
+          "name": "Billiardbarinn"
+        },
+        {
+          "@lat": "64.1486444",
+          "@lon": "-21.9398559",
+          "@category": "pub",
+          "name": "Bird"
+        },
+        {
+          "@lat": "64.1052642",
+          "@lon": "-21.8150646",
+          "@category": "bar",
+          "name": "Café Bar 8"
+        },
+        {
+          "@lat": "64.1126745",
+          "@lon": "-21.9022563",
+          "@category": "pub",
+          "name": "Catalina"
+        },
+        {
+          "@lat": "64.1388421",
+          "@lon": "-21.885631",
+          "@category": "pub",
+          "name": "Classik Rock"
+        },
+        {
+          "@lat": "64.1487969",
+          "@lon": "-21.9404036",
+          "@category": "pub",
+          "name": "Crystal Champagne Bar"
+        },
+        {
+          "@lat": "64.1463823",
+          "@lon": "-21.9336621",
+          "@category": "pub",
+          "name": "Den Danske Kro"
+        }
+      ]
+    }
+  }
+}

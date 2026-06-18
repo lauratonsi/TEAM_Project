@@ -1,0 +1,210 @@
+{
+  "city_report": {
+    "@appeal_score": "69.3",
+    "@currency": "PLN",
+    "@region": "eastern",
+    "metadata": {
+      "title": "Warsaw",
+      "name_it": "Varsavia",
+      "flag": "🇵🇱",
+      "source_url": "https://en.wikivoyage.org/wiki/Warsaw"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "98.42",
+      "safety": {
+        "@index_score": "74.8"
+      },
+      "environment": {
+        "@green_score": "75"
+      },
+      "cost_index": {
+        "@value": "53.2"
+      },
+      "economic_accessibility": {
+        "@score": "46.8"
+      }
+    },
+    "transport": {
+      "b": [
+        "Warsaw",
+        "Warsaw"
+      ],
+      "#text": "Regular"
+    },
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "52.2479",
+          "@lon": "21.0144",
+          "name": "Royal Castle",
+          "description": "Reconstructed castle and former royal residence."
+        },
+        {
+          "@lat": "52.2497",
+          "@lon": "21.0122",
+          "name": "Old Town Market",
+          "description": "The historical heart and oldest part of Warsaw."
+        },
+        {
+          "@lat": "52.2153",
+          "@lon": "21.0347",
+          "name": "Lazienki Park",
+          "description": "Largest park with a palace on the water."
+        },
+        {
+          "@lat": "52.2317",
+          "@lon": "21.0061",
+          "name": "Palace of Culture",
+          "description": "Iconic socialist-realist skyscraper and city landmark."
+        },
+        {
+          "@lat": "52.1642",
+          "@lon": "21.0894",
+          "name": "Wilanow Palace",
+          "description": "Baroque royal palace survived the wars."
+        },
+        {
+          "@lat": "52.2325",
+          "@lon": "20.9808",
+          "name": "Uprising Museum",
+          "description": "Museum dedicated to the Warsaw Uprising of 1944."
+        },
+        {
+          "@lat": "52.2444",
+          "@lon": "21.025",
+          "name": "Vistula Boulevards",
+          "description": "Modern riverside promenade with bars and views."
+        },
+        {
+          "@lat": "52.2494",
+          "@lon": "20.9931",
+          "name": "POLIN Museum",
+          "description": "Museum of the History of Polish Jews."
+        },
+        {
+          "@lat": "52.2369",
+          "@lon": "21.0089",
+          "name": "Saxon Garden",
+          "description": "Oldest public park in the city."
+        },
+        {
+          "@lat": "52.25",
+          "@lon": "21.0333",
+          "name": "Praga District",
+          "description": "Artistic district on the right bank of the Vistula."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Old and New Town",
+          "description": "Quartiere di Varsavia."
+        },
+        {
+          "name": "Śródmieście",
+          "description": "Quartiere di Varsavia."
+        },
+        {
+          "name": "Western Centre",
+          "description": "Quartiere di Varsavia."
+        },
+        {
+          "name": "Praga",
+          "description": "Quartiere di Varsavia."
+        },
+        {
+          "name": "South",
+          "description": "Quartiere di Varsavia."
+        }
+      ]
+    },
+    "description": {
+      "b": "Warsaw",
+      "#text": "An extraordinary example of reconstruction and resilience,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Warsaw",
+        "Warsaw",
+        "Warsaw",
+        "Warsaw",
+        "Warsaw",
+        "Warsaw",
+        "Warsaw",
+        "Warsaw",
+        "Warsaw",
+        "Warsaw"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Polish_phrasebook",
+          "#text": "Polish"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Poland",
+          "#text": "Poland"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Rotterdam",
+          "#text": "Rotterdam"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/warsaw.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "52.2071732",
+          "@lon": "20.9724513",
+          "@category": "pub",
+          "name": "Amarant"
+        },
+        {
+          "@lat": "52.2294067",
+          "@lon": "21.0147013",
+          "@category": "bar",
+          "name": "Azyl"
+        },
+        {
+          "@lat": "52.2480169",
+          "@lon": "21.0455613",
+          "@category": "pub",
+          "name": "Bar pod Kufelkiem"
+        },
+        {
+          "@lat": "52.2247707",
+          "@lon": "21.0122492",
+          "@category": "bar",
+          "name": "Beirut"
+        },
+        {
+          "@lat": "52.1737627",
+          "@lon": "21.0450075",
+          "@category": "pub",
+          "name": "Bez Słowa"
+        },
+        {
+          "@lat": "52.2400168",
+          "@lon": "21.0765039",
+          "@category": "bar",
+          "name": "Bluesky"
+        },
+        {
+          "@lat": "52.2334668",
+          "@lon": "21.0202035",
+          "@category": "pub",
+          "name": "Cafe Foksal"
+        },
+        {
+          "@lat": "52.2178857",
+          "@lon": "21.0170602",
+          "@category": "pub",
+          "name": "Cafe Rock'n'Roll"
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import os, json, re, html, glob, hashlib
+import os, json, re, html, glob, hashlib, csv
 from pathlib import Path
 from lxml import etree
 
@@ -57,8 +57,42 @@ def inline_to_html(el):
     return "".join(parts)
 
 
+def xml_to_dict(el):
+    """Converte un elemento lxml in dict secondo la convenzione *xmltodict*
+    (slide "XML vs. JSON": attributi → "@nome", testo → "#text", figli ripetuti →
+    lista). Serve a produrre il download JSON di ogni città a partire dal documento.
+
+    NB didattica: per i campi a *content-model misto* (transport/description/
+    wiki_intro) la conversione è LOSSY — si conserva solo el.text (il testo prima
+    del primo figlio inline) mentre i *tail* tra i <b>/<i>/<link> si perdono. È
+    l'esatto avvertimento delle slide: «le conversioni da formati per documenti
+    (semi-strutturati) a formati per dati (strutturati) non sempre sono accurate»."""
+    node = {}
+    for k, v in el.attrib.items():
+        node['@' + k] = v
+    for child in el:
+        tag = etree.QName(child).localname
+        cd = xml_to_dict(child)
+        if tag in node:
+            if not isinstance(node[tag], list):
+                node[tag] = [node[tag]]
+            node[tag].append(cd)
+        else:
+            node[tag] = cd
+    text = (el.text or '').strip()
+    if node:
+        if text:
+            node['#text'] = text
+        return node
+    return text
+
+
 # --- CONFIGURAZIONE ---
-XML_DIR = str(ROOT / 'data' / 'xml_dataset')
+# Directory di input: i documenti XML validati che la pipeline trasforma in HTML.
+# In UNA variabile, sovrascrivibile da ambiente (TEAM_XML_DIR) — cfr. slide input.
+XML_DIR = os.environ.get('TEAM_XML_DIR', str(ROOT / 'data' / 'xml_dataset'))
+JSON_DIR = str(ROOT / 'data' / 'json_dataset')        # download JSON per città
+CSV_DATASET = str(ROOT / 'data' / 'dataset_cities.csv')  # export tabellare aggregato
 OUTPUT_HTML = str(ROOT / 'index.html')
 REPORT_HTML = str(ROOT / 'pages' / 'report.html')
 MAP_FILE = str(ROOT / 'pages' / 'mappa_attrazioni.html')
@@ -770,6 +804,7 @@ def deploy():
                 'safety': root.xpath("string(.//safety/@index_score)") or "0",
                 'green': root.xpath("string(.//environment/@green_score)") or "0",
                 'hotel_count': root.findtext(".//hotel_count", "0"),
+                'cost_index': root.xpath("string(.//cost_index/@value)") or "0",
                 'economy': root.xpath("string(.//economic_accessibility/@score)") or "0",
                 # Mixed-content fields: serialise inline markup (b/i/link) to HTML
                 'transport': inline_to_html(root.find("transport")) or "Transport data unavailable.",
@@ -795,6 +830,12 @@ def deploy():
             city_obj['name_it_badge'] = '' if _ne == _ni else (
                 f' <span style="opacity:.7;font-weight:400">· {_ni}</span>')
             city_data.append(city_obj)
+
+            # --- Download JSON per città (convenzione xmltodict, dal documento XML) ---
+            os.makedirs(JSON_DIR, exist_ok=True)
+            with open(os.path.join(JSON_DIR, f"{city_lower}.json"), 'w', encoding='utf-8') as jf:
+                json.dump({'city_report': xml_to_dict(root)}, jf,
+                          ensure_ascii=False, indent=2)
 
             # Card compatta per index: solo immagine + stats + CTA
             img_src = city_obj.get('landmark_image', '')
@@ -864,6 +905,24 @@ def deploy():
     print(f"📋 Validazione DTD: {validation['valid']} validi, "
           f"{validation['invalid']} non validi, {validation['malformed']} malformati "
           f"(su {len(files)} file)")
+
+    # --- Export tabellare aggregato (CSV): una riga per capitale con gli indicatori
+    # strutturati. Formato "dati strutturati" complementare al JSON per-città; comodo
+    # per fogli di calcolo. I valori derivano dai documenti XML appena letti. ---
+    with open(CSV_DATASET, 'w', encoding='utf-8', newline='') as cf:
+        w = csv.writer(cf)
+        w.writerow(['name_en', 'name_it', 'region', 'currency', 'appeal_score',
+                    'safety_index', 'green_score', 'cost_index', 'economic_accessibility',
+                    'hotel_count', 'hotel_price_eur', 'attractions', 'districts',
+                    'venues', 'source_url'])
+        for c in sorted(city_data, key=lambda x: x['name_en'] or ''):
+            w.writerow([c['name_en'], c['name_it'], c['region'], c['currency'] or 'EUR',
+                        c['appeal'], c['safety'], c['green'],
+                        c['cost_index'], c['economy'], c['hotel_count'], c['price'],
+                        len(c['attractions']), len(c['districts']),
+                        len(c['nightlife']), c['uri']])
+    print(f"🧾 Export: {len(city_data)} righe → {os.path.relpath(CSV_DATASET, ROOT)} + "
+          f"{len(city_data)} file JSON in {os.path.relpath(JSON_DIR, ROOT)}/")
 
     # Mappa inline: pre-calcolata fuori dall'f-string per evitare conflitti {}
     inline_map_js = _map_js_block(city_data, 'map-inline', 'pages/cities/')
@@ -1535,6 +1594,7 @@ def generate_city_pages(city_data):
         <div class="download-block">
             <p class="download-note">Structured data source (DTD-validated XML — <code>city_report.dtd</code>):</p>
             <a href="../../data/xml_dataset/{cl}.xml" download class="download-link">📥 Download XML source</a>
+            <a href="../../data/json_dataset/{cl}.json" download class="download-link">📥 Download JSON</a>
             <p class="download-uri-note">Canonical URI (element <code>&lt;source_url&gt;</code>, also used as <code>itemid</code> microdata):</p>
             <a href="{city['uri']}" itemprop="url" target="_blank" rel="noopener" class="source-link">🔗 {city['uri'].replace('https://', '').replace('http://', '')}</a>
         </div>
@@ -1974,6 +2034,15 @@ def generate_report(city_data, validation):
     {summary_cards}
   </div>
 
+  <div class="download-block" style="margin:18px 0;">
+    <p class="download-note">Scarica il dataset in formati alternativi all'XML (generati dalla pipeline dai documenti validati):</p>
+    <a href="../data/dataset_cities.csv" download class="download-link">📥 Dataset completo (CSV — 30 capitali)</a>
+    <p class="download-uri-note" style="margin-top:8px;">Ogni scheda città offre anche il download <b>JSON</b> del singolo documento
+    (convenzione <code>xmltodict</code>: <code>@attr</code> / <code>#text</code>). Nota: la conversione XML→JSON dei campi a
+    <b>content-model misto</b> (<code>wiki_intro</code>, <code>transport</code>, <code>description</code>) è <b>lossy</b> — come
+    avvertono le slide del corso, i formati per dati strutturati non catturano fedelmente testo + markup inline.</p>
+  </div>
+
   <h3 style="margin:6px 0 6px;">🔍 Da dove viene ogni numero — provenienza degli indicatori</h3>
   <p style="font-size:0.9rem; color:var(--slate-500); margin:0 0 14px;">
     In ogni XML confluiscono due famiglie di dati: i <b>contenuti testuali</b> estratti
@@ -2141,7 +2210,10 @@ def generate_report(city_data, validation):
           pulisce il Wikitext con regex, estrae distretti con descrizioni dalle sotto-pagine, e
           costruisce l'albero XML. I campi <code>transport</code>, <code>description</code> e
           <code>wiki_intro</code> sono generati come <b>content-model misto</b> (testo + markup
-          inline <code>&lt;b&gt;/&lt;i&gt;/&lt;link&gt;</code>); ogni documento riceve l'URI
+          inline <code>&lt;b&gt;/&lt;i&gt;/&lt;link&gt;</code>): gli <b>iperlink sono reali</b>,
+          presi dai wikilink del sorgente Wikivoyage e preservati come
+          <code>&lt;link href&gt;</code> (interni risolti su <code>en.wikivoyage.org</code>, max 3
+          per campo) — 79 elementi link su 29/30 città. Ogni documento riceve l'URI
           canonico <code>&lt;source_url&gt;</code>. L'albero viene <b>validato</b> rispetto al DTD
           con <b>lxml.etree.DTD</b> prima della scrittura in <code>data/xml_dataset/</code>.
         </p>
@@ -2183,7 +2255,7 @@ def generate_report(city_data, validation):
         <h3 style="margin:0;"><a href="{GH}/tree/main/rag" target="_blank" style="color:inherit;text-decoration:none;"><code>rag/</code></a> — Sistema RAG per query in linguaggio naturale</h3>
         <p>
           Modulo indipendente (<code>ingest.py</code> + <code>vectorstore.py</code> + <code>api.py</code>):
-          indicizza i 30 XML in <b>336 chunk</b> su un indice <b>FAISS</b> + <b>BM25Okapi</b> con
+          indicizza i 30 XML in <b>452 chunk</b> su un indice <b>FAISS</b> + <b>BM25Okapi</b> con
           <b>Reciprocal Rank Fusion</b>, e applica un <b>pre-filtro per metadati</b> (regione / valuta /
           categoria / soglie) prima della ricerca semantica. Documentazione completa nella sezione dedicata
           <a href="#rag">🔎 Virtual Analyst (RAG)</a>.
@@ -2723,6 +2795,16 @@ for filename in files:                                  # scorre la directory XM
     <li>raggio dei punti-attrazione aumentato per un'area di tocco più comoda.</li>
   </ul>
 
+  <h3>7. Contrasto del colore (WCAG AA)</h3>
+  <p style="font-size:0.9rem">
+    Un controllo del contrasto ha rilevato un link sotto la soglia AA per testo piccolo
+    (<b>4.5:1</b>): il link <i>Report &amp; Documentation</i> nel footer usava l'accent
+    <code>#E74C3C</code> su sfondo chiaro (<b>3.82:1</b>). È stato portato all'accent scuro
+    <code>#C0392B</code> (<b>5.44:1</b>, conforme AA). La barra di navigazione superiore, pur
+    avendo testo chiaro, è invece su sfondo <b>scuro</b> <code>#0B1524</code> (<b>10.48:1</b>):
+    già ampiamente conforme.
+  </p>
+
   <h3>7. Albero di accessibilità — <code>index.html</code></h3>
   <p style="font-size:0.9rem">
     È la struttura che uno screen reader «vede»: solo <b>ruoli</b> e <b>nomi accessibili</b>, non lo
@@ -2911,7 +2993,7 @@ btns.forEach(function(btn){{
 
   <h3 style="margin-top:24px;color:var(--slate-500)">Dettagli tecnici (approfondimento)</h3>
   <p style="font-size:0.9rem">Le sezioni precedenti bastano per capire il sistema; qui sotto il "sotto il cofano".</p>
-  <pre>data/xml_dataset/*.xml  &rarr;  rag/ingest.py  &rarr;  rag_index/  (index.faiss 384-dim &middot; docs.json 336 chunk + meta)
+  <pre>data/xml_dataset/*.xml  &rarr;  rag/ingest.py  &rarr;  rag_index/  (index.faiss 384-dim &middot; docs.json 452 chunk + meta)
                                               &darr;
                        rag/vectorstore.py   FAISS + BM25Okapi &rarr; Reciprocal Rank Fusion + pre-filtro metadati
                                               &darr;

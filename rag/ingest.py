@@ -45,6 +45,17 @@ def chunk_text(text, max_chars=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     return chunks
 
 
+def full_text(el):
+    """Testo COMPLETO di un elemento a content-model misto: concatena il testo e i
+    *tail* di tutti i nodi (`itertext`). Necessario perché `findtext()` restituisce
+    solo `el.text` — il testo PRIMA del primo figlio inline — e quindi, su campi come
+    `wiki_intro` (che inizia con `<b>Città</b>`), tornerebbe vuoto perdendo tutto il
+    contenuto. Gli attributi (es. `link/@href`) non entrano: solo testo leggibile."""
+    if el is None:
+        return ''
+    return ''.join(el.itertext())
+
+
 def build_embeddings_and_index(model_name='all-MiniLM-L6-v2'):
     if not XML_DIR.exists():
         raise FileNotFoundError(f'XML directory not found: {XML_DIR}')
@@ -101,8 +112,8 @@ def build_embeddings_and_index(model_name='all-MiniLM-L6-v2'):
                     doc.update(extra)
                 docs.append(doc)
 
-        # Transport
-        add(root.findtext('transport'), 'transport')
+        # Transport (content-model misto → full_text, non findtext)
+        add(full_text(root.find('transport')), 'transport')
 
         # Hotels
         hotels = root.xpath('.//accommodation/hotel')
@@ -121,11 +132,11 @@ def build_embeddings_and_index(model_name='all-MiniLM-L6-v2'):
             if name:
                 add(f'Quartiere {name}: {desc}', 'districts')
 
-        # Strategic description (Italian summary)
-        add(root.findtext('description'), 'description')
+        # Strategic description (Italian summary, content-model misto → full_text)
+        add(full_text(root.find('description')), 'description')
 
-        # Wiki intro (often long — will be chunked)
-        add(root.findtext('wiki_intro'), 'wiki_intro')
+        # Wiki intro (content-model misto, spesso lungo → full_text + chunking)
+        add(full_text(root.find('wiki_intro')), 'wiki_intro')
 
         # Attractions
         attractions = root.xpath('.//highlights/attraction')

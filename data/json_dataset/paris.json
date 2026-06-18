@@ -1,0 +1,199 @@
+{
+  "city_report": {
+    "@appeal_score": "46.1",
+    "@region": "western",
+    "metadata": {
+      "title": "Paris",
+      "name_it": "Parigi",
+      "flag": "🇫🇷",
+      "source_url": "https://en.wikivoyage.org/wiki/Paris"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "156.7",
+      "safety": {
+        "@index_score": "42.5"
+      },
+      "environment": {
+        "@green_score": "65"
+      },
+      "cost_index": {
+        "@value": "84.7"
+      },
+      "economic_accessibility": {
+        "@score": "15.3"
+      }
+    },
+    "transport": "From CDG Airport: RER B to Gare du Nord (35 min) or RoissyBus to Opéra (75 min). Within the city: metro (16 lines), buses and RER cover the entire metropolitan area. (Source: AI-generated — transport data absent from Wikivoyage dump.)",
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "48.8584",
+          "@lon": "2.2945",
+          "name": "Eiffel Tower",
+          "description": "Global icon of France and landmark of Paris."
+        },
+        {
+          "@lat": "48.8606",
+          "@lon": "2.3376",
+          "name": "Louvre Museum",
+          "description": "The world's largest art museum."
+        },
+        {
+          "@lat": "48.853",
+          "@lon": "2.3499",
+          "name": "Notre-Dame",
+          "description": "Iconic Gothic cathedral on the île de la Cité."
+        },
+        {
+          "@lat": "48.8738",
+          "@lon": "2.295",
+          "name": "Arc de Triomphe",
+          "description": "Monument honoring those who fought for France."
+        },
+        {
+          "@lat": "48.8867",
+          "@lon": "2.3431",
+          "name": "Sacre-Coeur",
+          "description": "White basilica on the summit of Montmartre."
+        },
+        {
+          "@lat": "48.8599",
+          "@lon": "2.3265",
+          "name": "Musée d'Orsay",
+          "description": "Museum in a former station with Impressionist art."
+        },
+        {
+          "@lat": "48.8462",
+          "@lon": "2.3449",
+          "name": "Panthéon",
+          "description": "Secular mausoleum for distinguished French citizens."
+        },
+        {
+          "@lat": "48.8606",
+          "@lon": "2.3522",
+          "name": "Centre Pompidou",
+          "description": "High-tech building housing a major modern art museum."
+        },
+        {
+          "@lat": "48.8554",
+          "@lon": "2.345",
+          "name": "Sainte-Chapelle",
+          "description": "Gothic chapel with spectacular stained glass."
+        },
+        {
+          "@lat": "48.8633",
+          "@lon": "2.3272",
+          "name": "Tuileries Garden",
+          "description": "Public garden between the Louvre and Place de la Concorde."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "10th arrondissement",
+          "description": "The 10th arrondissement of Paris centres on the Canal Saint Martin and the restaurants and cafés which line its banks. Part sleepy faubourg — as suburbs were called in 18th century Paris — and part industrial centre, the 10th arrondissement has lately enjoyed the benefits of both the booming nightlife scene in the neighbouring 11th, as well as the Parisian cycling and roller-blading boom. The streets lining the canal become car-free for the later half of the day each Saturday, and all day on Sundays for your cycling and strolling pleasure. There is another, more bustling side to the cosmopolitan 10th, however, as it is the location of two primary entry / exit points for the city, in the form of the two great train stations Gare du Nord and Gare de l'Est. One final focus to the 10th is the historic Place de la République in the far south of the arrondissement, its many bars, restaurants and cafés. As it is everywhere in Paris all metro stations are not equal. Stations such as Place de la Republique connect to many lines but can be time consuming for a first time visitor. A smaller station such as Goncourt is easier to get in and out of. You may walk a bit more on the street but that's easy and a lot more fun. * \n*  The Boulevard de Strasbourg, between Place de la République and Gare de l'Est, is known for supporting the coiffure or hairdressing trade, with dozens of shops selling hairdressing equipment and supplies. Interestingly the African hairdressers of Paris have set up shop right alongside their suppliers. So if you're interested you can have your hair done up in dreadlocks, pearly braids or another African style and can have your nails done too! Meanwhile rue de Marseille has a number of trendy clothing shops. Another good spot to explore the slightly dilapidated Passage Brady. It's full of Indian and Pakistani restaurants, for which it's sometimes called \"le Petit Bombay\". Stop in at the Bazaar Velan for incense, spices, and kitsch souvenirs. For South Asian expats missing products from home, the stretch of Rue du Faubourg Saint-Denis between Gare du Nord and La Chapelle metro station is home to several Asian grocers, clothes/jewellery shops, Bollywood DVD shops and even a mithai (Indian confectionary) shop. VS.CO Cash and Carry has the largest range of food products from India, although it can also get very congested. * \n*\n*  *\n*\n*\n* \n* \n*\n*  There are lots of Indian restaurants (very often owned by Pakistanis) in rue du Faubourg Saint Denis, between rue du Château d'Eau & rue de la Fidélité (Métro Château d'Eau). They offer cheap, tasty vegetarian and tandoori food that is typically €5. In Passage Brady (between boulevard de Strasbourg and rue du faubourg Saint Denis) Shalimar is a good choice for a great night out. In the same rue du Faubourg Saint Denis but higher up, between Gare du Nord & boulevard de la Chapelle (Métro Gare du Nord or La Chapelle), try out some Tamil food & Pondicherry specialities."
+        },
+        {
+          "name": "11th arrondissement",
+          "description": "The 11th Arrondissement is home to two quite different but equally blossoming centres of Parisian nightlife. The streets just northwest of Place de la Bastille are full of little bars which attract a mix of young suburban Parisians, expats, and foreigners. Many have a Latin American theme. The restaurants, bars, and wine-bars around Rue Oberkampf in the north of the 11th and rue de Charonne near Avenue Ledru Rollin attract a more urban crowd and are perhaps closer to something traditionally Parisian, while capturing some of the grungy feel of drinking spots in up-and-coming inner city neighbourhoods everywhere. In the 18th and 19th centuries, the 11th Arrondissement of Paris was an industrial area of factories and homes of factory workers. There was never an intent to build monuments other than local churches. Thus, there are few special places to see or unusual things to do. It was not until the mid-2000s that young Parisians began to move into the 11th because apartments were less expensive there than in other Parisian areas. With this influx, restaurants and bars proliferated in two areas, along and to the north of rue de la Roquette and around rue Oberkampf. With its history, the 11th is a place to eat and drink. Within the 11th are several boutique hotels, restaurants and bars set in former factories. As of 2015, the 11th arrondissement had about 150,000 residents, that is, 41,000 residents/km2, making it the most densely populated of all arrondissements of Paris (the next densest were the 18th and 20th, with about 33,000/km²) and of all the urban districts in Europe. Because of the population density, public transportation is widely available. Like each Paris arrondissement, the 11th is divided into administrative quartiers. # Quartier de la Folie-Méricourt with the north border of la rue du Faubourg-du-Temple, to the east by le boulevard de Belleville, to the west by blvd du Temple and the south by rue Oberkampf. This quartier is quite lively with many restaurants and bars frequented by young and upscale customers. It is known as a BoBo quartier (bourgeois, bohemian), or a hipster neighborhood. That is, those who support bohemian values but lead bourgeois lives.\n# Quartier Saint-Ambroise bordered to the north by rue Oberkampf, to the east by blvd Ménilmontant, west by blvd des Filles-du-Calvaire and part of blvd Beaumarchais plus to the south by rue du Chemin-Vert. This quartier is rather calm and residential.\n# Quartier de la Roquette has a border to the north of rue du Chemin-Vert, to the east by blvd Ménilmontant and a part of blvd Charonne, to the west by a part of blvd Beaumarchais and Place de la Bastille and part of rue du Faubourg-Saint-Antoine. Many bars and restaurants can be found along rue de la Roquette that attract a young crowd.\n# Quartier Sainte-Marguerite is bordered to the north and west by rue de Charonne, to the east by blvd Charonne, and the south by rue du Faubourg-Saint-Antoine."
+        },
+        {
+          "name": "12th arrondissement",
+          "description": "The 12th arrondissement of Paris is one of the largest of the city's districts even without the 2,460 acre Bois de Vincennes, which more than doubles its size. Gare de Lyon in the 12th will likely be your arrival point if you are coming from Switzerland, Italy, or the south of France. Métro, line 14, serves Gare de Lyon and Gare de Bercy. Line 1 crosses the arrondissement east-west serving Bastille, Gare de Lyon, Reuilly-Diderot, Nation, and Porte de Vincennes. Line 8 crosses the arrondissement east-west serving Bastille, Ledru-Rollin, Faidherbe-Chaligny, Reuilly-Diderot, Montgallet, Daumesnil, Michel Bizot, Porte Dorée, and Porte de Charenton. Line 6 arrives from the left bank, serving Bercy, Dugommier, Daumesnil, Bel-Air, and Picpus. The RER-A passes east-west through the 12th serving Gare de Lyon and Nation. * \n* \n* \n* \n*  * \n* \n*\n*  * \n* \n*  There are any number of shops catering to the needs of travellers in and around Gare de Lyon, where you can easily replace a piece of broken luggage or even buy a suit if you suddenly find yourself with a business appointment. The archways of the former railroad right-of-way which now support the promenade plantée are home to trendy restaurants, designer's studios, and art galleries. Taken as a whole it's known as the Viaduc des Arts, and is well worth a stroll for those interested in art and design. Another shopping highlight of the 12th is the amazing number of electronics and computer shops, mostly clustered around rue Charenton near the Jardin de Reuilly, as one would expect the intense competition keeps prices low (for Europe).\n* \n* \n* \n* During the spring time there is a carnival called the Foire du trône held in the Bois de Vincennes * \n* \n* \n* *\n* The Bastille area is quite well known for its many bars and clubs. Among them the Barrio Latino, a large Latin music nightclub on the Rue du Faubourg Saint Antoine. Ground Control (81 rue du Charolais) is also a nice collection of bars and street food stands based in a converted old rail depot.\n*  * * \n* \n* \n* \n* \n* \n*  * \n* \n* \n*  * \n*  *"
+        },
+        {
+          "name": "13th arrondissement",
+          "description": "The 13th arrondissement of Paris is primarily a residential and business district in the southeast of Paris, on the Left Bank of the Seine. Although not usually recognised as a natural magnet for tourists, the 13th nonetheless does hold several attractions of interest to the traveller that include the Bibliothèque Nationale de France (national library), completed in 1996, and part of a major new development of the Paris rive gauche district, the second large-scale urbanism project inside the city of Paris. To the west of the PRG, along avenue de Tolbiac is the first of these urbanism projects, Les Olympiades, with its raised esplanade and the latest of the Paris Meteor (high-speed metro) stops, Les Olympiades. The southern part of the arrondissement is the Chinatown of Paris, perhaps the biggest in Europe. The easy walk to the 13th arrondissement from the centre of Paris (Île de la Cité) takes around 40 minutes, either through back streets or along the Seine promenade. It can be a very pleasant walk: you can walk across the Latin Quarter, for example, through the rue Mouffetard in the Paris/5th arrondissement. You can get to the 13th arrondissement using 3 metro lines:\n* Line serves Gobelins near the Manufacture des Gobelins, Place d'Italie, Tolbiac (good entrance point for Chinatown), Maison-Blanche, and Porte d'Italie, Porte de Choisy and Porte d'Ivry. You will get to these three stations only if you take a train that goes in the Mairie d'Ivry direction. Other trains take another direction and leave Paris immediately after Maison-Blanche.\n* Line serves Glacière, Corvisart, Place_d'Italie, Nationale, Chevaleret, near the avant-garde art galleries of rue Louise-Weiss, and Quai de la Gare, near the Bat-O-Far and other .\n* Line serves Bibliothèque François-Mitterrand (near the new Bibliothèque de France), Olympiades, Maison-Blanche, before heading to Orly Airport starting in June of 2024. *Line 27: Orange in colour\n*Line 47: Pink in colour\n*Line 61: Dark green in colour\n*Line 62: Brown in colour.\n*Line 64: goes from Gambetta to Place d'Italie. Turquoise/light green in colour\n*Line 67: Pink in colour\n*Line 83: Dark yellow in colour All of these lines stop at Place d'Italie. * Line 89: Light blue in colour.\n* Line 325: Light blue in colour. Heads to Château de Vincennes via the suburbs. *  * \n* \n* \n* \n*  Stroll across the Seine on the Pont Simone de Beauvoir pedestrian bridge from the Bibliotheque Nationale to the Parc de Bercy (in the 12th arrondissement). *  The south part of the district, in the high-rise Chinatown area, is the good place to go if you like Chinese or Vietnamese food. Many outlets sell Vietnamese sandwiches. The area is not the best for getting cheap, good quality Chinese food. Elsewhere the 13th has some standouts. * \n* \n* \n* \n* \n* \n*  * \n*\n*  All of the following hotels are near Place d'Italie, where public transportation is excellent.\n* \n* \n* \n* \n*  * \n* \n* \n* \n* \n*  *"
+        },
+        {
+          "name": "14th arrondissement",
+          "description": "Although largely residential, the 14th arrondissement is best known for its northeastern quartier Montparnasse, for the Paris Catacombs and the Parc Montsouris. The Cité Universitaire is also found in this district traditionally known for lively cafés and restaurants around the Boulevard du Montparnasse and the rue Daguerre. The Tour Montparnasse and Gare Montparnasse are in the 15th arrondissement, but they are described here for consistency. The station makes for a good entry point. Adjacent to the RER railway station there is a namesake metro station. , is in the north-east corner of the 15th arrondissement, just north of the 14th, and is a terminus for TGV and regular trains from the west and south-west of France: Tours, Brest, Rennes, Nantes, Bordeaux, Toulouse, Hendaye. Métro: Montparnasse-Bienvenüe. Gare Vaugirard is an extension of Gare Montparnasse. * \n* \n*\n*\n*\n*\n* \n*\n*\n*\n*  There are a number of cheap eateries around Montparnasse, especially Breton crêperies. The district is also known for its traditional bistros. *\n* * \n*\n*\n*\n*\n* \n*\n*\n*\n* \n*  * *\n*\n* \n*\n*  * \n*"
+        }
+      ]
+    },
+    "description": "The City of Light is revolutionizing its internal mobility by replacing cars with bike lanes and hanging gardens. It remains the undisputed capital of luxury and cultural tourism with very high hospitality standards.",
+    "wiki_intro": {
+      "b": [
+        "Paris",
+        "Paris",
+        "Paris",
+        "Paris",
+        "Paris",
+        "Paris",
+        "Paris",
+        "Paris",
+        "Paris"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/France",
+          "#text": "France"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/UNESCO_World_Heritage_List",
+          "#text": "UNESCO World Heritage Site"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Tokyo",
+          "#text": "Tokyo"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/paris.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "48.883838",
+          "@lon": "2.3707362",
+          "@category": "bar",
+          "name": "25° Est"
+        },
+        {
+          "@lat": "48.8632455",
+          "@lon": "2.3860891",
+          "@category": "pub",
+          "name": "Atelier 103"
+        },
+        {
+          "@lat": "48.8687856",
+          "@lon": "2.3275106",
+          "@category": "bar",
+          "name": "Bar Hemingway"
+        },
+        {
+          "@lat": "48.861504",
+          "@lon": "2.3575623",
+          "@category": "pub",
+          "name": "Bar nouveau"
+        },
+        {
+          "@lat": "48.8658567",
+          "@lon": "2.3778299",
+          "@category": "bar",
+          "name": "Café Charbon"
+        },
+        {
+          "@lat": "48.874105",
+          "@lon": "2.3752878",
+          "@category": "bar",
+          "name": "Café Chéri(e)"
+        },
+        {
+          "@lat": "48.8474549",
+          "@lon": "2.3471635",
+          "@category": "bar",
+          "name": "Ces années là"
+        },
+        {
+          "@lat": "48.8429884",
+          "@lon": "2.3495493",
+          "@category": "pub",
+          "name": "Drunken Bunny"
+        }
+      ]
+    }
+  }
+}

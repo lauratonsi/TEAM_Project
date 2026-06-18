@@ -1,0 +1,212 @@
+{
+  "city_report": {
+    "@appeal_score": "60.9",
+    "@currency": "SEK",
+    "@region": "northern",
+    "metadata": {
+      "title": "Stockholm",
+      "name_it": "Stoccolma",
+      "flag": "🇸🇪",
+      "source_url": "https://en.wikivoyage.org/wiki/Stockholm"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "147.63",
+      "safety": {
+        "@index_score": "54.2"
+      },
+      "environment": {
+        "@green_score": "88"
+      },
+      "cost_index": {
+        "@value": "79.8"
+      },
+      "economic_accessibility": {
+        "@score": "20.2"
+      }
+    },
+    "transport": {
+      "b": [
+        "Stockholm",
+        "Stockholm",
+        "Stockholm",
+        "Stockholm"
+      ],
+      "#text": "The most practical option is the airport coaches to the City Terminal in"
+    },
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "59.3281",
+          "@lon": "18.0914",
+          "name": "Vasa Museum",
+          "description": "Maritime museum with a salvaged 17th-century ship."
+        },
+        {
+          "@lat": "59.3251",
+          "@lon": "18.0708",
+          "name": "Gamla Stan",
+          "description": "The well-preserved medieval old town."
+        },
+        {
+          "@lat": "59.3275",
+          "@lon": "18.0544",
+          "name": "City Hall",
+          "description": "Building with a tower hosting the Nobel Banquet."
+        },
+        {
+          "@lat": "59.3253",
+          "@lon": "18.1039",
+          "name": "Skansen",
+          "description": "The world's oldest open-air museum and zoo."
+        },
+        {
+          "@lat": "59.3249",
+          "@lon": "18.0965",
+          "name": "ABBA Museum",
+          "description": "Interactive museum dedicated to the pop group."
+        },
+        {
+          "@lat": "59.3268",
+          "@lon": "18.0717",
+          "name": "Royal Palace",
+          "description": "The official residence of the Swedish monarch."
+        },
+        {
+          "@lat": "59.3261",
+          "@lon": "18.0847",
+          "name": "Moderna Museet",
+          "description": "State museum for modern and contemporary art."
+        },
+        {
+          "@lat": "59.3217",
+          "@lon": "17.8869",
+          "name": "Drottningholm",
+          "description": "The private residence of the Swedish royal family."
+        },
+        {
+          "@lat": "59.3178",
+          "@lon": "18.0858",
+          "name": "Fotografiska",
+          "description": "Major center for contemporary photography."
+        },
+        {
+          "@lat": "59.3233",
+          "@lon": "18.0964",
+          "name": "Gröna Lund",
+          "description": "Historic amusement park on the island of Djurgården."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Gamla Stan",
+          "description": "The medieval old town on its own island, the historic heart of Stockholm."
+        },
+        {
+          "name": "Södermalm",
+          "description": "The hip and creative district with cafés, markets and panoramic views."
+        },
+        {
+          "name": "Östermalm",
+          "description": "The elegant neighbourhood with the Östermalm Market Hall and embassies."
+        },
+        {
+          "name": "Norrmalm",
+          "description": "The commercial and cultural hub, home to the central railway station."
+        },
+        {
+          "name": "Kungsholmen",
+          "description": "An island district featuring City Hall (Stadshuset) and quiet residential areas."
+        }
+      ]
+    },
+    "description": {
+      "b": "Stockholm",
+      "#text": "Spread across fourteen islands,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Stockholm",
+        "Stockholm",
+        "Stockholm",
+        "Stockholm",
+        "Stockholm",
+        "Stockholm",
+        "Stockholm",
+        "Stockholm",
+        "Stockholm",
+        "Stockholm"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Sweden",
+          "#text": "Sweden"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Stockholm_County",
+          "#text": "Stockholm County"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Stockholm_archipelago",
+          "#text": "Stockholm archipelago"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/stockholm.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "59.3198089",
+          "@lon": "18.0688539",
+          "@category": "pub",
+          "name": "Akkurat"
+        },
+        {
+          "@lat": "59.3403556",
+          "@lon": "18.0311352",
+          "@category": "pub",
+          "name": "Bagpipers's Inn"
+        },
+        {
+          "@lat": "59.3340492",
+          "@lon": "18.0565703",
+          "@category": "pub",
+          "name": "Bar City Central"
+        },
+        {
+          "@lat": "59.3327653",
+          "@lon": "18.0581755",
+          "@category": "pub",
+          "name": "Belgobaren"
+        },
+        {
+          "@lat": "59.3321771",
+          "@lon": "18.0738967",
+          "@category": "nightclub",
+          "name": "Berns"
+        },
+        {
+          "@lat": "59.3098213",
+          "@lon": "18.0758442",
+          "@category": "pub",
+          "name": "Brother Tuck"
+        },
+        {
+          "@lat": "59.3333991",
+          "@lon": "18.0557611",
+          "@category": "nightclub",
+          "name": "Fasching"
+        },
+        {
+          "@lat": "59.333999",
+          "@lon": "18.037233",
+          "@category": "pub",
+          "name": "Flying Scotsman Inn"
+        }
+      ]
+    }
+  }
+}

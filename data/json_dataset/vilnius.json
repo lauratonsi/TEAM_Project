@@ -1,0 +1,199 @@
+{
+  "city_report": {
+    "@appeal_score": "69.3",
+    "@region": "northern",
+    "metadata": {
+      "title": "Vilnius",
+      "name_it": "Vilnius",
+      "flag": "🇱🇹",
+      "source_url": "https://en.wikivoyage.org/wiki/Vilnius"
+    },
+    "indicators": {
+      "hotel_count": "23",
+      "hotel_price": "104.34",
+      "safety": {
+        "@index_score": "71.5"
+      },
+      "environment": {
+        "@green_score": "80"
+      },
+      "cost_index": {
+        "@value": "56.4"
+      },
+      "economic_accessibility": {
+        "@score": "43.6"
+      }
+    },
+    "transport": "Buses leave from outside Arrivals every 15-30 min and take 15 min to go downtown. Simplest is to buy a €1 single ticket by card, and you might pay extra for bulky luggage. \"Get around\" below describes other ticket deals, such as the smart card Vilniečio kortelė — buy it from the Narvesen kiosk next to Arrivals.",
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Filaretai Hostel",
+          "price": "Dorm €33 ppn"
+        },
+        {
+          "name": "Jimmy Jumps House",
+          "price": "Dorm beds from ~€18, privates from ~€40"
+        },
+        {
+          "name": "Pogo Hostel",
+          "price": "Dorm €20 ppn"
+        },
+        {
+          "name": "City Hotel Algirdas",
+          "price": "B&B double €50"
+        },
+        {
+          "name": "Domus Maria",
+          "price": "B&B double €60"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "54.6867",
+          "@lon": "25.2908",
+          "name": "Gediminas Tower",
+          "description": "The only remaining tower of the Upper Castle."
+        },
+        {
+          "@lat": "54.6831",
+          "@lon": "25.2931",
+          "name": "St. Anne's Church",
+          "description": "Masterpiece of Flamboyant Gothic architecture."
+        },
+        {
+          "@lat": "54.6806",
+          "@lon": "25.2953",
+          "name": "Uzupis",
+          "description": "Bohemian district that declared its own republic."
+        },
+        {
+          "@lat": "54.6858",
+          "@lon": "25.2878",
+          "name": "Vilnius Cathedral",
+          "description": "Main Roman Catholic cathedral of Lithuania."
+        },
+        {
+          "@lat": "54.6744",
+          "@lon": "25.2894",
+          "name": "Gates of Dawn",
+          "description": "The only surviving gate of the city's original walls."
+        },
+        {
+          "@lat": "54.6858",
+          "@lon": "25.2892",
+          "name": "Grand Dukes Palace",
+          "description": "Reconstructed palace of the Lithuanian rulers."
+        },
+        {
+          "@lat": "54.6842",
+          "@lon": "25.2953",
+          "name": "Bernadine Garden",
+          "description": "Main park in the heart of the old town."
+        },
+        {
+          "@lat": "54.6939",
+          "@lon": "25.3058",
+          "name": "Church of St. Peter",
+          "description": "Baroque church known for its white plaster carvings."
+        },
+        {
+          "@lat": "54.6869",
+          "@lon": "25.2975",
+          "name": "Three Crosses",
+          "description": "Monument on the hill offering panoramic views."
+        },
+        {
+          "@lat": "54.6878",
+          "@lon": "25.2722",
+          "name": "Museum of Occupations",
+          "description": "Former KGB headquarters now a museum."
+        }
+      ]
+    },
+    "description": {
+      "b": "Vilnius",
+      "#text": "Green and welcoming capital,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Vilnius",
+        "Vilnius",
+        "Vilnius",
+        "Vilnius",
+        "Vilnius",
+        "Vilnius",
+        "Vilnius"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Lithuania",
+          "#text": "Lithuania"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Dzūkija",
+          "#text": "Dzūkija"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Polish–Lithuanian_Commonwealth",
+          "#text": "Polish–Lithuanian Commonwealth"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/vilnius.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "54.6840708",
+          "@lon": "25.2903339",
+          "@category": "bar",
+          "name": "13 statinių"
+        },
+        {
+          "@lat": "54.6888598",
+          "@lon": "25.2757378",
+          "@category": "pub",
+          "name": "Akivarai"
+        },
+        {
+          "@lat": "54.6797935",
+          "@lon": "25.277749",
+          "@category": "pub",
+          "name": "Akvariumas"
+        },
+        {
+          "@lat": "54.6799771",
+          "@lon": "25.2787171",
+          "@category": "pub",
+          "name": "Alaus biblioteka"
+        },
+        {
+          "@lat": "54.6936373",
+          "@lon": "25.2689725",
+          "@category": "pub",
+          "name": "Alaus namai"
+        },
+        {
+          "@lat": "54.7079381",
+          "@lon": "25.2956792",
+          "@category": "pub",
+          "name": "Alaus studija"
+        },
+        {
+          "@lat": "54.679263",
+          "@lon": "25.287105",
+          "@category": "pub",
+          "name": "Amatininkai"
+        },
+        {
+          "@lat": "54.6764695",
+          "@lon": "25.2895043",
+          "@category": "pub",
+          "name": "Apuokas"
+        }
+      ]
+    }
+  }
+}

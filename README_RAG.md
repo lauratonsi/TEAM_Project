@@ -96,15 +96,18 @@ visitatori del sito usano davvero, e funziona senza alcun server.
 ```
 data/xml_dataset/*.xml  →  rag/ingest.py  →  rag_index/
                                                   ├── index.faiss   (indice vettoriale, 384 dim)
-                                                  └── docs.json     (336 frammenti + metadati)
+                                                  └── docs.json     (452 frammenti + metadati)
                                                        ↓
                                               rag/vectorstore.py    (ricerca + fusione + pre-filtro)
                                                        ↓
                                               rag/api.py            (server FastAPI, 127.0.0.1:8000)
 ```
 
-- `ingest.py` legge i 30 XML e li spezza in **336 frammenti** (*chunk*) tematici — uno per trasporti, hotel,
-  quartieri, attrazioni, descrizione, intro wiki, vita notturna — ciascuno prefissato col nome della città.
+- `ingest.py` legge i 30 XML e li spezza in **452 frammenti** (*chunk*) tematici — trasporti, hotel,
+  quartieri (uno per quartiere), attrazioni, descrizione, intro wiki (testo lungo → più chunk) e vita
+  notturna — ciascuno prefissato col nome della città. I campi a *content-model misto*
+  (`transport`/`description`/`wiki_intro`) vengono letti col testo **completo** (`itertext`, non `findtext`,
+  che si fermerebbe al primo markup inline).
 - `vectorstore.py` tiene un indice **FAISS** (ricerca per significato, modello `all-MiniLM-L6-v2`, 384
   dimensioni) e un indice **BM25Okapi** (ricerca per parole chiave), e li fonde con **Reciprocal Rank Fusion**.
 - `api.py` espone il server, riconosce l'intento della domanda e applica il pre-filtro per metadati.
@@ -117,7 +120,7 @@ data/xml_dataset/*.xml  →  rag/ingest.py  →  rag_index/
 | `hotels` | Strutture ricettive con prezzi |
 | `districts` | Un frammento per quartiere |
 | `description` | Sintesi strategica in italiano |
-| `wiki_intro` | Panoramica Wikivoyage (22/30 città) |
+| `wiki_intro` | Panoramica Wikivoyage (29/30 città, testo lungo → più chunk) |
 | `attractions` | Attrazioni con coordinate |
 | `nightlife` | Locali notturni (bar/pub/discoteca) |
 
@@ -175,6 +178,6 @@ metadati applicate (es. `{"region": "northern", "category": "pub"}`).
 ### Limiti noti
 
 - Alcune città non hanno dati hotel (Budapest, Londra, Parigi, Oslo, Madrid…) perché assenti nelle sorgenti Wikivoyage.
-- La sezione `wiki_intro` manca per le città presenti nei dump solo con sotto-pagine di quartiere (Amsterdam, Berlino, Bruxelles, Copenaghen, Helsinki, Lisbona, Parigi, Roma).
+- La sezione `wiki_intro` manca solo per **Luxembourg** (il cui dump non contiene una pagina-città principale né una sotto-pagina `/Understand`); le altre 29 capitali la includono.
 - La sintesi delle risposte testuali è **euristica** (estrae le frasi più pertinenti), non generativa: senza un modello come Ollama/OpenAI attivo si usa la modalità `simulated_rag`.
 - Conosce solo i 30 capoluoghi del dataset e non dati successivi ai dump Wikivoyage scaricati a mano.

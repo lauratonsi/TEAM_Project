@@ -25,6 +25,8 @@ ELABORAZIONE/
 ├── data/
 │   ├── original_source/                 # Dump Wikivoyage (MediaWiki XML) scaricati a mano
 │   ├── xml_dataset/                     # Output: 30 file XML validati rispetto al DTD
+│   ├── json_dataset/                    # Output: 30 JSON (download per città, convenzione xmltodict)
+│   ├── dataset_cities.csv               # Output: export tabellare aggregato delle 30 capitali
 │   ├── city_report.dtd                  # DTD per la validazione dei file XML
 │   ├── city_indices.json                # Indici: safety, green score, costo della vita
 │   ├── currency_rates.json              # Valute locali + tassi indicativi (capitali non-euro)
@@ -83,7 +85,7 @@ inglese**) sulle 30 capitali. È il punto in cui i moduli del corso si **fondono
 negli XML (gli stessi esposti come microdata Schema.org) per filtrare in modo esatto — *Metadata-filtered RAG*.
 
 ```
-data/xml_dataset/*.xml → rag/ingest.py → rag_index/ (FAISS 384-dim + docs.json: 336 chunk + meta)
+data/xml_dataset/*.xml → rag/ingest.py → rag_index/ (FAISS 384-dim + docs.json: 452 chunk + meta)
                                             → rag/vectorstore.py  FAISS + BM25Okapi + RRF + pre-filtro metadati
                                             → rag/api.py          FastAPI · parse_filters() · rilevamento intento
 ```
@@ -123,8 +125,19 @@ pip install lxml pandas
 # Passo 1 – Generazione XML validati
 python scripts/final_processor.py
 
-# Passo 2 – Generazione HTML (index.html, pagine città, report.html, mappa)
+# Passo 2 – Generazione HTML + download JSON/CSV (index.html, pagine città, report.html, mappa)
 python scripts/deploy_dashboard.py
+```
+
+**Directory di input come variabile.** Il nome delle directory non è cablato nel codice ma sta in
+un'unica variabile per script, sovrascrivibile da ambiente per lavorare su un'altra collezione
+senza modifiche al sorgente:
+
+```bash
+# input dei dump grezzi e output XML (final_processor.py)
+TEAM_INPUT_DIR=/path/ai/dump  TEAM_OUTPUT_DIR=/path/out  python scripts/final_processor.py
+# input dei documenti XML validati (deploy_dashboard.py e validate.py)
+TEAM_XML_DIR=/path/out  python scripts/deploy_dashboard.py
 ```
 
 ### Validazione DTD — script standalone
@@ -177,9 +190,11 @@ I file in `original_source/` sono dump MediaWiki XML con namespace
 - la pagina principale della città (es. `<title>London</title>`)
 - le pagine dei distretti (es. `<title>Amsterdam/Canal District</title>`)
 
-Per le città più grandi (Amsterdam, Berlino, Roma, Parigi) la pagina principale
-non esiste nel dump: in questi casi la sezione Wiki Archive viene omessa (mostrare
-testo di un distretto come intro della città sarebbe fuorviante).
+La selezione del testo intro privilegia la **pagina principale** (confronto del titolo
+*accent-insensitive*) e, in sua assenza, la sotto-pagina `Città/Understand`. Solo quando
+nessuna delle due esiste nel dump la sezione Wiki Archive viene omessa (mostrare il testo di
+un distretto come intro della città sarebbe fuorviante): è il caso della sola **Luxembourg**,
+mentre per le altre **29/30** capitali `wiki_intro` è popolato.
 
 ---
 
@@ -275,6 +290,13 @@ alloggio di Wikivoyage: è derivato dall'indice Numbeo del costo della vita con 
 **Content-model misto.** I campi `transport`, `description` e `wiki_intro` non sono solo
 testo: contengono markup inline (`<b>`, `<i>`, `<link href>`) interlacciato al testo —
 il content-model misto richiesto dal progetto (es. `<b>Roma</b> ... (<i>Trastevere</i>)`).
+In particolare gli **iperlink sono reali e presi dai documenti sorgente**: i wikilink del
+wikitext Wikivoyage (`[[Pagina|testo]]`, `[url testo]`) non vengono più scartati ma
+preservati come `<link href="…">testo</link>` (i link interni risolti su
+`en.wikivoyage.org`, i namespace/interwiki esclusi), con un tetto di 3 link per campo per
+non appesantire la prosa. Realizza l'esempio delle slide (link a Wikipedia dentro `<para>`):
+**79 elementi `<link>`** su 29/30 città. Il vocabolario inline è poi reso in HTML semantico
+(`<strong>`/`<em>`/`<a>`) da `inline_to_html`.
 
 **Scelte di obbligatorietà.** Gli attributi geografici di `attraction` e `venue` sono
 `#REQUIRED` perché entrambi gli elementi sono posizionati sulla mappa (senza coordinate non
@@ -454,6 +476,12 @@ Roma). Correzioni: marker di locali/attrazioni portati a **32×32 px** e marker 
 **raggruppati** con `L.markerClusterGroup`, così gli overlap a zoom basso si fondono in un unico
 bersaglio cliccabile (e si riaprono allo zoom).
 
+**Contrasto del colore (WCAG AA).** Un controllo del contrasto ha individuato un link sotto la
+soglia AA per testo piccolo (**4.5:1**): il link *Report & Documentation* nel footer (accent
+`#E74C3C` su sfondo chiaro, **3.82:1**), portato all'accent scuro `#C0392B` (**5.44:1**, conforme).
+La barra di navigazione superiore, con testo chiaro ma su sfondo **scuro** `#0B1524`, è già a
+**10.48:1**.
+
 **Albero di accessibilità (`index.html`).** È la struttura che uno screen reader «vede» — solo
 ruoli e nomi accessibili, non lo stile:
 
@@ -540,6 +568,8 @@ Utilizzato per assistenza allo sviluppo della pipeline:
 - Iniezione della macro-regione geografica negli XML (`geo_regions.json`, attributo enumerato `region` da geoscheme UN M49) come dimensione di filtro/navigazione nell'index
 - Trasformazione del Virtual Analyst in widget flottante presente su ogni pagina
 - Redesign "Travel 2026" delle schede città (hero full-width, metriche con anelli `conic-gradient`, layout a 5 tab Overview/Sights/Nightlife/Stay/Tips) e della toolbar di ricerca/filtri dell'index, con tutta la presentazione in CSS esterno
+- Validazione finale rispetto alle linee guida: preservazione degli iperlink reali dal wikitext come `<link href>` nel content-model misto (con fix del doppio escaping `&amp;amp;`), download in formati alternativi (JSON per città via convenzione `xmltodict` + CSV aggregato) e consolidamento delle directory di input in variabili sovrascrivibili da ambiente
+- Chiusura del progetto: fix dell'estrazione RAG dei campi misti (`full_text`/`itertext` invece di `findtext`, che fermava `wiki_intro` al primo markup) con ricostruzione dell'indice (336 → 452 chunk) e fix di contrasto colore WCAG AA sul link del footer
 - Generazione di `report.html` e del presente `README.md`
 
 **Prompt rappresentativo usato con Claude Code:**
@@ -560,12 +590,20 @@ Le sintesi strategiche in `city_descriptions.json` sono state generate con Claud
 
 | File | Descrizione |
 |------|-------------|
-| `xml_dataset/*.xml` | 30 file XML, uno per capitale, validati DTD |
+| `data/xml_dataset/*.xml` | 30 file XML, uno per capitale, validati DTD |
+| `data/json_dataset/*.json` | 30 file JSON, uno per città — **download** in formato alternativo, generato dall'XML con la convenzione `xmltodict` (`@attr` / `#text`) |
+| `data/dataset_cities.csv` | Export **tabellare aggregato**: una riga per capitale con tutti gli indicatori strutturati (comodo per fogli di calcolo) |
 | `index.html` | Dashboard navigabile: griglia di card **filtrabile** (profilo/regione/valuta), **ordinabile** e con **ricerca**, mappa e Virtual Analyst |
-| `pages/cities/*.html` | 30 pagine città (una per XML), con microdata, mappa e nota valuta per le città non-euro. Layout "Travel 2026" a **tab** — *Overview* (metriche + distretti + mappa Leaflet), *Sights*, *Nightlife*, *Stay* (mostrato solo per le città con hotel catalogati) e *Tips* — con hero full-width e card animate via CSS |
-| `pages/report.html` | Statistiche estratte + documentazione pipeline |
+| `pages/cities/*.html` | 30 pagine città (una per XML), con microdata, mappa, link **Download XML/JSON** e nota valuta per le città non-euro. Layout "Travel 2026" a **tab** — *Overview* (metriche + distretti + mappa Leaflet), *Sights*, *Nightlife*, *Stay* (mostrato solo per le città con hotel catalogati) e *Tips* — con hero full-width e card animate via CSS |
+| `pages/report.html` | Statistiche estratte + documentazione pipeline + download CSV |
 | `pages/mappa_attrazioni.html` | Mappa Leaflet con attrazioni e locali notturni geolocalizzati |
 | `stile.css` | Foglio di stile unico, applicato a tutti i documenti HTML (con cache-busting `?v=hash`) |
+
+**Download in altri formati (output opzionale).** Oltre all'XML d'input, ogni scheda città offre il
+**JSON** del singolo documento e il report un **CSV** aggregato delle 30 capitali. Il JSON è prodotto
+dall'XML con la convenzione `xmltodict` (slide *XML vs. JSON*); va sottolineato che la conversione dei
+campi a **content-model misto** è **lossy** — i formati per *dati strutturati* non catturano fedelmente
+testo + markup inline, esattamente l'avvertimento delle slide del corso.
 
 Il **Virtual Analyst** (RAG: BM25 + FAISS) è un **widget chat flottante** presente su `index.html` e su ogni
 pagina città: segue lo scroll e resta accessibile in qualsiasi momento della navigazione.

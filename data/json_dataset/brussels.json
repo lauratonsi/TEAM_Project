@@ -1,0 +1,224 @@
+{
+  "city_report": {
+    "@appeal_score": "52.5",
+    "@region": "western",
+    "metadata": {
+      "title": "Brussels",
+      "name_it": "Bruxelles",
+      "flag": "🇧🇪",
+      "source_url": "https://en.wikivoyage.org/wiki/Brussels"
+    },
+    "indicators": {
+      "hotel_count": "9",
+      "hotel_price": "143.38",
+      "safety": {
+        "@index_score": "50.1"
+      },
+      "environment": {
+        "@green_score": "70"
+      },
+      "cost_index": {
+        "@value": "77.5"
+      },
+      "economic_accessibility": {
+        "@score": "22.5"
+      }
+    },
+    "transport": "Trams are the fastest way to move around the city. Buses and trams share the same ticket system and connections are valid for one hour. (Source: AI-generated — transport data absent from Wikivoyage dump.)",
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "2Go4 Hostel",
+          "price": "€20+"
+        },
+        {
+          "name": "Hostel Jacques Brel",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Citadines Sainte-Catherine Brussels",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Hotel Cafe Pacific",
+          "price": "€120+"
+        },
+        {
+          "name": "Hotel NH Collection Brussels Centre",
+          "price": "from €99"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "50.8467",
+          "@lon": "4.3524",
+          "name": "Grand Place",
+          "description": "Central square known for its ornate guildhouses."
+        },
+        {
+          "@lat": "50.8949",
+          "@lon": "4.3415",
+          "name": "Atomium",
+          "description": "Futuristic structure representing an iron crystal."
+        },
+        {
+          "@lat": "50.845",
+          "@lon": "4.35",
+          "name": "Manneken Pis",
+          "description": "Famous small bronze statue of a boy urinating."
+        },
+        {
+          "@lat": "50.8417",
+          "@lon": "4.3622",
+          "name": "Royal Palace",
+          "description": "The official residence of the Belgian monarchs."
+        },
+        {
+          "@lat": "50.84",
+          "@lon": "4.3917",
+          "name": "Cinquantenaire",
+          "description": "Park featuring a triumphal arch and museums."
+        },
+        {
+          "@lat": "50.894",
+          "@lon": "4.339",
+          "name": "Mini-Europe",
+          "description": "Park with miniature models of European landmarks."
+        },
+        {
+          "@lat": "50.8511",
+          "@lon": "4.3601",
+          "name": "Comic Strip Center",
+          "description": "Museum dedicated to the history of Belgian comics."
+        },
+        {
+          "@lat": "50.8422",
+          "@lon": "4.3586",
+          "name": "Magritte Museum",
+          "description": "Museum dedicated to the surrealist artist René Magritte."
+        },
+        {
+          "@lat": "50.8439",
+          "@lon": "4.3567",
+          "name": "Mont des Arts",
+          "description": "Historic site with gardens and a panoramic city view."
+        },
+        {
+          "@lat": "50.8478",
+          "@lon": "4.3601",
+          "name": "St. Michael Cathedral",
+          "description": "Gothic church located on the Treurenberg hill."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Pentagon",
+          "description": "The Pentagon (French: Le Pentagone, Dutch: Vijfhoek) is the historical center of Brussels. It derives its name from the pentagonal shape of the inner beltway that surrounds the area. The Pentagon of Brussels encompasses many charming and beautiful attractions, with deeply ornate buildings on the Grand-Place/Grote Markt, and a fish-and-crustacean overdose of St. Catherine's Square (Place St-Catherine/Sint-Katelijneplein). Stroll along, (and stop in for a drink) at one of the many bars on Place St-Géry/Sint-Goriksplein, or max out your credit card on the trendy Rue Antoine Dansaert/Antoine Dansaertstraat. The Marolles/Marollen neighbourhood close to the medieval centre is one of the few places where the Brussels dialect of Dutch (Flemish) can still be heard. The area is best known for the flea market held daily on the Place du Jeu de Balle/Vossenplein as well as a plethora of shops selling everything from old radios and bent wipers to fine china and expensive Art Nouveau trinkets. * \n* \n* \n*  *  * \n*  *  *  *  *  * \n*  * \n** \n** \n* \n* \n* \n* \n* \n* \n* \n* \n* \n* \n*  *  * \n* \n* \n*  *  *  *  * \n* \n* \n* \n* \n* \n* \n*  * \n*  * \n*  * \n* \n*  * \n*  * \n* \n*  * \n* \n* \n*  Brussels' tourist restaurant gauntlet can be found in Rue des Bouchers/Beenhouwerstraat, just to the north of Grand-Place. The place has a bad reputation for waiters imposing themselves on passers-by, trying to lure customers into their restaurant. The authorities are aware of this, and are trying to take measures. Some restaurants may also tempt you with cheap prices for the menus, but when seated, the item on the menu happens to be unavailable, and you're forced to accept another, noticeably more expensive dish. Often, the exaggerated price of the wines will also compensate for the attractive menu. Knowing this however, you may be able to negotiate a better deal before entering. A few restaurants stand out from the crowd though:\n* \n* \n* \nClose to the Bourse Jules Van Praetstraat (rue Jules Van Praet) is another popular street of Asian cuisine restaurants and bars. Those of note include:\n* \n*  Place Saint Catherine-Catherinplaats is also a popular area, and once the fishmongering centre of Brussels. While many of the fish shops have moved elsewhere, it is still home to many good seafood restaurants featuring lobster as a specialty.\n* \n* \n* \n*  It is outside the touristic centre that the best deals can be found. Here are a few addresses in the Upper Town and Louise Area:\n*  * \n* \n* \n*  * \n* \n* \n* \n* \n* \n*  * \n* \n* \n* \n* \n*  * \n*  * \n* \n* \n* \n* \n*  *"
+        },
+        {
+          "name": "European Quarter",
+          "description": "The European Quarter (French: Quartier européen, Dutch: Europese wijk) in Brussels, Belgium is a large office area east of the center which is mostly taken up by the European Union. The district also houses the large Parc de Cinquantenaire and a beautiful, but expensive, residential area on its northern edge. Metro line 5 goes straight through the district, and 6 also traverses the western edge. Brussels is considered to be the de facto capital of the European Union, having a long history of hosting the institutions of the European Union within its European Quarter. The EU has no official capital, and no plans to declare one, but Brussels hosts the official seats of the European Commission, Council of the European Union, European Council, as well as a second seat of the European Parliament. * \n* \n* \n* \n* \n*  * \n* \n*  * \n*  * \n*  *  *"
+        },
+        {
+          "name": "West",
+          "description": "The West contains the extensive western suburbs of Brussels. Except for the Sacred Heart basilica, tourists usually do not visit this part of the city.  ]]\n* \n* \n* \n*  *  * Football: RSC Anderlecht play soccer in First Division A, the country's top tier. Their home ground is Lotto Park, capacity 22,500. \n*  *"
+        },
+        {
+          "name": "South",
+          "description": "The South district in the Belgian capital of Brussels comprises the municipalities of Saint-Gilles / Sint-Gillis, Forest / Vorst and Uccle / Ukkel. Forest (pronounced with a silent \"st\") is the French name of one of the municipalities surrounding Brussels (the Flemish name is Vorst), known for its historically important abbey, a collection of art deco buildings and a major concert hall. Green and tranquil as the name might suggest, Forest is nevertheless also home to a large portion of Brussels' industrial facilities, including a car factory and the depot used by Eurostar trains. * \n* \n* \n*  * \n* \n*  *  *  * \n* \n*  * \n* \n*  *  * \n* \n*"
+        },
+        {
+          "name": "Centre",
+          "description": "The Centre is the historic centre of Brussels, including the world's most beautiful town square, the Grand-Place which is listed as .  is on the eastern end of the city centre. It is a terminus station for most regional (suburban) services and many other intercity services (including from the Netherlands) stop by. The city centre has two metro stations, both on lines 1/5 (both metro lines share tracks through this corridor). is directly connected to the mainline station, though does require a considerable walk through an underground corridor. The second metro station is to the northwest of the city centre, ; it is significantly closer to the Grand Place and also has connections to the city's pre-metro system. There are two premetro stations in the centre: De Brouckère, the interchange with the metro, and . Both of these are on lines 4 and 10. * \n at the Grand-Place, a ]]\n*  *  * \n*  * \n*  * \n* \n*  * \n*  *  * \n* \n*  Brussels has a good selection of year round events, many suitable for English speaking visitors. The following sites are useful to check out what's on. * \n*  * \n* \n* \n* \n*  * \n* \n*  * \n* \n* \n* \n*  *  * \n*  * \n*  * \n*  * \n* \n*  * \n* \n* \n*  * \n* \n* \n* \n* \n*  * \n*"
+        }
+      ]
+    },
+    "description": {
+      "b": "Brussels",
+      "#text": "Political heart of the European Union,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Brussels",
+        "Bruxelles",
+        "Brussels",
+        "Brussels",
+        "Brussels",
+        "Brussels",
+        "Brussels",
+        "Brussels"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/French_phrasebook",
+          "#text": "French"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Dutch_phrasebook",
+          "#text": "Dutch"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Belgium",
+          "#text": "Belgium"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/brussels.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "50.8945197",
+          "@lon": "4.4338512",
+          "@category": "pub",
+          "name": "'t Amusement"
+        },
+        {
+          "@lat": "50.8474396",
+          "@lon": "4.3496613",
+          "@category": "bar",
+          "name": "'t Zuidpaleis"
+        },
+        {
+          "@lat": "50.9041033",
+          "@lon": "4.304737",
+          "@category": "pub",
+          "name": "Au 140"
+        },
+        {
+          "@lat": "50.8962835",
+          "@lon": "4.3927382",
+          "@category": "pub",
+          "name": "Au Bon Coin"
+        },
+        {
+          "@lat": "50.8854765",
+          "@lon": "4.3180751",
+          "@category": "pub",
+          "name": "Au Bon Coin"
+        },
+        {
+          "@lat": "50.8272547",
+          "@lon": "4.3633948",
+          "@category": "pub",
+          "name": "BBP Bailli"
+        },
+        {
+          "@lat": "50.8464012",
+          "@lon": "4.3497269",
+          "@category": "bar",
+          "name": "Belgica"
+        },
+        {
+          "@lat": "50.8302079",
+          "@lon": "4.3442551",
+          "@category": "pub",
+          "name": "Brasserie Verschueren"
+        }
+      ]
+    }
+  }
+}

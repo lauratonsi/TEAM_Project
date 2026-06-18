@@ -1,0 +1,211 @@
+{
+  "city_report": {
+    "@appeal_score": "67.9",
+    "@region": "western",
+    "metadata": {
+      "title": "Vienna",
+      "name_it": "Vienna",
+      "flag": "🇦🇹",
+      "source_url": "https://en.wikivoyage.org/wiki/Vienna"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "142.27",
+      "safety": {
+        "@index_score": "73.2"
+      },
+      "environment": {
+        "@green_score": "85"
+      },
+      "cost_index": {
+        "@value": "76.9"
+      },
+      "economic_accessibility": {
+        "@score": "23.1"
+      }
+    },
+    "transport": {
+      "b": [
+        "Vienna",
+        "Vienna",
+        "Vienna",
+        "Vienna",
+        "Vienna"
+      ]
+    },
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "48.1845",
+          "@lon": "16.3122",
+          "name": "Schönbrunn Palace",
+          "description": "Grand Baroque palace and former summer residence."
+        },
+        {
+          "@lat": "48.2084",
+          "@lon": "16.3731",
+          "name": "St. Stephen's",
+          "description": "Iconic Gothic cathedral in the city center."
+        },
+        {
+          "@lat": "48.1915",
+          "@lon": "16.3808",
+          "name": "Belvedere",
+          "description": "Historic complex with two Baroque palaces and art."
+        },
+        {
+          "@lat": "48.2166",
+          "@lon": "16.3958",
+          "name": "Prater",
+          "description": "Large public park with a giant Ferris wheel."
+        },
+        {
+          "@lat": "48.2065",
+          "@lon": "16.3653",
+          "name": "Hofburg",
+          "description": "Former imperial palace of the Habsburgs."
+        },
+        {
+          "@lat": "48.203",
+          "@lon": "16.3691",
+          "name": "State Opera",
+          "description": "One of the leading opera houses in the world."
+        },
+        {
+          "@lat": "48.1973",
+          "@lon": "16.361",
+          "name": "Naschmarkt",
+          "description": "Famous open-air market for food and goods."
+        },
+        {
+          "@lat": "48.2047",
+          "@lon": "16.3681",
+          "name": "Albertina",
+          "description": "Art museum with one of the world's largest print rooms."
+        },
+        {
+          "@lat": "48.2037",
+          "@lon": "16.3617",
+          "name": "Kunsthistorisches",
+          "description": "Imperial museum of art and artifacts."
+        },
+        {
+          "@lat": "48.2109",
+          "@lon": "16.3575",
+          "name": "Rathaus",
+          "description": "Neogothic city hall building and event square."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Innere Stadt",
+          "description": "Quartiere di Vienna."
+        },
+        {
+          "name": "Landstraße",
+          "description": "Quartiere di Vienna."
+        },
+        {
+          "name": "Wieden",
+          "description": "Quartiere di Vienna."
+        },
+        {
+          "name": "Margareten",
+          "description": "Quartiere di Vienna."
+        },
+        {
+          "name": "Mariahilf",
+          "description": "Quartiere di Vienna."
+        }
+      ]
+    },
+    "description": {
+      "b": "Vienna",
+      "#text": "Consistently ranked the world's most livable city,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Vienna",
+        "Vienna",
+        "Vienna",
+        "Vienna",
+        "Vienna",
+        "Vienna",
+        "Vienna",
+        "Vienna",
+        "Vienna",
+        "Vienna"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/German_phrasebook",
+          "#text": "German"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Austria",
+          "#text": "Austria"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Berlin",
+          "#text": "Berlin"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/vienna.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "48.2177686",
+          "@lon": "16.3374533",
+          "@category": "pub",
+          "name": "'s Beisl am Eck"
+        },
+        {
+          "@lat": "48.2060233",
+          "@lon": "16.3865177",
+          "@category": "pub",
+          "name": "'s Stammbeisl"
+        },
+        {
+          "@lat": "48.2171591",
+          "@lon": "16.3774265",
+          "@category": "pub",
+          "name": "6er Haus"
+        },
+        {
+          "@lat": "48.2290642",
+          "@lon": "16.3437056",
+          "@category": "pub",
+          "name": "Anton Frank - cafe bar"
+        },
+        {
+          "@lat": "48.2044132",
+          "@lon": "16.3432618",
+          "@category": "pub",
+          "name": "BackBone Irish Pub"
+        },
+        {
+          "@lat": "48.2098841",
+          "@lon": "16.3677",
+          "@category": "pub",
+          "name": "Bockshorn Irish Pub"
+        },
+        {
+          "@lat": "48.2160352",
+          "@lon": "16.3784001",
+          "@category": "pub",
+          "name": "Brendl"
+        },
+        {
+          "@lat": "48.218708",
+          "@lon": "16.3810931",
+          "@category": "nightclub",
+          "name": "Bricks"
+        }
+      ]
+    }
+  }
+}

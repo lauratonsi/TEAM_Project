@@ -1,0 +1,175 @@
+{
+  "city_report": {
+    "@appeal_score": "62.9",
+    "@region": "western",
+    "metadata": {
+      "title": "Luxembourg",
+      "name_it": "Lussemburgo",
+      "flag": "🇱🇺",
+      "source_url": "https://en.wikivoyage.org/wiki/Luxembourg"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "159.84",
+      "safety": {
+        "@index_score": "73.5"
+      },
+      "environment": {
+        "@green_score": "77"
+      },
+      "cost_index": {
+        "@value": "86.4"
+      },
+      "economic_accessibility": {
+        "@score": "13.6"
+      }
+    },
+    "transport": "The best way to get around is via the intercity bus network and the dense road system. Trains directly connect the city centre to all major districts. (Source: AI-generated — transport data absent from Wikivoyage dump.)",
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "49.6117",
+          "@lon": "6.1342",
+          "name": "Casemates du Bock",
+          "description": "Tunnel system part of the city's ancient fortifications."
+        },
+        {
+          "@lat": "49.6108",
+          "@lon": "6.1311",
+          "name": "Grand Ducal Palace",
+          "description": "The official residence of the Grand Duke of Luxembourg."
+        },
+        {
+          "@lat": "49.6114",
+          "@lon": "6.1286",
+          "name": "Place d'Armes",
+          "description": "Central square in the heart of the old city."
+        },
+        {
+          "@lat": "49.6083",
+          "@lon": "6.1269",
+          "name": "Adolphe Bridge",
+          "description": "Double-decked arch bridge and city symbol."
+        },
+        {
+          "@lat": "49.6075",
+          "@lon": "6.1353",
+          "name": "Grund District",
+          "description": "Picturesque valley neighborhood below the city center."
+        },
+        {
+          "@lat": "49.6169",
+          "@lon": "6.1397",
+          "name": "Mudam",
+          "description": "Museum of modern art designed by I.M. Pei."
+        },
+        {
+          "@lat": "49.6097",
+          "@lon": "6.1314",
+          "name": "Notre-Dame Cathedral",
+          "description": "Jesuit church and the only cathedral in the country."
+        },
+        {
+          "@lat": "49.6186",
+          "@lon": "6.1422",
+          "name": "Philharmonie",
+          "description": "Modern concert hall on the Kirchberg plateau."
+        },
+        {
+          "@lat": "49.6111",
+          "@lon": "6.1339",
+          "name": "Chemin de la Corniche",
+          "description": "Pedestrian promenade called 'the most beautiful balcony in Europe'."
+        },
+        {
+          "@lat": "49.6164",
+          "@lon": "6.1392",
+          "name": "Fort Thüngen",
+          "description": "Historic fortification and home of the Dräi Eechelen Museum."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Ville-Haute",
+          "description": "The historic and political centre of the city, home to the Grand Ducal Palace."
+        },
+        {
+          "name": "Grund",
+          "description": "A picturesque medieval district along the Alzette river, known for its bistros."
+        },
+        {
+          "name": "Kirchberg",
+          "description": "The European quarter, seat of EU institutions and the MUDAM museum."
+        },
+        {
+          "name": "Clausen",
+          "description": "A residential district along the Alzette, famous for its breweries."
+        },
+        {
+          "name": "Limpertsberg",
+          "description": "A leafy, upscale neighbourhood with the university and quality shops."
+        }
+      ]
+    },
+    "description": {
+      "b": "Luxembourg",
+      "#text": "Elite financial center,"
+    },
+    "landmark_image": "assets/images/luxembourg.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "49.6017703",
+          "@lon": "6.1365904",
+          "@category": "bar",
+          "name": ":buvette"
+        },
+        {
+          "@lat": "49.5977436",
+          "@lon": "6.1348685",
+          "@category": "pub",
+          "name": "Albicastrense"
+        },
+        {
+          "@lat": "49.6038566",
+          "@lon": "6.1298819",
+          "@category": "pub",
+          "name": "Alison café"
+        },
+        {
+          "@lat": "49.594574",
+          "@lon": "6.1407228",
+          "@category": "pub",
+          "name": "Am klenge Bistro BTwo"
+        },
+        {
+          "@lat": "49.6113179",
+          "@lon": "6.1337032",
+          "@category": "pub",
+          "name": "Art Scène"
+        },
+        {
+          "@lat": "49.595316",
+          "@lon": "6.1374921",
+          "@category": "pub",
+          "name": "Au Bon Vivant"
+        },
+        {
+          "@lat": "49.6238045",
+          "@lon": "6.1054447",
+          "@category": "pub",
+          "name": "Bar Liberty"
+        },
+        {
+          "@lat": "49.6008067",
+          "@lon": "6.130821",
+          "@category": "pub",
+          "name": "Barbarella"
+        }
+      ]
+    }
+  }
+}

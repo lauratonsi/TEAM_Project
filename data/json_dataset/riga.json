@@ -1,0 +1,210 @@
+{
+  "city_report": {
+    "@appeal_score": "62.5",
+    "@region": "northern",
+    "metadata": {
+      "title": "Riga",
+      "name_it": "Riga",
+      "flag": "🇱🇻",
+      "source_url": "https://en.wikivoyage.org/wiki/Riga"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "103.23",
+      "safety": {
+        "@index_score": "62.1"
+      },
+      "environment": {
+        "@green_score": "72"
+      },
+      "cost_index": {
+        "@value": "55.8"
+      },
+      "economic_accessibility": {
+        "@score": "44.2"
+      }
+    },
+    "transport": {
+      "b": [
+        "Riga",
+        "Riga"
+      ],
+      "#text": "Bus route 22 runs between the airport and the old town, with a stop near the central bus and railway stations as well as old town. These buses operate as any other public transport in"
+    },
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "56.9491",
+          "@lon": "24.1053",
+          "name": "Old Town",
+          "description": "Historical heart of Riga with cobblestone streets."
+        },
+        {
+          "@lat": "56.9472",
+          "@lon": "24.1069",
+          "name": "House of Blackheads",
+          "description": "Historic building reconstructed after WWII."
+        },
+        {
+          "@lat": "56.9514",
+          "@lon": "24.1131",
+          "name": "Freedom Monument",
+          "description": "Memorial honoring soldiers killed in the War of Independence."
+        },
+        {
+          "@lat": "56.9475",
+          "@lon": "24.1094",
+          "name": "St. Peter's Church",
+          "description": "Gothic church with an observation tower."
+        },
+        {
+          "@lat": "56.9439",
+          "@lon": "24.1158",
+          "name": "Central Market",
+          "description": "Large market in former Zeppelin hangars."
+        },
+        {
+          "@lat": "56.9592",
+          "@lon": "24.1089",
+          "name": "Art Nouveau District",
+          "description": "Area with the highest concentration of Art Nouveau architecture."
+        },
+        {
+          "@lat": "56.9539",
+          "@lon": "24.1158",
+          "name": "Nativity Cathedral",
+          "description": "The largest Orthodox cathedral in the city."
+        },
+        {
+          "@lat": "56.9556",
+          "@lon": "24.1131",
+          "name": "Latvian National Museum",
+          "description": "Art museum in a magnificent historicist building."
+        },
+        {
+          "@lat": "56.9511",
+          "@lon": "24.1064",
+          "name": "Swedish Gate",
+          "description": "The only remaining gate from the old city walls."
+        },
+        {
+          "@lat": "56.9714",
+          "@lon": "24.2272",
+          "name": "Motor Museum",
+          "description": "Museum with a large collection of antique vehicles."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Vecrīga",
+          "description": "Quartiere di Riga."
+        },
+        {
+          "name": "Centrs",
+          "description": "Quartiere di Riga."
+        },
+        {
+          "name": "Outer East Bank",
+          "description": "Quartiere di Riga."
+        },
+        {
+          "name": "Pārdaugava",
+          "description": "Quartiere di Riga."
+        }
+      ]
+    },
+    "description": {
+      "b": "Riga",
+      "#text": "Baltic pearl famous for Art Nouveau,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Riga",
+        "Riga",
+        "Riga",
+        "Riga",
+        "Riga",
+        "Riga",
+        "Riga",
+        "Riga",
+        "Riga",
+        "Riga",
+        "Riga"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Latvia",
+          "#text": "Latvia"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Baltic_states",
+          "#text": "Baltic States"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Lithuania",
+          "#text": "Lithuanian"
+        }
+      ],
+      "i": [
+        "Vecrīga",
+        "Centrs"
+      ]
+    },
+    "landmark_image": "assets/images/riga.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "56.9492836",
+          "@lon": "24.105903",
+          "@category": "pub",
+          "name": "13 krēsli"
+        },
+        {
+          "@lat": "56.9469015",
+          "@lon": "24.1127752",
+          "@category": "bar",
+          "name": "Aka Latviešu virtuve"
+        },
+        {
+          "@lat": "56.9553822",
+          "@lon": "24.1743201",
+          "@category": "bar",
+          "name": "Alus Dārzs"
+        },
+        {
+          "@lat": "56.9263963",
+          "@lon": "24.1701644",
+          "@category": "bar",
+          "name": "Black dragon"
+        },
+        {
+          "@lat": "56.9560192",
+          "@lon": "24.1093673",
+          "@category": "bar",
+          "name": "Blues House"
+        },
+        {
+          "@lat": "56.9466142",
+          "@lon": "24.1103808",
+          "@category": "pub",
+          "name": "Bon-Vivant"
+        },
+        {
+          "@lat": "56.9535179",
+          "@lon": "24.127078",
+          "@category": "pub",
+          "name": "Bruklinas krogs un viskija bārs"
+        },
+        {
+          "@lat": "57.0045916",
+          "@lon": "24.1767692",
+          "@category": "bar",
+          "name": "Cabo cafe"
+        }
+      ]
+    }
+  }
+}

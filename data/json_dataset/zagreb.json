@@ -1,0 +1,199 @@
+{
+  "city_report": {
+    "@appeal_score": "67.9",
+    "@region": "southern",
+    "metadata": {
+      "title": "Zagreb",
+      "name_it": "Zagabria",
+      "flag": "🇭🇷",
+      "source_url": "https://en.wikivoyage.org/wiki/Zagreb"
+    },
+    "indicators": {
+      "hotel_count": "30",
+      "hotel_price": "101.38",
+      "safety": {
+        "@index_score": "77.1"
+      },
+      "environment": {
+        "@green_score": "70"
+      },
+      "cost_index": {
+        "@value": "54.8"
+      },
+      "economic_accessibility": {
+        "@score": "45.2"
+      }
+    },
+    "transport": {
+      "b": "Zagreb",
+      "#text": "Buses leave from the airport at 07:00 and every 30 minutes between 08:00 and 20:00. Beyond these hours, there are buses leaving to the main bus station every time a Croatia Airlines plane lands. When traveling to the airport from the main"
+    },
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Chillout Hostel Zagreb",
+          "price": "From €25"
+        },
+        {
+          "name": "Fulir Hostel Zagreb",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Funk Lounge",
+          "price": "dorm from: €13, private from: €20"
+        },
+        {
+          "name": "Hobo Bear Hostel",
+          "price": "Dorm bed: €14"
+        },
+        {
+          "name": "Hostel Lika",
+          "price": "Dorm bed: €13.5"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "45.8144",
+          "@lon": "15.9792",
+          "name": "Zagreb Cathedral",
+          "description": "Gothic cathedral and tallest building in Croatia."
+        },
+        {
+          "@lat": "45.8164",
+          "@lon": "15.9739",
+          "name": "St. Mark's Church",
+          "description": "Church famous for its colorful tiled roof."
+        },
+        {
+          "@lat": "45.815",
+          "@lon": "15.9733",
+          "name": "Upper Town",
+          "description": "Historic medieval core of Zagreb (Gradec)."
+        },
+        {
+          "@lat": "45.8131",
+          "@lon": "15.9772",
+          "name": "Ban Jelacic Square",
+          "description": "The central square and meeting point of the city."
+        },
+        {
+          "@lat": "45.8242",
+          "@lon": "16.0189",
+          "name": "Maksimir Park",
+          "description": "Oldest public park in South East Europe."
+        },
+        {
+          "@lat": "45.815",
+          "@lon": "15.9731",
+          "name": "Museum of Broken Relationships",
+          "description": "Unique museum dedicated to failed love stories."
+        },
+        {
+          "@lat": "45.8139",
+          "@lon": "15.9775",
+          "name": "Dolac Market",
+          "description": "The main open-air farmers market."
+        },
+        {
+          "@lat": "45.8144",
+          "@lon": "15.9733",
+          "name": "Lotrščak Tower",
+          "description": "13th-century tower with a daily cannon shot."
+        },
+        {
+          "@lat": "45.8106",
+          "@lon": "15.9783",
+          "name": "Zrinjevac Park",
+          "description": "Park with a music pavilion and fountains."
+        },
+        {
+          "@lat": "45.8086",
+          "@lon": "15.9678",
+          "name": "Mimara Museum",
+          "description": "Art museum housing the collection of Wiltrud and Ante Mimara."
+        }
+      ]
+    },
+    "description": {
+      "b": "Zagreb",
+      "#text": "A city with a dual character, Central European and Mediterranean,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Zagreb",
+        "Zagreb",
+        "Zagreb",
+        "Zagreb"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Central_Croatia",
+          "#text": "Central Croatia"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Croatia",
+          "#text": "Croatia"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Vienna",
+          "#text": "Vienna"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/zagreb.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "45.8074304",
+          "@lon": "15.9841948",
+          "@category": "bar",
+          "name": "& More by Sheraton bar"
+        },
+        {
+          "@lat": "45.8007542",
+          "@lon": "15.9723829",
+          "@category": "bar",
+          "name": "808 bar"
+        },
+        {
+          "@lat": "45.7872642",
+          "@lon": "15.9529793",
+          "@category": "bar",
+          "name": "A most unusual garden"
+        },
+        {
+          "@lat": "45.7859116",
+          "@lon": "15.9528122",
+          "@category": "bar",
+          "name": "Absolut bar"
+        },
+        {
+          "@lat": "45.7957109",
+          "@lon": "15.9000845",
+          "@category": "bar",
+          "name": "After Eight"
+        },
+        {
+          "@lat": "45.8088727",
+          "@lon": "15.9973586",
+          "@category": "bar",
+          "name": "Akunbar"
+        },
+        {
+          "@lat": "45.8077358",
+          "@lon": "15.9965759",
+          "@category": "pub",
+          "name": "Ambasada"
+        },
+        {
+          "@lat": "45.7961008",
+          "@lon": "15.9697694",
+          "@category": "pub",
+          "name": "Anera"
+        }
+      ]
+    }
+  }
+}

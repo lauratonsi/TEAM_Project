@@ -1,0 +1,205 @@
+{
+  "city_report": {
+    "@appeal_score": "60.3",
+    "@currency": "RON",
+    "@region": "eastern",
+    "metadata": {
+      "title": "Bucharest",
+      "name_it": "Bucarest",
+      "flag": "🇷🇴",
+      "source_url": "https://en.wikivoyage.org/wiki/Bucharest"
+    },
+    "indicators": {
+      "hotel_count": "41",
+      "hotel_price": "90.47",
+      "safety": {
+        "@index_score": "70.3"
+      },
+      "environment": {
+        "@green_score": "55"
+      },
+      "cost_index": {
+        "@value": "48.9"
+      },
+      "economic_accessibility": {
+        "@score": "51.1"
+      }
+    },
+    "transport": "Getting there and away: By bus – The Express Bus is usually the best option, as it is inexpensive (50–90 minutes ride) and runs frequently. However, it can get crowded (and it lacks space for luggage) and can get snarled in traffic. The airport bus stop is straight outside Arrivals on the ground floor.",
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Apartamente Regim Hotelier Bucuresti",
+          "price": "40"
+        },
+        {
+          "name": "Short Term Apartments Rental",
+          "price": "40"
+        },
+        {
+          "name": "Camping Casa Alba",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Butterfly Villa Hostel",
+          "price": "From 12/night"
+        },
+        {
+          "name": "Midland Hostel",
+          "price": "from 8/night"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "44.4275",
+          "@lon": "26.0872",
+          "name": "Palace of Parliament",
+          "description": "The world's second-largest administrative building."
+        },
+        {
+          "@lat": "44.4414",
+          "@lon": "26.0972",
+          "name": "Romanian Athenaeum",
+          "description": "Iconic concert hall and symbol of Romanian culture."
+        },
+        {
+          "@lat": "44.4715",
+          "@lon": "26.0762",
+          "name": "Village Museum",
+          "description": "Open-air museum showcasing traditional Romanian life."
+        },
+        {
+          "@lat": "44.4714",
+          "@lon": "26.0825",
+          "name": "Herastrau Park",
+          "description": "Large park surrounding a lake in northern Bucharest."
+        },
+        {
+          "@lat": "44.4672",
+          "@lon": "26.0784",
+          "name": "Arcul de Triumf",
+          "description": "Triumphal arch dedicated to Romania's WWI victory."
+        },
+        {
+          "@lat": "44.431",
+          "@lon": "26.101",
+          "name": "Old Town (Lipscani)",
+          "description": "Historical center with vibrant nightlife and architecture."
+        },
+        {
+          "@lat": "44.4314",
+          "@lon": "26.0997",
+          "name": "Stavropoleos Monastery",
+          "description": "Small Orthodox monastery known for its Brancovan style."
+        },
+        {
+          "@lat": "44.4394",
+          "@lon": "26.0975",
+          "name": "Revolution Square",
+          "description": "The site of major events during the 1989 revolution."
+        },
+        {
+          "@lat": "44.4397",
+          "@lon": "26.0958",
+          "name": "National Art Museum",
+          "description": "Art museum located in the former Royal Palace."
+        },
+        {
+          "@lat": "44.4318",
+          "@lon": "26.1017",
+          "name": "Carturesti Carusel",
+          "description": "Beautiful bookstore located in a restored 19th-century building."
+        }
+      ]
+    },
+    "description": {
+      "b": "Bucharest",
+      "#text": "A city in strong technological expansion,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Bucharest",
+        "Bucharest",
+        "Bucharest",
+        "Bucharest",
+        "Bucharest",
+        "Bucharest",
+        "Bucharest",
+        "Bucharest",
+        "Bucharest",
+        "Bucharest",
+        "Bucharest"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Romanian_phrasebook",
+          "#text": "Romanian"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Romania",
+          "#text": "Romania"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Romania",
+          "#text": "Romania"
+        }
+      ],
+      "i": "Gypsies"
+    },
+    "landmark_image": "assets/images/bucharest.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "44.4421391",
+          "@lon": "26.0944235",
+          "@category": "bar",
+          "name": "112 Bar"
+        },
+        {
+          "@lat": "44.4307357",
+          "@lon": "26.1018712",
+          "@category": "bar",
+          "name": "1974 Niște Domni și Fiii"
+        },
+        {
+          "@lat": "44.4449566",
+          "@lon": "26.0962978",
+          "@category": "pub",
+          "name": "1UP Gamers Pub"
+        },
+        {
+          "@lat": "44.4300616",
+          "@lon": "26.0973551",
+          "@category": "bar",
+          "name": "Abel's Wine Bar"
+        },
+        {
+          "@lat": "44.4306672",
+          "@lon": "26.1013188",
+          "@category": "nightclub",
+          "name": "Agartha Club"
+        },
+        {
+          "@lat": "44.4476748",
+          "@lon": "26.1060993",
+          "@category": "bar",
+          "name": "Alan Dala"
+        },
+        {
+          "@lat": "44.4130209",
+          "@lon": "26.1688469",
+          "@category": "bar",
+          "name": "Alexa"
+        },
+        {
+          "@lat": "44.4312812",
+          "@lon": "26.0999145",
+          "@category": "bar",
+          "name": "Altfel"
+        }
+      ]
+    }
+  }
+}

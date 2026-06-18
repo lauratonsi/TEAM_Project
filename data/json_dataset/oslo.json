@@ -1,0 +1,222 @@
+{
+  "city_report": {
+    "@appeal_score": "69.0",
+    "@currency": "NOK",
+    "@region": "northern",
+    "metadata": {
+      "title": "Oslo",
+      "name_it": "Oslo",
+      "flag": "🇳🇴",
+      "source_url": "https://en.wikivoyage.org/wiki/Oslo"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "165.02",
+      "safety": {
+        "@index_score": "75.1"
+      },
+      "environment": {
+        "@green_score": "92"
+      },
+      "cost_index": {
+        "@value": "89.2"
+      },
+      "economic_accessibility": {
+        "@score": "10.8"
+      }
+    },
+    "transport": {
+      "b": [
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo"
+      ],
+      "#text": "Flytoget (Airport Express Train), operates high speed express trains, generally taking 19-22 minutes to reach"
+    },
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "59.9271",
+          "@lon": "10.7008",
+          "name": "Vigeland Park",
+          "description": "Large park with sculptures by Gustav Vigeland."
+        },
+        {
+          "@lat": "59.9075",
+          "@lon": "10.7533",
+          "name": "Opera House",
+          "description": "Modern architectural landmark with a walkable roof."
+        },
+        {
+          "@lat": "59.9064",
+          "@lon": "10.7361",
+          "name": "Akershus Fortress",
+          "description": "Medieval castle built to protect and provide a royal residence."
+        },
+        {
+          "@lat": "59.9036",
+          "@lon": "10.6994",
+          "name": "Fram Museum",
+          "description": "Museum dedicated to Norwegian polar exploration."
+        },
+        {
+          "@lat": "59.9641",
+          "@lon": "10.6675",
+          "name": "Holmenkollen",
+          "description": "Ski jumping hill and museum."
+        },
+        {
+          "@lat": "59.9044",
+          "@lon": "10.7553",
+          "name": "Munch Museum",
+          "description": "Museum dedicated to the life and works of Edvard Munch."
+        },
+        {
+          "@lat": "59.9036",
+          "@lon": "10.6983",
+          "name": "Kon-Tiki Museum",
+          "description": "Museum housing vessels from Thor Heyerdahl's expeditions."
+        },
+        {
+          "@lat": "59.9161",
+          "@lon": "10.7375",
+          "name": "National Gallery",
+          "description": "Home to Norway's largest collection of art (The Scream)."
+        },
+        {
+          "@lat": "59.9122",
+          "@lon": "10.7336",
+          "name": "City Hall",
+          "description": "Iconic building hosting the Nobel Peace Prize ceremony."
+        },
+        {
+          "@lat": "59.9136",
+          "@lon": "10.7397",
+          "name": "Karl Johans Gate",
+          "description": "The main street of Oslo connecting the station and palace."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Sentrum",
+          "description": "Quartiere di Oslo."
+        },
+        {
+          "name": "West",
+          "description": "Quartiere di Oslo."
+        },
+        {
+          "name": "Inner North",
+          "description": "Quartiere di Oslo."
+        },
+        {
+          "name": "Inner East",
+          "description": "Quartiere di Oslo."
+        },
+        {
+          "name": "North",
+          "description": "Quartiere di Oslo."
+        }
+      ]
+    },
+    "description": {
+      "b": "Oslo",
+      "#text": "World capital of electric mobility,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo",
+        "Oslo"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Norway",
+          "#text": "Norway"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/East_Norway",
+          "#text": "the East of the country"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/fjords_of_Norway",
+          "#text": "fjord"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/oslo.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "59.9274649",
+          "@lon": "10.7510975",
+          "@category": "bar",
+          "name": "Alf nabolagsbar"
+        },
+        {
+          "@lat": "59.9236161",
+          "@lon": "10.7573918",
+          "@category": "bar",
+          "name": "Bar Bellini"
+        },
+        {
+          "@lat": "59.9252056",
+          "@lon": "10.7593699",
+          "@category": "bar",
+          "name": "Bar Boca"
+        },
+        {
+          "@lat": "59.9105204",
+          "@lon": "10.7261726",
+          "@category": "pub",
+          "name": "Beer Palace"
+        },
+        {
+          "@lat": "59.9141",
+          "@lon": "10.738227",
+          "@category": "bar",
+          "name": "Brødrene Bergh"
+        },
+        {
+          "@lat": "59.9297631",
+          "@lon": "10.7803576",
+          "@category": "bar",
+          "name": "Buen Bar"
+        },
+        {
+          "@lat": "59.9127213",
+          "@lon": "10.7734065",
+          "@category": "pub",
+          "name": "Bydelskroa"
+        },
+        {
+          "@lat": "59.9168848",
+          "@lon": "10.7532829",
+          "@category": "pub",
+          "name": "Cacadou"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "city_report": {
+    "@appeal_score": "53.1",
+    "@region": "northern",
+    "metadata": {
+      "title": "Dublin",
+      "name_it": "Dublino",
+      "flag": "🇮🇪",
+      "source_url": "https://en.wikivoyage.org/wiki/Dublin"
+    },
+    "indicators": {
+      "hotel_count": "47",
+      "hotel_price": "151.88",
+      "safety": {
+        "@index_score": "48.9"
+      },
+      "environment": {
+        "@green_score": "75"
+      },
+      "cost_index": {
+        "@value": "82.1"
+      },
+      "economic_accessibility": {
+        "@score": "17.9"
+      }
+    },
+    "transport": "Tickets and Leap Card On trains and trams, tickets can be purchased from ticket vending machines at the station or stop prior to boarding. Train tickets are valid for the day of purchase and are needed to get through the entry and exit turnstiles at stations. Tram tickets do not have to be validated prior to boarding, but must be used within 90 minutes of purchase.",
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Camac Valley Caravan and Camping Park",
+          "price": "Tent €12, hook-up €40"
+        },
+        {
+          "name": "Abbey Court Hostel",
+          "price": "Bunk €35 ppn"
+        },
+        {
+          "name": "Ashling House",
+          "price": "Double (room only) €140"
+        },
+        {
+          "name": "DCU Summer Rooms",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Latroupe Jacobs Inn",
+          "price": "Pod €35 ppn"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "53.3419",
+          "@lon": "-6.2867",
+          "name": "Guinness Storehouse",
+          "description": "Brewery experience telling the story of Ireland's famous stout."
+        },
+        {
+          "@lat": "53.3444",
+          "@lon": "-6.2577",
+          "name": "Trinity College",
+          "description": "Oldest university in Ireland, home to the Book of Kells."
+        },
+        {
+          "@lat": "53.3455",
+          "@lon": "-6.2644",
+          "name": "Temple Bar",
+          "description": "Vibrant cultural quarter and nightlife hub."
+        },
+        {
+          "@lat": "53.3429",
+          "@lon": "-6.2674",
+          "name": "Dublin Castle",
+          "description": "Major government complex and former seat of British rule."
+        },
+        {
+          "@lat": "53.36",
+          "@lon": "-6.325",
+          "name": "Phoenix Park",
+          "description": "One of the largest enclosed recreational spaces in Europe."
+        },
+        {
+          "@lat": "53.3395",
+          "@lon": "-6.2715",
+          "name": "St. Patrick's Cathedral",
+          "description": "National Cathedral of the Church of Ireland."
+        },
+        {
+          "@lat": "53.3418",
+          "@lon": "-6.3098",
+          "name": "Kilmainham Gaol",
+          "description": "Former prison now a museum on Irish independence history."
+        },
+        {
+          "@lat": "53.3463",
+          "@lon": "-6.2631",
+          "name": "Ha'penny Bridge",
+          "description": "Iconic pedestrian bridge over the River Liffey."
+        },
+        {
+          "@lat": "53.3381",
+          "@lon": "-6.2591",
+          "name": "Stephen's Green",
+          "description": "Victorian public park in the city center."
+        },
+        {
+          "@lat": "53.3409",
+          "@lon": "-6.2525",
+          "name": "National Gallery",
+          "description": "Museum housing the national collection of Irish and European art."
+        }
+      ]
+    },
+    "description": {
+      "b": "Dublin",
+      "#text": "Gateway for tech multinationals,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Dublin",
+        "Dublin",
+        "Dublin",
+        "Dublin",
+        "Dublin",
+        "Dublin",
+        "Dublin",
+        "Dublin"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Irish_phrasebook",
+          "#text": "Irish"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Republic_of_Ireland",
+          "#text": "Ireland"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/County_Dublin",
+          "#text": "County Dublin"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/dublin.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "53.3353226",
+          "@lon": "-6.264995",
+          "@category": "pub",
+          "name": "Anseo"
+        },
+        {
+          "@lat": "53.3472522",
+          "@lon": "-6.2609325",
+          "@category": "pub",
+          "name": "Arlington Bar & Restaurant"
+        },
+        {
+          "@lat": "53.3676758",
+          "@lon": "-6.2512678",
+          "@category": "bar",
+          "name": "Bar@Tolka"
+        },
+        {
+          "@lat": "53.3098046",
+          "@lon": "-6.2841368",
+          "@category": "pub",
+          "name": "Brady’s"
+        },
+        {
+          "@lat": "53.3448128",
+          "@lon": "-6.2623304",
+          "@category": "nightclub",
+          "name": "Club M"
+        },
+        {
+          "@lat": "53.312007",
+          "@lon": "-6.2748056",
+          "@category": "pub",
+          "name": "Coman's"
+        },
+        {
+          "@lat": "53.3291081",
+          "@lon": "-6.2305605",
+          "@category": "pub",
+          "name": "Crowe’s"
+        },
+        {
+          "@lat": "53.3389839",
+          "@lon": "-6.2733761",
+          "@category": "pub",
+          "name": "Fallon’s"
+        }
+      ]
+    }
+  }
+}

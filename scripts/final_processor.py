@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import html
 from pathlib import Path
 import pandas as pd
 from lxml import etree
@@ -8,7 +9,14 @@ from lxml import etree
 ROOT = Path(__file__).resolve().parent.parent
 
 # --- CONFIGURAZIONE ---
-ORIGINAL_XML_DIR = str(ROOT / 'data' / 'original_source')
+# Directory di input/output della pipeline, in UNA variabile ciascuna (cfr. slide
+# "Documenti XML in input": il nome della directory è specificato in una variabile).
+# Entrambe sono sovrascrivibili da variabile d'ambiente per eseguire la pipeline su
+# un'altra collezione senza toccare il codice:
+#   TEAM_INPUT_DIR=/path/ai/dump  TEAM_OUTPUT_DIR=/path/out  python scripts/final_processor.py
+INPUT_DIR = os.environ.get('TEAM_INPUT_DIR', str(ROOT / 'data' / 'original_source'))
+OUTPUT_DIR = os.environ.get('TEAM_OUTPUT_DIR', str(ROOT / 'data' / 'xml_dataset'))
+ORIGINAL_XML_DIR = INPUT_DIR  # alias retro-compatibile usato più sotto
 INPUT_JSON_INDICES = str(ROOT / 'data' / 'city_indices.json')
 INPUT_CSV_WIKI = str(ROOT / 'data' / 'wiki_text_pulito.csv')
 INPUT_CSV_ATTR = str(ROOT / 'data' / 'attrazione_descrizione_fixed.csv')
@@ -16,7 +24,6 @@ INPUT_JSON_DESC = str(ROOT / 'data' / 'city_descriptions.json')
 INPUT_JSON_NIGHTLIFE = str(ROOT / 'data' / 'nightlife.json')
 INPUT_JSON_TRANSPORT_PATCHES = str(ROOT / 'data' / 'transport_patches.json')
 DTD_FILE = str(ROOT / 'data' / 'city_report.dtd')
-OUTPUT_DIR = str(ROOT / 'data' / 'xml_dataset')
 
 MW_NS = 'http://www.mediawiki.org/xml/export-0.11/'
 
@@ -125,9 +132,14 @@ _DISTRICT_OVERRIDES = {
 
 
 def clean_xml_text(text):
+    """Normalizza il testo prima di assegnarlo via lxml (`.text` / attributi).
+    NON esegue l'escaping di & < > : ci pensa lxml in fase di serializzazione.
+    (Pre-escapare qui causava un DOPPIO escaping → `&amp;amp;` nell'output.)
+    Decodifica inoltre le entità HTML eventualmente già presenti nel sorgente
+    Wikivoyage (`&ndash;` → – , `&nbsp;` → spazio) così il testo è pulito."""
     if not text or str(text).lower() == 'nan':
         return ""
-    return str(text).strip().replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    return html.unescape(str(text)).replace('\xa0', ' ').strip()
 
 
 def _plain(text):
@@ -147,15 +159,27 @@ def _append_text(parent, last_child, text):
         last_child.tail = (last_child.tail or "") + text
 
 
-def build_mixed_content(parent, raw_text, bold_terms=None):
+# Delimitatori (Unicode Private Use Area) per i token-link prodotti da
+# advanced_wiki_cleaner(keep_links=True). Non compaiono mai nel testo naturale e
+# sopravvivono alle regex di pulizia (che agiscono solo su & < > = '' ecc.), così
+# l'URL — anche con query string contenente '=' — non viene corrotto.
+_L0, _L1, _L2 = chr(0xE000), chr(0xE001), chr(0xE002)
+_LINK_TOKEN_RE = re.compile(_L0 + r'(?P<ltext>[^' + _L1 + _L2 + r']*)' + _L1 +
+                            r'(?P<lurl>[^' + _L0 + _L2 + r']*)' + _L2)
+
+
+def build_mixed_content(parent, raw_text, bold_terms=None, max_links=3):
     """Populate `parent` with mixed content: plain text interleaved with inline
     <b>/<i>/<link> children. Realises the *content-model misto* taught in the course
     (cfr. notebook 01.xmljson: <p><b>Bologna</b> ... <a href>...</a>).
 
     Rules (deterministic):
-      - http(s) URL          -> <link href="URL">URL</link>
+      - link token (da keep_links=True) -> <link href="URL">testo</link>
+      - http(s) URL nudo                -> <link href="URL">URL</link>
       - occurrence of a city name (bold_terms) -> <b>...</b>
       - parenthesised native proper name, e.g. (Stadshuset) -> (<i>Stadshuset</i>)
+    Al più `max_links` <link> per elemento (oltre i quali il testo del link è reso
+    in chiaro) per evitare "link-spam" e tenere la prosa leggibile.
     `raw_text` must be UNescaped: lxml handles escaping on serialization.
     """
     raw_text = _plain(raw_text)
@@ -163,7 +187,10 @@ def build_mixed_content(parent, raw_text, bold_terms=None):
         return
     bold_terms = [t for t in (bold_terms or []) if t]
 
-    alternatives = [r'(?P<url>https?://[^\s<>"\)]+)']
+    # Il token-link ha priorità massima: la sua regione viene consumata come un
+    # blocco unico (l'URL interno non viene ri-scansionato come URL nudo).
+    alternatives = [_LINK_TOKEN_RE.pattern,
+                    r'(?P<url>https?://[^\s<>"\)' + _L0 + _L1 + _L2 + r']+)']
     if bold_terms:
         alt = "|".join(re.escape(t) for t in sorted(set(bold_terms), key=len, reverse=True))
         alternatives.append(r'(?P<bold>\b(?:' + alt + r')\b)')
@@ -172,13 +199,31 @@ def build_mixed_content(parent, raw_text, bold_terms=None):
 
     last_child = None
     pos = 0
+    n_links = 0
     for m in pattern.finditer(raw_text):
         _append_text(parent, last_child, raw_text[pos:m.start()])
         kind = m.lastgroup
-        if kind == 'url':
-            child = etree.SubElement(parent, "link")
-            child.set("href", m.group('url'))
-            child.text = m.group('url')
+        if kind in ('ltext', 'lurl'):          # token-link: <link href=URL>testo</link>
+            text, url = m.group('ltext').strip(), m.group('lurl').strip()
+            if n_links < max_links and url:
+                child = etree.SubElement(parent, "link")
+                child.set("href", url)
+                child.text = text or url
+                n_links += 1
+            else:                              # oltre il cap → solo testo, niente link
+                _append_text(parent, last_child, text or url)
+                pos = m.end()
+                continue
+        elif kind == 'url':
+            if n_links < max_links:
+                child = etree.SubElement(parent, "link")
+                child.set("href", m.group('url'))
+                child.text = m.group('url')
+                n_links += 1
+            else:
+                _append_text(parent, last_child, m.group('url'))
+                pos = m.end()
+                continue
         elif kind == 'bold':
             child = etree.SubElement(parent, "b")
             child.text = m.group('bold')
@@ -192,8 +237,53 @@ def build_mixed_content(parent, raw_text, bold_terms=None):
     _append_text(parent, last_child, raw_text[pos:])
 
 
-def advanced_wiki_cleaner(raw_text):
-    """Clean Wikivoyage/Wikipedia wikitext into plain prose."""
+def _wikilink_url(target):
+    """Mappa un target di wikilink interno [[Pagina#Sezione]] all'URL Wikivoyage
+    reale e risolvibile (https://en.wikivoyage.org/wiki/Pagina#Sezione)."""
+    target = target.strip()
+    page, sep, anchor = target.partition('#')
+    url = "https://en.wikivoyage.org/wiki/" + page.strip().replace(' ', '_')
+    if sep:
+        url += '#' + anchor.strip().replace(' ', '_')
+    return url
+
+
+def _linkify_wikitext(text):
+    """Converte i link del wikitext in token-link (delimitati da PUA) anziché
+    eliminarli: realizza il content-model misto con iperlink REALI presi dai
+    documenti sorgente (cfr. esempio delle slide: link a Wikipedia dentro <para>).
+      [[Pagina|testo]] / [[Pagina]] -> link a en.wikivoyage.org (namespace esclusi)
+      [http://url testo] / [http://url] -> link esterno verbatim
+    """
+    def _piped(m):
+        target, disp = m.group(1), m.group(2)
+        if ':' in target:                      # interwiki/namespace (w:, file:, ecc.) → solo testo
+            return disp
+        return _L0 + disp + _L1 + _wikilink_url(target) + _L2
+    text = re.sub(r'\[\[([^|\]]+)\|([^\]]+)\]\]', _piped, text)
+
+    def _simple(m):
+        target = m.group(1)
+        if ':' in target:
+            return target
+        return _L0 + target + _L1 + _wikilink_url(target) + _L2
+    text = re.sub(r'\[\[([^\]]+)\]\]', _simple, text)
+
+    text = re.sub(r'\[(https?://\S+)\s+([^\]]*)\]',
+                  lambda m: _L0 + (m.group(2).strip() or m.group(1)) + _L1 + m.group(1) + _L2, text)
+    text = re.sub(r'\[(https?://\S+)\]',
+                  lambda m: _L0 + m.group(1) + _L1 + m.group(1) + _L2, text)
+    return text
+
+
+def advanced_wiki_cleaner(raw_text, keep_links=False):
+    """Clean Wikivoyage/Wikipedia wikitext into prose.
+
+    Con `keep_links=True` i link del wikitext NON vengono eliminati ma convertiti
+    in token-link (cfr. _linkify_wikitext) che build_mixed_content trasforma in
+    elementi <link href> reali: è così che si popola il content-model misto con
+    iperlink presi dai documenti sorgente. Default `False` = prosa semplice (usato
+    p.es. per le descrizioni dei distretti, assegnate come testo puro)."""
     if not raw_text or str(raw_text).lower() == 'nan':
         return ""
     text = str(raw_text)
@@ -205,22 +295,27 @@ def advanced_wiki_cleaner(raw_text):
     # Remove file/image links
     text = re.sub(r'\[\[(File|Image|Categoria|Category):.*?\]\]', '', text,
                   flags=re.IGNORECASE | re.DOTALL)
-    # [[link|display text]] → display text
-    text = re.sub(r'\[\[[^|\]]*\|([^\]]+)\]\]', r'\1', text)
-    # [[link]] → link text
-    text = re.sub(r'\[\[([^\]]+)\]\]', r'\1', text)
-    # [http://url display text] → display text
-    text = re.sub(r'\[https?://\S+\s+([^\]]*)\]', r'\1', text)
-    # [http://url] (bare URL in brackets) → remove
-    text = re.sub(r'\[https?://\S+\]', '', text)
+    if keep_links:
+        # Preserva i link come token (poi diventano <link href> nel misto)
+        text = _linkify_wikitext(text)
+    else:
+        # [[link|display text]] → display text
+        text = re.sub(r'\[\[[^|\]]*\|([^\]]+)\]\]', r'\1', text)
+        # [[link]] → link text
+        text = re.sub(r'\[\[([^\]]+)\]\]', r'\1', text)
+        # [http://url display text] → display text
+        text = re.sub(r'\[https?://\S+\s+([^\]]*)\]', r'\1', text)
+        # [http://url] (bare URL in brackets) → remove
+        text = re.sub(r'\[https?://\S+\]', '', text)
     # Remove disambiguation hatnotes (:For other places..., :See also...)
     text = re.sub(r'^:.*\n?', '', text, flags=re.MULTILINE)
     # Remove bold/italic wiki markers
     text = re.sub(r"'{2,}", '', text)
     # Remove HTML tags
     text = re.sub(r'<[^>]+>', '', text)
-    # Remove section headers (== Header ==)
-    text = re.sub(r'=+[^=\n]*=+', '', text)
+    # Remove section headers (== Header ==): ancorata a inizio riga, così un '='
+    # dentro un URL (query string) NON viene scambiato per un header e rimosso.
+    text = re.sub(r'(?m)^[ \t]*=+[^=\n]+=+[ \t]*$', '', text)
     # Normalize whitespace
     text = re.sub(r'[ \t]+', ' ', text)
     text = re.sub(r'\n\s*\n+', ' ', text)
@@ -236,6 +331,11 @@ def advanced_wiki_cleaner(raw_text):
         else:
             last_space = truncated.rfind(' ')
             text = (truncated[:last_space] + "...") if last_space > 0 else (truncated + "...")
+        # La troncatura può tagliare a metà un token-link: rimuovi un eventuale
+        # token aperto e non chiuso in coda (altrimenti i delimitatori PUA
+        # finirebbero nel testo come caratteri spuri).
+        if text.count(_L0) != text.count(_L2):
+            text = text[:text.rfind(_L0)]
     return text if len(text) > 10 else ""
 
 
@@ -531,7 +631,9 @@ def run_pipeline():
         )
 
         # --- wiki intro from the correct main page (mixed content) ---
-        wiki_intro_text = advanced_wiki_cleaner(full_text)
+        # keep_links=True: i link del wikitext sorgente sopravvivono come <link href>
+        # reali → content-model misto con iperlink (cfr. esempio delle slide).
+        wiki_intro_text = advanced_wiki_cleaner(full_text, keep_links=True)
         if wiki_intro_text:
             build_mixed_content(
                 etree.SubElement(root, "wiki_intro"), wiki_intro_text,

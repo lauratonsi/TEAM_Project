@@ -1,0 +1,202 @@
+{
+  "city_report": {
+    "@appeal_score": "50.9",
+    "@region": "southern",
+    "metadata": {
+      "title": "Nicosia",
+      "name_it": "Nicosia",
+      "flag": "🇨🇾",
+      "source_url": "https://en.wikivoyage.org/wiki/Nicosia"
+    },
+    "indicators": {
+      "hotel_count": "14",
+      "hotel_price": "113.22",
+      "safety": {
+        "@index_score": "67.9"
+      },
+      "environment": {
+        "@green_score": "40"
+      },
+      "cost_index": {
+        "@value": "61.2"
+      },
+      "economic_accessibility": {
+        "@score": "38.8"
+      }
+    },
+    "transport": {
+      "b": "Nicosia",
+      "#text": "The Old City is compact and easily walkable. For the wider metropolitan area a bus network and private taxis are available at accessible prices. Intercity buses connect"
+    },
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Averof Hotel",
+          "price": "sgl €35, dbl €55"
+        },
+        {
+          "name": "Sky Hotel",
+          "price": "rates from €60"
+        },
+        {
+          "name": "Asty Hotel",
+          "price": "sgl from €45, dbl from €65"
+        },
+        {
+          "name": "Kipros Accommodation",
+          "price": "rates from €44"
+        },
+        {
+          "name": "Delphi Hotel",
+          "price": "rates around €50"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "35.1764",
+          "@lon": "33.3644",
+          "name": "Selimiye Mosque",
+          "description": "Former cathedral converted into a mosque."
+        },
+        {
+          "@lat": "35.174",
+          "@lon": "33.3614",
+          "name": "Ledra Street",
+          "description": "Main shopping street and crossing point to the north."
+        },
+        {
+          "@lat": "35.1717",
+          "@lon": "33.3556",
+          "name": "Cyprus Museum",
+          "description": "Oldest and largest archaeological museum in Cyprus."
+        },
+        {
+          "@lat": "35.1814",
+          "@lon": "33.3614",
+          "name": "Kyrenia Gate",
+          "description": "One of the three gates in the Venetian walls."
+        },
+        {
+          "@lat": "35.1719",
+          "@lon": "33.3667",
+          "name": "Venetian Walls",
+          "description": "Circular fortifications surrounding the old city."
+        },
+        {
+          "@lat": "35.1761",
+          "@lon": "33.3625",
+          "name": "Buyuk Han",
+          "description": "Largest caravanserai on the island of Cyprus."
+        },
+        {
+          "@lat": "35.1731",
+          "@lon": "33.3678",
+          "name": "St John's Cathedral",
+          "description": "Main church of the Church of Cyprus."
+        },
+        {
+          "@lat": "35.1706",
+          "@lon": "33.3611",
+          "name": "Leventis Museum",
+          "description": "Museum dedicated to the history of Nicosia."
+        },
+        {
+          "@lat": "35.1736",
+          "@lon": "33.3711",
+          "name": "Liberty Monument",
+          "description": "Sculpture commemorating EOKA's fight for independence."
+        },
+        {
+          "@lat": "35.1711",
+          "@lon": "33.3617",
+          "name": "Shacolas Tower",
+          "description": "Observatory offering views of the whole city."
+        }
+      ]
+    },
+    "description": {
+      "b": "Nicosia",
+      "#text": "Bridge between Europe and the Middle East,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Nicosia",
+        "Nicosia",
+        "Nicosia",
+        "Nicosia",
+        "Nicosia",
+        "Nicosia",
+        "Nicosia"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Greek_phrasebook",
+          "#text": "Greek"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Turkish_phrasebook",
+          "#text": "Turkish"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Cyprus",
+          "#text": "Cyprus"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/nicosia.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "35.1596682",
+          "@lon": "33.3561106",
+          "@category": "pub",
+          "name": "Abbey Garden"
+        },
+        {
+          "@lat": "35.1636055",
+          "@lon": "33.3584549",
+          "@category": "pub",
+          "name": "Allou"
+        },
+        {
+          "@lat": "35.1630446",
+          "@lon": "33.3551565",
+          "@category": "pub",
+          "name": "Babylon"
+        },
+        {
+          "@lat": "35.1630898",
+          "@lon": "33.3585924",
+          "@category": "bar",
+          "name": "BARaki Live"
+        },
+        {
+          "@lat": "35.1646859",
+          "@lon": "33.3605366",
+          "@category": "bar",
+          "name": "Blurry Lights"
+        },
+        {
+          "@lat": "35.1737286",
+          "@lon": "33.3612322",
+          "@category": "bar",
+          "name": "Brewfellas"
+        },
+        {
+          "@lat": "35.168404",
+          "@lon": "33.3592474",
+          "@category": "pub",
+          "name": "Caprice"
+        },
+        {
+          "@lat": "35.1626192",
+          "@lon": "33.3541143",
+          "@category": "bar",
+          "name": "Carry Pride"
+        }
+      ]
+    }
+  }
+}

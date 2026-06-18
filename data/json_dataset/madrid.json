@@ -1,0 +1,207 @@
+{
+  "city_report": {
+    "@appeal_score": "65.2",
+    "@region": "southern",
+    "metadata": {
+      "title": "Madrid",
+      "name_it": "Madrid",
+      "flag": "🇪🇸",
+      "source_url": "https://en.wikivoyage.org/wiki/Madrid"
+    },
+    "indicators": {
+      "hotel_count": "0",
+      "hotel_price": "119.88",
+      "safety": {
+        "@index_score": "71.3"
+      },
+      "environment": {
+        "@green_score": "74"
+      },
+      "cost_index": {
+        "@value": "64.8"
+      },
+      "economic_accessibility": {
+        "@score": "35.2"
+      }
+    },
+    "transport": "To and from the airport During the day, Metro a popular best way to reach city centre. Line 8 (pink) runs from Nuevos Ministerios to Terminals 1,2&3, Barajas town (no airport here, don't get off!) and T4. It runs from 06:00 to 01:30, taking 15 min from city to T123 and another 5 min to T4.",
+    "accommodation": "",
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "40.4138",
+          "@lon": "-3.6921",
+          "name": "Prado Museum",
+          "description": "Main Spanish national art museum."
+        },
+        {
+          "@lat": "40.4179",
+          "@lon": "-3.7144",
+          "name": "Royal Palace",
+          "description": "Official residence of the Spanish royal family."
+        },
+        {
+          "@lat": "40.4153",
+          "@lon": "-3.6839",
+          "name": "Retiro Park",
+          "description": "Large urban park with a lake and monuments."
+        },
+        {
+          "@lat": "40.4154",
+          "@lon": "-3.7074",
+          "name": "Plaza Mayor",
+          "description": "Central square in the heart of Madrid."
+        },
+        {
+          "@lat": "40.4169",
+          "@lon": "-3.7035",
+          "name": "Puerta del Sol",
+          "description": "Busy public square and 'Kilometre Zero' for Spanish roads."
+        },
+        {
+          "@lat": "40.4079",
+          "@lon": "-3.6946",
+          "name": "Reina Sofia Museum",
+          "description": "National museum of 20th-century art (Guernica)."
+        },
+        {
+          "@lat": "40.4161",
+          "@lon": "-3.6949",
+          "name": "Thyssen-Bornemisza",
+          "description": "Major art museum forming the Golden Triangle of Art."
+        },
+        {
+          "@lat": "40.42",
+          "@lon": "-3.7011",
+          "name": "Gran Via",
+          "description": "Iconic shopping street with landmark architecture."
+        },
+        {
+          "@lat": "40.4531",
+          "@lon": "-3.6883",
+          "name": "Santiago Bernabéu",
+          "description": "Stadium and home ground of Real Madrid CF."
+        },
+        {
+          "@lat": "40.4241",
+          "@lon": "-3.7177",
+          "name": "Temple of Debod",
+          "description": "Ancient Egyptian temple rebuilt in Madrid."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Retiro-Paseo del Arte",
+          "description": "Quartiere di Madrid."
+        },
+        {
+          "name": "Salamanca",
+          "description": "Quartiere di Madrid."
+        },
+        {
+          "name": "Chamberí-Castellana",
+          "description": "Quartiere di Madrid."
+        },
+        {
+          "name": "Moncloa",
+          "description": "Quartiere di Madrid."
+        },
+        {
+          "name": "Arganzuela",
+          "description": "Quartiere di Madrid."
+        }
+      ]
+    },
+    "description": {
+      "b": "Madrid",
+      "#text": "Famous for its social energy and broad tree-lined avenues,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid",
+        "Madrid"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Spain",
+          "#text": "Spain"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Barcelona",
+          "#text": "Barcelona"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Community_of_Madrid",
+          "#text": "Community of Madrid"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/madrid.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "40.4130638",
+          "@lon": "-3.7129344",
+          "@category": "bar",
+          "name": "Bar Barocco"
+        },
+        {
+          "@lat": "40.4039506",
+          "@lon": "-3.7014278",
+          "@category": "pub",
+          "name": "Bar Díaz"
+        },
+        {
+          "@lat": "40.4048223",
+          "@lon": "-3.6960055",
+          "@category": "pub",
+          "name": "Bar la familia"
+        },
+        {
+          "@lat": "40.4041585",
+          "@lon": "-3.6959215",
+          "@category": "pub",
+          "name": "Bar Teide"
+        },
+        {
+          "@lat": "40.4097328",
+          "@lon": "-3.7010866",
+          "@category": "pub",
+          "name": "Café Melo's"
+        },
+        {
+          "@lat": "40.4108575",
+          "@lon": "-3.6957127",
+          "@category": "pub",
+          "name": "Casablanca"
+        },
+        {
+          "@lat": "40.4118925",
+          "@lon": "-3.7109337",
+          "@category": "pub",
+          "name": "Cervecería San Andrés"
+        },
+        {
+          "@lat": "40.4192413",
+          "@lon": "-3.7074836",
+          "@category": "pub",
+          "name": "Cervercería Erte"
+        }
+      ]
+    }
+  }
+}

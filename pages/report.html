@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../stile.css?v=fb3b7e0a">
+  <link rel="stylesheet" href="../stile.css?v=01101ee2">
   <title>Report &amp; Documentazione — EuroCity</title>
   <style>
     .report-nav {
@@ -238,6 +238,15 @@
     <div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>30</span><span class='rstat-label'>Capitali analizzate</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>370</span><span class='rstat-label'>Strutture ricettive</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>300</span><span class='rstat-label'>Attrazioni catalogate</span></div><div class='rstat-card'><span class='rstat-val' style='color:#8b5cf6'>19/30</span><span class='rstat-label'>Città con distretti</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--accent)'>61.3</span><span class='rstat-label'>Appeal medio</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--blue-500)'>66.0</span><span class='rstat-label'>Safety media</span></div><div class='rstat-card'><span class='rstat-val' style='color:var(--green-500)'>71.8</span><span class='rstat-label'>Green Score medio</span></div><div class='rstat-card'><span class='rstat-val' style='color:#D97706'>30</span><span class='rstat-label'>File XML validati</span></div>
   </div>
 
+  <div class="download-block" style="margin:18px 0;">
+    <p class="download-note">Scarica il dataset in formati alternativi all'XML (generati dalla pipeline dai documenti validati):</p>
+    <a href="../data/dataset_cities.csv" download class="download-link">📥 Dataset completo (CSV — 30 capitali)</a>
+    <p class="download-uri-note" style="margin-top:8px;">Ogni scheda città offre anche il download <b>JSON</b> del singolo documento
+    (convenzione <code>xmltodict</code>: <code>@attr</code> / <code>#text</code>). Nota: la conversione XML→JSON dei campi a
+    <b>content-model misto</b> (<code>wiki_intro</code>, <code>transport</code>, <code>description</code>) è <b>lossy</b> — come
+    avvertono le slide del corso, i formati per dati strutturati non catturano fedelmente testo + markup inline.</p>
+  </div>
+
   <h3 style="margin:6px 0 6px;">🔍 Da dove viene ogni numero — provenienza degli indicatori</h3>
   <p style="font-size:0.9rem; color:var(--slate-500); margin:0 0 14px;">
     In ogni XML confluiscono due famiglie di dati: i <b>contenuti testuali</b> estratti
@@ -405,7 +414,10 @@
           pulisce il Wikitext con regex, estrae distretti con descrizioni dalle sotto-pagine, e
           costruisce l'albero XML. I campi <code>transport</code>, <code>description</code> e
           <code>wiki_intro</code> sono generati come <b>content-model misto</b> (testo + markup
-          inline <code>&lt;b&gt;/&lt;i&gt;/&lt;link&gt;</code>); ogni documento riceve l'URI
+          inline <code>&lt;b&gt;/&lt;i&gt;/&lt;link&gt;</code>): gli <b>iperlink sono reali</b>,
+          presi dai wikilink del sorgente Wikivoyage e preservati come
+          <code>&lt;link href&gt;</code> (interni risolti su <code>en.wikivoyage.org</code>, max 3
+          per campo) — 79 elementi link su 29/30 città. Ogni documento riceve l'URI
           canonico <code>&lt;source_url&gt;</code>. L'albero viene <b>validato</b> rispetto al DTD
           con <b>lxml.etree.DTD</b> prima della scrittura in <code>data/xml_dataset/</code>.
         </p>
@@ -447,7 +459,7 @@
         <h3 style="margin:0;"><a href="https://github.com/lauratonsi/TEAM_Project/tree/main/rag" target="_blank" style="color:inherit;text-decoration:none;"><code>rag/</code></a> — Sistema RAG per query in linguaggio naturale</h3>
         <p>
           Modulo indipendente (<code>ingest.py</code> + <code>vectorstore.py</code> + <code>api.py</code>):
-          indicizza i 30 XML in <b>336 chunk</b> su un indice <b>FAISS</b> + <b>BM25Okapi</b> con
+          indicizza i 30 XML in <b>452 chunk</b> su un indice <b>FAISS</b> + <b>BM25Okapi</b> con
           <b>Reciprocal Rank Fusion</b>, e applica un <b>pre-filtro per metadati</b> (regione / valuta /
           categoria / soglie) prima della ricerca semantica. Documentazione completa nella sezione dedicata
           <a href="#rag">🔎 Virtual Analyst (RAG)</a>.
@@ -1053,6 +1065,16 @@ for filename in files:                                  # scorre la directory XM
     <li>raggio dei punti-attrazione aumentato per un'area di tocco più comoda.</li>
   </ul>
 
+  <h3>7. Contrasto del colore (WCAG AA)</h3>
+  <p style="font-size:0.9rem">
+    Un controllo del contrasto ha rilevato un link sotto la soglia AA per testo piccolo
+    (<b>4.5:1</b>): il link <i>Report &amp; Documentation</i> nel footer usava l'accent
+    <code>#E74C3C</code> su sfondo chiaro (<b>3.82:1</b>). È stato portato all'accent scuro
+    <code>#C0392B</code> (<b>5.44:1</b>, conforme AA). La barra di navigazione superiore, pur
+    avendo testo chiaro, è invece su sfondo <b>scuro</b> <code>#0B1524</code> (<b>10.48:1</b>):
+    già ampiamente conforme.
+  </p>
+
   <h3>7. Albero di accessibilità — <code>index.html</code></h3>
   <p style="font-size:0.9rem">
     È la struttura che uno screen reader «vede»: solo <b>ruoli</b> e <b>nomi accessibili</b>, non lo
@@ -1241,7 +1263,7 @@ btns.forEach(function(btn){
 
   <h3 style="margin-top:24px;color:var(--slate-500)">Dettagli tecnici (approfondimento)</h3>
   <p style="font-size:0.9rem">Le sezioni precedenti bastano per capire il sistema; qui sotto il "sotto il cofano".</p>
-  <pre>data/xml_dataset/*.xml  &rarr;  rag/ingest.py  &rarr;  rag_index/  (index.faiss 384-dim &middot; docs.json 336 chunk + meta)
+  <pre>data/xml_dataset/*.xml  &rarr;  rag/ingest.py  &rarr;  rag_index/  (index.faiss 384-dim &middot; docs.json 452 chunk + meta)
                                               &darr;
                        rag/vectorstore.py   FAISS + BM25Okapi &rarr; Reciprocal Rank Fusion + pre-filtro metadati
                                               &darr;
@@ -1369,7 +1391,7 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
     I conteggi qui sotto sono <b>calcolati a runtime</b> scandendo le cartelle del progetto.
   </p>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 20px">
-    <div class="rstat-card"><span class="rstat-val" style="color:var(--accent)">11</span><span class="rstat-label">File sorgente / dati</span></div>
+    <div class="rstat-card"><span class="rstat-val" style="color:var(--accent)">12</span><span class="rstat-label">File sorgente / dati</span></div>
     <div class="rstat-card"><span class="rstat-val" style="color:var(--blue-500)">10</span><span class="rstat-label">Script Python</span></div>
     <div class="rstat-card"><span class="rstat-val" style="color:var(--green-500)">33</span><span class="rstat-label">Pagine HTML generate</span></div>
     <div class="rstat-card"><span class="rstat-val" style="color:#8b5cf6">30</span><span class="rstat-label">XML validati DTD</span></div>

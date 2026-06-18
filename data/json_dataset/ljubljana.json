@@ -1,0 +1,190 @@
+{
+  "city_report": {
+    "@appeal_score": "74.7",
+    "@region": "southern",
+    "metadata": {
+      "title": "Ljubljana",
+      "name_it": "Lubiana",
+      "flag": "🇸🇮",
+      "source_url": "https://en.wikivoyage.org/wiki/Ljubljana"
+    },
+    "indicators": {
+      "hotel_count": "23",
+      "hotel_price": "109.52",
+      "safety": {
+        "@index_score": "78.4"
+      },
+      "environment": {
+        "@green_score": "88"
+      },
+      "cost_index": {
+        "@value": "59.2"
+      },
+      "economic_accessibility": {
+        "@score": "40.8"
+      }
+    },
+    "transport": {
+      "b": "Ljubljana",
+      "#text": "Getting there and away: By bus: Arriva Bus takes 50 min to the main bus and railway station (\""
+    },
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Aladin Hostel",
+          "price": "Dorm €15"
+        },
+        {
+          "name": "Celica",
+          "price": "Dorm €20"
+        },
+        {
+          "name": "Hostel Tabor",
+          "price": "B&B double €54"
+        },
+        {
+          "name": "Fluxus Hostel",
+          "price": "Dorm €21 ppn"
+        },
+        {
+          "name": "Most Hostel",
+          "price": "Dorm €21 ppn, double €60"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "46.0492",
+          "@lon": "14.5083",
+          "name": "Ljubljana Castle",
+          "description": "Medieval castle offering panoramic views of the city."
+        },
+        {
+          "@lat": "46.0514",
+          "@lon": "14.5061",
+          "name": "Triple Bridge",
+          "description": "Group of three bridges designed by Jože Plečnik."
+        },
+        {
+          "@lat": "46.0539",
+          "@lon": "14.4981",
+          "name": "Tivoli Park",
+          "description": "The largest and most beautiful park in Ljubljana."
+        },
+        {
+          "@lat": "46.052",
+          "@lon": "14.5103",
+          "name": "Dragon Bridge",
+          "description": "Art Nouveau bridge decorated with dragon statues."
+        },
+        {
+          "@lat": "46.0514",
+          "@lon": "14.5058",
+          "name": "Preseren Square",
+          "description": "The central square and heart of the city."
+        },
+        {
+          "@lat": "46.0567",
+          "@lon": "14.5167",
+          "name": "Metelkova Mesto",
+          "description": "Autonomous social centre in former military barracks."
+        },
+        {
+          "@lat": "46.0508",
+          "@lon": "14.5081",
+          "name": "Cathedral of St. Nicholas",
+          "description": "Baroque cathedral with iconic green dome and twin towers."
+        },
+        {
+          "@lat": "46.0536",
+          "@lon": "14.5006",
+          "name": "National Gallery",
+          "description": "Slovenia's main museum of historical art."
+        },
+        {
+          "@lat": "46.0503",
+          "@lon": "14.5069",
+          "name": "Robba Fountain",
+          "description": "Baroque fountain representing the three rivers of Carniola."
+        },
+        {
+          "@lat": "46.0528",
+          "@lon": "14.5033",
+          "name": "Skyscraper (Nebotičnik)",
+          "description": "Iconic modernist building with a terrace cafe."
+        }
+      ]
+    },
+    "description": {
+      "b": "Ljubljana",
+      "#text": "Elected Green Capital of Europe,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Ljubljana",
+        "Ljubljana",
+        "Ljubljana",
+        "Ljubljana",
+        "Ljubljana"
+      ],
+      "link": {
+        "@href": "https://en.wikivoyage.org/wiki/Slovenia",
+        "#text": "Slovenia"
+      }
+    },
+    "landmark_image": "assets/images/ljubljana.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "46.0503648",
+          "@lon": "14.5053083",
+          "@category": "bar",
+          "name": "...In En Pelin"
+        },
+        {
+          "@lat": "46.0557953",
+          "@lon": "14.5080434",
+          "@category": "pub",
+          "name": "10ka, klub smeha"
+        },
+        {
+          "@lat": "46.0431596",
+          "@lon": "14.5032606",
+          "@category": "bar",
+          "name": "Apotheka"
+        },
+        {
+          "@lat": "46.0450094",
+          "@lon": "14.5067236",
+          "@category": "pub",
+          "name": "Arhiv"
+        },
+        {
+          "@lat": "46.0547833",
+          "@lon": "14.5087356",
+          "@category": "pub",
+          "name": "Bangladeš"
+        },
+        {
+          "@lat": "46.0375051",
+          "@lon": "14.4584658",
+          "@category": "bar",
+          "name": "Bar"
+        },
+        {
+          "@lat": "46.0514114",
+          "@lon": "14.5083244",
+          "@category": "bar",
+          "name": "Bar \"Shakira\""
+        },
+        {
+          "@lat": "46.066765",
+          "@lon": "14.491929",
+          "@category": "bar",
+          "name": "Bar 99"
+        }
+      ]
+    }
+  }
+}

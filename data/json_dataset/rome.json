@@ -1,0 +1,220 @@
+{
+  "city_report": {
+    "@appeal_score": "48.4",
+    "@region": "southern",
+    "metadata": {
+      "title": "Rome",
+      "name_it": "Roma",
+      "flag": "🇮🇹",
+      "source_url": "https://en.wikivoyage.org/wiki/Rome"
+    },
+    "indicators": {
+      "hotel_count": "3",
+      "hotel_price": "132.28",
+      "safety": {
+        "@index_score": "46.8"
+      },
+      "environment": {
+        "@green_score": "60"
+      },
+      "cost_index": {
+        "@value": "71.5"
+      },
+      "economic_accessibility": {
+        "@score": "28.5"
+      }
+    },
+    "transport": "Testaccio is a short walk from the metro station and Circus Maximus also has its own metro station on the rome line (Circo Massimo). Near Piramide Metro station is Ostiense railway station, with regular connections to and from Fiumicino Airport. From Piramide you can also get trains to Ostia.",
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Gazometro B&B Rome",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Hotels Aventine, San Anselmo and San Pio",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Testaccio Hotel, Sonder",
+          "price": "Single €99, double €121"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "41.8902",
+          "@lon": "12.4922",
+          "name": "Colosseum",
+          "description": "The largest ancient amphitheatre ever built."
+        },
+        {
+          "@lat": "41.8986",
+          "@lon": "12.4769",
+          "name": "Pantheon",
+          "description": "Ancient Roman temple with a massive dome."
+        },
+        {
+          "@lat": "41.9009",
+          "@lon": "12.4833",
+          "name": "Trevi Fountain",
+          "description": "Iconic Baronque fountain where tourists throw coins."
+        },
+        {
+          "@lat": "41.8925",
+          "@lon": "12.4853",
+          "name": "Roman Forum",
+          "description": "Ruins of the heart of ancient Roman public life."
+        },
+        {
+          "@lat": "41.9065",
+          "@lon": "12.4548",
+          "name": "Vatican Museums",
+          "description": "Art museums including the Sistine Chapel."
+        },
+        {
+          "@lat": "41.9022",
+          "@lon": "12.4539",
+          "name": "St. Peter's Basilica",
+          "description": "Major Renaissance church in Vatican City."
+        },
+        {
+          "@lat": "41.8992",
+          "@lon": "12.4731",
+          "name": "Piazza Navona",
+          "description": "Square built on an ancient stadium with Bernini fountains."
+        },
+        {
+          "@lat": "41.9059",
+          "@lon": "12.4828",
+          "name": "Spanish Steps",
+          "description": "Famous monumental stairway of 135 steps."
+        },
+        {
+          "@lat": "41.9031",
+          "@lon": "12.4663",
+          "name": "Castel Sant'Angelo",
+          "description": "Hadrian's mausoleum converted into a papal fortress."
+        },
+        {
+          "@lat": "41.9142",
+          "@lon": "12.4921",
+          "name": "Borghese Gallery",
+          "description": "Museum in a villa housing Bernini and Caravaggio."
+        }
+      ]
+    },
+    "districts": {
+      "district": [
+        {
+          "name": "Aventino-Testaccio",
+          "description": "Aventino and Testaccio are neighbourhoods of Rome. Aventino is named for the hill which rises up near the Tiber river and is one of the legendary seven hills of Rome. Diagonally opposite at the end of Circus Maximus is the Celian Hill, another of the seven hills.\nTestaccio is an area to the southwest of Aventino along the bank of the Tiber and is named for the eighth hill of Rome, a man made hill that was built from discarded pot amphorae (testae) in Roman times. In Testaccio you can find great traditional Roman restaurants, and at night the zone is filled with discos. Easy access to Aventino from most areas of Rome. From Termini area take a bus to Piazza Venezia and walk from there to reach Piazza Bocca della Verità. Testaccio is a short walk from the metro station and Circus Maximus also has its own metro station on the line (Circo Massimo). Near Piramide Metro station is Ostiense railway station, with regular connections to and from Fiumicino Airport. From Piramide you can also get trains to Ostia. * \n* *\n*  *\n* \n*\n*\n*\n* \n* \n* \n* \n*  * \n*  * \n*  *\n* \n*  * There is usually a temporary food stall near the keyhole (see above) on the Aventino. But the best bet is to buy some food at a shop before you arrive and have a picnic at one of the parks on the Aventino overlooking the Tiber and the city. Volpetti at Via Marmorata 47 has a wide selection of prosciutto, salami, olives and cheeses. Perfect for a picnic. Alternatively, the three bars along the west side of the Viale Aventino all offer tables outside and serve sandwiches, salads and pastas. * \n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n*\n* * * \n*\n*"
+        },
+        {
+          "name": "Colosseo",
+          "description": "The Colosseo district is the heart of ancient Rome and the Roman Empire. It has the Colosseum, the Forum, and the Capitoline Museum. Via dei Fori Imperiali cuts through the centre of the Rome/Colosseo district, connecting Piazza Venezia with the Colosseum. It is well served by buses, although if you are into serious sightseeing you are likely to want to walk instead as the Roman Forum is on your right for most of the journey. After the Colosseum, the road becomes Via Labicana and takes you close to San Giovanni. Buses serving Via dei Fori Imperiali include No. 75, which connects Termini Station with Aventino- Testaccio and No. 85, which connects Piazza San Silvestro in the Modern Center (close to the Trevi Fountain) with San Giovanni. The metro station is two stops from Termini station in the direction of EUR. It will also be a stop for the new, and very much delayed, Line , and the Colosseum end of the Via dei Fori Imperiali is made unattractive by the construction site. *  *  *  * \n** \n** \n** \n** \n** \n** \n** \n** \n** \n**  When visiting the Colosseum in late spring, summer, or early fall, it is not unusual to see long lines at the entrance, where the admission fee is €18. The ticket is valid for 24 hours (updated September 2024) and includes admission to the Roman Forum, Palatine Hill, and the Colosseum. It is possible to purchase an admission to the Palatine Hill (or the Roman Forum) for the same sum, which also provides direct access to the Colosseum via an automated entrance. The ticket for the Colosseum, Roman Forum and the Palatine Hill (one ticket for all three sites) can be ordered online from the official ticket office and printed at home. The ticket is valid for 24 hours, starting from when you've first used it to enter either site. Even with the printed tickets you do have to stand in the line for the Colosseum, since there is a security check first. This line goes quite fast and isn't nearly as long as the line for the ticket office. When you have passed the security check, you can walk right to the ticket barriers. People who bought the ticket at the Colosseum have a small (metro style) ticket with a magnetic band. Your printed tickets won't fit in the machine. Therefore, make sure you use a barrier with a member of staff attending to it, they can scan your ticket with a hand scanner and let you pass. If no staff member is at the ticket barriers, go to the reservations office at the right, near the barrier. If you already have a ticket (from the Colosseum or Roman Forum or printed at home) and want to visit the Palatine Hill, make sure you don't stand in line at the entrance at Via di San Gregorio. The entrance near the Arch of Titus is closed. The line at the entrance is for people without a ticket. If you have a ticket, enter the entrance building at the right side of the line."
+        },
+        {
+          "name": "Esquilino-San Giovanni",
+          "description": "Esquilino and San Giovanni are adjacent neighborhoods in Rome. Esquilino is named for the Esquiline hill on which it stands. It lies south of the Termini station and is centred more or less on the Piazza Vittorio Emmanuele II. It is now partly a Chinese immigrant neighbourhood, and specialty groceries and shoe stores abound. San Giovanni is named after the Basilica, which is the Roman Catholic cathedral of Rome. The area is south-east of the Esquiline. Metro Line A connects station with the basilica of San Giovanni. There are also several buses from the downtown area, best caught at Piazza Venezia or at station by the Colosseum, where you can connect with Metro Line B. Porta Maggiore can be considered the tram hub of Rome, with four of the city's six remaining tram lines passing through. As such, any place in Rome that has a tram stop is connected to Porta Maggiore directly or with just one transfer. * \n* \n*  * \n* \n*  * Movies are shown and some performances are held for free in Piazza Vittorio during the summer. *  There are a lot of Chinese and Indian restaurants, but you will also find many typical trattorie. * \n*\n*\n*  * \n* \n* \n*  * \n* * Rome/Nomentano — for the nearby Porta Maggiore"
+        },
+        {
+          "name": "Modern Centre",
+          "description": "The Modern Centre of Rome, home to the Via Veneto, Quirinale, Castro Pretorio, Repubblica, and Trevi neighbourhoods, is the city's hub of activity, especially shopping and nightlife. It's also home to a huge assortment of hotels, and it's likely that you'll be staying here, despite the fact that most of Rome's historic attractions are elsewhere. The Modern Centre of Rome is not hard to find as the Termini Station brings you into the west edge of it. As you leave the station, the Castro Pretorio neighbourhood is to your right, with many smaller hotels. To the left the main roads of Via Cavour and Via Nazionale lead down the hill. Larger hotels here, catering more for groups than independent travellers. Termini Station is a major bus hub with buses to all parts of town. Beware taxi drivers who operate at the station as it seems to attract the most crooked ones. Get a cab from the rank and ignore the drivers who solicit you outside the station. Always insist that you see the meter is turned on after you get into the cab. No matter what time of day or night the starting price should never be more than €6 (during the day less) and a figure 1 on the meter should indicate that the correct rate is being applied. A legitimate extra fee of €2 is levied for all rides beginning at the station. *\n* \n* *\n*\n* \n*\n* \n*  *\n* \n* \n*\n*\n* \n*  *\n* For a little bit of shopping, the Via Nazionale is perfect: souvenirs, clothes, Italian shoes, etc. But the main attraction is without a doubt, the Via Veneto. *  There are many budget restaurants around.\n* \n* \n* \n* \n* \n* \n*  * \n* \n* * \n*{{drink\n| name=Harrys Bar | alt= | url=https://www.harrysbar.it/ | email=\n| address=Via Vittorio Veneto, 150 | lat=41.909146 | long=12.488308 | directions=\n| phone=+39 06484643 | tollfree=\n| hours= | price=\n| content=You can't visit Via Veneto and not go to Harrys Bar, forever associated with Fellinis' La Dolce Vita. Harrys is now a swanky upmarket {read expensive} bar/eatery where celebs can still be spotted. A piano bar. Sometimes guest artists availed themselves of the piano and entertain the patrons. For example, Australian Pianist Fiona Cohn played there.\n}}\n*  * \n* \n* \n* \n* \n* \n* \n*\n* \n* \n* \n* \n* \n*  * \n* \n* \n* \n* \n* \n* \n* \n* \n* \n* \n* \n* \n* \n* \n* \n*  *\n*\n* \n* \n* \n* \n* \n* \n*"
+        },
+        {
+          "name": "Nomentano",
+          "description": "Nomentano is a district of Rome. The San Lorenzo neighborhood is a student area south-east of Rome's main train station (Termini). It has a small street market (food, clothing), unpretentious caffès and is a major centre of Rome's night life. The Nomentano area is easily reachable by bus from Termini Station (90) from Piazza Venezia or via Nazionale (60) or by Metro Line (stops: Castro Pretorio, Policlinico, Piazza Bologna, Tiburtina). *  * * Drinking in the open. Do what Romans (students in particular) do: buy a cheap beer in one of the countless bar around and just hang out or stroll, observing people and enjoying the mildness of a Roman evening. *\n* * \n*  * \n* \n* \n*  *"
+        }
+      ]
+    },
+    "description": {
+      "b": "Rome",
+      "#text": "Eternal city of layered beauty,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Rome",
+        "Roma",
+        "Rome",
+        "Rome",
+        "Rome",
+        "Rome",
+        "Rome",
+        "Rome",
+        "Rome",
+        "Rome",
+        "Rome"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Italian_phrasebook",
+          "#text": "Italian"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Italy",
+          "#text": "Italy"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Lazio",
+          "#text": "Lazio"
+        }
+      ],
+      "i": "Latin"
+    },
+    "landmark_image": "assets/images/rome.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "41.8876051",
+          "@lon": "12.4771625",
+          "@category": "pub",
+          "name": "404 Name Not Found"
+        },
+        {
+          "@lat": "41.9622761",
+          "@lon": "12.5186845",
+          "@category": "pub",
+          "name": "ABC"
+        },
+        {
+          "@lat": "41.9090849",
+          "@lon": "12.4536435",
+          "@category": "bar",
+          "name": "Alexanderplatz"
+        },
+        {
+          "@lat": "41.889666",
+          "@lon": "12.4690788",
+          "@category": "bar",
+          "name": "Art Two"
+        },
+        {
+          "@lat": "41.871175",
+          "@lon": "12.4790787",
+          "@category": "pub",
+          "name": "Bar Cornetteria"
+        },
+        {
+          "@lat": "41.8627773",
+          "@lon": "12.4899263",
+          "@category": "bar",
+          "name": "Bar dei Cesaroni"
+        },
+        {
+          "@lat": "41.8890547",
+          "@lon": "12.4707375",
+          "@category": "bar",
+          "name": "Bar San Calisto"
+        },
+        {
+          "@lat": "41.89224",
+          "@lon": "12.5661173",
+          "@category": "pub",
+          "name": "Baraka Bistrot"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "city_report": {
+    "@appeal_score": "61.7",
+    "@region": "eastern",
+    "metadata": {
+      "title": "Bratislava",
+      "name_it": "Bratislava",
+      "flag": "🇸🇰",
+      "source_url": "https://en.wikivoyage.org/wiki/Bratislava"
+    },
+    "indicators": {
+      "hotel_count": "25",
+      "hotel_price": "107.49",
+      "safety": {
+        "@index_score": "68.4"
+      },
+      "environment": {
+        "@green_score": "65"
+      },
+      "cost_index": {
+        "@value": "58.1"
+      },
+      "economic_accessibility": {
+        "@score": "41.9"
+      }
+    },
+    "transport": "There are no dedicated airport shuttles, however the airport is served as part of the municipal bus network. Use bus No 61 (or N61 at night) for a direct connection to the Central Train Station (Hlavná stanica). Or change for a tram at Trnavské mýto to get to the city (in order to get to the tram stop, use the underpass and the exit marked \"Centrum\" (city ) and take any tram in the direction towards .",
+    "accommodation": {
+      "hotel": [
+        {
+          "name": "Patio Hostel",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Hostel Chors",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Wild Elephants Hostel",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Hotel Arcus",
+          "price": "Prezzo N/D"
+        },
+        {
+          "name": "Aston Business Hotel",
+          "price": "Prezzo N/D"
+        }
+      ]
+    },
+    "highlights": {
+      "attraction": [
+        {
+          "@lat": "48.1422",
+          "@lon": "17.1002",
+          "name": "Bratislava Castle",
+          "description": "Main castle of the city overlooking the Danube."
+        },
+        {
+          "@lat": "48.1415",
+          "@lon": "17.1048",
+          "name": "St. Martin's Cathedral",
+          "description": "Gothic cathedral and former coronation site of kings."
+        },
+        {
+          "@lat": "48.1449",
+          "@lon": "17.1068",
+          "name": "Michael's Gate",
+          "description": "The only city gate preserved from the medieval fortifications."
+        },
+        {
+          "@lat": "48.1492",
+          "@lon": "17.1077",
+          "name": "Grassalkovich Palace",
+          "description": "The residence of the President of Slovakia."
+        },
+        {
+          "@lat": "48.1539",
+          "@lon": "17.0997",
+          "name": "Slavin Memorial",
+          "description": "Monument and cemetery for Soviet soldiers."
+        },
+        {
+          "@lat": "48.1384",
+          "@lon": "17.1046",
+          "name": "UFO Observation Deck",
+          "description": "Unique bridge structure with a deck offering city views."
+        },
+        {
+          "@lat": "48.1432",
+          "@lon": "17.1166",
+          "name": "Blue Church",
+          "description": "Art Nouveau church famous for its blue color."
+        },
+        {
+          "@lat": "48.1442",
+          "@lon": "17.1085",
+          "name": "Primate's Palace",
+          "description": "Neoclassical palace where the Peace of Pressburg was signed."
+        },
+        {
+          "@lat": "48.1439",
+          "@lon": "17.1086",
+          "name": "Old Town Hall",
+          "description": "Complex of buildings dating back to the 14th century."
+        },
+        {
+          "@lat": "48.1402",
+          "@lon": "17.1205",
+          "name": "Eurovea",
+          "description": "Modern riverside district for shopping and leisure."
+        }
+      ]
+    },
+    "description": {
+      "b": "Bratislava",
+      "#text": "Strategically located on the Danube,"
+    },
+    "wiki_intro": {
+      "b": [
+        "Bratislava",
+        "Bratislava",
+        "Bratislava",
+        "Bratislava",
+        "Bratislava",
+        "Bratislava"
+      ],
+      "link": [
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Hungarian_phrasebook",
+          "#text": "Hungarian"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/German_phrasebook",
+          "#text": "German"
+        },
+        {
+          "@href": "https://en.wikivoyage.org/wiki/Slovakia",
+          "#text": "Slovakia"
+        }
+      ]
+    },
+    "landmark_image": "assets/images/bratislava.jpg",
+    "nightlife": {
+      "venue": [
+        {
+          "@lat": "48.1806419",
+          "@lon": "17.1845266",
+          "@category": "pub",
+          "name": "Amajka"
+        },
+        {
+          "@lat": "48.1515503",
+          "@lon": "17.1184819",
+          "@category": "pub",
+          "name": "Americke pub"
+        },
+        {
+          "@lat": "48.1590046",
+          "@lon": "17.1161827",
+          "@category": "pub",
+          "name": "Bastion"
+        },
+        {
+          "@lat": "48.1475592",
+          "@lon": "17.1063371",
+          "@category": "pub",
+          "name": "Bernard pri Lýceu"
+        },
+        {
+          "@lat": "48.1786793",
+          "@lon": "17.0505322",
+          "@category": "pub",
+          "name": "Black Rose"
+        },
+        {
+          "@lat": "48.1032675",
+          "@lon": "17.040655",
+          "@category": "nightclub",
+          "name": "C2"
+        },
+        {
+          "@lat": "48.1527045",
+          "@lon": "17.0863227",
+          "@category": "pub",
+          "name": "Chilli Pub"
+        },
+        {
+          "@lat": "48.1623963",
+          "@lon": "17.0499081",
+          "@category": "pub",
+          "name": "Coral"
+        }
+      ]
+    }
+  }
+}

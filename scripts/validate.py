@@ -34,7 +34,9 @@ from lxml import etree
 
 ROOT = Path(__file__).resolve().parent.parent
 DTD_FILE = ROOT / 'data' / 'city_report.dtd'
-DEFAULT_XML_DIR = ROOT / 'data' / 'xml_dataset'
+# Directory di input in UNA variabile, sovrascrivibile da ambiente o da argomento
+# a riga di comando (cfr. slide "Documenti XML in input").
+DEFAULT_XML_DIR = Path(os.environ.get('TEAM_XML_DIR', str(ROOT / 'data' / 'xml_dataset')))
 
 
 def inspect_dom(tree):
