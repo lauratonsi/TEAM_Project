@@ -31,7 +31,7 @@ def count_microdata(paths):
 
 def inline_to_html(el):
     """Serialise an element's *mixed content* into an HTML fragment, mapping the
-    DTD inline vocabulary (b / i / link) to HTML (b / i / a). Plain text and tails
+    DTD inline vocabulary (b / i / link) to HTML (strong / em / a). Plain text and tails
     are HTML-escaped; the generated tags are literal. Returns '' if `el` is None.
 
     Needed because findtext() drops child-element text: once description/wiki_intro/
