@@ -1389,7 +1389,7 @@ def generate_city_pages(city_data):
             <div class='stat-card'>
                 <span class='stat-card-label'>🍸 Venues</span>
                 <div class='stat-card-top'>
-                    <span class='stat-card-val val-blue'>{city['hotel_count']}</span>
+                    <span class='stat-card-val val-blue'>{len(city['nightlife'])}</span>
                 </div>
             </div>
             <div class='stat-card'>
