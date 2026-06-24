@@ -45,7 +45,6 @@ ELABORAZIONE/
 │   ├── check_microdata.py               # Verifica round-trip microdata Schema.org (libreria `microdata`)
 │   ├── fetch_nightlife.py               # One-shot: recupera locali da OpenStreetMap/Overpass → nightlife.json
 │   ├── download_images.py               # One-shot: scarica immagini landmark via Wikipedia API → assets/images/
-│   ├── google_language_api.py           # One-shot: analisi testuale con Google Cloud Language API (richiede GCP)
 │   └── map.py                           # Prototipo mappa Folium (sostituito da implementazione Leaflet.js)
 ├── pages/
 │   ├── cities/*.html                    # 30 pagine città (una per file XML)
@@ -163,9 +162,8 @@ di uscita `0` solo se tutti i file sono validi. Output:
 📋 Risultato: 30/30 validi · 0 non validi · 0 malformati
 ```
 
-> `extract_wiki_info.py` è lo script di preparazione iniziale (richiede [`mwparserfromhell`](https://mwparserfromhell.readthedocs.io/), `spacy`,
-> opzionalmente Google Cloud Language API). I file CSV/JSON prodotti sono già inclusi nel repository,
-> quindi non è necessario rieseguirlo.
+> `extract_wiki_info.py` è lo script di preparazione iniziale (richiede [`mwparserfromhell`](https://mwparserfromhell.readthedocs.io/), `spacy`).
+> I file CSV/JSON prodotti sono già inclusi nel repository, quindi non è necessario rieseguirlo.
 
 ---
 

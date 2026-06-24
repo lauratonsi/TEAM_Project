@@ -65,6 +65,7 @@ def download_image(url: str, dest: str) -> None:
 
 ok, fail = [], []
 
+# Se un immagine è già presente e >10KB, la skippo (non sovrascrivo)
 for city in CITIES:
     dest = os.path.join(OUT_DIR, f"{city.lower()}.jpg")
     if os.path.exists(dest) and os.path.getsize(dest) > 10_000:

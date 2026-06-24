@@ -3258,12 +3258,6 @@ sicurezza, accessibilità economica. Tono: analitico, da report istituzionale.</
         <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">CC-BY-SA</td>
       </tr>
       <tr>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)"><a href="{GH}/blob/main/scripts/google_language_api.py" target="_blank"><code>scripts/google_language_api.py</code></a></td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Analisi testuale con Google Cloud Language API su <code>wiki_text_pulito.csv</code> (richiede credenziali GCP)</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">Google Cloud NLP</td>
-        <td style="padding:8px 12px;border-bottom:1px solid var(--slate-100)">—</td>
-      </tr>
-      <tr>
         <td style="padding:8px 12px"><a href="{GH}/blob/main/scripts/map.py" target="_blank"><code>scripts/map.py</code></a></td>
         <td style="padding:8px 12px">Prototipo iniziale della mappa interattiva con Folium; sostituito dall'implementazione Leaflet.js</td>
         <td style="padding:8px 12px">Progetto originale</td>
