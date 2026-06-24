@@ -32,9 +32,9 @@
         "Oslo",
         "Oslo"
       ],
-      "#text": "Flytoget (Airport Express Train), operates high speed express trains, generally taking 19-22 minutes to reach"
+      "#text": "Flytoget (Airport Express Train), operates high speed express trains, generally taking 19-22 minutes to reach  Central Station ( S). Trains to  Central Station depart every 10 minutes on weekdays from 07.00 to 23.10, Sundays from 11.30 to 23.10, and every 20 minutes at other times (04.40-06.50 and 23.10-00.50 everyday, 07.20-11.20 Sundays, and all-day during Saturdays and bank holidays). Every 20 minutes from 05.30 to 00.50, the train also calls at Lillestrøm and continues past  S to Drammen, stopping at Nationaltheatret station, which is more convenient for destinations in the western end of the city ."
     },
-    "accommodation": "",
+    "accommodation": null,
     "highlights": {
       "attraction": [
         {
@@ -125,7 +125,7 @@
     },
     "description": {
       "b": "Oslo",
-      "#text": "World capital of electric mobility,"
+      "#text": "World capital of electric mobility,  is surrounded by forests and fjords that extend into the city center. It represents the pinnacle of environmental sustainability combined with rock-solid economic stability."
     },
     "wiki_intro": {
       "b": [
@@ -163,7 +163,8 @@
           "@href": "https://en.wikivoyage.org/wiki/fjords_of_Norway",
           "#text": "fjord"
         }
-      ]
+      ],
+      "#text": "is 's capital and largest city, with 700,000 citizens in the city proper and about 1.5 million inhabitants in greater . It is in  in the Oslofjorden , extending over an inlet of the Skagerrak strait. It is spaciously laid out and surrounded by green hills and mountains and includes 40 islands and 343 lakes.  offers ski slopes for alpine skiing and ski trails for cross-country skiing in the winter. In the summer, the temperature in  may make it comfortable to swim. There are several well-visited beach resorts.  is one of the world's northernmost capitals and so gets only 6 hours of sunlight in the winter. In high summer, sunlight hours soar to 18, making its climate markedly different between seasons, with cold yet relatively dry winters. A relatively compact city squeezed into a thin strip of land along the shoreline,  prides itself as one of the world's most sustainable cities. Central parts of the city are compact, but  as a whole is relatively spacious. While it holds an array of historic monuments,  is perhaps most famous for its modern architecture, including striking and daring projects launched at the turn of the millennium. 's economy is powered by the maritime industry, high-tech and clean energy sectors. In 2010,  was ranked as the world's most expensive city to live in by the Swiss wealth management company UBS AG, but has fallen to 27th place on Mercers ranking in 2022.  is Norway's economic and demographic centre, as well as the hub for most domestic and international transport. Despite 's population density there is never more than 300 meters' walk to a park or green area from any residence in the city.  is the demographic, economic and political centre of Norway. As the capital of Norway,  hosts several national institutions within government, education, culture, sports and transport. The city has a good selection of cultural institutions and a good selection of restaurants, some world class but most ordinary, as well as night life in general. While it is an expensive city for some overseas visitors, many of the best things are free of charge, notably 's proximity to wild nature, inner city parks and variety of outdoor activities. Metropolitan  also includes most of Akershus county and the line between these is so blurred that the two is seen as one city. Local public transport such as the  metro covers  proper and the surrounding districts.  proper has over 700,000 inhabitants while metropolitan  has well over 1 million inhabitants."
     },
     "landmark_image": "assets/images/oslo.jpg",
     "nightlife": {

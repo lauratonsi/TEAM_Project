@@ -29,9 +29,9 @@
         "Riga",
         "Riga"
       ],
-      "#text": "Bus route 22 runs between the airport and the old town, with a stop near the central bus and railway stations as well as old town. These buses operate as any other public transport in"
+      "#text": "Bus route 22 runs between the airport and the old town, with a stop near the central bus and railway stations as well as old town. These buses operate as any other public transport in ; see #Get_around for more information on riding the buses. The journey to the old town takes 30-40 minutes."
     },
-    "accommodation": "",
+    "accommodation": null,
     "highlights": {
       "attraction": [
         {
@@ -118,7 +118,7 @@
     },
     "description": {
       "b": "Riga",
-      "#text": "Baltic pearl famous for Art Nouveau,"
+      "#text": "Baltic pearl famous for Art Nouveau,  offers immense green spaces and a growing tech scene. Its economic accessibility makes it a strategic choice for young professionals and conscious travelers."
     },
     "wiki_intro": {
       "b": [
@@ -151,7 +151,8 @@
       "i": [
         "Vecrīga",
         "Centrs"
-      ]
+      ],
+      "#text": "is the financial, creative, and cultural centre of . It is the capital and the largest city in Latvia, it is also the second largest city in the  after the  capital Vilnius. The city lies on the Gulf of , at the mouth of Daugava,  has a population of approximately 640,000 inhabitants, or 1/3 of the population of Latvia. The city was part of many empires throughout history, each of which has left its mark on the city. It is famous for Art Nouveau and wooden architecture. 's historical centre is listed as a UNESCO World Heritage site. There are many administrative districts in . However, almost all tourist attractions, historic buildings and hotels are contained within the borders of the relatively small and walkable Centra rajons district, which is made up of Vecrīga (the old town) and Centrs (the modern-day business district). However if you have already seen the more famous attractions in the city centre, the outer districts do have their own draws too. On both sides of the mouth of Daugava river, the Gulf of  offers extensive sandy seaside beaches, which can be reached by city bus or train. A nude beach can be found a 15-minute walk out of Vecāķi.  is famous for its world heritage-listed old town () and city centre (), in which over 800 buildings — a third of all buildings — are of the Art Nouveau (aka Jugendstil) style of architecture and thus  is one of the best destinations to see this architectural style. Chiefly built in the first years of the 20th century, many of 's Art Nouveau buildings were created by ethnic Latvian architects unlike earlier buildings in the city . The Art Nouveau style involves intricate building facades, with carvings of flowers and mythological creatures, and ornate doorways and windows. A considerable part of the old town was either destroyed by fire or destroyed by the Germans in World War II but many old buildings were also spared. The old town was a draw of the city during the Soviet times and it received protected status in 1967. The damaged parts, most notably the House of the Blackheads, were restored in the late 1990s, mainly to make  more attractive as a tourist destination. Another thing that attracts visitors, especially young adults, is the lively nightlife and discount airlines that offer cheap flights to/from much of Europe.  is bisected by the river Daugava. Old (medieval) town is in the centre of the city on the east side of the river."
     },
     "landmark_image": "assets/images/riga.jpg",
     "nightlife": {

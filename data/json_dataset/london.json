@@ -27,9 +27,9 @@
     },
     "transport": {
       "b": "London",
-      "#text": "Heathrow Express - Non-stop trains to"
+      "#text": "Heathrow Express - Non-stop trains to  Paddington. Departures every 15 minutes from Heathrow Terminal 2 and 3, and Heathrow Terminal 5. Journey time is 15-20 minutes."
     },
-    "accommodation": "",
+    "accommodation": null,
     "highlights": {
       "attraction": [
         {
@@ -120,7 +120,7 @@
     },
     "description": {
       "b": "London",
-      "#text": "Global metropolis with inexhaustible economic power,"
+      "#text": "Global metropolis with inexhaustible economic power,  handles immense tourist flows with cutting-edge security systems. Despite high costs, it remains the hub of innovation and European cultural diversity."
     },
     "wiki_intro": {
       "b": [
@@ -158,7 +158,7 @@
           "#text": "City of London"
         }
       ],
-      "#text": "Vibrant and truly multicultural,"
+      "#text": "Vibrant and truly multicultural,  is a megalopolis of people, ideas and frenetic energy. The capital and largest city of the  sits on the River Thames in . Greater  has a population of a little over 9 million. Considered one of the world's leading \"global cities\",  remains an international capital of culture, music, education, fashion, politics, finance and trade.  For the visitor, there is a seemingly endless choice of historical sites, shopping, museums, food, art galleries, nightlife, and activities. Once a Celtic settlement,  is a bustling city, where visitors come to experience the urban heritage and see its specific royal-themed attractions. The name \"\" used to refer only to the once-walled \"Square Mile\" of the original Roman and later medieval city; this is now confusingly called the \"\" or just \"The City\". Today,  has taken on a much larger meaning to include all of the vast central parts of the modern metropolis, with the city having absorbed numerous surrounding towns and villages over the centuries, including large portions of the surrounding \"home counties\", one of which - Middlesex - being completely consumed by the growing metropolis. The term Greater  embraces Central  together with all the outlying suburbs that lie in one continuous urban sprawl within the lower Thames Valley. Though densely populated,  retains large swathes of green parkland and open space, even within the city centre. Greater  is most of the area surrounded by the M25 orbital motorway, and consists of 32  Boroughs and the City of  that, together with the office of the Mayor of , form the basis for 's local government. The Mayor of  is elected by  residents and should not be confused with the Lord Mayor of the City of . The names of several boroughs, such as Westminster and Camden, are well-known, others less so, such as Wandsworth and Lewisham. This traveller's guide to  recognises cultural, functional and social districts of varying type and size: Settlements have existed on the site of  since well before Roman times, with evidence of Bronze Age and Celtic inhabitants. The Roman city of Londinium, established just after the Roman conquest of Britannia in the year 43, formed the basis for the modern city (some isolated Roman period remains are still to be seen within the City)."
     },
     "landmark_image": "assets/images/london.jpg",
     "nightlife": {

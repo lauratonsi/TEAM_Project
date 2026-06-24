@@ -31,7 +31,7 @@
         "Athens"
       ],
       "i": "OASA",
-      "#text": "Transport for"
+      "#text": "Transport for  () operates public transportation in . Its subdivisions include STASY and OSY. A single ticket allows you to travel on any types of transport, metro, trams, buses, with unlimited transfers anywhere time within  for 90 minutes."
     },
     "accommodation": {
       "hotel": [
@@ -169,7 +169,8 @@
           "@href": "https://en.wikivoyage.org/wiki/Classical_Greece",
           "#text": "Classical Greece"
         }
-      ]
+      ],
+      "#text": "(: , Athína) is the capital city of  with a metropolitan population of 3.6 million inhabitants (2025) based on ELSTAT Census but with undocumented population it reaches 5.2 million. It was a major cultural, political and religious centre of , a place that deeply influenced the course of Western civilization. Don't come expecting a philosopher's theme park; contemporary  is the graffiti-coated, fast-beating urban heart of the country, where modern Greek culture, business and social life flourish amidst ancient monuments.  is the largest city in Greece, and sprawls across the majority of the Attica region. Most areas of interest to visitors will be found within the central  municipality. The following are the five main regions.  * Central Athens - The active heart of the city. Most ancient sites as well as museums can be found here. \n* North Athens - A mainly residential area. Contains some museums, high end restaurants and malls, and activities.\n* West Athens - Residential with some malls. \n* Piraeus (Area) - ' main port. Location of National Library as well as some activities.\n* South Athens - The location of most beaches accessible by public transport. According to mythology, the Greek Gods Poseidon and Athena wanted to claim the city for their own. To persuade the people to accept them, they granted gifts. Poseidon struck his spear into the ground and produced running water. Athena gave the city olive trees, which provide food and economic prosperity through trade. The people were then asked to vote for the Gods, and Athena won by a single vote, resulting in the city bearing her name. The first pre-historic settlements were constructed in 3000 BCE around the hill of Acropolis. According to legend the King of , Theseus, unified the ten tribes of early  into one kingdom in around 1230 BCE. This process of synoikismos () – bringing together in one home – created the largest and wealthiest state on the Greek mainland, but it also created a larger class of people excluded from political life by the nobility. By the 7th century BCE, social unrest had become widespread, and the Areopagus appointed Draco to draft a strict new law code (hence \"draconian\"). Still, the Draconian laws were a big advancement, as they codified crime and punishment unlike the previous arbitrary judgments of the rulers. When Draco's system failed, they appointed Solon, with a mandate to create a new constitution (594 BCE)."
     },
     "landmark_image": "assets/images/athens.jpg",
     "nightlife": {

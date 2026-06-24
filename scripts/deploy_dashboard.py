@@ -1,6 +1,7 @@
 import os, json, re, html, glob, hashlib, csv
 from pathlib import Path
 from lxml import etree
+import xmltodict
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -55,36 +56,6 @@ def inline_to_html(el):
         if child.tail:
             parts.append(html.escape(child.tail))
     return "".join(parts)
-
-
-def xml_to_dict(el):
-    """Converte un elemento lxml in dict secondo la convenzione *xmltodict*
-    (slide "XML vs. JSON": attributi → "@nome", testo → "#text", figli ripetuti →
-    lista). Serve a produrre il download JSON di ogni città a partire dal documento.
-
-    NB didattica: per i campi a *content-model misto* (transport/description/
-    wiki_intro) la conversione è LOSSY — si conserva solo el.text (il testo prima
-    del primo figlio inline) mentre i *tail* tra i <b>/<i>/<link> si perdono. È
-    l'esatto avvertimento delle slide: «le conversioni da formati per documenti
-    (semi-strutturati) a formati per dati (strutturati) non sempre sono accurate»."""
-    node = {}
-    for k, v in el.attrib.items():
-        node['@' + k] = v
-    for child in el:
-        tag = etree.QName(child).localname
-        cd = xml_to_dict(child)
-        if tag in node:
-            if not isinstance(node[tag], list):
-                node[tag] = [node[tag]]
-            node[tag].append(cd)
-        else:
-            node[tag] = cd
-    text = (el.text or '').strip()
-    if node:
-        if text:
-            node['#text'] = text
-        return node
-    return text
 
 
 # --- CONFIGURAZIONE ---
@@ -831,10 +802,15 @@ def deploy():
                 f' <span style="opacity:.7;font-weight:400">· {_ni}</span>')
             city_data.append(city_obj)
 
-            # --- Download JSON per città (convenzione xmltodict, dal documento XML) ---
+            # --- Download JSON per città: conversione XML→JSON con la libreria xmltodict
+            # (vista nei notebook del corso). Convenzione: attributi → "@nome", testo →
+            # "#text", figli ripetuti → lista; la radice <city_report> diventa la chiave
+            # top-level. NB: sui campi a content-model misto (transport/description/
+            # wiki_intro) la conversione resta LOSSY — testo e markup inline non sono resi
+            # fedelmente: è l'esatto avvertimento delle slide "XML vs. JSON".
             os.makedirs(JSON_DIR, exist_ok=True)
             with open(os.path.join(JSON_DIR, f"{city_lower}.json"), 'w', encoding='utf-8') as jf:
-                json.dump({'city_report': xml_to_dict(root)}, jf,
+                json.dump(xmltodict.parse(etree.tostring(root, encoding='utf-8')), jf,
                           ensure_ascii=False, indent=2)
 
             # Card compatta per index: solo immagine + stats + CTA

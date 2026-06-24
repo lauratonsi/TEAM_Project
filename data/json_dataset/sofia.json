@@ -27,7 +27,8 @@
     },
     "transport": {
       "b": "Sofia",
-      "i": "Yellow"
+      "i": "Yellow",
+      "#text": "Metro Line 4 () operates service to the airport between 05:30 and 24:00. The stop is a few metres outside of Terminal 2; follow signs for \"Subway\" until you leave the southeast corner of the building. The journey to the city centre takes 20–30 minutes."
     },
     "accommodation": {
       "hotel": [
@@ -119,7 +120,7 @@
     },
     "description": {
       "b": "Sofia",
-      "#text": "Located at the foot of Mount Vitosha,"
+      "#text": "Located at the foot of Mount Vitosha,  offers unbeatable living costs and immediate access to mountain nature. It is one of the emerging capitals with the highest potential for economic and urban growth."
     },
     "wiki_intro": {
       "b": [
@@ -145,7 +146,8 @@
           "@href": "https://en.wikivoyage.org/wiki/Constantinople",
           "#text": "Constantinople"
         }
-      ]
+      ],
+      "#text": "(София) is the capital and largest city of , with about 2 million citizens (including suburbs). It is a dynamic European capital, distinguished by its unique combination of European and communist-style architecture as well as many beautiful Orthodox churches, including the grand Alexander Nevsky Cathedral and the medieval frescos of Boyana Church (a ). Furthermore, it claims to be one of the few European capitals with beautiful scenery and a developed ski-resort so close to it, the Vitosha mountain. The city has had several names over the past 2,500 years: the Romans called it Serdika when they took it from a Thracian tribe with a similar name, the Slavs called it Sredets when they integrated it into the first Bulgarian Empire, and the Ottomans called it , the Greek word for \"wisdom\", when they made it their base for the Balkans. You can still find remnants from each of these societies in parts of the city. People first came here for the hot water springs that still flow abundantly in the centre of the city. Many of the later Roman emperors took a liking to these thermal baths, and developed the city into a regional capital; Emperor Constantine even considered building his imperial capital here instead of . From there,  has had ups and downs; sacked by the Huns, then a fortress for the first Bulgarians, then sieged and rebuilt by the Ottomans. The decline of  towards the end of the Ottoman Empire was followed by the rejuvenation after the Russian liberation in 1878, when  was chosen as the capital of Bulgaria at the First National Constituent Assembly, and followed by a brisk and straightforward period of construction. During the Second World War, thousands of buildings were destroyed or damaged by bombing campaigns, until the Soviet Red Army occupied  and established a Communist government, which constructed Stalinist Gothic public buildings and concrete tower blocks. Newer construction has led to glass-fronted office buildings and top-class residential neighbourhoods. *VisitSofia.bg, 's official tourist information website. Available in several languages, including English.\n*\n*\n* *  Over 20 airlines operate service to/from , with direct flights to/from Athens, Paris, Vienna, London, Rome, Amsterdam, Munich, Warsaw and other European cities."
     },
     "landmark_image": "assets/images/sofia.jpg",
     "nightlife": {

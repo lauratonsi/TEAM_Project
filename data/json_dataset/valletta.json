@@ -26,7 +26,7 @@
     },
     "transport": {
       "b": "Valletta",
-      "#text": "By bus In front of the main gate of"
+      "#text": "By bus In front of the main gate of  is the main bus station for the entire island, and bus lines covering the island in a grid, most of them spread out from here and return to here."
     },
     "accommodation": {
       "hotel": [
@@ -118,7 +118,7 @@
     },
     "description": {
       "b": "Valletta",
-      "#text": "Baroque fortress in the heart of the Mediterranean,"
+      "#text": "Baroque fortress in the heart of the Mediterranean,  is an open-air museum with impeccable safety. Its small size hides vibrant cultural energy and a mild climate year-round."
     },
     "wiki_intro": {
       "b": [
@@ -146,7 +146,8 @@
           "@href": "https://en.wikivoyage.org/wiki/Maltese_phrasebook",
           "#text": "Maltese"
         }
-      ]
+      ],
+      "#text": "or Il-Belt is the capital of . Historically built as harbour city to first capital,  preserves much of its 16th-century architectural heritage built under the Hospitallers.  was one of the earliest sites inscribed on the . Referred to colloquially as Il-Belt (\"The City\") in , it takes its name from its founder, Grandmaster Jean Parisot de Valette. With a population of less than 5,200 in 2021, it is the least populated national capital in the European Union. The population of the urban area is 480,000 (2020), so  doesn't feel like a small town. It is also the southernmost capital in the union, and one of only two without rail-based public transit (the other being Nicosia in Cyprus).  was a \"European Capital of Culture\" for 2018, an honour it shared with Leeuwarden. Being the southernmost European capital except for Nicosia and sitting next to the Mediterranean,  is amongst the places in Europe that have mild and warm weather in most seasons. Nighttime lows are around 9/10°C in the winter, however at that time of the year, it's comparatively rainy. During the summer, expect sunny, hot weather. Most bus routes and many arterial roads converge on . However, inside the city, there are many one-way streets and some pedestrian zones. Parking can be difficult. There is a large multi-storey car park in Floriana, about half a kilometre from the City Gate entrance to . In front of the main gate of  is the for the entire island, and bus lines covering the island in a grid, most of them spread out from here and return to here. For those opting not to fly to Malta, Virtu Ferries runs ferries from Pozzallo on the island of Sicily, Italy. A much shorter journey can be done by Valletta Ferry Services across beautiful Marsamxett harbour from Sliema and past Manoel Island, for just €1.50. Considerably cheaper than paying for a harbour cruise. * \n* Water taxis leave whenever they have six people during daylight hours, €3 per person (Feb 2025). Another little-known way is to visit Vittoriosa by bus and then have the Maltese version of the gondola, the so called Dghajsa, bring you back in style across the spectacular Grand Harbour to , and drop you off just by Victoria gate for €3.50."
     },
     "landmark_image": "assets/images/valletta.jpg",
     "nightlife": {

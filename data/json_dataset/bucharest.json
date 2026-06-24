@@ -116,7 +116,7 @@
     },
     "description": {
       "b": "Bucharest",
-      "#text": "A city in strong technological expansion,"
+      "#text": "A city in strong technological expansion,  offers one of the best ratios between operating costs and digital infrastructure quality. Its profile is rapidly evolving toward Western European sustainability standards."
     },
     "wiki_intro": {
       "b": [
@@ -146,7 +146,8 @@
           "#text": "Romania"
         }
       ],
-      "i": "Gypsies"
+      "i": "Gypsies",
+      "#text": "(: București) is 's capital and largest city.  has a very interesting mix of old and new: finding a 300-year-old church near a steel-and-glass tower that sits next to a communist-style building is commonplace in .  offers some excellent attractions, and has cultivated a sophisticated, trendy, and modern sensibility that many have come to expect from a European capital.   is the primary entry point into , and the most important industrial and commercial centre of the country. With more than 2.1 million inhabitants in its urban area,  is one of the largest cities in Southeastern Europe.  is a booming city with many large infrastructure projects changing the old face of the city, which used to be known in the past as \"The Little Paris\".  has benefited from an economic boom along with the EU grants that have helped rebuild parts of the city, including the revamped old town. Those who have known  in the past will be surprised by the changes that are taking place. The largest finished project is the impressive Basarab overpass, which is Europe's widest cable bridge. , like most of Romania, has a temperate-continental climate with hot summers and cold winters. This region of Romania gets all four seasons, although spring is brief and falls mainly in April. The average high daily temperature in summer is about 29 °C and in winter about 2 °C. It can get really hot and dry during the summer (30 °C) and really cold during the winter (-20 °C), even though temperatures below -12 °C are extremely rare. Best time to visit is April through June, September through October and early December.  is in the Eastern European time zone (UTC+2, with a DST of UTC+3 from April to October). * Visitor information from Romania Tourism  The official language is Romanian, a Romance language which claims to be the closest currently-spoken relative to Vulgar Latin, but contains around 20% of loan words from Slavonic languages. Most younger educated people will speak English reasonably well and will likely be proficient in one or more second Romance languages; most educated people born before about 1980 will speak French, Spanish or Italian reasonably well. The Roma people () speak their native Romany, as well as Romanian, and sometimes English as well. Beyond that, as in any major city, there will be a smattering of other languages like Chinese, Arabic, Turkish, Hungarian and German."
     },
     "landmark_image": "assets/images/bucharest.jpg",
     "nightlife": {

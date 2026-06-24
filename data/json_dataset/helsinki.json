@@ -29,7 +29,7 @@
         "Helsinki",
         "Helsinki"
       ],
-      "#text": "Getting in is easy as almost all local bus and rail lines end in or pass through the city centre, or at least enable you to get to central"
+      "#text": "Getting in is easy as almost all local bus and rail lines end in or pass through the city centre, or at least enable you to get to central  with just one change, like the buses connecting to metro stations in the eastern suburbs. Moreover the  Central Station is here, the bus station in Kamppi about 500 m from the same and the passenger ports (except Vuosaari) are not far away."
     },
     "accommodation": {
       "hotel": [
@@ -145,7 +145,7 @@
     },
     "description": {
       "b": "Helsinki",
-      "#text": "Pioneer of the 'Smart City' concept,"
+      "#text": "Pioneer of the 'Smart City' concept,  integrates nature into the urban fabric with impressive fluidity. Its public data management and safety place it at the top of every quality-of-life ranking."
     },
     "wiki_intro": {
       "b": [
@@ -174,7 +174,8 @@
           "#text": "Baltic Sea"
         }
       ],
-      "i": "Senaatintori"
+      "i": "Senaatintori",
+      "#text": "(: Helsingfors) is 's capital and largest city.  combines modern and historic architectural styles with beautiful open spaces. The city is surrounded by hundreds of tiny islands, and is a cultural bridge between the East and West. The \"Pearl of the \" is easy to explore on foot or on bike, and it has a laid-back vibe. The city of  forms the core of Finland's largest urban area, known in Finnish as the \"capital area\" (pääkaupunkiseutu).  is bordered by the Gulf of Finland to the south, while the posh suburban city of Espoo, with the embedded tiny enclave city of Kauniainen, is to the west. The more industrialized city of Vantaa (where the airport is) is to the north and east. The Capital Region has a population of about 1.2 million, 650,000 of them living in  proper. Beyond these, the suburbs rapidly give way to small towns, farms and forests, most notably Nuuksio National Park at the intersection of Espoo, Vihti and Kirkkonummi. On the eastern side, at the tri-point of , Vantaa and Sipoo you can find the Sipoonkorpi National Park. 's city centre is on the southern peninsula at the end of the city's main thoroughfare Mannerheimintie (or just Mansku). The central railway station and the main bus terminal are in the city centre. Shopping streets Aleksanterinkatu (or Aleksi for short) and Esplanadi (or Espa) connect to Senate Square (), the historical centre of the city. See the Helsinki Guide Map for an interactive searchable map of the city.  was established as a trading town by the Swedish Empire in 1550, but it wasn't until 1812, when the Russian Empire made it the capital of Finland, that it started growing. Today, this hustling and bustling city has 690,000 inhabitants and the capital area 1.36 million (2025). It is the northernmost capital of an EU member state.  metro is the northernmost subway in the world.  was founded in AD 1550 by King Gustav Vasa of Sweden, of which Finland was the eastern part, as a trading post to compete with Tallinn to the south in Estonia, which was Danish at that time."
     },
     "landmark_image": "assets/images/helsinki.jpg",
     "nightlife": {

@@ -25,7 +25,7 @@
       }
     },
     "transport": "The best way to get around is via the intercity bus network and the dense road system. Trains directly connect the city centre to all major districts. (Source: AI-generated — transport data absent from Wikivoyage dump.)",
-    "accommodation": "",
+    "accommodation": null,
     "highlights": {
       "attraction": [
         {
@@ -116,7 +116,7 @@
     },
     "description": {
       "b": "Luxembourg",
-      "#text": "Elite financial center,"
+      "#text": "Elite financial center,  offers free public transport and one of the highest safety levels in the world. It is the paradigm of the wealthy capital that invests massively in its residents' well-being."
     },
     "landmark_image": "assets/images/luxembourg.jpg",
     "nightlife": {

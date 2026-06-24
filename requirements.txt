@@ -9,4 +9,5 @@ rank-bm25>=0.2.2
 httpx>=0.27.0
 lxml
 pandas
+xmltodict>=0.13.0
 microdata>=0.8.0

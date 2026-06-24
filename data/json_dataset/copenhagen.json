@@ -27,7 +27,7 @@
     },
     "transport": {
       "b": "Copenhagen",
-      "#text": "By train It takes 13 minutes to get to"
+      "#text": "By train It takes 13 minutes to get to  Central Station from the airport, and the trains stops at Amager's two other train stations; Tårnby and Ørestad (interchange with Metro line 1) en route. To Malmö Central Station in Sweden it takes 20 minutes. Trains run every 20 minutes throughout the day, and every 10 minutes towards the central station during rush-hour."
     },
     "accommodation": {
       "hotel": [
@@ -143,7 +143,7 @@
     },
     "description": {
       "b": "Copenhagen",
-      "#text": "Global leader in ecological transition,"
+      "#text": "Global leader in ecological transition,  is the benchmark for urban livability and citizen happiness. The cost of living is balanced by excellent public services and a pervasive sense of safety."
     },
     "wiki_intro": {
       "b": [
@@ -169,7 +169,8 @@
           "@href": "https://en.wikivoyage.org/wiki/Sweden",
           "#text": "Sweden"
         }
-      ]
+      ],
+      "#text": "(: København) is the capital city of  and forms the moderate conurbation that one million Danes call home. It is big enough to form a small Danish metropolis, with shopping, culture and nightlife par excellence, yet small enough still to feel intimate and be safe. Although mixed in its urban scene, the city is easy to navigate. Overlooking the Øresund Strait, connected to  by a 15-km bridge-tunnel.  serves as a cultural and geographic link between the Nordic countries and central Europe.  is where old fairy tales blend with flashy modern architecture and world-class design; where warm jazz mixes with crisp electronica from 's basements. You could feel you have seen all of  in one day, but further exploration will keep you discovering more for months. __TOC__ Note: the image above has an error: the station between Flintholm and Jyllingevej is Vanløse (not Valby as shown). If you had dropped by  in the 11th century CE, you would have found yourself looking over a small fishing hamlet, with some lazy cattle gazing back at you while chewing fresh green grass from the meadows around the village. Looking east you would see a host of small islets protecting the small fishing harbour from harsh weather — not the worst place to found a city. If you would rather trust the written word than the archaeologists, the earliest accounts date from the 12th century, when a bearded clerk (or a renowned historian if you will) called Saxo Grammaticus scribbled down a few lines about the place; Portus Mercatorum, he called it, which was really just a fancy Latin version of Købmannahavn. This has since been mangled into København in modern Danish, and even further mangled into  in English, but all it really means is \"merchant harbour.\" Around 1160 CE, King Valdemar handed over control of the city to the bishop of Roskilde. Absalon, archbishop of Lund 1178–1201, one of the most colourful characters of the Middle Ages — a curious mix of great churchman, statesman, and warrior. As the country's only city not under the king's control, Absalon saw it thrive and erected a castle on what is today Slotsholmen (the remains are still visible in the catacombs under the present day parliament). As a man of religion Absalon also built a great church, and with those necessities taken care of,  quickly gained importance as a natural stop between the two most important Danish cities, the old royal capital Roskilde and Lund in present-day Sweden."
     },
     "landmark_image": "assets/images/copenhagen.jpg",
     "nightlife": {

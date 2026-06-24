@@ -32,9 +32,9 @@
         "Stockholm",
         "Stockholm"
       ],
-      "#text": "The most practical option is the airport coaches to the City Terminal in"
+      "#text": "The most practical option is the airport coaches to the City Terminal in  (80 min; 199 kr online). A sometimes cheaper option is to take the local bus 515 or 715 to Nyköping's rail station (alight at Nyköping Centralstation), from where SJ regional trains (timetable, direct services run to stations marked in white) on the Norrköping–Nyköping– route connect to  (from 100 kr, cheaper on select days). Tickets can be bought the following two ways: Buy an SL combined ticket from Skavsta to , valid on both the local bus and the regional train."
     },
-    "accommodation": "",
+    "accommodation": null,
     "highlights": {
       "attraction": [
         {
@@ -125,7 +125,7 @@
     },
     "description": {
       "b": "Stockholm",
-      "#text": "Spread across fourteen islands,"
+      "#text": "Spread across fourteen islands,  embodies Scandinavian elegance and functional design. Its dedication to water cleanliness and urban safety makes it a model of social efficiency."
     },
     "wiki_intro": {
       "b": [
@@ -153,7 +153,8 @@
           "@href": "https://en.wikivoyage.org/wiki/Stockholm_archipelago",
           "#text": "Stockholm archipelago"
         }
-      ]
+      ],
+      "#text": "is 's capital and largest city, with nearly a million inhabitants in the city, and 2.4 million within  (as of 2021). The inner city is made up of 14 islands across Lake Mälaren and three streams into the brackish Baltic Sea, with the  with some 24,000 islands, islets and skerries. Over 30% of the city area is made up of waterways, and another 30% is made up of green areas. Air and water are said to be the freshest of any European capital.  hosts the Nobel Prize ceremony and has around 70 museums.  is the hub of most Swedish rail and bus traffic and has two of the country's busiest airports nearby, so it is a good starting point for visiting other parts of Sweden. 's suburbs sprawl out across most of Stockholm County. 's administrative division may be perplexing - municipal borders might cut right through neighbourhoods. This article describes areas that are geographically close and easy to visit together as districts; the administrative borders of districts and municipalities may differ. The outer parts of the county consist of Norrtälje, Sigtuna, Norrort, Stockholm Archipelago, Södertörn and Södertälje. Due to the post-glacial rebound,  is slowly rising from the sea. Mälaren was a bay of the Baltic Sea throughout the Viking Age of the 9th and 10th centuries; today's  was the waterway for the first Swedish cities; Birka, Uppsala, and Sigtuna. As Sigtuna was sacked by pirates in AD 1187, the Swedes needed to fortify the strait. As the rising land cut off Mälaren from the sea in the 13th century,  became an important trading post. The city is said to be founded by Birger jarl (jarl is a title corresponding to British earl), who had a fortress built on an island later known as Gamla Stan. The first known written records that mention  date from 1252; this is the considered year of foundation. In the 15th century  replaced Uppsala as the effective capital."
     },
     "landmark_image": "assets/images/stockholm.jpg",
     "nightlife": {
