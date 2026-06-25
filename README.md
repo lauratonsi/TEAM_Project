@@ -199,33 +199,53 @@ mentre per le altre **29/30** capitali `wiki_intro` è popolato.
 ## Schema DTD
 
 ```xml
-<!ELEMENT city_report (metadata, indicators, transport, accommodation,
-                        highlights, districts?, description,
-                        wiki_intro?, landmark_image?, nightlife?)>
-<!ATTLIST city_report appeal_score CDATA                                     #REQUIRED
-                      currency     CDATA                                     #IMPLIED   <!-- valuta locale (ISO 4217), solo capitali non-euro -->
-                      region       (northern | western | southern | eastern) #REQUIRED> <!-- macro-regione UN M49 (enumerato) -->
+<!ELEMENT city_report (metadata, indicators, transport, accommodation, highlights, districts?, description, wiki_intro?, landmark_image?, nightlife?)>
+<!ATTLIST city_report
+    appeal_score CDATA                                       #REQUIRED
+    currency     CDATA                                       #IMPLIED   <!-- valuta locale ISO 4217, solo capitali non-euro -->
+    region       (northern | western | southern | eastern)   #REQUIRED> <!-- macro-regione UN M49 (enumerato) -->
 
 <!ELEMENT metadata (title, name_it, flag, source_url)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT name_it (#PCDATA)>
+<!ELEMENT flag (#PCDATA)>
 <!ELEMENT source_url (#PCDATA)>            <!-- URI canonico → itemid microdata -->
-<!ELEMENT indicators (hotel_count, hotel_price, safety, environment,
-                       cost_index, economic_accessibility)>
+
+<!ELEMENT indicators (hotel_count, hotel_price, safety, environment, cost_index, economic_accessibility)>
+<!ELEMENT hotel_count (#PCDATA)>
+<!ELEMENT hotel_price (#PCDATA)>
+<!ELEMENT safety EMPTY>                     <!-- elemento vuoto: il dato sta nell'attributo -->
+<!ATTLIST safety index_score CDATA #REQUIRED>
+<!ELEMENT environment EMPTY>
+<!ATTLIST environment green_score CDATA #REQUIRED>
+<!ELEMENT cost_index EMPTY>
+<!ATTLIST cost_index value CDATA #REQUIRED>
+<!ELEMENT economic_accessibility EMPTY>
+<!ATTLIST economic_accessibility score CDATA #REQUIRED>
+
 <!ELEMENT transport (#PCDATA | b | i | link)*>   <!-- content-model misto -->
 <!ELEMENT accommodation (hotel*)>
 <!ELEMENT hotel (name, price)>
+<!ELEMENT price (#PCDATA)>
+
 <!ELEMENT highlights (attraction*)>
 <!ELEMENT attraction (name, description)>
 <!ATTLIST attraction lat CDATA #REQUIRED lon CDATA #REQUIRED>
+
 <!ELEMENT districts (district*)>
 <!ELEMENT district (name, description)>
+
+<!ELEMENT name (#PCDATA)>                   <!-- condiviso: hotel/attraction/district/venue -->
 <!ELEMENT description (#PCDATA | b | i | link)*>  <!-- content-model misto -->
 <!ELEMENT wiki_intro (#PCDATA | b | i | link)*>   <!-- content-model misto -->
 <!ELEMENT landmark_image (#PCDATA)>
+
 <!-- Elementi inline per il content-model misto -->
 <!ELEMENT b (#PCDATA)>
 <!ELEMENT i (#PCDATA)>
 <!ELEMENT link (#PCDATA)>
 <!ATTLIST link href CDATA #REQUIRED>
+
 <!ELEMENT nightlife (venue*)>
 <!ELEMENT venue (name)>
 <!ATTLIST venue lat CDATA #REQUIRED lon CDATA #REQUIRED
